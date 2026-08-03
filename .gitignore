@@ -38,3 +38,5 @@ Master/*/Audio/
 .DS_Store
 .idea/
 .vscode/
+# Human evaluation outputs (per-annotator checkpoints + result spreadsheets)
+eval/results/
