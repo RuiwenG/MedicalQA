@@ -1,0 +1,19 @@
+# Netlify deploy config for the human evaluation site.
+# Connect this repo in the Netlify UI; no build command is needed because the
+# site is plain HTML + a generated JSON file.
+
+[build]
+  publish = "eval/web"
+  command = ""
+
+[[headers]]
+  for = "/qa_data.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+# The eval links are meant to be handed to specific annotators, not indexed.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Referrer-Policy = "no-referrer"

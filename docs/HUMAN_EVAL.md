@@ -4,15 +4,23 @@ _How to run the human evaluation of the dementia QA pairs, what the metrics
 mean, and how results are collected._
 _Last updated: 2026-08-03._
 
-The evaluation UI is [`eval/QA_Educational_Eval_UI.ipynb`](../eval/QA_Educational_Eval_UI.ipynb).
-It lets a human annotator rate the quality of the automatically generated
-question–answer pairs on a 1–5 Likert scale across eight metrics, with the
-focus on **educational value for dementia care** (family caregivers, students,
-clinicians).
+There are two ways to run the evaluation. Both use the same eight metrics, the
+same 1–5 Likert scale, and the same QA pairs, and their outputs aggregate
+together.
+
+| | Use it for | Results land in |
+| --- | --- | --- |
+| **[`eval/web/`](../eval/web/README.md)** — public website | **External annotators.** Send a link, no setup on their side. | A Supabase table, written after every pair |
+| [`eval/QA_Educational_Eval_UI.ipynb`](../eval/QA_Educational_Eval_UI.ipynb) — notebook | The research team slicing the data locally | `eval/results/*.xlsx` |
+
+**Use the website when sharing with anyone outside the team.** Deployment,
+Supabase setup, and how batches are assigned are documented in
+[`eval/web/README.md`](../eval/web/README.md). The rest of this file describes
+the notebook; sections 1 and 3 (what is evaluated, the metrics) apply to both.
 
 > The older notebook, `eval/Final_Human_Eval_UI.ipynb`, is the previous
 > mentorship-focused evaluation (Colab + Google Drive + a hand-built Excel).
-> It is kept for reference only; use the new notebook for this project.
+> It is kept for reference only; use one of the two tools above for this project.
 
 ---
 
@@ -120,12 +128,16 @@ One row per QA pair in the session: `Dataset`, `Video Index`, `Approach`,
 pairs.
 
 The last cell of the notebook aggregates **all** result files in
-`eval/results/` across annotators and prints mean scores per approach and per
-dataset × approach.
+`eval/results/` across annotators and prints mean scores per approach, per
+dataset × approach, and agreement on any pairs rated by more than one person.
+It reads both the `.xlsx` files this notebook writes and the `.csv` files
+downloaded from the website — the column names are identical.
 
 `eval/results/` is in `.gitignore` — checkpoints and spreadsheets stay local.
-Collect annotators' `.xlsx` files by hand (email, Drive, etc.), drop them into
-`eval/results/`, and run the aggregation cell.
+Collect annotators' files by hand (email, Drive, etc.), drop them into
+`eval/results/`, and run the aggregation cell. Ratings collected through the
+website do not need collecting at all; query Supabase directly, or export its
+`ratings_final` view as CSV into the same folder.
 
 ## 6. Known data quirks
 

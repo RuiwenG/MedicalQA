@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<title>Dementia QA — Human Evaluation</title>
+<style>
+  :root {
+    color-scheme: light;
+    --navy: #1e3a5f;
+    --navy-2: #2c4d7a;
+    --ink: #1a1f2e;
+    --muted: #5a6478;
+    --line: #e3e7ee;
+    --bg: #f7f8fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: white;
+    padding: 18px 24px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  header h1 { margin: 0 0 4px 0; font-size: 18px; font-weight: 600; letter-spacing: 0.2px; }
+  header .sub { font-size: 13px; opacity: 0.85; }
+
+  .card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  h2 { font-size: 15px; margin: 0 0 10px 0; color: var(--navy); }
+  h3 { font-size: 13px; margin: 18px 0 8px 0; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
+  p { margin: 0 0 10px 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  ul { margin: 0 0 10px 0; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+
+  label.field { display: block; font-weight: 600; font-size: 13px; margin-bottom: 5px; }
+  input[type=text], input[type=number] {
+    font-family: inherit; font-size: 14px;
+    padding: 9px 12px; border: 1px solid #d6dae3; border-radius: 8px;
+    width: 100%; max-width: 340px; background: white; color: var(--ink);
+  }
+  input[type=text]:focus, input[type=number]:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
+
+  button {
+    font-family: inherit; font-size: 14px; font-weight: 500;
+    padding: 10px 20px; border-radius: 8px; border: 1px solid transparent;
+    cursor: pointer; transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-primary { background: var(--navy); color: white; }
+  .btn-primary:hover { background: var(--navy-2); }
+  .btn-primary:disabled { background: #9aa4b5; cursor: not-allowed; }
+  .btn-ghost { background: white; color: var(--muted); border-color: #d6dae3; }
+  .btn-ghost:hover { border-color: #6b8cae; color: var(--navy); }
+  .btn-ghost:disabled { opacity: 0.45; cursor: not-allowed; }
+
+  .banner {
+    border-radius: 8px; padding: 11px 14px; margin-bottom: 14px; font-size: 13px;
+  }
+  .banner-warn { background: #fff3cd; border-left: 4px solid #ff9800; color: #7a5b00; }
+  .banner-info { background: #e7f1fb; border-left: 4px solid #4da6ff; color: #1c4a75; }
+  .banner-ok   { background: #d4edda; border-left: 4px solid #28a745; color: #155724; }
+
+  /* --- progress --------------------------------------------------------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(247,248,251,0.94); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line); margin-bottom: 14px;
+    padding: 10px 0 8px 0;
+  }
+  .topbar-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; font-size: 13px;
+  }
+  .progress-track { height: 6px; background: #e3e7ee; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), #4da6ff); width: 0%; transition: width 0.25s; }
+  .sync { font-size: 12px; display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #9aa4b5; display: inline-block; }
+  .dot.ok { background: #28a745; }
+  .dot.pending { background: #ff9800; }
+  .dot.off { background: #9aa4b5; }
+  .dot.err { background: #d9534f; }
+
+  /* --- QA pair ---------------------------------------------------------- */
+  .qa-meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .qa-meta code {
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
+    background: #f0f2f7; padding: 1px 6px; border-radius: 4px;
+  }
+  .qbox, .abox {
+    padding: 14px 16px; border-radius: 8px; margin-bottom: 10px;
+    white-space: pre-wrap; word-wrap: break-word;
+  }
+  .qbox { background: #fff3cd; border-left: 4px solid #ff9800; }
+  .abox { background: #d4edda; border-left: 4px solid #28a745; max-height: 420px; overflow-y: auto; }
+  .box-label {
+    display: block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.6px; margin-bottom: 6px;
+  }
+  .qbox .box-label { color: #856404; }
+  .abox .box-label { color: #155724; }
+  .box-text { font-size: 15px; color: #2a2f3a; }
+
+  /* --- metrics ---------------------------------------------------------- */
+  .metric {
+    border: 1px solid var(--line); border-left: 4px solid #cfd6e2;
+    border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; background: white;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .metric.active { border-left-color: #4da6ff; box-shadow: 0 0 0 2px rgba(77,166,255,0.18); }
+  .metric.rated { border-left-color: #28a745; }
+  .metric-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .metric-name { font-weight: 600; color: var(--navy); font-size: 14px; }
+  .tag {
+    color: white; border-radius: 10px; padding: 1px 8px; font-size: 11px; font-weight: 600;
+  }
+  .tag.q { background: #856404; }
+  .tag.a { background: #155724; }
+  .tag.qa { background: #2c5aa0; }
+  .metric-def { color: var(--muted); font-size: 12.5px; font-style: italic; margin: 4px 0 10px 0; }
+
+  .likert { display: flex; gap: 6px; flex-wrap: wrap; }
+  .likert button {
+    flex: 1 1 0; min-width: 92px; padding: 8px 6px; font-size: 12px; font-weight: 500;
+    background: white; border: 1px solid #d6dae3; color: #4a5366; line-height: 1.3;
+  }
+  .likert button:hover { border-color: #6b8cae; color: var(--navy); }
+  .likert button.sel { background: var(--navy); border-color: var(--navy); color: white; }
+  .likert .num { display: block; font-size: 15px; font-weight: 700; }
+
+  .navbtns { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+  .navbtns .spacer { flex: 1; }
+  .err { color: #d9534f; font-size: 13px; font-weight: 500; }
+
+  details.adv { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+  details.adv summary { cursor: pointer; font-weight: 600; font-size: 13px; color: var(--navy); }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 14px; margin: 8px 0 4px 0; }
+  .chk { display: flex; align-items: center; gap: 7px; font-size: 13px; }
+  .chk input { margin: 0; width: 15px; height: 15px; }
+
+  /* video picker — one compact chip per video, grouped by dataset */
+  .ds-group { margin-bottom: 12px; }
+  .ds-group-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .ds-group-head b { font-size: 13px; color: var(--navy); }
+  .vidgrid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vidchk {
+    display: inline-flex; align-items: center; gap: 5px; cursor: pointer;
+    border: 1px solid #d6dae3; border-radius: 6px; padding: 4px 9px;
+    font-size: 12.5px; background: white; user-select: none;
+  }
+  .vidchk:hover { border-color: #6b8cae; }
+  .vidchk input { margin: 0; width: 13px; height: 13px; }
+  .vidchk.on { background: #eef4fb; border-color: #6b8cae; color: var(--navy); font-weight: 500; }
+  .vidwrap { display: inline-flex; align-items: center; gap: 2px; }
+  .vidlink {
+    text-decoration: none; color: #9aa4b5; font-size: 11px; padding: 3px 4px;
+    border-radius: 4px; line-height: 1;
+  }
+  .vidlink:hover { color: #c4302b; background: #f5f5f5; }
+  .vidlink-inline {
+    color: var(--navy); text-decoration: none; font-weight: 500; white-space: nowrap;
+    border: 1px solid #d6dae3; border-radius: 6px; padding: 3px 10px; background: white;
+  }
+  .vidlink-inline:hover { border-color: #6b8cae; background: #eef4fb; }
+  .qa-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .minibtn {
+    font-size: 11px; padding: 3px 9px; border-radius: 6px;
+    background: white; border: 1px solid #d6dae3; color: var(--muted); font-weight: 500;
+  }
+  .minibtn:hover { border-color: #6b8cae; color: var(--navy); }
+  .selection-note {
+    background: #eef4fb; border: 1px solid #cfe0f2; border-radius: 8px;
+    padding: 9px 13px; margin-top: 12px; font-size: 13px; color: #1c4a75;
+  }
+  .inline-fields { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+  .inline-fields > div { min-width: 130px; }
+  .inline-fields input { max-width: 130px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  kbd {
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
+    background: #f0f2f7; border: 1px solid #d6dae3; border-bottom-width: 2px;
+    border-radius: 4px; padding: 1px 5px; color: var(--muted);
+  }
+  .hidden { display: none !important; }
+  @media (max-width: 620px) {
+    .wrap { padding: 12px; }
+    .likert button { min-width: 60px; font-size: 11px; }
+    .likert button .lbl { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Dementia QA — Human Evaluation</h1>
+  <div class="sub">Rating the educational value of automatically generated question–answer pairs from dementia-care videos.</div>
+</header>
+
+<div id="app"><div class="card"><p class="muted">Loading QA pairs…</p></div></div>
+
+</div>
+
+<script src="config.js"></script>
+<script>
+"use strict";
+
+/* ===========================================================================
+   Configuration + metric definitions
+   =========================================================================== */
+
+const CFG = Object.assign({
+  SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
+  SEED: 42, BATCHES: 8, ANCHOR_SIZE: 20, MAX_PAIRS: 0,
+}, window.EVAL_CONFIG || {});
+
+// Tolerate the two easy paste mistakes: a trailing slash, and copying the REST
+// endpoint (".../rest/v1") instead of the bare project URL. Both would
+// otherwise produce a 404 on every insert with no obvious cause.
+const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
+  .trim()
+  .replace(/\/+$/, "")
+  .replace(/\/rest\/v1$/, "");
+
+// key   -> column name in Supabase / CSV field key
+// label -> what the annotator reads (matches the notebook exactly)
+// scope -> which part of the pair is being judged, drives the coloured tag
+const METRICS = [
+  { key: "q_fluency", label: "Question Fluency", scope: "q",
+    def: "(Grammar, syntax, sentence structure.) The question is grammatically correct and free from language errors." },
+  { key: "a_fluency", label: "Answer Fluency", scope: "a",
+    def: "(Grammar, syntax, sentence structure.) The answer is grammatically correct and free from language errors." },
+  { key: "q_clarity", label: "Question Clarity", scope: "q",
+    def: "(Understandability and specificity.) The question is easy to comprehend and specific enough to have a clear meaning — not vague or ambiguous." },
+  { key: "a_clarity", label: "Answer Clarity", scope: "a",
+    def: "(Understandability.) The answer is easy to comprehend and the explanation is straightforward — not confusing, rambling, or unclear." },
+  { key: "qa_alignment", label: "QA-Alignment", scope: "qa",
+    def: "(Question–answer correspondence.) The answer directly addresses what the question asks and adequately satisfies it." },
+  { key: "q_edu_value", label: "Question Educational Value", scope: "q",
+    def: "(Educational usefulness of the question.) The question targets meaningful knowledge about dementia or dementia care — a learner (family caregiver, student, or clinician) would gain useful understanding from having it answered. It is not trivial, overly narrow, or irrelevant." },
+  { key: "a_edu_value", label: "Answer Educational Value", scope: "a",
+    def: "(Educational quality of the answer.) The answer teaches the reader something meaningful about dementia or dementia care — it explains concepts, techniques, or practical guidance accurately and in a way the reader can learn from and apply." },
+  { key: "standalone", label: "Standalone Quality", scope: "qa",
+    def: "(Independence from the source video.) The QA pair makes sense on its own, without having watched the video — it avoids unresolved references such as “the transcript”, “the speaker”, or “this segment” that a standalone reader could not follow." },
+];
+
+const LIKERT = [
+  { v: 1, label: "Strongly disagree" },
+  { v: 2, label: "Disagree" },
+  { v: 3, label: "Neutral" },
+  { v: 4, label: "Agree" },
+  { v: 5, label: "Strongly agree" },
+];
+
+const SCOPE_TAG = { q: "Question", a: "Answer", qa: "Q&A pair" };
+
+/* ===========================================================================
+   Deterministic helpers — every annotator with the same seed sees the same
+   corpus split, and re-entering the same name always reproduces the same batch.
+   =========================================================================== */
+
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffled(arr, seed) {
+  const out = arr.slice();
+  const rnd = mulberry32(seed);
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+// FNV-1a, so a name maps to a stable batch without a server.
+function hashStr(s) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h >>> 0;
+}
+
+const slug = (s) => (s || "anonymous").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "anonymous";
+
+/* ===========================================================================
+   State
+   =========================================================================== */
+
+let DATA = [];            // every QA pair from qa_data.json
+let VIDEOS = {};          // { dataset: { video: { url, language } } } from the dataset CSVs
+let S = null;             // the live session (see makeSession)
+let activeMetric = 0;     // index into S.metrics, for keyboard rating
+let shownAt = 0;          // timestamp the current pair appeared
+let syncState = "off";    // off | ok | pending | err
+
+const app = document.getElementById("app");
+const params = new URLSearchParams(location.search);
+const backendOn = Boolean(SUPABASE_ORIGIN && CFG.SUPABASE_ANON_KEY);
+
+/* ===========================================================================
+   Session construction
+   =========================================================================== */
+
+/**
+ * Build the list of pairs this annotator will rate.
+ *
+ * Auto mode: the whole corpus is shuffled once with the shared seed. The first
+ * ANCHOR_SIZE pairs become the anchor set given to everybody (that overlap is
+ * what makes inter-annotator agreement computable). The rest are dealt out by
+ * stride, so each batch stays balanced across datasets and approaches no matter
+ * how many pairs exist.
+ *
+ * Custom mode: the notebook's behaviour — filter, then sample N per
+ * (dataset, video, approach) group.
+ */
+function buildPairs(opts) {
+  let pool = DATA.filter((p) =>
+    opts.datasets.includes(p.dataset) && opts.approaches.includes(p.approach));
+
+  // opts.videos is a list of "<dataset>|<video>" keys the annotator picked by
+  // hand. Automatic mode must always span the whole corpus — narrowing it would
+  // silently break the batch coverage and shared-anchor guarantees — so the
+  // filter is gated on the mode rather than trusting videos to be null.
+  if (opts.mode === "custom" && opts.videos) {
+    const wanted = new Set(opts.videos);
+    pool = pool.filter((p) => wanted.has(p.dataset + "|" + p.video));
+  }
+
+  if (opts.mode === "custom") {
+    if (opts.sample > 0) {
+      const groups = new Map();
+      for (const p of pool) {
+        const k = p.dataset + "|" + p.video + "|" + p.approach;
+        if (!groups.has(k)) groups.set(k, []);
+        groups.get(k).push(p);
+      }
+      pool = [];
+      // Each group gets its own seeded stream, so the subset for one approach
+      // does not shift when the annotator selects a different set of others.
+      for (const k of [...groups.keys()].sort()) {
+        const picked = shuffled(groups.get(k), opts.seed + hashStr(k)).slice(0, opts.sample);
+        picked.sort((x, y) => x.uid.localeCompare(y.uid));
+        pool.push(...picked);
+      }
+    }
+    return opts.shuffle
+      ? shuffled(pool, opts.seed)
+      : pool.slice().sort((a, b) => a.dataset.localeCompare(b.dataset) || a.video - b.video || a.uid.localeCompare(b.uid));
+  }
+
+  const deck = shuffled(pool, opts.seed);
+  const anchorN = Math.min(Math.max(0, opts.anchorSize), deck.length);
+  const anchor = deck.slice(0, anchorN);
+  const rest = deck.slice(anchorN);
+  const mine = rest.filter((_, i) => i % opts.batches === opts.batch);
+  let session = shuffled(anchor.concat(mine), opts.seed + opts.batch + 1);
+  if (opts.maxPairs > 0) session = session.slice(0, opts.maxPairs);
+  return session;
+}
+
+function makeSession(name, opts) {
+  const pairs = buildPairs(opts);
+  const configId = hashStr(JSON.stringify({
+    m: opts.mode, d: opts.datasets, a: opts.approaches, v: opts.videos,
+    s: opts.seed, b: opts.batch, nb: opts.batches, an: opts.anchorSize,
+    sm: opts.sample, mx: opts.maxPairs, sh: opts.shuffle,
+  })).toString(36);
+
+  return {
+    version: 1,
+    annotator: name,
+    storeKey: "dqa:" + slug(name) + ":" + configId,
+    sessionId: slug(name) + "-" + configId,
+    opts: opts,
+    metrics: opts.metrics,
+    uids: pairs.map((p) => p.uid),
+    index: 0,
+    scores: {},        // uid -> { metricKey: 1..5 }
+    seconds: {},       // uid -> seconds spent
+    queue: [],         // rows waiting to reach Supabase
+    startedAt: new Date().toISOString(),
+  };
+}
+
+function save() {
+  if (!S) return;
+  try {
+    localStorage.setItem(S.storeKey, JSON.stringify(S));
+  } catch (e) {
+    console.warn("localStorage write failed", e);
+  }
+}
+
+function restore(storeKey) {
+  try {
+    const raw = localStorage.getItem(storeKey);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    return obj && obj.version === 1 ? obj : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+const pairOf = (uid) => DATA.find((p) => p.uid === uid);
+
+/**
+ * Link to the source video on YouTube, or null if the dataset CSV had no URL.
+ *
+ * The timestamp deep link is deliberately withheld while blind mode is on: only
+ * DualAgent and MultiAgent record timestamps, so a link that sometimes jumps to
+ * a moment and sometimes does not would tell the annotator which system wrote
+ * the pair. Blind sessions always get the plain video URL.
+ */
+function videoLink(p, withTimestamp) {
+  const v = (VIDEOS[p.dataset] || {})[String(p.video)];
+  if (!v || !v.url) return null;
+  if (!withTimestamp || typeof p.t !== "number") return v.url;
+  return v.url + (v.url.includes("?") ? "&" : "?") + "t=" + Math.max(0, p.t) + "s";
+}
+
+function videoLinkFor(dataset, video) {
+  const v = (VIDEOS[dataset] || {})[String(video)];
+  return v && v.url ? v.url : null;
+}
+const isRated = (uid) => {
+  const sc = S.scores[uid];
+  return Boolean(sc) && S.metrics.every((k) => typeof sc[k] === "number");
+};
+const ratedCount = () => S.uids.filter(isRated).length;
+
+/* ===========================================================================
+   Supabase sync — fire and forget, with a persisted retry queue.
+   The page never reads from the database; resume comes from localStorage.
+   =========================================================================== */
+
+function enqueue(uid) {
+  const p = pairOf(uid);
+  const sc = S.scores[uid] || {};
+  const row = {
+    session_id: S.sessionId,
+    annotator: S.annotator,
+    qa_uid: uid,
+    dataset: p.dataset,
+    video: p.video,
+    approach: p.approach,
+    batch: S.opts.mode === "auto" ? "batch-" + (S.opts.batch + 1) + "-of-" + S.opts.batches : "custom",
+    blind: S.opts.blind,
+    seconds_spent: S.seconds[uid] || null,
+    client_time: new Date().toISOString(),
+  };
+  for (const m of METRICS) row[m.key] = typeof sc[m.key] === "number" ? sc[m.key] : null;
+
+  // One row per pair in the queue; a re-rated pair replaces its pending row.
+  S.queue = S.queue.filter((r) => r.qa_uid !== uid);
+  S.queue.push(row);
+  save();
+  flush();
+}
+
+let flushing = false;
+async function flush() {
+  if (!backendOn || flushing || !S || S.queue.length === 0) {
+    setSync(backendOn ? (S && S.queue.length ? "pending" : "ok") : "off");
+    return;
+  }
+  flushing = true;
+  setSync("pending");
+  const batch = S.queue.slice(0, 25);
+  try {
+    const resp = await fetch(SUPABASE_ORIGIN + "/rest/v1/ratings", {
+      method: "POST",
+      headers: {
+        "apikey": CFG.SUPABASE_ANON_KEY,
+        "Authorization": "Bearer " + CFG.SUPABASE_ANON_KEY,
+        "Content-Type": "application/json",
+        // return=minimal matters: asking for the inserted rows back would need
+        // SELECT permission, which the insert-only policy deliberately denies.
+        "Prefer": "return=minimal",
+      },
+      body: JSON.stringify(batch),
+    });
+    if (!resp.ok) throw new Error("HTTP " + resp.status + " " + (await resp.text()).slice(0, 200));
+    S.queue = S.queue.slice(batch.length);
+    save();
+    setSync(S.queue.length ? "pending" : "ok");
+    flushing = false;
+    if (S.queue.length) flush();
+  } catch (e) {
+    console.warn("sync failed, will retry", e);
+    setSync("err");
+    flushing = false;
+  }
+}
+
+function setSync(state) {
+  syncState = state;
+  const el = document.getElementById("sync");
+  if (!el) return;
+  const pending = S ? S.queue.length : 0;
+  const map = {
+    ok:      ["ok",      "All ratings saved"],
+    pending: ["pending", pending + " waiting to save"],
+    err:     ["err",     "Offline — " + pending + " saved locally, will retry"],
+    off:     ["off",     "Local only — export at the end"],
+  };
+  const [cls, text] = map[state] || map.off;
+  el.innerHTML = '<span class="dot ' + cls + '"></span>' + text;
+}
+
+// Retry whenever the network comes back or the tab is refocused.
+window.addEventListener("online", flush);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) flush(); });
+window.addEventListener("beforeunload", (e) => {
+  if (S && S.queue.length && backendOn) { e.preventDefault(); e.returnValue = ""; }
+});
+
+/* ===========================================================================
+   Export
+   =========================================================================== */
+
+// Same column names the notebook writes to Excel, so both sources aggregate together.
+const CSV_COLS = ["Dataset", "Video Index", "Approach", "QA ID", "Question", "Answer"]
+  .concat(METRICS.map((m) => m.label))
+  .concat(["Annotator", "Session ID", "Batch", "Seconds"]);
+
+function csvCell(v) {
+  const s = v === null || v === undefined ? "" : String(v);
+  return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+function buildCsv() {
+  const lines = [CSV_COLS.join(",")];
+  for (const uid of S.uids) {
+    const p = pairOf(uid);
+    const sc = S.scores[uid] || {};
+    const row = [p.dataset, p.video, p.approach, uid, p.question, p.answer];
+    for (const m of METRICS) row.push(typeof sc[m.key] === "number" ? sc[m.key] : "");
+    row.push(S.annotator, S.sessionId,
+      S.opts.mode === "auto" ? "batch-" + (S.opts.batch + 1) + "-of-" + S.opts.batches : "custom",
+      S.seconds[uid] || "");
+    lines.push(row.map(csvCell).join(","));
+  }
+  return lines.join("\r\n");
+}
+
+function download(filename, text, mime) {
+  const blob = new Blob(["﻿" + text], { type: (mime || "text/plain") + ";charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+function stamp() {
+  const d = new Date(), p = (n) => String(n).padStart(2, "0");
+  return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + "_" + p(d.getHours()) + p(d.getMinutes()) + p(d.getSeconds());
+}
+
+const exportCsv = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() + ".csv", buildCsv(), "text/csv");
+const exportJson = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() + ".json",
+  JSON.stringify({ annotator: S.annotator, session_id: S.sessionId, opts: S.opts,
+                   metrics: S.metrics, scores: S.scores, seconds: S.seconds }, null, 1), "application/json");
+
+/* ===========================================================================
+   Screen: welcome
+   =========================================================================== */
+
+// The advanced selection is remembered so that coming Back from the rating
+// screen returns you to the options you actually chose, not the defaults.
+const LAST_OPTS_KEY = "dqa:lastopts";
+function loadLastOpts() {
+  try { return JSON.parse(localStorage.getItem(LAST_OPTS_KEY) || "null"); }
+  catch (e) { return null; }
+}
+function saveLastOpts(opts, name) {
+  try { localStorage.setItem(LAST_OPTS_KEY, JSON.stringify({ ...opts, name: name })); }
+  catch (e) { /* private browsing — not worth interrupting the annotator */ }
+}
+
+function renderWelcome() {
+  const datasets = [...new Set(DATA.map((p) => p.dataset))].sort();
+  const approaches = [...new Set(DATA.map((p) => p.approach))].sort();
+  const last = loadLastOpts();
+  const prefillName = params.get("a") || params.get("annotator") || (last && last.name) || "";
+  const customLast = last && last.mode === "custom";
+  // Was this value ticked last time? Falls back to `dflt` for a first visit.
+  const pick = (l, field, value, dflt) =>
+    (l && Array.isArray(l[field]) ? l[field].includes(value) : dflt);
+
+  app.innerHTML = `
+    ${backendOn ? "" : '<div class="banner banner-warn"><b>Local-only mode.</b> No results server is configured, so ratings stay in this browser and must be exported with the download button at the end. Set SUPABASE_URL and SUPABASE_ANON_KEY in <code>config.js</code> to collect them centrally.</div>'}
+
+    <div class="card">
+      <h2>What you will be doing</h2>
+      <p>You will read short question–answer pairs about dementia care that were written automatically by different AI systems, and rate each one on ${METRICS.length} statements using a 1–5 scale.</p>
+      <ul>
+        <li><b>Judge only what is in front of you.</b> You do not need to have watched the source video — a link to it is there if you want context, but the rating should reflect the question and answer as written.</li>
+        <li>The system that produced each pair is hidden, so your rating is not influenced by which one it came from.</li>
+        <li>Your progress saves automatically after every pair — <b>you can close the tab and come back to this same link later.</b></li>
+      </ul>
+      <p class="muted">A full batch is roughly 200 pairs and takes 1.5–2 hours. There is no need to do it in one sitting.</p>
+
+      <h3>Your name</h3>
+      <p class="muted">Used to assign your batch and to label your ratings. Type it the same way each time so you return to the right place.</p>
+      <input type="text" id="name" placeholder="e.g. Jane Doe" value="${prefillName.replace(/"/g, "&quot;")}" autocomplete="name" />
+      <div id="resume-note" class="muted" style="margin-top:8px;"></div>
+
+      <details class="adv" id="adv" ${customLast ? "open" : ""}>
+        <summary>Advanced options — choose your own videos and approaches</summary>
+
+        <h3>Assignment</h3>
+        <div class="grid2">
+          <label class="chk"><input type="radio" name="mode" value="auto" ${customLast ? "" : "checked"} /> Automatic batch from my name</label>
+          <label class="chk"><input type="radio" name="mode" value="custom" ${customLast ? "checked" : ""} /> Choose videos and approaches myself</label>
+        </div>
+
+        <div id="auto-opts" class="inline-fields">
+          <div><label class="field">Batch (blank = from name)</label><input type="number" id="batch" min="1" max="${CFG.BATCHES}" placeholder="auto" /></div>
+          <div><label class="field">Total batches</label><input type="number" id="batches" min="1" value="${CFG.BATCHES}" /></div>
+          <div><label class="field">Shared anchor pairs</label><input type="number" id="anchor" min="0" value="${CFG.ANCHOR_SIZE}" /></div>
+        </div>
+
+        <div id="custom-opts" class="hidden">
+          <h3>Datasets</h3>
+          <div class="grid2">${datasets.map((d) => `<label class="chk"><input type="checkbox" class="ds" value="${d}" ${pick(last, "datasets", d, true) ? "checked" : ""} /> ${d}</label>`).join("")}</div>
+
+          <h3>Videos</h3>
+          <div id="video-picker"></div>
+
+          <h3>Approaches</h3>
+          <div class="ds-group-head">
+            <button type="button" class="minibtn" data-all="ap">Select all</button>
+            <button type="button" class="minibtn" data-none="ap">Clear</button>
+          </div>
+          <div class="grid2" id="approach-picker">${approaches.map((a) => `<label class="chk"><input type="checkbox" class="ap" value="${a}" ${pick(last, "approaches", a, true) ? "checked" : ""} /> <span data-ap-label="${a}">${a}</span></label>`).join("")}</div>
+
+          <div class="inline-fields">
+            <div><label class="field">Sample per video+approach</label><input type="number" id="sample" min="0" value="${last && last.mode === "custom" ? last.sample : 0}" /></div>
+          </div>
+          <p class="muted" style="margin-top:6px;">0 = every pair in the selection. Set it to e.g. 5 to rate only 5 pairs from each video+approach combination.</p>
+
+          <div class="selection-note" id="selection-note"></div>
+        </div>
+
+        <h3>Metrics</h3>
+        <div class="grid2">${METRICS.map((m) => `<label class="chk"><input type="checkbox" class="mt" value="${m.key}" ${pick(last, "metrics", m.key, true) ? "checked" : ""} /> ${m.label}</label>`).join("")}</div>
+
+        <h3>Other</h3>
+        <div class="grid2">
+          <label class="chk"><input type="checkbox" id="blind" ${!last || last.blind !== false ? "checked" : ""} /> Blind — hide the approach name</label>
+          <label class="chk"><input type="checkbox" id="shuffle" ${!last || last.shuffle !== false ? "checked" : ""} /> Shuffle order</label>
+        </div>
+        <div class="inline-fields">
+          <div><label class="field">Seed</label><input type="number" id="seed" value="${last ? last.seed : CFG.SEED}" /></div>
+          <div><label class="field">Max pairs (0 = all)</label><input type="number" id="maxpairs" min="0" value="${last ? last.maxPairs : CFG.MAX_PAIRS}" /></div>
+        </div>
+        <p class="muted" style="margin-top:10px;">Everyone must share one seed, otherwise the batches stop lining up and the shared anchor pairs are no longer shared.</p>
+      </details>
+
+      <div class="navbtns">
+        <button class="btn-primary" id="start">Start rating</button>
+        <span class="err" id="start-err"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>The 1–5 scale</h2>
+      <p class="muted">Every item is a <b>statement</b>, and you say how much you agree with it.</p>
+      <table>
+        <tr><th class="num">Score</th><th>Meaning</th></tr>
+        ${LIKERT.map((l) => `<tr><td class="num"><b>${l.v}</b></td><td>${l.label}</td></tr>`).join("")}
+      </table>
+      <p class="muted" style="margin-top:12px;">Use the full range. A pair that is merely acceptable is a 3, not a 4.</p>
+    </div>`;
+
+  const nameEl = document.getElementById("name");
+  const modeRadios = [...document.querySelectorAll('input[name=mode]')];
+  const videoPicker = document.getElementById("video-picker");
+
+  const syncModePanels = () => {
+    const custom = document.querySelector('input[name=mode]:checked').value === "custom";
+    document.getElementById("custom-opts").classList.toggle("hidden", !custom);
+    document.getElementById("auto-opts").classList.toggle("hidden", custom);
+  };
+  modeRadios.forEach((r) => r.addEventListener("change", () => { syncModePanels(); refresh(); }));
+
+  // The video list depends on which datasets are ticked, so it is rebuilt
+  // whenever those change. Existing ticks survive the rebuild.
+  function renderVideoPicker() {
+    const chosenDs = [...document.querySelectorAll(".ds")].filter((c) => c.checked).map((c) => c.value);
+    const built = document.querySelector(".vid") !== null;
+    const prev = new Set([...document.querySelectorAll(".vid")].filter((c) => c.checked).map((c) => c.value));
+
+    videoPicker.innerHTML = chosenDs.map((d) => {
+      const vids = [...new Set(DATA.filter((p) => p.dataset === d).map((p) => p.video))].sort((a, b) => a - b);
+      return `<div class="ds-group">
+        <div class="ds-group-head">
+          <b>${d}</b>
+          <button type="button" class="minibtn" data-all-vid="${d}">All</button>
+          <button type="button" class="minibtn" data-none-vid="${d}">None</button>
+          <span class="muted" data-vid-count="${d}"></span>
+        </div>
+        <div class="vidgrid">${vids.map((v) => {
+          const key = d + "|" + v;
+          const on = built ? prev.has(key) : pick(last, "videos", key, true);
+          const url = videoLinkFor(d, v);
+          // The link sits outside the <label> so clicking it opens the video
+          // instead of toggling the checkbox.
+          return `<span class="vidwrap">`
+            + `<label class="vidchk ${on ? "on" : ""}"><input type="checkbox" class="vid" value="${key}" ${on ? "checked" : ""} /> ${v}</label>`
+            + (url ? `<a class="vidlink" href="${url}" target="_blank" rel="noopener noreferrer" title="Watch ${d} video ${v} on YouTube">▶</a>` : "")
+            + `</span>`;
+        }).join("")}</div>
+      </div>`;
+    }).join("") || '<p class="muted">Tick at least one dataset above to choose videos.</p>';
+  }
+
+  // Live counts: how many QA pairs each approach contributes under the current
+  // dataset+video selection, and what the whole selection adds up to.
+  function refresh() {
+    const custom = document.querySelector('input[name=mode]:checked').value === "custom";
+    if (custom) {
+      const wanted = new Set([...document.querySelectorAll(".vid")].filter((c) => c.checked).map((c) => c.value));
+      const chosenDs = [...document.querySelectorAll(".ds")].filter((c) => c.checked).map((c) => c.value);
+      const inScope = DATA.filter((p) => chosenDs.includes(p.dataset) && wanted.has(p.dataset + "|" + p.video));
+
+      document.querySelectorAll("[data-ap-label]").forEach((el) => {
+        const a = el.dataset.apLabel;
+        el.textContent = a + " (" + inScope.filter((p) => p.approach === a).length + ")";
+      });
+      document.querySelectorAll("[data-vid-count]").forEach((el) => {
+        const d = el.dataset.vidCount;
+        const all = [...document.querySelectorAll(".vid")].filter((c) => c.value.startsWith(d + "|"));
+        el.textContent = all.filter((c) => c.checked).length + " of " + all.length + " selected";
+      });
+      document.querySelectorAll(".vidchk").forEach((l) => l.classList.toggle("on", l.querySelector("input").checked));
+
+      const opts = readOpts(nameEl.value);
+      const n = buildPairs(opts).length;
+      const note = document.getElementById("selection-note");
+      note.innerHTML = n
+        ? `<b>${n} QA pairs selected</b> — ${opts.approaches.length} approach${opts.approaches.length === 1 ? "" : "es"}, `
+          + `${wanted.size} video${wanted.size === 1 ? "" : "s"}`
+          + (opts.sample ? `, ${opts.sample} per video+approach` : "")
+          + (opts.maxPairs ? `, capped at ${opts.maxPairs}` : "")
+          + ` &nbsp;·&nbsp; roughly ${Math.max(1, Math.round(n * 0.5))} min at 30 s per pair.`
+        : "<b>Nothing selected.</b> Tick at least one video and one approach.";
+    }
+    checkResume();
+  }
+
+  // Delegated handlers so they survive the video picker being rebuilt.
+  document.getElementById("custom-opts").addEventListener("click", (e) => {
+    const t = e.target;
+    if (t.dataset.allVid || t.dataset.noneVid) {
+      const d = t.dataset.allVid || t.dataset.noneVid;
+      const on = Boolean(t.dataset.allVid);
+      document.querySelectorAll(".vid").forEach((c) => { if (c.value.startsWith(d + "|")) c.checked = on; });
+      refresh();
+    } else if (t.dataset.all === "ap" || t.dataset.none === "ap") {
+      const on = t.dataset.all === "ap";
+      document.querySelectorAll(".ap").forEach((c) => { c.checked = on; });
+      refresh();
+    }
+  });
+  document.getElementById("custom-opts").addEventListener("change", (e) => {
+    if (e.target.classList.contains("ds")) renderVideoPicker();
+    refresh();
+  });
+
+  // Tell a returning annotator that their progress is still here.
+  const checkResume = () => {
+    const note = document.getElementById("resume-note");
+    const opts = readOpts(nameEl.value);
+    if (!nameEl.value.trim()) { note.textContent = ""; return; }
+    const probe = makeSession(nameEl.value.trim(), opts);
+    const prev = restore(probe.storeKey);
+    if (prev) {
+      const done = prev.uids.filter((u) => {
+        const sc = prev.scores[u];
+        return sc && prev.metrics.every((k) => typeof sc[k] === "number");
+      }).length;
+      note.innerHTML = `<span style="color:#155724;">Welcome back — ${done} of ${prev.uids.length} pairs already rated. You will continue where you stopped.</span>`;
+    } else {
+      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs${opts.mode === "auto" ? " (batch " + (opts.batch + 1) + " of " + opts.batches + ")" : ""}.</span>`;
+    }
+  };
+  nameEl.addEventListener("input", checkResume);
+  document.getElementById("adv").addEventListener("change", refresh);
+  syncModePanels();
+  renderVideoPicker();
+  refresh();
+
+  document.getElementById("start").addEventListener("click", () => {
+    const name = nameEl.value.trim();
+    const err = document.getElementById("start-err");
+    if (!name) { err.textContent = "Please enter your name first."; nameEl.focus(); return; }
+    const opts = readOpts(name);
+    if (!opts.metrics.length) { err.textContent = "Select at least one metric."; return; }
+    if (!opts.datasets.length || !opts.approaches.length) { err.textContent = "Select at least one dataset and one approach."; return; }
+    if (opts.videos && !opts.videos.length) { err.textContent = "Select at least one video."; return; }
+
+    const fresh = makeSession(name, opts);
+    if (!fresh.uids.length) { err.textContent = "That selection contains no QA pairs."; return; }
+    saveLastOpts(opts, name);
+    const prev = restore(fresh.storeKey);
+    S = prev || fresh;
+    // Resume at the first pair that still has an unrated metric.
+    const next = S.uids.findIndex((u) => !isRated(u));
+    S.index = next === -1 ? S.uids.length : next;
+    save();
+    flush();
+    renderRate();
+  });
+
+  nameEl.addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("start").click(); });
+}
+
+function readOpts(name) {
+  const q = (id) => document.getElementById(id);
+  const vals = (cls) => [...document.querySelectorAll("." + cls)].filter((c) => c.checked).map((c) => c.value);
+  const mode = (document.querySelector('input[name=mode]:checked') || {}).value || "auto";
+  const seed = Number(q("seed") ? q("seed").value : CFG.SEED) || 0;
+  const batches = Math.max(1, Number(q("batches") ? q("batches").value : CFG.BATCHES) || 1);
+
+  // Explicit batch wins: URL param, then the advanced field, then the name hash.
+  let batch;
+  const urlBatch = Number(params.get("batch"));
+  const fieldBatch = q("batch") && q("batch").value !== "" ? Number(q("batch").value) : NaN;
+  if (!Number.isNaN(fieldBatch) && fieldBatch > 0) batch = (fieldBatch - 1) % batches;
+  else if (!Number.isNaN(urlBatch) && urlBatch > 0) batch = (urlBatch - 1) % batches;
+  else batch = hashStr(slug(name)) % batches;
+
+  const allDs = [...new Set(DATA.map((p) => p.dataset))].sort();
+  const allAp = [...new Set(DATA.map((p) => p.approach))].sort();
+
+  return {
+    mode: mode,
+    datasets: mode === "custom" && document.querySelector(".ds") ? vals("ds") : allDs,
+    approaches: mode === "custom" && document.querySelector(".ap") ? vals("ap") : allAp,
+    // null means "every video" — automatic mode always spans the whole corpus.
+    videos: mode === "custom" && document.querySelector(".vid") ? vals("vid") : null,
+    metrics: document.querySelector(".mt") ? vals("mt") : METRICS.map((m) => m.key),
+    blind: q("blind") ? q("blind").checked : true,
+    shuffle: q("shuffle") ? q("shuffle").checked : true,
+    seed: seed,
+    batch: batch,
+    batches: batches,
+    anchorSize: Number(q("anchor") ? q("anchor").value : CFG.ANCHOR_SIZE) || 0,
+    sample: Math.max(0, Number(q("sample") ? q("sample").value : 0) || 0),
+    maxPairs: Math.max(0, Number(q("maxpairs") ? q("maxpairs").value : CFG.MAX_PAIRS) || 0),
+  };
+}
+
+/* ===========================================================================
+   Screen: rating
+   =========================================================================== */
+
+function renderRate() {
+  if (S.index >= S.uids.length) return renderDone();
+
+  const uid = S.uids[S.index];
+  const p = pairOf(uid);
+  const sc = S.scores[uid] || (S.scores[uid] = {});
+  const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+  const done = ratedCount();
+  const vurl = videoLink(p, !S.opts.blind);
+  shownAt = Date.now();
+
+  app.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-row">
+        <div><b>Pair ${S.index + 1}</b> of ${S.uids.length} &nbsp;·&nbsp; <span class="muted">${done} fully rated</span></div>
+        <div class="sync" id="sync"></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${(done / S.uids.length * 100).toFixed(1)}%"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="qa-meta">
+        <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>${S.opts.blind ? "hidden" : p.approach}</code></span>
+        ${vurl ? `<a class="vidlink-inline" href="${vurl}" target="_blank" rel="noopener noreferrer">▶ Watch source video</a>` : ""}
+      </div>
+      ${vurl ? '<p class="muted" style="margin:-4px 0 10px 0; font-size:12px;">Optional — rate the pair as written. You should not need the video, and <b>Standalone Quality</b> in particular asks whether it makes sense without one.</p>' : ""}
+      <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
+      <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
+    </div>
+
+    <div id="metrics">
+      ${metrics.map((m, i) => `
+        <div class="metric ${typeof sc[m.key] === "number" ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
+          <div class="metric-head">
+            <span class="metric-name">${m.label}</span>
+            <span class="tag ${m.scope}">${SCOPE_TAG[m.scope]}</span>
+          </div>
+          <div class="metric-def">${m.def}</div>
+          <div class="likert">
+            ${LIKERT.map((l) => `<button type="button" data-key="${m.key}" data-v="${l.v}" class="${sc[m.key] === l.v ? "sel" : ""}"><span class="num">${l.v}</span><span class="lbl">${l.label}</span></button>`).join("")}
+          </div>
+        </div>`).join("")}
+    </div>
+
+    <div class="card">
+      <div class="navbtns">
+        <button class="btn-ghost" id="prev" ${S.index === 0 ? "disabled" : ""}>← Previous</button>
+        <button class="btn-primary" id="next">Submit &amp; next →</button>
+        <span class="spacer"></span>
+        <button class="btn-ghost" id="options">⚙ Options</button>
+        <button class="btn-ghost" id="finish">Finish / export</button>
+      </div>
+      <div class="err" id="rate-err" style="margin-top:8px;"></div>
+      <p class="muted" style="margin-top:10px;">Keyboard: <kbd>1</kbd>–<kbd>5</kbd> rates the highlighted statement and moves to the next one, <kbd>Enter</kbd> submits the pair.</p>
+    </div>`;
+
+  // textContent, not innerHTML — answers contain Markdown and raw punctuation
+  // that must render literally (formatting noise is part of what is rated).
+  document.getElementById("qtext").textContent = p.question;
+  document.getElementById("atext").textContent = p.answer;
+
+  app.querySelectorAll(".likert button").forEach((b) => {
+    b.addEventListener("click", () => {
+      setScore(b.dataset.key, Number(b.dataset.v));
+      const mi = Number(b.closest(".metric").dataset.mi);
+      activeMetric = mi;
+      advanceMetric();
+    });
+  });
+
+  document.getElementById("next").addEventListener("click", submitPair);
+  document.getElementById("prev").addEventListener("click", () => {
+    storeTime();
+    S.index = Math.max(0, S.index - 1);
+    save();
+    renderRate();
+  });
+  // Back to the selection screen. Progress for this configuration stays in
+  // localStorage, so returning with the same name and options resumes it.
+  document.getElementById("options").addEventListener("click", () => {
+    storeTime();
+    if (isRated(uid)) enqueue(uid);
+    save();
+    renderWelcome();
+  });
+
+  document.getElementById("finish").addEventListener("click", () => {
+    storeTime();
+    // Push edits made on this pair before leaving; a partially rated pair is
+    // deliberately not sent, it stays in localStorage until it is completed.
+    if (isRated(uid)) enqueue(uid);
+    save();
+    renderDone();
+  });
+
+  activeMetric = metrics.findIndex((m) => typeof sc[m.key] !== "number");
+  if (activeMetric === -1) activeMetric = metrics.length - 1;
+  paintActive();
+  setSync(syncState);
+  window.scrollTo({ top: 0 });
+}
+
+function paintActive() {
+  app.querySelectorAll(".metric").forEach((el) => {
+    const on = Number(el.dataset.mi) === activeMetric;
+    el.classList.toggle("active", on);
+  });
+}
+
+function setScore(key, v) {
+  const uid = S.uids[S.index];
+  S.scores[uid][key] = v;
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) {
+    block.classList.add("rated");
+    block.querySelectorAll(".likert button").forEach((b) => b.classList.toggle("sel", Number(b.dataset.v) === v));
+  }
+  document.getElementById("rate-err").textContent = "";
+  save();
+}
+
+function advanceMetric() {
+  const uid = S.uids[S.index];
+  const sc = S.scores[uid] || {};
+  const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && typeof sc[m.key] !== "number");
+  if (nextUnrated !== -1) {
+    activeMetric = nextUnrated;
+  } else {
+    const anyUnrated = metrics.findIndex((m) => typeof sc[m.key] !== "number");
+    if (anyUnrated !== -1) activeMetric = anyUnrated;
+  }
+  paintActive();
+  const el = app.querySelector('.metric[data-mi="' + activeMetric + '"]');
+  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+function storeTime() {
+  const uid = S.uids[S.index];
+  if (shownAt) S.seconds[uid] = (S.seconds[uid] || 0) + Math.round((Date.now() - shownAt) / 1000);
+  shownAt = Date.now();
+}
+
+function submitPair() {
+  const uid = S.uids[S.index];
+  const sc = S.scores[uid] || {};
+  const missing = METRICS.filter((m) => S.metrics.includes(m.key) && typeof sc[m.key] !== "number");
+  if (missing.length) {
+    document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) => m.label).join(", ");
+    const first = METRICS.filter((m) => S.metrics.includes(m.key)).findIndex((m) => m.key === missing[0].key);
+    activeMetric = first;
+    paintActive();
+    const el = app.querySelector('.metric[data-mi="' + first + '"]');
+    if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    return;
+  }
+  storeTime();
+  enqueue(uid);
+  S.index += 1;
+  save();
+  renderRate();
+}
+
+document.addEventListener("keydown", (e) => {
+  if (!S || S.index >= S.uids.length) return;
+  if (!document.getElementById("metrics")) return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "input" || tag === "textarea") return;
+
+  if (e.key >= "1" && e.key <= "5") {
+    const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+    const m = metrics[activeMetric];
+    if (m) { setScore(m.key, Number(e.key)); advanceMetric(); e.preventDefault(); }
+  } else if (e.key === "Enter") {
+    submitPair();
+    e.preventDefault();
+  }
+});
+
+/* ===========================================================================
+   Screen: done
+   =========================================================================== */
+
+function renderDone() {
+  const done = ratedCount();
+  const complete = done === S.uids.length;
+
+  // Per-approach means over what this annotator actually rated. Shown after the
+  // fact only — during rating the approach stays hidden.
+  const byApproach = {};
+  for (const uid of S.uids) {
+    if (!isRated(uid)) continue;
+    const p = pairOf(uid);
+    const b = byApproach[p.approach] || (byApproach[p.approach] = { n: 0, sums: {} });
+    b.n += 1;
+    for (const k of S.metrics) b.sums[k] = (b.sums[k] || 0) + S.scores[uid][k];
+  }
+  const shownMetrics = METRICS.filter((m) => S.metrics.includes(m.key));
+
+  app.innerHTML = `
+    <div class="banner ${complete ? "banner-ok" : "banner-info"}">
+      ${complete
+        ? "<b>All done — thank you!</b> You rated every pair in your batch."
+        : "<b>Progress saved.</b> You rated " + done + " of " + S.uids.length + " pairs. Return to this link with the same name to carry on."}
+    </div>
+
+    <div class="card">
+      <h2>Your session</h2>
+      <table>
+        <tr><td>Annotator</td><td><b>${S.annotator}</b></td></tr>
+        <tr><td>Session ID</td><td><code>${S.sessionId}</code></td></tr>
+        <tr><td>Assignment</td><td>${S.opts.mode === "auto" ? "batch " + (S.opts.batch + 1) + " of " + S.opts.batches : "custom subset"}</td></tr>
+        <tr><td>Pairs fully rated</td><td class="num"><b>${done}</b> / ${S.uids.length}</td></tr>
+      </table>
+      <div class="sync" id="sync" style="margin-top:12px;"></div>
+      ${backendOn ? "" : '<p class="muted" style="margin-top:8px;">No results server is configured, so <b>you must download your ratings and send them to the research team</b>, otherwise they are only in this browser.</p>'}
+
+      <div class="navbtns">
+        <button class="btn-primary" id="dl-csv">Download CSV</button>
+        <button class="btn-ghost" id="dl-json">Download JSON</button>
+        ${done < S.uids.length ? '<button class="btn-ghost" id="resume">Continue rating</button>' : ""}
+        <span class="spacer"></span>
+        <button class="btn-ghost" id="restart">Start a different session</button>
+      </div>
+    </div>
+
+    ${Object.keys(byApproach).length ? `
+    <div class="card">
+      <h2>Your mean scores by system</h2>
+      <p class="muted">Only over the pairs you rated. Shown now that rating is finished.</p>
+      <div style="overflow-x:auto;">
+      <table>
+        <tr><th>System</th><th class="num">n</th>${shownMetrics.map((m) => '<th class="num">' + m.label.replace("Question ", "Q ").replace("Answer ", "A ") + "</th>").join("")}</tr>
+        ${Object.entries(byApproach).sort().map(([a, b]) =>
+          `<tr><td><b>${a}</b></td><td class="num">${b.n}</td>${shownMetrics.map((m) => '<td class="num">' + (b.sums[m.key] / b.n).toFixed(2) + "</td>").join("")}</tr>`).join("")}
+      </table>
+      </div>
+    </div>` : ""}`;
+
+  document.getElementById("dl-csv").addEventListener("click", exportCsv);
+  document.getElementById("dl-json").addEventListener("click", exportJson);
+  const resume = document.getElementById("resume");
+  if (resume) resume.addEventListener("click", () => {
+    const next = S.uids.findIndex((u) => !isRated(u));
+    S.index = next === -1 ? S.uids.length : next;
+    renderRate();
+  });
+  document.getElementById("restart").addEventListener("click", () => {
+    if (S.queue.length && !confirm("Some ratings have not reached the server yet. Download them first? Click Cancel to go back and download.")) return;
+    S = null;
+    renderWelcome();
+  });
+  setSync(syncState);
+  flush();
+  window.scrollTo({ top: 0 });
+}
+
+/* ===========================================================================
+   Boot
+   =========================================================================== */
+
+fetch("qa_data.json")
+  .then((r) => {
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  })
+  .then((json) => {
+    // Accept the current {pairs, videos} shape and a bare array of pairs.
+    DATA = Array.isArray(json) ? json : (json.pairs || []);
+    VIDEOS = Array.isArray(json) ? {} : (json.videos || {});
+    renderWelcome();
+  })
+  .catch((e) => {
+    app.innerHTML = '<div class="card"><h2>Could not load the QA pairs</h2>' +
+      '<p class="muted">' + String(e) + '</p>' +
+      '<p class="muted">Regenerate the data file with <code>python eval/web/extract_qa_data.py</code>, and serve this folder over HTTP ' +
+      '(<code>python -m http.server</code>) rather than opening the file directly — <code>file://</code> blocks the fetch.</p></div>';
+  });
+</script>
+</body>
+</html>
