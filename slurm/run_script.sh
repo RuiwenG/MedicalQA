@@ -14,9 +14,10 @@
 #SBATCH --mail-type=END,FAIL
 
 # Submit from the repo root:  sbatch slurm/run_script.sh
-# Override the video id / approach on the command line, e.g.:
-#   sbatch slurm/run_script.sh 1 3     # video 1, approach 3 (multi-agent)
-#   sbatch slurm/run_script.sh 1 1     # video 1, approach 1 (single agent)
+# By default this runs approach 1 (single agent) and approach 3 (multi-agent).
+# Override the approaches on the command line, e.g.:
+#   sbatch slurm/run_script.sh 3       # only approach 3
+#   sbatch slurm/run_script.sh 1 2 4   # approaches 1, 2 and 4
 
 set -eo pipefail
 
@@ -28,20 +29,26 @@ module load Anaconda3
 source .mvenv/bin/activate
 
 # --- Job parameters (positional args, with defaults) ---
-# VIDEO_ID="${1:-1}"     # which video index in test_dataset.csv
-APP="${1:-3}"          # approach: 1=Single, 2=DualAgent(LLMChunking), 3=MultiAgent, 4=RAG
+# approach: 1=Single, 2=DualAgent(LLMChunking), 3=MultiAgent, 4=RAG
+APPS=("$@")
+if [ ${#APPS[@]} -eq 0 ]; then
+    APPS=(1 3)
+fi
 
 echo "===================================================="
 echo "Host:      $(hostname)"
 echo "Job ID:    ${SLURM_JOB_ID}"
-# echo "Video ID:  ${VIDEO_ID}"
-echo "Approach:  ${APP}"
+echo "Approaches: ${APPS[*]}"
 echo "Started:   $(date)"
 echo "===================================================="
 nvidia-smi
 
-# python run.py --v test_dataset.csv --only "${VIDEO_ID}" --app "${APP}"
-
-python run.py --v test_dataset.csv --app "${APP}"
+for APP in "${APPS[@]}"; do
+    echo "----------------------------------------------------"
+    echo ">>> Running approach ${APP} at $(date)"
+    echo "----------------------------------------------------"
+    python run.py --v test_dataset.csv --app "${APP}"
+    echo ">>> Finished approach ${APP} at $(date)"
+done
 
 echo "Finished: $(date)"

@@ -19,21 +19,22 @@ class Justifier:
         
         system_prompt = f"You are a {lang_name} content analyst. Your task is to provide a clear and concise justification for a question's selection status in {lang_name}. {lang_guard}"
         
-        prompt = f"""You will be given a question, its source topic, and its "Selected" or "Rejected" status. Your job is to explain *why* that status makes sense.
+        prompt = f"""You will be given a question, its source topic, and its "Selected" or "Rejected" status. Explain *why* that status makes sense with respect to four quality criteria: alignment with the video, accessibility to caregivers, educational value, and mental health value.
 
         **Question:** {question_item['question']}
         **Source Topic:** {question_item['source_segment']['topic']}
         **Selection Status:** {question_item['status']}
 
-        Based on the information above, provide a concise reason in {lang_name}. Use the following as **sample reasons, but you are not limited to them**:
+        Provide one concise reason in {lang_name}. Use the following as **sample reasons, but you are not limited to them**:
         - **Good `Selected` reasons:**
-            - "Providing high educational value and mentorship value."
-            - "Asks about career transition challenges, which has direct mentorship value
-            - "Addresses the key concept discussed in the source."
+            - "Gives caregivers a concrete, actionable strategy grounded in the video."
+            - "Surfaces the video's reassurance for struggling caregivers — high mental health value."
+            - "Clear, jargon-free question addressing a key concept from the source topic."
         - **Good `Rejected` reasons:**
-            - "The question is too basic and offers little insight."
-            - "This topic is already covered by another, more specific selected question."
-            - "This question has a low score based on the result of agent 3."
+            - "Cannot be answered from the source topic without outside knowledge (poor alignment)."
+            - "Too basic to offer actionable guidance."
+            - "Already covered by another, more specific selected question."
+            - "Received a low quality score from the evaluator."
 
         **Reason:**"""
         messages = [{"role": "system", "content": system_prompt}, 

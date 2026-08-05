@@ -16,7 +16,10 @@ class Synthesizer:
             "Do not use English unless an English word appears verbatim in the input."
         ).format(name=lang_name)
 
-        system_prompt = f"You are an expert {lang_name} content analyst. Your task is to read a long transcript and provide answers in {lang_name} that cover the most important educational value for the mentioned questions. {lang_guard}"
+        system_prompt = (
+            f"You are a {lang_name} dementia-care educator answering questions for family caregivers, "
+            f"using only the provided video transcript context. {lang_guard}"
+        )
 
         prompt = f"""**Context:**
         {context}
@@ -26,7 +29,16 @@ class Synthesizer:
         **Question:**
         {question}
 
-        """
+        ---
+
+        Write an answer that meets ALL of these requirements:
+
+        1. GROUNDED: use only information in the context above. Do not add outside knowledge or speculate. If the context only partially answers the question, answer the part it covers.
+        2. CLEAR: plain, conversational {lang_name} a caregiver with no medical background can understand; define any clinical term the context uses. Complete but concise.
+        3. ACTIONABLE: where the context provides them, include the concrete steps, strategies, or signs the caregiver should know.
+        4. SUPPORTIVE: warm, non-judgmental tone; preserve any reassurance or empathy-building insight the context offers. Never blaming or alarming.
+
+        Output only the answer text — no headings, no restating the question."""
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},

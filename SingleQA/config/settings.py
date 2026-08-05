@@ -1,7 +1,9 @@
 import sys
 from pathlib import Path
+
 sys.path.append(str(Path(__file__).parent.parent.parent))
 from common_utils import config
+
 
 class Settings:
     max_length = 131072
@@ -10,12 +12,12 @@ class Settings:
         "temperature": 0.7,
         "top_p": 0.9,
         "repetition_penalty": 1.05,
-        "do_sample": True
+        "do_sample": True,
     }
 
     def get_prompt_template(self, transcript):
         # Language settings
-        lang_code = config.LANGUAGE_CODE   # e.g., 'zh'
+        lang_code = config.LANGUAGE_CODE  # e.g., 'zh'
         lang_name = config.LANGUAGE_NAME
         # Strong instruction to keep output in the target language
         lang_guard = (
@@ -24,21 +26,31 @@ class Settings:
         ).format(name=lang_name)
 
         # Build prompt
-        system_prompt = (f"You are a {lang_name} expert content analyst. Your task is to read a long transcript and identify potential questions that cover the most important educational value on dementia."
-                    f"{lang_guard}"
-                    )
+        system_prompt = (
+            f"You are a {lang_name} dementia-care education specialist. Your task is to read a "
+            f"caregiver-education video transcript and generate question-answer pairs that are "
+            f"faithful to the video, easy to understand, practically useful, and emotionally "
+            f"supportive for dementia caregivers. {lang_guard}"
+        )
 
-        prompt = f"""Read the following transcript carefully and identify the 20 most important questions in {lang_name} providing only educational value from this transcript segment. For each question:
+        prompt = f"""Read the following transcript carefully and generate the 20 most valuable question-answer pairs in {lang_name}. Every QA pair must satisfy ALL FOUR quality criteria:
 
-        1. Ensure the question captures a key concept or important information from the transcript
-        2. Provide a clear, accurate answer to the question based only on information in the transcript
-        3. Make sure questions and answers cover different aspects of the content the whole transcript and don't overlap significantly
-        4. Select questions and answers in a balanced way from throughout the entire content, not concentrating too heavily on any single section or part
-        5. Answers should be in proper detail length and include only the relevant information answering the question properly with educational value.
-        6. Avoid trivial or overly specific questions.
-        7. Use the same Language as of the original content. 
+        1. ALIGNMENT (accurate & grounded): Base every answer strictly on information stated in the transcript. Do not add outside knowledge, speculate, or exaggerate. If the transcript is unclear on a point, do not create a question about it.
 
-        Strictly Format your response as a list of question-answer pairs, with each pair clearly marked (e.g., "Question 1:", "Answer 1:" on separate lines). Strictly to make your response as structured as possible so it can be easily parsed. Also avoid any other extra words in the start and beginning and only the strict structured response.
+        2. ACCESSIBILITY (clear & fluent): Write questions and answers in plain, conversational language a family caregiver with no medical background can understand. Define any clinical term the transcript uses. Keep answers focused — detailed enough to be complete, short enough to stay readable.
+
+        3. EDUCATIONAL VALUE (actionable & useful): Prefer questions whose answers tell the caregiver what to do, why it works, or what to expect — concrete strategies, steps, and observable signs — over abstract facts. Avoid trivial or overly narrow questions.
+
+        4. MENTAL HEALTH VALUE (supportive & empathetic): Use a warm, non-judgmental tone that normalizes the caregiver's struggles. Where the transcript offers reassurance, coping strategies, or empathy-building insight into the person with dementia's experience, capture it. Never phrase answers in a blaming or alarming way.
+
+        Coverage rules:
+        - Draw questions from across the ENTIRE transcript, not just one section.
+        - Ensure the pairs do not overlap significantly in content.
+        - Aim for all: A good QA pair should coverage all 4 of the criteria.
+
+        Before finalizing, silently verify each pair against all four criteria and replace any pair that fails one.
+
+        Strictly format your response as a list of question-answer pairs, with each pair clearly marked ("Question 1:", "Answer 1:" on separate lines). Output only the structured pairs — no preamble, no closing remarks.
 
         Transcript:
         {transcript}"""

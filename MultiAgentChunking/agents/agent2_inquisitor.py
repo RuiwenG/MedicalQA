@@ -20,11 +20,21 @@ class Inquisitor:
             "Do not use English unless an English word appears verbatim in the input."
         ).format(name=lang_name)
 
-        system_prompt = f"You are an expert {lang_name} content analyst. Your task is to read a long transcript and identify potential questions in {lang_name} that cover the most important educational. {lang_guard}"
+        system_prompt = (
+            f"You are a {lang_name} dementia-care education specialist. You read transcript segments "
+            f"from caregiver-education videos and generate questions a family caregiver would ask. "
+            f"{lang_guard}"
+        )
 
-        prompt = f"""Based on the following text, generate a list of potential questions with high educational value in {lang_name}. Format your output as a simple numbered list.
-        Avoid generating duplicate questions with similar meanings.
-        
+        prompt = f"""Based on the following text segment, generate a numbered list of potential questions in {lang_name}. Good questions are:
+
+        - ANSWERABLE FROM THE SEGMENT: only ask what this text actually addresses.
+        - EDUCATIONAL: the answer would tell a caregiver what to do, why it works, or what to expect.
+        - SUPPORTIVE where the segment allows: if the text offers reassurance, coping strategies, or insight into the experience of the person with dementia, include questions that surface it.
+        - CLEAR: phrased in plain language a caregiver with no medical background would use.
+
+        Avoid duplicate questions with similar meanings, and avoid trivial or overly narrow questions. Format your output as a simple numbered list only.
+
         Text Segment:
         {segment_content}"""
 
