@@ -1,34 +1,34 @@
 [
   {
-    "question": "How do occupational therapists utilize an understanding of body mechanics and gravity to develop effective transfer strategies?",
-    "answer": "Based on the provided transcript, occupational therapists utilize an understanding of body mechanics and gravity to develop effective transfer strategies by applying these physical principles to real-world movements, such as transferring from a chair to a toilet.\n\nThe transcript highlights that this approach allows therapists to:\n*   **Optimize Movement Efficiency:** By understanding how the body works mechanically, therapists can ensure movements are not \"super drawn out\" but are instead efficient, even if they require a degree of patience.\n*   **Enable Replicability:** These techniques are not limited to specific scenarios; they can be applied to \"any any place basically,\" allowing caregivers to use the same transfer techniques in various settings.\n*   **Leverage Natural Forces:** The strategy involves using gravity as a tool to assist the movement, making the transfer process more manageable for individuals with conditions like late-stage dementia.\n\nThe speaker notes that this specific methodology is detailed in a resource titled \"Advanced Skills in Late Stage Dementia,\" which serves as a guide for implementing these mechanics-based tips.",
+    "question": "What is the benefit of having the wheelchair armrests raised or removed before a transfer?",
+    "answer": "Raising or removing the wheelchair armrests helps the person slide over easily instead of having to be lifted up and put down. This also creates more opportunity for a caregiver, like Lynn, to take part in the move. To do this safely, make sure the wheelchair is positioned very close to the person, not right in front of them, and ensure the armrests are either back or off before starting the transfer.",
+    "source_segment": {
+      "id": 6,
+      "topic": "Demonstration: Chair Positioning and Bed Height"
+    },
+    "time_start_sec": 211.44,
+    "time_end_sec": 323.6,
+    "time_start_hhmmss": "00:03:31",
+    "time_end_hhmmss": "00:05:24"
+  },
+  {
+    "question": "How do I know if a person is ready to start leaning forward for a transfer?",
+    "answer": "Based on the video, the first sign that a person is ready to start leaning forward is when they are able to stand. Once they can stand, you can begin doing a little weight shifting. As you do this weight shifting, watch for the moment their hips start to fold; this is the cue to gently bring their body forward. To keep them safe during this movement, you can place one hand where they need support and use your other hand to block their knees so they don't slide out. The video shows that with this support, the person can move forward smoothly, almost like dancing.",
     "source_segment": {
       "id": 9,
-      "topic": "Applying Techniques to Other Scenarios and Resources"
-    },
-    "time_start_sec": 598.56,
-    "time_end_sec": 683.279,
-    "time_start_hhmmss": "00:09:59",
-    "time_end_hhmmss": "00:11:23"
-  },
-  {
-    "question": "What specific hand placements and blocking techniques are used to prevent a student's knees from sliding out during a forward lean?",
-    "answer": "Based on the transcript provided, the specific techniques used to prevent a student's knees from sliding out during a forward lean are as follows:\n\n*   **Hand Placement:** The instructor places **one hand** in the specific location where the student needs to be supported.\n*   **Blocking Technique:** The instructor actively **blocks the student's knees**. This action physically prevents the knees from sliding outward as the student's hips fold forward and their body is brought forward.\n\nThese actions are performed while the instructor holds the student's hand and guides their hip to initiate the movement.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Demonstration: Weight Shifting and Rhythm"
+      "topic": "Demonstration: Weight Shifting and Standing Transfer"
     },
     "time_start_sec": 487.759,
-    "time_end_sec": 600.08,
+    "time_end_sec": 533.92,
     "time_start_hhmmss": "00:08:08",
-    "time_end_hhmmss": "00:10:00"
+    "time_end_hhmmss": "00:08:54"
   },
   {
-    "question": "How does positioning a horse's head on the rider's outside shoulder influence the animal's balance and forward movement?",
-    "answer": "Positioning a horse's head on the rider's outside shoulder influences the animal's balance and forward movement through a combination of biomechanical alignment and leverage:\n\n1.  **Counterbalancing Mechanism**: The horse's anatomy is structured such that when its head moves in one direction, its hindquarters (bottom) naturally move in the opposite direction. Placing the head on the outside shoulder allows the horse to look over the rider's head, which encourages it to lean forward more readily.\n2.  **Facilitating Forward Motion**: By straightening and tightening the rider's arms, this head position acts as a fulcrum. This setup allows the rider to effectively \"bring the horse forward\" with minimal effort, utilizing the horse's natural tendency to counter-balance.\n3.  **Promoting Straightness**: This position helps keep the horse's back straight. A straight back is essential for the horse to engage its hindquarters properly and move efficiently without twisting or falling onto its shoulder.\n4.  **Weight Distribution**: As the horse leans forward due to this head position, its weight shifts onto its hind legs (specifically mentioned as the knee in the context of a \"chair pose\" or similar yoga-inspired analogy for the rider's posture, implying the horse's hind end). This shift allows the rider to control the horse's elevation, either lifting it higher or keeping it lower depending on the horse's stability.\n\nIn summary, this positioning uses the horse's natural counter-rotation to encourage a forward lean, straighten the back, and shift weight to the hindquarters, thereby facilitating controlled forward movement and balance.",
+    "question": "What should I do if the person is not stable enough to stand on their own?",
+    "answer": "If the person isn't stable enough to stand on their own, you can keep them fairly low while supporting them. To do this, let their head rest on your outside shoulder so their body faces the opposite way; this position helps them lean forward more easily. Straighten and tighten your arms to bring them forward, which shifts their weight onto their knee. You can adjust how high you lift them depending on their stability, and if they are able, encourage them to stand. Think of their body like a teeter-totter, where gravity and your support act as a fulcrum to help them move safely.",
     "source_segment": {
-      "id": 7,
-      "topic": "Demonstration: Using Gravity and the Chair Pose"
+      "id": 8,
+      "topic": "Demonstration: Using Gravity and the 'Chair Pose' Lift"
     },
     "time_start_sec": 416.319,
     "time_end_sec": 489.28000000000003,
@@ -36,10 +36,46 @@
     "time_end_hhmmss": "00:08:09"
   },
   {
-    "question": "How does the placement of the rescuer's hands differ from the common practice of grabbing the upper back or armpit area?",
-    "answer": "Based on the transcript provided, the placement of the rescuer's hands differs from common practice in the following ways:\n\n*   **Common Practice:** Most people tend to grab the **upper back**, specifically the **armpit area** or the region near the **scapula** (shoulder blades).\n*   **Described Technique:** The rescuer (Steve) explicitly avoids grabbing the legs or squishing them together. Instead, she positions her arms to go **around the trunk**, placing her hands on the **low back** or **low trunk** area.\n\nThe key distinction is the vertical position on the body: the common method targets the upper back/shoulders, while the described method targets the lower back/trunk.",
+    "question": "How can I change my mindset from trying to muscle through a task to doing it with skill?",
+    "answer": "It is very common to feel like you need to \"muscle through\" a task, especially when you are trying to get things done quickly or have seen someone else do it a certain way. The context suggests that back injuries often happen because people are moving others without using proper skill or technique. To shift your mindset, try to pause and recognize when your brain is telling you to \"get this over with\" and move faster. Instead of relying on strength, focus on slowing down and being more skillful in how you move the person. Remember that moving someone who doesn't move easily requires patience; rushing can lead to injury for both of you.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Root Causes of Back Injuries: Lack of Skill and Rushing"
+    },
+    "time_start_sec": 61.44,
+    "time_end_sec": 151.28,
+    "time_start_hhmmss": "00:01:01",
+    "time_end_hhmmss": "00:02:31"
+  },
+  {
+    "question": "What should I expect regarding physical strain when I start caregiving?",
+    "answer": "When you start caregiving, it is very common to experience back injuries. In fact, back injuries are the number one reason care partners have to stop working or take time off. This means you should be prepared for physical strain, particularly in your back, as lifting and moving someone can be demanding.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Identifying Common Care Partner Injuries"
+    },
+    "time_start_sec": 26.32,
+    "time_end_sec": 64.08,
+    "time_start_hhmmss": "00:00:26",
+    "time_end_hhmmss": "00:01:04"
+  },
+  {
+    "question": "Should the bed be raised higher than the chair seat, lower, or kept at the same level for a safe transfer?",
+    "answer": "For a safe transfer, the bed should ideally be raised so it is a little higher than the chair seat. This setup helps you use gravity to your advantage, allowing the person to slide down naturally into the chair rather than having to lift them all the way down. To make this work, position the chair close to the bed and perpendicular to it, with one armrest moved back or off so the person can slide over easily. While the video shows a bed that is a bit low, raising it to be level with or slightly above the seat makes the move safer and allows the person to participate more in the transfer.",
     "source_segment": {
       "id": 6,
+      "topic": "Demonstration: Chair Positioning and Bed Height"
+    },
+    "time_start_sec": 211.44,
+    "time_end_sec": 323.6,
+    "time_start_hhmmss": "00:03:31",
+    "time_end_hhmmss": "00:05:24"
+  },
+  {
+    "question": "What is the difference between a standard lift and the technique demonstrated here regarding body placement?",
+    "answer": "The technique shown here focuses on where you place your body to help, which is different from what many people usually do. Instead of grabbing the person's arms or armpits (which is often where people go), this method uses the person's knees and lower back for support.\n\nHere are the specific steps demonstrated:\n*   **Foot Position:** Try to line up your forefoot with the person's forefoot. If your foot is too close, you can try a lift to see if they let you in; if not, stabilize yourself first.\n*   **Knee Placement:** Cup the person's near knee with your knee. Do not grab their legs and squish them together, as that is uncomfortable for them.\n*   **Body Position:** Bring your arms around their trunk so your body is low on their low back.\n\nThis approach keeps your body close to their knees and lower back rather than reaching for their upper back or arms.",
+    "source_segment": {
+      "id": 7,
       "topic": "Demonstration: Body Positioning and Hand Placement"
     },
     "time_start_sec": 322.16,
@@ -48,107 +84,59 @@
     "time_end_hhmmss": "00:06:58"
   },
   {
-    "question": "What role does patience play in executing transfer techniques for individuals with late-stage dementia?",
-    "answer": "Based on the transcript provided, patience plays a critical role in executing transfer techniques for individuals with late-stage dementia, specifically in the following ways:\n\n*   **Compensating for Speed:** While the transfer movement itself may not be \"super drawn out,\" the process requires a slower pace to ensure safety and effectiveness. Patience is necessary to accommodate the individual's speed of movement.\n*   **Managing Delays:** The transcript highlights that a \"delay\" is often triggered during these transfers. Patience is required to wait through these pauses without rushing the individual.\n*   **Inherent Necessity:** The speaker explicitly states that \"some patience needs is needed,\" suggesting it is an unavoidable component of the technique rather than just a helpful trait.\n*   **Foundation of Mechanics:** This patience is rooted in the understanding of human body mechanics and the use of gravity, which are key concepts in the referenced \"Advanced Skills in Late Stage Dementia\" training.\n\nIn summary, patience is essential to allow the transfer to proceed at a manageable speed that respects the individual's physical limitations and the natural delays inherent in their condition.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Applying Techniques to Other Scenarios and Resources"
-    },
-    "time_start_sec": 598.56,
-    "time_end_sec": 683.279,
-    "time_start_hhmmss": "00:09:59",
-    "time_end_hhmmss": "00:11:23"
-  },
-  {
-    "question": "What is the benefit of having the wheelchair armrests raised or removed before a bed-to-chair transfer?",
-    "answer": "Based on the transcript provided, the benefit of having the wheelchair armrests raised or removed before a bed-to-chair transfer is that it allows the person being transferred to **slide over** into the chair rather than having to be physically lifted up and set down.\n\nThis adjustment also creates **more ability for the caregiver (Lynn) to participate** in the move, facilitating a safer and more collaborative transfer process.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Demonstration: Chair Positioning and Bed Height"
-    },
-    "time_start_sec": 211.44,
-    "time_end_sec": 323.6,
-    "time_start_hhmmss": "00:03:31",
-    "time_end_hhmmss": "00:05:24"
-  },
-  {
-    "question": "How does the physical burden of caregiving contribute to specific injuries like back problems?",
-    "answer": "Based on the provided transcript, the physical burden of caregiving contributes to specific injuries like back problems primarily through the mechanical strain of lifting, transferring, and supporting another person.\n\nWhile the transcript does not explicitly detail the biomechanics or specific activities (such as bending or twisting), the consensus among the speakers identifies **back injury** as the \"number one reason\" care partners have to call out sick or take time off. This implies that the daily physical demands of \"taking care of someone\"—which inherently involve heavy lifting and awkward postures—directly result in musculoskeletal injuries, with the back being the most vulnerable area.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Common Care Partner Injuries"
-    },
-    "time_start_sec": 17.6,
-    "time_end_sec": 64.08,
-    "time_start_hhmmss": "00:00:18",
-    "time_end_hhmmss": "00:01:04"
-  },
-  {
-    "question": "What is the most common type of injury experienced by care partners?",
-    "answer": "Based on the transcript provided, the most common type of injury experienced by care partners is a **back injury**.\n\nThis is confirmed when the speakers discuss the topic, with one participant suggesting \"back injury,\" and the other validating it by stating, \"that's the number one reason people have to call out.\"",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Common Care Partner Injuries"
-    },
-    "time_start_sec": 17.6,
-    "time_end_sec": 64.08,
-    "time_start_hhmmss": "00:00:18",
-    "time_end_hhmmss": "00:01:04"
-  },
-  {
-    "question": "How do care partners' internal thoughts about speed influence their physical approach to assisting a person with limited mobility?",
-    "answer": "Care partners' internal thoughts about speed create a conflict between two opposing impulses that negatively impact their physical approach to assisting a person with limited mobility:\n\n1.  **The \"Get It Over With\" Impulse:** Care partners often experience an internal urge to rush tasks to completion (\"get this over with\"). This mindset leads them to adopt a \"fling\" approach—moving the person quickly and roughly rather than with care.\n2.  **The Physical Reality vs. Mental Speed:** When a care partner attempts to move a person who does not move easily, the internal drive for speed overrides the need for patience. Instead of slowing down to accommodate the person's limited mobility, the care partner may force movement, failing to allow the person to move naturally.\n\nConsequently, the desire to speed up the process results in a physical approach that is abrupt and potentially harmful, prioritizing the caregiver's efficiency over the person's safety and comfort.",
-    "source_segment": {
-      "id": 3,
-      "topic": "The Conflict Between Speed and Safety"
-    },
-    "time_start_sec": 99.2,
-    "time_end_sec": 151.28,
-    "time_start_hhmmss": "00:01:39",
-    "time_end_hhmmss": "00:02:31"
-  },
-  {
-    "question": "Why might a care partner feel an urge to \"get it over with\" when assisting someone who does not move easily?",
-    "answer": "Based on the transcript provided, a care partner might feel an urge to \"get it over with\" due to a conflict between two competing internal impulses:\n\n1.  **The Desire for Efficiency:** The care partner's brain often signals to \"get this over with and move faster.\" This suggests a psychological drive to complete the task quickly, likely to reduce the duration of the interaction or the perceived burden of the care activity.\n2.  **The Physical Reality of the Person:** The person being cared for (e.g., Ruby) \"does not move as easily.\" This physical limitation creates a friction that contradicts the desire for speed.\n\nThe transcript highlights that this urge to rush can lead to a harmful approach described as \"flinging\" the person. The care partner may attempt to overcome the person's lack of mobility by forcing movement (\"let me just move them\") rather than allowing the person to participate or move at their own pace. This creates a tension where the caregiver's desire for speed overrides the need for patience and the person's physical autonomy.",
-    "source_segment": {
-      "id": 3,
-      "topic": "The Conflict Between Speed and Safety"
-    },
-    "time_start_sec": 99.2,
-    "time_end_sec": 151.28,
-    "time_start_hhmmss": "00:01:39",
-    "time_end_hhmmss": "00:02:31"
-  },
-  {
-    "question": "Why is it valuable to practice movements with partners of varying body sizes to understand the role of gravity and leverage?",
-    "answer": "Practicing movements with partners of varying body sizes is valuable because it allows practitioners to directly experience how **gravity** and **leverage** function differently depending on the mass and height of the person being assisted.\n\nSpecifically, this practice helps in the following ways:\n\n*   **Testing Physical Limits:** It reveals the actual capacity of a practitioner to help someone who is significantly larger (e.g., six-foot-five) than themselves (e.g., five-foot-four).\n*   **Understanding Mechanics:** By engaging with different sizes, practitioners learn how their own body weight and the partner's weight interact with gravitational forces, which is crucial for determining if a specific move is feasible or requires modification.\n*   **Overcoming Assumptions:** It challenges the common belief that a move is impossible due to size differences, encouraging practitioners to attempt the movement to see if it can be adapted rather than immediately dismissing it as a \"wrong fit.\"",
+    "question": "What should I expect if my loved one is unable to perform the small steps or turns shown in the video?",
+    "answer": "It is completely normal if your loved one cannot perform the small steps or turns shown in the video, as the ability to do these specific movements is not readily available for most people. If your person is having trouble getting started or finding the rhythm, you can try adding a song, singing a little hum, or counting out loud (like \"one, one, two, three\") to help them get into the rhythm.",
     "source_segment": {
       "id": 10,
-      "topic": "Practice Recommendations and Conclusion"
+      "topic": "Utilizing Rhythm and Music for Movement"
     },
-    "time_start_sec": 681.44,
-    "time_end_sec": 748.0790000000001,
-    "time_start_hhmmss": "00:11:21",
-    "time_end_hhmmss": "00:12:28"
+    "time_start_sec": 532.08,
+    "time_end_sec": 600.08,
+    "time_start_hhmmss": "00:08:52",
+    "time_end_hhmmss": "00:10:00"
   },
   {
-    "question": "What is the ideal height relationship between the bed and the wheelchair seat to utilize natural body forces effectively?",
-    "answer": "Based on the transcript, the ideal height relationship between the bed and the wheelchair seat is for the **bed to be slightly higher than the seat**.\n\nThis positioning is recommended to effectively utilize natural body forces, specifically **gravity**, to assist with the final part of the transfer (getting the person down into the chair). If the bed is too low, the caregiver must exert more effort to lower the person, whereas a higher bed allows gravity to help complete the movement safely and efficiently.",
+    "question": "What are some ways I can encourage others to learn about positive approaches to dementia care?",
+    "answer": "One way to encourage others to learn about positive approaches to dementia care is to share Tifa's positive approach message around the world. You can also help by liking and subscribing to the channel, which supports spreading this message.",
     "source_segment": {
-      "id": 5,
-      "topic": "Demonstration: Chair Positioning and Bed Height"
+      "id": 1,
+      "topic": "Introduction and Call to Action"
     },
-    "time_start_sec": 211.44,
-    "time_end_sec": 323.6,
-    "time_start_hhmmss": "00:03:31",
-    "time_end_hhmmss": "00:05:24"
+    "time_start_sec": 5.839,
+    "time_end_sec": 19.68,
+    "time_start_hhmmss": "00:00:06",
+    "time_end_hhmmss": "00:00:20"
   },
   {
-    "question": "Why is it important to allow a patient to participate in the transfer process rather than having the caregiver perform the entire movement?",
-    "answer": "Allowing a patient to participate in the transfer process, rather than having the caregiver perform the entire movement, is critically important for two primary physiological reasons:\n\n1.  **Muscle Activation and Strength Maintenance:** Standing up engages the largest muscles in the body, specifically the **gluteals** (gluteus maximus). If these muscles are not used, they begin to contract less effectively and weaken. Even a small amount of active participation helps keep the body moving and maintains muscle function.\n2.  **Prevention of Muscle Atrophy:** When large muscle groups are not utilized, they tend to deteriorate. By encouraging the patient to do \"just a little bit\" of the work, caregivers ensure that these vital muscles remain active, which is beneficial for both the patient's long-term health and the overall care dynamic.",
+    "question": "How should I help a person with dementia shift their weight safely?",
+    "answer": "To help someone with dementia shift their weight safely, first ensure they are able to stand. You can encourage them by saying something like, \"we're going to do a little bit of weight shifting,\" and praise their effort with phrases like \"nice dancing\" or \"nice work\" to keep them engaged. When you need to guide them, take their hand and place it on their hip to bring their body forward gently. As their hips start to fold, use one hand to place them where they need to be and block their knees so they cannot slide out. This approach helps maintain their balance while you support their movement.",
+    "source_segment": {
+      "id": 9,
+      "topic": "Demonstration: Weight Shifting and Standing Transfer"
+    },
+    "time_start_sec": 487.759,
+    "time_end_sec": 533.92,
+    "time_start_hhmmss": "00:08:08",
+    "time_end_hhmmss": "00:08:54"
+  },
+  {
+    "question": "How can I stop myself from rushing through care tasks just to get them over with?",
+    "answer": "It is very common to feel the urge to rush care tasks just to get them over with, especially when the person you are caring for moves less easily. The context explains that our brains often tell us to \"get this over with\" and move faster, which can lead to \"flinging\" the person or trying to \"muscle through\" the task instead of using skill. This happens because people are trying to move others without doing it properly, often because they saw someone else do it that way or they are relying on strength rather than skill. To address this, the key step mentioned is to consciously tell yourself to \"slow down.\" Recognizing that rushing can cause back injuries for you and may not be the safest way to move the person is the first part of changing that habit.",
     "source_segment": {
       "id": 4,
-      "topic": "Importance of Patient Participation in Transfers"
+      "topic": "Root Causes of Back Injuries: Lack of Skill and Rushing"
+    },
+    "time_start_sec": 61.44,
+    "time_end_sec": 151.28,
+    "time_start_hhmmss": "00:01:01",
+    "time_end_hhmmss": "00:02:31"
+  },
+  {
+    "question": "Why is it important to let the person with dementia participate in standing up even if they need help?",
+    "answer": "It is important to let the person with dementia participate in standing up, even with your help, because they still have some strength left to use. When they stand, they are using their biggest muscles in the body, specifically the gluteals (the large muscles in the back of the buttocks). If these muscles are not used, they tend to start contracting and weakening. By allowing them to do just a little bit of the work themselves, you keep their body moving and their muscles active. The longer you can keep them active, even in small ways, the better it is for both you and them.",
+    "source_segment": {
+      "id": 5,
+      "topic": "The Importance of Patient Participation in Transfers"
     },
     "time_start_sec": 149.599,
     "time_end_sec": 213.92,
@@ -156,23 +144,59 @@
     "time_end_hhmmss": "00:03:34"
   },
   {
-    "question": "What are the benefits of seeking constructive criticism that includes both dislikes and suggestions for trying different techniques?",
-    "answer": "Based on the transcript, seeking constructive criticism that includes both dislikes and suggestions for new techniques offers the following educational benefits:\n\n*   **Identifying Areas for Improvement:** Feedback that explicitly states what was \"not really liked\" provides honest insight into specific aspects of a performance that need refinement, moving beyond generic praise.\n*   **Encouraging Innovation:** Suggestions to \"try that's a little different\" push the practitioner to experiment with new methods rather than sticking to familiar routines, fostering creativity and skill development.\n*   **Enhancing Inclusivity and Adaptability:** Testing techniques with people of \"different sizes\" (e.g., a smaller practitioner helping someone \"bigger than you\") helps determine the limits of a move and its adaptability. This challenges the misconception that a technique is only for specific body types, encouraging practitioners to assess if a move is \"worth a try\" even if it is not a perfect fit.\n*   **Broadening Application:** Practicing with diverse personas, such as someone with \"dementia\" or a \"sapphire\" (likely referring to a specific archetype or condition), ensures the technique is versatile and can be effectively applied to various real-world scenarios.",
+    "question": "What should I do if the transfer doesn't feel like the right fit for my loved one's size?",
+    "answer": "It is completely normal to worry that a transfer technique won't work if your loved one is a different size than the person in the video. The educator suggests that you should still try it, even if your loved one is bigger or smaller than you. While it may not be the perfect fit for that specific move, it is still worth a try. You can practice with someone of a different size to see how much you can actually help, especially since using gravity can make a difference. Just remember that patience is needed, and you might find that the movement still works well even if it feels a bit different.",
     "source_segment": {
-      "id": 10,
-      "topic": "Practice Recommendations and Conclusion"
+      "id": 11,
+      "topic": "Applying Techniques to Other Scenarios and Patient Variations"
     },
-    "time_start_sec": 681.44,
-    "time_end_sec": 748.0790000000001,
-    "time_start_hhmmss": "00:11:21",
-    "time_end_hhmmss": "00:12:28"
+    "time_start_sec": 598.56,
+    "time_end_sec": 732.24,
+    "time_start_hhmmss": "00:09:59",
+    "time_end_hhmmss": "00:12:12"
   },
   {
-    "question": "Which specific muscle groups are engaged when a horse maintains a straight back while leaning forward?",
-    "answer": "Based on the provided transcript, the specific muscle groups engaged when a horse maintains a straight back while leaning forward are the **back muscles** (specifically referred to as \"those chunks\" or \"those things\" in the text).\n\nThe speaker notes that despite the horse leaning forward into a position similar to a \"chair pose,\" the horse's back remains \"pretty straight.\" This stability is achieved by the horse using its back muscles to counteract gravity, which acts as a fulcrum or teeter-totter mechanism. The text explicitly states, \"there's no strong muscles and gravity,\" implying that the horse is actively engaging these back muscles to maintain the straight alignment against the force of gravity.",
+    "question": "How can I support others in spreading Tifa's positive approach to dementia care?",
+    "answer": "You can support others by helping to spread Tifa's positive approach message around the world. One concrete way to do this is to like and subscribe to the channel, which helps share this message further.",
     "source_segment": {
-      "id": 7,
-      "topic": "Demonstration: Using Gravity and the Chair Pose"
+      "id": 1,
+      "topic": "Introduction and Call to Action"
+    },
+    "time_start_sec": 5.839,
+    "time_end_sec": 19.68,
+    "time_start_hhmmss": "00:00:06",
+    "time_end_hhmmss": "00:00:20"
+  },
+  {
+    "question": "How can I prevent back injuries while taking care of my loved one?",
+    "answer": "Based on the video, back injuries are the most common injury for care partners. The transcript confirms that back injuries are the number one reason people have to call out, but it does not provide specific steps or strategies on how to prevent them.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Identifying Common Care Partner Injuries"
+    },
+    "time_start_sec": 26.32,
+    "time_end_sec": 64.08,
+    "time_start_hhmmss": "00:00:26",
+    "time_end_hhmmss": "00:01:04"
+  },
+  {
+    "question": "Can I use this same transfer technique to help someone move from a chair to a toilet?",
+    "answer": "Yes, you can absolutely use this same transfer technique to help someone move from a chair to a toilet. The speaker suggests that this method works for \"any any place basically,\" including the transition from a chair to the toilet. When using this technique, remember that while the movement might be slow, it is not necessarily \"super drawn out,\" so you may need to exercise some patience. This approach relies on understanding how the body works and using gravity to assist the movement. If you are unsure about the mechanics, there is a video called \"Advanced Skills in Late Stage Dementia\" available online or as a hard copy that offers more tips on these transfers. It is also helpful to practice with different people, perhaps someone of a different size, to see how the technique fits your specific situation. Even if the person you are helping is much bigger than you, it is still worth trying, as the method can be adapted.",
+    "source_segment": {
+      "id": 11,
+      "topic": "Applying Techniques to Other Scenarios and Patient Variations"
+    },
+    "time_start_sec": 598.56,
+    "time_end_sec": 732.24,
+    "time_start_hhmmss": "00:09:59",
+    "time_end_hhmmss": "00:12:12"
+  },
+  {
+    "question": "How can I use my arms to safely bring the person forward without straining them?",
+    "answer": "To safely bring the person forward, you can use your arms by straightening and tightening them. This action helps you lift or move them forward while keeping their body fairly straight, which supports their back. You can choose to get them all the way up or keep them fairly low, depending on how stable they feel. If they are able, your goal is to help them stand. Think of their body like a teeter-totter (a seesaw); as you move, their weight shifts to their knee, acting like a fulcrum (a pivot point) that helps support them. This position also allows them to look over your head, which encourages them to lean forward more readily.",
+    "source_segment": {
+      "id": 8,
+      "topic": "Demonstration: Using Gravity and the 'Chair Pose' Lift"
     },
     "time_start_sec": 416.319,
     "time_end_sec": 489.28000000000003,
@@ -180,35 +204,23 @@
     "time_end_hhmmss": "00:08:09"
   },
   {
-    "question": "What auditory strategies, such as singing or counting, can an instructor employ to help a student establish the correct rhythm for a stand?",
-    "answer": "Based on the transcript provided, an instructor can employ the following auditory strategies to help a student establish the correct rhythm for a stand:\n\n*   **Singing:** The instructor can sing a little bit to provide a melodic cue.\n*   **Humming:** The instructor can add a hum to create a rhythmic foundation.\n*   **Counting:** The instructor can use verbal counting (e.g., \"one one two three\") to structure the timing and movement.\n\nThese methods are suggested as ways to assist a student who is having difficulty getting started with the stand or finding the proper rhythm.",
+    "question": "Is counting aloud, like \"one, two, three,\" an effective way to help someone establish a movement rhythm?",
+    "answer": "Yes, counting aloud can be a helpful way to help someone get into a movement rhythm. In the video, a caregiver suggests that if a person is having trouble starting or finding their rhythm, you might add a song, sing a little hum, or simply count out loud like \"one, one, two, three.\" This can be added to the activity to help them move forward with small steps. The context notes that the specific skill of turning while shuffling forward without going backward is not something most people can do easily, so using rhythm and counting can be a supportive way to assist them.",
     "source_segment": {
-      "id": 8,
-      "topic": "Demonstration: Weight Shifting and Rhythm"
+      "id": 10,
+      "topic": "Utilizing Rhythm and Music for Movement"
     },
-    "time_start_sec": 487.759,
+    "time_start_sec": 532.08,
     "time_end_sec": 600.08,
-    "time_start_hhmmss": "00:08:08",
+    "time_start_hhmmss": "00:08:52",
     "time_end_hhmmss": "00:10:00"
   },
   {
-    "question": "Why is it important for care partners to prioritize skill over brute strength when assisting others?",
-    "answer": "Prioritizing skill over brute strength is critical for care partners to prevent back injuries, which are frequently caused by improper lifting techniques. When individuals attempt to move others or perform tasks using raw muscle power rather than proper mechanics, they risk significant physical harm. Skillful assistance ensures safety and efficiency, whereas relying on strength alone often leads to injury for both the caregiver and the person being assisted.",
+    "question": "How does keeping the person active, even just a little bit, benefit both the caregiver and the person with dementia?",
+    "answer": "Keeping the person active, even just a little bit, helps both of you in a few important ways. When you help them stand up and participate in a transfer, you are using their big muscles, especially the gluteals (the large muscles in the back of the body). These are the biggest muscles in the body, and if they aren't used, they tend to start contracting (tightening up). By allowing them to do a little bit of the work themselves, you keep their body moving and their muscles strong. This is better for them and also better for you, the caregiver. The key is to let them participate as long as they have enough strength to do so.",
     "source_segment": {
-      "id": 2,
-      "topic": "Causes of Back Injuries and Lack of Skill"
-    },
-    "time_start_sec": 61.44,
-    "time_end_sec": 100.479,
-    "time_start_hhmmss": "00:01:01",
-    "time_end_hhmmss": "00:01:40"
-  },
-  {
-    "question": "Which specific muscle groups are primarily engaged when a person stands up?",
-    "answer": "Based on the transcript provided, the specific muscle groups primarily engaged when a person stands up are the **gluteals** (located in the back).\n\nThe text explicitly identifies these as \"the biggest muscles in the body\" and notes that they are the \"big one[s]... enlisting when you stand up.\"",
-    "source_segment": {
-      "id": 4,
-      "topic": "Importance of Patient Participation in Transfers"
+      "id": 5,
+      "topic": "The Importance of Patient Participation in Transfers"
     },
     "time_start_sec": 149.599,
     "time_end_sec": 213.92,
@@ -216,22 +228,10 @@
     "time_end_hhmmss": "00:03:34"
   },
   {
-    "question": "How can observing others perform a task incorrectly lead to injury for a care partner?",
-    "answer": "Observing others perform a task incorrectly can lead to injury for a care partner primarily through the adoption of improper techniques and the reliance on brute strength rather than skill.\n\nWhen a care partner witnesses someone else execute a movement in a flawed manner, they may unconsciously mimic that specific incorrect method. This behavior shifts the focus from using proper body mechanics and skillful execution to \"muscling through\" the task. Consequently, the care partner attempts to move the individual or perform the duty without the necessary technical proficiency, significantly increasing the risk of back injuries and other physical harm.",
+    "question": "How can I tell if the person is comfortable with my current lifting position?",
+    "answer": "To tell if the person is comfortable with your lifting position, you can try a gentle \"lift\" to see if they let you in. If they do not allow you to lift them, that is a sign you should stop and try to stabilize them instead. It is also important to avoid grabbing their legs and squishing them together, as the context notes that this is really uncomfortable for the person being helped. Instead, focus on cupping their knee with your body and keeping your arms around their trunk near the low back, rather than reaching for the upper back or armpit area.",
     "source_segment": {
-      "id": 2,
-      "topic": "Causes of Back Injuries and Lack of Skill"
-    },
-    "time_start_sec": 61.44,
-    "time_end_sec": 100.479,
-    "time_start_hhmmss": "00:01:01",
-    "time_end_hhmmss": "00:01:40"
-  },
-  {
-    "question": "Why is it important to avoid grabbing and squishing a person's legs together during a lift?",
-    "answer": "Based on the transcript provided, it is important to avoid grabbing and squishing a person's legs together during a lift because **it is really uncomfortable** for the person being assisted.\n\nThe speaker explicitly contrasts this uncomfortable method with their preferred technique, which involves \"cupping\" the near knee and positioning the body low on the trunk/low back to ensure the helper's stability without causing distress to the individual being lifted.",
-    "source_segment": {
-      "id": 6,
+      "id": 7,
       "topic": "Demonstration: Body Positioning and Hand Placement"
     },
     "time_start_sec": 322.16,

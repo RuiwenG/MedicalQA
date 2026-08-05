@@ -1,79 +1,19 @@
 [
   {
-    "question": "How does the instructor's use of touch cueing differ from the playful or accidental use of the same gesture by children?",
-    "answer": "The instructor's use of touch cueing differs from the playful or accidental use by children in three key ways:\n\n1.  **Intent and Purpose**: While children might press behind the knee to cause knees to buckle and bend as a prank or game, the instructor (Tipa) applies the same touch with a specific pedagogical purpose: to guide the student into a natural sitting position where the knees bend correctly.\n2.  **Effectiveness**: The instructor notes that this specific touch is \"super effective\" for achieving the desired movement, whereas the children's version is described as something that happens when people aren't paying attention or lack support.\n3.  **Context**: The instructor transforms a gesture that can be a nuisance or a trick into a deliberate training tool to facilitate proper body mechanics.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Discussion on the Mechanics of Touch Cueing"
-    },
-    "time_start_sec": 435.199,
-    "time_end_sec": 527.36,
-    "time_start_hhmmss": "00:07:15",
-    "time_end_hhmmss": "00:08:47"
-  },
-  {
-    "question": "How does the maintenance of specific muscle strength, such as adduction, impact participation in physical tasks for those with dementia?",
-    "answer": "Based on the provided transcript, the maintenance of specific muscle strength, particularly **adduction strength**, impacts participation in physical tasks for individuals with dementia in the following ways:\n\n*   **Enables Forward Movement:** The transcript notes that individuals with dementia often maintain this specific strength, which allows them to \"lean forward\" and naturally move \"forward.\"\n*   **Facilitates Task Execution:** This inherent strength allows the individual (referred to as \"Marian\" in the text) to be willing and able to participate in physical activities, such as the interaction described where she uses her flexed adduction muscles to move.\n*   **Creates Opportunities for Assistance:** The presence of this maintained strength allows a caregiver or partner (referred to as \"Tiba\") to effectively assist. Specifically, the caregiver can \"ease\" the individual's back by helping to release those same adduction muscles, suggesting that the muscle's tension is a key factor in the mechanics of the movement that can be therapeutically managed.\n\nIn summary, the transcript suggests that preserved adduction strength is a critical factor that enables forward mobility and creates a dynamic where the individual can participate, while also providing a specific mechanical point (the adduction muscles) that can be targeted by a partner to improve comfort and ease of movement.",
+    "question": "Why is it important to avoid pulling a person's hips when helping them sit down?",
+    "answer": "It is important to avoid pulling a person's hips when helping them sit because people do not naturally sit that way. When we try to pull their hips, it can feel unnatural and may trigger a fear response in their brain (called an amygdala response), causing them to feel danger and freeze up. Instead, you should notice how far forward a person sits and encourage them to do the movement slowly, perhaps even watching themselves in slow motion to see how their body actually moves. If they seem to freeze or feel frightened, a gentle cue to bend their knee can help them relax.",
     "source_segment": {
       "id": 11,
-      "topic": "Observations on Participant Engagement and Muscle Strength"
+      "topic": "Addressing Rigidity, Fear Responses, and Balance Mechanics"
     },
-    "time_start_sec": 721.76,
-    "time_end_sec": 766.56,
-    "time_start_hhmmss": "00:12:02",
-    "time_end_hhmmss": "00:12:47"
+    "time_start_sec": 566.0,
+    "time_end_sec": 660.0,
+    "time_start_hhmmss": "00:09:26",
+    "time_end_hhmmss": "00:11:00"
   },
   {
-    "question": "How does the introduction of a guest described as an \"old face\" or \"face from the past\" contribute to the narrative of the episode?",
-    "answer": "The introduction of a guest described as an \"old face\" or \"face from the past\" contributes to the narrative by immediately establishing a sense of continuity, nostalgia, and familiarity for the audience. This phrasing signals that the guest has a significant history with the show or the hosts, suggesting a reunion rather than a first-time appearance.\n\nNarratively, this serves several functions:\n1.  **Audience Engagement:** It leverages shared memories between the hosts and the viewers, creating an emotional connection and anticipation for the return of a known personality.\n2.  **Contextual Depth:** It implies that the guest's past contributions or experiences are relevant to the current discussion, adding weight and historical context to the episode's themes.\n3.  **Tone Setting:** The casual, welcoming nature of the description (\"hey everybody,\" \"thanks for being here\") sets a warm, informal, and community-focused tone, reinforcing the idea of a long-standing relationship within the show's ecosystem.\n\nIn essence, the descriptor transforms the guest's arrival from a simple addition to a roster into a meaningful event that bridges the show's past and present.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Guest Welcome"
-    },
-    "time_start_sec": 5.68,
-    "time_end_sec": 33.6,
-    "time_start_hhmmss": "00:00:06",
-    "time_end_hhmmss": "00:00:34"
-  },
-  {
-    "question": "What is the correct technique for supporting a client's back while allowing them to control their own sitting movement?",
-    "answer": "Based on the transcript provided, the correct technique for supporting a client's back while allowing them to control their own sitting movement involves the following steps:\n\n1.  **Positioning:** The therapist should lean the client forward significantly (\"way forward further than you think\") to establish a wide base of support by spreading the legs wide and bending the knees, rather than the back.\n2.  **Support Placement:** The therapist places their arm and elbow to support the client's back. This support is crucial to prevent the client from losing balance backward.\n3.  **Control Mechanism:** While maintaining this back support, the therapist touches the client on the tendon located on the outside of the knee.\n4.  **Execution:** The therapist uses the knee tendon touch to keep the client forward and ease them down, ensuring the client retains control of the sitting motion.\n\nThe transcript explicitly states: \"i'm going to support her back so she controls the sitting and she doesn't lose her balance.\"",
-    "source_segment": {
-      "id": 7,
-      "topic": "Demonstration of Touch Cueing Techniques"
-    },
-    "time_start_sec": 363.199,
-    "time_end_sec": 433.199,
-    "time_start_hhmmss": "00:06:03",
-    "time_end_hhmmss": "00:07:13"
-  },
-  {
-    "question": "What are the specific benefits of using kinesthetic, hands-on movement skills for learning?",
-    "answer": "Based on the provided transcript, the specific benefits of using kinesthetic, hands-on movement skills for learning are:\n\n*   **Practical Application:** They are described as \"real how-to\" skills, implying a focus on practical, actionable knowledge rather than just theoretical understanding.\n*   **Active Engagement:** The approach relies on \"kinesthetic\" and \"hands-on\" methods, which engage the body directly in the learning process.\n*   **Skill Development:** These methods are explicitly designed to \"assist with movement skills,\" suggesting they help learners physically master specific motor abilities.\n\nThe speaker also notes that these skills are part of a broader offering called \"Pack Skills: Make the Difference,\" which includes online streaming, DVD formats, and trainer scripts, indicating a structured approach to teaching these physical competencies.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Promoting Pack Skills and Training Resources"
-    },
-    "time_start_sec": 791.519,
-    "time_end_sec": 865.1990000000001,
-    "time_start_hhmmss": "00:13:12",
-    "time_end_hhmmss": "00:14:25"
-  },
-  {
-    "question": "Why is it important to avoid tipping a client backward when they are learning to sit?",
-    "answer": "It is important to avoid tipping a client backward when they are learning to sit because doing so triggers a fear response. If the client feels the therapist tipping them back, they begin to worry that they are about to be knocked off balance. This anxiety can undermine their confidence and ability to control the sitting motion safely. Instead, the technique emphasizes leaning the client forward to establish a wide base of support, allowing them to maintain control while the therapist provides support to prevent forward falls.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Demonstration of Touch Cueing Techniques"
-    },
-    "time_start_sec": 363.199,
-    "time_end_sec": 433.199,
-    "time_start_hhmmss": "00:06:03",
-    "time_end_hhmmss": "00:07:13"
-  },
-  {
-    "question": "What strategies can an instructor use to adapt their delivery pace to match the attention span and processing speed of their student?",
-    "answer": "Based on the transcript provided, an instructor can adapt their delivery by recognizing that their natural speaking speed may exceed the student's processing speed. The speaker notes that while they do not intend to move faster, they sometimes fail to adjust to the student's pace.\n\nTo address this, the speaker employs the following strategy:\n*   **Recording Self-Reflection:** The instructor creates multiple video recordings of themselves attempting different approaches. This allows them to review their own cues and identify moments where the student might have been distracted or not paying attention, even for short durations (e.g., \"those three seconds\").\n\nAdditionally, the transcript suggests that adaptation involves being aware of environmental factors that might narrow a student's field of vision or attention, such as the presence of objects like a chair, which the student might fail to notice if their focus is narrowed by thinking.",
+    "question": "Why might a person with dementia not see a chair that is right in front of them?",
+    "answer": "A person with dementia might not see a chair right in front of them because their field of vision is narrowing. This narrowing can happen because they are thinking about other things, which affects how their eyes pick up objects in their surroundings. As a caregiver, it is helpful to remember that you might also move faster than the person you are working with, and they may not be paying attention to your cues for a few seconds. It is not intentional on your part if you miss their attention; sometimes it is just about matching their personal pace and ensuring they can clearly see what is there.",
     "source_segment": {
       "id": 4,
       "topic": "Analyzing Why Simple Cues May Fail"
@@ -84,23 +24,71 @@
     "time_end_hhmmss": "00:03:45"
   },
   {
-    "question": "How does the specific touch cue behind the knee assist in creating forward movement and initiating a sit?",
-    "answer": "Based on the transcript, the specific touch cue behind the knee assists in creating forward movement and initiating a sit through the following mechanisms:\n\n*   **Targeting the Patellar Tendon:** The touch is applied specifically to the tendon behind the knee (the patellar tendon).\n*   **Triggering Natural Biomechanics:** This pressure causes the knees to naturally buckle and bend.\n*   **Facilitating the Transition:** Once the knees are bent, the forward movement is created, which allows the partner to sit down.\n\nThe speaker notes that while this action can sometimes be used playfully by children to make knees buckle without support, in this context, it is used purposefully to guide the body into a sitting position.",
+    "question": "What is the best way to encourage a practice partner to give me weight while I learn?",
+    "answer": "When you are practicing this technique, the best way to get a real feel for supporting someone is to ask your practice partner to actually give you some weight. It can be tricky if they don't need support, so try encouraging them to imagine they do. You can gently say, \"Yeah, go ahead and lean on me a bit more.\" This helps you understand how to support someone who actually needs it, rather than just doing the movement yourself.",
     "source_segment": {
-      "id": 8,
-      "topic": "Discussion on the Mechanics of Touch Cueing"
+      "id": 12,
+      "topic": "Caregiver Wellbeing: Importance of Base of Support and Practice"
     },
-    "time_start_sec": 435.199,
-    "time_end_sec": 527.36,
-    "time_start_hhmmss": "00:07:15",
-    "time_end_hhmmss": "00:08:47"
+    "time_start_sec": 656.959,
+    "time_end_sec": 700.32,
+    "time_start_hhmmss": "00:10:57",
+    "time_end_hhmmss": "00:11:40"
   },
   {
-    "question": "What are some examples of simple visual cues that can be used to communicate the action of sitting down?",
-    "answer": "Based on the transcript provided, here are the examples of simple visual cues used to communicate the action of sitting down:\n\n*   **Verbal Cues:** Using short, simple phrases such as \"have a seat,\" \"sit,\" or \"here.\"\n*   **Gestural Cues:**\n    *   Making a downward motion with the hands next to the chair.\n    *   Patting or miming the action of sitting down on the chair itself.\n*   **Modeling (Demonstration):**\n    *   Physically miming the sitting action with one's own body while standing next to the chair (without actually sitting).\n    *   Bringing a chair close to the person and modeling the action.\n    *   Squatting down in front of the person in a \"get ready to sit\" position to demonstrate the movement.",
+    "question": "What should I do if the current methods to help my loved one stop working?",
+    "answer": "If the methods you are currently trying to help your loved one are not working, it is okay to stop using them. The video suggests that when a specific approach isn't effective, you can choose to eliminate that method and try something different. One option mentioned is to use \"physical assist cueing,\" which involves using touch to guide or support the person. The speaker also recommends looking for resources, such as DVDs, that show different ways to assist with behaviors (referred to in the video as \"stimming\") using touch cues. These resources can explain both how to do it and why it might help.",
+    "source_segment": {
+      "id": 6,
+      "topic": "Transition to Physical Assist and Touch Cues"
+    },
+    "time_start_sec": 285.84,
+    "time_end_sec": 357.52,
+    "time_start_hhmmss": "00:04:46",
+    "time_end_hhmmss": "00:05:58"
+  },
+  {
+    "question": "Do all people with dementia need the same kind of physical cueing, or does it depend on their specific condition?",
+    "answer": "The speaker suggests that while physical cueing works naturally for many people, it may not be needed by everyone. Instead of focusing on specific types of dementia, the need for this kind of help seems to depend more on the person's current \"gem state\" (a momentary condition or mood). Some individuals may need a little more assistance to use their bodies instinctively, while others might not. The speaker also notes that there are likely certain dementias that require this kind of healing, but the exact fit depends on the individual's state at the time.",
+    "source_segment": {
+      "id": 10,
+      "topic": "Applying Touch Cues to Specific Conditions and Safety"
+    },
+    "time_start_sec": 510.24,
+    "time_end_sec": 568.24,
+    "time_start_hhmmss": "00:08:30",
+    "time_end_hhmmss": "00:09:28"
+  },
+  {
+    "question": "What signs should I look for to determine if my current physical condition allows me to try a specific movement?",
+    "answer": "Based on the video, if you haven't been physically active for a while, you should consider \"limbering up\" before trying a new movement. A key sign to look for is your ability to safely return to a standing position. The speaker advises that if a movement requires you to get down very low, you must be sure you can get back up. If you are unsure whether you can do a specific movement right now, it is okay to take caution and not try it until you feel ready.",
+    "source_segment": {
+      "id": 14,
+      "topic": "Physical Limitations and Caution for Caregivers"
+    },
+    "time_start_sec": 760.56,
+    "time_end_sec": 791.5189999999999,
+    "time_start_hhmmss": "00:12:41",
+    "time_end_hhmmss": "00:13:12"
+  },
+  {
+    "question": "How can I access the Pack Skills training materials?",
+    "answer": "If you are interested in learning these real, hands-on movement skills to help with mobility, there is a program called Pack Skills: Make the Difference. You can access it in two ways: through online streaming or by purchasing a hard copy DVD. Additionally, if you contact us at info tepusnow.com, we can provide a special script that a trainer can use. This script is designed to be used as training material if you wish to follow along with the program.",
+    "source_segment": {
+      "id": 15,
+      "topic": "Promoting the Pack Skills Program and Training Resources"
+    },
+    "time_start_sec": 789.279,
+    "time_end_sec": 865.1990000000001,
+    "time_start_hhmmss": "00:13:09",
+    "time_end_hhmmss": "00:14:25"
+  },
+  {
+    "question": "How can I use my hands or body movements to model the action of sitting for someone who is confused?",
+    "answer": "You can use your hands and body to show the person exactly what to do by modeling the action yourself. Try placing your hands in a downward motion next to the chair you want them to use. You can also gently pat the chair itself or say simple words like \"have a seat\" or \"sit\" while doing it. Another helpful way is to mimic the action: move your body as if you are sitting down right next to the chair, even if you don't actually sit in it. Some people find it effective to squat down low in front of the chair to get close to the person and show them a \"get ready to sit\" position. These visual and verbal cues can help guide them when they are confused.",
     "source_segment": {
       "id": 3,
-      "topic": "Audience Suggestions for Visual and Verbal Cues"
+      "topic": "Audience Suggestions for Simple Visual and Verbal Cues"
     },
     "time_start_sec": 56.399,
     "time_end_sec": 166.55999999999997,
@@ -108,44 +96,20 @@
     "time_end_hhmmss": "00:02:47"
   },
   {
-    "question": "How can visual aids, such as DVDs or online videos, support caregivers in learning different methods of physical assistance?",
-    "answer": "Visual aids, such as DVDs and online videos, support caregivers in learning physical assistance methods by providing structured, repeatable demonstrations of specific techniques. In the provided context, these resources serve several key educational functions:\n\n*   **Demonstration of Specific Techniques:** They offer clear visual examples of how to perform \"physical assist cueing\" or \"touch cues.\" This allows caregivers to see exactly how to physically guide a person, such as helping them sit down or manage stimming behaviors.\n*   **Explanation of Rationale:** Beyond just showing *how* to do a task, these videos explain the *why* behind the actions. This helps caregivers understand the purpose of the intervention, making the method more intuitive and adaptable.\n*   **Presentation of Multiple Strategies:** Resources can showcase different approaches to the same problem. For instance, the context mentions a series where two distinct ways to assist with stimming are demonstrated, giving caregivers options to choose the method that best fits the individual's needs.\n*   **Accessibility and Repetition:** Digital formats like YouTube allow caregivers to access this training \"at any time.\" This ensures they can review the material repeatedly until they feel confident in their ability to execute the physical assistance correctly.",
+    "question": "How can I tell if I am physically ready to try a new exercise after a period of inactivity?",
+    "answer": "After a year of less physical activity, it is wise to \"limber up\" before trying a new exercise. You should be cautious if you are unsure whether you can perform the movement right now, even if you could do it in the past. A key sign to watch for is your ability to get back up; if you plan to lower yourself down, make sure you are certain you can safely get back up again.",
     "source_segment": {
-      "id": 6,
-      "topic": "Transition to Physical Assistance and Touch Cues"
+      "id": 14,
+      "topic": "Physical Limitations and Caution for Caregivers"
     },
-    "time_start_sec": 285.84,
-    "time_end_sec": 365.919,
-    "time_start_hhmmss": "00:04:46",
-    "time_end_hhmmss": "00:06:06"
+    "time_start_sec": 760.56,
+    "time_end_sec": 791.5189999999999,
+    "time_start_hhmmss": "00:12:41",
+    "time_end_hhmmss": "00:13:12"
   },
   {
-    "question": "How can caregivers adapt their support techniques when standard communication cues fail to help someone sit?",
-    "answer": "When standard visual and verbal cues fail to help someone with dementia sit, caregivers must adapt by shifting from external prompts to internal and environmental strategies. Key adaptations include:\n\n1.  **Simplifying the Environment**: Reduce distractions and clutter to minimize confusion, making the act of sitting the primary focus.\n2.  **Using Physical Guidance**: Gently guide the person by the hand or arm to the chair, providing tactile support that verbal cues cannot.\n3.  **Changing the Approach**: Instead of asking \"Will you sit?\", demonstrate the action or use a different, more familiar cue (e.g., a specific song, a favorite object, or a routine signal).\n4.  **Addressing Underlying Needs**: Recognize that the refusal to sit may stem from pain, fatigue, or a need for movement rather than a communication breakdown.\n5.  **Patience and Timing**: Allow extra time for processing and avoid rushing, as cognitive processing speeds often decrease in later stages of dementia.\n\nThese adjustments help maintain dignity and safety when traditional communication methods are no longer effective.",
-    "source_segment": {
-      "id": 2,
-      "topic": "The Challenge of Cues in Gem States"
-    },
-    "time_start_sec": 30.72,
-    "time_end_sec": 58.559,
-    "time_start_hhmmss": "00:00:31",
-    "time_end_hhmmss": "00:00:59"
-  },
-  {
-    "question": "Why might methods that were previously successful for queuing stop working as someone progresses through different developmental states?",
-    "answer": "Methods that were previously successful for queuing may stop working as someone progresses through different developmental states because behaviors and communication needs evolve with development. What functioned effectively in earlier stages (such as simple visual or verbal cues) may no longer align with the individual's current cognitive, sensory, or behavioral profile. As developmental states change, new strategies tailored to the person's present abilities and challenges are required to maintain effectiveness.",
-    "source_segment": {
-      "id": 2,
-      "topic": "The Challenge of Cues in Gem States"
-    },
-    "time_start_sec": 30.72,
-    "time_end_sec": 58.559,
-    "time_start_hhmmss": "00:00:31",
-    "time_end_hhmmss": "00:00:59"
-  },
-  {
-    "question": "How can a mismatch in speaking speeds between an instructor and a learner negatively impact the effectiveness of a lesson?",
-    "answer": "Based on the provided transcript, a mismatch in speaking speeds between an instructor and a learner negatively impacts lesson effectiveness in the following ways:\n\n*   **Loss of Attention:** When an instructor speaks faster than the learner, the learner may fail to pay attention for critical periods (e.g., \"those three seconds\"), causing them to miss cues or instructions entirely.\n*   **Ineffective Cue Delivery:** The instructor may deliver cues while the learner is not visually tracking or processing the information, rendering the instruction useless.\n*   **Visual Processing Failures:** The learner's narrowed field of vision, caused by struggling to keep up with the pace, prevents them from noticing essential environmental elements, such as the presence of a chair.\n*   **Unintentional Disconnect:** The instructor may not realize they are moving too fast, leading to a situation where they are not delivering the key information at a pace the learner can absorb.",
+    "question": "Why might my cues not be working even if I am trying to match the person's speed?",
+    "answer": "Even if you are trying to match the person's speed, your cues might not be working because you may naturally move faster than they do, and this difference isn't intentional on your part. It can also happen because their ability to see things around them is narrowing, meaning they might not even notice the chair you are pointing to or that you are giving a cue at all. To help, you can record videos of yourself trying different things to see where you might be moving too quickly or missing their attention. Also, be aware that if they aren't paying attention to you for just a few seconds, they might miss the cue entirely.",
     "source_segment": {
       "id": 4,
       "topic": "Analyzing Why Simple Cues May Fail"
@@ -156,87 +120,123 @@
     "time_end_hhmmss": "00:03:45"
   },
   {
-    "question": "What safety precautions should be taken before attempting a new or previously difficult exercise move?",
-    "answer": "Based on the transcript provided, the following safety precautions should be taken before attempting a new or previously difficult exercise move:\n\n*   **Assess Current Capability:** Recognize that physical ability may have changed over time. The speaker notes, \"used i could do that at one point i don't know if i can do it right now,\" highlighting the need to honestly evaluate if you can currently perform the move.\n*   **Exercise Caution:** If there is doubt about your ability, adopt a mindset of caution (\"there's that bit of bit of caution\").\n*   **Ensure Safe Exit Strategy:** Before attempting a move that requires getting low to the ground, ensure you are confident in your ability to return to a standing position. The transcript explicitly states, \"if you gonna get down this low you better be sure you can kind of get back up.\"",
-    "source_segment": {
-      "id": 12,
-      "topic": "Personal Reflections on Physical Activity and Flexibility"
-    },
-    "time_start_sec": 764.399,
-    "time_end_sec": 794.959,
-    "time_start_hhmmss": "00:12:44",
-    "time_end_hhmmss": "00:13:15"
-  },
-  {
-    "question": "How does having a wide base of support benefit a caregiver when assisting someone else?",
-    "answer": "Having a wide base of support benefits a caregiver primarily by providing the necessary stability to safely support another person who requires assistance. When a caregiver spreads their legs far apart, it creates a broader foundation that allows them to effectively bear the weight of the individual they are helping. This physical stability is crucial because it enables the caregiver to work with the person they are assisting without losing their own balance, ensuring a secure and supportive environment for the task at hand.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Safety Considerations and Practitioner Stability"
-    },
-    "time_start_sec": 656.959,
-    "time_end_sec": 724.959,
-    "time_start_hhmmss": "00:10:57",
-    "time_end_hhmmss": "00:12:05"
-  },
-  {
-    "question": "How might a sudden feeling of danger or the need to freeze up affect a person's ability to move safely during daily activities?",
-    "answer": "Based on the transcript provided, a sudden feeling of danger or the instinct to freeze up can significantly compromise a person's ability to move safely during daily activities in the following ways:\n\n*   **Triggering the Amygdala Response:** The transcript identifies that individuals may experience an \"amygdala response to fright.\" This is a rapid, instinctive reaction where the brain perceives a threat, causing the body to prioritize survival over movement.\n*   **The \"Freeze\" Reaction:** When this fear response is triggered (for example, when being placed or \"plunked down\" into a chair), the person may instinctively \"freeze up.\" This paralysis prevents them from executing necessary movements, such as standing up or shifting their weight.\n*   **Loss of Natural Mechanics:** The speaker notes that people do not naturally sit with their hips pulled back or their bodies leaning too far forward. When a person freezes due to fear, they lose the ability to access their \"instinct naturally\" correct body mechanics.\n*   **Need for Specific Cueing:** Because the freeze response locks the body in place, the individual may require external assistance or specific cues to break the paralysis. The transcript highlights that a simple cue to \"bend their knee\" is often necessary to help the person relax and regain the ability to move safely.\n\nIn summary, the sudden feeling of danger disrupts natural, instinctive movement patterns by triggering a freeze response, which can leave a person unable to perform basic tasks like sitting or standing without specific guidance to relax their muscles and correct their posture.",
+    "question": "Why is the touch behind the knee effective for keeping knees from bending when sitting?",
+    "answer": "The touch behind the knee is effective because it helps keep the knees from bending naturally when a person sits down. When we sit, our knees tend to bend on their own, but this specific touch acts as a helpful cue to prevent that. It is a gentle reminder that can make a big difference in helping the person stay stable.",
     "source_segment": {
       "id": 9,
-      "topic": "Applying Touch Cues to Specific Conditions and States"
+      "topic": "Discussion on the Instinctive Nature of Touch Cues"
     },
-    "time_start_sec": 525.839,
+    "time_start_sec": 461.44,
+    "time_end_sec": 512.3199999999999,
+    "time_start_hhmmss": "00:07:41",
+    "time_end_hhmmss": "00:08:32"
+  },
+  {
+    "question": "Where on the leg should I place my hand to support someone as they lean forward?",
+    "answer": "To help someone lean forward safely, place your hand on the tendon located on the outside of their knee. This specific spot helps keep them leaning forward while you ease them down. While you do this, make sure to support their back so they feel in control and don't worry about losing their balance. If they start to tip backward, lean them forward further than you might think, using your arm and elbow to catch them if they begin to lose their balance.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Demonstration of Touch Cueing: Leaning Forward and Tendon Support"
+    },
+    "time_start_sec": 355.44,
+    "time_end_sec": 428.319,
+    "time_start_hhmmss": "00:05:55",
+    "time_end_hhmmss": "00:07:08"
+  },
+  {
+    "question": "What should I do if my loved one freezes up or feels danger when I try to move them quickly?",
+    "answer": "If your loved one freezes up or feels like there is danger when you try to move them quickly, it might be because they have had past experiences that triggered a fear response in their brain (the part called the amygdala). When this happens, they may feel unsafe and stop moving. In these moments, they might need a gentle cue to help them relax. For example, you can gently encourage them to bend their knee, which can help their body loosen up. It is also helpful to notice how their body moves naturally, such as watching how far forward they sit or stand, so you can support them in a way that feels safe and comfortable.",
+    "source_segment": {
+      "id": 11,
+      "topic": "Addressing Rigidity, Fear Responses, and Balance Mechanics"
+    },
+    "time_start_sec": 566.0,
     "time_end_sec": 660.0,
-    "time_start_hhmmss": "00:08:46",
+    "time_start_hhmmss": "00:09:26",
     "time_end_hhmmss": "00:11:00"
   },
   {
-    "question": "What are the potential benefits of using touch cues to guide someone to sit down?",
-    "answer": "Based on the transcript provided, the potential benefits of using touch cues (referred to as \"physical assist queuing\") to guide someone to sit down include:\n\n*   **Effectiveness in Specific Contexts:** The speakers indicate that when other methods (such as verbal cues or visual prompts) are not working, physical touch can serve as an effective alternative intervention.\n*   **Educational Resources and Clarity:** There are accessible resources, specifically a series of DVDs and YouTube videos by Tifa, which demonstrate two different ways to assist with stimming using touch cues. These resources explain both the \"how\" and the \"why\" of the technique.\n*   **Accessibility:** The educational materials regarding touch cues are available on YouTube, allowing individuals to access this guidance at any time to help someone sit down.\n*   **Addressing Sensory or Behavioral Needs:** The context suggests that touch cues are particularly relevant for individuals who may have reactions to smells or tastes that cause them to move or stim, implying that physical guidance can help manage these behaviors to achieve a seated position.",
+    "question": "How can I use physical touch to guide my loved one when they are having trouble moving?",
+    "answer": "When your loved one is having trouble moving, you can try using physical assist cueing, which involves using touch to guide them. The context mentions that some people may move or react to smells, whether those smells are good or bad, so be aware of their reactions. If verbal cues or other methods aren't working, physical touch can be a helpful strategy. There are resources available, such as DVDs featuring tips on how to assist someone with stimming (repetitive movements or behaviors) using touch cues. These resources explain different ways to use touch and the reasons behind them, offering practical guidance on how to support your loved one gently and effectively.",
     "source_segment": {
       "id": 6,
-      "topic": "Transition to Physical Assistance and Touch Cues"
+      "topic": "Transition to Physical Assist and Touch Cues"
     },
     "time_start_sec": 285.84,
-    "time_end_sec": 365.919,
+    "time_end_sec": 357.52,
     "time_start_hhmmss": "00:04:46",
-    "time_end_hhmmss": "00:06:06"
+    "time_end_hhmmss": "00:05:58"
   },
   {
-    "question": "How can visual aids like videos influence a person's confidence or caution regarding their physical limits?",
-    "answer": "Visual aids, such as videos, can significantly influence a person's confidence and caution regarding their physical limits through the following mechanisms:\n\n1.  **Realization of Capability vs. Current State:** Videos often showcase an individual's past performance or peak physical condition. When a viewer compares their current abilities to the high standards demonstrated in the video, they may realize a decline in their fitness level. This comparison can lead to a loss of confidence in their ability to perform the action safely.\n2.  **Highlighting Risk and Consequences:** Visual content frequently emphasizes the difficulty of a movement and the potential risks involved, such as the need to \"get back up\" from a low position. Seeing these risks visually can trigger a sense of caution, prompting the individual to assess whether they are physically prepared to handle the demands of the exercise.\n3.  **Encouraging Preparation:** Observing the complexity of a movement in a video can lead to a recognition of the need for additional preparation, such as \"limbering up,\" before attempting the activity. This shifts the mindset from immediate action to cautious preparation.\n\nIn summary, videos serve as a benchmark that can either inspire confidence by showing what is possible or instill caution by revealing the gap between current capabilities and the demonstrated standard, ultimately influencing the decision to proceed with care.",
+    "question": "How should I position my body to create the forward movement described?",
+    "answer": "To create the forward movement described, you should first ensure you have the ability to kneel and then come back up. If you can do this, kneel down and then move forward. This action will help the person you are caring for sit.",
     "source_segment": {
-      "id": 12,
-      "topic": "Personal Reflections on Physical Activity and Flexibility"
+      "id": 8,
+      "topic": "Demonstration of Touch Cueing: Kneeling and Forward Movement"
     },
-    "time_start_sec": 764.399,
-    "time_end_sec": 794.959,
-    "time_start_hhmmss": "00:12:44",
-    "time_end_hhmmss": "00:13:15"
+    "time_start_sec": 426.88,
+    "time_end_sec": 461.12,
+    "time_start_hhmmss": "00:07:07",
+    "time_end_hhmmss": "00:07:41"
   },
   {
-    "question": "How does working with the body's natural instincts and cues apply to individuals with specific cognitive conditions?",
-    "answer": "Based on the transcript provided, working with the body's natural instincts and cues applies to individuals with specific cognitive conditions in the following ways:\n\n*   **Addressing Specific Dementia Types:** While the speaker initially focuses on \"gem states\" (likely a transcription error for \"grief states\" or a specific condition not fully clarified), they acknowledge that specific types of dementia, such as **Lewy Body Dementia**, may require this approach. This condition is characterized by moments of rigidity, where individuals may struggle to perform natural movements like sitting or standing.\n*   **Overcoming Trauma Responses:** The application extends to individuals who have experienced an **amygdala response to fright** or trauma. These individuals may feel a sense of danger when placed in certain positions (e.g., being \"plunked down\" into a chair), causing them to freeze up. In these cases, specific cues—such as being encouraged to **bend their knees**—are necessary to help them relax and move naturally rather than remaining in a state of fear-induced rigidity.\n*   **Correcting Unnatural Mechanics:** For those with cognitive impairments, the body may adopt unnatural movement patterns (such as how they sit or stand). Using slow-motion observation and cueing helps individuals recognize these deviations from natural mechanics, allowing them to return to instinctive, safer, and more functional movement patterns.\n\nIn summary, the approach involves using instinctual cues to help individuals with cognitive conditions bypass rigidity, trauma-induced freezing, and unnatural movement habits to restore natural bodily function.",
+    "question": "How can I stay updated on new tips and approaches for caring for someone with dementia?",
+    "answer": "To stay updated on new tips and approaches, you can like and subscribe to the channel to help spread the message, and don't forget to click the bell so you get notified when new videos are posted.",
     "source_segment": {
-      "id": 9,
-      "topic": "Applying Touch Cues to Specific Conditions and States"
-    },
-    "time_start_sec": 525.839,
-    "time_end_sec": 660.0,
-    "time_start_hhmmss": "00:08:46",
-    "time_end_hhmmss": "00:11:00"
-  },
-  {
-    "question": "How can educators encourage students to attempt new strategies even when they face initial challenges?",
-    "answer": "Based on the provided transcript, educators can encourage students to attempt new strategies by:\n\n1.  **Framing the Experience as Learning:** Explicitly stating that the goal is to \"learn something,\" shifting the focus from immediate perfection to the acquisition of knowledge or skills.\n2.  **Inviting Voluntary Participation:** Asking students if they are \"willing to give a try,\" which fosters a sense of agency and ownership over the new strategy.\n3.  **Acknowledging and Validating Challenges:** Recognizing that there may be difficulties (\"if there's a challenge\") and addressing them directly rather than ignoring them, which normalizes the struggle as part of the process.\n4.  **Modeling a Positive Approach:** Demonstrating a \"positive approach\" to challenges, as mentioned in the call to spread the message, helps create a supportive environment where students feel safe to experiment.",
-    "source_segment": {
-      "id": 14,
+      "id": 16,
       "topic": "Conclusion and Call to Action"
     },
     "time_start_sec": 864.0,
     "time_end_sec": 888.48,
     "time_start_hhmmss": "00:14:24",
     "time_end_hhmmss": "00:14:48"
+  },
+  {
+    "question": "What are the top three senses people with dementia use to take in information?",
+    "answer": "Based on the video, the top three ways people with dementia take in information are through their **sight** (visual), **hearing** (auditory), and then **smell and taste**. The speaker notes that while smell and taste are the last two senses mentioned, they are not very helpful for sitting or daily tasks unless you are \"super clever.\" So, for practical care, focus on what the person can see and hear first.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Understanding Gem States and Sensory Preferences"
+    },
+    "time_start_sec": 222.08,
+    "time_end_sec": 288.4,
+    "time_start_hhmmss": "00:03:42",
+    "time_end_hhmmss": "00:04:48"
+  },
+  {
+    "question": "What specific physical ability is required to perform this exercise?",
+    "answer": "To perform this exercise, the person needs the ability to kneel down and then come back up. The video explains that if they have this ability, you can kneel down with them to create a forward movement, which will help them sit.",
+    "source_segment": {
+      "id": 8,
+      "topic": "Demonstration of Touch Cueing: Kneeling and Forward Movement"
+    },
+    "time_start_sec": 426.88,
+    "time_end_sec": 461.12,
+    "time_start_hhmmss": "00:07:07",
+    "time_end_hhmmss": "00:07:41"
+  },
+  {
+    "question": "What should I do if the person starts to worry that I might knock them off balance?",
+    "answer": "If the person starts to worry that you might knock them off balance, it is because you tipped them back even a little bit. To prevent this, lean them forward—further than you might think is necessary. While doing this, keep your arm and elbow ready to support them. If they begin to lose their balance, gently touch the tendon on the outside of their knee to keep them forward, and ease them down. This way, they control the sitting and stay safe.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Demonstration of Touch Cueing: Leaning Forward and Tendon Support"
+    },
+    "time_start_sec": 355.44,
+    "time_end_sec": 428.319,
+    "time_start_hhmmss": "00:05:55",
+    "time_end_hhmmss": "00:07:08"
+  },
+  {
+    "question": "What are some simple visual or verbal cues I can use to encourage someone with dementia to sit in a chair?",
+    "answer": "To encourage someone with dementia to sit in a chair, you can try combining simple visual and verbal cues. For the verbal part, use short, simple phrases like \"have a seat,\" \"sit,\" or \"here.\" For the visual part, you can stand next to the chair and make a patting or downward motion with your hand as if you are sitting down yourself. You can also mime the action by moving your body to show how to sit, even if you aren't actually sitting in that specific chair. Another helpful strategy is to model the behavior by squatting down in front of the chair yourself; this can be a cute way to get the person close to the chair and into a \"get ready to sit\" position. If these methods don't work, it is okay to try other approaches.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Audience Suggestions for Simple Visual and Verbal Cues"
+    },
+    "time_start_sec": 56.399,
+    "time_end_sec": 166.55999999999997,
+    "time_start_hhmmss": "00:00:56",
+    "time_end_hhmmss": "00:02:47"
   }
 ]
