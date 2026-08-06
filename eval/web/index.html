@@ -242,7 +242,18 @@
 const CFG = Object.assign({
   SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
   SEED: 42, BATCHES: 8, ANCHOR_SIZE: 20, MAX_PAIRS: 0,
+  // Approach names dropped from the corpus at load time. Excluded pairs never
+  // reach DATA, so they cannot appear in a batch, in the anchor set, in the
+  // advanced picker, or in any count. qa_data.json itself is left untouched —
+  // clearing this list brings them straight back.
+  EXCLUDE_APPROACHES: [],
 }, window.EVAL_CONFIG || {});
+
+// Normalised for comparison so a stray "dualagent" or " RAG " in config still
+// matches the approach names recorded in qa_data.json.
+const EXCLUDED = new Set(
+  (CFG.EXCLUDE_APPROACHES || []).map((a) => String(a).trim().toLowerCase()));
+const isExcluded = (approach) => EXCLUDED.has(String(approach).trim().toLowerCase());
 
 // Tolerate the two easy paste mistakes: a trailing slash, and copying the REST
 // endpoint (".../rest/v1") instead of the bare project URL. Both would
@@ -471,7 +482,19 @@ function restore(storeKey) {
     const raw = localStorage.getItem(storeKey);
     if (!raw) return null;
     const obj = JSON.parse(raw);
-    return obj && obj.version === 4 ? obj : null;
+    if (!obj || obj.version !== 4) return null;
+    // A session saved before an approach was excluded still lists its uids.
+    // Drop them here rather than letting pairOf() return undefined mid-session,
+    // and pull the cursor back so it cannot point past the shortened list.
+    if (EXCLUDED.size && Array.isArray(obj.uids)) {
+      const kept = obj.uids.filter((uid) => DATA.some((p) => p.uid === uid));
+      if (kept.length !== obj.uids.length) {
+        if (!kept.length) return null;
+        obj.uids = kept;
+        obj.index = Math.min(obj.index || 0, kept.length - 1);
+      }
+    }
+    return obj;
   } catch (e) {
     return null;
   }
@@ -1473,8 +1496,19 @@ fetch("qa_data.json")
   })
   .then((json) => {
     // Accept the current {pairs, videos} shape and a bare array of pairs.
-    DATA = Array.isArray(json) ? json : (json.pairs || []);
+    const all = Array.isArray(json) ? json : (json.pairs || []);
+    // Hard exclusion happens here, once, before anything else sees the corpus.
+    DATA = all.filter((p) => !isExcluded(p.approach));
     VIDEOS = Array.isArray(json) ? {} : (json.videos || {});
+    if (EXCLUDED.size) {
+      console.info(`Excluded approaches: ${[...EXCLUDED].join(", ")} — ` +
+        `${all.length - DATA.length} of ${all.length} pairs dropped, ${DATA.length} remain.`);
+    }
+    if (!DATA.length) {
+      app.innerHTML = '<div class="card"><h2>No QA pairs left</h2>' +
+        '<p class="muted">Every pair was removed by <code>EXCLUDE_APPROACHES</code> in <code>config.js</code>.</p></div>';
+      return;
+    }
     renderWelcome();
   })
   .catch((e) => {

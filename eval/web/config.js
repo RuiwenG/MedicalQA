@@ -20,8 +20,14 @@ window.EVAL_CONFIG = {
   // seed or the batches stop lining up. Change it only to redraw the study.
   SEED: 42,
 
+  // Approaches dropped from the corpus before anything else runs. Excluded
+  // pairs never enter a batch, the anchor set, the advanced picker, or any
+  // count. qa_data.json still holds them — empty this list to bring them back.
+  EXCLUDE_APPROACHES: ["DualAgent", "RAG"],
+
   // How many batches the corpus is split into. Roughly one per annotator:
-  // 1587 pairs / 8 batches ~= 198 pairs each, plus the anchor set below.
+  // 987 pairs after exclusions / 8 batches ~= 121 pairs each, plus the anchor
+  // set below.
   BATCHES: 8,
 
   // Pairs given to EVERY annotator on top of their own batch. This overlap is

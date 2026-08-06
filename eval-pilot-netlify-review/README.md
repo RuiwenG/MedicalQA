@@ -23,6 +23,18 @@ segments are stripped so every approach is judged on the same footing), plus a
 python eval/web/extract_qa_data.py
 ```
 
+### Excluded approaches
+
+`EXCLUDE_APPROACHES` in `config.js` drops approaches from the corpus at load
+time, before batching. DualAgent and RAG are currently excluded, leaving **987
+pairs** across `MultiAgent-LLMChunking` and `SingleAgent`. Excluded pairs never
+enter a batch, the anchor set, the advanced picker, or any count — annotators
+cannot opt back in. `qa_data.json` is untouched, so emptying the list restores
+them without regenerating anything.
+
+Both `config.js` files must list the same exclusions, otherwise the pilot and
+the study rate different corpora and their batches stop lining up.
+
 ---
 
 ## 1. How ratings are stored
@@ -109,14 +121,14 @@ https://your-site.netlify.app/?a=Jane%20Doe&batch=3
 
 Everything is derived from `SEED`, so it is reproducible and needs no server:
 
-1. All 1,587 pairs are shuffled once with the shared seed.
+1. All 987 non-excluded pairs are shuffled once with the shared seed.
 2. The first `ANCHOR_SIZE` (default 20) become the **anchor set**, given to
    every annotator. This overlap is what makes inter-annotator agreement
    computable — without it, no two people rate the same pair.
 3. The remaining pairs are dealt out by stride across `BATCHES` (default 8),
    which keeps datasets and approaches balanced within every batch.
 
-With the defaults each batch is ~216 pairs (roughly 1.5–2 hours). Every pair is
+With the defaults each batch is ~141 pairs (roughly 1–1.5 hours). Every pair is
 assigned exactly once except the shared anchors. For a short pilot, set
 `MAX_PAIRS: 40` in `config.js`.
 

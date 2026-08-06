@@ -8,4 +8,6 @@ window.EVAL_CONFIG = {
   BATCHES: 8,
   ANCHOR_SIZE: 20,
   MAX_PAIRS: 40,
+  // Must match eval/web/config.js — the pilot rates the same corpus.
+  EXCLUDE_APPROACHES: ["DualAgent", "RAG"],
 };
