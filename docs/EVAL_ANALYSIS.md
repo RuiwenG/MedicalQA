@@ -22,6 +22,17 @@ python eval/analyze_ratings.py --out eval/results/analysis
 python eval/analyze_ratings.py --by dataset           # regroup the comparison
 ```
 
+To generate the result figures after refreshing the tables:
+
+```
+python eval/plot_results.py
+```
+
+This writes five publication-ready plots (PNG and editable SVG) to
+`eval/results/analysis/plots/`: full ordinal distributions, approach-level
+Top-2 rates with Wilson intervals, the error taxonomy, annotator calibration,
+and inter-annotator agreement.
+
 [`eval/analyze_ratings.py`](../eval/analyze_ratings.py) reads **every** `.csv`
 and `.xlsx` in `eval/results/` and concatenates them, so the website's Supabase
 export and the notebook's spreadsheets analyse together — the column names are

@@ -150,9 +150,13 @@ counts for rated pairs.
 
 The last cell of the notebook aggregates **all** result files in
 `eval/results/` across annotators and prints descriptive text-label counts for
-attributes, Yes/No decisions, error taxonomy, and caregiver recommendation. Numeric
-mapping, correlations, and formal inter-annotator-agreement calculations should
-be run separately after the score/code map is approved.
+attributes, Yes/No decisions, error taxonomy, and caregiver recommendation.
+
+Numeric mapping, distributions, approach comparisons, and inter-annotator
+agreement are handled separately by
+[`eval/analyze_ratings.py`](../eval/analyze_ratings.py) — see
+[EVAL_ANALYSIS.md](EVAL_ANALYSIS.md) for the score map, the statistics, and the
+findings so far.
 It reads both the `.xlsx` files this notebook writes and the `.csv` files
 downloaded from the website — the column names are identical.
 
