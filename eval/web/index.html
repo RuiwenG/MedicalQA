@@ -264,13 +264,13 @@ const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
   .replace(/\/rest\/v1$/, "");
 
 // key   -> column name in Supabase / CSV field key
-// label -> what the annotator reads (matches the notebook exactly)
+// label -> what the annotator reads
 // scope -> which part of the pair is being judged, drives the coloured tag
 const METRICS = [
-  { key: "qa_alignment", label: "QA Alignment/Trustworthiness", scope: "qa",
-    attributeName: "Alignment/Trustworthiness",
-    binaryQuestion: "Is the Q&A aligned with the video?",
-    def: "(Accurate, trustworthy, grounded in video.) The answer directly addresses the question, is supported by the source video, and does not add unsupported claims or contradict the video.",
+  { key: "qa_alignment", label: "Trustworthiness", scope: "qa",
+    attributeName: "Trustworthiness",
+    binaryQuestion: "Is this Q&A accurate and supported by the video?",
+    def: "The answer should match the question, follow the video, and avoid unsupported claims.",
     attribute: [
       "Excellent",
       "Good",
@@ -279,10 +279,10 @@ const METRICS = [
     ],
     errors: ["Missing information", "Hallucination", "Contradiction", "Off-topic"],
     noIssueError: "No issue" },
-  { key: "qa_accessibility", label: "QA Accessibility", scope: "qa",
-    attributeName: "Accessibility",
+  { key: "qa_accessibility", label: "Ease of Understanding", scope: "qa",
+    attributeName: "Ease of Understanding",
     binaryQuestion: "Is the Q&A easy for a caregiver to understand?",
-    def: "(Clear, fluent, easy to understand.) The QA pair is specific, readable, and accessible for caregivers, without unexplained clinical or technical language.",
+    def: "The Q&A should use clear, simple language that a caregiver can understand without medical training.",
     attribute: [
       "Very easy to understand",
       "Easy",
@@ -291,27 +291,27 @@ const METRICS = [
     ],
     errors: ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
     noIssueError: "No issue" },
-  { key: "qa_edu_actionable", label: "QA Educational/Actionable Value", scope: "qa",
-    attributeName: "Educational/Actionable Value",
-    binaryQuestion: "Does the Q&A give useful or actionable guidance?",
-    def: "(Actionable, useful, constructive information.) The QA pair teaches an important dementia-care idea and/or gives practical guidance a caregiver could apply.",
+  { key: "qa_edu_actionable", label: "Educational Value", scope: "qa",
+    attributeName: "Educational Value",
+    binaryQuestion: "Does this Q&A help a caregiver learn something useful?",
+    def: "A good Q&A teaches something useful about dementia care and, when possible, gives something practical to do, say, avoid, notice, or monitor.",
     attribute: [
-      "Highly actionable",
-      "Actionable",
+      "Very useful",
+      "Useful",
       "Limited usefulness",
       "Not useful",
     ],
     errors: ["Not actionable", "Missing explanation", "Generic advice", "Incorrect recommendation"],
     noIssueError: "No issue" },
-  { key: "qa_mental_health", label: "QA Mental Health Value", scope: "qa",
-    attributeName: "Mental Health Value",
-    binaryQuestion: "Is the Q&A supportive and safe for caregivers?",
-    def: "(Resilience, empathy, mental health support.) The QA pair is constructive and emotionally supportive, promotes dignity and resilience, and avoids blame, fear, or judgment.",
+  { key: "qa_mental_health", label: "Emotional Support", scope: "qa",
+    attributeName: "Emotional Support",
+    binaryQuestion: "Is this Q&A respectful, supportive, and safe?",
+    def: "The Q&A should be kind, respectful, and safe for caregivers and people living with dementia.",
     attribute: [
-      "Highly supportive",
+      "Very supportive",
       "Supportive",
       "Limited support",
-      "Unsupportive / potentially harmful",
+      "Not supportive or could be harmful",
     ],
     errors: ["Neutral / limited support", "Dismissive", "Potentially harmful"],
     noIssueError: "No issue" },
@@ -810,6 +810,7 @@ function renderWelcome() {
       <h2>What you will be doing</h2>
       <p>You will read short question–answer pairs about dementia care that were written automatically by different AI systems, and evaluate each pair on ${METRICS.length} criteria.</p>
       <ul>
+        <li><b>Think like a caregiver.</b> Rate each Q&A as if you were deciding whether it would help you understand or care for someone living with dementia.</li>
         <li><b>Judge only what is in front of you.</b> You do not need to have watched the source video — a link to it is there if you want context, but the rating should reflect the question and answer as written.</li>
         <li>The system that produced each pair is hidden, so your rating is not influenced by which one it came from.</li>
         <li>Your progress saves automatically after every pair — <b>you can close the tab and come back to this same link later.</b></li>
@@ -887,7 +888,7 @@ function renderWelcome() {
         <tr><td><b>Quality label</b></td><td>A plain-language label for the Q&A pair. Score mapping happens after collection.</td></tr>
         <tr><td><b>Yes/No question</b></td><td>A simple check for whether the Q&A meets that criterion.</td></tr>
         <tr><td><b>Problem types</b></td><td>Shown only after No. Select one or more problems.</td></tr>
-        <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the QA to a caregiver.</td></tr>
+        <tr><td><b>Recommendation</b></td><td>Whether you would recommend the Q&A to a caregiver.</td></tr>
       </table>
     </div>`;
 
@@ -1129,7 +1130,7 @@ function renderRate() {
         return `
         <div class="metric ${completeMetric(ms) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
           <div class="metric-head">
-            <span class="metric-name">${m.label}</span>
+            <span class="metric-name">${i + 1}. ${m.label}</span>
             <span class="tag ${m.scope}">${SCOPE_TAG[m.scope]}</span>
           </div>
           <div class="metric-def">${m.def}</div>
@@ -1154,7 +1155,7 @@ function renderRate() {
 
     <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation">
       <div class="metric-head">
-        <span class="metric-name">Would you confidently recommend this Q&A to a caregiver?</span>
+        <span class="metric-name">${metrics.length + 1}. Would you recommend this Q&A to a caregiver?</span>
         <span class="tag qa">Overall</span>
       </div>
       <div class="metric-def">Use this as the final caregiver-facing judgment for the whole QA pair.</div>

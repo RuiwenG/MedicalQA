@@ -8,10 +8,10 @@ distributions.
 
 The four QA metrics are 4-point *ordinal* scales, best label first:
 
-    QA Alignment/Trustworthiness   Excellent 4 .. Poor 1
-    QA Accessibility               Very easy to understand 4 .. Difficult 1
-    QA Educational/Actionable      Highly actionable 4 .. Not useful 1
-    QA Mental Health Value         Highly supportive 4 .. Unsupportive 1
+    Trustworthiness                Excellent 4 .. Poor 1
+    Ease of Understanding          Very easy to understand 4 .. Difficult 1
+    Educational Value              Very useful 4 .. Not useful 1
+    Emotional Support              Very supportive 4 .. Harmful 1
 
 **No means are reported anywhere.** The distance between "Good" and "Fair" is
 not the distance between "Fair" and "Poor", so an average of these codes is not
@@ -55,32 +55,37 @@ from scipy import stats
 # ---------------------------------------------------------------------------
 METRICS = {
     "qa_alignment": {
-        "label": "QA Alignment/Trustworthiness",
+        "label": "Trustworthiness",
         "scale": {"Excellent": 4, "Good": 3, "Fair": 2, "Poor": 1},
-        "binary_question": "Is the Q&A aligned with the video?",
+        "binary_question": "Is this Q&A accurate and supported by the video?",
         "errors": ["Missing information", "Hallucination", "Contradiction", "Off-topic"],
     },
     "qa_accessibility": {
-        "label": "QA Accessibility",
+        "label": "Ease of Understanding",
         "scale": {"Very easy to understand": 4, "Easy": 3, "Somewhat difficult": 2, "Difficult": 1},
         "binary_question": "Is the Q&A easy for a caregiver to understand?",
         "errors": ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
     },
     "qa_edu_actionable": {
-        "label": "QA Educational/Actionable Value",
-        "scale": {"Highly actionable": 4, "Actionable": 3, "Limited usefulness": 2, "Not useful": 1},
-        "binary_question": "Does the Q&A give useful or actionable guidance?",
+        "label": "Educational Value",
+        "scale": {"Very useful": 4, "Useful": 3, "Limited usefulness": 2, "Not useful": 1},
+        "aliases": {"Highly actionable": "Very useful", "Actionable": "Useful"},
+        "binary_question": "Does this Q&A help a caregiver learn something useful?",
         "errors": ["Not actionable", "Missing explanation", "Generic advice", "Incorrect recommendation"],
     },
     "qa_mental_health": {
-        "label": "QA Mental Health Value",
+        "label": "Emotional Support",
         "scale": {
-            "Highly supportive": 4,
+            "Very supportive": 4,
             "Supportive": 3,
             "Limited support": 2,
-            "Unsupportive / potentially harmful": 1,
+            "Not supportive or could be harmful": 1,
         },
-        "binary_question": "Is the Q&A supportive and safe for caregivers?",
+        "aliases": {
+            "Highly supportive": "Very supportive",
+            "Unsupportive / potentially harmful": "Not supportive or could be harmful",
+        },
+        "binary_question": "Is this Q&A respectful, supportive, and safe?",
         "errors": ["Neutral / limited support", "Dismissive", "Potentially harmful"],
     },
 }
@@ -180,6 +185,9 @@ def score_ratings(df: pd.DataFrame) -> pd.DataFrame:
             unmapped[f"{col}: {v!r}"] += 1
 
     for key, spec in METRICS.items():
+        attr_col = f"{key}_attribute"
+        if attr_col in df.columns and spec.get("aliases"):
+            df[attr_col] = df[attr_col].replace(spec["aliases"])
         apply_map(f"{key}_attribute", spec["scale"], f"{key}_score")
         apply_map(f"{key}_binary", BINARY, f"{key}_pass")
 
