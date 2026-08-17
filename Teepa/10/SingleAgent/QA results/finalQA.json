@@ -1,42 +1,30 @@
 [
   {
-    "question": "Why is the visual design of a room particularly challenging for someone with dementia?",
-    "answer": "Visual design is critical because the brain struggles to process and understand images. Specifically, high-contrast elements like black maps can create optical illusions where the floor appears to disappear, causing the person to feel as though there is no ground beneath them, which leads to instability and fear."
+    "question": "Why might a person with dementia see black maps or distorted faces when looking at pictures?",
+    "answer": "This happens because dementia affects the brain's ability to process and understand images. Design and color become extremely important for them to make sense of what they see. For example, if a map is printed in black, a person with dementia might not see the bottom part of the image at all, making it look like there is no ground to stand on. Similarly, faces might appear distorted or change colors, which can be very scary and traumatic for them.",
+    "timestamp": "0:22-1:13",
+    "time_start_sec": 22,
+    "time_end_sec": 73
   },
   {
-    "question": "What types of visual distortions and hallucinations are commonly experienced by individuals with dementia?",
-    "answer": "Individuals often experience hallucinations involving distorted faces, altered colors, and the perception of objects that are not present. These visual disturbances can be traumatic and may cause the person to react defensively or with fear to things that look different than reality."
+    "question": "What should I do if my loved one complains that their food tastes like bleach or smells bad?",
+    "answer": "These are often \"phantom\" smells or tastes caused by the disease, where the brain creates false sensations. The person is not being difficult; they are experiencing real pain or disgust. Instead of forcing them to eat, try offering foods that are simple and easy to swallow, known as \"automatic responses,\" rather than relying on complex flavors they can no longer enjoy. It is important to realize that losing weight during this time is a common and draining struggle, not a personal failure.",
+    "timestamp": "1:45-2:16",
+    "time_start_sec": 105,
+    "time_end_sec": 136
   },
   {
-    "question": "How does sensory overload manifest in the auditory experiences of someone with dementia?",
-    "answer": "Auditory processing can become distorted, making ordinary sounds seem excessively loud and overwhelming. This sensory overload can lead to confusion where the environment feels chaotic, contributing to distress and a lack of ability to focus on anything else."
+    "question": "My partner gets angry when I try to help them button their shirt or fix things around the house. How can I handle this?",
+    "answer": "When someone with dementia tries to fix things like a burning smell or unbuttoned clothes, they are often trying to solve a problem they believe they caused, even if it is just a hallucination. They feel a strong need to find a solution. Instead of arguing or stopping them immediately, try to stay calm and offer gentle guidance without making them feel blamed for the mistake. Understanding that they are genuinely trying to help can reduce your frustration.",
+    "timestamp": "2:20-2:54",
+    "time_start_sec": 140,
+    "time_end_sec": 174
   },
   {
-    "question": "Why might a person with dementia refuse to eat or lose significant weight despite being hungry?",
-    "answer": "Food can become repulsive due to distorted senses, feeling as though it tastes like bleach or has a strong repellent quality. Additionally, if the food is served in an automatic setting without engagement, the person may not engage their thinking processes to eat, leading to a draining situation where they only consume what their compromised brain accepts."
-  },
-  {
-    "question": "What is the nature of phantom smells experienced by people with dementia?",
-    "answer": "People with dementia frequently experience phantom smells that are consistently unpleasant rather than pleasant. Common examples include foul odors instead of nice scents like vanilla or coffee, which can contribute to nausea and a refusal to eat."
-  },
-  {
-    "question": "How does the behavior of trying to extinguish a fire differ between a stranger and a person with dementia?",
-    "answer": "While a stranger would typically remove themselves from a perceived fire hazard, a person with dementia often attempts to actively solve the problem by hunting for the source of the \"burning\" sensation. This occurs because they feel responsible for the issue and try to fix it through action rather than avoidance."
-  },
-  {
-    "question": "Why can physical touch, such as hand-holding or a hug, be painful for someone with dementia?",
-    "answer": "Physical contact can be perceived as intensely painful, similar to having needles constantly hitting the body. This distortion affects various forms of touch, including the sensation of water during a shower, making simple interactions frightening and uncomfortable for the individual."
-  },
-  {
-    "question": "What is the recommended approach for caregivers when dealing with the painful sensations or hallucinations described in the transcript?",
-    "answer": "Caregivers should recognize that these painful sensations and hallucinations are part of the disease reality and not something to be feared. The goal is to learn to live with these symptoms rather than trying to force a return to normalcy, acknowledging that the experience is real to the patient even if it is not physically true."
-  },
-  {
-    "question": "How does the loss of taste affect the eating habits of a person with dementia?",
-    "answer": "The loss of taste causes food to lose its appeal, making it unpalatable. Instead of eating for enjoyment, the individual may resort to consuming whatever their damaged brain allows them to ingest, which is often insufficient and leads to weight loss and malnutrition."
-  },
-  {
-    "question": "What role does the concept of \"automatic response\" play in the daily functioning of someone with dementia?",
-    "answer": "As cognitive abilities decline, the person relies heavily on automatic responses rather than active thinking. If a situation requires conscious thought, such as deciding what to eat or how to react to a stimulus, the inability to engage in this thinking can result in withdrawal or inappropriate reactions."
+    "question": "My loved one says that touching them feels like needles or that the shower water hurts. Is this normal?",
+    "answer": "Yes, this is a common experience called tactile hallucinations. Many people with dementia report that normal touches, hugs, or even water from a shower feel painfully sharp, like dragging needles across their skin. It is not that they are rejecting your love, but rather that their brain is misinterpreting these sensations. Knowing this helps you understand that their reaction is a symptom of the disease, not a sign that they hate you.",
+    "timestamp": "2:55-3:16",
+    "time_start_sec": 175,
+    "time_end_sec": 196
   }
 ]

@@ -1,78 +1,72 @@
 [
   {
-    "question": "What is the primary function of the limbic system, and why is it considered the oldest part of the brain?",
-    "answer": "The limbic system is the first system to develop in the brain and serves as the \"thrive to survive\" mechanism. It manages core functions such as hunger, thirst, elimination, sleep, temperature control, and basic emotions. It includes the amygdala, which detects threats and triggers fight, flight, or fright responses. This system is preserved longest in dementia and is often the last area to be damaged."
+    "question": "Why does a person with dementia often react with anger or fear when touched unexpectedly?",
+    "answer": "This happens because the part of the brain responsible for \"edge vision\" (seeing the edges of our surroundings) is damaged early on. Without this safety awareness, the person cannot see you approaching until you are already touching them. Their brain then interprets this sudden contact as an attack, triggering a strong \"fight, flight, or fright\" reaction. It is not personal; their brain simply lacks the visual data to know you are safe.",
+    "timestamp": "6:18-6:48",
+    "time_start_sec": 378,
+    "time_end_sec": 408
   },
   {
-    "question": "How does the development timeline of the prefrontal cortex differ between males and females, and what are its three main functions?",
-    "answer": "The prefrontal cortex is the newest part of the brain, reaching full maturity in males slightly later than females, typically between the late twenties and early thirties. Its three major functions are: 1) inhibiting impulses and delaying gratification for long-term benefits; 2) enabling logical thinking, choice-making, and decision evaluation; and 3) allowing the ability to see situations from another person's point of view (perspective-taking)."
+    "question": "Why might a person with dementia suddenly say rude words, swear, or make sexual comments?",
+    "answer": "In most dementias, the left side of the brain (which handles logic and social filters) is damaged, while the right side remains intact. The right side stores automatic responses learned early in life, including \"forbidden words\" like swear words or racial slurs. When the filter breaks down, these old, inappropriate words come out automatically. The person is not choosing to be mean; they are struggling to stop these automatic thoughts.",
+    "timestamp": "9:56-10:12",
+    "time_start_sec": 596,
+    "time_end_sec": 612
   },
   {
-    "question": "Why are smell and taste considered primitive senses, and how does their impairment affect safety awareness in dementia?",
-    "answer": "Smell and taste are primitive senses that bypass higher processing centers and go directly to the limbic system, linking them to basic survival and safety. In dementia, the ability to detect unpleasant smells (like urine, feces, or spoiled food) drops early, leading to a lack of safety awareness. Patients may show increased interest in sugar and salt while ignoring hygiene-related odors, causing them to act impulsively without recognizing danger."
+    "question": "Why does a person with dementia often lose things or think family members moved items?",
+    "answer": "Dementia affects the ability to scan the environment in an organized way. The person loses track of where they last looked and cannot remember where to look next. Because they cannot visually track where an object was placed, they genuinely believe it has disappeared or been moved by someone else. This causes real distress because they are trying to solve a problem they cannot see.",
+    "timestamp": "7:26-7:36",
+    "time_start_sec": 446,
+    "time_end_sec": 456
   },
   {
-    "question": "How does the loss of peripheral (edge) vision impact a person with dementia's interaction with their environment?",
-    "answer": "While central vision (curiosity and interest) remains relatively preserved, peripheral vision (safety awareness) deteriorates early. This causes the patient's visual field to shrink, making them focus narrowly. Consequently, they may misinterpret benign touches or movements as attacks, become easily startled, miss details, lose items because they cannot scan systematically, and struggle with depth perception, leading to difficulties judging distances or identifying objects in 3D."
+    "question": "Why might a person with dementia prefer sugary or salty foods and ignore bad smells?",
+    "answer": "Smell and taste are processed in the \"limbic system,\" which is the oldest part of the brain. While this system is still working, the wiring connecting it to safety awareness is broken. The person may crave sugar and salt because those tastes are still stimulating, but they lose the ability to recognize unpleasant smells like urine, feces, or spoiled food. They do not realize these smells are dangerous or dirty.",
+    "timestamp": "5:03-5:34",
+    "time_start_sec": 303,
+    "time_end_sec": 334
   },
   {
-    "question": "What is the typical pattern of language loss in dementia regarding the left and right hemispheres of the brain?",
-    "answer": "Dementia typically attacks the left hemisphere more than the right. The left side handles formal language skills like vocabulary, comprehension, and speech production, leading to a loss of nouns and the ability to form sentences. The right side preserves rhythm, music, poetry, and automatic social chit-chat. Additionally, the right hemisphere stores \"forbidden words\" (swear words, racial slurs), which patients may suddenly use despite never having done so before, as this skill remains intact."
+    "question": "Why can a person with dementia sing songs or dance but struggle to plan a simple movement?",
+    "answer": "The right side of the brain, which controls rhythm, music, and automatic movements, is often preserved longer than the left side. Singing and dancing rely on these automatic rhythms, which the person can still access. However, planning a specific movement requires thinking skills and decision-making located in the frontal lobe, which is severely impaired. Therefore, they can move automatically but cannot plan complex actions.",
+    "timestamp": "9:32-9:55",
+    "time_start_sec": 572,
+    "time_end_sec": 595
   },
   {
-    "question": "How does the deterioration of the sensory-motor map in the brain affect a patient's physical safety and behavior?",
-    "answer": "The brain contains a map for sensing the body and initiating movement. As dementia progresses, safety awareness diminishes while curiosity may remain. Patients may touch hot surfaces or dangerous objects without realizing the risk because they cannot accurately perceive temperature or texture. This leads to safety issues where the individual acts on impulse without the necessary protective inhibition."
+    "question": "How does dementia affect a person's ability to see in three dimensions (3D)?",
+    "answer": "As the disease progresses, the person loses the ability to align images from both eyes to create a 3D picture. They must choose between seeing double or using only one eye, which removes depth perception. Without knowing how far away objects are, simple tasks become dangerous and confusing. For example, they might try to pick up a pattern on the carpet instead of an object, or drop things because they cannot judge the distance to the table.",
+    "timestamp": "7:36-8:02",
+    "time_start_sec": 456,
+    "time_end_sec": 482
   },
   {
-    "question": "What is the estimated structural progression of the brain in most cases of dementia?",
-    "answer": "In most dementias, the brain undergoes significant atrophy, shrinking from its original full size to approximately one-third of its original volume. Despite these massive structural losses, patients often continue to function surprisingly well due to the resilience of certain neural pathways and remaining chemistry."
+    "question": "Why does a person with dementia remember being angry at a caregiver but forget why they are angry?",
+    "answer": "Emotional memory is stored in a different part of the brain than factual memory. In many cases of dementia, the ability to recall past events and facts fades, but the emotional imprint remains. The person feels the anger intensely but has lost the context or the reason behind it. They remember the feeling of being mad, but the story of why they are mad is gone.",
+    "timestamp": "12:48-12:57",
+    "time_start_sec": 768,
+    "time_end_sec": 777
   },
   {
-    "question": "How do chemical changes in the brain contribute to the variability of symptoms in dementia?",
-    "answer": "Beyond structural changes, the brain's chemistry changes second-by-second, sending impulses that dictate immediate function. A person might be able to perform a task five minutes prior but fail immediately after due to a sudden shift in brain chemistry. This explains why symptoms can fluctuate rapidly and why a person's capabilities are not static."
+    "question": "What is the difference between the \"core\" brain and the \"cortex\" regarding dementia progression?",
+    "answer": "The \"core\" brain (limbic system) handles basic survival needs like hunger, thirst, and emotions, and it is the last part to go. The \"cortex\" (surface of the brain) handles higher functions like decision-making, logic, and understanding others' points of view, and it is the first to be damaged. Early in the disease, the person keeps their basic drives but loses their ability to control impulses, make logical choices, or understand why others are upset with them.",
+    "timestamp": "3:04-3:59",
+    "time_start_sec": 184,
+    "time_end_sec": 239
   },
   {
-    "question": "What is the distinction between working memory and long-term/emotional memory in the context of dementia?",
-    "answer": "Working memory involves the active processing of information and is affected by the general decline in brain function. Long-term memory, stored in the hippocampal area, often remains intact for old events, while the ability to learn and hold onto new information is lost. However, emotional memory is frequently preserved, meaning a patient may remember being angry at a caregiver but forget the reason for that anger."
+    "question": "Why does a person with dementia sometimes seem to understand a conversation but then repeat themselves or lose their train of thought?",
+    "answer": "The left side of the brain, which manages vocabulary and comprehension, is attacked first. The person may lose the specific words (nouns) needed to form sentences or understand complex ideas. However, they often keep the ability to use \"automatic social chitchat.\" This makes it look like they are following the conversation, but they are actually relying on rehearsed phrases rather than truly processing the new information.",
+    "timestamp": "8:50-9:23",
+    "time_start_sec": 530,
+    "time_end_sec": 563
   },
   {
-    "question": "Why is the preservation of emotional memory both a benefit and a challenge for caregivers?",
-    "answer": "The preservation of emotional memory means patients often retain strong feelings from the past, such as anger or fear, even if they cannot recall the triggering event. This creates a challenge because the patient may react intensely to a situation without understanding why, leaving the caregiver confused by the disconnect between the patient's emotion and their current reality."
-  },
-  {
-    "question": "How does the asymmetrical nature of brain damage influence a patient's ability to communicate and interact socially?",
-    "answer": "Since most dementias attack the left hemisphere (language) more than the right (rhythm/music), patients lose vocabulary and comprehension first. However, they often retain the ability to engage in automatic social chit-chat and rhythmic activities like singing or dancing. This can create a misleading impression that the patient is processing information well when they are actually relying on preserved, non-logical skills."
-  },
-  {
-    "question": "What role does the inability to scan visually play in the loss of objects experienced by people with dementia?",
-    "answer": "As the disease progresses, patients lose the ability to scan their visual field in an organized fashion. They cannot remember where they last looked or where to look next, causing them to miss details and lose items. They often interpret this loss as others moving their belongings, which causes significant distress and confusion."
-  },
-  {
-    "question": "How does the loss of 3D depth perception manifest in daily activities for someone with advanced dementia?",
-    "answer": "When the brain can no longer align images from both eyes to create a 3D view, patients lose depth perception. This makes simple tasks like judging distance to objects impossible. They may struggle to distinguish between a real object and a picture of it, or they might miss tables entirely when setting things down, often running their hands along edges to compensate."
-  },
-  {
-    "question": "Why is understanding the specific brain regions affected crucial for caregivers when dealing with behavioral changes?",
-    "answer": "Understanding that the frontal lobe (decision making, impulse control) is damaged while the limbic system (emotions, survival instincts) remains active helps caregivers realize that behaviors like aggression or impulsivity are not intentional malice. Instead, the patient lacks the cognitive tools to inhibit these drives, allowing the caregiver to respond with empathy rather than frustration."
-  },
-  {
-    "question": "How does the concept of \"safety awareness\" differ from \"skill and curiosity\" in the later stages of dementia?",
-    "answer": "In later stages, patients may retain curiosity and the desire to explore (skill), but their safety awareness drops significantly. They might touch hot stoves or wander into dangerous areas because the brain's warning system regarding threats is impaired, even though their drive to investigate remains."
-  },
-  {
-    "question": "What is the significance of the prefrontal cortex not reaching full maturity until the late twenties or early thirties?",
-    "answer": "The fact that the prefrontal cortex matures late explains why children and young adults are more prone to impulsive behavior and poor decision-making compared to older adults. In dementia, this region is the last to develop and often the first to fail, returning the adult brain to a state of undeveloped impulse control similar to childhood."
-  },
-  {
-    "question": "How does the preservation of musical ability relate to the damage in the left hemisphere of the brain?",
-    "answer": "Musical ability, rhythm, and poetry are processed in the right hemisphere, which is often spared in early-to-mid stage dementia while the language-heavy left hemisphere degrades. This allows patients to sing songs or move rhythmically even when they have lost the vocabulary and grammar required for normal conversation."
-  },
-  {
-    "question": "Why might a patient with dementia appear to be \"chit-chatting\" effectively while actually having severe comprehension deficits?",
-    "answer": "Patients often rely on automatic social scripts and rhythmic responses stored in the right hemisphere. This allows them to reply to conversations fluently, creating an illusion of understanding. However, they may not comprehend the actual meaning of the words spoken to them, merely matching the rhythm and tone of the interaction."
-  },
-  {
-    "question": "How does the knowledge of brain structure and chemistry empower caregivers to make choices that improve the patient's quality of life?",
-    "answer": "Understanding that the frontal lobe is damaged and that chemistry fluctuates helps caregivers realize the patient has no control over their symptoms. This knowledge shifts the dynamic from blaming the patient to making proactive choices about communication and environment, reducing conflict and improving the experience for both the caregiver and the person with dementia."
+    "question": "How does the physical shrinkage of the brain relate to the daily challenges of caring for someone with dementia?",
+    "answer": "Over time, the brain shrinks to about one-third of its original size due to structural changes and chemical imbalances. This means the person literally does not have the physical space or the chemical fuel to perform tasks they could do yesterday. Even if they try hard, their brain simply cannot send the right signals at that moment. Understanding this helps caregivers realize that the person is not being difficult or lazy; their biology has changed, and they need patience and support.",
+    "timestamp": "11:17-12:06",
+    "time_start_sec": 677,
+    "time_end_sec": 726
   }
 ]

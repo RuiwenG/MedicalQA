@@ -1,82 +1,37 @@
 [
   {
-    "question": "What is the fundamental physiological difference between being forgetful and having dementia?",
-    "answer": "The key difference is that in forgetfulness, the brain is still alive and functioning, whereas in dementia, the brain is damaged. This distinction means that strategies used for normal aging may not work for dementia."
+    "question": "What is the main difference between normal forgetfulness and dementia?",
+    "answer": "Normal forgetfulness happens when your brain is temporarily full of too much information, like when a phone call interrupts your plan to make coffee. You might lose track of what you were doing, but you feel frustrated and realize you made a mistake. In dementia, the brain changes so that you cannot hold onto thoughts or connect events logically. Instead of feeling sorry for forgetting, a person with dementia might invent wild stories, like accusing neighbors of stealing toilet paper, to explain why things seem wrong.",
+    "timestamp": "0:00-2:36",
+    "time_start_sec": 0,
+    "time_end_sec": 156
   },
   {
-    "question": "How does the capacity of working memory change with age and affect daily tasks?",
-    "answer": "Working memory is a small part of the brain that holds about five to eight chunks of information at once. As people age, the accumulation of tasks and environmental changes can overwhelm this limited capacity, causing individuals to lose track of their original intentions, such as forgetting why they entered a room."
+    "question": "Why does the speaker say that working memory is important, and what happens to it in dementia?",
+    "answer": "Working memory is a small part of your brain that helps you focus on tasks and hold several pieces of information at once, like remembering to make coffee while walking to the kitchen. It can only hold about five to eight items. When something unexpected happens, like a phone ringing, this space fills up. In normal forgetfulness, the new information pushes the old plan out of your mind temporarily. In dementia, the brain loses the ability to keep that original plan safe, so the intention to make coffee is completely lost forever.",
+    "timestamp": "2:43-4:00",
+    "time_start_sec": 163,
+    "time_end_sec": 240
   },
   {
-    "question": "Why do older adults often fail to recognize visual cues like a coffee pot that younger adults easily spot?",
-    "answer": "Younger adults rely on simple visual queues because they have done fewer things in a specific environment. Older adults, however, have performed too many activities in places like the kitchen, making the coffee pot blend into the background noise rather than standing out as a clear reminder."
+    "question": "What practical strategy can someone with normal forgetfulness use to remember their tasks?",
+    "answer": "A helpful strategy is to keep a notepad and pencil right next to the telephone so you can write down important details immediately. Another key step is to return to the exact place where you first had the thought. By physically going back to the living room or kitchen, you can look for strong visual clues, like a coffee pot, that remind your brain what you intended to do. This helps you reconnect with your original goal.",
+    "timestamp": "3:36-4:48",
+    "time_start_sec": 216,
+    "time_end_sec": 288
   },
   {
-    "question": "What specific compensatory behaviors do people develop to manage frequent forgetfulness?",
-    "answer": "To cope with forgetfulness, individuals often place notepads directly next to the telephone and tie pencils to them. These tools serve as external aids to ensure they have something to write down immediately when interrupted, preventing them from walking away without recording important information."
+    "question": "How does the behavior of a person with dementia differ from someone who is just forgetful when they lose track of a task?",
+    "answer": "A person who is just forgetful feels irritation and frustration because they know they made a mistake and want to fix it. However, a person with dementia often creates illogical explanations for their confusion. For example, instead of admitting they forgot to make coffee, they might suddenly accuse strangers of breaking into their house and stealing food. They act on random things they see around them, making actions that don't make sense to others, even though they believe their own story is true.",
+    "timestamp": "4:58-6:20",
+    "time_start_sec": 298,
+    "time_end_sec": 380
   },
   {
-    "question": "How does the interpretation of environmental clues differ between someone with forgetfulness and someone with dementia?",
-    "answer": "A person with forgetfulness might momentarily lose their train of thought but can return to the correct context using cues. In contrast, a person with dementia interprets random objects logically but incorrectly; for example, they might see a dirty glass and conclude it is evidence of intruders stealing food, leading to illogical actions like freezing the glass."
-  },
-  {
-    "question": "Why does reminding a person with dementia to remember their appointment often fail?",
-    "answer": "Reminding a person with dementia to \"remember\" is ineffective because the disease has impaired the ability to form new memories or retrieve existing ones. The brain cannot process the reminder as a functional instruction, making the request futile."
-  },
-  {
-    "question": "What is the appropriate response when a conversation partner suggests you might have dementia?",
-    "answer": "When someone suggests you have dementia, it indicates that the behavior has moved beyond normal forgetfulness into a pathological state. At this stage, the focus must shift from trying to improve memory through reminders to changing the approach to communication and care."
-  },
-  {
-    "question": "How does the progression of forgetfulness impact social interactions and planning?",
-    "answer": "As forgetfulness worsens, individuals struggle to hold multiple pieces of information simultaneously, such as meeting times, locations, and companions. This leads to confusion during conversations, where details like who is coming or where to meet are lost amidst the flow of dialogue."
-  },
-  {
-    "question": "What role do physical location and mental state play in retrieving lost thoughts for someone with forgetfulness?",
-    "answer": "To retrieve a lost thought, a person with forgetfulness must physically return to the place where the thought originated and mentally re-enter that context. Being in the right place provides the necessary episodic cues to recall the original intention, such as needing to make coffee."
-  },
-  {
-    "question": "Why does the effectiveness of environmental cues diminish over time in the aging process?",
-    "answer": "Environmental cues become less effective because the familiarity and distinctiveness of objects in a space decrease due to overuse. An object that once served as a strong trigger for a task becomes just one of many items, requiring a stronger, more deliberate type of cue to activate the memory."
-  },
-  {
-    "question": "What is the significance of the statement \"forgetfulness is not the issue\" in the context of dementia?",
-    "answer": "This statement signifies a critical turning point where the problem is no longer a temporary lapse in attention or memory storage. Instead, the underlying issue is the neurological damage of dementia, which requires a complete change in strategy rather than simple reminders."
-  },
-  {
-    "question": "How does the accumulation of information overload lead to the loss of primary goals?",
-    "answer": "When too much new information enters working memory, it displaces the initial goal. For instance, a series of phone calls about meetings and gifts can completely displace the original intent to make coffee, resulting in the individual leaving the kitchen without accomplishing the task."
-  },
-  {
-    "question": "What logical fallacies do individuals with dementia exhibit regarding their surroundings?",
-    "answer": "Individuals with dementia create internal logic based on fragmented observations. They may interpret a dirty glass as proof of theft by strangers, demonstrating that while their reasoning process is active, the data they are processing is misidentified, leading to bizarre but internally consistent conclusions."
-  },
-  {
-    "question": "How does the concept of \"chunks\" relate to the limitations of human memory?",
-    "answer": "The concept of \"chunks\" refers to the discrete units of information that working memory can handle. Since this capacity is limited to roughly five to eight chunks, any situation introducing more complex variables, like multiple appointments and errands, exceeds this limit and causes cognitive failure."
-  },
-  {
-    "question": "Why is the transition from \"normal\" to \"dementia\" described as a change in gear?",
-    "answer": "The transition is described as a change in gear because the mechanisms that worked for normal forgetfulness (like using cues and returning to the scene) cease to function. The brain's processing power has fundamentally changed, requiring a completely different mode of interaction and support."
-  },
-  {
-    "question": "What is the relationship between multitasking and the onset of forgetfulness?",
-    "answer": "Multitasking relies on working memory to organize and plan. When working memory is overloaded, the ability to multitask fails, causing the brain to drop the current task (like making coffee) in favor of the most recent input (the phone call), leading to forgetfulness."
-  },
-  {
-    "question": "How does the perception of time and routine change in early stages of dementia?",
-    "answer": "In early dementia, the connection between events breaks down. A person may not understand why they are at a specific location or who they are speaking to, indicating a loss of temporal and contextual awareness that distinguishes dementia from simple forgetfulness."
-  },
-  {
-    "question": "What is the educational value of observing the silence of a room during a demonstration of forgetfulness?",
-    "answer": "The silence reflects the audience's recognition of the scenario in their own lives. It highlights that the experience of losing one's train of thought is common and relatable, serving as a bridge to understanding the more severe symptoms of dementia."
-  },
-  {
-    "question": "How does the inability to read minds affect interactions with people with dementia?",
-    "answer": "People with dementia lose the ability to infer intentions or anticipate needs, such as knowing someone wants to meet at the mall without being told. This leads to frustration and confusion when others assume they should know what is happening, as the person with dementia literally cannot access that information."
-  },
-  {
-    "question": "What is the ultimate conclusion regarding the utility of reminders for someone with dementia?",
-    "answer": "Reminders are ultimately useless for someone with dementia because the brain cannot encode or retrieve the information provided. The solution lies not in asking them to remember, but in adapting the environment and communication style to accommodate their cognitive limitations."
+    "question": "Why is telling a person with dementia to \"remember\" usually ineffective?",
+    "answer": "Telling someone with dementia to \"remember\" does not work because their brain can no longer access the memories or plans they need. The speaker explains that when forgetfulness turns into dementia, simply reminding the person is not helpful. The brain has changed in a way that makes recalling past events or intentions impossible, so caregivers need to change their approach rather than trying to force the person to remember.",
+    "timestamp": "7:23-7:43",
+    "time_start_sec": 443,
+    "time_end_sec": 463
   }
 ]

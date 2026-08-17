@@ -1,82 +1,86 @@
 [
   {
-    "question": "What are the primary cultural factors contributing to the stigma surrounding dementia in Poland compared to the United States?",
-    "answer": "In Poland, the stigma stems from a culture of formality and rigid expectations regarding public behavior, where individuals are taught to \"behave\" in a specific way. When a person with dementia loses these abilities, family members feel deep embarrassment because the individual no longer meets societal standards of correctness. This contrasts with the US approach, which is more open, recognizes dementia as a natural condition that can happen to anyone, and views it less as a personal failure or moral failing."
+    "question": "Why do some people feel embarrassed or scared when a loved one gets dementia?",
+    "answer": "Many people feel scared because they view dementia as a loss of control or \"bad behavior,\" similar to a child making mistakes. They worry that their loved one will look \"wrong\" in public and that society will judge them. This fear leads to hiding the person at home rather than letting them live openly.",
+    "timestamp": "2:07-2:34",
+    "time_start_sec": 127,
+    "time_end_sec": 154
   },
   {
-    "question": "How does the traditional role of the family in caregiving in Poland impact the diagnosis and management of dementia?",
-    "answer": "In Poland, families traditionally serve as the primary caregivers, with care almost exclusively happening at home. This dynamic contributes to delayed diagnoses because families often wait a long time hoping symptoms are temporary or manageable without professional intervention. Once a diagnosis is finally received, the \"big letters\" of the label often lead families to withdraw the person from social activities, increasing isolation and making the situation feel more frightening and uncomfortable."
+    "question": "What is a better way to react when a person with dementia acts strangely in public?",
+    "answer": "Instead of arguing or correcting them, offer gentle support and guidance. For example, if they are confused, stand beside them and gently guide them toward the exit or activity. This helps them feel safe and supported, making their behavior look more normal to others.",
+    "timestamp": "6:49-7:35",
+    "time_start_sec": 409,
+    "time_end_sec": 455
   },
   {
-    "question": "Why do younger generations, particularly grandchildren, play a unique and effective role in changing attitudes toward dementia among older adults?",
-    "answer": "Grandchildren often succeed where parents fail because their relationship with the older adult is less authoritative. While parents may scold or force exercise, leading to arguments, grandchildren can use gentle persuasion and role modeling to encourage activity. By showing new ways to interact and demonstrating positive results, grandchildren can convince older adults to try new things without triggering defensiveness, effectively acting as agents of change within the family."
+    "question": "How can I help a person with dementia understand what I want them to do without causing frustration?",
+    "answer": "Before asking them to do something, observe what they are already doing or looking at to find a connection. Then, use simple actions like showing an object (like a cup) or mimicking an action yourself. This visual cue helps them understand the request without needing complex words that might confuse them.",
+    "timestamp": "12:53-14:30",
+    "time_start_sec": 773,
+    "time_end_sec": 870
   },
   {
-    "question": "What specific communication techniques can caregivers use to reduce confusion and conflict when interacting with someone who has dementia?",
-    "answer": "Caregivers should avoid direct commands or complex verbal requests. Instead, they should use non-verbal cues, such as offering a hand to initiate contact or using visual aids like pointing to an object while speaking. Simplifying tasks by demonstrating the action (e.g., showing how to hold a cup) rather than verbally instructing the person helps them understand what is needed without feeling challenged or confused, thereby maintaining dignity and reducing the perception of an argument."
+    "question": "Why might a grandchild be more effective at encouraging an older person with dementia than a parent?",
+    "answer": "Grandchildren often have a softer, more playful relationship with elders compared to parents, who may feel the need to correct or scold them. A grandchild can invite someone to try new things gently, like suggesting a walk, whereas a parent might sound demanding, which can cause the older person to resist.",
+    "timestamp": "10:48-11:37",
+    "time_start_sec": 648,
+    "time_end_sec": 697
   },
   {
-    "question": "What lifestyle factors are identified as effective strategies for reducing the risk of developing dementia?",
-    "answer": "Research indicates that several lifestyle modifications can reduce the risk of dementia. These include managing stress levels, ensuring adequate sleep, maintaining strong social connections, eating a healthy diet, and avoiding excessive sugar intake or heavy alcohol consumption. Adopting these habits supports both physical and brain health, helping to prevent cognitive decline over the long term."
+    "question": "Is there hope for finding a cure for Alzheimer's disease soon?",
+    "answer": "While a full cure is likely far away, we do have hope for reducing the risk. Scientists are learning that stress, poor sleep, lack of social connection, and unhealthy diets increase risk. By managing these factors, we can lower the chances of developing the disease, even if we cannot stop it completely yet.",
+    "timestamp": "15:37-17:19",
+    "time_start_sec": 937,
+    "time_end_sec": 1039
   },
   {
-    "question": "Why have clinical trials for dementia treatments frequently failed when moving from animal models to human subjects?",
-    "answer": "Clinical trials often fail because animal models do not accurately replicate human dementia. Scientists frequently use mice with human DNA inserted to simulate the disease, but these animals do not naturally develop dementia in the same way humans do. Consequently, treatments that appear successful in these artificial mouse models often do not work when tested on actual human patients, highlighting the complexity of translating findings across species."
+    "question": "Why do many treatments that work on animals fail when tested on humans?",
+    "answer": "Treatments often fail because mice are biologically different from humans. Researchers sometimes give mice human DNA to simulate dementia, but when they remove that DNA, the mice don't have the disease anymore. This makes it difficult to translate results directly to human patients.",
+    "timestamp": "16:25-17:10",
+    "time_start_sec": 985,
+    "time_end_sec": 1030
   },
   {
-    "question": "How does the concept of \"nibbling away\" at dementia differ from the goal of finding a cure, and why is this distinction important?",
-    "answer": "Given the difficulty of finding a cure, the current focus has shifted to \"nibbling away\" at the disease by reducing risk factors and improving quality of life. This approach emphasizes that while a complete cure may be distant, individuals can actively protect their brains daily by avoiding fights, managing frustration, and maintaining healthy habits. This strategy empowers people to delay onset and manage symptoms effectively, even if a definitive medical reversal is not yet available."
+    "question": "What is the most important thing caregivers can do to protect their own health while caring for someone with dementia?",
+    "answer": "Caregivers should focus on self-care to protect their own brains from damage. This includes avoiding constant fights and frustration, getting enough sleep, eating well, and limiting sugar and alcohol. Taking care of yourself ensures you have the energy to help others effectively.",
+    "timestamp": "17:53-18:25",
+    "time_start_sec": 1073,
+    "time_end_sec": 1105
   },
   {
-    "question": "What is the significance of observing a person's current interests and behaviors before attempting to engage them in care activities?",
-    "answer": "Before initiating care, it is crucial to observe what the person is doing, looking at, or holding to understand their immediate focus and engagement level. By aligning interactions with these observed interests—such as greeting them in a way that matches their current mood or attention span—caregivers can establish a connection. This observation ensures that the interaction is relevant to the person's present state, making them more receptive to assistance."
+    "question": "How can young people help change the negative attitude toward dementia in their communities?",
+    "answer": "Young people can lead by example and teach others through role modeling. When they show new, kind ways of interacting with someone with dementia, it sparks curiosity rather than judgment. Their brains are also quick to learn new information, making them powerful agents for change.",
+    "timestamp": "9:01-10:05",
+    "time_start_sec": 541,
+    "time_end_sec": 605
   },
   {
-    "question": "How does the fear of losing one's identity contribute to the reluctance of families to seek early diagnosis in Poland?",
-    "answer": "Families in Poland often delay seeking diagnosis because they fear that the label of dementia signifies a total loss of the person's former self and capabilities. The transition from a competent individual to someone perceived as \"wrong\" or unable to function socially is terrifying. This fear leads to prolonged periods of managing symptoms without a diagnosis, during which the disease advances unchecked, resulting in poorer outcomes later."
+    "question": "What should I do if I am unsure how to greet a person with dementia who seems confused?",
+    "answer": "Start by observing their hands and eyes to see if they are interested in interaction. Offer your hand slowly and wait to see if they touch it or shake it. Once they engage with your hand, smile and say hello so they can connect with your face, establishing a friendly social moment.",
+    "timestamp": "13:15-13:54",
+    "time_start_sec": 795,
+    "time_end_sec": 834
   },
   {
-    "question": "In what ways can the approach of showing rather than telling benefit the education of young people about dementia?",
-    "answer": "Educating young people through demonstration and role modeling is more effective than lecturing because it sparks curiosity rather than defensiveness. When young people see practical examples of how to interact positively with someone with dementia and witness the improved results, they are more likely to adopt these behaviors. This method allows them to internalize the skills quickly, leveraging their brain's ability to build new synapses rapidly to change their perspective on the disease."
+    "question": "Why is it important to stop waiting for a diagnosis if we suspect someone has dementia?",
+    "answer": "Waiting too long can allow the condition to advance unchecked. In many places, people delay seeking help because they are afraid of the label or the stigma. Getting a diagnosis sooner allows families to start learning proper management techniques and planning for the future.",
+    "timestamp": "4:11-4:45",
+    "time_start_sec": 251,
+    "time_end_sec": 285
   },
   {
-    "question": "Why is the distinction between Alzheimer's disease and other types of dementia important in public discourse?",
-    "answer": "It is important to clarify that Alzheimer's is just one type of dementia, as there are many different forms of the disease. Recognizing this diversity helps reduce the specific stigma attached to the name \"Alzheimer's\" and promotes a broader understanding that dementia affects people in various ways. Acknowledging this variety encourages a more inclusive approach where no single narrative defines the experience of living with cognitive decline."
+    "question": "How does a \"supportive approach\" change how others perceive a person with dementia?",
+    "answer": "A supportive approach makes the person with dementia appear more competent and normal. When caregivers step in to help with tasks or redirect confusion gently, the person can succeed in activities they couldn't do alone. This prevents onlookers from thinking the person is fighting or behaving badly.",
+    "timestamp": "7:35-8:27",
+    "time_start_sec": 455,
+    "time_end_sec": 507
   },
   {
-    "question": "How does the lack of intergenerational experience with dementia affect the ability of parents to care for their aging parents?",
-    "answer": "Without a generation gap, such as that between grandparents and grandchildren, parents may lack the necessary experience and patience to care for their aging parents. They may resort to authoritarian methods that cause conflict, whereas the presence of a grandchild can bridge this gap. Grandchildren often possess the emotional flexibility and lack of authority bias needed to encourage their grandparents to engage in activities, filling a critical void in the care dynamic."
-  },
-  {
-    "question": "What role does tradition play in hindering the acceptance of behavioral changes in individuals with dementia?",
-    "answer": "Tradition in Poland places a high value on performing tasks exactly as they were done in the past, such as cooking specific recipes. When a person with dementia can no longer perform these tasks correctly, it causes immense distress and a sense of being lost. This attachment to tradition makes it difficult for families to accept the reality of the disease and adapt to new ways of living, as the inability to follow tradition feels like a catastrophic failure of identity."
-  },
-  {
-    "question": "How can caregivers use visual cues to facilitate communication with someone who has dementia?",
-    "answer": "Caregivers can use visual cues to bypass verbal confusion. For example, instead of asking \"Do you want to go?\" which might be misunderstood, a caregiver can point to the door or hold out a hand while walking. Similarly, when complimenting appearance, touching the hair while saying \"I like your hair\" provides a clear visual confirmation that helps the person understand the reference immediately, preventing the frustration of miscommunication."
-  },
-  {
-    "question": "What is the impact of stress and anger on the progression of brain health in the context of dementia prevention?",
-    "answer": "Chronic stress, anger, and frustration cause significant damage to the brain, accelerating cognitive decline. By managing emotions and avoiding conflicts, individuals can reduce this internal damage. Therefore, maintaining emotional well-being is not just a comfort measure but a critical biological strategy for preserving brain health and delaying the onset of dementia symptoms."
-  },
-  {
-    "question": "Why is it important to simplify instructions and demonstrate actions rather than giving verbal commands to people with dementia?",
-    "answer": "People with dementia often struggle to process complex verbal instructions or understand abstract concepts like \"need to drink.\" Simplifying the request and demonstrating the action provides concrete, immediate context. This reduces cognitive load and anxiety, allowing the person to understand the task through observation and imitation rather than relying on memory or language processing that may be impaired."
-  },
-  {
-    "question": "How does the perception of dementia as a \"scary\" event influence social isolation in affected communities?",
-    "answer": "When dementia is viewed as something terrible and shameful, society tends to isolate those affected to avoid the discomfort of witnessing their decline. This isolation exacerbates the condition, as social connection is vital for brain health. Changing the narrative to view dementia as a common, manageable condition that can happen to anyone helps reduce this fear and encourages inclusive community participation."
-  },
-  {
-    "question": "What is the relationship between sleep quality and the risk of developing dementia?",
-    "answer": "Adequate sleep is a crucial factor in reducing the risk of dementia. Poor sleep patterns can increase stress and hinder the brain's ability to clear toxins and repair itself. Ensuring decent sleep hygiene is therefore a key preventive measure that supports overall brain health and lowers the likelihood of cognitive impairment."
-  },
-  {
-    "question": "How can the involvement of young people in dementia awareness help break the cycle of stigma for future generations?",
-    "answer": "Engaging young people early allows them to build empathy and acquire skills before they face caring for their own aging parents. Because their brains are more plastic and adaptable, they can quickly learn and model positive behaviors. This creates a ripple effect where they educate their parents and peers, gradually shifting cultural attitudes and reducing the shame associated with dementia in the next generation."
-  },
-  {
-    "question": "Why is it essential to recognize that dementia is not something a person \"did wrong\" to get?",
-    "answer": "Understanding that dementia is not a result of personal failure or bad choices removes the guilt and shame often associated with the disease. This realization fosters a supportive environment where families feel safe seeking help early and where society treats individuals with dignity. It shifts the focus from blame to understanding and proactive management, which is essential for effective care and advocacy."
+    "question": "What is the main message regarding the future of dementia care and education?",
+    "answer": "The future lies in education, prevention, and kindness rather than just waiting for a medical cure. By changing how we treat people with dementia and taking steps to reduce our own risk factors, we can improve lives today and slowly \"nibble away\" at the problem over time.",
+    "timestamp": "17:22-18:00",
+    "time_start_sec": 1042,
+    "time_end_sec": 1080
   }
 ]

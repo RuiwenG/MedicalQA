@@ -1,82 +1,86 @@
 [
   {
-    "question": "What is the prefrontal cortex and when does it typically reach full development?",
-    "answer": "The prefrontal cortex is the area located at the front of the brain, described as the \"inside\" of the forehead. It is responsible for high-level executive functions. Scientifically, it is the last part of the brain to develop and the first to decline in many dimensions. Women typically develop this area in their late 20s to mid-20s, while men usually do not reach full development until their early 30s."
+    "question": "Why does behavior in dementia often seem confusing or illogical to family members?",
+    "answer": "It feels like it \"doesn't make sense\" because the part of the brain responsible for logic, planning, and organizing thoughts—the prefrontal cortex—is damaged. When this area stops working correctly, a person loses the ability to put all their information together in a reasonable way, even if they still have some memory or vision left.",
+    "timestamp": "0:43-1:14",
+    "time_start_sec": 43,
+    "time_end_sec": 74
   },
   {
-    "question": "How does the physical structure of the brain change in someone living with Alzheimer's compared to a healthy brain?",
-    "answer": "In a healthy brain, there is extensive white matter wiring connecting different parts. However, in a brain affected by Alzheimer's for 10 years, the wiring connections, particularly in the frontal area, are significantly damaged and sparse. This loss of wiring disrupts the communication necessary for complex tasks, leading to the functional deficits seen in dementia."
+    "question": "What specific brain function is lost when a person with dementia cannot stop repeating an action, like hitting a chair with a maraca?",
+    "answer": "They have lost \"impulse control,\" which is the ability to say \"whoa\" or \"that's enough.\" In a healthy brain, this part tells you to stop doing something exciting or repetitive, but in dementia, the brain cannot override the urge to keep going.",
+    "timestamp": "2:55-3:18",
+    "time_start_sec": 175,
+    "time_end_sec": 198
   },
   {
-    "question": "What specific skills are managed by the prefrontal cortex that are often lost in dementia?",
-    "answer": "The prefrontal cortex manages six main skills: impulse control (stopping unwanted behaviors), logic and reasoning, initiating sequences of action, terminating activities and transitioning to the next task, making choices (often reduced from a range of options to just one or two), and self-awareness. Additionally, the ability to see situations from another person's perspective is a function of this area."
+    "question": "Why might a person with dementia get stuck on a simple task, like standing up from a chair?",
+    "answer": "Standing up requires a complex sequence of steps: pulling feet back, leaning forward, and pushing up. Dementia affects the brain's ability to \"initiate, sequence, and terminate\" tasks. If the person misses just one step in this chain, the whole action falls apart, leaving them feeling stuck and unsure what to do next.",
+    "timestamp": "3:38-4:27",
+    "time_start_sec": 218,
+    "time_end_sec": 267
   },
   {
-    "question": "Why does behavior in dementia often appear illogical or confusing to observers?",
-    "answer": "Behavior appears illogical because the individual lacks the ability to integrate incoming data into a reasonable and logical framework due to lost brain wiring. While they may retain motor memories, vocabulary, or vision, they cannot process the context or reasons behind actions. Consequently, repetitive or seemingly nonsensical actions occur because the brain cannot initiate, sequence, or terminate tasks correctly, nor can it understand the perspective of others."
+    "question": "How does dementia affect a person's ability to make choices?",
+    "answer": "A healthy brain can easily choose between five to eight options. However, as dementia progresses, the brain struggles to pick even between two choices. The person may feel forced to accept only the option presented to them because they lack the mental energy to evaluate alternatives or feel confident that their choice is the right one.",
+    "timestamp": "5:09-5:33",
+    "time_start_sec": 309,
+    "time_end_sec": 333
   },
   {
-    "question": "How does the inability to \"terminate\" an activity manifest in daily life during dementia?",
-    "answer": "The inability to terminate an activity means a person cannot stop an action and move on to the next step, even after a long duration. For example, a person might continue playing a musical instrument or hitting a chair for hours because they lack the internal signal to stop. This is not just a lack of impulse control but a failure in the sequencing skill required to finish one task and initiate another."
+    "question": "What is \"footwear awareness\" and why is it difficult for someone with dementia?",
+    "answer": "\"Footwear awareness\" refers to self-awareness—knowing exactly what is happening inside your own body and mind. For someone with dementia, it becomes hard to accurately judge their own state or realize when they need to ask for help, making it difficult for them to understand their own limitations in a given situation.",
+    "timestamp": "5:44-6:03",
+    "time_start_sec": 344,
+    "time_end_sec": 363
   },
   {
-    "question": "What is the recommended approach when responding to a loved one expressing fear about a pandemic or dying?",
-    "answer": "Instead of using reality orientation (arguing facts like \"no, you aren't sick\") or dismissing feelings (\"calm down\"), caregivers should \"go alongside\" the person. This involves validating their distress by reflecting their emotions back to them (e.g., \"This is really scary,\" \"I can see you are worried\"). By acknowledging the fear without lying or forcing a different reality, the caregiver helps the person feel understood and supported."
+    "question": "Why do caregivers often feel frustrated when a loved one with dementia acts out, such as making loud noises for hours?",
+    "answer": "It feels frustrating because the behavior seems pointless, but it actually makes sense within the person's damaged brain. They may be missing the ability to logically reason why they should stop or to initiate a new activity to move on. The brain simply cannot switch off the current action, even if it causes pain or annoyance.",
+    "timestamp": "6:48-7:29",
+    "time_start_sec": 408,
+    "time_end_sec": 449
   },
   {
-    "question": "How can caregivers use \"substitution\" to redirect a person with dementia who is engaging in repetitive or disruptive behavior?",
-    "answer": "Substitution involves offering a different object or activity that fulfills the same underlying need or satisfies the same sensory urge. For instance, if a person is banging a maraca on a chair (perhaps mimicking cleaning), a caregiver can provide a cloth and ask them to wipe surfaces. This trades the disruptive action for a productive one, satisfying the need to \"do something\" without causing annoyance to others."
+    "question": "Instead of arguing with a person with dementia who is scared or confused, what strategy should a caregiver use?",
+    "answer": "Caregivers should \"go with where they are\" rather than trying to force reality onto the person. Instead of saying \"No, you are safe,\" the caregiver should join the person in their fear, validating their feelings to build trust before trying to find a solution together.",
+    "timestamp": "18:18-18:24",
+    "time_start_sec": 1098,
+    "time_end_sec": 1104
   },
   {
-    "question": "Why is it important to consider that a behavior \"doesn't make sense\" from the outside but likely \"makes sense\" from the patient's perspective?",
-    "answer": "It is crucial to recognize that the behavior is logical within the patient's current mental state, even if it contradicts external reality. The patient is acting based on the limited data and processing abilities their damaged brain allows. Assuming the behavior is irrational leads to conflict (\"butting heads\"), whereas accepting it makes sense in their context opens the door for supportive interventions rather than arguments."
+    "question": "How can a caregiver effectively respond when a person with dementia expresses extreme fear, like worrying about dying during a pandemic?",
+    "answer": "The caregiver should reflect the person's distress using their own words to show they understand, such as saying, \"This is really scary and you are worried.\" Then, they can gently add, \"It is not good, but it is not that bad, and we will get through this together.\" This validates the emotion without lying or dismissing the fear.",
+    "timestamp": "18:30-19:15",
+    "time_start_sec": 1110,
+    "time_end_sec": 1155
   },
   {
-    "question": "What role does the prefrontal cortex play in the ability to make choices?",
-    "answer": "A healthy prefrontal cortex allows an individual to evaluate and select from multiple options, typically ranging from five to eight choices. As dementia progresses, this capacity diminishes, leaving the person able to choose only between two options or feeling forced into a single presented option, which reduces their sense of autonomy and increases confusion."
+    "question": "What is a practical technique to redirect a person who is stuck in a repetitive behavior, like cleaning obsessively?",
+    "answer": "Use \"substitution\" by offering a similar but acceptable activity. For example, if someone is banging a maraca on a chair, you can suggest they \"clean\" a table or rub a surface instead. Praise them enthusiastically for the new task to encourage them to switch activities naturally.",
+    "timestamp": "14:35-15:23",
+    "time_start_sec": 875,
+    "time_end_sec": 923
   },
   {
-    "question": "How does the loss of the ability to \"initiate\" affect a person's daily routine?",
-    "answer": "When the ability to initiate is lost, a person struggles to start tasks even if they know what needs to be done. They may remain stuck in one activity or fail to begin a sequence of movements (like standing up from a chair) because the brain cannot generate the initial thought or command to begin the action, leading to a feeling of being frozen or unable to get going."
+    "question": "Why is it important for caregivers to understand that the person with dementia is not choosing to be difficult?",
+    "answer": "Understanding that the brain is failing to process information helps caregivers realize the behavior is not a personal choice or a deliberate act of defiance. Recognizing that the brain cannot help the person \"make sense\" of the situation reduces blame and allows the caregiver to focus on supportive strategies instead of fighting.",
+    "timestamp": "16:36-16:58",
+    "time_start_sec": 996,
+    "time_end_sec": 1018
   },
   {
-    "question": "What is the significance of the \"transition\" skill in the prefrontal cortex regarding daily activities?",
-    "answer": "The transition skill involves shifting gears from one completed activity to the next. Without this skill, a person cannot naturally move from finishing a task (like eating) to starting a new one (like drinking water). This disruption causes the day to stall, as the individual cannot organize the sequence of steps required to move forward effectively."
+    "question": "How does the concept of \"multiple perspectives\" apply to caring for someone with dementia?",
+    "answer": "People with dementia often lose the ability to see things from another person's point of view. They cannot easily fit their perspective with yours, which leads to arguments where both sides feel right. Caregivers must remember that the person's confusion is real to them, even if their logic doesn't match ours.",
+    "timestamp": "12:46-12:59",
+    "time_start_sec": 766,
+    "time_end_sec": 779
   },
   {
-    "question": "How does the concept of \"self-awareness\" relate to the challenges faced by individuals with dementia?",
-    "answer": "Self-awareness in this context refers to the ability to accurately assess one's own state and the situation, such as knowing whether one is capable of handling a task or if assistance is needed. In dementia, this accuracy is lost, meaning the person may not realize they are distressed, confused, or physically unable to perform an action, leading to frustration or inappropriate responses."
-  },
-  {
-    "question": "Why might a caregiver's attempt to argue logic with a person with dementia fail?",
-    "answer": "Arguing logic fails because the person with dementia has lost the specific brain function (logic/reasoning) required to understand or accept that argument. Since the prefrontal cortex is damaged, the individual cannot process the caregiver's logical explanation, making it impossible to convince them through reason alone; instead, emotional connection and redirection are more effective."
-  },
-  {
-    "question": "What is the impact of the \"perspective-taking\" deficit on interactions between caregivers and patients?",
-    "answer": "The deficit in perspective-taking prevents the patient from understanding why a caregiver is reacting a certain way or seeing the situation from the caregiver's point of view. This leads to a disconnect where the caregiver sees a problem (e.g., noise) and the patient sees a valid need (e.g., cleaning), resulting in conflicting viewpoints that are difficult to resolve through debate."
-  },
-  {
-    "question": "How does the progression of dementia affect the consistency of a person's abilities?",
-    "answer": "Dementia affects abilities inconsistently; a person may be able to perform a task one day and completely unable to do it the next. This fluctuation occurs because different brain functions turn on and off depending on the type of dementia, its duration, and which specific areas of the brain are currently affected, making the condition unpredictable to observers."
-  },
-  {
-    "question": "What is the role of \"muscle memory\" in the context of dementia behaviors?",
-    "answer": "Muscle memory refers to the retention of physical habits and motor patterns despite the loss of cognitive control. Even when the prefrontal cortex fails to initiate or stop an action, the body may continue the movement automatically. This explains why a person might repeat a physical action for hours, driven by ingrained habit rather than conscious intent."
-  },
-  {
-    "question": "How can visual reflection be used to de-escalate a distressed person with dementia?",
-    "answer": "Visual reflection involves mirroring the person's facial expressions or body language to acknowledge their distress non-verbally. By visually matching the person's state (e.g., showing concern when they are scared), the caregiver validates the emotion without needing words, which can help lower the person's anxiety level since they feel truly seen and understood."
-  },
-  {
-    "question": "Why is it beneficial to \"join\" someone where they are emotionally rather than trying to fix their reality?",
-    "answer": "Joining someone where they are means accepting their current emotional reality instead of trying to correct it. This approach reduces resistance and conflict because it avoids the power struggle of proving them wrong. It builds trust and safety, allowing the person to feel supported before they might be ready to engage with a different perspective or reality."
-  },
-  {
-    "question": "What are the limitations of \"reality orientation\" as a strategy for communicating with someone with dementia?",
-    "answer": "Reality orientation, which involves stating facts to correct misconceptions (e.g., \"It is not a plague\"), often fails because it ignores the person's emotional truth and cognitive limitations. It can increase agitation and defensiveness because the person cannot process the logical correction, making it an ineffective method for managing distress or fear."
-  },
-  {
-    "question": "How does the combination of lost logic and lost initiation create a cycle of confusion in dementia?",
-    "answer": "When both logic and initiation are impaired, a person cannot determine *why* an action is needed or *how* to start it. This dual failure creates a state where tasks seem impossible to begin, and once started, they cannot be stopped or sequenced properly. The result is a chaotic loop where the individual feels stuck, confused, and unable to navigate their environment or daily routines."
+    "question": "What is the most helpful mindset for a caregiver when facing challenging behaviors in dementia?",
+    "answer": "The best mindset is to stay willing to try different approaches rather than arguing that you are right and the person is wrong. Since the person lacks the brain power to terminate an action or understand logic, the caregiver's patience and willingness to adapt their method are key to finding a solution.",
+    "timestamp": "17:18-17:34",
+    "time_start_sec": 1038,
+    "time_end_sec": 1054
   }
 ]

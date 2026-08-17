@@ -1,82 +1,72 @@
 [
   {
-    "question": "What are the four essential categories of activities required to create a meaningful daily life for someone living with dementia?",
-    "answer": "The four categories are: 1) Feeling productive and valued through work or tasks that provide a sense of purpose; 2) Leisure and fun, which includes both passive absorption and active engagement for joy; 3) Self-care, covering physical needs (bathing, eating), cognitive stimulation, and managing the environment; and 4) Rest and restoration, which involves recharging batteries through sleep, social interaction, or solitude depending on individual personality."
+    "question": "What are the four main categories of activities that make a day meaningful for someone living with dementia?",
+    "answer": "The four categories are: 1) Feeling Productive/Valued (doing work or tasks that make you feel needed), 2) Leisure/Fun Play (activities done just for joy), 3) Self-Care (taking care of your body, brain, home, and money), and 4) Rest and Restoration (recharging your batteries, which includes sleep but also other ways to relax).",
+    "timestamp": "0:24-0:57",
+    "time_start_sec": 24,
+    "time_end_sec": 57
   },
   {
-    "question": "Why is it critical for care partners to ensure individuals with dementia feel productive and valued?",
-    "answer": "Feeling productive and valued is critical because it provides a sense of well-being and self-worth. It reinforces the individual's identity, confirms that they still have value to others, and validates that they are \"here for a reason,\" which is fundamental to feeling like a human being who is cared about."
+    "question": "Why is it important for a person with dementia to feel productive and valued, even if they are not working for money?",
+    "answer": "Feeling productive gives a person a sense that they still matter and have a purpose. It helps them feel like a human being who is cared about and confirms that they are still \"here for a reason,\" which is critical for their well-being and self-esteem.",
+    "timestamp": "0:30-1:00",
+    "time_start_sec": 30,
+    "time_end_sec": 60
   },
   {
-    "question": "How should leisure activities be balanced between passive and active forms to benefit someone with dementia?",
-    "answer": "A balanced approach requires including both passive activities (where the person absorbs information, like watching a game) and active activities (where the person engages directly, like playing a game). Relying solely on one type may not fully meet the individual's needs for joy and energy regulation."
+    "question": "How can caregivers distinguish between passive and active leisure activities, and why should they offer both?",
+    "answer": "Passive leisure happens to you while you absorb it (like watching TV), whereas active leisure involves doing something yourself (like playing cards). Everyone needs a balance of both types to feel good and get their energy up.",
+    "timestamp": "1:31-2:00",
+    "time_start_sec": 91,
+    "time_end_sec": 120
   },
   {
-    "question": "What components are included in the broad definition of \"self-care\" for people with dementia?",
-    "answer": "Self-care encompasses three main areas: taking care of the body (transportation, mobility, bathing, grooming, eating); taking care of the brain (thinking, stimulating interests); and taking care of the world around them (cleaning, organizing, shopping, and managing money)."
+    "question": "What specific examples of \"self-care\" are mentioned in the video besides sleeping?",
+    "answer": "Self-care includes physical tasks like walking, getting in and out of chairs, bathing, eating, and toileting. It also covers mental stimulation like thinking and doing interesting things, as well as managing the environment like cleaning, organizing, shopping, and handling money.",
+    "timestamp": "2:04-3:15",
+    "time_start_sec": 124,
+    "time_end_sec": 195
   },
   {
-    "question": "How does the concept of \"rest and restoration\" extend beyond just sleep for individuals with dementia?",
-    "answer": "While sleep is a method of recharging, rest and restoration also depend on the individual's personality type (introvert vs. extrovert) regarding social interaction. It further includes spiritual restoration and ensuring the person feels productive and has fun, as these factors are necessary to recharge their \"batteries\" for the day."
+    "question": "Does \"rest and restoration\" only mean sleeping, or are there other ways to recharge?",
+    "answer": "No, rest is not just about sleep. It is about recharging your batteries, which can happen in different ways depending on the person. Some people recharge by being alone (introverts), while others gain energy by being around people (extroverts). It can also involve spiritual rest.",
+    "timestamp": "3:19-4:09",
+    "time_start_sec": 199,
+    "time_end_sec": 249
   },
   {
-    "question": "In the cooking group example, how did the staff handle a situation where a participant could not tear open a bag of muffin mix?",
-    "answer": "The staff avoided blaming the person for the difficulty. Instead, they focused on the product, stating, \"that bag it's such a problem,\" thereby protecting the dignity of the participant while allowing them to continue with the task successfully."
+    "question": "In the cooking group example, how did the caregiver help a participant who struggled to tear open a muffin mix bag?",
+    "answer": "The caregiver helped by completing the difficult part of the task (tearing the bag) and then handing the opened bag back to the participant. This allowed the person to continue with the rest of the task without feeling blamed for the failure of the packaging.",
+    "timestamp": "5:38-5:55",
+    "time_start_sec": 338,
+    "time_end_sec": 355
   },
   {
-    "question": "What strategy was used to encourage a participant who preferred cooking over eating to consume their food?",
-    "answer": "Rather than forcing the participant to eat immediately, the staff allowed them to cook and provided compliments on their work. This leveraged the participant's pride in their productivity (\"success is in William's eyes\"), which motivated them to eat the food they had prepared for others."
+    "question": "How did the group setting help a participant who seemed unsure about what to do next during the cooking activity?",
+    "answer": "Seeing other people successfully perform the steps provided visual cues and social proof. When the participant saw others pouring milk and stirring, she felt confident to join in and knew exactly what came next.",
+    "timestamp": "6:05-6:30",
+    "time_start_sec": 365,
+    "time_end_sec": 390
   },
   {
-    "question": "How did caregivers support a participant with limited mobility during the cooking activity?",
-    "answer": "Caregivers provided physical support by holding the participant's under-elbow. This assistance helped the participant sit upright better, improved their stability, and allowed them to perform the stirring action independently while receiving positive reinforcement."
+    "question": "Why did the caregiver encourage a participant who preferred cooking over eating to actually cook the muffins?",
+    "answer": "The participant liked cooking more than eating. By letting her cook and complimenting her work, the caregiver ensured she felt successful and valued. This motivation encouraged her to eat the muffins she had made, rather than refusing to eat if she were just served food.",
+    "timestamp": "8:15-8:45",
+    "time_start_sec": 495,
+    "time_end_sec": 525
   },
   {
-    "question": "What technique did the caregiver use to feed a participant who was hesitant to bring food to their own mouth?",
-    "answer": "Instead of poking the food into the participant's mouth, the caregiver supported the participant's hand to guide it to their own mouth. This allowed the participant to control the action, reducing confusion and anxiety about what was happening."
+    "question": "How did the caregiver support a participant who was struggling to feed herself during the meal?",
+    "answer": "Instead of feeding the person directly, the caregiver supported her under the elbow to help her sit upright better. This physical support gave the person extra stability and information, allowing her to bring her own hand to her mouth and maintain control over the action.",
+    "timestamp": "9:20-10:07",
+    "time_start_sec": 560,
+    "time_end_sec": 607
   },
   {
-    "question": "How did the caregiver create a motivating reason for participants to complete a puzzle activity?",
-    "answer": "The caregiver framed the task as a personal request, claiming they had lost pieces of their own picture and needed help to verify if they had everything. This gave the participants a clear purpose and a sense of being helpful, rather than just performing a repetitive task."
-  },
-  {
-    "question": "What specific design features were chosen for the puzzle pieces to assist participants with dementia?",
-    "answer": "The caregiver used large, blown-up photographs printed on cardstock with bright colors and clear shapes. These features made the pieces easier to distinguish and handle, facilitating better visual processing and matching."
-  },
-  {
-    "question": "How did the caregiver provide hints to a participant struggling to fit a puzzle piece without taking away their independence?",
-    "answer": "The caregiver offered verbal cues like \"straight up\" or \"shift it\" and demonstrated the orientation by tapping the table or showing the correct alignment. Crucially, the caregiver did not take the piece from the participant, allowing them to maintain agency in placing it."
-  },
-  {
-    "question": "What role did observation play in helping a participant with dementia understand the next step in a group activity?",
-    "answer": "Observation served as a primary learning tool; by seeing others in the group successfully perform a task (like pouring milk or scooping mix), the participant understood what came next without needing explicit verbal instructions, fostering a sense of inclusion and competence."
-  },
-  {
-    "question": "How did the caregiver manage the challenge of having too many puzzle pieces for a participant who was overwhelmed?",
-    "answer": "The caregiver organized the pieces by spreading them out and offering structural help, such as lining up specific edges or grouping two pieces together. This reduced the visual clutter and provided a clearer path for the participant to solve the puzzle."
-  },
-  {
-    "question": "What was the outcome of the puzzle activity regarding the caregiver's missing piece?",
-    "answer": "The participants successfully found the missing piece of the caregiver's picture on the first try. The caregiver acknowledged the participant's skill (\"you got a good eye\") and celebrated the collective success of the group."
-  },
-  {
-    "question": "How did the caregivers reinforce positive behavior and build confidence among the participants during the puzzle session?",
-    "answer": "Caregivers used frequent verbal praise (\"look at you you're great,\" \"perfect,\" \"good for you\") and encouraged self-recognition by asking the group to applaud themselves. This reinforced their abilities and reminded them of past skills they possessed."
-  },
-  {
-    "question": "What insight did the caregiver gain about the participants' history through the puzzle activity?",
-    "answer": "Through conversation, the caregiver learned that the participants likely maintained their puzzle-solving skills from their youth because they had few other recreational options available at the time, highlighting the longevity of certain hobbies."
-  },
-  {
-    "question": "Why is it important to tailor support levels to match the individual's current abilities rather than their past capabilities?",
-    "answer": "Support must match current abilities to ensure the person can succeed with the help they receive (\"doing the best I can\"). This approach prevents frustration and allows the individual to shine by completing tasks that are achievable given their present state, rather than expecting them to perform at previous levels."
-  },
-  {
-    "question": "How did the cooking activity demonstrate the balance between individual choice and group structure?",
-    "answer": "The activity allowed individuals to choose their roles (some stirred, some poured, some managed details) while maintaining a shared goal. Participants could work at their own pace within the group flow, receiving help when needed but ultimately contributing to the collective creation of the muffins."
-  },
-  {
-    "question": "What is the ultimate goal of providing the right support and care in these meaningful activities?",
-    "answer": "The ultimate goal is to enable the individual with dementia to \"shine\" by fulfilling their needs for productivity, joy, self-care, and rest simultaneously. When these needs are met through balanced activities, both the individual and the care partner experience a successful and dignified day."
+    "question": "What strategy did the caregiver use to ask participants to help check a puzzle, and why was this effective?",
+    "answer": "The caregiver framed the request as a favor to her, saying she wasn't sure if she had all the pieces and asked for help to check. This gave the participants a clear reason to act and made them feel helpful and important, turning a routine task into a meaningful interaction.",
+    "timestamp": "10:46-11:20",
+    "time_start_sec": 646,
+    "time_end_sec": 680
   }
 ]

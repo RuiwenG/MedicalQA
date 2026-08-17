@@ -1,82 +1,79 @@
 [
   {
-    "question": "What is the typical capacity of a healthy adult brain's working memory?",
-    "answer": "A healthy brain can typically hold between five to eight items at one time while processing information. This limit explains why individuals might struggle to absorb new data, such as a neighbor's name, when they are already managing multiple tasks like remembering trash day schedules or sorting recycling bins."
+    "question": "What are some common examples of memory slips that might happen during normal aging?",
+    "answer": "Common examples include forgetting a neighbor's name even though you see them often, leaving keys in unusual places like a freezer, struggling to find the right word after a long day, walking into a room and forgetting why you went there, and forgetting where you parked your car, especially in busy lots or after trips. These moments often feel frustrating because the information seems to slip away right when you need it.",
+    "timestamp": "1:06-2:15",
+    "time_start_sec": 66,
+    "time_end_sec": 135
   },
   {
-    "question": "How does the frequency and pattern of memory lapses distinguish normal aging from potential dementia?",
-    "answer": "Normal aging involves occasional slips, whereas potential dementia is indicated when lapses become frequent, occur daily, and represent a noticeable change from the individual's previous baseline. If a behavior that was once rare becomes a consistent pattern without returning to the former state, it suggests the issue is not normal aging."
+    "question": "Why do I feel embarrassed or ashamed when I forget something important?",
+    "answer": "It is very common to feel shame when you realize you have forgotten something repeatedly, such as using a neighbor's name instead of theirs. This feeling can create a \"shame spiral\" where you worry you are losing your mind. However, this reaction is normal; it just means your brain isn't connecting the dots quickly enough, and you might need a friend to gently remind you of the correct name in the moment.",
+    "timestamp": "4:46-5:29",
+    "time_start_sec": 286,
+    "time_end_sec": 329
   },
   {
-    "question": "Why is self-awareness regarding cognitive changes significant in the context of dementia?",
-    "answer": "Approximately 50% of people with early-stage dementia are aware that changes are occurring, while the other 50% are unaware. Recognizing that one is noticing changes more often than before, or that others are expressing frustration due to repeated questions, is a key indicator that it is time to investigate further rather than assume normal aging."
+    "question": "How can I tell if my memory problems are just stress or something more serious?",
+    "answer": "You should start getting curious if these memory issues happen more frequently than before, if they occur almost every day, or if they represent a noticeable change from who you used to be. If friends or family members start noticing these patterns too, it is a sign to pay closer attention. The key difference is that normal aging involves occasional slips, while a new, persistent pattern suggests something else is going on.",
+    "timestamp": "8:18-9:12",
+    "time_start_sec": 498,
+    "time_end_sec": 552
   },
   {
-    "question": "What role do compensatory strategies play in identifying abnormal cognitive decline?",
-    "answer": "Individuals often rely on compensatory strategies like calendars, mnemonics, or lists to manage memory gaps. If these previously effective strategies suddenly stop working, fail to provide a logical pathway to solutions, or require excessive effort to maintain, it signals that the underlying cognitive function has changed and warrants curiosity about non-normal aging."
+    "question": "What does it mean if I lose my usual ways of solving problems?",
+    "answer": "Everyone has \"compensatory strategies,\" like using a calendar, setting alarms, or remembering specific rhymes to recall names. If you find that these old tools no longer work, or if you cannot figure out a new logical way to solve a problem, it may be a sign of change. For example, if you can no longer rely on your calendar to remember appointments despite trying hard, it is worth investigating further.",
+    "timestamp": "10:34-11:48",
+    "time_start_sec": 634,
+    "time_end_sec": 708
   },
   {
-    "question": "How should one interpret the feeling of shame associated with forgetting names or repeating stories?",
-    "answer": "Feeling shame or being stuck in a \"shame spiral\" often occurs when the brain fails to connect the dots despite the individual knowing they made a mistake. This emotional response is common when social cues, like a friend's confused expression upon hearing the same question repeatedly, highlight the error, leading to self-doubt even if the person realizes the mistake quickly."
+    "question": "Is it true that older adults cannot learn new things?",
+    "answer": "No, that is a false idea. Older brains can still learn new things, but it simply takes a little longer. Sometimes, what looks like a learning problem is actually just the brain needing more time to process new routines or systems. It is important to distinguish between needing extra time to learn and being unable to learn at all.",
+    "timestamp": "12:23-12:47",
+    "time_start_sec": 743,
+    "time_end_sec": 767
   },
   {
-    "question": "Is it true that older adults cannot learn new things, and how should this affect expectations?",
-    "answer": "It is a falsehood that older adults cannot learn new things; however, it simply takes them longer to process and acquire new information compared to younger brains. When evaluating memory issues, one must consider whether the difficulty stems from learning a new routine or system versus an inability to process information due to cognitive overload or decline."
+    "question": "How much information can a healthy brain hold at one time?",
+    "answer": "A healthy brain typically holds about five to eight items in its \"working memory\" at once. If you are trying to remember a neighbor's name while also thinking about the trash day, which bin to use, and what day it is, you might be overloading your brain. When you are full of other tasks, forgetting a small detail like a name is often just a result of being too busy to take in more data, not necessarily a sign of dementia.",
+    "timestamp": "7:14-8:06",
+    "time_start_sec": 434,
+    "time_end_sec": 486
   },
   {
-    "question": "What specific factors should be investigated when noticing a rapid or sudden change in cognitive abilities?",
-    "answer": "When observing a rapid change, one should investigate external factors such as new medications, changes in daily routines, or the introduction of unfamiliar tools (like a new calendar system) that might be causing confusion. Determining if the change is rapid or slow, and if it deviates from the person's lifelong habits, helps distinguish between temporary issues and progressive conditions."
+    "question": "What should I do if I notice changes in my memory but am unsure if they are normal?",
+    "answer": "Instead of panicking, try to get curious. Ask yourself if there are new medications, a recent life change, or a new routine that might be affecting you. Talk to trusted friends or family to see if they notice the same changes. Being curious helps you gather facts to understand the situation better before jumping to conclusions about having dementia.",
+    "timestamp": "9:54-10:20",
+    "time_start_sec": 594,
+    "time_end_sec": 620
   },
   {
-    "question": "How does the environment, such as new technology or complex settings, impact memory performance in older adults?",
-    "answer": "Older adults often experience frustration with new technologies, software updates, or complex environments like large airports or busy parking lots. These situations create high cognitive loads where the brain struggles to process multiple variables, leading to temporary failures like forgetting car locations or getting lost on familiar detours, which may not indicate dementia if they resolve once the stressor is removed."
+    "question": "How do I know if I am asking the same question too many times?",
+    "answer": "You can often tell by looking at the other person's face. If you ask the same question a third or fourth time and see their eyebrows furrow or their expression change, they likely know you are repeating yourself. This is a gentle signal that you have made a mistake, and it is okay to stop and take a break to reset your thoughts.",
+    "timestamp": "5:46-6:14",
+    "time_start_sec": 346,
+    "time_end_sec": 374
   },
   {
-    "question": "What is the significance of \"working memory clutter\" in everyday scenarios?",
-    "answer": "Working memory clutter occurs when an individual is already holding several pieces of information (e.g., dates, directions, tasks) and cannot accommodate additional data, such as a greeting or a name. This overload leads to momentary lapses where the brain drops earlier information, which is a normal limitation rather than a sign of disease if it happens occasionally under stress."
+    "question": "Why do I feel frustrated when someone tells me the same thing over and over?",
+    "answer": "It is natural to feel frustrated when you have to repeat yourself, especially if you feel like you are making a mistake. However, for the person listening, hearing the same thing multiple times can be confusing or annoying too. Understanding that this is a common struggle for both sides can help reduce the frustration and encourage patience.",
+    "timestamp": "5:35-5:50",
+    "time_start_sec": 335,
+    "time_end_sec": 350
   },
   {
-    "question": "How can the reactions of others serve as an indicator of cognitive changes?",
-    "answer": "Others often notice cognitive changes before the individual does. Signs include friends or family members becoming frustrated by repeated questions, offering unsolicited reminders, or expressing confusion about the individual's behavior. These external observations can signal that a pattern of change exists even if the individual feels they are functioning normally."
+    "question": "What is the difference between a \"not normal\" change and a temporary confusion?",
+    "answer": "A temporary confusion might be caused by a new medication, a rapid change in routine, or a new environment that hasn't settled in yet. A \"not normal\" change is usually a pattern that persists over time, doesn't go away, and represents a shift from your usual self. If the change is slow and steady, it might be manageable; if it is sudden and frequent, it is worth exploring further.",
+    "timestamp": "10:04-10:20",
+    "time_start_sec": 604,
+    "time_end_sec": 620
   },
   {
-    "question": "What is the recommended approach when experiencing frequent memory lapses instead of immediate worry?",
-    "answer": "Instead of jumping to conclusions of worry or concern, the recommended approach is to become \"curious.\" This involves asking questions about recent life changes, reviewing medication lists, and observing patterns to determine if the symptoms align with normal aging limits or suggest a need for professional evaluation."
-  },
-  {
-    "question": "How does the concept of \"normal aging\" differ from \"not normal aging\" regarding the ability to function independently?",
-    "answer": "In normal aging, individuals can usually find logical pathways or use compensatory tools to overcome minor memory slips. In \"not normal aging,\" the individual loses the ability to use these strategies effectively, finds no reasonable way to solve problems, and experiences a breakdown in their usual independence and functional capabilities."
-  },
-  {
-    "question": "Why might forgetting a neighbor's name be considered a normal occurrence in certain contexts?",
-    "answer": "Forgetting a neighbor's name can be normal if it happens amidst high cognitive load, such as when the brain is already processing multiple tasks like remembering appointments and sorting trash. If the individual can recall the name later or it is an isolated incident without affecting other functions, it often reflects working memory limits rather than dementia."
-  },
-  {
-    "question": "What resources are suggested for individuals seeking to understand the difference between normal aging and dementia?",
-    "answer": "The transcript suggests utilizing specialized webinar series titled \"Normal Aging or Not,\" which visually demonstrate examples of both normal and abnormal aging behaviors. Additionally, subscription services offering curated clips of expert advice and free consultations with a \"Pack Team\" are available to help individuals assess their specific situations."
-  },
-  {
-    "question": "How does the progression of concern evolve from noticing a slip to recognizing a pattern?",
-    "answer": "The progression typically starts with momentary panic followed by a deep breath. However, if the event repeats frequently (e.g., every day), the initial concern escalates into deeper worry and shame. Eventually, the individual recognizes a persistent pattern that deviates from their history, prompting a shift from casual observation to active investigation of potential causes."
-  },
-  {
-    "question": "What is the relationship between frustration with repetition and cognitive decline?",
-    "answer": "Frustration arises both when others repeat themselves to the individual and when the individual realizes they have asked the same question multiple times. This mutual frustration is a strong social cue that indicates a breakdown in communication and memory retention, suggesting the behavior is no longer within the realm of normal aging."
-  },
-  {
-    "question": "How do changes in routine or environment trigger confusion that mimics dementia symptoms?",
-    "answer": "Confusion can be triggered by external changes such as moving to a new city, encountering altered road signs, or switching to a new calendar system. These environmental shifts force the brain to adapt, and if the adaptation period is prolonged or the new system is incompatible with existing habits, it can mimic the symptoms of dementia until the cause is identified."
-  },
-  {
-    "question": "What is the importance of distinguishing between \"concerned\" and \"curious\" when facing memory issues?",
-    "answer": "Being \"concerned\" implies fear of a diagnosis, whereas being \"curious\" encourages a proactive search for answers. Curiosity allows individuals to explore practical explanations like new medications or lifestyle changes before assuming a neurological condition, thereby reducing unnecessary anxiety and promoting problem-solving."
-  },
-  {
-    "question": "How does the \"five to eight item\" rule apply to real-world multitasking challenges?",
-    "answer": "In real-world scenarios, individuals often juggle multiple thoughts simultaneously, such as remembering a conversation while planning a chore. Once the count reaches five or eight items, the brain stops accepting new data, leading to dropped names or forgotten instructions. Understanding this limit helps normalize occasional forgetfulness during busy periods."
-  },
-  {
-    "question": "What steps should be taken if compensatory strategies are no longer effective?",
-    "answer": "If standard compensatory strategies like calendars or mental mnemonics cease to work, it is a critical sign that cognitive function has declined. The individual should stop relying on failing methods, seek feedback from others about observed changes, and begin investigating potential medical or environmental causes for the loss of these coping mechanisms."
+    "question": "What resources are available if I want to learn more about normal versus not normal aging?",
+    "answer": "There are several helpful options available. You can watch a free webinar series called \"Normal Aging or Not\" to see real-life examples of these changes. There is also a subscription service called \"Tia's Clips\" that breaks down past webinars into smaller lessons. Finally, everyone can get a free 30-minute consultation with experts by visiting their website or emailing their support team directly.",
+    "timestamp": "13:03-14:47",
+    "time_start_sec": 783,
+    "time_end_sec": 887
   }
 ]

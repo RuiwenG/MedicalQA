@@ -1,82 +1,30 @@
 [
   {
-    "question": "What is the recommended sequence for establishing connections when interacting with a person with dementia?",
-    "answer": "The recommended sequence is to start with a visual connection, followed by a verbal or auditory connection. Caregivers should ensure they show the person what they are doing before telling them what to do."
+    "question": "Why is establishing a visual connection before speaking important when caring for someone with dementia?",
+    "answer": "The video explains that people with dementia need to see what you are doing and who you are before they can process what you are saying. If you speak without first making eye contact or showing your actions, the person may feel confused or disconnected, which can lead to frustration or resistance. Always start by visually engaging them so they know exactly what is happening.",
+    "timestamp": "0:03-0:12",
+    "time_start_sec": 3,
+    "time_end_sec": 12
   },
   {
-    "question": "Why does the transcript describe common caregiving instructions as a \"diarrhea of the mouth\"?",
-    "answer": "This phrase describes the problem where caregivers talk excessively and rapidly without first establishing a visual connection, causing the person with dementia to lose track of the interaction and become confused."
+    "question": "What specific mistake does the speaker describe that causes a person with dementia to become upset or aggressive?",
+    "answer": "The speaker describes a situation where a caregiver talked too much (\"ran their mouth\") without first ensuring there was a visual connection. Because the person did not see the caregiver's actions beforehand, they felt lost and confused, leading to an angry reaction. This teaches us that talking too fast or too much without showing our actions first breaks the necessary link between sight and sound.",
+    "timestamp": "0:36-0:52",
+    "time_start_sec": 36,
+    "time_end_sec": 52
   },
   {
-    "question": "How does the mismatch between visual cues and spoken words affect communication with someone who has dementia?",
-    "answer": "When visual cues and spoken words do not match, the person with dementia may become confused or resistant, as seen when a caregiver says one thing while performing another action, leading to a breakdown in trust and cooperation."
+    "question": "How should a caregiver coordinate their words and actions to avoid confusing the person with dementia?",
+    "answer": "You must ensure that your visual actions and your spoken words match perfectly. For example, if you want someone to come with you, you should physically demonstrate the action (like standing up or pointing) while saying something simple like \"Let's go,\" rather than just giving a complex verbal command. When your eyes and your voice agree, the person understands clearly and feels safe.",
+    "timestamp": "0:54-1:11",
+    "time_start_sec": 54,
+    "time_end_sec": 71
   },
   {
-    "question": "What specific example illustrates the failure to align visual and verbal communication in the transcript?",
-    "answer": "The transcript illustrates this failure when a caregiver approaches Cindy and says, \"Are you ready to go take your shower,\" while simultaneously performing actions that do not match those words, such as hanging out or preparing to remove her shirt."
-  },
-  {
-    "question": "What is the primary goal of establishing a visual connection before speaking to a person with dementia?",
-    "answer": "The primary goal is to allow the person to see the caregiver and understand what is happening visually before processing the verbal instructions, ensuring the two forms of communication align."
-  },
-  {
-    "question": "How can caregivers prevent the person with dementia from feeling lost during daily routines?",
-    "answer": "Caregivers can prevent the person from feeling lost by ensuring that their visual demonstration of an activity matches their verbal explanation, rather than just running through a list of tasks verbally."
-  },
-  {
-    "question": "What happens when a caregiver focuses only on verbal instructions without visual support?",
-    "answer": "When a caregiver focuses only on verbal instructions, the person with dementia may not understand the context, leading to confusion, resistance, or a loss of engagement in the activity."
-  },
-  {
-    "question": "Why is it important to \"show\" before \"telling\" in dementia care according to the text?",
-    "answer": "It is important to show before telling because the second connection (verbal) relies on the first connection (visual) being established; without seeing the action, the words may not be understood correctly."
-  },
-  {
-    "question": "What role does the phrase \"watch my visual versus my girl\" play in the example provided?",
-    "answer": "This phrase highlights the discrepancy between what the caregiver intended to communicate visually and what was actually communicated verbally, demonstrating how misalignment causes confusion."
-  },
-  {
-    "question": "How does the transcript suggest caregivers should handle the transition from visual to verbal communication?",
-    "answer": "The transcript suggests that after establishing a visual connection, the caregiver should proceed to speak, ensuring that the verbal message directly reflects the visual action already demonstrated."
-  },
-  {
-    "question": "What is the consequence of ignoring the order of connections (visual then verbal) in dementia care?",
-    "answer": "Ignoring this order leads to a situation where the person with dementia cannot follow along, resulting in them losing the thread of the conversation or instruction."
-  },
-  {
-    "question": "How does the transcript define the relationship between seeing and hearing in the context of dementia?",
-    "answer": "The transcript defines the relationship as hierarchical, where visual input must come first to establish a connection, followed by auditory input to reinforce that connection."
-  },
-  {
-    "question": "What specific behavior by the caregiver in the example led to the person saying, \"What did you say?\"",
-    "answer": "The caregiver's behavior of saying \"Are you ready to go take your shower\" while engaging in unrelated physical actions led to the person questioning the clarity of the instruction."
-  },
-  {
-    "question": "Why might a caregiver feel they are explaining things clearly while actually failing to connect with the patient?",
-    "answer": "A caregiver might feel they are explaining clearly because they are speaking, but they fail to connect because they neglect the crucial initial step of making eye contact and showing the action."
-  },
-  {
-    "question": "What is the educational takeaway regarding the phrase \"get some feet\" in the context of the transcript?",
-    "answer": "The phrase \"get some feet\" is used to illustrate a scenario where a caregiver rushes into physical preparation without first securing the person's attention visually, highlighting the error in sequence."
-  },
-  {
-    "question": "How does the transcript advise against the approach of \"running your mouth\" when caring for someone with dementia?",
-    "answer": "The transcript advises against \"running your mouth\" because excessive talking without visual grounding causes the person with dementia to lose focus and misunderstand the intended message."
-  },
-  {
-    "question": "What is the significance of the question \"What are you gonna say?\" in the illustrated scenario?",
-    "answer": "This question signifies the confusion experienced by the person with dementia when the caregiver's words do not correspond to the visual reality of the situation."
-  },
-  {
-    "question": "How does the transcript emphasize the importance of matching actions to words?",
-    "answer": "The transcript emphasizes this by contrasting a successful interaction (where visuals and words match) with a failed one (where they contradict), showing that alignment is key to understanding."
-  },
-  {
-    "question": "What is the ultimate result of failing to synchronize visual and verbal cues in dementia care?",
-    "answer": "The ultimate result is a breakdown in communication where the person with dementia becomes disoriented, uncooperative, or expresses confusion about the caregiver's intentions."
-  },
-  {
-    "question": "How should a caregiver structure their approach to ensure the person with dementia understands the next step?",
-    "answer": "A caregiver should structure their approach by first making themselves visible and demonstrating the action, then speaking to confirm the plan, ensuring the visual and verbal messages are identical."
+    "question": "What is the recommended step-by-step approach for getting a person with dementia ready for a task like changing clothes?",
+    "answer": "Instead of asking a series of rapid questions, you should combine a clear visual cue with a simple statement. First, show the action you intend to take, such as holding up the shirt or moving toward the bathroom, while using a calm, direct phrase like \"Are you ready?\" or \"Let's take your shirt off.\" This method helps the person follow your lead without feeling overwhelmed by too many words or sudden surprises.",
+    "timestamp": "1:40-1:54",
+    "time_start_sec": 100,
+    "time_end_sec": 114
   }
 ]

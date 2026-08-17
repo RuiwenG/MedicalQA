@@ -1,82 +1,30 @@
 [
   {
-    "question": "What is the primary step to take before assuming a cognitive decline is dementia?",
-    "answer": "Before assuming dementia, one must determine if the observed changes are normal for the individual or if something is changing. It is crucial to investigate whether these changes are permanent or if they stem from treatable conditions such as depression, hypothyroidism, medication side effects, hearing loss, vision problems, or new medical conditions like diabetes."
+    "question": "How can I tell if my loved one's memory loss is just normal aging or something that needs medical attention?",
+    "answer": "You should look for a clear change in their behavior or abilities that wasn't there before. Do not assume it is dementia immediately. Instead, check for treatable causes like depression, thyroid problems, medication side effects, or uncorrected hearing and vision issues. If you notice a change, investigate it because these underlying problems can often be fixed or modified.",
+    "timestamp": "0:05-1:13",
+    "time_start_sec": 5,
+    "time_end_sec": 73
   },
   {
-    "question": "Why is \"dementia\" considered a syndrome rather than a specific diagnosis?",
-    "answer": "Dementia is classified as a syndrome because it represents a collection of symptoms rather than a single disease entity. Under the umbrella term of dementia, there are approximately 85 to 90 different underlying conditions, causes, and forms, meaning a diagnosis of \"dementia\" indicates that something is wrong but does not specify the exact cause."
+    "question": "Is \"dementia\" the same thing as \"Alzheimer's disease,\" and does a doctor's diagnosis of dementia mean they found the exact cause?",
+    "answer": "No, they are not the same. Dementia is a large \"umbrella term\" that covers about 85 to 90 different conditions, including Alzheimer's, vascular dementia, and others. Alzheimer's is just one type under that umbrella. Furthermore, dementia is not a specific diagnosis of a single disease; it is a \"syndrome,\" which means it is a collection of symptoms caused by various brain changes. A diagnosis tells you the person has these symptoms, but it does not identify the single specific cause yet.",
+    "timestamp": "1:16-2:32",
+    "time_start_sec": 76,
+    "time_end_sec": 152
   },
   {
-    "question": "How does the understanding of the relationship between dementia and Alzheimer's disease differ from past beliefs?",
-    "answer": "Historically, it was believed that 80 to 90 percent of all dementias were caused by Alzheimer's. Current understanding suggests that while Alzheimer's is a major category under the dementia umbrella, it is not the only cause; cases often involve mixed pictures or entirely different conditions such as Lewy body dementia, frontal temporal dementia, or vascular dementia."
+    "question": "What are the four main things I should know about what happens when someone has dementia?",
+    "answer": "First, at least two parts of the brain are changing or dying, often affecting memory in unique ways depending on the type of dementia. Second, there is currently no cure to stop or reverse the disease, so the goal is to learn how to help them live well with it for an average of 8 to 12 years. Third, the condition is progressive, meaning it will constantly get worse over time until it ends. Fourth, dementia is a terminal condition, similar to life itself, so it is important to focus on making positive changes and supporting the person rather than feeling hopeless.",
+    "timestamp": "2:35-4:25",
+    "time_start_sec": 155,
+    "time_end_sec": 265
   },
   {
-    "question": "What are the four defining characteristics that apply to all types of dementia?",
-    "answer": "All dementias share four key characteristics: first, at least two parts of the brain are dying or changing (often involving memory, though not always in the expected way); second, there is currently no cure or treatment that stops the progression; third, the condition is neurodegenerative and constantly changes over time; and fourth, dementia is a terminal illness."
-  },
-  {
-    "question": "How does memory impairment manifest differently across various types of dementia?",
-    "answer": "Memory issues vary significantly by type. In alcohol-related dementia, individuals may experience blackouts or missing pieces of memory. In vascular dementia, there can be a wide variety of memory issues. In frontal temporal dementia, individuals may forget events that actually occurred, leading them to believe something happened that did not."
-  },
-  {
-    "question": "What is the typical duration of symptom progression for dementia patients?",
-    "answer": "On average, the duration of symptoms for all forms of dementia ranges from 8 to 12 years, although this timeline can vary, being either shorter or longer depending on the specific case."
-  },
-  {
-    "question": "Why is it important to view dementia as affecting the entire family unit rather than just the patient?",
-    "answer": "When one person develops dementia, it inevitably affects everyone around them. The diagnosis impacts the caregiver and family members just as much as the patient, making it essential for the support system to come together to provide care rather than falling apart or withdrawing support."
-  },
-  {
-    "question": "What is the role of the caregiver when facing the reality of a loved one's dementia?",
-    "answer": "The caregiver's role involves acknowledging what abilities are missing in the patient while focusing on using the abilities that remain. The goal is to adapt life to better match the patient's current capabilities, ensuring a positive difference is made despite the inability to stop the disease's progression."
-  },
-  {
-    "question": "How should caregivers reframe their mindset regarding the terminal nature of dementia?",
-    "answer": "Caregivers should shift their perspective from viewing dementia solely as a tragedy (\"oh no\") to accepting it as a life challenge (\"oh huh\"). This reframing encourages proactive changes and adaptation rather than despair, recognizing that life continues under the umbrella of dementia."
-  },
-  {
-    "question": "What distinguishes normal aging from the onset of dementia-related changes?",
-    "answer": "Normal aging does not involve significant functional changes that impair daily life. In contrast, dementia begins when there is a noticeable change in function that cannot be explained by normal aging and requires investigation into reversible causes or the identification of a progressive neurological condition."
-  },
-  {
-    "question": "Why is it a misconception to assume that memory loss is the sole indicator of dementia?",
-    "answer": "Assuming dementia is defined only by memory loss is incorrect because the condition affects at least two parts of the brain. While memory is frequently involved, the specific nature of memory loss varies by type (e.g., blackouts vs. forgetting recent events), and other cognitive domains are equally affected."
-  },
-  {
-    "question": "What are some common reversible causes of cognitive decline that should be ruled out first?",
-    "answer": "Common reversible causes include depression, hypothyroidism, adverse reactions to medications, undiagnosed hearing or vision problems, and new medical conditions such as diabetes. Addressing these factors is critical before concluding that dementia is present."
-  },
-  {
-    "question": "What is the significance of the statement that dementia is \"constantly changing\"?",
-    "answer": "The statement signifies that dementia is a progressive, neurodegenerative illness that does not stabilize. Symptoms evolve continuously over time, requiring ongoing assessment and adaptation of care strategies rather than a static approach."
-  },
-  {
-    "question": "How does the concept of \"life under the umbrella\" influence the approach to dementia care?",
-    "answer": "The concept emphasizes that life continues despite the diagnosis, presenting a challenge for both the patient and the caregiver. It encourages a focus on quality of life, utilizing remaining strengths, and making necessary adjustments to maintain dignity and connection."
-  },
-  {
-    "question": "Why is the belief that Alzheimer's accounts for the vast majority of dementia cases no longer accurate?",
-    "answer": "This belief is outdated because research now shows that dementia encompasses a diverse range of etiologies. Mixed pathology is common, and non-Alzheimer's causes like Lewy body, frontal temporal, and vascular dementias play a significant role, making a blanket assumption of Alzheimer's incorrect."
-  },
-  {
-    "question": "What is the implication of dementia being described as a \"collection of symptoms\"?",
-    "answer": "Describing dementia as a collection of symptoms implies that the label itself provides limited diagnostic specificity. It serves as a broad category indicating cognitive decline due to brain changes, necessitating further testing to identify the specific underlying condition causing those symptoms."
-  },
-  {
-    "question": "How does the progressive nature of dementia impact long-term planning for families?",
-    "answer": "Because dementia is constantly changing and progressive, families must plan for a long-term trajectory of 8 to 12 years of evolving symptoms. Planning must account for the inevitable decline and the need for increasing support over time."
-  },
-  {
-    "question": "What is the recommended approach when a loved one is diagnosed with dementia?",
-    "answer": "The recommended approach is to accept the diagnosis as a challenge rather than a defeat. Families should unite to support the individual, focusing on adapting to the patient's changing abilities and finding ways to improve their quality of life within the constraints of the disease."
-  },
-  {
-    "question": "Why is it important not to jump to conclusions about the cause of cognitive changes immediately?",
-    "answer": "Jumping to conclusions like \"it must be Alzheimer's\" prevents the identification of treatable underlying causes. A thorough workup is necessary to rule out reversible conditions and to understand the specific type of dementia, which dictates the appropriate management strategy."
-  },
-  {
-    "question": "What is the ultimate goal of the speaker's advice regarding dementia care?",
-    "answer": "The ultimate goal is to empower caregivers to make positive changes by matching care to the patient's current abilities. By acknowledging limitations and leveraging remaining strengths, families can navigate the challenges of dementia effectively and sustainably."
+    "question": "My partner has dementia and I feel overwhelmed; how can I cope with this situation without giving up?",
+    "answer": "Remember that when one person gets dementia, everyone around them is affected, but this is not a choice anyone made. Instead of falling apart, try to pull together and support your partner. You cannot stop the disease from progressing, but you can change how you respond. Focus on matching activities to what your loved one can still do, acknowledging what is missing, and using their remaining strengths. This approach allows for a meaningful life under the umbrella of dementia.",
+    "timestamp": "4:27-5:39",
+    "time_start_sec": 267,
+    "time_end_sec": 339
   }
 ]
