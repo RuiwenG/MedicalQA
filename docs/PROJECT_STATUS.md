@@ -36,6 +36,33 @@ enabled in these pipelines, so `enable_thinking=False` was added to every
 > support that kwarg (Qwen 3.5 does). If an old Qwen 2.5 tokenizer is ever loaded,
 > it will raise a `TypeError`.
 
+## Inference moved to an API backend (2026-08-01)
+
+All four pipelines now call Qwen over HTTP through `common_utils/llm_client.py`
+instead of loading weights in-process. The nine former
+`apply_chat_template` → `model.generate` → `decode` blocks are gone; each agent
+makes a single `chat(...)` call.
+
+- **Config lives in `.env`** (gitignored, template in `.env.example`).
+  Any OpenAI-compatible endpoint works: Alibaba Model Studio, a self-hosted
+  vLLM pod, DeepInfra, Together, OpenRouter.
+- **The local path still exists.** `QWEN_BACKEND=local` restores the original
+  transformers behaviour, so `slurm/run_script.sh` keeps working — add
+  `export QWEN_BACKEND=local` to the job script to pin it.
+- **Reasoning stays off.** `QWEN_THINKING_PARAM` sends the provider's
+  disable-thinking flag, and the client strips any `<think>` block that comes
+  back regardless — necessary because the Architect's JSON parser scans for the
+  first `[`.
+- **No `main.py` changed.** The handler/agent classes kept their method names,
+  so the pipeline logic and the `run.py` contract are untouched.
+- **RAG still needs local BGE-M3.** Only Qwen moved; embeddings are unchanged
+  (now with a CPU fallback instead of a hardcoded `cuda`).
+
+Measured cost for the 10-video `test_dataset.csv` across all four approaches is
+roughly $0.15–0.20 on a small-model tier — the transcripts are only ~3k tokens
+each. The multi-agent pipeline makes ~186 calls per video, so rate limits and
+round-trip latency matter more than price.
+
 ## ToDos (what's left)
 
 - [ ] **Refine the prompt** for single- and multi-agent pipelines (if necessary).

@@ -1,4 +1,3 @@
-import torch
 from typing import List
 from processors.question_parser import QuestionParser
 from agents.base_agent import QwenModelHandler
@@ -9,23 +8,9 @@ class QuestionGenerator:
         self.model_handler = model_handler
         self.question_parser = question_parser
 
-    
-    # def load_model(self):
-    #     #Load the LLM model and tokenizer
-    #     print("⏳ Loading Qwen2.5-7B-Instruct-1M for generation tasks...")
-    #     self.tokenizer = AutoTokenizer.from_pretrained(self.llm_model_path)
-    #     self.model = AutoModelForCausalLM.from_pretrained(
-    #         self.llm_model_path,
-    #         device_map="auto",
-    #         torch_dtype=torch.bfloat16
-    #     ).eval()
-    
-
     def run_agent1_question_generation(self, transcript: str) -> List[str]:
         """Agent 1: Read the full transcript and generate potential questions."""
-        
-        model, tokenizer = self.model_handler.get_model()
-        
+
         # Language settings
         lang_code = config.LANGUAGE_CODE   # e.g., 'zh'
         lang_name = config.LANGUAGE_NAME
@@ -54,13 +39,7 @@ class QuestionGenerator:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt}
         ]
-        text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,)
-        inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=131072).to(model.device)
-
-        with torch.no_grad():
-            outputs = model.generate(**inputs, max_new_tokens=2048, pad_token_id=tokenizer.eos_token_id)
-        
-        response_text = tokenizer.decode(outputs[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
+        response_text = self.model_handler.chat(messages, max_tokens=2048)
 
         print("testing", response_text)
 

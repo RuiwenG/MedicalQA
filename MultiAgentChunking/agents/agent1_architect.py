@@ -1,4 +1,3 @@
-import torch
 from typing import List, Dict
 from processors.json_parser import JSONParser
 from common_utils import config
@@ -99,24 +98,7 @@ class Architect:
             {"role": "user", "content": prompt},
         ]
 
-        text = self.model_handler.tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
-        )
-
-        inputs = self.model_handler.tokenizer(
-            text, return_tensors="pt", truncation=True, max_length=131072
-        ).to(self.model_handler.model.device)
-
-        with torch.no_grad():
-            outputs = self.model_handler.model.generate(
-                **inputs,
-                max_new_tokens=4096,
-                pad_token_id=self.model_handler.tokenizer.eos_token_id,
-            )
-
-        response = self.model_handler.tokenizer.decode(
-            outputs[0][inputs.input_ids.shape[1] :], skip_special_tokens=True
-        )
+        response = self.model_handler.chat(messages, max_tokens=4096)
 
         print("testing", response)
         # saving intermediate chunks

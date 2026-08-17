@@ -1,9 +1,15 @@
-import torch
+try:
+    import torch
+except ImportError:  # API backend does not need a local torch install
+    torch = None
+
 
 class GPUMemoryMonitor:
     def print_gpu_memory(self):
         """Prints detailed GPU memory metrics"""
-        if torch.cuda.is_available():
+        if torch is None:
+            print("No local torch install - inference is running over the API")
+        elif torch.cuda.is_available():
             print("\n" + "="*50)
             print("GPU MEMORY USAGE")
             print("="*50)

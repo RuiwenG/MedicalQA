@@ -17,10 +17,19 @@ class ChromaManager:
             print(f"ℹ️ Found existing database directory. Deleting to refresh...")
             shutil.rmtree(self.temp_chroma_dir)
 
-        print("⏳ Loading BGE-M3 embedding model...")
+        # NOTE: embeddings are still a LOCAL BGE-M3 model. Only Qwen moved to
+        # the API, so RAG remains the one pipeline that needs model weights on
+        # disk. Fall back to CPU so it can at least run without a GPU.
+        try:
+            import torch
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+        except ImportError:
+            device = "cpu"
+
+        print(f"⏳ Loading BGE-M3 embedding model on {device}...")
         embed_model = HuggingFaceEmbeddings(
             model_name=str(embedding_model),
-            model_kwargs={"device": "cuda"},
+            model_kwargs={"device": device},
             encode_kwargs={"batch_size": 16}
         )
 

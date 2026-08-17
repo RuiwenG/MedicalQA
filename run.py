@@ -12,6 +12,7 @@ from typing import Dict, List, Optional
 import argparse
 import shlex
 import os
+import sys
 
 # ----------------------- Editable configuration ---------------------------
 
@@ -80,7 +81,10 @@ def run_preprocessing(
     # preprocess.py will store the audio.wav file to this folder.
 
     cmd = [
-        "python",
+        # sys.executable, not "python": the children must run in the same
+        # interpreter (and venv) as run.py, otherwise a bare "python" resolves
+        # to whatever is first on PATH and misses every installed dependency.
+        sys.executable,
         PREPROC_SCRIPT,
         "--url",
         url,
@@ -108,6 +112,7 @@ def run_approach(
     video_root: Path,
     enable: bool,
     dry_run: bool,
+    base: Path,
     extra_args: Optional[List[str]] = None,
 ) -> float:
     """
@@ -135,10 +140,14 @@ def run_approach(
     debug_chunk_out = Path("debug_chunk.json")
 
     cmd = [
-        "python",
+        sys.executable,  # see note in run_preprocessing
         script,
         "--id",
         str(idx),  # this is the index of the video
+        # Absolute, so the child looks in the same category folder regardless of
+        # the working directory it happens to be launched from.
+        "--base",
+        str(base.resolve()),
     ]
     if extra_args:
         cmd += extra_args
@@ -371,8 +380,13 @@ def main():
                         video_root=root,
                         enable=True,
                         dry_run=args.dry_run,
+                        base=base,
                         extra_args=unknown,  # pass through any extra flags to your scripts
                     )
+                    # A dry run must not touch the input CSV; otherwise merely
+                    # previewing a run stamps approach{n}=0.000 into it.
+                    if args.dry_run:
+                        continue
                     updates_for_idx.setdefault(idx, {})[aid] = elapsed
                     writeback_times_canonical(Path(args.v), updates_for_idx, to_run)
                     updates_for_idx.clear()  # reset the per-video buffer

@@ -137,8 +137,22 @@ def subtitle_file(files: Iterable[Path], preferred_codes: tuple[str, ...]) -> Pa
     return sorted(candidates)[0] if candidates else None
 
 
+def find_yt_dlp() -> str | None:
+    """Locate the yt-dlp executable.
+
+    Prefer the one beside the running interpreter: when this script is invoked as
+    ``.venv/bin/python download_transcripts.py`` the venv's bin directory is not
+    on PATH, so a plain shutil.which() misses the yt-dlp that was installed with
+    the project's requirements.
+    """
+    candidate = Path(sys.executable).parent / "yt-dlp"
+    if candidate.is_file():
+        return str(candidate)
+    return shutil.which("yt-dlp")
+
+
 def download_caption_json(url: str, languages: tuple[str, ...], cookies: Path | None) -> dict[str, Any]:
-    yt_dlp = shutil.which("yt-dlp")
+    yt_dlp = find_yt_dlp()
     if not yt_dlp:
         raise RuntimeError("yt-dlp is not installed or is not available on PATH.")
 

@@ -3,7 +3,11 @@ import re
 import sys
 import json
 import time
-import torch
+
+try:
+    import torch
+except ImportError:  # API backend does not need a local torch install
+    torch = None
 
 import argparse
 
@@ -165,8 +169,8 @@ class TwoAgentQASystem:
             #additions - DEBUG
             # print("testing", seg_qa)
 
-            # Free GPU memory between segments (guarded)
-            if torch.cuda.is_available():
+            # Free GPU memory between segments (only relevant to the local backend)
+            if torch is not None and torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
             seg_time = time.time() - seg_start
@@ -215,7 +219,15 @@ def get_args():
     parser.add_argument(
         "--id",
         type=int,
-        help="Transcript ID (if provided, transcript file will be loaded from Master/{id}/transcript_lang_code.json"
+        help="Transcript ID (if provided, transcript file will be loaded from <base>/{id}/Transcript/)"
+    )
+    parser.add_argument(
+        "--base",
+        default="Master",
+        help=(
+            "Folder holding the per-video directories, i.e. <base>/<id>/Transcript. "
+            "Relative paths resolve against the repository root."
+        ),
     )
     return parser.parse_args()
 
@@ -225,7 +237,9 @@ if __name__ == "__main__":
     transcript_file = None
     # searching for transcript files
     if args.id is not None:
-        transcript_dir = Path(__file__).resolve().parent.parent / f"Master/{args.id}/Transcript"
+        transcript_dir = (
+            Path(__file__).resolve().parent.parent / args.base / str(args.id) / "Transcript"
+        )
         print(f"Looking for transcripts in: {transcript_dir}")
         # Look for both transcript_*.json and transcript-*.json patterns
         matches = list(transcript_dir.glob("transcript*.json"))

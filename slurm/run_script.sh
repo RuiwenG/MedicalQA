@@ -28,6 +28,13 @@ cd "${SLURM_SUBMIT_DIR:-$(pwd)}"
 module load Anaconda3
 source .mvenv/bin/activate
 
+# --- Backend ---
+# common_utils/llm_client.py defaults to the HTTP API backend. That is wrong for
+# a job that allocated a GPU: without this it would ignore the local weights and
+# try to reach an endpoint the compute node cannot see. Export it here rather
+# than relying on .env so the GPU path is guaranteed regardless of environment.
+export QWEN_BACKEND=local
+
 # --- Job parameters (positional args, with defaults) ---
 # approach: 1=Single, 2=DualAgent(LLMChunking), 3=MultiAgent, 4=RAG
 APPS=("$@")

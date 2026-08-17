@@ -81,6 +81,7 @@ nvidia-nvshmem-cu13==3.4.5
 nvidia-nvtx==13.0.85
 oauthlib==3.3.1
 onnxruntime==1.28.0
+openai==2.52.0
 openai-whisper==20250625
 openpyxl==3.1.5
 opentelemetry-api==1.44.0
