@@ -113,9 +113,20 @@ class QAExtractor:
         # return the total time to run.py
         print(json.dumps({"agent_seconds": gen_time}), flush=True)
 
+        # Keep the raw model output. run.py moves Intermediate.json into the
+        # approach's intermediate/ folder, so a later parser fix can be applied
+        # to existing runs without paying for regeneration.
+        with open("Intermediate.json", "w", encoding="utf-8") as f:
+            json.dump(
+                {"raw_response": response, "expected_pairs": model.expected_pairs},
+                f,
+                indent=2,
+                ensure_ascii=False,
+            )
+
         # Parse QA pairs
         print("⏳ Parsing QA pairs...")
-        qa_data = self.qa_parser.parse_qa_pairs(response)
+        qa_data = self.qa_parser.parse_qa_pairs(response, expected=model.expected_pairs)
 
         print("\n=== DEBUG INFO ===")
 
@@ -163,6 +174,15 @@ def get_args():
         type=int,
         help="Transcript ID (if provided, transcript file will be loaded from predefined path)"
     )
+    parser.add_argument(
+        "--base",
+        default="Master",
+        help=(
+            "Folder holding the per-video directories, i.e. <base>/<id>/Transcript. "
+            "Relative paths resolve against the repository root. run.py passes an "
+            "absolute path so the category folder is honoured."
+        ),
+    )
     return parser.parse_args()
 
 if __name__ == "__main__":
@@ -171,7 +191,11 @@ if __name__ == "__main__":
     transcript_file = None
     # searching for transcript files
     if args.id is not None:
-        transcript_dir = Path(__file__).resolve().parent.parent / f"Master/{args.id}/Transcript"
+        # Path(root) / base keeps absolute bases intact and resolves relative
+        # ones against the repo root.
+        transcript_dir = (
+            Path(__file__).resolve().parent.parent / args.base / str(args.id) / "Transcript"
+        )
         print(f"Looking for transcripts in: {transcript_dir}")
         # Look for both transcript_*.json and transcript-*.json patterns
         matches = list(transcript_dir.glob("transcript*.json"))

@@ -1,10 +1,9 @@
 import sys
-import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
 from config.settings import Settings
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent.parent))
+from common_utils.llm_client import get_client
 from common_utils.paths import qwen_model_path
 
 
@@ -13,42 +12,41 @@ class QAModel:
     def __init__(self, model_path=qwen_model_path):
         self.settings = Settings()
         self.model_path = model_path
-        self.model = None
-        self.tokenizer = None
+        self.client = None
+        # k requested in the last prompt (word_count / 250); the parser uses
+        # it to validate how many pairs came back.
+        self.expected_pairs = None
 
-    # Load model
+    # Connect to the configured Qwen backend
     def load_model(self):
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            self.model_path, trust_remote_code=True
-        )
-
-        self.model = AutoModelForCausalLM.from_pretrained(
-            self.model_path,
-            device_map="auto",
-            torch_dtype=torch.bfloat16,
-            trust_remote_code=True,
-        ).eval()
-
-        # Configure context lengths
-        self.model.generation_config.max_length = (
-            self.settings.max_length
-        )  # Input context
-        self.model.generation_config.max_new_tokens = (
-            self.settings.max_new_tokens
-        )  # Output length
+        self.client = get_client(model_path=self.model_path)
 
     def generate_qa_pairs(self, transcript):
         """Generate QA pairs from transcript"""
+        if self.client is None:
+            raise RuntimeError("Client not initialised. Call load_model() first.")
 
         if isinstance(transcript, list):
-            # Handle list of dicts like transcript.json
+            # Handle list of dicts like transcript.json. Keep each segment's
+            # start time as an [m:ss] marker (same format the LLM judge uses)
+            # so the model can cite which section every QA pair comes from.
             if transcript and isinstance(transcript[0], dict):
-                transcript = [
-                    (d.get("text") or d.get("transcript") or "").strip()
-                    for d in transcript
-                ]
-            # Join into single string context
-            transcript = " ".join([t for t in transcript if t])
+                lines = []
+                for d in transcript:
+                    text = (d.get("text") or d.get("transcript") or "").strip()
+                    if not text:
+                        continue
+                    start = d.get("start")
+                    if isinstance(start, (int, float)):
+                        lines.append(f"[{int(start) // 60}:{int(start) % 60:02d}] {text}")
+                    else:
+                        lines.append(text)
+                transcript = "\n".join(lines)
+            else:
+                # Join into single string context
+                transcript = " ".join(
+                    [str(t).strip() for t in transcript if str(t).strip()]
+                )
 
         elif isinstance(transcript, dict):
             transcript = (
@@ -58,50 +56,36 @@ class QAModel:
         elif not isinstance(transcript, str):
             transcript = str(transcript).strip()
 
-        # print(transcript)
+        # Guard against a transcript that would overflow the context window.
+        # Tokenisation happens server-side now, so this is an approximate
+        # character budget (~4 chars/token) rather than an exact truncation.
+        if len(transcript) > self.settings.max_input_chars:
+            print(
+                f"⚠️ Transcript is {len(transcript)} chars; truncating to "
+                f"{self.settings.max_input_chars} to stay inside the context window."
+            )
+            transcript = transcript[: self.settings.max_input_chars]
+        print(f"ℹ️ Sending ~{len(transcript) // 4} transcript tokens")
 
-        inputs = self.tokenizer(
-            transcript,
-            return_tensors="pt",
-            truncation=True,
-            max_length=self.settings.max_length,
-        )
-        transcript = self.tokenizer.decode(
-            inputs.input_ids[0], skip_special_tokens=True
-        )
-        print(f"ℹ️ Using {inputs.input_ids.shape[1]} tokens from transcript")
-
-        # prompt = self.settings.get_prompt_template(transcript)
-        system_prompt, prompt = self.settings.get_prompt_template(transcript)
+        system_prompt, prompt, k = self.settings.get_prompt_template(transcript)
+        self.expected_pairs = k
+        print(f"ℹ️ Requesting k={k} QA pairs (~{self.settings.words_per_qa} words each)")
 
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
         ]
 
-        text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,)
-
-        # Tokenize and move to GPU
-        inputs = self.tokenizer(text, return_tensors="pt").to(self.model.device)
-
-        # Generate QA pairs
-        with torch.no_grad():
-            outputs = self.model.generate(
-                **inputs,
-                max_new_tokens=self.settings.max_new_tokens,
-                **self.settings.generation_config,
-                pad_token_id=self.tokenizer.eos_token_id,
-            )
-
-        # Extract response
-        response = self.tokenizer.decode(
-            outputs[0][inputs.input_ids.shape[1] :], skip_special_tokens=True
+        return self.client.chat(
+            messages,
+            max_tokens=self.settings.max_new_tokens,
+            temperature=self.settings.generation_config["temperature"],
+            top_p=self.settings.generation_config["top_p"],
+            repetition_penalty=self.settings.generation_config["repetition_penalty"],
         )
 
-        return response
-
     def cleanup(self):
-        # Cleanup model resources
-        del self.model
-        del self.tokenizer
-        torch.cuda.empty_cache()
+        # Release the backend (a no-op for the API client)
+        if self.client is not None:
+            self.client.close()
+            self.client = None
