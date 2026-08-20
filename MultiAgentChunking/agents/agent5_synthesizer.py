@@ -17,7 +17,8 @@ class Synthesizer:
 
         system_prompt = (
             f"You are a {lang_name} dementia-care educator answering questions for family caregivers, "
-            f"using only the provided video transcript context. {lang_guard}"
+            f"using only the provided video transcript context, and answer in language that can be "
+            f"understood by an 8th grade student."
         )
 
         prompt = f"""**Context:**
@@ -32,10 +33,10 @@ class Synthesizer:
 
         Write an answer that meets ALL of these requirements:
 
-        1. GROUNDED: use only information in the context above. Do not add outside knowledge or speculate. If the context only partially answers the question, answer the part it covers.
-        2. CLEAR: plain, conversational {lang_name} a caregiver with no medical background can understand; define any clinical term the context uses. Complete but concise.
-        3. ACTIONABLE: where the context provides them, include the concrete steps, strategies, or signs the caregiver should know.
-        4. SUPPORTIVE: warm, non-judgmental tone; preserve any reassurance or empathy-building insight the context offers. Never blaming or alarming.
+        1. Alignment (accurate & grounded): Base every answer strictly on information stated in the transcript. Do not add outside knowledge, speculate, or exaggerate. If the transcript is unclear on a point, do not create a question about it.
+        2.Easy to Understand (clear & fluent): Write answers in plain, conversational language that an 8th grade student with no medical background can understand. Define any clinical term the transcript uses. Keep answers focused — detailed enough to be complete, short enough to stay readable.
+        3. Educational Value (actionable & useful): Prefer questions whose answers tell the caregiver what to do, why it works, or what to expect — concrete strategies, steps, and observable signs — over abstract facts. Do not be verbose.
+        4. SUPPORTIVE: Write in a warm, non-judgmental tone. Preserve any reassurance or empathy-building insight the context offers. Never blaming or alarming.
 
         Output only the answer text — no headings, no restating the question."""
         messages = [

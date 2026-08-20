@@ -1,242 +1,110 @@
 [
   {
-    "question": "How can I give my loved one a \"stinking chance\" to succeed when they are struggling with time management?",
-    "answer": "When your loved one is struggling with time management, remember that their frontal lobe—the part of the brain responsible for thinking and planning—may not be able to check facts or realize they are late. Because of this, their perception of time might be completely different from yours. Instead of getting upset about being late, give them a \"stinking chance\" by accepting their reality. For example, if they are three minutes late, acknowledge that they are in their own house and have their own sense of time, rather than arguing about the delay. This approach helps them feel supported rather than judged.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Frontal Lobe Function and Rationality"
-    },
-    "time_start_sec": 225.12,
-    "time_end_sec": 244.48000000000002,
-    "time_start_hhmmss": "00:03:45",
-    "time_end_hhmmss": "00:04:04"
-  },
-  {
-    "question": "How can I respond when my loved one confidently states an item is somewhere it is not?",
-    "answer": "When your loved one confidently states an item is somewhere it is not, this is called confabulation, which means they are filling in gaps in their memory with made-up details. As shown in the example, even if they cannot see the item (like a walker), they may insist it is in a specific place. You can respond by gently acknowledging their statement and then calmly showing them the actual location. For instance, you might say, \"Actually, here it is,\" while pointing to where the item really is. This approach helps correct the situation without arguing, and you can offer your hand to help them feel secure as you guide them to the correct spot.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Confabulation Regarding Objects and Environment"
-    },
-    "time_start_sec": 435.12,
-    "time_end_sec": 466.56,
-    "time_start_hhmmss": "00:07:15",
-    "time_end_hhmmss": "00:07:47"
-  },
-  {
-    "question": "What does it mean when a person with dementia talks about their mother as if she is still alive and giving advice?",
-    "answer": "When a person with dementia talks about their mother as if she is still alive and giving advice, it often means they are remembering her role in a very specific way. In the example shared, the person described their mother as someone who was a good cook and who would remind them what to do whenever they got something, even if the person wasn't in the kitchen. The speaker noted that this memory made it feel as if the mother was still living nearby and offering guidance. This shows that the person is recalling how their mother used to help and teach them, keeping that important relationship alive in their mind.",
+    "question": "Why is it important to accept the person’s reality instead of trying to make them understand your point of view?",
+    "answer": "It is important to accept the person’s reality because trying to make them understand your point of view often keeps their distress high. Instead, when you \"hold on to\" or accept what they are feeling and seeing as their truth, you can help lower that distress. By using reflection (showing you hear them) and a sincere apology, you can calm the situation and move on together, rather than getting stuck in an argument about who was right or wrong.",
     "source_segment": {
       "id": 8,
-      "topic": "Role Play: Mary and Her Deceased Mother"
-    },
-    "time_start_sec": 391.84,
-    "time_end_sec": 436.56,
-    "time_start_hhmmss": "00:06:32",
-    "time_end_hhmmss": "00:07:17"
-  },
-  {
-    "question": "What are some ways to cope with feeling late or anxious when joining virtual meetings with other caregivers?",
-    "answer": "It is completely normal to feel anxious or worry about being late when joining virtual meetings, especially when you are significantly behind schedule. In the world of video calls, even a delay of just two minutes can feel very long, causing others to start texting, worrying about where you are, or asking what you are doing. However, remember that everyone else is likely feeling the same way; the group is there to support each other, and it is okay to be late. If you could go back to real life, these worries might feel different, but for now, just know that you have made it and you are not alone in this experience.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Meeting Attendance"
-    },
-    "time_start_sec": 5.92,
-    "time_end_sec": 56.64,
-    "time_start_hhmmss": "00:00:06",
-    "time_end_hhmmss": "00:00:57"
-  },
-  {
-    "question": "How can a caregiver respond when a person with dementia claims they were sent somewhere they clearly weren't?",
-    "answer": "When a person with dementia claims they were sent somewhere they clearly weren't, like being told to go to the grocery store when they weren't, the context suggests that these situations often lead to confrontations where the person might feel confused or defensive. For example, they might argue, \"You told me to go to the grocery store,\" even if that instruction never happened. The video highlights that these moments can sound like the person is being yelled at or questioned aggressively, such as being asked, \"What the heck this is\" or \"Why are you yelling at me.\" While the provided text describes these difficult interactions and the confusion that arises, it does not offer specific steps on how to respond calmly or how to handle the claim itself. It only illustrates the type of confrontation that occurs when these misunderstandings happen.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Confrontational Scenarios and Misunderstandings"
-    },
-    "time_start_sec": 241.2,
-    "time_end_sec": 318.40000000000003,
-    "time_start_hhmmss": "00:04:01",
-    "time_end_hhmmss": "00:05:18"
-  },
-  {
-    "question": "How should I respond when my loved one asks for someone who has passed away, like my mother?",
-    "answer": "It is completely normal for your loved one to ask for someone who has passed away, like your mother, even if they are very old, such as 94 years old. These are often realistic stories that happen to people with dementia. While it might feel confusing or like a \"head scratcher\" to wonder why they are talking about this now, remember that these requests are common and part of their experience. There is no need to be alarmed; simply acknowledging that this is a common occurrence can be supportive.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Identifying Challenges in Confabulation Stories"
-    },
-    "time_start_sec": 464.4,
-    "time_end_sec": 497.599,
-    "time_start_hhmmss": "00:07:44",
-    "time_end_hhmmss": "00:08:18"
-  },
-  {
-    "question": "How much time should I wait before calling someone who is supposed to be in a Zoom meeting?",
-    "answer": "When someone is supposed to be in a Zoom meeting, you should wait about two to four minutes before calling them. The context notes that in the \"Zoom world,\" this short window is different from in-person meetings. If they haven't joined after four minutes, it is recommended that you literally call the person. This is important because they might be stuck in a car or somewhere else where they need support. Remember, it is okay to be concerned if they are not showing up, as this could be a sign they are struggling.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Time Perception in Virtual vs. Real Life"
-    },
-    "time_start_sec": 54.32,
-    "time_end_sec": 113.6,
-    "time_start_hhmmss": "00:00:54",
-    "time_end_hhmmss": "00:01:54"
-  },
-  {
-    "question": "What is the real need behind accusations like \"you're cheating on me\" or \"someone stole my money\"?",
-    "answer": "When a person with dementia accuses you of cheating or says someone stole their money, the real need is often a deep sense of loneliness and a lack of connection. The context explains that when someone feels lonely, their brain tries to fill in the gaps to make sense of the world. Because the brain isn't quite understanding what is happening, it creates a story that feels true to them, even if it isn't. For example, instead of seeing a lack of engagement, they might imagine a partner is with another woman or that a thief is in the room. The key insight is that these accusations are not necessarily about what you are actually doing, but about the missing connection and engagement they feel.",
-    "source_segment": {
-      "id": 16,
-      "topic": "Loneliness and Paranoia as Filled Gaps"
-    },
-    "time_start_sec": 722.88,
-    "time_end_sec": 779.76,
-    "time_start_hhmmss": "00:12:03",
-    "time_end_hhmmss": "00:13:00"
-  },
-  {
-    "question": "What are the signs that I am over-tiring the person with dementia?",
-    "answer": "It can be hard to tell if you are over-tiring the person with dementia, but one key sign is when they seem \"over engaged.\" This means they are doing too much and need to slow down or \"come down\" to a lower level of activity. If you notice them pushing through too much, it might be a signal that the system is being over-taxed. Conversely, if they have been \"under-engaged\" with too little activity for too long, their brain may start \"filling in the gaps,\" which can also be a sign of strain. The goal is to find a balance where they are neither over-tired from doing too much nor under-stimulated from doing too little.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Avoiding Over-Taxing the Caregiver System"
-    },
-    "time_start_sec": 536.399,
-    "time_end_sec": 557.92,
-    "time_start_hhmmss": "00:08:56",
-    "time_end_hhmmss": "00:09:18"
-  },
-  {
-    "question": "What is the term for when a person with dementia fills in missing details with made-up information?",
-    "answer": "The term for when someone with dementia fills in missing details with made-up information is **confabulation**. As the speaker explains, this happens because the brain tries to \"fill in the gaps\" when it doesn't have the right facts. For example, if a person is late, they might invent a reason like driving on an icy road or mistaking snow for sleet. Even though these thoughts might seem irrational or exaggerated, the person is often trying to make sense of the situation. A helpful strategy mentioned is to give the person a little grace, such as waiting a few minutes or sending a text later, rather than getting worried immediately about the delay.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Confabulation and Irrational Storytelling"
-    },
-    "time_start_sec": 159.76,
-    "time_end_sec": 227.76000000000002,
-    "time_start_hhmmss": "00:02:40",
-    "time_end_hhmmss": "00:03:48"
-  },
-  {
-    "question": "How can I divert my 92-year-old parent when they insist on leaving to meet people for a job?",
-    "answer": "When your 92-year-old parent insists on leaving to meet people for a job, you can try to divert them by agreeing to disagree. Instead of trying to convince them that they are wrong or needing you to understand what is right, you can choose to come alongside them. This means reflecting back what they are saying to you. By doing this, you help move the situation out of distress and into engagement.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Strategies for Diversion and Disagreement"
-    },
-    "time_start_sec": 495.919,
-    "time_end_sec": 538.16,
-    "time_start_hhmmss": "00:08:16",
-    "time_end_hhmmss": "00:08:58"
-  },
-  {
-    "question": "If I am interested in trying these new methods, what is the first step I should take?",
-    "answer": "If you are interested in trying these new methods, the first step is to stop just watching the video and start actively trying the stuff out yourself. The speaker encourages you not to just \"chug on down the pipe\" after viewing, but to get involved with the material directly.",
-    "source_segment": {
-      "id": 20,
-      "topic": "Learning Curve: Skateboarding Analogy"
-    },
-    "time_start_sec": 853.76,
-    "time_end_sec": 868.88,
-    "time_start_hhmmss": "00:14:14",
-    "time_end_hhmmss": "00:14:29"
-  },
-  {
-    "question": "How do I know if my approach is helping to lower their distress levels?",
-    "answer": "To know if your approach is helping to lower their distress, you can look for signs that they are beginning to understand why you are doing what you are doing. The video suggests that when you use reflection and an apology, you can help them \"hold on to\" your reality, which allows them to see things from your perspective. If this method is effective, you may notice that the distress comes down and you are able to move on. Remember, it is okay if this approach works for some situations but not others; the goal is to help them feel understood so the distress can decrease.",
-    "source_segment": {
-      "id": 14,
-      "topic": "Using Reflection and Apology to Reduce Distress"
-    },
-    "time_start_sec": 647.04,
-    "time_end_sec": 678.0,
-    "time_start_hhmmss": "00:10:47",
-    "time_end_hhmmss": "00:11:18"
-  },
-  {
-    "question": "How do I stay updated on new dementia care resources and videos?",
-    "answer": "To stay updated on new dementia care videos, you can click the bell icon to get notified when new videos are posted. This helps ensure you don't miss out on the latest content sharing Tepa's positive approach to dementia care.",
-    "source_segment": {
-      "id": 22,
-      "topic": "Outro and Call to Action"
-    },
-    "time_start_sec": 895.04,
-    "time_end_sec": 910.48,
-    "time_start_hhmmss": "00:14:55",
-    "time_end_hhmmss": "00:15:10"
-  },
-  {
-    "question": "Why does caregiving feel so foreign and difficult even when I am trying my best?",
-    "answer": "It is completely normal to feel like caregiving is foreign and really hard, even when you are trying your absolute best. This happens because caring for someone with dementia does not come naturally; it is not something we are born knowing how to do. Instead, it is a mix of common sense and learning new ways to interact with a loved one. Just like learning any new skill, it is challenging to get your brain to do the things you want it to do, and that struggle is a sign that you are growing into this new role.",
-    "source_segment": {
-      "id": 19,
-      "topic": "Validation for Caregivers Struggling with Change"
-    },
-    "time_start_sec": 825.519,
-    "time_end_sec": 855.76,
-    "time_start_hhmmss": "00:13:46",
-    "time_end_hhmmss": "00:14:16"
-  },
-  {
-    "question": "What should I do if my partner with dementia says they feel alone after I complete a quick errand?",
-    "answer": "If your partner with dementia feels alone after you complete a quick errand, it is important to acknowledge their feelings immediately. In the example provided, when the person felt abandoned, the response was to apologize sincerely and validate their emotion by saying, \"I did not mean to leave you feeling alone.\" You should also reassure them of your love, as the speaker in the video affirmed, \"I love you.\"\n\nTo help them feel better, you can engage in a shared activity that brings comfort, such as making a treat together. The video shows the couple deciding to make peach cobbler after the person mentioned going to get peaches. This approach helps shift the focus from the feeling of being left behind to a positive, collaborative task. Remember that people with dementia may not remember the specific instructions given, like getting peaches for cobbler, but they may still feel the emotional impact of being separated, even for a short time.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Role Play: The Grocery Shopping Excuse"
+      "topic": "Role-Play Demonstration: De-escalation Techniques"
     },
     "time_start_sec": 555.76,
-    "time_end_sec": 649.44,
+    "time_end_sec": 679.12,
     "time_start_hhmmss": "00:09:16",
-    "time_end_hhmmss": "00:10:49"
+    "time_end_hhmmss": "00:11:19"
   },
   {
-    "question": "Why does my brain create an entire story in just two minutes when there is no validity to it?",
-    "answer": "When you don't have all the details and only have a few minutes to fill in the blanks, your brain works very quickly to create a complete story. It cycles through different learning moments, checking things like a calendar and gathering tons of data to try to figure out what happened. Even though this story has no validity and there is no real reason for it to be true, your brain is simply trying to make sense of the missing pieces. This is a natural way your mind handles gaps in information when time is short.",
+    "question": "Why is it helpful to try and understand if the person is actually feeling lonely or sad instead of just being difficult?",
+    "answer": "When a person seems angry or agitated (which is like feeling upset or restless), it often feels like they are just being difficult. However, the transcript explains that this behavior is usually about something deeper, like feeling lonely or sad. It is helpful to look for these real feelings because if you can figure out what they actually need, you can connect with them in a positive way. For example, if you realize they are just lonely, you can turn a stressful moment into a fun experience that you can do together. By staying curious and trying to understand their true feelings, you stop focusing on the anger and start building a better connection.",
     "source_segment": {
-      "id": 3,
-      "topic": "The Brain's Tendency to Fill Gaps"
+      "id": 9,
+      "topic": "Identifying Underlying Emotions Behind Agitation"
     },
-    "time_start_sec": 110.64,
-    "time_end_sec": 161.36,
-    "time_start_hhmmss": "00:01:51",
-    "time_end_hhmmss": "00:02:41"
+    "time_start_sec": 678.0,
+    "time_end_sec": 736.56,
+    "time_start_hhmmss": "00:11:18",
+    "time_end_hhmmss": "00:12:17"
   },
   {
-    "question": "How can I decrease distress in the moment so we can move forward together?",
-    "answer": "You can try agreeing to disagree and letting go of the need to see the situation exactly as it is. By doing this, you may be able to decrease distress so that you can go somewhere together.",
+    "question": "Why does my loved one make up stories about people stealing from them or being unfaithful?",
+    "answer": "When your loved one says someone is stealing or that you are being unfaithful, it often comes from a place of loneliness. Their brain isn’t quite understanding what is happening, so it fills in the missing pieces with its own little story to make sense of things. This story isn’t necessarily true; it’s just their brain trying to explain why they feel disconnected or lonely.\n\nInstead of arguing about whether the story is real, try to focus on lowering their distress. You can agree to disagree and let go of needing to see the situation exactly as it is. The goal is to help them feel calmer so you can move forward together.",
     "source_segment": {
-      "id": 17,
-      "topic": "Agreeing to Disagree and Moving Forward"
+      "id": 10,
+      "topic": "Handling Accusations Stemming from Loneliness"
     },
-    "time_start_sec": 776.32,
+    "time_start_sec": 734.0,
     "time_end_sec": 795.2,
-    "time_start_hhmmss": "00:12:56",
+    "time_start_hhmmss": "00:12:14",
     "time_end_hhmmss": "00:13:15"
   },
   {
-    "question": "What should I do when my loved one tells me a story that I know isn't true?",
-    "answer": "When your loved one tells a story that doesn't make sense to you, it might be a \"confabulation story.\" This happens when their brain fills in the gaps with made-up details to create a complete picture, even though the facts aren't right. It can feel confrontational if you try to give a rational answer or tell them there is no way it happened, as they may feel you are accusing them of lying. Instead of trying to correct the story, the video suggests watching what happens when you are confronted with these stories and thinking about what you can do in that moment, rather than immediately going to the facts. For example, when a person confabulates a relationship with someone they don't actually know, they might say things like \"tell your wife I love him,\" showing they are trying to make sense of their world in their own way.",
+    "question": "What is \"confabulation,\" and why does the brain create stories to fill in missing information?",
+    "answer": "Confabulation is when the brain creates a story to fill in missing details. The transcript explains that when we don’t have all the facts, our brains quickly try to \"fill in the blanks.\" For example, if someone is just two minutes late, your brain might instantly imagine wild stories—like a car accident or grabbing lunch—even though there is no real reason to think those things happened.\n\nThe brain does this because it wants to make sense of the situation, but these made-up stories often have no validity (they aren’t true). In dementia, this process happens even more strongly. The person’s brain fills in gaps with irrational thoughts that feel very real to them, even if they don’t match reality. Understanding this helps us see that these stories are just the brain trying to cope with missing information, not lies or intentional mistakes.",
     "source_segment": {
-      "id": 7,
-      "topic": "Role Play: Verlene and the Sound Man"
+      "id": 3,
+      "topic": "The Brain's Reaction to Missing Information"
     },
-    "time_start_sec": 315.36,
-    "time_end_sec": 395.84,
-    "time_start_hhmmss": "00:05:15",
-    "time_end_hhmmss": "00:06:36"
+    "time_start_sec": 110.64,
+    "time_end_sec": 227.76000000000002,
+    "time_start_hhmmss": "00:01:51",
+    "time_end_hhmmss": "00:03:48"
   },
   {
-    "question": "How can I bring my loved one's agitation down instead of trying to make it go away completely?",
-    "answer": "The key is to try to bring the agitation down rather than trying to make it go away completely, because it may not disappear right away. When you start with anger or agitation, which is described as a lower level of anger, try to go with what feels right in that moment. Instead of focusing only on the behavior, look for what you might be feeling underneath, such as loneliness or sadness. If you can recognize your own point of curiosity, you can then figure out what your loved one needs from you. In role plays, this means sticking to your story and seeing what happens naturally, which helps you understand that the agitation is often about unmet emotional needs rather than just being \"agitated.\"",
+    "question": "Why does damage to the frontal lobe make it hard for a person with dementia to check if their thinking is accurate?",
+    "answer": "The transcript explains that when the frontal lobe is damaged, a person’s brain cannot \"think okay check to see\" if their thoughts are actually true. In simple terms, this part of the brain acts like an internal fact-checker. When it isn’t working right, the person loses the ability to pause and verify if what they are thinking matches reality. For example, they might believe someone is late based on a wrong assumption (like icy roads) without being able to stop and look at the actual facts (like knowing the person was just there minutes ago). Because their brain can’t do this reality check for them, they get stuck in inaccurate thoughts.",
     "source_segment": {
-      "id": 15,
-      "topic": "Recognizing Underlying Emotions vs. Agitation"
+      "id": 4,
+      "topic": "Confabulation in Dementia: Rational vs. Irrational Gaps"
     },
-    "time_start_sec": 675.839,
-    "time_end_sec": 723.44,
-    "time_start_hhmmss": "00:11:16",
-    "time_end_hhmmss": "00:12:03"
+    "time_start_sec": 225.12,
+    "time_end_sec": 248.64000000000001,
+    "time_start_hhmmss": "00:03:45",
+    "time_end_hhmmss": "00:04:09"
+  },
+  {
+    "question": "What does it mean to \"reflect back\" what my loved one is saying, and how does this help reduce their distress?",
+    "answer": "To \"reflect back\" means you choose to come alongside your loved one instead of trying to correct them or make them understand what is \"right.\" Instead of arguing, you simply repeat or acknowledge what they are telling you.\n\nThis helps reduce distress because it stops the situation from becoming overwhelming. The transcript explains that when we try too hard to fix things, we can \"over tax the system,\" which means we push their brain too hard. Often, a person’s brain starts \"filling in the gaps\" because there has been too little stimulation for too long. By reflecting back what they say, you help move them out of that upset state and into a calmer place where they can engage with you.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Analysis of Video Examples and Common Themes"
+    },
+    "time_start_sec": 466.56,
+    "time_end_sec": 557.92,
+    "time_start_hhmmss": "00:07:47",
+    "time_end_hhmmss": "00:09:18"
+  },
+  {
+    "question": "How should I react when my loved one talks about a deceased family member as if they are still alive and nearby?",
+    "answer": "When your loved one talks about a deceased family member as if they are still alive, it is important to understand that this is a common part of dementia called \"confabulation.\" Confabulation means making up information or believing things that aren't true because the person’s memory isn't working correctly.\n\nIn the video, an older woman named Mary talks about her mother giving her advice on cooking, even though her mother is not actually there. This happens because Mary’s mind is filling in gaps with memories from the past. Instead of correcting her or telling her the truth, which might be upsetting, you can listen and engage with the story she is sharing. The transcript shows that this behavior is normal (\"a common problem\") and helps explain why your loved one might seem confused about people or objects. By understanding that their brain is creating these stories to make sense of the world, you can respond with patience and kindness rather than frustration.",
+    "source_segment": {
+      "id": 6,
+      "topic": "Video Examples of Confabulation Scenarios"
+    },
+    "time_start_sec": 363.52,
+    "time_end_sec": 468.4,
+    "time_start_hhmmss": "00:06:04",
+    "time_end_hhmmss": "00:07:48"
+  },
+  {
+    "question": "How can I \"come alongside\" my loved one instead of trying to correct or argue with their false memories?",
+    "answer": "To “come alongside” your loved one, you can try three simple steps: reflect, engage, and love.\n\nFirst, understand that when there are gaps in their memory, their brain might create stories to fill them. This is called **confabulation**. Instead of trying to correct these stories or pick a battle, just go with the flow.\n\nBy reflecting what they say, engaging with them in the moment, and showing love, you connect with how they feel rather than arguing about facts. This approach helps you support them gently without causing stress.",
+    "source_segment": {
+      "id": 11,
+      "topic": "Community Feedback and Summary of Strategies"
+    },
+    "time_start_sec": 794.0,
+    "time_end_sec": 827.6800000000001,
+    "time_start_hhmmss": "00:13:14",
+    "time_end_hhmmss": "00:13:48"
+  },
+  {
+    "question": "Instead of arguing about what really happened, what are some better ways to respond when my loved one shares a confusing story?",
+    "answer": "When your loved one shares a confusing story, it can feel very confrontational, like they are accusing you of something. The transcript explains that their brain is \"filling in the gaps\" with made-up stories, which experts call confabulation. Instead of trying to give the \"rational answer\" or arguing about what really happened, try to avoid going down that path. Arguing often makes things worse because the person is just trying to do what is right and doesn't want you to think they did something wrong. The video suggests looking at these moments as opportunities to understand these \"confabulation stories\" so you can decide what to do when they don’t make sense, rather than getting into a fight about the facts.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Confrontational Stories Created by Confabulation"
+    },
+    "time_start_sec": 247.2,
+    "time_end_sec": 366.479,
+    "time_start_hhmmss": "00:04:07",
+    "time_end_hhmmss": "00:06:06"
   }
 ]

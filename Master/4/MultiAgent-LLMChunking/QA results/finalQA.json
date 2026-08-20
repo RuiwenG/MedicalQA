@@ -1,242 +1,122 @@
 [
   {
-    "question": "How can I validate my loved one's feelings without making the situation more agitated?",
-    "answer": "One simple way to support your loved one without making things worse is to validate their feelings. This means acknowledging what they are experiencing rather than trying to argue or change their mind. As the discussion highlights, if you do not want to agitate (which means to make someone feel more upset or restless), then you should validate instead. By validating their feelings, you show them that you hear them and understand their perspective, which can help calm the situation rather than adding to the stress.",
-    "source_segment": {
-      "id": 14,
-      "topic": "The Emotional Impact of Unshared Grief"
-    },
-    "time_start_sec": 615.839,
-    "time_end_sec": 691.68,
-    "time_start_hhmmss": "00:10:16",
-    "time_end_hhmmss": "00:11:32"
-  },
-  {
-    "question": "What are delusions and how common are they in Lewy body dementia?",
-    "answer": "Delusions are a very big part of Lewy body dementia, meaning they are quite common in this condition. While the video mentions that there is a webinar available to help understand Lewy body dementia better, the provided text does not define exactly what delusions are or list specific signs or strategies for managing them.",
+    "question": "After a stressful or intense interaction with a person with dementia, what are some simple ways for caregivers to calm themselves down?",
+    "answer": "After a really tough or intense moment with someone who has dementia, it is important for caregivers to take care of themselves, too. The conversation suggests a few simple ways to calm down:\n\n*   **Step back from the situation:** Leave the scene for a moment if you can.\n*   **Take a breath:** Use that quiet time to just breathe and decompress.\n*   **Rest:** You might want to lie down to help your body and mind relax.\n\nThese steps help because dealing with these situations takes a lot of skill and energy. Taking a break allows you to process what happened and recover before moving on.",
     "source_segment": {
       "id": 5,
-      "topic": "Delusions in Lewy Body Dementia"
+      "topic": "Caregiver Decompression and Team Reflection"
     },
-    "time_start_sec": 167.92,
-    "time_end_sec": 192.319,
-    "time_start_hhmmss": "00:02:48",
-    "time_end_hhmmss": "00:03:12"
+    "time_start_sec": 553.279,
+    "time_end_sec": 671.68,
+    "time_start_hhmmss": "00:09:13",
+    "time_end_hhmmss": "00:11:12"
   },
   {
-    "question": "How can a caregiver explain to a person with dementia that they are misinterpreting a situation, such as seeing keys or a family member?",
-    "answer": "When a person with dementia sees something that isn't there, like keys or a family member, they are often trying to make sense of confusing details. For example, if they saw you holding keys at one point, but then you went to get them, their memory of the event can get mixed up. Instead of arguing about the facts, look for the \"kernel of truth\"—the small piece of reality that started the worry. In the story shared, the person was worried about driving because a conversation had happened about it a few days earlier. You can gently explain that their memory is putting two different moments together, helping them understand that what they are seeing now is a mix-up of past events, not something happening right now.",
-    "source_segment": {
-      "id": 8,
-      "topic": "The Kernel of Truth Behind the Delusion"
-    },
-    "time_start_sec": 303.68,
-    "time_end_sec": 376.08,
-    "time_start_hhmmss": "00:05:04",
-    "time_end_hhmmss": "00:06:16"
-  },
-  {
-    "question": "How can I manage my own emotions if it takes a long time for my loved one to improve?",
-    "answer": "To manage your own emotions when improvement takes a long time, the most important thing is to be willing to help and wait without getting too upset. It is normal for progress to be slow; for example, it might take a full month for things to change. Remember that caring for a loved one is a team effort, so you do not have to face this alone. By staying patient and keeping your emotions in check, you can support your family member effectively even during difficult waiting periods.",
-    "source_segment": {
-      "id": 16,
-      "topic": "The Role of Different Stakeholders"
-    },
-    "time_start_sec": 798.16,
-    "time_end_sec": 843.92,
-    "time_start_hhmmss": "00:13:18",
-    "time_end_hhmmss": "00:14:04"
-  },
-  {
-    "question": "What is the main difference between hallucinations and delusions?",
-    "answer": "The main difference between hallucinations and delusions is how the person experiences them. Hallucinations are about misinterpreting sensory data, which means the person is experiencing something physically that isn't there, like seeing or hearing things. Delusions, on the other hand, are more about things the person thinks rather than experiences physically; they involve the stories or beliefs the person holds about what is happening. While some people might use these terms interchangeably because they can feel similar, understanding that one is a physical experience and the other is a thought process helps in knowing what is going on.",
+    "question": "How should I respond when my loved one accuses me of moving their things or lying to them?",
+    "answer": "When your loved one accuses you of moving their things or lying, remember that as a care partner, you cannot both be right. Their story might not make sense to you, but it feels very real to them. This kind of belief is called a delusion, which is a common part of Lewy body dementia.\n\nIn the example provided, the person was convinced you moved their car keys and hid them in the refrigerator because you didn’t want them to drive. They insisted they saw you do it and felt you were lying. Since arguing about who is telling the truth does not help, the best approach is to avoid trying to prove them wrong. Instead, stay calm and acknowledge their feelings without getting into a debate about facts they firmly believe are true.",
     "source_segment": {
       "id": 2,
-      "topic": "Defining Delusions vs. Hallucinations"
+      "topic": "Case Study: Accusations of Moving Car Keys"
     },
-    "time_start_sec": 35.52,
-    "time_end_sec": 126.56,
-    "time_start_hhmmss": "00:00:36",
-    "time_end_hhmmss": "00:02:07"
-  },
-  {
-    "question": "How can I tell if a visit is going to go well before I even start?",
-    "answer": "You can get a good sense of how a visit might go by watching the person's body language, specifically whether they are accepting a touch or not. It is also helpful to approach the visit in a mode of assessment rather than being overly friendly, loud, or enthusiastic. If you feel cautious and sense that things might not go well, it is okay to come in with a plan that uses PPA (which stands for Person-Centered Approach, a way of caring that focuses on the individual's needs and feelings). Remember that home is often a safe place for the person to return to if they feel unsure, so you don't need to force a close connection immediately; simply sitting nearby and validating each other's feelings can take time and is a positive start.",
-    "source_segment": {
-      "id": 17,
-      "topic": "Approaching a Person with an Imposter Delusion"
-    },
-    "time_start_sec": 840.88,
-    "time_end_sec": 941.519,
-    "time_start_hhmmss": "00:14:01",
-    "time_end_hhmmss": "00:15:42"
-  },
-  {
-    "question": "What should I do when my loved one insists I hid their car keys in the refrigerator even though I didn't?",
-    "answer": "When your loved one insists you hid their car keys in the refrigerator, even though you didn't, this is called a delusion. A delusion is a false belief that a person holds, which in this case is the belief that you moved their keys. The video shows that when someone with dementia has a delusion like this, they may accuse you of actions you didn't take, such as saying, \"You put them in the refrigerator,\" while you are actually denying it. In the example provided, the person with dementia watches you, sees you did not move the keys, yet still claims you did and accuses you of lying. There is no specific step mentioned in the video to resolve this situation other than acknowledging that this is a delusion and understanding that the person is seeing things that are not true.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Case Study: The Missing Car Keys"
-    },
-    "time_start_sec": 189.84,
+    "time_start_sec": 145.92,
     "time_end_sec": 238.48,
-    "time_start_hhmmss": "00:03:10",
+    "time_start_hhmmss": "00:02:26",
     "time_end_hhmmss": "00:03:58"
   },
   {
-    "question": "How can I validate what a person with dementia sees or hears when they are confused?",
-    "answer": "To validate what a person with dementia sees or hears, you can join them in their experience by pointing in the same direction they are pointing and doing something physically similar. You can also gently give some of their words back to them. For example, if they say, \"I took the car keys,\" instead of saying \"No, I didn't\" or telling them they are wrong, you can acknowledge their feeling by saying, \"Oh, my brain, my memory.\" This approach avoids immediately telling the other person they are wrong and helps them feel understood rather than blamed.",
+    "question": "What should I do if my loved one becomes convinced that a family member has died, even when they are safe?",
+    "answer": "When a loved one with dementia believes a family member has died, it can be very distressing for everyone. In the story shared, Lauren believed her friend Lynn had died in a tragedy because she saw a list of names in a newspaper. She felt alone in her grief and was upset that others weren’t mourning with her.\n\nTo help get through this difficult time, the family arranged for Lauren to meet with the real Lynn, who happened to be nearby. Even though Lauren was scared it was a bad idea, she agreed to talk to her. It took about a month of hard work from both Lauren and Lynn to reach a place where Lauren could accept that Lynn was safe.\n\nThe key lesson here is patience. You should be willing to help and wait without getting too upset if it takes time—sometimes even a month—to resolve the confusion. Trying to force agreement right away often doesn’t work, so giving the situation space and time is an important step.",
     "source_segment": {
-      "id": 11,
-      "topic": "Key Skill: Validation and Avoiding Agitation"
+      "id": 6,
+      "topic": "Complex Case Study: Lauren's Delusion Regarding Lynn"
     },
-    "time_start_sec": 478.479,
-    "time_end_sec": 536.16,
-    "time_start_hhmmss": "00:07:58",
-    "time_end_hhmmss": "00:08:56"
+    "time_start_sec": 672.399,
+    "time_end_sec": 812.88,
+    "time_start_hhmmss": "00:11:12",
+    "time_end_hhmmss": "00:13:33"
   },
   {
-    "question": "What should I do if my loved one believes someone has taken their friend's body away?",
-    "answer": "If your loved one believes someone has taken their friend's body away, it is important to listen to their perspective without arguing. In the example shared, a team member named Lauren heard her friend Lynn's story this way: she thought someone had taken Lynn's body and that the person speaking to her was an \"imposter.\" An imposter is someone pretending to be another person. When a loved one holds this belief, it is a specific type of confusion where they feel the person they are talking to is not who they say they are. The most helpful step is to simply hear their story, like the team did by asking Lauren to share her experience, rather than trying to correct the facts immediately.",
+    "question": "What should I do when my loved one mixes up memories, like seeing me hold keys and then accusing me of stealing them?",
+    "answer": "When your loved one mixes up memories, like accusing you of stealing keys they saw you holding, it helps to understand that trying to prove them wrong with facts usually does not work. Even if you have solid evidence, arguing about who is \"right\" often makes the situation worse because their brain is struggling to make sense of what happened.\n\nIn the example shared, there was a \"kernel of truth\" behind the confusion. Earlier, the caregiver and the person with dementia had talked about concerns regarding driving. Because of this recent conversation, when the person saw the caregiver holding the keys, their mind got mixed up. They couldn’t connect the dots correctly, so they felt accused or threatened, leading to an outburst.\n\nInstead of focusing on being right, try to look for the underlying feeling or the \"kernel of truth\" in their reaction. Understand that they are trying to make sense of a confusing moment based on past worries or conversations. Recognizing that this confusion comes from a place of fear or misunderstanding, rather than malice, can help you stay calm and respond with empathy instead of frustration.",
     "source_segment": {
-      "id": 13,
-      "topic": "Case Study: Lauren and the Imposter Lynn"
+      "id": 3,
+      "topic": "Analysis of Failed Response and the Kernel of Truth"
     },
-    "time_start_sec": 563.839,
-    "time_end_sec": 618.959,
-    "time_start_hhmmss": "00:09:24",
-    "time_end_hhmmss": "00:10:19"
+    "time_start_sec": 247.2,
+    "time_end_sec": 368.72,
+    "time_start_hhmmss": "00:04:07",
+    "time_end_hhmmss": "00:06:09"
   },
   {
-    "question": "What are the \"core\" skills you mentioned that help in these difficult situations?",
-    "answer": "The video mentions that you have \"core\" skills to help when a situation feels scary or very traumatic, such as when a person with dementia might steal items like a purse or car keys. However, the speaker does not list what those specific core skills are in this part of the conversation. They only explain that while these behaviors can be frightening, having those core skills is important to manage them.",
+    "question": "Why should I avoid being very loud or overly friendly when approaching someone who is upset?",
+    "answer": "When someone is upset or feeling cautious, being very loud or overly friendly can actually make things harder. The transcript explains that this approach “is not going to happen” and might cause the person to pull away. Instead of being loud, it works better to use a calm method called PPA (Positive Physical Approach). This means paying close attention to the person’s body language to see if they are okay with being touched or how close you stand. By staying calm and respecting their space—like sitting nearby but not too close—you create a safe environment. This helps the person feel secure enough to connect with you again, rather than feeling overwhelmed by high energy.",
     "source_segment": {
-      "id": 12,
-      "topic": "Handling Traumatic Accusations"
+      "id": 7,
+      "topic": "Strategies for Resolving Deep-Rooted Delusions"
     },
-    "time_start_sec": 535.2,
-    "time_end_sec": 564.72,
-    "time_start_hhmmss": "00:08:55",
-    "time_end_hhmmss": "00:09:25"
+    "time_start_sec": 810.0,
+    "time_end_sec": 993.6,
+    "time_start_hhmmss": "00:13:30",
+    "time_end_hhmmss": "00:16:34"
   },
   {
-    "question": "Why might a private one-on-one relationship make a difference in care?",
-    "answer": "Even if two people have the exact same skills, the person they are working with can make a big difference because of the relationship they share. As the video explains, we all have different private relationships when we are one-on-one. These unique connections can change how care is received and what makes a difference in a specific situation. The context suggests that while skills are important, the specific relationship between the caregiver and the person they are supporting is a key factor in helping them.",
+    "question": "What is the main difference between a hallucination and a delusion?",
+    "answer": "The main difference is that hallucinations are about what we experience with our senses, while delusions are about what we think. Hallucinations happen when the brain misinterprets sensory data, like seeing or hearing something that isn’t really there. Delusions, on the other hand, are false beliefs or stories our brain creates. They often happen because there is a missing piece of memory, so the brain makes up information to try to make sense of things. For example, if you saw someone but forgot part of the story, your brain might fill in the blanks with something that isn’t true just to help things feel logical.",
     "source_segment": {
-      "id": 18,
+      "id": 1,
+      "topic": "Introduction and Distinction Between Hallucinations and Delusions"
+    },
+    "time_start_sec": 5.68,
+    "time_end_sec": 149.28,
+    "time_start_hhmmss": "00:00:06",
+    "time_end_hhmmss": "00:02:29"
+  },
+  {
+    "question": "What specific steps should I take when a person with dementia accuses me of stealing their things?",
+    "answer": "When a person with dementia accuses you of stealing their things, like car keys, try these specific steps based on the video:\n\n1.  **Back up and use a \"supportive stance.\"** This means giving the person some physical space instead of getting too close. The video explains that getting closer can make things worse, while stepping back helps calm the situation.\n2.  **Validate what they are feeling.** Do not tell them they are wrong or argue with them. Instead, show that you understand their concern by pointing in the same direction they are looking and using some of their words. For example, if they say you took the keys, acknowledge that they think you have them.\n3.  **Take responsibility yourself.** Even if you didn’t take the item, gently accept the blame to lower tension. You might say something like, “Oh my brain, how is my memory?” or admit that maybe you moved it without realizing. By taking the blame, you stop the argument because you aren’t fighting back against their accusation.\n\nThese steps work because they avoid telling the person they are wrong, which can cause more stress. Instead, they help redirect the energy away from conflict and toward solving the problem together.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Applying PPA Skills: Supportive Stance and Validation"
+    },
+    "time_start_sec": 365.12,
+    "time_end_sec": 555.12,
+    "time_start_hhmmss": "00:06:05",
+    "time_end_hhmmss": "00:09:15"
+  },
+  {
+    "question": "What is the main difference between a hallucination and a delusion?",
+    "answer": "The video transcript does not explain the specific difference between hallucinations and delusions. It only mentions that the video helps viewers \"tease apart\" or understand the difference between them, but it does not provide the actual definitions or details within this text.",
+    "source_segment": {
+      "id": 8,
       "topic": "Conclusion and Call to Action"
     },
-    "time_start_sec": 940.72,
+    "time_start_sec": 991.6,
     "time_end_sec": 1020.3199999999999,
-    "time_start_hhmmss": "00:15:41",
+    "time_start_hhmmss": "00:16:32",
     "time_end_hhmmss": "00:17:00"
   },
   {
-    "question": "What is a good way to de-escalate a situation when my loved one is convinced I am taking their things?",
-    "answer": "When your loved one is convinced you are taking their things, like the car keys in the example, it can feel like the situation is going \"downhill\" quickly. A good way to handle this is to try again calmly and clearly, stating exactly what you see. For instance, you can say, \"My car keys are away,\" and then gently explain what you know: \"I saw you move them, and I saw the car.\" If they insist you took them, acknowledge their feeling by saying, \"You took them and you put them somewhere,\" and then ask where they put them. If they say they don't know, you can offer a simple, honest reason like, \"I put them well,\" or simply agree that their memory is terrible and that you don't know where they went either. This approach helps de-escalate the tension by staying present and not arguing about the truth of the accusation.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Applying PPA Skills: A Second Attempt"
-    },
-    "time_start_sec": 374.8,
-    "time_end_sec": 438.0,
-    "time_start_hhmmss": "00:06:15",
-    "time_end_hhmmss": "00:07:18"
-  },
-  {
-    "question": "What is a \"supportive stance\" and how does a caregiver get into it?",
-    "answer": "A \"supportive stance\" is a specific body position a caregiver takes to help de-escalate a situation. In the video, it is described as backing up and getting into a position that feels safe and non-threatening, rather than getting too close. To get into this stance, the caregiver should step back and adjust their posture to show they are there to support, not to confront. The context notes that this shift is important because it works, and caregivers often need to practice these skills repeatedly because they are effective.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Key Skill: Adopting a Supportive Stance"
-    },
-    "time_start_sec": 436.08,
-    "time_end_sec": 481.919,
-    "time_start_hhmmss": "00:07:16",
-    "time_end_hhmmss": "00:08:02"
-  },
-  {
-    "question": "What should I do when my loved one insists on something that doesn't make sense to me?",
-    "answer": "When your loved one insists on something that doesn't make sense to you, remember that as a care partner, you can't both be right. It is completely normal to feel confused and wonder where they came up with such an idea. This is often related to delusions, which are false beliefs that a person holds firmly even when there is no evidence to support them. The video notes that there are many different reasons why someone might experience delusions, but it does not provide specific steps on how to handle the situation. The main takeaway is to understand that this confusion is a symptom, not a reflection of your relationship or their character.",
+    "question": "What is a \"supportive stance,\" and how does changing my physical position help calm a situation when someone with dementia is upset?",
+    "answer": "A \"supportive stance\" means stepping back and giving the person some space, rather than moving closer to them. In the video, the caregiver noticed that getting too close made things worse, so she backed up to help calm the situation.\n\nChanging your physical position helps because it stops you from looking like you are challenging or confronting the person. When you stand back, you can also try to match their energy by pointing in the same direction they are looking. This shows you are on their side. Instead of telling them they are wrong (like saying \"No, I didn't take them\"), you validate what they are feeling by agreeing with their perspective. You might even take responsibility yourself by saying something like, \"Oh no, my memory is so bad,\" which takes the blame off them and helps lower the tension.",
     "source_segment": {
       "id": 4,
-      "topic": "The Caregiver's Challenge: Truth vs. Reality"
+      "topic": "Applying PPA Skills: Supportive Stance and Validation"
     },
-    "time_start_sec": 149.28,
-    "time_end_sec": 170.72,
-    "time_start_hhmmss": "00:02:29",
-    "time_end_hhmmss": "00:02:51"
+    "time_start_sec": 365.12,
+    "time_end_sec": 555.12,
+    "time_start_hhmmss": "00:06:05",
+    "time_end_hhmmss": "00:09:15"
   },
   {
-    "question": "Why does my loved one feel the need to defend themselves against accusations, even when I am not accusing them?",
-    "answer": "It sounds like your loved one feels a strong need to defend themselves because they are reacting to an accusation, even if you didn't intend to make one. In the video, it is explained that when someone feels accused of doing something wrong, they may feel they must prove they are right or that their actions were not wrong. This reaction can be so strong that it leads to a big fight, even if the person bringing up the issue is just trying to be right or provide evidence. The context suggests that this happens because the person is trying to avoid being accused of something they believe could be wrong, and they may feel that their explanation won't make sense in that specific moment. It is important to remember that this reaction is part of how they are processing the feeling of being accused, and it doesn't necessarily mean they are being difficult on purpose.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Analyzing the Conflict: Accusation and Denial"
-    },
-    "time_start_sec": 247.2,
-    "time_end_sec": 305.28000000000003,
-    "time_start_hhmmss": "00:04:07",
-    "time_end_hhmmss": "00:05:05"
-  },
-  {
-    "question": "How can I help my loved one feel less frustrated when they cannot remember where they put their keys?",
-    "answer": "When your loved one cannot remember where they put their keys, it can feel like the situation is \"going so far downhill,\" leading to immediate frustration and accusations, such as claiming you stole them. To help them feel less frustrated, you can try a gentle approach where you calmly restate the facts without arguing. For example, you might say, \"My car keys are away; you're thinking yes I know they were there, I saw you move them.\" If they insist you took them, acknowledge their feeling by saying, \"You took them and you put them somewhere,\" and then ask, \"Where did you put them?\" If they cannot recall, simply state, \"I put them well, why do you go?\" and offer reassurance about their memory, like saying, \"You know how terrible my memory is.\" This method helps de-escalate the tension by focusing on the immediate situation rather than the memory loss itself.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Applying PPA Skills: A Second Attempt"
-    },
-    "time_start_sec": 374.8,
-    "time_end_sec": 438.0,
-    "time_start_hhmmss": "00:06:15",
-    "time_end_hhmmss": "00:07:18"
-  },
-  {
-    "question": "How can I handle a situation where others in the community feel I am grieving too much or incorrectly?",
-    "answer": "When others in your community feel you are grieving too much or incorrectly, it can feel very lonely and distressing, as if those who should be supportive are not grieving the same way you are. This situation can be tough because you may not be able to get others to grieve exactly as you feel. However, there are ways to move through this. In one difficult situation described, a person named Lynn was away in California, and someone else was pretending to be her. Even though the person grieving (Lauren) initially thought it was a bad idea, she agreed to talk to the person claiming to be Lynn. This was a hard step, but Lynn eventually returned, and it took about a month for things to get to a better place where they could work together. The key is that even when you cannot agree on how to grieve right away, you can push gently toward a conversation or a meeting, and with time and hard work from both sides, you can find a way to get through it.",
-    "source_segment": {
-      "id": 15,
-      "topic": "Resolving the Delusion: Patience and Teamwork"
-    },
-    "time_start_sec": 690.64,
-    "time_end_sec": 799.4399999999999,
-    "time_start_hhmmss": "00:11:31",
-    "time_end_hhmmss": "00:13:19"
-  },
-  {
-    "question": "Why might a person with dementia accuse a caregiver of stealing or poisoning them even when it is not happening?",
-    "answer": "When a person with dementia says things like \"you stole my purse\" or \"you're trying to poison me,\" it often feels scary, but there is usually a small piece of truth behind it. In the example shared, the person with dementia had a real conversation about driving safety a few days earlier, but they didn't reach a decision. Later, they saw the caregiver holding the keys, which mixed up their memory of that earlier talk. Because they are trying to make sense of these confusing details, their brain creates an accusation to explain what they are feeling. The key takeaway is that even when the accusation seems untrue, it is rooted in a real concern or a memory that has become mixed up.",
-    "source_segment": {
-      "id": 8,
-      "topic": "The Kernel of Truth Behind the Delusion"
-    },
-    "time_start_sec": 303.68,
-    "time_end_sec": 376.08,
-    "time_start_hhmmss": "00:05:04",
-    "time_end_hhmmss": "00:06:16"
-  },
-  {
-    "question": "Why do people with dementia sometimes believe things that aren't true?",
-    "answer": "People with dementia sometimes believe things that aren't true because their brain tries to make sense of missing pieces of memory. When they have some memory of something but a part is missing, their brain takes other pieces of data they have—like seeing you—and fills in the gaps to create a story that makes sense. This is called a delusion. It happens because the brain is trying to solve a puzzle, but it makes things up to complete the picture.",
+    "question": "Instead of arguing about who is right, how can I respond to accusations like stealing or poisoning in a way that helps calm things down?",
+    "answer": "When a person with dementia accuses you of stealing or poisoning, trying to prove them wrong with facts or evidence usually does not help. As the video shows, even if you have proof that would hold up in court, it likely will not calm the situation because the person is reacting to an emotional feeling, not logic.\n\nInstead of arguing about who is right, look for the \"kernel of truth\" behind the accusation. This means there is often a real worry or event from the past that got mixed up in their memory. For example, in the video, the person was upset about driving. She remembered a conversation about her keys and hiding them, but her brain mixed up the details, making her feel like she was being controlled or accused.\n\nTo help calm things down, try to understand what underlying fear or confusion is causing the reaction. Acknowledge their feelings rather than correcting the facts. By seeing the confusion as a mix-up of real events (like the car keys) rather than a lie, you can respond with empathy instead of defensiveness.",
     "source_segment": {
       "id": 3,
-      "topic": "The Mechanism of Delusions: Filling Memory Gaps"
-    },
-    "time_start_sec": 123.84,
-    "time_end_sec": 155.2,
-    "time_start_hhmmss": "00:02:04",
-    "time_end_hhmmss": "00:02:35"
-  },
-  {
-    "question": "How can I help my loved one feel safe enough to listen to me instead of getting defensive?",
-    "answer": "It can be really hard to watch when a loved one gets defensive, like Amanda did in the clip. She was reacting strongly to an accusation, feeling like she had to prove she was right and that she hadn't done anything wrong. This often happens because the person feels attacked and wants to protect themselves from being seen as doing something bad. In that moment, even if you have evidence that would hold up in a court of law, it might not help right then. The most important thing to understand is that they are trying to be right and avoid the feeling of being accused. When they feel this way, they may not be able to listen to you, no matter how true your words are.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Analyzing the Conflict: Accusation and Denial"
+      "topic": "Analysis of Failed Response and the Kernel of Truth"
     },
     "time_start_sec": 247.2,
-    "time_end_sec": 305.28000000000003,
+    "time_end_sec": 368.72,
     "time_start_hhmmss": "00:04:07",
-    "time_end_hhmmss": "00:05:05"
+    "time_end_hhmmss": "00:06:09"
   }
 ]

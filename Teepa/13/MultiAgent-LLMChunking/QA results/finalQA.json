@@ -1,70 +1,70 @@
 [
   {
-    "question": "How does the webinar series distinguish between normal aging and other conditions?",
-    "answer": "The webinar series distinguishes between normal aging and other conditions by presenting a direct visual comparison. It shows viewers what normal aging looks like and contrasts it with what non-normal aging looks like, using real people to demonstrate these differences in action. This approach helps clarify that the issues discussed are not necessarily dementia, but rather other signs that indicate aging is not proceeding normally.",
-    "source_segment": {
-      "id": 15,
-      "topic": "Promotion of Educational Resources and Webinars"
-    },
-    "time_start_sec": 779.76,
-    "time_end_sec": 834.519,
-    "time_start_hhmmss": "00:13:00",
-    "time_end_hhmmss": "00:13:55"
-  },
-  {
-    "question": "How can one distinguish between normal aging and abnormal health conditions?",
-    "answer": "The provided transcript does not contain information on how to distinguish between normal aging and abnormal health conditions. The text only introduces the topic as a major concern for older adults and notes technical difficulties during the broadcast. Therefore, no educational content regarding this distinction can be extracted from the source material.",
+    "question": "What specific behaviors should I look out for that might indicate dementia rather than normal forgetfulness?",
+    "answer": "I’m sorry, but the video transcript provided does not contain any specific information about what behaviors to look for. The speakers only mention that they are starting a discussion on whether certain signs are \"normal aging or not\" and that they will be asking questions to reveal things about themselves. Because the actual list of symptoms or differences is not included in this text, I cannot give you those specific details based on this source alone.",
     "source_segment": {
       "id": 1,
-      "topic": "Introduction and Technical Difficulties"
+      "topic": "Introduction and Technical Setup"
     },
     "time_start_sec": 1.24,
-    "time_end_sec": 51.120000000000005,
+    "time_end_sec": 61.96,
     "time_start_hhmmss": "00:00:01",
-    "time_end_hhmmss": "00:00:51"
+    "time_end_hhmmss": "00:01:02"
   },
   {
-    "question": "How can one distinguish between normal aging and symptoms that may indicate an underlying medical condition?",
-    "answer": "To distinguish between normal aging and symptoms that may indicate an underlying medical condition, one should apply a framework of curiosity and careful observation rather than immediate alarm. The following key distinctions are essential:\n\n1.  **Rate of Change**: Assess whether the change is **rapid** or has occurred **slowly over time**. A sudden shift in behavior, cognition, or physical ability often signals an acute medical issue, whereas gradual changes are more likely associated with the natural aging process.\n2.  **Baseline Consistency**: Determine if the behavior or symptom aligns with **who the person has always been**. Normal aging does not typically involve a fundamental alteration of personality or long-standing habits.\n3.  **External Influence**: Investigate whether the change is due to **new medications**. Many drugs have side effects that mimic cognitive decline or behavioral changes; reviewing current prescriptions is a critical step.\n4.  **Social Context**: Consider if the change is something that **nobody ever told** the person about previously. If a significant shift in identity or capability has gone unnoticed by the individual's support network, it warrants closer scrutiny.\n5.  **Deviation from Norms**: Recognize that certain symptoms are **not normal aging**. When changes deviate significantly from expected age-related adjustments, it is time to look deeper into potential underlying conditions.\n\nIn summary, the distinction lies in moving from passive acceptance to active inquiry: asking *what* has changed, *how fast*, and *why*, while specifically ruling out medication side effects and confirming if the change represents a departure from the individual's established baseline.",
+    "question": "Is it normal to worry every time I forget a small detail, or should I look for other signs first?",
+    "answer": "You do not need to worry every time you forget a small detail. Our brains have something called \"working memory,\" which is like a mental workspace that can only hold five to eight things at one time. If your mind is already busy thinking about other tasks—like when to take out the trash or which bin to use—it is normal to forget a neighbor’s name because your brain is full.\n\nInstead of worrying immediately, look for these signs to decide if you should be curious:\n*   **Frequency:** Is this happening more often than usual?\n*   **Awareness:** Are you noticing it yourself, or are people around you noticing?\n*   **Change:** Is this a recent change from who you used to be?\n\nIf these changes are happening frequently and there is no break in the pattern, it is time to get curious rather than concerned. This might mean looking into other causes, such as new medications, before assuming it is dementia.",
     "source_segment": {
-      "id": 12,
-      "topic": "Distinguishing Concern from Curiosity"
+      "id": 4,
+      "topic": "Distinguishing Normal Aging from Cognitive Decline"
     },
-    "time_start_sec": 594.8,
+    "time_start_sec": 378.08,
     "time_end_sec": 625.959,
-    "time_start_hhmmss": "00:09:55",
+    "time_start_hhmmss": "00:06:18",
     "time_end_hhmmss": "00:10:26"
   },
   {
-    "question": "What behavioral signs, such as frustration or repetitive questioning, might indicate that a loved one is experiencing unacknowledged cognitive changes?",
-    "answer": "Based on the provided transcript, the following behavioral signs may indicate that a loved one is experiencing unacknowledged cognitive changes:\n\n*   **Frustration:** The individual may display a \"frustrated look\" when others point out changes in their behavior or memory.\n*   **Repetitive Questioning:** The person may repeatedly ask the same questions, such as \"Why are you asking me this again?\" or \"Why are you doing this again?\"\n*   **Lack of Awareness:** These behaviors often occur in a scenario where the individual is not aware that changes are happening (unlike the 50% who are aware), leading them to react defensively rather than acknowledging the issue.\n*   **Absence of Improvement:** A key indicator is when these patterns become persistent and do not return to a previous baseline (\"isn't a respite back to where you used to be\").\n\nThe transcript suggests that when these signs form a \"new pattern\" without returning to normal, it is time to seek further evaluation.",
+    "question": "Is it true that older adults cannot learn new things, and how does this affect how we help them adapt?",
+    "answer": "No, it is not true that older adults cannot learn new things. The video explains that the idea that \"old dogs can't learn new tricks\" is a falsehood. While it may take older brains a little bit longer to learn as they age, they are still fully capable of learning.\n\nThis affects how we help them because we need to be patient and look for changes in their usual coping methods. We all use \"compensatory strategies\"—which are helpful tricks or habits, like using a calendar or memory aids, to handle small mistakes or forgetfulness. If someone starts struggling even when using these familiar tools, or if they can no longer find a logical way to solve a problem, it is a sign to get curious and ask questions.\n\nInstead of assuming they just can’t learn, check if something external has changed. For example, did they start new medications? Did a routine change? Did someone stop printing out the calendar they always relied on? By figuring out if the issue is due to a new situation, an overload of tasks, or a genuine change in ability, you can better understand what is happening and offer the right support.",
     "source_segment": {
-      "id": 11,
-      "topic": "Awareness of Changes: Self vs. Others"
+      "id": 5,
+      "topic": "The Role of Compensatory Strategies and Working Memory"
     },
-    "time_start_sec": 555.12,
-    "time_end_sec": 597.1999999999999,
-    "time_start_hhmmss": "00:09:15",
-    "time_end_hhmmss": "00:09:57"
+    "time_start_sec": 622.959,
+    "time_end_sec": 783.32,
+    "time_start_hhmmss": "00:10:23",
+    "time_end_hhmmss": "00:13:03"
   },
   {
-    "question": "In what ways does the accumulation of multiple simultaneous tasks impact an individual's ability to retain new data?",
-    "answer": "Based on the transcript provided, the accumulation of multiple simultaneous tasks impacts an individual's ability to retain new data in the following ways:\n\n*   **Cognitive Capacity Limits:** The human working memory has a limited capacity, estimated to hold only **five to eight items** at one time while processing information.\n*   **Data Saturation:** When an individual is already managing several concurrent thoughts or tasks (e.g., remembering the day of the week, deciding which trash bin to use, and recalling a specific instruction), their working memory becomes \"cluttered\" or saturated.\n*   **Inability to Process New Input:** Once this cognitive limit is reached, the brain cannot accept any additional data. As illustrated in the transcript, when a neighbor greets the individual while their memory is already full, the brain fails to register the new information, resulting in the inability to remember the neighbor's name.\n*   **Perception of Normalcy:** This phenomenon explains why forgetting a name in a busy environment may not necessarily indicate dementia, but rather a natural consequence of the brain reaching its processing threshold due to the volume of simultaneous tasks.",
+    "question": "How can I figure out if a person is struggling because they are overwhelmed by too many tasks at once?",
+    "answer": "To figure out if someone is struggling because they are overwhelmed, try to notice how many things they are trying to handle at once. The transcript suggests that a person might be having trouble if they are already working on five to eight things and simply cannot process one more task. It helps to ask yourself: Is this difficulty happening because something new or different was introduced (like a new routine or medication), or is it because their brain is just full? Older brains can still learn new things, but it often takes them a little longer. So, look for patterns where the person seems unable to manage extra demands on top of what they are already doing, rather than assuming they can’t learn anything new.",
     "source_segment": {
-      "id": 9,
-      "topic": "Defining Normal Aging: Working Memory Limits"
+      "id": 5,
+      "topic": "The Role of Compensatory Strategies and Working Memory"
     },
-    "time_start_sec": 378.08,
-    "time_end_sec": 486.28,
-    "time_start_hhmmss": "00:06:18",
-    "time_end_hhmmss": "00:08:06"
+    "time_start_sec": 622.959,
+    "time_end_sec": 783.32,
+    "time_start_hhmmss": "00:10:23",
+    "time_end_hhmmss": "00:13:03"
   },
   {
-    "question": "In what ways does a pattern of daily errors shift a person's mindset from casual observation to active worry?",
-    "answer": "Based on the transcript, a pattern of daily errors shifts a person's mindset through a specific psychological progression:\n\n1.  **Initial Reaction:** The immediate response to a single error is typically \"momentary panic,\" followed by a calming \"deep breath.\" At this stage, the event is treated as an isolated incident.\n2.  **The Trigger for Shift:** The mindset changes when the error ceases to be isolated and becomes a **recurring pattern** (e.g., happening \"literally every day\" or \"every time\" a person attempts a task).\n3.  **Escalation of Concern:** As the frequency increases, the initial concern intensifies. The transcript notes that the feeling \"gets more concerning\" the more often the mistake occurs.\n4.  **Emergence of Shame:** Eventually, the pattern triggers feelings of **shame**. The individual realizes their brain is failing to \"connect the dots\" (as seen in the example of not knowing a neighbor's name), leading to a \"shame spiral\" where they feel stuck and unable to correct the situation naturally.\n5.  **Self-Questioning:** The repeated nature of the error causes the individual to start **questioning themselves**, realizing that the mistake is a fundamental flaw in their behavior rather than a one-time slip.\n\nIn summary, the shift occurs because the **frequency** of the error transforms the experience from a manageable, isolated panic into a persistent, shameful, and self-doubting spiral.",
+    "question": "What are the key differences between normal aging and signs of dementia?",
+    "answer": "I’m sorry, but the video transcript provided does not contain any information about the specific differences between normal aging and signs of dementia. The text only shows the hosts starting their live session, mentioning technical difficulties, and introducing the topic title \"Is this normal: normal aging or not?\" without actually explaining the medical details or listing the symptoms. Therefore, I cannot answer your question using only the provided context.",
     "source_segment": {
-      "id": 8,
-      "topic": "Emotional Impact: Panic, Shame, and Frustration"
+      "id": 1,
+      "topic": "Introduction and Technical Setup"
+    },
+    "time_start_sec": 1.24,
+    "time_end_sec": 61.96,
+    "time_start_hhmmss": "00:00:01",
+    "time_end_hhmmss": "00:01:02"
+  },
+  {
+    "question": "What is the normal emotional reaction when someone with dementia realizes they are forgetting things, and does this feeling usually pass?",
+    "answer": "When someone with dementia notices they are forgetting things, the normal first reaction is a moment of panic. Usually, this feeling passes quickly as they take a deep breath and calm down. However, if these moments happen every day or every time they try to do something, the worry can grow stronger.\n\nBeyond panic, people often feel shame or frustration. For example, someone might feel embarrassed because they forgot a neighbor's name after living next to them for years. They might also feel frustrated when they have to ask the same question multiple times, especially when they see on someone else’s face that they’ve made a mistake by asking again.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Emotional Responses to Forgetfulness"
     },
     "time_start_sec": 243.56,
     "time_end_sec": 377.28,
@@ -72,171 +72,63 @@
     "time_end_hhmmss": "00:06:17"
   },
   {
-    "question": "What factors contribute to \"cluttering\" working memory in daily life, and how does this affect an individual's ability to process new information?",
-    "answer": "Based on the transcript provided, the following factors contribute to \"cluttering\" working memory and affect an individual's ability to process new information:\n\n**Factors Contributing to Cluttering**\n*   **Cumulative Daily Demands:** Working memory is constantly occupied by multiple ongoing tasks and thoughts. The transcript illustrates this with a scenario where an individual is simultaneously trying to remember:\n    *   Which day of the week it is.\n    *   The specific day required to put out the trash.\n    *   Whether the trash was placed on the left or right side previously.\n    *   The rules for a new waste collection company (e.g., distinguishing between the green and brown bins).\n*   **Social Interactions:** Encountering people, such as a neighbor saying \"hi,\" adds another item to the mental load.\n*   **The Capacity Limit:** The transcript identifies the \"magic number\" for working memory as holding only **five to eight items** at one time. When daily life requires tracking more than this limit, the memory becomes \"cluttered.\"\n\n**Impact on Processing New Information**\n*   **Inability to Accept New Data:** When the working memory is already at or over its capacity (e.g., \"I'm already at five\"), the brain cannot accommodate additional information.\n*   **Immediate Forgetting:** Because there is no available \"space\" in the working memory, new information is lost instantly. In the example, the individual forgets the neighbor's name immediately upon hearing it because their cognitive resources are fully consumed by the existing list of tasks.\n*   **Confusion and Anxiety:** The inability to process new data leads to confusion (e.g., \"is that okay?\") and unnecessary worry about whether the forgetting indicates a serious condition like dementia, when it may simply be a result of normal cognitive overload.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Defining Normal Aging: Working Memory Limits"
-    },
-    "time_start_sec": 378.08,
-    "time_end_sec": 486.28,
-    "time_start_hhmmss": "00:06:18",
-    "time_end_hhmmss": "00:08:06"
-  },
-  {
-    "question": "How does the accumulation of multiple tasks (e.g., working on five to eight things) affect an individual's ability to process new information?",
-    "answer": "Based on the provided transcript, the accumulation of multiple tasks significantly impairs an individual's ability to process new information due to cognitive overload.\n\nThe speaker explicitly states that they are \"already working on five to eight things\" and consequently \"can't process that one more thing.\" This indicates that when the brain is managing a high volume of existing responsibilities, its capacity to handle additional new inputs is diminished. The text suggests that this limitation is a key factor in distinguishing between normal aging challenges and potential cognitive decline, as the brain struggles to integrate new data when it is already saturated with current tasks.",
-    "source_segment": {
-      "id": 14,
-      "topic": "Learning Capacity and New Routines"
-    },
-    "time_start_sec": 709.6,
-    "time_end_sec": 783.32,
-    "time_start_hhmmss": "00:11:50",
-    "time_end_hhmmss": "00:13:03"
-  },
-  {
-    "question": "Why might road signs in major cities fail to match the driver's expectations of the route?",
-    "answer": "Based on the provided transcript, road signs in major cities may fail to match a driver's expectations because the physical road layout does not follow the anticipated path.\n\nSpecifically, the text notes that in larger cities:\n*   **\"Things just the road doesn't go where you thought it was gonna go.\"**\n\nThis implies that urban infrastructure often involves complex intersections, detours, or changes in direction that are not immediately obvious, leading drivers to follow signs that eventually disappear or lead to dead ends, forcing them to navigate back to their intended route.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Struggles with New Technology and Navigation"
-    },
-    "time_start_sec": 177.36,
-    "time_end_sec": 227.48000000000002,
-    "time_start_hhmmss": "00:02:57",
-    "time_end_hhmmss": "00:03:47"
-  },
-  {
-    "question": "What is the purpose of the questions that the pack team will reveal in this segment?",
-    "answer": "The purpose of the questions that the pack team will reveal in this segment is to address topics about themselves that the audience has likely never been curious about before, thereby providing new information and prompting the audience to ask themselves similar questions.",
+    "question": "Why do I sometimes forget a neighbor's name even though I see them every day?",
+    "answer": "The video transcript mentions forgetting a neighbor's name as a common experience, but it does not explain *why* this specific thing happens. It simply lists it as one of those moments where a name you should know suddenly \"escapes\" you. The speaker uses this example to show that many people have these kinds of memory lapses, like leaving keys in weird places or telling the same story over and over. So, while the text confirms this happens to lots of people, it doesn't give a medical reason for why it occurs with neighbors specifically.",
     "source_segment": {
       "id": 2,
-      "topic": "Topic Overview: Normal Aging Concerns"
+      "topic": "Common Memory Lapses and Aging Concerns"
     },
-    "time_start_sec": 47.559,
-    "time_end_sec": 67.96000000000001,
-    "time_start_hhmmss": "00:00:48",
-    "time_end_hhmmss": "00:01:08"
-  },
-  {
-    "question": "How can one distinguish between normal aging and not normal aging based on the frequency of cognitive changes?",
-    "answer": "Based on the provided transcript, distinguishing between normal aging and potentially abnormal cognitive changes relies on observing the **frequency** and **pattern** of occurrences rather than isolated incidents.\n\nKey indicators that suggest a change is **not normal aging** include:\n\n*   **Increased Frequency:** The change happens \"more frequently\" than before.\n*   **Consistency During the Day:** The occurrences happen \"a lot during the day,\" suggesting a persistent issue rather than a rare lapse.\n*   **Recent Onset:** It is described as a \"fairly recent change,\" indicating a shift from the person's established baseline (\"it's not who I have been\").\n*   **Noticeability:** The change is significant enough to be \"noticeable\" in the \"amount of times that it's happening.\"\n*   **External Observation:** The individual notices the change themselves, or \"one or two other people might notice it,\" implying that the behavior is observable to others, not just the individual.\n\nIn contrast, normal aging is implied to involve less frequent, less noticeable lapses that do not represent a recent shift in the person's typical behavior.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Recognizing Patterns: Frequency and Noticeability"
-    },
-    "time_start_sec": 484.039,
-    "time_end_sec": 556.6,
-    "time_start_hhmmss": "00:08:04",
-    "time_end_hhmmss": "00:09:17"
-  },
-  {
-    "question": "What specific indicators should one look for to distinguish between normal aging and signs of cognitive decline?",
-    "answer": "Based on the provided transcript, the specific indicators to distinguish between normal aging and signs of cognitive decline are not the mere occurrence of forgetfulness or memory lapses, but rather the **failure of established compensatory strategies** and the **loss of logical pathways** to solve daily problems.\n\nThe key distinctions include:\n\n*   **Breakdown of Compensatory Skills:** Normal aging involves \"little bobbles\" or moments of forgetfulness that are managed by existing strategies (e.g., using a calendar, using mnemonics for names). A sign of decline is when these specific, long-relied-upon strategies stop working or are no longer accessible.\n*   **Absence of a Logical Pathway:** If an individual cannot find a \"logical or reasonable rational pathway\" to find answers or work around a problem, this indicates a concern.\n*   **Novelty of the Change:** The speaker emphasizes that the issue is a \"change\" if it is new. For example, if one has always been able to use a calendar or remember a neighbor's name via a mnemonic, but suddenly cannot, this deviation from one's baseline is a red flag.\n*   **Inability to \"Make Sense\":** A critical indicator is when compensatory efforts no longer lead to a state where \"things make sense for me and everyone else around me.\" The inability to restore order or understanding through previous methods suggests the cognitive decline is affecting functional independence.\n\nIn summary, the transcript suggests that the transition from normal aging to cognitive decline is marked by the **sudden inability to utilize previously effective coping mechanisms** to navigate daily life, resulting in a lack of logical resolution to problems.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Loss of Compensatory Strategies"
-    },
-    "time_start_sec": 622.959,
-    "time_end_sec": 712.5600000000001,
-    "time_start_hhmmss": "00:10:23",
-    "time_end_hhmmss": "00:11:53"
-  },
-  {
-    "question": "How can distinguishing between new environmental factors and established cognitive patterns help in diagnosing memory issues?",
-    "answer": "Distinguishing between new environmental factors and established cognitive patterns is a critical diagnostic strategy for memory issues because it allows for the separation of **situational challenges** from **pathological decline**.\n\nBased on the provided transcript, this distinction helps in the following ways:\n\n1.  **Identifying External Barriers (Environmental Factors):**\n    *   The transcript highlights that changes in routine or tools can mimic cognitive decline. For example, the speaker questions if a \"new calendar system\" is the cause of difficulty, rather than a brain change.\n    *   Recognizing these factors prevents misdiagnosis. If a person struggles with a new task (like learning a new system), the issue is likely **adaptability to novelty** rather than a loss of memory capacity.\n\n2.  **Debunking Age-Related Myths:**\n    *   The text explicitly refutes the idea that \"old dogs can't learn new tricks.\" It clarifies that aging brains *can* learn new things, but it \"takes us a little bit longer.\"\n    *   Distinguishing the *rate* of learning from the *ability* to learn helps clinicians understand that difficulty with new tasks is often a matter of time and patience, not irreversible damage.\n\n3.  **Assessing Cognitive Load:**\n    *   The speaker notes they are already \"working on five to eight things\" and cannot process \"one more thing.\"\n    *   This suggests that memory issues may stem from **overload** (too many new or active tasks) rather than a singular deficit. Diagnosing the issue requires determining if the brain is failing due to complexity or due to a specific pattern of failure.\n\n4.  **Pattern Recognition vs. Isolated Incidents:**\n    *   The speaker asks, \"How much of it is... a pattern?\"\n    *   If difficulties are isolated to a new environment (e.g., a new calendar), it is likely transient. If the difficulties follow a consistent \"pattern\" across different contexts, it may indicate a deeper cognitive issue requiring medical intervention.\n\n**Conclusion:**\nBy systematically asking questions about new medications, routines, and tools, one can determine if memory lapses are due to **external variables** (which are solvable) or **internal cognitive patterns** (which may require clinical attention). This approach ensures that temporary struggles with novelty are not mistaken for permanent cognitive decline.",
-    "source_segment": {
-      "id": 14,
-      "topic": "Learning Capacity and New Routines"
-    },
-    "time_start_sec": 709.6,
-    "time_end_sec": 783.32,
-    "time_start_hhmmss": "00:11:50",
-    "time_end_hhmmss": "00:13:03"
-  },
-  {
-    "question": "How does the concept of \"weird spaces\" relate to the difficulty of retrieving misplaced items?",
-    "answer": "The concept of \"weird spaces\" relates to the difficulty of retrieving misplaced items by highlighting a specific cognitive failure where the brain's expectation of an object's location conflicts with its actual, illogical position.\n\nIn the provided transcript, the speaker contrasts common errors (like forgetting a neighbor's name) with the absurdity of leaving keys in a freezer. The \"weird spaces\" mentioned in lines 31–33 refer to locations that are physically possible but psychologically unexpected or counter-intuitive (e.g., inside a freezer, under a sofa, or in a drawer where they were never placed).\n\nThe difficulty arises because:\n1.  **Violation of Mental Maps:** We store objects in our memory based on habitual routines. When an item is found in a \"weird space,\" it disrupts this mental map, causing a momentary freeze or confusion.\n2.  **Search Inefficiency:** Because the location is illogical, the brain struggles to initiate a targeted search strategy, often leading to a prolonged and frustrating hunt through unlikely areas.\n3.  **Cognitive Dissonance:** The realization that an item is in such a space often triggers a sense of guilt or disbelief (as noted in line 29: \"any guilty parties on that one\"), which can further distract from the immediate task of retrieval.\n\nEssentially, \"weird spaces\" represent the gap between where we *think* we put something and where we *actually* put it, making the retrieval process more challenging than simply forgetting the item entirely.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Memory Lapses: Names and Locations"
-    },
-    "time_start_sec": 66.159,
-    "time_end_sec": 90.64,
-    "time_start_hhmmss": "00:01:06",
-    "time_end_hhmmss": "00:01:31"
-  },
-  {
-    "question": "How can a speaker effectively clarify a previous explanation when they feel it was not shared well?",
-    "answer": "Based on the provided transcript, a speaker can effectively clarify a previous explanation when they feel it was not shared well by immediately acknowledging the failure of the initial attempt and explicitly stating their intention to retry.\n\nIn the transcript (lines 354–356), the speaker demonstrates this strategy through the following steps:\n1.  **Direct Admission:** The speaker openly admits, \"I did not so see,\" indicating that the previous message was unclear or misunderstood.\n2.  **Explicit Intent:** The speaker states, \"I'm going to try it again,\" clearly signaling to the audience that a correction or repetition is forthcoming.\n3.  **Immediate Action:** The speaker follows the statement of intent immediately with the action of repeating the content (\"here we go\"), ensuring the clarification happens without unnecessary delay.\n\nThis approach combines honesty about the communication breakdown with a proactive solution, allowing the audience to focus on the corrected information rather than the confusion of the first attempt.",
-    "source_segment": {
-      "id": 17,
-      "topic": "Demonstration of Memory Struggle with Appointment"
-    },
-    "time_start_sec": 891.88,
-    "time_end_sec": 981.639,
-    "time_start_hhmmss": "00:14:52",
-    "time_end_hhmmss": "00:16:22"
-  },
-  {
-    "question": "Why is taking a photograph of a parking location and the surrounding zone recommended after traveling to an airport?",
-    "answer": "Taking a photograph of a parking location and the surrounding zone is recommended after traveling to an airport because it serves as a critical external memory aid for the hippocampus.\n\nWhen you arrive at a new environment, such as an airport parking lot, the brain treats it as a \"new space\" that requires cognitive processing to map and remember. However, factors like fatigue from travel, the stress of the journey, or the sheer volume of similar-looking cars can overwhelm the brain's ability to encode this specific spatial information immediately.\n\nBy taking a photo, you create a visual record that compensates for this potential memory failure. This is particularly important in large, confusing parking lots where many cars look identical. Without this visual cue, you are forced to rely solely on your internal memory, which may fail, leading to the frustrating experience of driving around the lot searching for your vehicle. The photo acts as a reliable reference point to quickly identify your car's specific location and the surrounding context (such as color codes or zone markers) upon your return.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Spatial Disorientation: Rooms and Parking"
-    },
-    "time_start_sec": 136.2,
-    "time_end_sec": 180.35999999999999,
-    "time_start_hhmmss": "00:02:16",
-    "time_end_hhmmss": "00:03:00"
-  },
-  {
-    "question": "How does repeating a request multiple times impact the likelihood of it being remembered?",
-    "answer": "Repeating a request multiple times significantly increases the likelihood of it being remembered, primarily through the psychological principle of **frequency** and the reinforcement of **memory encoding**.\n\nBased on the provided transcript, the impact is demonstrated through the following mechanisms:\n\n1.  **Reinforcement of Memory Traces**: When a request is repeated (e.g., \"asked three times\"), it creates multiple neural pathways associated with that information. The speaker in the text notes that they wrote the appointment down because the listener \"asked me\" to do so. This repetition transforms a fleeting verbal instruction into a concrete, actionable item.\n2.  **External Anchoring**: Repetition often leads to the creation of external memory aids. In the text, the speaker mentions writing the appointment on a \"calendar\" and placing a \"Post-It by the door.\" These actions are direct responses to the repeated nature of the request, serving as physical triggers that ensure the information is not forgotten.\n3.  **Perception of Importance**: Repeating a request signals urgency and importance. The phrase \"enough oh my go\" suggests frustration, implying that the repetition was necessary to convey the critical nature of the appointment. This emotional weight helps the listener prioritize the memory.\n4.  **Verification and Confirmation**: The context mentions \"double or triple check.\" Repetition allows for verification. By stating the plan multiple times, the speaker ensures that the listener has correctly received and understood the information, reducing the chance of miscommunication.\n\nIn summary, the transcript illustrates that while a single request might be overlooked, repeating it multiple times forces the brain to process the information more deeply and often results in the creation of tangible reminders (like calendars or notes), thereby drastically improving retention and compliance.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Verification Habits and Appointment Confusion"
-    },
-    "time_start_sec": 225.4,
+    "time_start_sec": 59.28,
     "time_end_sec": 241.72,
-    "time_start_hhmmss": "00:03:45",
+    "time_start_hhmmss": "00:00:59",
     "time_end_hhmmss": "00:04:02"
   },
   {
-    "question": "What alternative learning options are available if the webinar does not suit a viewer's schedule?",
-    "answer": "Based on the transcript, if the specific webinar series does not fit a viewer's schedule, the speaker mentions that there are **\"lots of other free options\"** available. The transcript does not specify the exact nature of these alternatives, only that they are free and accessible online.",
+    "question": "When should I start getting curious about whether changes are due to normal aging or something else?",
+    "answer": "You should start getting curious, rather than worried, when you notice that certain things are happening much more often than before. It is a sign to pay attention if these changes are frequent during the day and seem like a fairly recent shift from who you used to be.\n\nSometimes, you might be the first person to notice these changes because about half of people with dementia are aware that something is different. Other times, about half of people are not aware, so family members or friends might be the ones noticing. If others are asking why you are doing things differently or looking frustrated, it is time to get curious.\n\nGetting curious means looking for other possible causes instead of jumping to conclusions. Ask yourself: Has there been a rapid change? Have you started new medications? Is this just how you have always been? If there is no break in the pattern and it doesn’t go back to normal, it is likely not just normal aging, and it is a good time to look into what else might be going on.",
     "source_segment": {
-      "id": 18,
-      "topic": "Conclusion and Future Platform Plans"
+      "id": 4,
+      "topic": "Distinguishing Normal Aging from Cognitive Decline"
     },
-    "time_start_sec": 987.68,
+    "time_start_sec": 378.08,
+    "time_end_sec": 625.959,
+    "time_start_hhmmss": "00:06:18",
+    "time_end_hhmmss": "00:10:26"
+  },
+  {
+    "question": "Is it normal to put things in strange places, like leaving my keys in the freezer, and why does this happen?",
+    "answer": "Yes, it is something that happens! The speaker asks if anyone has ever left their keys in the freezer or put them in weird spots where they didn’t belong. While not everyone admits to this specific mistake, it is listed as one of those common memory lapses we all experience.\n\nThe transcript doesn't give a deep medical reason for *why* keys end up in the freezer specifically, but it does explain why our brains sometimes struggle with location and memory. For example, when you walk into a new room, your brain’s \"hippocampus\" (the part that helps us figure out space) has to work hard to process that new environment. When things are unfamiliar—like a new parking lot at an airport or a busy shopping center during Christmas—it’s easier to forget details, like where you parked or where you put your keys. It’s just your brain trying to handle too much new information at once. So, don’t worry; these little mix-ups are normal parts of how our memory works when we are distracted or dealing with changes.",
+    "source_segment": {
+      "id": 2,
+      "topic": "Common Memory Lapses and Aging Concerns"
+    },
+    "time_start_sec": 59.28,
+    "time_end_sec": 241.72,
+    "time_start_hhmmss": "00:00:59",
+    "time_end_hhmmss": "00:04:02"
+  },
+  {
+    "question": "What is the difference between normal aging and signs that are not normal?",
+    "answer": "The video transcript does not provide specific details or lists explaining the differences between normal aging and signs that are not normal. It only mentions that the speakers gave an \"insight\" into these topics during their session. For more information, the transcript suggests checking out their webinar series starting on Monday, April 13th, or joining their daily sessions at 5:00.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Video Clip Demonstration and Closing Remarks"
+    },
+    "time_start_sec": 899.959,
     "time_end_sec": 1046.48,
-    "time_start_hhmmss": "00:16:28",
+    "time_start_hhmmss": "00:15:00",
     "time_end_hhmmss": "00:17:26"
   },
   {
-    "question": "What specific challenges arise when trying to find the right word after a long day, and why can the lack of receptiveness from others make this process more difficult?",
-    "answer": "Based on the provided transcript, the specific challenges and difficulties associated with finding the right word after a long day are as follows:\n\n**Specific Challenges After a Long Day**\nThe transcript highlights that the difficulty of retrieving the correct vocabulary increases significantly after a long day. The speaker describes a mental struggle where the individual is trying to recall \"the thing\" and \"the one with the thing,\" indicating a blockage in accessing specific concepts or descriptions. This state is characterized as a \"tricky\" situation where the mind struggles to articulate the precise meaning or identity of the subject being discussed.\n\n**Impact of Lack of Receptiveness**\nThe process becomes more difficult when others involved in the conversation are not \"receptive.\" The transcript outlines two specific negative outcomes when the listener fails to help:\n1.  **Lack of Assistance:** The other person does not actively help the speaker find the word.\n2.  **Provision of Incorrect Vocabulary:** The listener may offer words that are \"not the right word.\"\n\nThe speaker explicitly states that receiving incorrect suggestions or a lack of support in this state is \"very not helpful,\" thereby exacerbating the frustration and difficulty of the moment.",
+    "question": "Will I get to see real examples of what normal and abnormal aging look like in people?",
+    "answer": "Yes, you will! The new webinar series called \"Normal Aging or Not\" is designed to show you exactly what normal aging looks like compared to changes that are not part of normal aging. A special feature of this series is that it uses videos of real people so you can see these differences in action, rather than just hearing about them. This helps you understand what is happening with your loved one in a clear, visual way.",
     "source_segment": {
-      "id": 4,
-      "topic": "Repetitive Stories and Word Retrieval Issues"
+      "id": 6,
+      "topic": "Service Offerings: Webinars, Clips, and Consultations"
     },
-    "time_start_sec": 88.479,
-    "time_end_sec": 138.07999999999998,
-    "time_start_hhmmss": "00:01:28",
-    "time_end_hhmmss": "00:02:18"
-  },
-  {
-    "question": "How are the mentor guides in the higher-tier version prepared?",
-    "answer": "Based on the transcript, the mentor guides in the higher-tier version (referred to as the \"next series up\" or \"Premiere\") are prepared by the company's mentors. Specifically, the mentors have:\n\n1.  **Broken down** the content.\n2.  **Edited** the material.\n3.  **Provided specific content** for the guides.\n\nThis process results in a comprehensive package that includes \"everything\" from the mentors' work, described as being \"broken down and edited and given content for.\"",
-    "source_segment": {
-      "id": 16,
-      "topic": "Subscription Services and Consultation Offers"
-    },
-    "time_start_sec": 831.92,
-    "time_end_sec": 893.4799999999999,
-    "time_start_hhmmss": "00:13:52",
-    "time_end_hhmmss": "00:14:53"
+    "time_start_sec": 779.76,
+    "time_end_sec": 901.6,
+    "time_start_hhmmss": "00:13:00",
+    "time_end_hhmmss": "00:15:02"
   }
 ]

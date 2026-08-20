@@ -1,242 +1,146 @@
 [
   {
-    "question": "Why is the topic of dementia considered significant for this specific discussion?",
-    "answer": "The topic of dementia is considered significant for this specific discussion because the speakers explicitly state they are \"looking at dementia,\" indicating it is the central subject of their session. Furthermore, the phrase \"doesn't make sense\" suggests the discussion aims to address the confusion, complexity, or lack of clarity often associated with dementia, positioning the talk as an effort to provide understanding or logical explanation on the matter.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction to the Live Session and Topic Overview"
-    },
-    "time_start_sec": 2.659,
-    "time_end_sec": 50.61,
-    "time_start_hhmmss": "00:00:03",
-    "time_end_hhmmss": "00:00:51"
-  },
-  {
-    "question": "At what age does the prefrontal cortex typically finish developing in women?",
-    "answer": "Based on the transcript provided, the prefrontal cortex typically finishes developing in women in their **late 20s to mid-to-late 20s**.\n\nThe text notes that this region is the last to develop and the first to go in many dimensions, with men developing it slightly later, usually into their early 30s.",
+    "question": "Why does the speaker say this part of the brain is the \"last to develop and the first to go\"?",
+    "answer": "The speaker calls the prefrontal cortex (the part of your brain right behind your forehead) the \"last to develop and the first to go\" because of how it changes over a person's lifetime. It is the \"last to develop\" because it isn't fully grown until a person is in their late 20s or early 30s. It is the \"first to go\" because, as seen in brains affected by Alzheimer’s, the wiring connections in this area become significantly damaged early on, making it one of the first parts of the brain to lose function.",
     "source_segment": {
       "id": 2,
-      "topic": "Anatomy of the Prefrontal Cortex: Development and Function"
+      "topic": "Anatomy of the Prefrontal Cortex and Brain Wiring Changes"
     },
-    "time_start_sec": 48.329,
-    "time_end_sec": 108.75,
-    "time_start_hhmmss": "00:00:48",
-    "time_end_hhmmss": "00:01:49"
-  },
-  {
-    "question": "How does the developmental timeline of the prefrontal cortex differ between men and women?",
-    "answer": "Based on the provided transcript, the developmental timeline of the prefrontal cortex differs between men and women in the following ways:\n\n*   **Women:** The prefrontal cortex typically develops in the **late 20s to mid-to-late 20s**.\n*   **Men:** The prefrontal cortex develops **a little bit later**, with full development usually occurring into the **early 30s**.\n\nThe text notes that the prefrontal cortex is the last brain region to develop and the first to decline in many dimensions.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Anatomy of the Prefrontal Cortex: Development and Function"
-    },
-    "time_start_sec": 48.329,
-    "time_end_sec": 108.75,
-    "time_start_hhmmss": "00:00:48",
-    "time_end_hhmmss": "00:01:49"
-  },
-  {
-    "question": "Why is it important to identify specific words or actions that trigger a child's feeling that a situation \"doesn't make sense\"?",
-    "answer": "Identifying specific words or actions that trigger a child's feeling that a situation \"doesn't make sense\" is crucial for several educational and developmental reasons, particularly in the context of behavioral regulation and neurodivergence:\n\n1.  **Understanding the Root of Dysregulation**: When a child feels a situation \"doesn't make sense,\" it often indicates a breakdown in their ability to process information logically. Identifying the specific triggers (words or actions) helps caregivers and educators understand *why* the child is reacting intensely, rather than just reacting to the behavior itself.\n2.  **Recognizing the Lack of Impulse Control**: As noted in the transcript, these moments often occur because the child lacks the \"impulse control\" to stop a behavior once it has started. By identifying the trigger, adults can intervene before the behavior escalates into a cycle that is difficult to break.\n3.  **Moving Beyond Logical Disagreement**: The transcript highlights that \"logical and reasonable conclusions\" do not always match a child's internal logic. Identifying the specific trigger allows adults to stop \"butting heads\" and instead try to bridge the gap between perspectives, acknowledging that the behavior makes sense within the child's unique brain state.\n4.  **Addressing Physical and Habitual Factors**: Triggers can be linked to \"muscle memories\" and repetitive actions (\"doing the same thing over and over again\"). Recognizing these triggers helps in addressing the physical sensations and habits that reinforce the behavior, which is essential for long-term change.\n5.  **Empathy and Perspective Taking**: Identifying these triggers fosters the ability to take the child's perspective. It shifts the focus from judging the behavior as irrational to understanding it as a necessary response to a confusing or overwhelming environment, which is vital for building trust and effective communication.\n\nIn summary, identifying these triggers is the first step in moving from a reactive stance to a supportive one, allowing adults to help the child navigate situations where their internal logic conflicts with external reality.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Connecting Dementia Symptoms to the COVID-19 Pandemic Experience"
-    },
-    "time_start_sec": 667.029,
-    "time_end_sec": 785.59,
-    "time_start_hhmmss": "00:11:07",
-    "time_end_hhmmss": "00:13:06"
-  },
-  {
-    "question": "In what ways does the brain's executive function facilitate the transition from one activity to another?",
-    "answer": "Based on the transcript provided, the brain's executive function facilitates the transition from one activity to another through the following mechanisms:\n\n*   **Managing Complex Sequences:** It breaks down even simple tasks (like going to the bathroom) into millions of distinct steps. This includes the specific physical actions required to move, such as pulling feet back, organizing the body, leaning forward, and pushing up.\n*   **Orchestrating the Full Cycle:** It manages the complete lifecycle of a task, which consists of three critical phases:\n    1.  **Initiation:** Starting the thought process and action (e.g., deciding to \"hold it\" or stand up).\n    2.  **Sequencing:** Executing the ordered steps required to complete the task.\n    3.  **Termination:** Knowing when to stop the current activity.\n*   **Preventing Stagnation:** By successfully executing these phases, executive function prevents the individual from feeling \"stuck\" or unsure of where to go if a single piece of the sequence is missing.\n*   **Enabling the \"Next Step\":** It specifically aids in the cognitive shift of asking, \"What do I do next?\" once the current task is finished, allowing for a smooth flow between different activities throughout the day.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Prefrontal Cortex Skills: Logic, Reason, and Sequencing"
-    },
-    "time_start_sec": 200.44,
-    "time_end_sec": 299.14,
-    "time_start_hhmmss": "00:03:20",
-    "time_end_hhmmss": "00:04:59"
-  },
-  {
-    "question": "How does shifting from trying to prove a point is right to understanding the underlying need help a person terminate a difficult situation and move on?",
-    "answer": "Shifting from trying to prove a point is right to understanding the underlying need helps a person terminate a difficult situation and move on by addressing the root cause of the behavior rather than the surface-level action.\n\nIn the provided transcript, the speaker illustrates this dynamic with the example of \"Miss Leona\" hitting a maraca on a chair. When an observer argues that this action \"doesn't make sense,\" they are focusing on the illogical nature of the behavior itself. However, this approach fails because it does not address the person's actual need: \"to terminate something and move on.\"\n\nBy recognizing that the behavior may stem from a brain struggling to make sense of a confusing situation (rather than a deliberate choice to be difficult), the responder can:\n1.  **Stop arguing logic:** Acknowledging that the situation \"doesn't make sense\" prevents the responder from wasting energy trying to convince the other person that their perspective is wrong.\n2.  **Identify the core need:** Instead of focusing on the maraca, the responder identifies the need to end the current state of confusion or distress.\n3.  **Offer supportive skills:** The responder can then use skills like staying low, hanging out, and trying different approaches to help the individual feel safe enough to \"terminate\" the difficult emotional state and move forward.\n\nUltimately, this shift moves the interaction from a power struggle over who is right to a supportive process that facilitates emotional regulation and closure.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Communication Strategies: Joining the Person Where They Are"
-    },
-    "time_start_sec": 970.94,
-    "time_end_sec": 1066.3400000000001,
-    "time_start_hhmmss": "00:16:11",
-    "time_end_hhmmss": "00:17:46"
-  },
-  {
-    "question": "How can role-playing scenarios be utilized to practice and internalize alternative responses to challenging social situations?",
-    "answer": "Based on the provided transcript, role-playing scenarios can be utilized to practice and internalize alternative responses to challenging social situations through the following educational mechanisms:\n\n**1. Shifting Perspectives and Reframing Behavior**\nRole-play allows participants to move away from a singular, often negative, interpretation of a situation. In the transcript, the initial reaction to the character \"Leona\" was to view her as \"beaten on the chairs,\" \"making noise,\" and \"annoying people.\" By engaging in role-play, the perspective shifts to recognize the underlying cause: she \"used to clean houses for a living\" and has an unmet need to use the bathroom. This demonstrates that role-play helps internalize the insight that behavior is often a signal of a specific need rather than mere disruption.\n\n**2. Practicing \"Substitution\" Strategies**\nThe transcript explicitly introduces the technique of **substitution** as a core alternative response. Instead of trying to force the individual to stop the unwanted behavior (which failed), the role-play models trading the disruptive action for a productive one.\n*   **The Scenario:** The character is making noise.\n*   **The Alternative Response:** The role-player offers a trade (\"trade me,\" \"take this\") that redirects the energy toward cleaning.\n*   **The Internalization:** By practicing this exchange, the learner internalizes a non-confrontational method of managing behavior that satisfies the individual's need (cleaning) while resolving the social conflict (noise).\n\n**3. Reinforcing Positive Feedback Loops**\nRole-play provides a safe environment to practice the immediate reinforcement of the new behavior. In the scenario, the role-player actively praises the character (\"That's good,\" \"You're doing a fantastic job,\" \"Nice job\"). This practice helps internalize the understanding that positive reinforcement is more effective than punishment in encouraging compliance and reducing annoyance.\n\n**4. Developing Empathy and Communication Skills**\nThe transcript highlights the frustration of the observer (\"why won't anybody touch me,\" \"I want any so\"). Role-playing the interaction allows the participant to practice responding with empathy rather than judgment. By visualizing the task and seeing the successful outcome (\"people are less annoyed,\" \"she's cleaning now\"), the learner internalizes a communication style that de-escalates tension and fosters cooperation.\n\n**5. Visualizing and Rehearsing Outcomes**\nThe transcript mentions, \"I visualized the task,\" indicating that mental rehearsal is a key component. Role-play serves as a tangible form of visualization where the learner can see the \"shifted\" outcome before it happens in real life. This rehearsal builds confidence in executing the alternative response when faced with similar real-world challenges.\n\nIn summary, the transcript illustrates that role-play transforms a static, frustrating observation into a dynamic practice session where learners can experiment with **perspective-taking**, **behavioral substitution**, and **positive reinforcement** to find solutions that work for all parties involved.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Roleplay Demonstration: Using Substitution and Positive Reinforcement"
-    },
-    "time_start_sec": 783.52,
-    "time_end_sec": 973.7299999999999,
-    "time_start_hhmmss": "00:13:04",
-    "time_end_hhmmss": "00:16:14"
-  },
-  {
-    "question": "What specific cognitive functions are associated with the prefrontal cortex?",
-    "answer": "Based on the provided transcript, there is no specific information detailing the cognitive functions associated with the prefrontal cortex. The text only mentions that there are \"tons of skills\" located in that area, without defining or listing what those skills or functions are.",
-    "source_segment": {
-      "id": 14,
-      "topic": "Conclusion and Session Wrap-up"
-    },
-    "time_start_sec": 1225.44,
-    "time_end_sec": 1257.409,
-    "time_start_hhmmss": "00:20:25",
-    "time_end_hhmmss": "00:20:57"
-  },
-  {
-    "question": "What specific observable behaviors might indicate that a person is experiencing dementia-related brain changes?",
-    "answer": "Based on the transcript provided, the following specific observable behaviors and underlying mechanisms indicate dementia-related brain changes:\n\n*   **Actions or words that \"don't make sense\":** The most direct observation is when a person's behavior or speech appears illogical or confusing to others.\n*   **Inability to initiate tasks:** A person may appear unable to \"get going\" or start an activity, which can look like a single skill deficit but is often more complex.\n*   **Lack of logical reasoning:** The individual may be unable to provide a \"logical and rational reasonable reason\" for why something is the way it is.\n*   **Failure to act on understanding:** Even if a person understands a situation, they may have \"trouble initiating to do something about it,\" creating a disconnect between thought and action.\n*   **Sudden fluctuations in ability:** Behaviors can change rapidly; a person might be able to perform a task one moment and then suddenly be unable to do so the next.\n*   **Complex combinations of deficits:** What appears to be one simple problem is often a combination of multiple failing brain functions (such as the inability to initiate combined with a lack of logical reasoning).\n\nThese behaviors stem from the dysfunction of specific brain functions (noted as \"six main functions\" in the text) which can turn on and off depending on the type of dementia, its duration, and the progression of other brain areas.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Understanding the Complexity of Dementia: Why Actions Seem Senseless"
-    },
-    "time_start_sec": 400.9,
-    "time_end_sec": 474.90999999999997,
-    "time_start_hhmmss": "00:06:41",
-    "time_end_hhmmss": "00:07:55"
-  },
-  {
-    "question": "What challenges do caregivers face when standard redirection and connection strategies fail to stop repetitive, non-functional behaviors?",
-    "answer": "Based on the transcript provided, when standard redirection and connection strategies fail to stop repetitive, non-functional behaviors, caregivers face the following significant challenges:\n\n**1. The Erosion of Trust and Connection**\nThe primary challenge is the realization that established rapport is insufficient. The transcript notes that staff \"tried a lot of connecting\" and attempted to \"really get there with her,\" yet these efforts were ineffective (\"clearly not\"). This creates a difficult dynamic where the caregiver's attempts to build a relationship do not translate into behavioral change, leading to frustration and a sense of helplessness.\n\n**2. The Ineffectiveness of Traditional Intervention Methods**\nCaregivers face the challenge of having their standard toolkit rendered useless. The text explicitly states that staff \"tried a lot of redirection,\" but the behavior persisted for \"two hours.\" This indicates that conventional methods of distracting or guiding the individual are not addressing the root cause of the behavior, which appears to be a loss of cognitive integration rather than a simple attention-seeking issue.\n\n**3. The Burden of Unresolved Duration**\nA major challenge is the sheer duration of the behavior. The transcript highlights that the individual has been engaging in the activity for \"two hours to be exact.\" Caregivers must manage the emotional and physical toll of witnessing a behavior that continues unabated despite repeated interventions, leading to exhaustion and potential burnout.\n\n**4. The Disconnect Between Intent and Impact**\nCaregivers struggle with the discrepancy between the individual's internal state and the external impact. While the individual may be \"really focused\" and seemingly \"enjoying\" the activity (described as a \"musical serenade\"), the behavior is disruptive to others (\"people are you thinking or enjoying this... I will across the room\"). Caregivers are caught between respecting the individual's focus and managing the negative impact on the environment and other people.\n\n**5. The Complexity of Underlying Cognitive Disintegration**\nPerhaps the most profound challenge is understanding *why* the behavior persists. The speaker suggests the issue is not a lack of skill or memory (\"I do still have some of the skill sets... I have some of the motor memories\"), but rather a \"loss of wiring\"—the inability to integrate incoming data into a \"reasonable and logical way.\" This forces caregivers to confront behaviors that are not simply \"bad choices\" but symptoms of a fundamental breakdown in processing information, making simple redirection logically impossible.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Case Study: The Woman Beating the Chair with Maracas"
-    },
-    "time_start_sec": 472.449,
-    "time_end_sec": 668.5,
-    "time_start_hhmmss": "00:07:52",
-    "time_end_hhmmss": "00:11:08"
-  },
-  {
-    "question": "What does the phrase \"loss of wiring\" suggest about the brain's ability to integrate sensory data and motor memories?",
-    "answer": "The phrase \"loss of wiring\" suggests a specific type of neurological decline where the brain retains isolated components of function but loses the capacity to synthesize them into a coherent whole.\n\nBased on the transcript, this concept implies:\n\n*   **Preservation of Isolated Skills:** The individual still possesses specific \"motor memories,\" \"vision,\" \"words,\" and \"language.\" These are the raw data points or individual skills that remain intact.\n*   **Failure of Integration:** The critical deficit is the \"ability to put all of the data that's coming in together.\" The brain can no longer logically connect these separate elements.\n*   **Resulting Confusion:** Without this integrative \"wiring,\" the person cannot make sense of their environment or their own actions. This leads to behaviors that appear illogical or inexplicable to observers (such as the woman shaking a maraca for two hours), as the brain is unable to process the sensory input and motor output in a reasonable, logical way.\n\nIn essence, \"loss of wiring\" describes a breakdown in the brain's processing network, where the hardware (skills) remains, but the software (integration and logic) fails.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Case Study: The Woman Beating the Chair with Maracas"
-    },
-    "time_start_sec": 472.449,
-    "time_end_sec": 668.5,
-    "time_start_hhmmss": "00:07:52",
-    "time_end_hhmmss": "00:11:08"
-  },
-  {
-    "question": "What does the significant reduction in wiring connections across the brain indicate about the condition of a brain affected by Alzheimer's?",
-    "answer": "The significant reduction in wiring connections, specifically the white matter described as \"really not a lot of wiring here up in the front,\" indicates severe structural damage to the brain's neural network. In the context of the provided transcript, this degeneration is a hallmark of long-term Alzheimer's disease (in this case, 10 years). The loss of these connections contrasts sharply with a healthy brain, suggesting that the condition has led to a profound disruption in the brain's ability to transmit signals and maintain functional integrity across different regions.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Visual Comparison of Healthy vs. Alzheimer's-affected Brains"
-    },
-    "time_start_sec": 107.34,
+    "time_start_sec": 58.559,
     "time_end_sec": 144.06900000000002,
-    "time_start_hhmmss": "00:01:47",
+    "time_start_hhmmss": "00:00:59",
     "time_end_hhmmss": "00:02:24"
   },
   {
-    "question": "How does reflecting a person's distress back to them help increase their self-awareness and reduce their level of anxiety?",
-    "answer": "Reflecting a person's distress back to them helps increase self-awareness and reduce anxiety through the following mechanisms, as described in the transcript:\n\n*   **Externalizing Internal States:** The speaker notes that they are often \"not actually self-aware\" regarding the intensity of their own distress. When another person (like Rachel) recognizes and vocalizes this distress using the speaker's own words, it acts as a mirror. This external validation allows the individual to see their emotional state more clearly than they could on their own.\n*   **Validation Without Minimization:** The technique avoids two extremes: lying to the person (\"everything's fine\") or belittling their feelings. Instead, it validates the reality of the fear (\"this is really scary,\" \"this is not good\") while simultaneously offering a supportive presence (\"together we're gonna be okay\"). This creates a safe space where the person feels heard without being dismissed.\n*   **Facilitating a Shift:** By having their distress reflected accurately, the individual can begin to process the emotion rather than being overwhelmed by it. The transcript suggests that this reflection is \"sometimes all I need to be able to come down a little bit.\" It allows the person to move from a state of panic to a state where they can consider new possibilities (\"maybe together we can go somewhere new\").\n*   **Building Trust and Connection:** The approach involves \"joining\" the person where they are rather than trying to immediately fix or change their perspective. This collaborative stance (\"we'll do it together\") reduces the isolation of anxiety and fosters a sense of safety, which naturally lowers the physiological and psychological arousal associated with high distress.",
+    "question": "How does this part of the brain help a person start or initiate new tasks or actions?",
+    "answer": "The transcript mentions that the prefrontal cortex (the front part of your brain) helps with \"initiate,\" which means starting things. It also lists \"logic and reason\" as skills found in this area. While the text does not give specific steps on how to start a task, it explains that this part of the brain uses logic to help manage impulses. For example, it helps you say \"whoa\" or \"not now\" when your inner primitive brain (the amygdala) wants to do something exciting, like having another cookie or buying something. So, this part of the brain helps by using reason to guide actions instead of just reacting to urges.",
     "source_segment": {
-      "id": 13,
-      "topic": "Communication Strategies: Reflecting Distress and Validating Feelings"
-    },
-    "time_start_sec": 1062.62,
-    "time_end_sec": 1227.1499999999999,
-    "time_start_hhmmss": "00:17:43",
-    "time_end_hhmmss": "00:20:27"
-  },
-  {
-    "question": "How can educators or caregivers shift a negative interaction into a positive one by using behavioral substitution?",
-    "answer": "Based on the transcript provided, educators and caregivers can shift a negative interaction into a positive one by employing **behavioral substitution** through the following steps:\n\n1.  **Reframing the Narrative (Cognitive Shift):**\n    Instead of viewing the behavior as a nuisance (e.g., a child making noise on chairs), the caregiver reframes the individual's identity and potential. In the video, the narrator shifts the perspective from \"she needs to stop\" to \"she used to clean houses for a living.\" This changes the goal from suppression to utilization of existing skills.\n\n2.  **Offering a Concrete Alternative (The \"Trade\"):**\n    Rather than issuing a command to stop the unwanted behavior, the caregiver explicitly offers a substitute activity that fulfills a similar need or provides a reward. The narrator says, \"I'm gonna try a substitution here I'll trade you.\" The unwanted behavior (making noise) is traded for a desired behavior (cleaning).\n\n3.  **Guiding the Transition Physically and Verbally:**\n    The caregiver actively guides the individual through the switch.\n    *   **Physical Guidance:** \"Get my hand out the way... try this... get in there.\"\n    *   **Verbal Reinforcement:** Using phrases like \"trade me,\" \"take this,\" and \"now rub it\" to direct attention to the new task.\n\n4.  **Immediate Positive Reinforcement:**\n    Once the substitution occurs, the caregiver immediately validates the new behavior with praise (\"That's good,\" \"You're doing a fantastic job,\" \"Nice job\"). This reinforces the positive action and reduces the annoyance felt by others in the environment.\n\n5.  **Resulting Outcome:**\n    The negative interaction (noise, annoyance, conflict) is replaced by a productive activity (cleaning) that benefits the group, turning a disruptive situation into a cooperative one where the individual feels valued (\"hon,\" \"good cleaner\") rather than punished.\n\n**Summary:** The core mechanism is replacing the demand to *stop* a behavior with an invitation to *start* a different, constructive behavior that the individual is capable of performing, thereby changing the emotional tone of the interaction from frustration to success.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Roleplay Demonstration: Using Substitution and Positive Reinforcement"
-    },
-    "time_start_sec": 783.52,
-    "time_end_sec": 973.7299999999999,
-    "time_start_hhmmss": "00:13:04",
-    "time_end_hhmmss": "00:16:14"
-  },
-  {
-    "question": "Why is it beneficial to \"go alongside\" someone in their emotional state rather than trying to immediately change their perspective or make sense of their panic?",
-    "answer": "Based on the transcript, it is beneficial to \"go alongside\" someone in their emotional state rather than immediately trying to change their perspective or make sense of their panic for the following reasons:\n\n*   **Validation and Safety:** Attempting to immediately rationalize the situation (e.g., saying \"it's not that bad\") or dismissing the fear can feel invalidating. Instead, joining them where they are acknowledges their distress without lying or minimizing it, which creates a safer space for the person.\n*   **Facilitating Self-Awareness:** The transcript notes that individuals in high distress often lack self-awareness regarding the intensity of their feelings. By reflecting the distress back to them (e.g., \"this is really scary,\" \"you're really worried\"), the listener helps the person recognize the magnitude of their own emotions, which can naturally help them \"come down a little bit.\"\n*   **Building Connection:** Going alongside someone involves recognizing their distress and reflecting it visually and verbally. This approach signals willingness to be with them, fostering a connection that allows both parties to eventually explore a new direction together (\"maybe together we can go somewhere new\") rather than forcing a premature resolution.\n*   **Avoiding Defensiveness:** Trying to \"turn it around\" or make immediate sense of the panic can feel like an attempt to control or fix the person, which may increase resistance. Meeting them in their current reality allows for a collaborative shift rather than a confrontational one.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Communication Strategies: Reflecting Distress and Validating Feelings"
-    },
-    "time_start_sec": 1062.62,
-    "time_end_sec": 1227.1499999999999,
-    "time_start_hhmmss": "00:17:43",
-    "time_end_hhmmss": "00:20:27"
-  },
-  {
-    "question": "In what ways does the prefrontal cortex inhibit behaviors that the amygdala suggests are exciting or desirable?",
-    "answer": "Based on the provided transcript, the prefrontal cortex inhibits behaviors suggested by the amygdala through the following mechanisms:\n\n*   **Impulse Control:** The prefrontal cortex acts as a regulatory center that allows an individual to pause and evaluate actions before proceeding. It enables the ability to say \"whoa\" or \"not now,\" effectively stopping an immediate reaction.\n*   **Countering Primitive Urges:** The amygdala (described as the \"inner primitive brain\") generates impulses for exciting or desirable actions, such as consuming more food (\"another cookie\"), drinking more alcohol (\"one more glass\"), or making impulsive purchases (\"buy one more thing\").\n*   **Enforcing Limits:** The prefrontal cortex overrides these urges by determining when an action is excessive. It intervenes to declare that \"that's enough,\" thereby preventing the individual from acting on the amygdala's suggestion to continue the behavior.\n\nIn essence, the prefrontal cortex functions as a brake on the amygdala's drive for immediate gratification, allowing for self-regulation and the suppression of potentially harmful or excessive impulses.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Prefrontal Cortex Skills: Impulse Control and Inhibition"
+      "id": 3,
+      "topic": "Prefrontal Cortex Functions: Impulse Control and Logic"
     },
     "time_start_sec": 141.19,
-    "time_end_sec": 210.37,
+    "time_end_sec": 223.39,
     "time_start_hhmmss": "00:02:21",
-    "time_end_hhmmss": "00:03:30"
+    "time_end_hhmmss": "00:03:43"
   },
   {
-    "question": "What challenges arise when a person with dementia struggles to accurately assess their own situation or capabilities?",
-    "answer": "When a person with dementia struggles to accurately assess their own situation or capabilities, several significant challenges arise, primarily centered around the loss of **self-awareness** (also known as insight or anosognosia).\n\nBased on the provided transcript, the specific challenges include:\n\n*   **Inability to Recognize Deficits:** The individual may fail to realize that they cannot see themselves clearly or understand their current limitations. The text notes that this goes beyond simply \"seeing\" oneself; it involves the ability to be **accurate** in self-assessment.\n*   **Misjudgment of Needs and Actions:** Without accurate self-awareness, a person may not recognize when they need assistance or when a situation requires a different approach. They might attempt tasks they are no longer capable of performing or fail to ask for help when necessary.\n*   **Erosion of Decision-Making Capacity:** This loss of insight is linked to a broader decline in the prefrontal cortex's ability to make choices. While a healthy brain can evaluate multiple options (five to eight), dementia often reduces this to a binary choice where the individual feels they have no real choice but to accept what is presented to them, rather than evaluating options based on their own accurate understanding of the situation.\n\nIn essence, the struggle to accurately assess one's own state leads to a disconnect between the person's perception of reality and their actual capabilities, making it difficult for them to navigate daily tasks or recognize when support is needed.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Prefrontal Cortex Skills: Choice Making and Self-Awareness"
-    },
-    "time_start_sec": 297.1,
-    "time_end_sec": 368.62,
-    "time_start_hhmmss": "00:04:57",
-    "time_end_hhmmss": "00:06:09"
-  },
-  {
-    "question": "Why is it important to understand the reasons behind another person's viewpoint?",
-    "answer": "Understanding the reasons behind another person's viewpoint is crucial for several key educational and interpersonal reasons:\n\n1.  **Developing Empathy**: It allows you to see the situation from another person's point of view, fostering a deeper sense of empathy and emotional connection.\n2.  **Perspective Taking**: It enables you to understand \"why they might have that perspective,\" which is a fundamental cognitive skill for navigating complex social environments.\n3.  **Integrating Perspectives**: By understanding the other side, you can better determine \"how [you] can fit it with [your] perspective.\" This integration is essential for resolving conflicts, finding common ground, and achieving mutual understanding rather than just tolerating disagreement.\n4.  **Holistic Skill Application**: In the context of developing skill sets, this ability transforms simple observation into deep comprehension, allowing for more effective communication and collaboration.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Prefrontal Cortex Skills: Perspective Taking and Empathy"
-    },
-    "time_start_sec": 366.19,
-    "time_end_sec": 403.479,
-    "time_start_hhmmss": "00:06:06",
-    "time_end_hhmmss": "00:06:43"
-  },
-  {
-    "question": "How can the inability to initiate an action be a combination of multiple underlying cognitive deficits rather than a single skill loss?",
-    "answer": "Based on the transcript provided, the inability to initiate an action (often perceived as a single skill loss) can actually be a complex combination of multiple underlying cognitive deficits. Specifically, the text explains that this behavior may result from the simultaneous failure of two distinct functions:\n\n1.  **Loss of Logical Reasoning:** The individual is missing the \"logical and rational reasonable reason\" for why a specific action or situation exists. Without understanding the *why*, the motivation to act is diminished.\n2.  **Executive Dysfunction (Initiation):** The individual is simultaneously having trouble \"initiating\" the action itself, even if they understood what needed to be done.\n\nThe transcript emphasizes that these functions work together; when one part of the brain responsible for these six main functions fails, it can create a compounded effect where the person appears unable to \"get going.\" This complexity is further influenced by the specific type of dementia, the duration of the disease, and the progression of other brain areas, which can cause these deficits to fluctuate or change suddenly.",
+    "question": "What can I do instead of arguing or correcting my loved one when they are confused about why people are wearing masks or avoiding touch?",
+    "answer": "Instead of arguing or trying to force your loved one to accept a reality that doesn’t make sense to them, the video suggests you try to \"shift\" the conversation. Since asking for a logical explanation creates a battle they cannot win due to brain changes, look at how to change the direction of the talk. The speaker plans to show a video example and do a roleplay to demonstrate exactly how to redirect the situation rather than correcting it. This helps avoid the stress of fighting about facts that feel confusing or scary to your loved one right now.",
     "source_segment": {
       "id": 8,
-      "topic": "Understanding the Complexity of Dementia: Why Actions Seem Senseless"
+      "topic": "Impact of COVID-19 Restrictions on Individuals with Dementia"
     },
-    "time_start_sec": 400.9,
-    "time_end_sec": 474.90999999999997,
-    "time_start_hhmmss": "00:06:41",
-    "time_end_hhmmss": "00:07:55"
+    "time_start_sec": 779.88,
+    "time_end_sec": 848.719,
+    "time_start_hhmmss": "00:13:00",
+    "time_end_hhmmss": "00:14:09"
   },
   {
-    "question": "What is the role of the amygdala in generating impulsive desires, and how does it interact with the prefrontal cortex?",
-    "answer": "Based on the provided transcript, the role of the amygdala and its interaction with the prefrontal cortex can be summarized as follows:\n\n**Role of the Amygdala in Generating Impulsive Desires**\nThe amygdala is described as the \"inner primitive brain.\" Its primary function in this context is to generate immediate, exciting impulses and urges. It drives the desire to engage in behaviors such as consuming more food (\"another one more glass\"), making unnecessary purchases (\"buy one more thing\"), or repeating actions (\"one more time\"). These impulses are characterized as \"exciting things\" that push an individual to act without restraint.\n\n**Interaction with the Prefrontal Cortex**\nThe prefrontal cortex acts as a regulatory or controlling mechanism that manages the impulses generated by the amygdala. This interaction involves a dynamic process of inhibition and decision-making:\n*   **Conflict:** The amygdala urges action (e.g., \"have another glass\"), while the prefrontal cortex evaluates the situation.\n*   **Impulse Control:** The prefrontal cortex exerts \"impulse control,\" allowing an individual to pause and recognize limits (e.g., realizing they have already had \"five cookies\").\n*   **Decision Making:** The prefrontal cortex overrides the primitive urges, deciding that \"that's enough\" and stopping the behavior before it becomes excessive.\n\nIn essence, the transcript illustrates a balance where the prefrontal cortex must actively suppress the \"ups\" (urges) from the amygdala to maintain self-control and prevent impulsive actions.",
+    "question": "How should I praise the person while they are engaged in this new activity to keep them calm?",
+    "answer": "To keep the person calm and engaged, you should use positive words to reinforce what they are doing. In the video, the caregiver says things like, “That’s good,” “You’re doing a fantastic job,” and “You are good.” These simple compliments help the person feel successful. After praising them, you can gently guide them to the next step or suggest taking a break, such as saying, “Let’s go sit down” or reminding them it is time for the restroom. This approach helps reduce noise and annoyance while keeping the person busy with a meaningful task.",
     "source_segment": {
-      "id": 4,
-      "topic": "Prefrontal Cortex Skills: Impulse Control and Inhibition"
+      "id": 9,
+      "topic": "Roleplay Demonstration: Substitution and Positive Approach"
     },
-    "time_start_sec": 141.19,
-    "time_end_sec": 210.37,
-    "time_start_hhmmss": "00:02:21",
-    "time_end_hhmmss": "00:03:30"
+    "time_start_sec": 860.519,
+    "time_end_sec": 996.32,
+    "time_start_hhmmss": "00:14:21",
+    "time_end_hhmmss": "00:16:36"
+  },
+  {
+    "question": "How can I understand what this behavior means to the person with dementia if it doesn't make sense to me logically?",
+    "answer": "When a behavior like beating a chair for hours doesn’t make sense to you, remember that it likely makes perfect sense to the person’s brain. As the video explains, their brain may be missing the \"impulse control\" needed to say, \"Whoa, that’s enough, stop now.\" They are stuck in the action and physically cannot stop or move on, even if they are tired or hurting.\n\nTo understand this, try taking their perspective instead of judging it with your own logic. Their logical conclusions might not match yours, but there is a reason they are doing it, often tied to muscle memory or an inability to initiate a new task. If you try to force your view on them, you will just end up \"butting heads.\" Instead, recognize that while the behavior seems strange to you, it is how their brain is currently working, and redirecting or connecting hasn't worked because they literally cannot switch gears on their own.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Case Study Analysis: Repetitive Behavior and Lack of Impulse Control"
+    },
+    "time_start_sec": 538.75,
+    "time_end_sec": 783.52,
+    "time_start_hhmmss": "00:08:59",
+    "time_end_hhmmss": "00:13:04"
+  },
+  {
+    "question": "Why don't standard redirection techniques work when someone is stuck in this repetitive behavior?",
+    "answer": "Standard redirection techniques often fail in this situation because the person’s brain is missing two key functions. First, they lack \"impulse control,\" which means their brain isn’t sending the signal to say, \"No, whoa, that’s enough, stop now.\" Second, they are stuck at the \"initiation\" stage. This means they started an action (like beating the chair) but cannot move on or stop it. They are essentially trapped in repeating the same motion over and over. Because their brain physically cannot tell them to quit, trying to redirect them with words or connection doesn't work—their body just keeps going. It helps to remember that while the behavior doesn't make logical sense to us, it makes sense to their brain, so getting frustrated or \"butting heads\" won't help.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Case Study Analysis: Repetitive Behavior and Lack of Impulse Control"
+    },
+    "time_start_sec": 538.75,
+    "time_end_sec": 783.52,
+    "time_start_hhmmss": "00:08:59",
+    "time_end_hhmmss": "00:13:04"
+  },
+  {
+    "question": "If my loved one still remembers some skills, like how to move their body or recognize words, why are they struggling to put everything together?",
+    "answer": "It can be very confusing when your loved one seems to remember how to move or speak but still struggles to get things done. The transcript explains that this happens because of a \"loss of wiring\" in the brain.\n\nThink of it like having all the right parts, but not being able to connect them. Your loved one may still have:\n*   **Motor memories:** They remember how their body moves.\n*   **Vision:** They can still see.\n*   **Language:** They still know some words.\n\nHowever, what is missing is the ability to put all that information together in a logical way. It’s not just one skill failing; often, several skills work together. For example, they might struggle to understand *why* something needs to happen (logical reasoning) and also struggle to start doing it (initiating). When these connections break, it feels like their actions don’t make sense, even though they still have pieces of the puzzle left. This change can happen suddenly, which is why it might seem like they \"could do it yesterday\" but can’t today.",
+    "source_segment": {
+      "id": 6,
+      "topic": "Perspective Taking and Understanding Behavioral Disconnections"
+    },
+    "time_start_sec": 387.73,
+    "time_end_sec": 540.6999999999999,
+    "time_start_hhmmss": "00:06:28",
+    "time_end_hhmmss": "00:09:01"
+  },
+  {
+    "question": "Besides using words, how can my facial expressions and body language help show that I am listening and staying with the person?",
+    "answer": "Besides using words, you can show you are listening by reflecting the person’s feelings with your face and body. The video mentions that a caregiver reflected distress visually by making a face that said, “Oh, whoa,” showing she saw how scary or intense the moment was. This visual reflection helps the person feel understood without you having to argue or pretend everything is fine. It shows you are willing to stay with them in their distress and join them where they are, rather than trying to change their mind.",
+    "source_segment": {
+      "id": 10,
+      "topic": "Strategies for Communication: Joining Reality vs. Orientation"
+    },
+    "time_start_sec": 992.87,
+    "time_end_sec": 1225.4399999999998,
+    "time_start_hhmmss": "00:16:33",
+    "time_end_hhmmss": "00:20:25"
+  },
+  {
+    "question": "Once the person is calm and busy with the substitute task, how can I gently guide them to do something else, like going to the bathroom?",
+    "answer": "Once the person is calm and busy with the substitute task, you can gently guide them by first praising their hard work. In the video, the caregiver says things like, “You did a fantastic job” and “You are one of the hardest working women I’ve ever met.” This positive reinforcement helps them feel good about what they just finished.\n\nAfter praising them, explain that it is time for a break or to move on to the next step. The caregiver says, “Come with me and we’ll sit down and take a break,” but then adds, “before she goes to sit down though we have a place to go.” By linking the next activity (going to the bathroom) as something they need to do *before* they can fully relax, you create a natural transition. The key is to keep the tone warm and appreciative, treating the new step as part of the flow rather than stopping their current activity abruptly.",
+    "source_segment": {
+      "id": 9,
+      "topic": "Roleplay Demonstration: Substitution and Positive Approach"
+    },
+    "time_start_sec": 860.519,
+    "time_end_sec": 996.32,
+    "time_start_hhmmss": "00:14:21",
+    "time_end_hhmmss": "00:16:36"
+  },
+  {
+    "question": "If a person says something scary like \"Am I going to die?\", what is a supportive way to respond that validates their feelings while offering safety?",
+    "answer": "When someone says something scary like, \"Am I going to die?\", a supportive way to respond is to join them where they are instead of trying to argue or tell them everything is fine. You can say things like, \"This is really scary,\" and \"You’re really worried about this.\" This shows you understand their distress.\n\nThen, offer safety by saying, \"It’s not good, but it’s not that bad,\" and reassure them by adding, \"Together we’re gonna be okay.\" This approach works because reflecting their feelings helps them calm down, especially since they might not realize how upset they are on their own. By using their words and staying with them, you help shift the situation without lying or dismissing their fear.",
+    "source_segment": {
+      "id": 10,
+      "topic": "Strategies for Communication: Joining Reality vs. Orientation"
+    },
+    "time_start_sec": 992.87,
+    "time_end_sec": 1225.4399999999998,
+    "time_start_hhmmss": "00:16:33",
+    "time_end_hhmmss": "00:20:25"
+  },
+  {
+    "question": "How does dementia change the number of choices a person can handle, and how should I adjust what I offer them?",
+    "answer": "A healthy brain can usually handle picking from five to eight different options at once. But as dementia progresses, the person’s ability to make choices shrinks. Instead of many options, they are better off choosing between just two good ones.\n\nTo help them, you should offer these two clear choices. This helps them feel like they are making their own decision because the option you present makes sense to them in that moment. It is important to support their sense of choice without overwhelming them with too many possibilities.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Decision Making and Self-Awareness in Dementia"
+    },
+    "time_start_sec": 309.28,
+    "time_end_sec": 391.39,
+    "time_start_hhmmss": "00:05:09",
+    "time_end_hhmmss": "00:06:31"
+  },
+  {
+    "question": "How can I better understand why my loved one sees a situation differently than I do?",
+    "answer": "To understand why your loved one sees things differently, try to look at the situation from their point of view. This means seeing it from \"the other side\" and trying to understand why they have that perspective. It is about figuring out how their view fits with yours, rather than just sticking to your own. By practicing this skill of seeing through their eyes, you can better connect with what they are experiencing.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Decision Making and Self-Awareness in Dementia"
+    },
+    "time_start_sec": 309.28,
+    "time_end_sec": 391.39,
+    "time_start_hhmmss": "00:05:09",
+    "time_end_hhmmss": "00:06:31"
   }
 ]

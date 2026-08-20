@@ -1,242 +1,62 @@
 [
   {
-    "question": "What are the initial signs that distinguish dementia from normal mental processes?",
-    "answer": "Based on the provided transcript, the text does not contain specific information regarding the initial signs that distinguish dementia from normal mental processes.\n\nThe transcript only notes that dementia \"starts off the same\" as normal cognition, implying that early symptoms may be indistinguishable without further clinical evaluation. It does not list specific distinguishing features.",
+    "question": "Why does telling a person with dementia to \"remember\" often make things worse instead of helping?",
+    "answer": "Telling a person with dementia to \"remember\" doesn’t help because their condition is different from normal forgetfulness. As the transcript explains, when someone has dementia, reminding them to recall something simply does not work. Instead of helping, this approach can lead to confusion and frustration, as seen in the conversation where the person feels misunderstood or accused. The key takeaway for caregivers is that we need to change our attitude and \"change gears.\" Since reminding isn't effective, focusing on being supportive and adjusting how we communicate is more helpful than expecting them to remember things on command.",
     "source_segment": {
-      "id": 11,
-      "topic": "Transition: Demonstrating Dementia"
-    },
-    "time_start_sec": 296.84,
-    "time_end_sec": 308.68,
-    "time_start_hhmmss": "00:04:57",
-    "time_end_hhmmss": "00:05:09"
-  },
-  {
-    "question": "Why is it important to place a notepad and pencil directly next to the telephone for people experiencing memory lapses?",
-    "answer": "Placing a notepad and pencil directly next to the telephone is crucial for individuals experiencing memory lapses to ensure they can immediately record important information without interruption. As the transcript illustrates, without these items readily available, a person may walk away from the phone only to realize they have nothing to write with when they return, potentially causing them to forget the details of the conversation. This setup acts as a practical safety measure to prevent information loss due to forgetfulness.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Coping Strategies: Notepads and Pencils"
-    },
-    "time_start_sec": 213.319,
-    "time_end_sec": 235.239,
-    "time_start_hhmmss": "00:03:33",
-    "time_end_hhmmss": "00:03:55"
-  },
-  {
-    "question": "Why is it important to distinguish between normal forgetfulness and dementia?",
-    "answer": "Distinguishing between normal forgetfulness and dementia is crucial because it reflects the fundamental difference between a healthy, aging brain and a brain affected by a progressive neurological disease. Normal forgetfulness occurs because the brain is still active and capable of learning, whereas dementia represents a pathological decline where brain function deteriorates significantly. Recognizing this distinction allows for early identification of dementia, which is essential for accessing appropriate medical care, planning for the future, and managing the condition effectively.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction: Normal Forgetfulness vs. Dementia"
-    },
-    "time_start_sec": 0.719,
-    "time_end_sec": 13.719000000000001,
-    "time_start_hhmmss": "00:00:01",
-    "time_end_hhmmss": "00:00:14"
-  },
-  {
-    "question": "How does the speaker describe the progression of their forgetfulness after reaching its peak?",
-    "answer": "The speaker describes the progression of their forgetfulness as a continuous decline after reaching its peak. Specifically, they state that the condition \"peaked at 25\" and has been \"downhill ever since,\" indicating a worsening trend in their memory issues from that point onward.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Audience Reaction: Identifying Normal Forgetfulness"
-    },
-    "time_start_sec": 138.72,
-    "time_end_sec": 175.2,
-    "time_start_hhmmss": "00:02:19",
-    "time_end_hhmmss": "00:02:55"
-  },
-  {
-    "question": "In what ways does the concept of a \"visual queue\" change as a person ages and gains more experience in their daily surroundings?",
-    "answer": "Based on the transcript provided, the concept of a \"visual queue\" changes with age and experience in the following ways:\n\n*   **From Obvious to Subtle:** At a younger age (e.g., 25), a person can rely on simple, obvious visual cues (like seeing a coffee pot) to trigger memories or actions because they have limited experience in that environment. As a person ages (e.g., to 55) and gains extensive experience, these simple cues no longer \"jump out\" or stand out because they have become too common.\n*   **Increased Complexity Requirement:** Due to the saturation of familiar objects, an older individual can no longer rely on basic visual queues. Instead, they must actively seek out a \"stronger\" or more specific episodic queue to trigger the same memory or action.\n*   **Impact of Frequency:** The change is directly linked to the frequency of interaction with the environment. Doing \"way too many things\" in a kitchen over time dilutes the distinctiveness of individual objects, rendering them less effective as standalone memory triggers.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Visual Cues: Environmental Changes with Age"
-    },
-    "time_start_sec": 240.4,
-    "time_end_sec": 275.96000000000004,
-    "time_start_hhmmss": "00:04:00",
-    "time_end_hhmmss": "00:04:36"
-  },
-  {
-    "question": "What is the significance of the speaker stating they are not \"hooking it all together\"?",
-    "answer": "The speaker's statement that they are \"not hooking it all together\" signifies a critical disconnect between **individual perception** and **systemic understanding**.\n\nIn the context of the transcript, the speaker observes that their actions (roaming about, picking up on things) and the actions of others (people not finishing tasks) appear \"illogical\" to an outside observer. However, the speaker argues that these actions \"make sense\" to them because they are reacting to immediate environmental cues (\"whatever is around\").\n\nThe significance of not \"hooking it all together\" is that the speaker lacks the ability to synthesize these isolated, logical fragments into a **coherent, unified narrative or strategy**. While the individual components of their behavior are rational in the moment, the absence of a connecting framework prevents them from seeing the bigger picture or understanding how these disparate events form a complete, logical whole. This highlights the difference between **reactive logic** (making sense in the moment) and **holistic logic** (understanding the full sequence and purpose).",
-    "source_segment": {
-      "id": 14,
-      "topic": "Illogical Behavior: Roaming and Misplaced Items"
-    },
-    "time_start_sec": 350.4,
-    "time_end_sec": 386.72,
-    "time_start_hhmmss": "00:05:50",
-    "time_end_hhmmss": "00:06:27"
-  },
-  {
-    "question": "How does the act of showing a child the direct result of their actions contribute to moral development?",
-    "answer": "Showing a child the direct result of their actions, as illustrated by the parent displaying the dirty glass left behind by the intruder (or in this context, the child's own behavior), contributes to moral development through several key mechanisms:\n\n1.  **Concrete Causality**: It establishes a clear, tangible link between an action and its consequence. Instead of abstract rules, the child sees the physical evidence (\"this dirty glass\") that resulted from a specific behavior, making the cause-and-effect relationship undeniable.\n2.  **Empathy and Perspective-Taking**: By pointing out the mess or the damage, the parent helps the child understand how their actions affect others or the environment. This fosters empathy, a crucial component of moral reasoning.\n3.  **Internalization of Standards**: When consequences are immediate and visible, children are more likely to internalize social norms and ethical standards. The \"evidence\" serves as a reminder that actions have real-world impacts, encouraging self-regulation.\n4.  **Accountability**: It reinforces the concept of personal responsibility. The child learns that they are accountable for their deeds, which is foundational for developing a strong moral character.\n\nIn essence, visualizing the direct outcome transforms moral lessons from theoretical concepts into lived experiences, accelerating the child's ability to make ethical judgments independently.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Delusional Interpretation: Evidence of Theft"
-    },
-    "time_start_sec": 317.96,
-    "time_end_sec": 353.759,
-    "time_start_hhmmss": "00:05:18",
-    "time_end_hhmmss": "00:05:54"
-  },
-  {
-    "question": "What is the relationship between normal cognitive function and the early stages of dementia?",
-    "answer": "Based on the provided transcript, the relationship between normal cognitive function and the early stages of dementia is that they **start off the same**.\n\nThe text explicitly states: \"here's dcha starts off the same,\" indicating that the initial presentation or early symptoms of dementia can be indistinguishable from normal cognitive function.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Transition: Demonstrating Dementia"
-    },
-    "time_start_sec": 296.84,
-    "time_end_sec": 308.68,
-    "time_start_hhmmss": "00:04:57",
-    "time_end_hhmmss": "00:05:09"
-  },
-  {
-    "question": "How does the concept of being \"forgetful\" differ from having dementia?",
-    "answer": "Based on the provided transcript, the speaker suggests that being \"forgetful\" differs from having dementia because a forgetful person's brain is still functioning (\"our brains aren't dead\"), whereas the implication for dementia is a more severe loss of brain function. The speaker intends to demonstrate this distinction to the audience.\n\n*Note: The provided text is a fragment and does not contain specific details, examples, or a full explanation of the differences. It only offers the premise that the brains of forgetful individuals are not \"dead.\"*",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction: Normal Forgetfulness vs. Dementia"
-    },
-    "time_start_sec": 0.719,
-    "time_end_sec": 13.719000000000001,
-    "time_start_hhmmss": "00:00:01",
-    "time_end_hhmmss": "00:00:14"
-  },
-  {
-    "question": "What roles do visual cues, verbal cues, and touch cues play in re-establishing a mental state?",
-    "answer": "Based on the provided transcript, visual cues, verbal cues, and touch cues serve as essential tools for **re-establishing a specific mental state** by physically and mentally returning the individual to the exact location where a particular thought or feeling originated.\n\nTheir specific roles include:\n\n*   **Facilitating Physical and Mental Return:** The speaker emphasizes that one must be \"physically in the place\" and \"mentally in the place\" to access a specific thought. These cues act as the mechanism to bridge the gap between the current location and the location of the original thought.\n*   **Triggering Specific Sensations:** Once the individual is back in the \"right place,\" these cues help identify the precise nature of the experience, such as determining if a feeling is \"irritating\" or \"frustrating.\"\n*   **Enabling Behavioral Modification:** The ultimate function of these cues is to allow the individual to \"modify your behavior.\" By successfully retrieving the original mental state through these sensory triggers, the person gains the ability to adjust their actions based on that recalled experience.\n\nIn summary, these cues are the practical means by which a person reconstructs a past mental context to gain insight and control over their current behavior.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Restoring Memory: Returning to the Source"
-    },
-    "time_start_sec": 273.639,
-    "time_end_sec": 298.96,
-    "time_start_hhmmss": "00:04:34",
-    "time_end_hhmmss": "00:04:59"
-  },
-  {
-    "question": "What specific symptoms mentioned in the text suggest a potential case of dementia rather than normal aging?",
-    "answer": "Based on the provided transcript, the text does not list specific observable symptoms (such as memory loss, confusion, or personality changes) that the speaker is witnessing. Instead, the suggestion of dementia is based entirely on the **subjective report** of the speaker, Betty.\n\nThe key element mentioned is Betty's own statement: **\"I hate to be ugly but I think you better call the doctor.\"**\n\nThis implies that Betty believes she is experiencing a change in her appearance (\"I think you better call the doctor I think you may have that dementia\") which she perceives as abnormal. The text explicitly contrasts this with normal aging by stating: **\"not normal not normal at all.\"**\n\nTherefore, the only specific indicator in the text is the speaker's **self-perception of becoming \"ugly,\"** which she identifies as a sign of potential dementia rather than normal aging.",
-    "source_segment": {
-      "id": 16,
-      "topic": "Diagnosis: Recognizing Dementia vs. Normal Aging"
-    },
-    "time_start_sec": 425.96,
-    "time_end_sec": 445.72,
-    "time_start_hhmmss": "00:07:06",
-    "time_end_hhmmss": "00:07:26"
-  },
-  {
-    "question": "What role does the setting of the kitchen play in establishing the context of the scene?",
-    "answer": "The setting of the kitchen serves as the primary locus of action that establishes the scene's domestic and transitional context. Specifically, it functions in three key ways:\n\n1.  **Establishing Domestic Routine:** The protagonist is initially engaged in leisure (\"watching a movie\") before moving to the kitchen to perform a routine task (\"decide I want coffee\"). This grounds the scene in a relatable, everyday domestic reality.\n2.  **Creating Narrative Interruption:** The kitchen acts as the specific location where the external world intrudes upon the protagonist's private moment. The ringing phone and the subsequent conversation with Betty occur here, marking a shift from passive observation to active social engagement.\n3.  **Facilitating Plot Advancement:** It is within this confined space that the crucial plot point is established—the decision to meet Betty at the mall at 2 o'clock. The kitchen is the catalyst that moves the narrative from a static state to a dynamic one, setting the stage for the events that follow.",
-    "source_segment": {
-      "id": 12,
-      "topic": "The Dementia Scenario: Same Start, Different Outcome"
-    },
-    "time_start_sec": 307.16,
-    "time_end_sec": 319.24,
-    "time_start_hhmmss": "00:05:07",
-    "time_end_hhmmss": "00:05:19"
-  },
-  {
-    "question": "In what ways does the dialogue between Betty and the caller reveal the challenges of memory loss in daily interactions?",
-    "answer": "The dialogue between Betty and the caller vividly illustrates the profound challenges of memory loss in daily interactions through several key mechanisms:\n\n**1. Disorientation Regarding Time and Location**\nBetty demonstrates a complete loss of temporal and spatial context. When asked \"where am I,\" she confidently states she is \"at home,\" while the caller clarifies she is actually \"at the mall.\" This indicates a severe disruption in her ability to orient herself, a common symptom where the individual cannot distinguish between their current reality and their perceived reality.\n\n**2. Failure to Recognize Recent Events and Social Cues**\nThe caller attempts to use a \"reminder\" (likely a phone call or message) to jog Betty's memory, noting, \"you should have called.\" Betty, however, fails to recognize this recent interaction entirely. She claims, \"I don't know who you talked to\" and insists, \"it wasn't me.\" This reveals the inability to access short-term memory or recall recent social exchanges, rendering standard reminders ineffective.\n\n**3. Confusion of Identity and Agency**\nThere is a striking confusion regarding who initiated the contact. The caller states, \"I haven't talked to you today,\" while Betty insists, \"I don't know who you talked to.\" This suggests a fragmentation of self-awareness where Betty cannot distinguish between her own actions and those of others, or she cannot recall her own agency in the situation.\n\n**4. The Breakdown of Logical Communication**\nThe interaction highlights how memory loss disrupts logical conversation flow. Betty's response, \"if you wanted me to come to the mall you should have called,\" is logically sound but factually disconnected from the reality that she is already there without having been asked. This shows how the individual may construct plausible-sounding arguments based on faulty premises, making it difficult for others to correct them without causing distress.\n\n**5. Emotional Detachment and Lack of Insight**\nBetty's tone (\"hello well hey Betty how are you\") suggests she is speaking to herself or is so detached from the situation that she does not recognize the caller's presence or the absurdity of her location. This lack of insight (anosognosia) is a critical challenge, as the individual often does not perceive their own confusion, making it difficult for caregivers to intervene gently.\n\nIn summary, the dialogue reveals that memory loss does not merely involve forgetting facts; it fundamentally alters the individual's perception of reality, their ability to engage in coherent social exchange, and their capacity to learn from immediate experiences.",
-    "source_segment": {
-      "id": 15,
-      "topic": "The Reminder Fails: Confusion at the Mall"
+      "id": 6,
+      "topic": "Contrast in Response to Reminders: Normalcy vs. Pathology"
     },
     "time_start_sec": 383.759,
-    "time_end_sec": 427.68,
+    "time_end_sec": 467.56,
     "time_start_hhmmss": "00:06:24",
-    "time_end_hhmmss": "00:07:08"
+    "time_end_hhmmss": "00:07:48"
   },
   {
-    "question": "What specific example does the speaker provide to illustrate their difficulty in remembering where they were sitting or what they were doing?",
-    "answer": "The speaker provides a specific example of trying to recall their location and activity within a room. They mention looking around and realizing they cannot remember if they were in the **kitchen** or the **living room**. Furthermore, they specifically state that they cannot remember if they were **sitting** or **watching TV**. The speaker describes this inability to recall these simple details as \"ridiculous\" and a sign that they are \"losing it.\"",
+    "question": "Why do I sometimes forget why I walked into a room, like when I meant to make coffee but ended up just sitting down?",
+    "answer": "This is very common and nothing to worry about! It happens because of something called \"working memory.\" Working memory is a part of your brain that helps you stay focused and hold onto a few pieces of information at once. The problem is that it is very small—it can only hold about five to eight things at a time.\n\nWhen you think, \"I want coffee,\" you put that idea into your working memory. But if something else happens before you make the coffee—like the phone ringing or someone starting a long conversation—that new information takes up space in your working memory. Because there is no more room, the idea about the coffee gets pushed out and forgotten. This is why you might end up sitting down instead of making your drink. It’s not because you are \"losing it\"; it just means your brain’s short-term storage got full with other important details.",
     "source_segment": {
-      "id": 4,
-      "topic": "Post-Call Confusion: Losing the Original Goal"
+      "id": 3,
+      "topic": "The Mechanism of Working Memory and Cognitive Decline"
     },
-    "time_start_sec": 104.64,
-    "time_end_sec": 141.2,
-    "time_start_hhmmss": "00:01:45",
-    "time_end_hhmmss": "00:02:21"
-  },
-  {
-    "question": "How does the interruption of a task, such as a telephone ringing while making coffee, affect the contents of working memory?",
-    "answer": "Based on the provided transcript, the interruption of a task significantly degrades the contents of working memory due to its extremely limited capacity.\n\nThe transcript explains that working memory is \"very small\" and can only hold \"about five to eight chunks of information at a time.\" When an individual attempts to multitask or plan (such as making coffee), they rely on this limited space to store necessary details. However, an interruption, like a telephone ringing, introduces new, competing information (e.g., a meeting time, a location, a specific person to call, and a plan to eat chocolate).\n\nBecause the capacity is so restricted, the influx of this new information causes the original task details (the steps to make coffee) to be displaced or lost. The speaker illustrates this by stating, \"who am I not going to call Margaret what will I not have with me pictures pictures why too many things I lost it.\" This demonstrates that when the number of \"chunks\" exceeds the limit of five to eight, the brain cannot maintain the original sequence of actions, resulting in the loss of the initial task plan.",
-    "source_segment": {
-      "id": 6,
-      "topic": "The Mechanism: Working Memory and Its Limits"
-    },
-    "time_start_sec": 173.0,
-    "time_end_sec": 214.67999999999998,
-    "time_start_hhmmss": "00:02:53",
-    "time_end_hhmmss": "00:03:35"
-  },
-  {
-    "question": "How does the concept of \"chunks\" relate to the limitations of working memory described in the text?",
-    "answer": "Based on the provided transcript, the concept of \"chunks\" relates to the limitations of working memory in the following ways:\n\n*   **Limited Capacity:** Working memory is described as having a very small capacity, able to hold only \"about five to eight chunks of information at a time.\"\n*   **Unit of Information:** A \"chunk\" represents a single unit of information that the brain processes. The limitation is not necessarily the number of individual facts, but the number of these grouped units.\n*   **Consequence of Overload:** When the number of chunks exceeds this limit (as illustrated by the speaker trying to remember multiple tasks like making coffee, a phone call, a meeting time, a location, and a specific item to bring), the working memory becomes overwhelmed. This leads to the failure to retain the information, resulting in the speaker stating, \"I lost it.\"\n\nIn essence, the text illustrates that working memory functions like a temporary holding space with a strict limit on the number of discrete information groups (chunks) it can manage simultaneously; exceeding this limit causes cognitive failure.",
-    "source_segment": {
-      "id": 6,
-      "topic": "The Mechanism: Working Memory and Its Limits"
-    },
-    "time_start_sec": 173.0,
-    "time_end_sec": 214.67999999999998,
-    "time_start_hhmmss": "00:02:53",
-    "time_end_hhmmss": "00:03:35"
-  },
-  {
-    "question": "What is the reason given for the coffee being dumped out?",
-    "answer": "The reason given for the coffee being dumped out is that there was \"all the stuff that Betty wanted to talk about.\"",
-    "source_segment": {
-      "id": 8,
-      "topic": "The Consequence: Coffee Forgotten Due to Distraction"
-    },
-    "time_start_sec": 231.239,
+    "time_start_sec": 108.119,
     "time_end_sec": 242.92000000000002,
-    "time_start_hhmmss": "00:03:51",
+    "time_start_hhmmss": "00:01:48",
     "time_end_hhmmss": "00:04:03"
   },
   {
-    "question": "How does the speaker's decision to make coffee illustrate the concept of spontaneous action in daily life?",
-    "answer": "The speaker's decision to make coffee illustrates spontaneous action in daily life through a clear, immediate chain of thought and movement triggered by a simple internal need.\n\n1.  **Immediate Trigger:** The action begins with a specific, unplanned realization while in the living room: \"I'm getting thirsty.\" This is not a pre-scheduled event but a reaction to a current physical state.\n2.  **Instant Resolution:** The speaker immediately formulates a plan in the moment (\"I decide... I've been watching TV... I am going to go make a pot of coffee\"). There is no delay or complex deliberation; the need directly results in the decision.\n3.  **Direct Execution:** The transition from thought to action is seamless. The speaker \"gets up and heads toward the kitchen\" without hesitation, demonstrating how spontaneous actions bypass long-term planning in favor of addressing immediate desires.\n\nThis sequence highlights that spontaneous action often arises from the intersection of a current context (watching TV), a sudden realization (thirst), and an immediate commitment to satisfy that need (making coffee).",
+    "question": "How can I tell if what I am experiencing is just normal forgetfulness or something more serious like dementia?",
+    "answer": "The video transcript doesn't actually explain the specific differences between normal forgetfulness and dementia, so I can't give you a list of signs to look for based on this clip alone. However, it does offer a very reassuring thought: when we are just forgetful, our brains are still working and are \"not dead.\" The speaker is trying to show the difference between being forgetful and having dementia (which means memory loss that affects daily life), but the specific details of that comparison aren't included in these short lines.",
     "source_segment": {
-      "id": 2,
-      "topic": "The Scenario: Deciding to Make Coffee"
+      "id": 1,
+      "topic": "Introduction to Forgetfulness vs. Dementia"
     },
-    "time_start_sec": 10.92,
-    "time_end_sec": 34.8,
-    "time_start_hhmmss": "00:00:11",
-    "time_end_hhmmss": "00:00:35"
+    "time_start_sec": 0.719,
+    "time_end_sec": 13.719000000000001,
+    "time_start_hhmmss": "00:00:01",
+    "time_end_hhmmss": "00:00:14"
   },
   {
-    "question": "How does the dialogue demonstrate the process of making plans over the telephone?",
-    "answer": "The dialogue demonstrates the process of making plans over the telephone through a clear, sequential exchange of information that moves from initiating contact to finalizing specific details.\n\n**1. Initiation and Availability**\nThe process begins with the caller (Betty) ringing the phone and the recipient answering. After a brief social greeting (\"hello oh hey\"), the caller immediately states the purpose of the call: wanting to get together. The recipient confirms availability (\"okay this afternoon\"), establishing the general timeframe.\n\n**2. Determining Specific Time**\nOnce the general time is agreed upon, the caller proposes a specific time (\"two\"). The recipient accepts this immediately (\"okay\"), solidifying the time component of the plan.\n\n**3. Selecting a Location**\nThe conversation then shifts to the location. The caller suggests \"the mall,\" and the recipient agrees. To narrow this down, the caller specifies a general area (\"down by Macy's\"). The recipient then asks a clarifying question regarding the exact spot (\"meet inside or out\"), and the caller responds with a preference (\"out\"), finalizing the location.\n\n**4. Adding Context and Social Details**\nAs the logistical details are set, the conversation naturally expands to include social context. They discuss a new store (\"chocolate store\") and decide on a specific activity (sharing treats like coconut and caramels). The caller also mentions bringing vacation pictures, adding a personal element to the meeting.\n\n**5. Involving Third Parties**\nThe planning process includes coordinating with others. The caller mentions inviting a third person (\"Margaret\"), and the recipient confirms this is acceptable (\"that's fine\"), ensuring all parties are aligned.\n\n**6. Confirmation and Closure**\nThe dialogue concludes with a final confirmation of the arrangement (\"I'll see you soon\") and a warm closing (\"love you\"). This step ensures both parties leave the call with a shared understanding of the plan.\n\nIn summary, the transcript illustrates a standard planning protocol: **Greeting $\\rightarrow$ Proposal of Meeting $\\rightarrow$ Agreement on Time $\\rightarrow$ Agreement on Place $\\rightarrow$ Refinement of Details $\\rightarrow$ Inclusion of Others $\\rightarrow$ Final Confirmation.**",
+    "question": "What exactly is a \"stronger cue,\" and how can I use my surroundings to help me remember what I was going to do?",
+    "answer": "A \"stronger cue\" is a clearer reminder that helps your brain remember something when simple hints aren't enough. The speaker explains that as we get older or do more things in a room, small visual clues (like seeing a coffee pot) might not stand out to us anymore because there are too many distractions.\n\nTo use your surroundings to help you remember, try this:\n1. **Go back to the spot:** Physically walk back to the place where you first had the thought.\n2. **Get mentally there:** Try to imagine yourself in that moment again.\n3. **Use all your senses:** Look for visual clues, listen for verbal cues, or notice touch cues in that specific location.\n\nOnce you are physically and mentally back in that right place, the memory often comes back to you. This is completely normal behavior, so don’t be frustrated if it feels like extra work—it just means your brain needs a stronger signal to recall the task.",
     "source_segment": {
-      "id": 3,
-      "topic": "The Interruption: Answering the Telephone"
+      "id": 4,
+      "topic": "The Role of Environmental Cues in Memory Retrieval"
     },
-    "time_start_sec": 33.719,
-    "time_end_sec": 101.92,
-    "time_start_hhmmss": "00:00:34",
-    "time_end_hhmmss": "00:01:42"
+    "time_start_sec": 240.4,
+    "time_end_sec": 301.35999999999996,
+    "time_start_hhmmss": "00:04:00",
+    "time_end_hhmmss": "00:05:01"
   },
   {
-    "question": "How can one distinguish between genuine forgetfulness and a need for a different approach to assistance?",
-    "answer": "Based on the provided transcript, distinguishing between genuine forgetfulness and a need for a different approach involves recognizing when standard reminders are ineffective.\n\nThe text suggests that if \"reminding\" someone is not helping and the issue is no longer simple forgetfulness, it indicates a \"change in gear\" is required. In this context, the problem shifts from memory loss to a need for a \"change in attitudes.\" Therefore, one should look for the point where telling someone to remember or reminding them fails to resolve the issue, signaling that the assistance strategy must evolve beyond simple reminders.",
+    "question": "What should I do when my family member acts on illogical ideas that feel very real and urgent to them?",
+    "answer": "The transcript explains that when a person with dementia acts on ideas that seem illogical to you, those actions make perfect sense to them in the moment. They are reacting to things they see or hear right now (\"whatever is around\"), but they are not able to \"hook it all together\" or remember what happened just minutes before.\n\nFor example, the speaker in the video sees a dirty glass and believes thieves left it behind as evidence. To them, this is real, so they put the glass in the freezer to catch the thief. Even though roaming around doing these things seems strange to us, the person feels their actions are logical based on what they are seeing at that exact second.\n\nBecause the transcript focuses on explaining *why* this happens rather than giving specific steps for caregivers, the best approach is to understand that your family member isn't trying to be difficult. Their brain is picking up on immediate clues but cannot connect them to the bigger picture. Recognizing that their fear or urgency feels very real to them can help you stay calm and supportive instead of frustrated.",
     "source_segment": {
-      "id": 17,
-      "topic": "Conclusion: The Futility of Reminding"
+      "id": 5,
+      "topic": "Scenario: Symptoms and Behavior in Dementia"
     },
-    "time_start_sec": 443.0,
-    "time_end_sec": 467.56,
-    "time_start_hhmmss": "00:07:23",
-    "time_end_hhmmss": "00:07:48"
+    "time_start_sec": 298.96,
+    "time_end_sec": 386.72,
+    "time_start_hhmmss": "00:04:59",
+    "time_end_hhmmss": "00:06:27"
   }
 ]

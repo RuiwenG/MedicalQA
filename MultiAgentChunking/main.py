@@ -26,6 +26,11 @@ _LANG_MAP = {
 }
 _LANG_SUFFIX_RE = re.compile(r"-(cn|zh|en|hi|ro)(?:-|\.|$)", re.IGNORECASE)
 
+# QA-target scaling, mirrored from SingleQA/config/settings.py so both approaches
+# produce the same pair density per source-hour. Keep the two in step.
+WORDS_PER_QA = 250
+MIN_QA_PAIRS = 4
+
 
 class MultiAgent:
     def detect_language_from_filename(self, path: str) -> tuple[str, str]:
@@ -113,6 +118,14 @@ class MultiAgent:
 
         segments_json = file_handler.read_transcript(file_name)
         base_name = os.path.splitext(file_name)[0]
+
+        # Scale the QA target to transcript length, matching SingleQA so the two
+        # approaches sample the same source at the same density. Constants are
+        # mirrored from SingleQA/config/settings.py (words_per_qa, min_qa_pairs);
+        # change them there first and keep these in step.
+        transcript_word_count = sum(
+            len((seg.get("text") or "").split()) for seg in segments_json
+        )
 
         # Build numbered transcript and time index from JSON
         print("🔢 Building numbered transcript from JSON segments...")
@@ -228,8 +241,15 @@ class MultiAgent:
             )
         agent3_end = time.time() - agent3_start
 
-        # the target number of questions
-        K = 20
+        # The target number of questions, scaled to transcript length exactly as
+        # SingleQA does: k = max(4, round(word_count / 250)). Previously a flat
+        # K = 20, which gave a 45-minute video the same coverage as a 12-minute
+        # one and made the two approaches non-comparable per source-hour.
+        K = max(MIN_QA_PAIRS, round(transcript_word_count / WORDS_PER_QA))
+        print(
+            f"ℹ️ Transcript is {transcript_word_count} words -> targeting K={K} QA pairs "
+            f"(1 per ~{WORDS_PER_QA} words, floor {MIN_QA_PAIRS})"
+        )
         from processors.selection_algorithm import SelectionAlgorithm
 
         selection_algorithm = SelectionAlgorithm()
@@ -267,10 +287,12 @@ class MultiAgent:
             item for item in curation_log if item.get("status") == "Selected"
         ]
 
-        # Enforce 20 question rule after selection
-        if len(selected_questions) != 20:
+        # The selector already caps at K (selected[:K]); this only surfaces the
+        # case where the question pool was too small to reach the target.
+        if len(selected_questions) != K:
             print(
-                f"⚠️ Selector returned {len(selected_questions)} questions, not 20. The list will be truncated/padded if needed."
+                f"⚠️ Selector returned {len(selected_questions)} questions, not the "
+                f"target K={K} — the filtered question pool was smaller than the target."
             )
         # Agent 5 time
         agent5_start = time.time()

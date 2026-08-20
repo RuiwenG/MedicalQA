@@ -1,0 +1,14 @@
+{
+  "approach": "MultiAgent (MultiAgentChunking)",
+  "prompt_version": "v2",
+  "model": "qwen/qwen3.5-plus-20260420",
+  "backend": "api",
+  "provider": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "generated_utc": "2026-08-20T08:20:08Z",
+  "seed": 42,
+  "thinking": "disabled",
+  "qa_target": "K = max(4, round(transcript_word_count / 250)) - matches SingleQA",
+  "agents_active": "1 architect, 2 inquisitor, 3 scorer, 5 synthesizer (agent 4 justifier disabled)",
+  "note": "Model is pinned to a dated snapshot; the floating dashscope alias qwen3.5-plus does not report which snapshot serves it. Supersedes the flat K=20 runs."
+}

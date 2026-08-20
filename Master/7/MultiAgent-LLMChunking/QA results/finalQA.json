@@ -1,226 +1,46 @@
 [
   {
-    "question": "What should I do if I suspect a behavior might indicate an acute medical issue?",
-    "answer": "If you notice behaviors that might be the start of a new symptom or something significant, think of it as a way to check if there is an acute medical issue that needs attention. For example, if a conversation moves too fast and the person with dementia gets confused or says things like \"I don't know\" or \"I do\" without clarity, it may mean their brain is struggling to keep up. In such cases, you should consider that this could be a sign of a medical problem and do something about it. You can use these observations as a screening tool to decide whether to seek further help.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Role Play: Misinterpreting the Question"
-    },
-    "time_start_sec": 458.56,
-    "time_end_sec": 586.8800000000001,
-    "time_start_hhmmss": "00:07:39",
-    "time_end_hhmmss": "00:09:47"
-  },
-  {
-    "question": "What should I do when my parent says they want to go home or asks where someone is, instead of trying to immediately solve the problem?",
-    "answer": "When your parent says they want to go home or asks where someone is, it is important to understand that hearing these words can be distressing for them, but the distress might not actually be about the person they are looking for. Instead of immediately trying to solve the problem or fix the situation by finding the person, try to notice what is happening in the moment. The speaker suggests that there is often something \"really strong\" driving this behavior, and the parent might be letting you know about an unmet need through their pause or curiosity. By recognizing that their words are matching their current distress, you can avoid the urge to jump into a \"fix it\" mindset. Instead, simply observe the situation and consider that the need behind the words may be something other than the literal request.",
-    "source_segment": {
-      "id": 8,
-      "topic": "The Importance of Pausing to Respond"
-    },
-    "time_start_sec": 400.56,
-    "time_end_sec": 459.91900000000004,
-    "time_start_hhmmss": "00:06:41",
-    "time_end_hhmmss": "00:07:40"
-  },
-  {
-    "question": "How can I use the phrase \"tell me more\" to help my loved one share their thoughts when they don't have the words?",
-    "answer": "Using the phrase \"tell me more\" is a powerful way to help your loved one share their thoughts when they are struggling to find the right words. As seen in the example with Amanda, this phrase can gently encourage them to expand on a topic they are interested in, like sitting in the sun with their mom. It works well when you notice they have some verbal skills but need a little nudge to connect.\n\nTo use this effectively, you can follow these steps:\n*   **Pause and Listen:** If your loved one starts to falter or seems distressed, it is okay to pause. You can go back a step to offer simple choices, such as asking if they sit \"out front or in the back,\" or if their mom is \"tall or short.\"\n*   **Encourage Elaboration:** Once they start, use \"tell me more about it\" to invite them to share more details. For instance, if they mention sitting in the sun, you can ask, \"You and your mom sit in the sun every day, tell me more about that.\"\n*   **Watch for Cues:** Be ready to stop if the conversation causes more distress. The goal is to share a connection, not to force a long story if it becomes difficult for them.\n\nRemember, this approach helps you build a connection even when words are hard to find, and it respects their current level of communication.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Technique: Using 'Tell Me More' and Specific Prompts"
-    },
-    "time_start_sec": 780.56,
-    "time_end_sec": 896.48,
-    "time_start_hhmmss": "00:13:01",
-    "time_end_hhmmss": "00:14:56"
-  },
-  {
-    "question": "What is a better approach than trying to \"fix\" the situation when my parent is expressing confusion or distress?",
-    "answer": "When your parent expresses confusion or distress, it is natural to feel like you need to \"fix\" the situation or find a solution regarding the person they are talking about. However, a better approach is to recognize that the distress you are hearing may not actually be about the specific person mentioned. Instead, try to see the pause or the statement as a signal that there is a strong, unmet need driving the behavior. Rather than assuming the words are matching a specific reality about that person, understand that the distress itself is the important message. This shift in thinking helps you move away from trying to solve a problem that might not exist and toward understanding what the parent is truly trying to communicate.",
-    "source_segment": {
-      "id": 8,
-      "topic": "The Importance of Pausing to Respond"
-    },
-    "time_start_sec": 400.56,
-    "time_end_sec": 459.91900000000004,
-    "time_start_hhmmss": "00:06:41",
-    "time_end_hhmmss": "00:07:40"
-  },
-  {
-    "question": "How can I explore what is really going on for my loved one when they are having trouble communicating their needs?",
-    "answer": "It is completely normal to feel unsure when you hear distress but aren't sure how to move forward together. When your loved one has trouble communicating, try to pause your instinctive questions like \"Do you remember?\" or \"Why do you need help?\" which can sometimes get stuck in a loop. Instead, gently ask open-ended questions such as \"Tell me what you're needing\" or \"Where are you?\" to help them express what is really going on. The goal is to explore what is happening beneath the surface and find a way to move forward as a team, even if it feels like a hard step to take.",
-    "source_segment": {
-      "id": 3,
-      "topic": "The Trap of Instinctive Questioning"
-    },
-    "time_start_sec": 63.359,
-    "time_end_sec": 115.67999999999999,
-    "time_start_hhmmss": "00:01:03",
-    "time_end_hhmmss": "00:01:56"
-  },
-  {
-    "question": "How do I practice the art of reflection with my loved one?",
-    "answer": "Practicing the art of reflection involves catching the ball that your loved one throws. When they say something like, \"I want to go home\" or ask for their mother, you can respond by reflecting back what they said to show you understand. For example, you might say, \"Oh, you want to go home,\" or \"You are looking for your mother.\" This approach helps you practice this skill by showing them, \"This is what you threw.\" The goal is to acknowledge their feelings and words so they feel heard, rather than trying to correct them or immediately solve the problem.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Context: The 'Have You Seen My Mother' Phenomenon"
-    },
-    "time_start_sec": 25.68,
-    "time_end_sec": 67.28,
-    "time_start_hhmmss": "00:00:26",
-    "time_end_hhmmss": "00:01:07"
-  },
-  {
-    "question": "What happens when a caregiver tries to move too quickly forward during a conversation?",
-    "answer": "When a caregiver tries to move too quickly forward during a conversation, they might fall into the trap of ignoring the person's feelings or letting them go without addressing them. This can happen even when the caregiver is skilled at reflection. The context suggests that while the words a person with dementia says might be clear, the meaning behind them might not be fully understood if the conversation is rushed. It is important to notice low-level distress, such as when someone is looking for their mother, and to avoid simply moving on too fast. Instead, take time to stay present and explore the meaning behind what is being said rather than rushing to the next topic.",
-    "source_segment": {
-      "id": 6,
-      "topic": "The Danger of Moving Too Quickly"
-    },
-    "time_start_sec": 288.56,
-    "time_end_sec": 322.40000000000003,
-    "time_start_hhmmss": "00:04:49",
-    "time_end_hhmmss": "00:05:22"
-  },
-  {
-    "question": "What are some examples of choices I can offer my loved one when they are searching for a family member?",
-    "answer": "When your loved one is searching for a family member, you can offer them simple choices that help you understand what they actually need. For example, you might ask, \"Do you want to see her to be with her, or to do something with her?\" This approach helps you figure out if the search is driven by an emotional need, like wanting to talk, sit together, or hug, or if it is a physical need, such as needing to find the bathroom or looking for someone who gives them snacks. By offering these specific options, you can reflect back what you hear and better support them in that moment.",
+    "question": "How can I use the phrase \"tell me more\" to help my loved one share their feelings when they are struggling to find the right words?",
+    "answer": "When your loved one wants to connect with you but doesn’t have the words, you can use the phrase “tell me more” to help them share. First, notice if they still have some verbal skills, because this approach works best when they can still speak a little. To use it, start by repeating back what you heard or understood about their situation. For example, if they mention sitting in the sun with someone special, you can say, “You and your mom sit in the sun every day.” Then, pause for a second to make sure everyone is listening. After that, gently ask, “Tell me more about that.” This invites them to keep talking without pressure. If you do this, you might find that you could go on talking for ages because it opens the door for them to share more of their feelings.",
     "source_segment": {
       "id": 11,
-      "topic": "Role Play: Reflecting and Offering Choices"
+      "topic": "Exploring Specific Contexts: Emotional vs. Physical Needs"
     },
-    "time_start_sec": 650.32,
-    "time_end_sec": 784.0,
-    "time_start_hhmmss": "00:10:50",
-    "time_end_hhmmss": "00:13:04"
+    "time_start_sec": 784.0,
+    "time_end_sec": 864.639,
+    "time_start_hhmmss": "00:13:04",
+    "time_end_hhmmss": "00:14:25"
   },
   {
-    "question": "How can I tell if a behavior my loved one is showing is just part of their dementia or a sign of a new medical problem?",
-    "answer": "The video suggests using specific behaviors as a \"screening tool\" to help you decide if what you are seeing is just part of their dementia or the start of a new, significant medical symptom. For example, if your loved one gets confused or frustrated during a conversation—like when you ask, \"Have you seen your mother?\" and they respond with a confusing mix of \"I didn't see her\" and \"Why are you trying to trick me?\"—this might be their brain struggling to keep up with a fast pace rather than a new medical issue. The speaker notes that moving the conversation ahead too quickly can confuse their brain and make them feel like they don't know what to say. To tell the difference, watch for behaviors that seem like a \"really significant symptom\" that requires immediate medical attention versus those that are just part of their daily experience. If you are unsure, the speaker mentions that a full webinar is available where she walks through different role-plays to show these behaviors in action, which can help you learn to spot them again.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Role Play: Misinterpreting the Question"
-    },
-    "time_start_sec": 458.56,
-    "time_end_sec": 586.8800000000001,
-    "time_start_hhmmss": "00:07:39",
-    "time_end_hhmmss": "00:09:47"
-  },
-  {
-    "question": "What should I do when I notice my loved one is distressed but I am not sure how to help them move forward?",
-    "answer": "When you notice your loved one is distressed and feel unsure how to help them move forward, it is completely normal to feel stuck. The context explains that we often instinctively ask questions like \"Do you know where she is?\" or \"Why do you need help?\" just to get to the next step, but sometimes we aren't sure how to bridge the gap from noticing the distress to moving forward together. The key is to explore what is really going on rather than just trying to fix it immediately. Remember that going from simply noticing the distress to figuring out how to move forward together is a really hard thing to do, but it is something you can work on.",
-    "source_segment": {
-      "id": 3,
-      "topic": "The Trap of Instinctive Questioning"
-    },
-    "time_start_sec": 63.359,
-    "time_end_sec": 115.67999999999999,
-    "time_start_hhmmss": "00:01:03",
-    "time_end_hhmmss": "00:01:56"
-  },
-  {
-    "question": "How can I use simple prompts like asking about height or location to help my loved one continue a story?",
-    "answer": "You can help your loved one continue a story by offering simple choices or asking specific questions about details they might remember, like location or physical traits. For example, if they are looking for someone, you can ask, \"Out front or in the back?\" or \"Is your mom tall or short?\" These small prompts can help them start talking again without causing distress. It is important to watch for signs that they are struggling; if they start to falter or seem upset, it is okay to pause and go back a step. You can also use phrases like \"Tell me more about it\" to encourage them to share what they are thinking, especially if they have some verbal skills but are having trouble finding the right words.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Technique: Using 'Tell Me More' and Specific Prompts"
-    },
-    "time_start_sec": 780.56,
-    "time_end_sec": 896.48,
-    "time_start_hhmmss": "00:13:01",
-    "time_end_hhmmss": "00:14:56"
-  },
-  {
-    "question": "How should I react when my loved one is showing high levels of distress or intense anger?",
-    "answer": "When your loved one shows high levels of distress or intense anger, it is important to notice not just the emotion, but the level or intensity of that emotion. Sometimes, a person's face can show a reaction that is different from what they are saying, so pay attention to their facial expressions. If you notice a much more intense reaction, like in the third example where the distress was very high, you should stay in that moment and do a little more reflection. Instead of immediately asking curiosity-based questions or trying to solve the problem right away, pause to understand the intensity of their feelings. This helps you respond appropriately to the level of distress they are experiencing.",
+    "question": "How does staying in the moment and reflecting back what they say help calm them down compared to just ignoring their comment?",
+    "answer": "When a person with dementia is feeling only a little bit upset, it is easy to fall into the trap of ignoring their comment or trying to move on too quickly. However, staying in that moment and reflecting back what they say helps you stay aware of their feelings instead of rushing ahead. By doing this, you acknowledge their distress rather than skipping over it, which prevents you from missing what they really need in that specific moment.",
     "source_segment": {
       "id": 5,
-      "topic": "Analyzing Emotional Intensity and Gradations"
+      "topic": "Caregiver Self-Reflection and Reaction to Intensity"
     },
-    "time_start_sec": 144.319,
-    "time_end_sec": 289.19899999999996,
-    "time_start_hhmmss": "00:02:24",
-    "time_end_hhmmss": "00:04:49"
+    "time_start_sec": 250.08,
+    "time_end_sec": 306.40000000000003,
+    "time_start_hhmmss": "00:04:10",
+    "time_end_hhmmss": "00:05:06"
   },
   {
-    "question": "What is the best way to show my loved one that I understand their feelings?",
-    "answer": "When your loved one asks to go home or mentions missing their mother, try reflecting what they have just said back to them. This means catching the ball of their words and showing it to them by saying, \"This is what you threw,\" such as, \"You want to go home\" or \"You are looking for your mother.\" This simple act of reflection helps them feel understood. The video notes that caregivers are getting really good at practicing this art of reflection, which is a great way to connect.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Context: The 'Have You Seen My Mother' Phenomenon"
-    },
-    "time_start_sec": 25.68,
-    "time_end_sec": 67.28,
-    "time_start_hhmmss": "00:00:26",
-    "time_end_hhmmss": "00:01:07"
-  },
-  {
-    "question": "How can I practice pausing to think before I respond to my loved one's difficult emotions?",
-    "answer": "When your loved one moves beyond simple curiosity and shows strong emotions like anger, sadness, or fear, it often means something isn't right for them and they have an unmet need. Instead of trying to move forward or fix the problem immediately, the most important step is to pause. This pause helps you stop reacting automatically and start responding thoughtfully. To do this, you need to use your prefrontal cortex—the part of your brain that helps you think and process what is happening in the moment. While this is a tough skill to practice, taking that moment to think before you speak allows you to truly notice and offer support for the emotion your loved one is giving you.",
+    "question": "If someone says they are looking for their mom, why might trying to fix that specific problem not solve their distress?",
+    "answer": "Trying to fix the specific problem might not help because the words a person says don’t always match what is actually causing their distress. For example, if someone says, \"I’m looking for my mom,\" it creates a strong feeling of worry or sadness. However, that upset feeling might have nothing to do with their mom at all.\n\nIf we assume the words tell us exactly what is wrong, we try to \"solve\" the issue by talking about the mom. But since the real cause could be something else entirely, that solution won’t work. Instead of reacting quickly, it helps to pause and get curious. This means using your thinking brain to process what is happening in the moment and trying to understand what unmet need is driving those strong feelings, rather than just focusing on the literal words.",
     "source_segment": {
       "id": 7,
-      "topic": "Identifying Unmet Needs Behind the Words"
+      "topic": "Pausing to Identify Unmet Needs Instead of Reacting"
     },
-    "time_start_sec": 318.8,
-    "time_end_sec": 402.16,
-    "time_start_hhmmss": "00:05:19",
-    "time_end_hhmmss": "00:06:42"
+    "time_start_sec": 372.96,
+    "time_end_sec": 459.91900000000004,
+    "time_start_hhmmss": "00:06:13",
+    "time_end_hhmmss": "00:07:40"
   },
   {
-    "question": "Why is it important to notice and support the emotions my loved one is expressing?",
-    "answer": "When your loved one moves beyond simple curiosity and starts showing strong emotions like anger, sadness, or fear, it is important to notice and support those feelings because they are often a sign that an unmet need exists. When they ask a question like \"Where is my mother?\" and it isn't about the actual location, something isn't coming together for them, and they are expressing an unmet state of some kind. By picking up on these emotions and offering support back, you acknowledge what they are giving you. This approach helps you avoid the trap of trying to immediately move forward or fix the problem. Instead, you can pause to think and respond rather than react, which allows you to use your prefrontal cortex—the part of the brain that helps you process what is happening in the moment—to better understand their needs.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Identifying Unmet Needs Behind the Words"
-    },
-    "time_start_sec": 318.8,
-    "time_end_sec": 402.16,
-    "time_start_hhmmss": "00:05:19",
-    "time_end_hhmmss": "00:06:42"
-  },
-  {
-    "question": "How can I tell if the words a person with dementia is saying are actually explaining their distress, or if I am missing the emotion behind their words?",
-    "answer": "It is very common to assume that the words a person with dementia is saying are the exact explanation of what they need, but sometimes we miss the emotion behind them. Instead of focusing only on the words, try to look for the emotion they are giving you, such as sadness, anger, or loneliness. Ask yourself if this feeling looks different than the last time you asked, or if it could be something physical. If you can start to hear their communication as simply their \"amygdala\" (the part of the brain that handles emotions) being on \"low, medium, or high,\" you can better support them. Your goal is to bring their feelings down if necessary, reflect back exactly what you are feeling from them, and offer a gentle way for them to tell you more.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Recognizing Amygdala Activation"
-    },
-    "time_start_sec": 583.2,
-    "time_end_sec": 651.839,
-    "time_start_hhmmss": "00:09:43",
-    "time_end_hhmmss": "00:10:52"
-  },
-  {
-    "question": "Why is it important not to ignore a person's distress even if it seems minor?",
-    "answer": "It is important not to ignore low-level distress because we sometimes fall into the trap of just letting it go or trying to move too quickly forward. When a person, like a mother, expresses distress, the words they use might not be the full meaning behind what they are feeling. Instead of ignoring it or rushing past it, it is helpful to listen and try to understand the deeper meaning behind their words.",
-    "source_segment": {
-      "id": 6,
-      "topic": "The Danger of Moving Too Quickly"
-    },
-    "time_start_sec": 288.56,
-    "time_end_sec": 322.40000000000003,
-    "time_start_hhmmss": "00:04:49",
-    "time_end_hhmmss": "00:05:22"
-  },
-  {
-    "question": "How do I know if my facial expression is showing more emotion than my words?",
-    "answer": "Sometimes your face can show more emotion than your words, even if you are trying to stay calm. In the video, a caregiver noticed their own face looked intense and said \"yikes\" or \"oh god,\" which showed they were worried, even though they might have been trying to handle the situation. The educator explained that your face can sometimes \"belies\" (hide or contradict) what you are saying. To know if this is happening, pay attention to your own reactions and notice if your face looks more upset or intense than you feel inside. It is okay to notice this; it helps you understand how you are reacting to what the person with dementia is saying so you can decide how to respond.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Analyzing Emotional Intensity and Gradations"
-    },
-    "time_start_sec": 144.319,
-    "time_end_sec": 289.19899999999996,
-    "time_start_hhmmss": "00:02:24",
-    "time_end_hhmmss": "00:04:49"
-  },
-  {
-    "question": "What does it mean to offer a choice to someone with dementia?",
-    "answer": "Offering a choice means giving the person with dementia options to help them feel ready and in control. The video suggests a simple way to do this: first, offer a choice, and then, if they seem ready, ask them to \"tell me more.\" This approach helps you continue practicing these positive pack skills together.",
+    "question": "Why is it helpful to offer choices when caring for someone with dementia?",
+    "answer": "The provided video transcript does not explain why offering choices is helpful. It only mentions that you should \"offer a choice\" as part of practicing specific care skills, but it does not give the reasons behind this advice.",
     "source_segment": {
       "id": 13,
-      "topic": "Conclusion and Encouragement for Practice"
+      "topic": "Conclusion and Recap of PACK Skills"
     },
     "time_start_sec": 894.639,
     "time_end_sec": 927.8389999999999,
@@ -228,15 +48,63 @@
     "time_end_hhmmss": "00:15:28"
   },
   {
-    "question": "What are some ways I can support a person who is feeling overwhelmed and help bring their stress levels back down?",
-    "answer": "When a person seems overwhelmed, try not to assume that the words they are saying are the main problem. Instead, look past the words to see the emotion they are giving you, such as sadness, anger, or loneliness. Ask yourself if this feeling looks different than the last time you checked in, or if it could be something physical.\n\nThink of their stress as their \"amygdala\" (the part of the brain that handles emotions) being turned on at a low, medium, or high level. Your goal is to help bring that level back down. You can do this by:\n*   Listening to their emotional state rather than just their words.\n*   Reflecting back exactly what you are feeling they are giving you.\n*   Offering a gentle way for them to tell you more about what they need.",
+    "question": "How can offering a choice help figure out if the person has an emotional need, like feeling lonely, or a physical need, like needing to use the bathroom?",
+    "answer": "Offering a choice helps you figure out what the person needs by asking them to pick between two simple options: do they want to \"be with\" someone, or do they want to \"do something\"?\n\nIf the answer is about being with someone, it might be an emotional need. For example, they might feel lonely and just want to talk, sit together, or have a hug.\n\nIf the answer is about doing something, it might be a physical need. For instance, they might be looking for their mother because they are turned around and can’t find the bathroom, or they are hungry and looking for a snack. By giving these two clear choices, you can see if the issue is about feelings or a specific task they need help with.",
     "source_segment": {
       "id": 10,
-      "topic": "Recognizing Amygdala Activation"
+      "topic": "Role Play: Reflecting and Offering Choices for Low/Medium Distress"
     },
-    "time_start_sec": 583.2,
-    "time_end_sec": 651.839,
-    "time_start_hhmmss": "00:09:43",
-    "time_end_hhmmss": "00:10:52"
+    "time_start_sec": 662.88,
+    "time_end_sec": 788.0,
+    "time_start_hhmmss": "00:11:03",
+    "time_end_hhmmss": "00:13:08"
+  },
+  {
+    "question": "What are some simple ways I can help calm my loved one down when they are highly distressed?",
+    "answer": "When your loved one is upset, try to look past the specific words they are saying. Instead, focus on the emotion behind them, such as sadness, anger, or loneliness. Ask yourself if this feeling seems different from before or if it might be caused by something physical, like pain or discomfort.\n\nThink of their stress level like an \"amygdala\" (the part of the brain that handles strong emotions) being on low, medium, or high. If their stress is high, your goal is to \"come up under and support\" them. This means staying calm and helping to bring their stress levels back down. You can also simply reflect back what you see them feeling and offer a gentle way for them to tell you more about what is bothering them.",
+    "source_segment": {
+      "id": 9,
+      "topic": "Assessing Amygdala Activation and Supporting Regulation"
+    },
+    "time_start_sec": 590.8,
+    "time_end_sec": 666.0,
+    "time_start_hhmmss": "00:09:51",
+    "time_end_hhmmss": "00:11:06"
+  },
+  {
+    "question": "What common traps should I avoid when I try to reflect back what the person is saying?",
+    "answer": "A common trap to avoid is trying to reflect back what the person is saying but moving too quickly. Even if you use the right words, you might miss the true meaning behind them. When a person with dementia is sharing feelings, they are often not looking for facts or curiosity about things like where a family member is. Instead, they are showing that an emotional need is not being met. They might be feeling angry, sad, or scared because something feels wrong or doesn’t add up for them. The key is to slow down and notice these emotions. Offer support for how they are feeling rather than rushing to fix the situation or correct the facts.",
+    "source_segment": {
+      "id": 6,
+      "topic": "The Trap of Moving Too Quickly Forward"
+    },
+    "time_start_sec": 304.4,
+    "time_end_sec": 373.84,
+    "time_start_hhmmss": "00:05:04",
+    "time_end_hhmmss": "00:06:14"
+  },
+  {
+    "question": "Why is it better to avoid asking questions like \"Do you remember?\" or \"Why do you need to see them?\" when they are upset?",
+    "answer": "When a loved one is upset, it is helpful to first \"catch the ball\" they throw you. This means listening and showing them you understand their feeling before trying to fix anything. The transcript explains that asking questions like \"Do you remember?\" or \"Why do you need to see them?\" often happens instinctively because we want to move quickly to the next step. However, these questions can feel like we are dismissing their message or rushing them. Instead of jumping straight to solving the problem, it is better to pause and explore what is really going on. This helps you move from just noticing distress to figuring out how to help them together in a calm way.",
+    "source_segment": {
+      "id": 2,
+      "topic": "Revisiting the 'Have You Seen My Mother' Question"
+    },
+    "time_start_sec": 25.68,
+    "time_end_sec": 117.759,
+    "time_start_hhmmss": "00:00:26",
+    "time_end_hhmmss": "00:01:58"
+  },
+  {
+    "question": "What should I do if I realize my face shows fear or frustration while I am trying to calm my loved one down?",
+    "answer": "The video explains that sometimes your face shows feelings like fear or frustration, even if you are trying to stay calm. This is normal because our faces often show how we really feel inside. The important thing to do is practice \"self-reflection.\" This means taking a moment to notice how you are reacting to what the person is saying. Ask yourself, \"How am I reacting?\" and \"What can I do about it?\" By noticing your own reaction, you can better understand the situation and decide how to help.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Demonstrating Emotional Gradations in Repetitive Questions"
+    },
+    "time_start_sec": 149.04,
+    "time_end_sec": 253.92,
+    "time_start_hhmmss": "00:02:29",
+    "time_end_hhmmss": "00:04:14"
   }
 ]

@@ -1,242 +1,98 @@
 [
   {
-    "question": "How can a speaker use their voice to build energy and interest in an audience?",
-    "answer": "Based on the provided transcript, a speaker can use their voice to build energy and interest by consciously shifting their vocal delivery from a state of calm to one of higher intensity. The speaker explicitly states they can \"build energy\" and \"get you interested\" and \"get you excited.\" This process involves actively manipulating their voice to create a dynamic rhythm that engages the audience, effectively \"queuing them up\" for the message. The core educational value here is the intentional control of vocal tone and pace to transition an audience from a passive or calm state to an active, interested, and excited state.",
-    "source_segment": {
-      "id": 12,
-      "topic": "The Power of Voice Rhythm and Emotional Messaging"
-    },
-    "time_start_sec": 825.24,
-    "time_end_sec": 874.959,
-    "time_start_hhmmss": "00:13:45",
-    "time_end_hhmmss": "00:14:35"
-  },
-  {
-    "question": "How does inclusive group participation contribute to an individual's sense of belonging and emotional well-being?",
-    "answer": "Based on the transcript provided, inclusive group participation contributes to an individual's sense of belonging and emotional well-being through the following mechanisms:\n\n*   **Active Inclusion and Validation:** The facilitator actively recruits hesitant individuals (like Jean and Willi) and adapts the activity to their specific needs. By ensuring everyone is physically present and engaged, the group signals that every member is valued, directly fostering a sense of inclusion.\n*   **Emotional Connection and Joy:** Even when physical movement is limited or difficult, the act of dancing with a partner generates positive emotions. The transcript highlights that Jean, despite initial hesitation and physical limitations, ends up \"smiling\" and feeling \"included.\" This shared joy creates a strong emotional bond between the individual and the group.\n*   **Social Support and Encouragement:** The group dynamic provides a supportive environment where individuals can overcome self-doubt. The facilitator uses humor and encouragement (e.g., comparing Jean's movement to a husband's dance) to normalize struggles with aging or mobility. Furthermore, the collective act of giving oneself a \"hand\" (applause) reinforces mutual respect and community support.\n*   **Cognitive and Physical Engagement:** The activity engages both the brain and the body, which is described as one of the most effective ways to maintain mobility. This dual engagement helps individuals feel capable and active, countering feelings of isolation or decline associated with aging.\n*   **Universal Accessibility:** The demonstration shows that participation is not limited by physical ability. Even Crystal, who \"doesn't move her feet at all,\" experiences enjoyment through body movement and music. This inclusivity ensures that no one is excluded due to physical limitations, allowing everyone to participate in the collective experience.\n\nIn summary, the transcript illustrates that when a group prioritizes individual needs and creates a space for shared joy and movement, it transforms a physical activity into a powerful tool for emotional well-being, ensuring that every member feels they \"deserve\" to be part of the community.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Partner Dancing: Maintaining Mobility and Social Connection"
-    },
-    "time_start_sec": 404.52,
-    "time_end_sec": 567.76,
-    "time_start_hhmmss": "00:06:45",
-    "time_end_hhmmss": "00:09:28"
-  },
-  {
-    "question": "In what ways can music be utilized to regulate a person's energy levels, such as calming them down or increasing alertness?",
-    "answer": "Based on the transcript provided, music can be utilized to regulate a person's energy levels in the following ways:\n\n*   **Dual Functionality:** Music serves as a tool to either \"calm down\" (reduce energy) or \"rev up\" (increase energy/arousal), depending on the specific needs of the individual.\n*   **Guiding Brain States:** In later stages of dementia, music allows a caregiver to \"guide and direct\" the brain toward a specific state. The speaker explicitly mentions choosing between making the person \"more alert and aroused\" or \"calm and quiet.\"\n*   **Energy Management:** The transcript describes music as a method for \"bringing your energy back where you want it,\" enabling the facilitator to actively get a person to either \"rest\" or \"activate.\"\n*   **Organizational and Relaxing Effects:** Listening to music allows the brain to \"organize\" and \"relax a little bit,\" which contributes to the calming effect, while also providing enjoyment.\n\nIn summary, music acts as a powerful mechanism to shift a person's physiological state between activation and rest, offering a non-verbal way to manage alertness and calmness.",
+    "question": "What are some simple upper body movements, like rolling shoulders, that can help warm up someone who is sitting down?",
+    "answer": "To help warm up someone who is sitting down, you can start with simple upper body movements like rolling their shoulders. In the video, the instructor encourages people to \"wiggle\" and move a little bit in their chairs to get started. Using music and calling out names helps everyone pay attention and join in. These gentle moves help prepare the body for more activity, like standing up or shifting weight later on.",
     "source_segment": {
       "id": 4,
-      "topic": "Leisure Activity: Passive Listening and Brain Regulation"
+      "topic": "Guided Seated Movement and Shoulder Exercises"
     },
-    "time_start_sec": 206.84,
-    "time_end_sec": 287.479,
-    "time_start_hhmmss": "00:03:27",
-    "time_end_hhmmss": "00:04:47"
+    "time_start_sec": 284.919,
+    "time_end_sec": 392.79999999999995,
+    "time_start_hhmmss": "00:04:45",
+    "time_end_hhmmss": "00:06:33"
   },
   {
-    "question": "How does the combination of a puzzle and a musical theme transform a simple game into a purposeful experience?",
-    "answer": "Based on the provided transcript, the combination of a puzzle and a musical theme transforms a simple game into a purposeful experience by shifting the participant's psychological state from mere entertainment to meaningful contribution.\n\nSpecifically, the text explains that introducing a musical theme to a standard activity like a crossword puzzle creates an immediate sense of **value** and **meaning**. This transformation makes the individual feel as though they are **contributing** to a larger whole, thereby fostering a sense of having a **job** and a **purpose**. Essentially, the thematic layer elevates the activity from a trivial pastime to a task that feels significant and intentional.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Music as a Preserved Skill for Connection"
-    },
-    "time_start_sec": 53.239,
-    "time_end_sec": 78.79899999999999,
-    "time_start_hhmmss": "00:00:53",
-    "time_end_hhmmss": "00:01:19"
-  },
-  {
-    "question": "How does music help meet the spiritual needs of people living with dementia?",
-    "answer": "Based on the transcript provided, music helps meet the spiritual needs of people living with dementia in the following ways:\n\n*   **Preserving Identity:** It allows caregivers to know \"who they've been and where they come from\" as other abilities fade.\n*   **Emotional Connection:** Music serves as a powerful tool to connect emotionally, even when other forms of communication or connection are failing (\"when everything else is falling apart\").\n*   **Lifting Spirits:** It has the capacity to \"lift both of you up,\" benefiting both the person with dementia and the caregiver.\n*   **Maintaining Skills:** It utilizes a \"preserved skill,\" providing a reliable avenue for interaction when other skills may be lost.",
+    "question": "Why is music considered a powerful tool for connecting with someone who has dementia?",
+    "answer": "Music is a powerful tool because it helps lift both you and the person with dementia up, giving you a way to connect even when other parts of life feel like they are falling apart. It works well because music uses a \"preserved skill,\" which means it is an ability that stays strong even as other abilities fade. Because of this, music connects with people on an emotional level. To use this tool, try using music and rhythm at least twice a day. You can also make activities feel more meaningful by adding music; for example, using a musical theme with a crossword puzzle can help the person feel like they have a purpose and value.",
     "source_segment": {
       "id": 1,
-      "topic": "Introduction: Music as a Tool for Dementia Care"
+      "topic": "Introduction to Music and Dementia Care"
     },
     "time_start_sec": 1.69,
-    "time_end_sec": 55.8,
+    "time_end_sec": 81.67999999999999,
     "time_start_hhmmss": "00:00:02",
-    "time_end_hhmmss": "00:00:56"
+    "time_end_hhmmss": "00:01:22"
   },
   {
-    "question": "In what ways can singing and humming serve as effective activities for people living with dementia?",
-    "answer": "Based on the provided transcript, singing and humming serve as effective activities for people living with dementia primarily because of the specific neurological preservation associated with music.\n\nThe text highlights that individuals with dementia often retain the **right temporal lobe** for a much longer duration than the left temporal lobe. Since the right temporal lobe is heavily involved in processing music, this preservation allows people with dementia to:\n\n*   **Sing:** They can often sing lyrics even when other cognitive functions may be impaired.\n*   **Hum:** They are able to produce melodic sounds without words.\n*   **Move Rhythmically:** They can respond physically to the beat of the music.\n\nConsequently, these activities provide a pathway to find joy and maintain connection through rhythm and melody, leveraging the brain areas that remain intact despite the progression of the disease.",
+    "question": "How can activities like dancing or walking at a steady pace help keep my brain active?",
+    "answer": "Activities like dancing or walking at a steady pace help keep your brain active by making it engage and think. When you move at a certain rhythm, your brain has to process what is happening, which activates it. You don’t need to push yourself beyond what feels comfortable; just use the abilities you already have. For example, if you can recognize a tune or sing along, that is enough to give your brain a good workout. Doing these things helps you feel productive and allows you to do the best you can with what you’ve got.",
     "source_segment": {
       "id": 8,
-      "topic": "Post-Activity: Breathing Exercises and Relaxation"
+      "topic": "Physical Fitness, Brain Engagement, and Vocal Rhythm"
     },
-    "time_start_sec": 614.24,
-    "time_end_sec": 639.639,
-    "time_start_hhmmss": "00:10:14",
-    "time_end_hhmmss": "00:10:40"
-  },
-  {
-    "question": "In what ways can music with a strong beat facilitate emotional well-being and the feeling of \"loving\" an activity?",
-    "answer": "Based on the provided transcript, music with a strong beat facilitates emotional well-being and the feeling of \"loving\" an activity in the following ways:\n\n*   **Direct Induction of Joy and Positive Emotion:** The transcript explicitly states that a \"good beat\" helps the speaker \"really have joy,\" resulting in the feeling that one \"feel[s] good\" and \"love[s] love[s] it.\" The rhythm acts as a direct catalyst for these positive emotional states.\n*   **Connection to Personal History and Identity:** The speaker desires music that matches their specific \"age group\" and is part of their \"history.\" When the beat aligns with these personal markers, it creates a sense of familiarity and belonging, which deepens the enjoyment of the activity.\n*   **Active Participation and Engagement:** The context describes people \"actively participating\" in a leisure activity (a group singing exercise). The strong beat provides a structural framework that encourages active involvement, allowing participants to engage deeply with the music and each other, thereby enhancing the overall experience.\n*   **Transformation of Routine into Enjoyment:** By combining a familiar musical style with a driving rhythm, the activity transforms from a simple task into a source of \"enjoyment\" where the participant feels a sense of accomplishment (\"good job y'all\") and collective satisfaction (\"Round of Applause\").",
-    "source_segment": {
-      "id": 9,
-      "topic": "Active Leisure: Singing and Rhythmic Joy"
-    },
-    "time_start_sec": 637.279,
-    "time_end_sec": 733.12,
-    "time_start_hhmmss": "00:10:37",
-    "time_end_hhmmss": "00:12:13"
-  },
-  {
-    "question": "What strategies can be employed to help students spell multi-syllabic words like \"sweetheart\" by breaking them down into smaller components?",
-    "answer": "Based on the provided transcript, the following strategies can be employed to help students spell multi-syllabic words like \"sweetheart\" by breaking them down into smaller components:\n\n1.  **Segmentation by Syllable:** The primary strategy demonstrated is dividing the word into distinct syllables. In the transcript, the word \"sweetheart\" is broken down into \"sweet\" and \"heart.\" This reduces the cognitive load by allowing the student to focus on one part of the word at a time rather than the entire string of letters simultaneously.\n\n2.  **Sequential Letter Construction:** Once the syllables are identified, the spelling is constructed letter-by-letter within each component. The transcript shows the instructor guiding the student through the sequence: \"S,\" \"w,\" \"e,\" \"e,\" \"t\" for the first part, followed by \"h,\" \"e,\" \"a,\" \"r,\" \"t\" for the second part. This reinforces the specific order of letters within each syllable.\n\n3.  **Interactive Verification:** The strategy involves an interactive process where the student proposes the next letter, and the instructor verifies it immediately (\"okay,\" \"excellent\"). This real-time feedback loop helps correct errors before they become ingrained and builds confidence in the student's ability to recall letter sequences.\n\n4.  **Contextual Clues and Association:** The process begins with a clue (\"sweetheart\") that provides the semantic context. By anchoring the spelling task to a familiar word or concept, the student can more easily retrieve the phonetic components associated with that meaning.\n\n5.  **Repetition and Reinforcement:** The transcript highlights the repetition of sounds and letters (e.g., emphasizing the double 'e' in \"sweet\"). Repeating the components aloud and visually helps solidify the memory of the word's structure.\n\nBy combining these steps—breaking the word into manageable chunks, constructing them sequentially, and providing immediate feedback—students can effectively master the spelling of complex, multi-syllabic words.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Activity: Musical Crossword Puzzle"
-    },
-    "time_start_sec": 76.479,
-    "time_end_sec": 208.72,
-    "time_start_hhmmss": "00:01:16",
-    "time_end_hhmmss": "00:03:29"
-  },
-  {
-    "question": "How can individuals become more aware of the music present in nature?",
-    "answer": "Based on the provided transcript, individuals can become more aware of the music present in nature by simply being **aware** of it. The text suggests that this music exists \"everywhere\" both \"out in nature\" and within the listener (\"the music in\"). To engage with it, one should actively **use** this natural soundscape to **make a positive difference**.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Conclusion: Awareness of Music in Nature and Daily Life"
-    },
-    "time_start_sec": 872.12,
+    "time_start_sec": 730.2,
     "time_end_sec": 890.059,
-    "time_start_hhmmss": "00:14:32",
+    "time_start_hhmmss": "00:12:10",
     "time_end_hhmmss": "00:14:50"
   },
   {
-    "question": "Why is it important to utilize existing abilities, such as spelling or recognizing tunes, when engaging in brain exercises?",
-    "answer": "Utilizing existing abilities like spelling or recognizing tunes is important because it allows individuals to engage their brains effectively without being pushed beyond their comfort zone. The core principle is to \"get you to use what you got,\" meaning that even if a person can only spell a few words or sing along to a familiar tune, they are still activating their brain and feeling productive. This approach ensures that the activity remains a \"great match\" for the individual's current capacity, fostering engagement and cognitive activation through whatever skills they possess, rather than demanding perfection or abilities they do not yet have.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Self-Care: Integrating Music into Physical and Brain Fitness"
-    },
-    "time_start_sec": 730.2,
-    "time_end_sec": 786.839,
-    "time_start_hhmmss": "00:12:10",
-    "time_end_hhmmss": "00:13:07"
-  },
-  {
-    "question": "In what ways can music facilitate body movement for individuals who have limited physical mobility?",
-    "answer": "Based on the transcript provided, music facilitates body movement for individuals with limited physical mobility in the following ways:\n\n*   **Enabling Movement Despite Physical Limitations:** The text explicitly states that music possesses the \"power to help people move even when they can't move much.\" This is demonstrated by the participant named Crystal, who \"doesn't move her feet at all\" but still exhibits significant \"body movement and her enjoyment\" driven by the music.\n*   **Promoting Enjoyment and Engagement:** Music serves as a catalyst for joy, allowing individuals to participate in physical activity with \"enjoyment\" even if their range of motion is restricted.\n*   **Fostering Social Inclusion:** Beyond physical mechanics, music helps individuals feel \"included in a group.\" The transcript highlights that for someone like Jean, who may not dance much, the ability to move and smile while feeling part of the collective experience is \"as important as any physical movement.\"\n*   **Encouraging Adaptation and Individual Needs:** The context suggests that music allows for \"respond[ing] to individual needs,\" enabling people to find their own way to move (such as hip movement or upper body motion) rather than adhering to rigid physical standards.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Partner Dancing: Maintaining Mobility and Social Connection"
-    },
-    "time_start_sec": 404.52,
-    "time_end_sec": 567.76,
-    "time_start_hhmmss": "00:06:45",
-    "time_end_hhmmss": "00:09:28"
-  },
-  {
-    "question": "In what ways does the rhythm of speech convey specific messages, such as affirmation or criticism, even when the speaker is unaware of the impact?",
-    "answer": "Based on the provided transcript, the rhythm of speech conveys specific messages through the following mechanisms:\n\n*   **Inherent Emotional Coding:** The rhythm acts as a carrier for emotional content, similar to how a mother uses a specific rhythm with a baby from the very beginning. This suggests that rhythm is a fundamental, pre-verbal language that listeners instinctively interpret.\n*   **Dual Nature of Delivery:** The same words can carry vastly different meanings depending on the rhythmic delivery. For instance, the phrase \"you are amazing\" or \"I love being with you\" conveys affirmation, while a different rhythmic pattern applied to similar words can convey criticism, such as \"are you an idiot.\"\n*   **Unconscious Transmission:** Speakers often send these messages without realizing it. The transcript highlights that a speaker may use rhythm to send a critical or negative message \"I didn't mean to but I did,\" indicating that the rhythmic choice is frequently subconscious yet impactful.\n*   **Contextual Framing:** The rhythm functions as a \"message\" that frames the intent of the speech. It allows the speaker to choose how they \"sound\" with the listener, effectively dictating whether the interaction feels supportive or hostile, regardless of the literal words spoken.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Leveraging Individual Abilities in Activities"
-    },
-    "time_start_sec": 783.48,
-    "time_end_sec": 828.24,
-    "time_start_hhmmss": "00:13:03",
-    "time_end_hhmmss": "00:13:48"
-  },
-  {
-    "question": "What is the importance of incorporating weight shifting and balance exercises, such as placing hands out, before transitioning to standing movements?",
-    "answer": "Based on the transcript provided, the importance of incorporating weight shifting and balance exercises (such as placing hands out) before standing movements is highlighted by the instructor's direct response to a question about balance.\n\nThe key educational value points are:\n\n*   **Foundation for All Movement:** The instructor explicitly states, \"everything we do has weight shifting.\" This indicates that weight shifting is not just a warm-up but a fundamental component of all physical activity, including sitting, standing, and walking.\n*   **Safety and Stability:** Before attempting to stand and move the hips, the participants are instructed to place their hands out to \"get your balance.\" This preparatory step ensures that individuals have established stability before engaging in more complex or potentially risky movements like standing up and stepping forward and back.\n*   **Progressive Warm-up:** The sequence demonstrates a logical progression: starting with seated upper body movement, moving to seated lower body/foot rhythm, and then transitioning to standing. The weight-shifting exercise serves as the bridge that safely prepares the body for the transition from a seated to a standing position.",
+    "question": "How can I use humor and friendly conversation to make exercise feel more like fun than a medical task?",
+    "answer": "You can make exercise feel like fun instead of a medical task by using friendly conversation and humor to connect with the person. In the video, the instructor uses light teasing and personal stories to help someone who was hesitant to move. For example, she jokes that the person dances just like her husband, which leads to playful banter about feelings and laughing together. This friendly talk helps break down resistance. She also responds to individual needs by being encouraging and patient, helping people who are shy or avoidant feel safe enough to join in. By focusing on connection and shared laughter rather than just the physical movements, you turn the activity into a social experience that feels good and keeps both the body and brain active.",
     "source_segment": {
       "id": 5,
-      "topic": "Active Movement: Guiding Physical Activity with Music"
+      "topic": "Partner Dancing and Mobility Maintenance"
     },
-    "time_start_sec": 284.919,
-    "time_end_sec": 406.40000000000003,
-    "time_start_hhmmss": "00:04:45",
-    "time_end_hhmmss": "00:06:46"
+    "time_start_sec": 390.08,
+    "time_end_sec": 517.24,
+    "time_start_hhmmss": "00:06:30",
+    "time_end_hhmmss": "00:08:37"
   },
   {
-    "question": "Why is it important to transition from physical activity to a period of controlled breathing?",
-    "answer": "Transitioning from physical activity to a period of controlled breathing is important for several key physiological and psychological reasons, as highlighted in the transcript:\n\n1.  **Recovery from Breath-Holding:** During intense physical exertion, individuals often subconsciously hold their breath. This restricts oxygen intake and can lead to tension. Controlled breathing helps release this trapped air.\n2.  **Restoration of Oxygen Levels:** The transition allows the body to \"bring in fresh oxygen,\" replenishing the supply that was depleted during the hard work and movement.\n3.  **Physiological Regulation:** It facilitates the process of \"calming down and settling down,\" helping the body return to a state of rest after the exertion of using both the brain and body.\n4.  **Psychological Release:** The act of exhaling fully helps individuals \"let go,\" providing a mental and physical release from the stress of the activity.\n\nIn essence, this pause serves as a necessary reset to ensure the body and mind recover effectively before continuing or concluding the session.",
+    "question": "What are some good ways to celebrate small successes, like finishing a word, to keep them motivated?",
+    "answer": "Based on the video, you can celebrate small wins by using warm, encouraging words. When someone spells a word correctly, like \"Rose,\" say things like \"excellent\" to show you are happy with their effort. If they work quickly or do a great job, tell them they are doing a \"fantastic\" job or call them \"aces.\" You can also use sweet nicknames, such as \"sweetheart,\" to make the moment feel special and friendly. These simple praises help keep the person feeling good and motivated to keep playing.",
+    "source_segment": {
+      "id": 2,
+      "topic": "Demonstration of Musical Crossword Puzzle Activity"
+    },
+    "time_start_sec": 78.799,
+    "time_end_sec": 206.83999999999997,
+    "time_start_hhmmss": "00:01:19",
+    "time_end_hhmmss": "00:03:27"
+  },
+  {
+    "question": "How can I use music to help calm someone down if they are feeling agitated?",
+    "answer": "You can use music as a calming activity by simply having the person listen to it. The transcript explains that listening helps the brain organize, relax, and find enjoyment. This is especially helpful in the later stages of dementia when someone might feel agitated (which the speaker refers to as being \"aruby\" or \"apearl\").\n\nBy choosing the right music, you can guide their brain’s energy—called the limbic system—to go in the direction you want. If you want them to be calm and quiet, you can use music to help lower their energy levels. This allows you to help them rest while still making sure they enjoy the experience.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Passive Listening for Emotional Regulation and Arousal Control"
+    },
+    "time_start_sec": 203.48,
+    "time_end_sec": 287.479,
+    "time_start_hhmmss": "00:03:23",
+    "time_end_hhmmss": "00:04:47"
+  },
+  {
+    "question": "Can you explain why it is important to choose songs that are familiar from their past or age group?",
+    "answer": "Choosing songs that are familiar from a person’s past or age group is important because it helps them feel connected to the music. The transcript explains that people with dementia often keep the ability to sing, hum, and move to a beat for a long time. When you pick music they already know, it allows them to use these remaining skills. This creates a sense of joy and enjoyment, making them feel good and helping them actively participate in the activity.",
     "source_segment": {
       "id": 7,
-      "topic": "Acknowledging Effort and Group Inclusion"
+      "topic": "Active Leisure Participation and Rhythmic Joy"
     },
-    "time_start_sec": 566.2,
-    "time_end_sec": 616.64,
-    "time_start_hhmmss": "00:09:26",
-    "time_end_hhmmss": "00:10:17"
-  },
-  {
-    "question": "How does the rhythm of a mother's voice function as a primary tool for communication with babies from the very beginning?",
-    "answer": "Based on the provided transcript, the rhythm of a mother's voice functions as a primary communication tool in the following ways:\n\n*   **Innate and Immediate Connection:** The text notes that mothers use this rhythmic vocalization with babies \"from the very beginning,\" suggesting it is a fundamental, instinctive method of interaction that precedes complex language.\n*   **Conveying Emotional Messages:** The rhythm is not merely a sound but a vehicle for specific messages. It can communicate positive affirmations such as \"you are amazing\" or \"I love being with you.\"\n*   **Unintentional Impact:** The speaker emphasizes that this communication happens subconsciously (\"I didn't mean to but I did so\"). Even when a parent is not consciously trying to send a specific message, the chosen rhythm of their speech inevitably transmits an emotional tone or meaning to the child.\n*   **Defining the Relationship:** The rhythm serves as a way to define how the parent chooses to sound \"with you,\" effectively setting the emotional tone of the interaction regardless of the specific words used.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Leveraging Individual Abilities in Activities"
-    },
-    "time_start_sec": 783.48,
-    "time_end_sec": 828.24,
-    "time_start_hhmmss": "00:13:03",
-    "time_end_hhmmss": "00:13:48"
-  },
-  {
-    "question": "What role does familiarity with music play in helping individuals feel connected to their own life experiences?",
-    "answer": "Based on the provided transcript, familiarity with music plays a pivotal role in helping individuals feel connected to their life experiences by serving as a bridge between personal history and present enjoyment.\n\nThe text explicitly states that when selecting music, individuals desire tracks that \"matches me,\" are \"in my history,\" and belong to the \"age group that I'm in.\" This specific alignment allows the listener to \"feel that\" connection, suggesting that recognizing familiar sounds validates one's past and identity. Consequently, this familiarity transforms the act of listening into a source of active joy and emotional well-being, where the music becomes an integral part of the individual's life narrative rather than just background noise.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Active Leisure: Singing and Rhythmic Joy"
-    },
-    "time_start_sec": 637.279,
+    "time_start_sec": 614.24,
     "time_end_sec": 733.12,
-    "time_start_hhmmss": "00:10:37",
+    "time_start_hhmmss": "00:10:14",
     "time_end_hhmmss": "00:12:13"
   },
   {
-    "question": "What specific musical abilities, such as moving rhythmically, might remain intact in people with dementia despite other cognitive challenges?",
-    "answer": "Based on the provided transcript, people with dementia often retain the right temporal lobe longer than the left. This neurological preservation allows them to maintain specific musical abilities, including:\n\n*   **Singing:** The ability to sing remains intact.\n*   **Humming:** The capacity to hum melodies is preserved.\n*   **Rhythmic Movement:** They can move rhythmically to the music.\n\nThe transcript suggests that providing a strong beat can leverage these remaining abilities to help individuals find joy in music.",
+    "question": "Why is it important for a person with dementia to feel included and happy during activities, even if they don't move their feet much?",
+    "answer": "It is important because feeling included and happy is just as valuable as physical movement. For example, even if someone like Jean doesn’t dance much, or Crystal doesn’t move her feet at all, they are still benefiting from the activity. You can see this in their body language and smiles. Music has the power to help people express themselves and enjoy the moment, even when their bodies don’t move much. The goal is for them to feel part of the group and experience joy, which is a big win in itself.",
     "source_segment": {
-      "id": 8,
-      "topic": "Post-Activity: Breathing Exercises and Relaxation"
+      "id": 6,
+      "topic": "Inclusion, Enjoyment, and Post-Activity Breathing"
     },
-    "time_start_sec": 614.24,
-    "time_end_sec": 639.639,
-    "time_start_hhmmss": "00:10:14",
-    "time_end_hhmmss": "00:10:40"
-  },
-  {
-    "question": "How can a teacher manage the pace of a group spelling activity to ensure all students remain involved without feeling rushed?",
-    "answer": "Based on the transcript provided, a teacher can manage the pace of a group spelling activity by implementing the following strategies:\n\n*   **Verbal Pacing and Self-Awareness:** The teacher explicitly monitors their own speed and acknowledges it to the class. In the transcript, the teacher says, \"sorry Crystal I'm a little slow,\" demonstrating that admitting to a slower pace can help manage expectations and reduce student anxiety about being rushed.\n*   **Interactive Turn-Taking:** Instead of dictating words rapidly to the whole group, the teacher engages students individually or in small turns. The teacher invites a specific student (\"let me call you swe\") to participate in spelling the word aloud, which breaks the activity into manageable chunks and ensures individual focus.\n*   **Step-by-Step Guidance:** The teacher breaks the spelling process down letter by letter (e.g., \"R what comes next r o s e\"). This methodical approach prevents students from feeling overwhelmed by the length of the word or the speed of the activity.\n*   **Positive Reinforcement:** By praising students immediately after they successfully spell a word (\"excellent,\" \"you're Aces,\" \"you're doing a fantastic job\"), the teacher creates a supportive environment where students feel confident to participate at their own pace without fear of making mistakes.\n*   **Clear Clue Delivery:** The teacher provides clear, concise clues (e.g., \"four letters,\" \"starts with an S and it is 10 letters long\") before asking students to guess. This ensures students have sufficient time to process the information before they are expected to respond.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Activity: Musical Crossword Puzzle"
-    },
-    "time_start_sec": 76.479,
-    "time_end_sec": 208.72,
-    "time_start_hhmmss": "00:01:16",
-    "time_end_hhmmss": "00:03:29"
-  },
-  {
-    "question": "How does spontaneous movement among some participants influence the energy and pacing of a group rehearsal?",
-    "answer": "Based on the transcript provided, spontaneous movement influences the energy and pacing of the group rehearsal in the following ways:\n\n*   **Validation of Warm-up Success:** The instructor explicitly notes that when \"some people spontaneously\" begin moving, it serves as immediate confirmation that the group is successfully warming up (\"we're just going to do back and forth on your weight hips out\"). This indicates that spontaneous action acts as a positive feedback loop, signaling that the preparatory phase is effective.\n*   **Creation of a Contrast in Energy:** The transcript highlights a disparity in engagement, noting that while some participants move spontaneously, \"some folks not so much.\" This contrast suggests that spontaneous movement creates a dynamic range within the room, where the energy of the active participants stands out against the more passive ones, potentially requiring the instructor to modulate their guidance to ensure everyone is eventually included.\n*   **Acceleration of Pacing:** The spontaneous movement appears to occur naturally as the music and instructions build momentum. By observing these spontaneous actions, the instructor can gauge the natural flow of the group, allowing the rehearsal to transition from structured, slow movements (like rolling shoulders) to more fluid, weight-shifting actions without needing to force the change artificially.\n\nIn summary, spontaneous movement acts as a real-time indicator of the group's readiness and energy level, helping the instructor validate the effectiveness of the warm-up and adjust the pacing to match the group's natural momentum.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Active Movement: Guiding Physical Activity with Music"
-    },
-    "time_start_sec": 284.919,
-    "time_end_sec": 406.40000000000003,
-    "time_start_hhmmss": "00:04:45",
-    "time_end_hhmmss": "00:06:46"
-  },
-  {
-    "question": "How can music and rhythm be used to create an emotional connection between a caregiver and a person with dementia?",
-    "answer": "Based on the transcript provided, music and rhythm can be used to create an emotional connection between a caregiver and a person with dementia through the following methods:\n\n*   **Utilizing Preserved Skills:** Music and rhythm are identified as \"preserved skills,\" meaning they often remain intact even as other cognitive abilities fade. Leveraging these remaining capabilities provides a reliable foundation for interaction.\n*   **Emotional Bridging:** Engaging with music and rhythm serves as a direct way to \"connect emotionally,\" acting as a bridge when verbal communication or other forms of connection are difficult due to the progression of dementia.\n*   **Mutual Uplift:** The practice is described as a powerful tool that can \"lift both of you up,\" suggesting that the shared experience benefits both the individual with dementia and the caregiver, fostering a positive emotional state for both parties.\n*   **Consistent Application:** To maximize these benefits, the transcript recommends using music and rhythm \"at least twice a day\" to ensure regular opportunities for this emotional connection.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction: Music as a Tool for Dementia Care"
-    },
-    "time_start_sec": 1.69,
-    "time_end_sec": 55.8,
-    "time_start_hhmmss": "00:00:02",
-    "time_end_hhmmss": "00:00:56"
+    "time_start_sec": 514.36,
+    "time_end_sec": 616.64,
+    "time_start_hhmmss": "00:08:34",
+    "time_end_hhmmss": "00:10:17"
   }
 ]

@@ -1,242 +1,98 @@
 [
   {
-    "question": "What is the benefit of having the wheelchair armrests raised or removed before a transfer?",
-    "answer": "Raising or removing the wheelchair armrests helps the person slide over easily instead of having to be lifted up and put down. This also creates more opportunity for a caregiver, like Lynn, to take part in the move. To do this safely, make sure the wheelchair is positioned very close to the person, not right in front of them, and ensure the armrests are either back or off before starting the transfer.",
+    "question": "Why do back injuries happen so often when caring for someone with dementia?",
+    "answer": "Back injuries are the most common injury for people caring for someone with dementia. This happens because caregivers often try to use their own strength or \"muscle through\" the task of moving a person, rather than using proper skill. Sometimes, people just copy how they saw someone else do it without learning the right technique. Using strength instead of skill is what leads to these back problems.",
+    "source_segment": {
+      "id": 1,
+      "topic": "Introduction and Common Care Partner Injuries"
+    },
+    "time_start_sec": 5.839,
+    "time_end_sec": 100.479,
+    "time_start_hhmmss": "00:00:06",
+    "time_end_hhmmss": "00:01:40"
+  },
+  {
+    "question": "Where exactly should I place my arms and hands on the person’s body for a safe lift?",
+    "answer": "Instead of grabbing the person’s arms or reaching under their armpits, you should wrap your arms around their trunk (their main body). Place your hands low on their back. This helps support them safely without squeezing their legs or arms, which can be very uncomfortable.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Caregiver Body Mechanics: Stance, Hand Placement, and Head Control"
+    },
+    "time_start_sec": 322.16,
+    "time_end_sec": 455.52,
+    "time_start_hhmmss": "00:05:22",
+    "time_end_hhmmss": "00:07:36"
+  },
+  {
+    "question": "Why is it important to keep the person moving and active for as long as possible, even if it’s just a small amount?",
+    "answer": "It is important to let the person help a little bit when moving because they still have muscles that need to work. For example, standing up uses huge muscles in the back and bottom (called gluteals), which are the biggest muscles in the body. If these muscles aren't used, they start to get tight and shrink. By keeping them active, even just a small amount, you help keep their body moving for as long as possible. This is better for both you and the person you are caring for.",
+    "source_segment": {
+      "id": 2,
+      "topic": "The Importance of Patient Participation and Muscle Preservation"
+    },
+    "time_start_sec": 99.2,
+    "time_end_sec": 213.92,
+    "time_start_hhmmss": "00:01:39",
+    "time_end_hhmmss": "00:03:34"
+  },
+  {
+    "question": "How can singing or counting help a person with dementia get started when they are having trouble standing up?",
+    "answer": "If the person is having trouble getting started or finding a rhythm when standing up, you can try adding a song, singing a little, humming, or counting out loud (like “one, two, three”). This helps them get into the flow of the movement. You can use this same technique for other transfers, like moving from a chair to the toilet. Just remember that while the movement itself might not be super slow, it does take patience to help them through it.",
     "source_segment": {
       "id": 6,
-      "topic": "Demonstration: Chair Positioning and Bed Height"
+      "topic": "Techniques for Assisting with Rhythm and Broad Application"
+    },
+    "time_start_sec": 574.08,
+    "time_end_sec": 649.7600000000001,
+    "time_start_hhmmss": "00:09:34",
+    "time_end_hhmmss": "00:10:50"
+  },
+  {
+    "question": "Will these techniques still work if my loved one is much taller or heavier than I am?",
+    "answer": "Yes, these techniques can still work even if your loved one is much taller or heavier than you. The video explains that the methods use gravity and how our bodies move to make things easier. This means you might be able to help someone who is bigger than you without needing a lot of strength.\n\nThe speaker suggests trying it out with different people to see how it feels. Even if a specific move doesn’t seem like a perfect fit at first, it is definitely worth a try. You don’t have to worry about size differences stopping you from helping.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Resource Recommendation and Practice Advice"
+    },
+    "time_start_sec": 646.72,
+    "time_end_sec": 748.0790000000001,
+    "time_start_hhmmss": "00:10:47",
+    "time_end_hhmmss": "00:12:28"
+  },
+  {
+    "question": "Why is rhythm useful when helping a person with dementia turn or move their feet?",
+    "answer": "Rhythm is helpful because it allows the person to take small, shuffling steps instead of having to step backward. The video explains that for many people in what is called a \"ruby state\" (a stage where certain physical skills are not easily available), moving backward is very difficult and often not possible. By using rhythm and a shuffle, you help them make slight turns safely without needing that missing skill, which makes movement easier and less frustrating for them.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Executing the Transfer: Using Gravity, Rhythm, and Weight Shifting"
+    },
+    "time_start_sec": 452.479,
+    "time_end_sec": 577.519,
+    "time_start_hhmmss": "00:07:32",
+    "time_end_hhmmss": "00:09:38"
+  },
+  {
+    "question": "How can encouraging small weight shifts or dancing steps help someone who has trouble moving backward?",
+    "answer": "Encouraging small weight shifts or dancing steps helps because moving backward is a skill that many people with dementia find very difficult. Instead of asking them to step back, which can be hard for them, you can use rhythm and tiny shuffle steps to help them turn or move slightly. This approach works well because it lets the person stay safe and steady without having to do the challenging motion of going backwards. It turns movement into a fun, rhythmic activity where they can succeed by just shifting their weight or taking small steps forward or sideways.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Executing the Transfer: Using Gravity, Rhythm, and Weight Shifting"
+    },
+    "time_start_sec": 452.479,
+    "time_end_sec": 577.519,
+    "time_start_hhmmss": "00:07:32",
+    "time_end_hhmmss": "00:09:38"
+  },
+  {
+    "question": "Should the bed be higher, lower, or level with the wheelchair seat, and why does this position help?",
+    "answer": "Ideally, the bed should be a little bit higher than the wheelchair seat. This position helps because it lets gravity do some of the work for you. Gravity naturally pulls the person downward, which makes it easier and safer to help them move from the bed into the chair.",
+    "source_segment": {
+      "id": 3,
+      "topic": "Video Demonstration: Chair Positioning and Bed Height"
     },
     "time_start_sec": 211.44,
     "time_end_sec": 323.6,
     "time_start_hhmmss": "00:03:31",
     "time_end_hhmmss": "00:05:24"
-  },
-  {
-    "question": "How do I know if a person is ready to start leaning forward for a transfer?",
-    "answer": "Based on the video, the first sign that a person is ready to start leaning forward is when they are able to stand. Once they can stand, you can begin doing a little weight shifting. As you do this weight shifting, watch for the moment their hips start to fold; this is the cue to gently bring their body forward. To keep them safe during this movement, you can place one hand where they need support and use your other hand to block their knees so they don't slide out. The video shows that with this support, the person can move forward smoothly, almost like dancing.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Demonstration: Weight Shifting and Standing Transfer"
-    },
-    "time_start_sec": 487.759,
-    "time_end_sec": 533.92,
-    "time_start_hhmmss": "00:08:08",
-    "time_end_hhmmss": "00:08:54"
-  },
-  {
-    "question": "What should I do if the person is not stable enough to stand on their own?",
-    "answer": "If the person isn't stable enough to stand on their own, you can keep them fairly low while supporting them. To do this, let their head rest on your outside shoulder so their body faces the opposite way; this position helps them lean forward more easily. Straighten and tighten your arms to bring them forward, which shifts their weight onto their knee. You can adjust how high you lift them depending on their stability, and if they are able, encourage them to stand. Think of their body like a teeter-totter, where gravity and your support act as a fulcrum to help them move safely.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Demonstration: Using Gravity and the 'Chair Pose' Lift"
-    },
-    "time_start_sec": 416.319,
-    "time_end_sec": 489.28000000000003,
-    "time_start_hhmmss": "00:06:56",
-    "time_end_hhmmss": "00:08:09"
-  },
-  {
-    "question": "How can I change my mindset from trying to muscle through a task to doing it with skill?",
-    "answer": "It is very common to feel like you need to \"muscle through\" a task, especially when you are trying to get things done quickly or have seen someone else do it a certain way. The context suggests that back injuries often happen because people are moving others without using proper skill or technique. To shift your mindset, try to pause and recognize when your brain is telling you to \"get this over with\" and move faster. Instead of relying on strength, focus on slowing down and being more skillful in how you move the person. Remember that moving someone who doesn't move easily requires patience; rushing can lead to injury for both of you.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Root Causes of Back Injuries: Lack of Skill and Rushing"
-    },
-    "time_start_sec": 61.44,
-    "time_end_sec": 151.28,
-    "time_start_hhmmss": "00:01:01",
-    "time_end_hhmmss": "00:02:31"
-  },
-  {
-    "question": "What should I expect regarding physical strain when I start caregiving?",
-    "answer": "When you start caregiving, it is very common to experience back injuries. In fact, back injuries are the number one reason care partners have to stop working or take time off. This means you should be prepared for physical strain, particularly in your back, as lifting and moving someone can be demanding.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Identifying Common Care Partner Injuries"
-    },
-    "time_start_sec": 26.32,
-    "time_end_sec": 64.08,
-    "time_start_hhmmss": "00:00:26",
-    "time_end_hhmmss": "00:01:04"
-  },
-  {
-    "question": "Should the bed be raised higher than the chair seat, lower, or kept at the same level for a safe transfer?",
-    "answer": "For a safe transfer, the bed should ideally be raised so it is a little higher than the chair seat. This setup helps you use gravity to your advantage, allowing the person to slide down naturally into the chair rather than having to lift them all the way down. To make this work, position the chair close to the bed and perpendicular to it, with one armrest moved back or off so the person can slide over easily. While the video shows a bed that is a bit low, raising it to be level with or slightly above the seat makes the move safer and allows the person to participate more in the transfer.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Demonstration: Chair Positioning and Bed Height"
-    },
-    "time_start_sec": 211.44,
-    "time_end_sec": 323.6,
-    "time_start_hhmmss": "00:03:31",
-    "time_end_hhmmss": "00:05:24"
-  },
-  {
-    "question": "What is the difference between a standard lift and the technique demonstrated here regarding body placement?",
-    "answer": "The technique shown here focuses on where you place your body to help, which is different from what many people usually do. Instead of grabbing the person's arms or armpits (which is often where people go), this method uses the person's knees and lower back for support.\n\nHere are the specific steps demonstrated:\n*   **Foot Position:** Try to line up your forefoot with the person's forefoot. If your foot is too close, you can try a lift to see if they let you in; if not, stabilize yourself first.\n*   **Knee Placement:** Cup the person's near knee with your knee. Do not grab their legs and squish them together, as that is uncomfortable for them.\n*   **Body Position:** Bring your arms around their trunk so your body is low on their low back.\n\nThis approach keeps your body close to their knees and lower back rather than reaching for their upper back or arms.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Demonstration: Body Positioning and Hand Placement"
-    },
-    "time_start_sec": 322.16,
-    "time_end_sec": 418.0,
-    "time_start_hhmmss": "00:05:22",
-    "time_end_hhmmss": "00:06:58"
-  },
-  {
-    "question": "What should I expect if my loved one is unable to perform the small steps or turns shown in the video?",
-    "answer": "It is completely normal if your loved one cannot perform the small steps or turns shown in the video, as the ability to do these specific movements is not readily available for most people. If your person is having trouble getting started or finding the rhythm, you can try adding a song, singing a little hum, or counting out loud (like \"one, one, two, three\") to help them get into the rhythm.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Utilizing Rhythm and Music for Movement"
-    },
-    "time_start_sec": 532.08,
-    "time_end_sec": 600.08,
-    "time_start_hhmmss": "00:08:52",
-    "time_end_hhmmss": "00:10:00"
-  },
-  {
-    "question": "What are some ways I can encourage others to learn about positive approaches to dementia care?",
-    "answer": "One way to encourage others to learn about positive approaches to dementia care is to share Tifa's positive approach message around the world. You can also help by liking and subscribing to the channel, which supports spreading this message.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Call to Action"
-    },
-    "time_start_sec": 5.839,
-    "time_end_sec": 19.68,
-    "time_start_hhmmss": "00:00:06",
-    "time_end_hhmmss": "00:00:20"
-  },
-  {
-    "question": "How should I help a person with dementia shift their weight safely?",
-    "answer": "To help someone with dementia shift their weight safely, first ensure they are able to stand. You can encourage them by saying something like, \"we're going to do a little bit of weight shifting,\" and praise their effort with phrases like \"nice dancing\" or \"nice work\" to keep them engaged. When you need to guide them, take their hand and place it on their hip to bring their body forward gently. As their hips start to fold, use one hand to place them where they need to be and block their knees so they cannot slide out. This approach helps maintain their balance while you support their movement.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Demonstration: Weight Shifting and Standing Transfer"
-    },
-    "time_start_sec": 487.759,
-    "time_end_sec": 533.92,
-    "time_start_hhmmss": "00:08:08",
-    "time_end_hhmmss": "00:08:54"
-  },
-  {
-    "question": "How can I stop myself from rushing through care tasks just to get them over with?",
-    "answer": "It is very common to feel the urge to rush care tasks just to get them over with, especially when the person you are caring for moves less easily. The context explains that our brains often tell us to \"get this over with\" and move faster, which can lead to \"flinging\" the person or trying to \"muscle through\" the task instead of using skill. This happens because people are trying to move others without doing it properly, often because they saw someone else do it that way or they are relying on strength rather than skill. To address this, the key step mentioned is to consciously tell yourself to \"slow down.\" Recognizing that rushing can cause back injuries for you and may not be the safest way to move the person is the first part of changing that habit.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Root Causes of Back Injuries: Lack of Skill and Rushing"
-    },
-    "time_start_sec": 61.44,
-    "time_end_sec": 151.28,
-    "time_start_hhmmss": "00:01:01",
-    "time_end_hhmmss": "00:02:31"
-  },
-  {
-    "question": "Why is it important to let the person with dementia participate in standing up even if they need help?",
-    "answer": "It is important to let the person with dementia participate in standing up, even with your help, because they still have some strength left to use. When they stand, they are using their biggest muscles in the body, specifically the gluteals (the large muscles in the back of the buttocks). If these muscles are not used, they tend to start contracting and weakening. By allowing them to do just a little bit of the work themselves, you keep their body moving and their muscles active. The longer you can keep them active, even in small ways, the better it is for both you and them.",
-    "source_segment": {
-      "id": 5,
-      "topic": "The Importance of Patient Participation in Transfers"
-    },
-    "time_start_sec": 149.599,
-    "time_end_sec": 213.92,
-    "time_start_hhmmss": "00:02:30",
-    "time_end_hhmmss": "00:03:34"
-  },
-  {
-    "question": "What should I do if the transfer doesn't feel like the right fit for my loved one's size?",
-    "answer": "It is completely normal to worry that a transfer technique won't work if your loved one is a different size than the person in the video. The educator suggests that you should still try it, even if your loved one is bigger or smaller than you. While it may not be the perfect fit for that specific move, it is still worth a try. You can practice with someone of a different size to see how much you can actually help, especially since using gravity can make a difference. Just remember that patience is needed, and you might find that the movement still works well even if it feels a bit different.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Applying Techniques to Other Scenarios and Patient Variations"
-    },
-    "time_start_sec": 598.56,
-    "time_end_sec": 732.24,
-    "time_start_hhmmss": "00:09:59",
-    "time_end_hhmmss": "00:12:12"
-  },
-  {
-    "question": "How can I support others in spreading Tifa's positive approach to dementia care?",
-    "answer": "You can support others by helping to spread Tifa's positive approach message around the world. One concrete way to do this is to like and subscribe to the channel, which helps share this message further.",
-    "source_segment": {
-      "id": 1,
-      "topic": "Introduction and Call to Action"
-    },
-    "time_start_sec": 5.839,
-    "time_end_sec": 19.68,
-    "time_start_hhmmss": "00:00:06",
-    "time_end_hhmmss": "00:00:20"
-  },
-  {
-    "question": "How can I prevent back injuries while taking care of my loved one?",
-    "answer": "Based on the video, back injuries are the most common injury for care partners. The transcript confirms that back injuries are the number one reason people have to call out, but it does not provide specific steps or strategies on how to prevent them.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Identifying Common Care Partner Injuries"
-    },
-    "time_start_sec": 26.32,
-    "time_end_sec": 64.08,
-    "time_start_hhmmss": "00:00:26",
-    "time_end_hhmmss": "00:01:04"
-  },
-  {
-    "question": "Can I use this same transfer technique to help someone move from a chair to a toilet?",
-    "answer": "Yes, you can absolutely use this same transfer technique to help someone move from a chair to a toilet. The speaker suggests that this method works for \"any any place basically,\" including the transition from a chair to the toilet. When using this technique, remember that while the movement might be slow, it is not necessarily \"super drawn out,\" so you may need to exercise some patience. This approach relies on understanding how the body works and using gravity to assist the movement. If you are unsure about the mechanics, there is a video called \"Advanced Skills in Late Stage Dementia\" available online or as a hard copy that offers more tips on these transfers. It is also helpful to practice with different people, perhaps someone of a different size, to see how the technique fits your specific situation. Even if the person you are helping is much bigger than you, it is still worth trying, as the method can be adapted.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Applying Techniques to Other Scenarios and Patient Variations"
-    },
-    "time_start_sec": 598.56,
-    "time_end_sec": 732.24,
-    "time_start_hhmmss": "00:09:59",
-    "time_end_hhmmss": "00:12:12"
-  },
-  {
-    "question": "How can I use my arms to safely bring the person forward without straining them?",
-    "answer": "To safely bring the person forward, you can use your arms by straightening and tightening them. This action helps you lift or move them forward while keeping their body fairly straight, which supports their back. You can choose to get them all the way up or keep them fairly low, depending on how stable they feel. If they are able, your goal is to help them stand. Think of their body like a teeter-totter (a seesaw); as you move, their weight shifts to their knee, acting like a fulcrum (a pivot point) that helps support them. This position also allows them to look over your head, which encourages them to lean forward more readily.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Demonstration: Using Gravity and the 'Chair Pose' Lift"
-    },
-    "time_start_sec": 416.319,
-    "time_end_sec": 489.28000000000003,
-    "time_start_hhmmss": "00:06:56",
-    "time_end_hhmmss": "00:08:09"
-  },
-  {
-    "question": "Is counting aloud, like \"one, two, three,\" an effective way to help someone establish a movement rhythm?",
-    "answer": "Yes, counting aloud can be a helpful way to help someone get into a movement rhythm. In the video, a caregiver suggests that if a person is having trouble starting or finding their rhythm, you might add a song, sing a little hum, or simply count out loud like \"one, one, two, three.\" This can be added to the activity to help them move forward with small steps. The context notes that the specific skill of turning while shuffling forward without going backward is not something most people can do easily, so using rhythm and counting can be a supportive way to assist them.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Utilizing Rhythm and Music for Movement"
-    },
-    "time_start_sec": 532.08,
-    "time_end_sec": 600.08,
-    "time_start_hhmmss": "00:08:52",
-    "time_end_hhmmss": "00:10:00"
-  },
-  {
-    "question": "How does keeping the person active, even just a little bit, benefit both the caregiver and the person with dementia?",
-    "answer": "Keeping the person active, even just a little bit, helps both of you in a few important ways. When you help them stand up and participate in a transfer, you are using their big muscles, especially the gluteals (the large muscles in the back of the body). These are the biggest muscles in the body, and if they aren't used, they tend to start contracting (tightening up). By allowing them to do a little bit of the work themselves, you keep their body moving and their muscles strong. This is better for them and also better for you, the caregiver. The key is to let them participate as long as they have enough strength to do so.",
-    "source_segment": {
-      "id": 5,
-      "topic": "The Importance of Patient Participation in Transfers"
-    },
-    "time_start_sec": 149.599,
-    "time_end_sec": 213.92,
-    "time_start_hhmmss": "00:02:30",
-    "time_end_hhmmss": "00:03:34"
-  },
-  {
-    "question": "How can I tell if the person is comfortable with my current lifting position?",
-    "answer": "To tell if the person is comfortable with your lifting position, you can try a gentle \"lift\" to see if they let you in. If they do not allow you to lift them, that is a sign you should stop and try to stabilize them instead. It is also important to avoid grabbing their legs and squishing them together, as the context notes that this is really uncomfortable for the person being helped. Instead, focus on cupping their knee with your body and keeping your arms around their trunk near the low back, rather than reaching for the upper back or armpit area.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Demonstration: Body Positioning and Hand Placement"
-    },
-    "time_start_sec": 322.16,
-    "time_end_sec": 418.0,
-    "time_start_hhmmss": "00:05:22",
-    "time_end_hhmmss": "00:06:58"
   }
 ]

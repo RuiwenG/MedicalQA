@@ -1,214 +1,94 @@
 [
   {
-    "question": "What is a good way to suggest a specific activity to my loved one without causing frustration?",
-    "answer": "A good way to suggest an activity is to share a happy memory from the past, like saying, \"I had so much fun playing that with you last month. Will you do it again with me?\" This approach works because it connects to something they already enjoyed. You can also link the activity to a special occasion, such as asking, \"I'm going to see you on your birthday; can we try it then?\" This helps frame the request positively. It is also helpful to stay aware of their feelings; if they seem to not feel well or if you notice anything changing, you might pause or adjust your approach.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Integrating Family Involvement and Emotional Support"
-    },
-    "time_start_sec": 653.519,
-    "time_end_sec": 675.92,
-    "time_start_hhmmss": "00:10:54",
-    "time_end_hhmmss": "00:11:16"
-  },
-  {
-    "question": "How can I start a conversation with my doctor about changing the way they care for my loved one?",
-    "answer": "You can start a conversation with your doctor by using a simple, non-threatening way to build a baseline for your loved one's abilities. For example, you can time how long it takes them to complete a task like an annual physical check-up. If it takes about 90 seconds, you can share this with your doctor to show what is normal for them. By making this process fun and focusing on their dignity, you can encourage your doctor and other community members to change how they provide care. This approach helps you say to your doctor, \"Let's try a different way,\" based on the actual time and effort your loved one needs.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Reducing Threat: Making Assessment Fun and Non-Judgmental"
-    },
-    "time_start_sec": 776.16,
-    "time_end_sec": 824.32,
-    "time_start_hhmmss": "00:12:56",
-    "time_end_hhmmss": "00:13:44"
-  },
-  {
-    "question": "Is it okay to accept that I might not always be able to do my best?",
-    "answer": "Yes, it is okay. The video suggests that right before the time runs out, you should \"literally just do the best you can.\" It also implies that if you end up getting a score of 18, that is acceptable, and you shouldn't worry too much about the exact timing or outcome. The message is to focus on doing your best in the moment rather than stressing over perfection.",
-    "source_segment": {
-      "id": 18,
-      "topic": "Final Guidance and Threshold Recommendations"
-    },
-    "time_start_sec": 1012.079,
-    "time_end_sec": 1030.48,
-    "time_start_hhmmss": "00:16:52",
-    "time_end_hhmmss": "00:17:10"
-  },
-  {
-    "question": "How can I encourage my loved one to participate in activities they used to enjoy?",
-    "answer": "You can encourage your loved one by bringing up a specific activity they enjoyed in the past, like saying, \"I had so much fun playing that with you last month. Will you do it again with me?\" This approach works because it connects to their happy memories. It is also helpful to link the activity to a special occasion, such as asking, \"I'm going to see you on your birthday; can we try it then?\" This gives them a clear, positive reason to participate. Keep an eye out for any changes in their mood or awareness, as noticing when they \"don't feel well\" or when something seems to have \"dropped\" can help you adjust your approach.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Integrating Family Involvement and Emotional Support"
-    },
-    "time_start_sec": 653.519,
-    "time_end_sec": 675.92,
-    "time_start_hhmmss": "00:10:54",
-    "time_end_hhmmss": "00:11:16"
-  },
-  {
-    "question": "What should I do if my loved one repeats an animal name during the game?",
-    "answer": "If your loved one repeats an animal name during the game, the person leading the activity can simply acknowledge it and move on. In the video, the educator mentions, \"if you say something twice, I'll just say okay,\" indicating that repeating a word is a normal part of the game and doesn't need to be corrected or stopped. You can continue the round robin style, letting everyone take a turn naming animals without worrying about duplicates.",
-    "source_segment": {
-      "id": 3,
-      "topic": "Demonstration of the Animal Fluency Test"
-    },
-    "time_start_sec": 111.92,
-    "time_end_sec": 404.16,
-    "time_start_hhmmss": "00:01:52",
-    "time_end_hhmmss": "00:06:44"
-  },
-  {
-    "question": "What should I expect if my loved one starts naming specific breeds or types of animals during an exercise?",
-    "answer": "If your loved one starts naming specific breeds or types of animals during an exercise, you can expect this to be a natural part of the activity that has a \"learning piece\" to it. In the video, a caregiver noticed that when someone named dogs, it inspired them to start naming a bunch of dog breeds as well. This shows that the activity can encourage people to recall and share more specific details they know. It is not really about a formal practice test or checking if they \"pass\" or \"fail,\" but rather about what they notice and how they categorize things, such as grouping animals by rhythm, by where they live (like a zoo or farm), or even alphabetically. It is okay if they switch between different ways of thinking or if they are influenced by what others in the group are doing.",
-    "source_segment": {
-      "id": 5,
-      "topic": "Analyzing Categorization Strategies and Rhythm"
-    },
-    "time_start_sec": 442.96,
-    "time_end_sec": 588.24,
-    "time_start_hhmmss": "00:07:23",
-    "time_end_hhmmss": "00:09:48"
-  },
-  {
-    "question": "How can I encourage my loved one while we wait for answers from the doctor?",
-    "answer": "While you wait for answers from the doctor, you can encourage your loved one by staying positive and supportive. The context suggests that offering encouragement during this waiting period is helpful. It also shows that expressing gratitude, such as saying \"thank you,\" and acknowledging the situation as \"awesome\" can be a positive way to interact. If you have a list of questions or topics prepared, having that ready can also be beneficial. Remember to go in with a hopeful attitude, as the speaker noted, \"we get the answers,\" implying that the wait will eventually end with information.",
-    "source_segment": {
-      "id": 16,
-      "topic": "Encouragement and Positive Reinforcement"
-    },
-    "time_start_sec": 985.36,
-    "time_end_sec": 996.0,
-    "time_start_hhmmss": "00:16:25",
-    "time_end_hhmmss": "00:16:36"
-  },
-  {
-    "question": "What should I do while my loved one is listing animals during the test?",
-    "answer": "While your loved one is listing animals during the test, you should act as the \"keeper tracker.\" This means you are the person keeping track of the count. You can do this by making little tick marks on a piece of paper, counting them in groups of five (one, two, three, four, cross), or simply saying the numbers out loud. You do not need to write down the specific names of the animals they say. The goal is just to count how many animals they can name in one minute.",
-    "source_segment": {
-      "id": 2,
-      "topic": "Establishing a Cognitive Baseline"
-    },
-    "time_start_sec": 61.84,
-    "time_end_sec": 114.24,
-    "time_start_hhmmss": "00:01:02",
-    "time_end_hhmmss": "00:01:54"
-  },
-  {
-    "question": "How can I tell if I am doing well during a conversation with someone who has dementia?",
-    "answer": "It can be hard to know if you are doing well, but you can look for signs that the conversation is building. For example, listen to see if people are \"building off of\" what you said, meaning they are adding to your ideas or connecting with them. You might also notice how others sort through the information or how they respond to the different ways you talk about things. If you hear these interactions happening, it is a good sign. Remember, even if you feel shocked or unsure about your performance, it is okay; the goal is simply to share and connect.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Reviewing Test Results and Individual Scores"
-    },
-    "time_start_sec": 401.12,
-    "time_end_sec": 444.24,
-    "time_start_hhmmss": "00:06:41",
-    "time_end_hhmmss": "00:07:24"
-  },
-  {
-    "question": "How can I set up a task like naming farm animals without making the person with dementia feel like they are being tested or assessed?",
-    "answer": "You can set up a task like naming farm animals by framing it as a fun activity for the grandkids rather than a formal check. For example, you might say, \"Mom, I'm trying to put together this activity for the grandkids and I can really use your help. I'm trying to come up with literally all the animals I can think of.\" This approach allows you to gather information about what animals the person can name without actually bringing up the idea of being in a \"baseline\" or assessment. A \"baseline\" simply means a starting point or a way to measure someone's current abilities, but you can collect this data naturally while doing something else, so the person doesn't feel they are being tested.",
+    "question": "How does focusing on \"doing your best\" rather than the final number help reduce stress during the activity?",
+    "answer": "The video suggests that focusing on \"doing your best\" helps because it takes the pressure off the final score. The speaker asks, \"who cares\" if you get a specific number like 18. By trying your hardest without worrying about the result, the activity becomes a fun game and a fantastic exercise rather than a test. This approach encourages people to just enjoy the moment with someone they feel safe with, making it less stressful.",
     "source_segment": {
       "id": 14,
-      "topic": "Community Engagement and Family Activity Ideas"
+      "topic": "Viewer Feedback and Closing Remarks"
     },
-    "time_start_sec": 903.04,
-    "time_end_sec": 956.0,
-    "time_start_hhmmss": "00:15:03",
-    "time_end_hhmmss": "00:15:56"
-  },
-  {
-    "question": "How can I support my loved one when they are facing stressful situations?",
-    "answer": "It can be really encouraging to see your loved one do pretty well even when they are under stress. If you notice they are handling stressful situations effectively, that is something to appreciate. While the video mentions this idea is relevant for people listening on Facebook, it does not provide specific steps on how to support them during those moments, other than acknowledging that their ability to cope well under pressure is a positive sign.",
-    "source_segment": {
-      "id": 13,
-      "topic": "Testing Resilience Under Stress"
-    },
-    "time_start_sec": 892.0,
-    "time_end_sec": 906.079,
-    "time_start_hhmmss": "00:14:52",
-    "time_end_hhmmss": "00:15:06"
-  },
-  {
-    "question": "How can I cope with the feeling that I am not as smart as the person I am caring for?",
-    "answer": "It is completely normal to feel worried that you might not be as smart or good with words as the person you are caring for, especially when they are under stress. The context shares that people often act this way when they are stressed, so you are not alone in these feelings. It is okay to admit that you have these feelings, just as the speaker did. Remember that you are not living with dementia, and acknowledging these worries is a good first step.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Managing Performance Anxiety and Competition"
-    },
-    "time_start_sec": 862.88,
-    "time_end_sec": 894.24,
-    "time_start_hhmmss": "00:14:23",
-    "time_end_hhmmss": "00:14:54"
-  },
-  {
-    "question": "Is it normal for a person with dementia to have a higher number of confused moments at the end of the day?",
-    "answer": "The video transcript does not provide information about whether it is normal for a person with dementia to have more confused moments at the end of the day. However, it does suggest that factors like how rested the person is can affect their state, noting that a speaker's performance ranges from about 24 to 30 depending on their rest. The context also highlights that it is a great time to ask open questions to understand their well-being, such as asking, \"How are you sleeping?\" or \"Is he feeling sick?\" to check if they are getting enough sleep.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Factors Influencing Performance: Fatigue and Health"
-    },
-    "time_start_sec": 744.079,
-    "time_end_sec": 778.639,
-    "time_start_hhmmss": "00:12:24",
-    "time_end_hhmmss": "00:12:59"
-  },
-  {
-    "question": "What are some ways I can stay updated on new dementia care videos and resources?",
-    "answer": "To stay updated on new dementia care videos, you can click the bell icon to get notified when new videos are posted. The creators also encourage you to like and subscribe to help spread their positive approach message around the world.",
-    "source_segment": {
-      "id": 19,
-      "topic": "Conclusion and Call to Action"
-    },
-    "time_start_sec": 1028.64,
+    "time_start_sec": 993.36,
     "time_end_sec": 1054.72,
-    "time_start_hhmmss": "00:17:09",
+    "time_start_hhmmss": "00:16:33",
     "time_end_hhmmss": "00:17:35"
   },
   {
-    "question": "Is a score of 14 considered more concerning than a score of 17?",
-    "answer": "Yes, according to the speaker, a score of 14 is considered a more significant place of concern than a score of 17. While a score of 17 is generally seen as a place where you should start to feel concerned, some experts believe that 14 is an even clearer indicator of trouble. However, the speaker notes that these numbers are just a baseline to get an idea of where someone stands, rather than a definitive clinical diagnosis.\n\nWhat matters most is how the person is doing over time. Instead of focusing only on the specific number, it is very helpful to watch how their ability to organize thoughts changes from year to year. For example, notice if they are struggling to categorize things by area or alphabetically, or if they find it hard to picture something in their mind and name it, like trying to list animals they can't quite recall. Knowing these specific challenges and tracking them personally can be more interesting and useful than just looking at the score alone.",
+    "question": "What does it mean if someone’s score drops significantly compared to their usual average?",
+    "answer": "If someone’s score drops significantly compared to their usual average, it means they might be experiencing changes in their thinking or memory. The transcript suggests that this drop can be a sign that “someone's seeing anything changing” or that they “doesn't feel well.” It is a way for the family to become aware of potential health issues by comparing current results to past ones using the same categories, like vegetables or capital cities.",
     "source_segment": {
       "id": 8,
-      "topic": "Interpreting Scores: Context Over Clinical Cutoffs"
+      "topic": "Establishing Long-term Baselines with Consistent Categories"
     },
-    "time_start_sec": 674.399,
-    "time_end_sec": 747.92,
-    "time_start_hhmmss": "00:11:14",
-    "time_end_hhmmss": "00:12:28"
+    "time_start_sec": 578.399,
+    "time_end_sec": 674.399,
+    "time_start_hhmmss": "00:09:38",
+    "time_end_hhmmss": "00:11:14"
   },
   {
-    "question": "What should I tell my mom to ensure she knows this activity is not a test?",
-    "answer": "To make sure your mom knows this activity isn't a test, you should set it up so she understands it is just for fun and not something she is being graded on. The speaker suggests doing this as a family activity to make it feel less threatening and more enjoyable. Additionally, if you are doing this at a doctor's office, you can use it as a fun way to break the ice if she feels nervous, especially since she is already used to doing similar things at home. The most important thing to communicate is that the goal is simply to have a good time together, not to pass a test.",
+    "question": "How can I involve other family members in creating activities for my loved one with dementia?",
+    "answer": "You can involve other family members by asking for their help with a specific, fun task instead of making it feel like a test. For example, you could tell them, “I am trying to put together an activity for the grandkids and I really need your help coming up with a list of all the farm animals or animals on the planet.”\n\nThis approach lets you gather information about what your loved one knows without calling it an “assessment” or causing worry. While they are helping, you can act as a supportive coach. Use your phone to record the answers and give lots of encouragement by saying things like, “That’s cool,” “Awesome,” or “Keep going.” This turns the moment into a positive engagement experience where everyone feels helpful and appreciated.",
+    "source_segment": {
+      "id": 13,
+      "topic": "Creative Family Engagement and Disguised Assessment"
+    },
+    "time_start_sec": 899.279,
+    "time_end_sec": 993.6800000000001,
+    "time_start_hhmmss": "00:14:59",
+    "time_end_hhmmss": "00:16:34"
+  },
+  {
+    "question": "What is a simple way to start an activity that helps me understand what my loved one still remembers, without making it feel like a test?",
+    "answer": "You can try turning the activity into a fun project where you ask for their help. For example, tell your loved one that you are trying to make a list of all the farm animals or animals on the planet for an activity with the grandkids, and say you really need their help to come up with as many names as possible.\n\nThis works because it lets you see what they remember without making it feel like a test or an assessment. As they share ideas, you can use your phone to type them down and give encouraging comments like “That’s cool” or “Keep going.” This keeps the mood positive and helps you gather information about what they know while feeling like helpful teamwork rather than a medical check-up.",
+    "source_segment": {
+      "id": 13,
+      "topic": "Creative Family Engagement and Disguised Assessment"
+    },
+    "time_start_sec": 899.279,
+    "time_end_sec": 993.6800000000001,
+    "time_start_hhmmss": "00:14:59",
+    "time_end_hhmmss": "00:16:34"
+  },
+  {
+    "question": "Why is it helpful to ask the doctor to do this activity with my family member instead of me doing it myself?",
+    "answer": "Asking the doctor to do this activity can help because your family member might feel less worried. If you ask them, they might think you are being “snoopy” or checking up on them. But if the doctor asks, it feels more natural and less threatening. It can also be a fun way to “break the ice” if your loved one is nervous about visiting the clinic. The key is to make sure it doesn’t feel like a scary test, but just a casual conversation starter.",
     "source_segment": {
       "id": 11,
-      "topic": "Collaborating with Healthcare Providers"
+      "topic": "Integrating the Test into Medical Appointments"
     },
-    "time_start_sec": 821.279,
+    "time_start_sec": 805.12,
     "time_end_sec": 864.639,
-    "time_start_hhmmss": "00:13:41",
+    "time_start_hhmmss": "00:13:25",
     "time_end_hhmmss": "00:14:25"
   },
   {
-    "question": "How do I choose the right categories for our baseline testing?",
-    "answer": "When choosing categories for your baseline testing, you can pick any nouns you and your family can think of, such as vegetables, fruits and vegetables, or capital cities. The most important rule is to keep the category exactly the same every time you test. For example, if you test \"vegetables\" one time, you must compare your next result to \"vegetables\" again. If you make this a family activity, like doing it together on Thanksgiving or Boxing Day, you can try three different categories that are the same as the ones you used last year. This helps you calculate an average and see if your current results are within that normal range.",
+    "question": "How can playing a word game like naming animals help make bathroom routines less stressful for my loved one?",
+    "answer": "The video transcript does not explain how playing word games helps with bathroom routines. It only shows a caregiver and their loved one playing a game where they name animals (like lions, tigers, dogs, and cats) while timing how long it takes to get ready for the bathroom. The transcript mentions that someone found this helpful, but it does not say why or how it reduces stress.",
     "source_segment": {
-      "id": 6,
-      "topic": "Adapting the Test for Longitudinal Tracking"
+      "id": 5,
+      "topic": "Third Participant: Shelly's Round"
     },
-    "time_start_sec": 587.12,
-    "time_end_sec": 654.56,
-    "time_start_hhmmss": "00:09:47",
-    "time_end_hhmmss": "00:10:55"
+    "time_start_sec": 312.479,
+    "time_end_sec": 404.16,
+    "time_start_hhmmss": "00:05:12",
+    "time_end_hhmmss": "00:06:44"
   },
   {
-    "question": "What steps can I take to establish a personal baseline for my own well-being?",
-    "answer": "To establish a personal baseline for your own well-being, you can start by simply checking in with yourself to see if you are experiencing \"branching,\" which the video describes as noticing changes in your own state over time. The goal is to set a starting point for yourself so that you can recognize shifts later on. Imagine your current level of well-being as a baseline; if you notice that a year from now your level is lower, you will be able to see that change clearly because you have a reference point. By doing this regularly, you can track how you feel throughout time and notice when things shift, helping you understand your own journey without needing to worry about specific numbers right away.",
+    "question": "What should I do if my loved one gets stuck or runs out of ideas while trying to name animals?",
+    "answer": "The provided transcript does not contain any information or advice on what to do if a loved one gets stuck or runs out of ideas while naming animals. The text only shows a list of animals being named during an activity. Therefore, I cannot answer this question based strictly on the given context.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Second Participant: Katherine's Round"
+    },
+    "time_start_sec": 221.84,
+    "time_end_sec": 315.52000000000004,
+    "time_start_hhmmss": "00:03:42",
+    "time_end_hhmmss": "00:05:16"
+  },
+  {
+    "question": "What does it mean to \"establish a baseline\" for my own well-being?",
+    "answer": "To \"establish a baseline\" means to check in with yourself right now to see how you are feeling and doing. Think of it like marking your starting point. By knowing where you are today, you can better notice if things change later on. For example, if your well-being stays steady for a while but then drops significantly next year, having that original baseline helps you spot the change. It is about taking time to look at yourself so you can keep track of your own health over time.",
     "source_segment": {
       "id": 1,
-      "topic": "Introduction and Shift to Caregiver Self-Care"
+      "topic": "Introduction to Baseline Cognitive Assessment"
     },
     "time_start_sec": 5.359,
     "time_end_sec": 64.479,
@@ -216,27 +96,39 @@
     "time_end_hhmmss": "00:01:04"
   },
   {
-    "question": "What should I do if I am not able to finish a task exactly on time?",
-    "answer": "If you find yourself unable to finish a task exactly on time, the most important thing is to simply do your best. The context suggests that if you end up getting a score of 18 (which appears to be a specific result or metric mentioned in the video), you should proceed with that outcome. The speaker emphasizes that \"who cares\" about the exact timing, offering reassurance that perfection isn't necessary. So, don't worry if you miss the minute mark; just focus on doing what you can and move forward.",
+    "question": "What are some effective ways to talk with someone who has dementia?",
+    "answer": "The provided transcript does not contain information about effective ways to talk with someone who has dementia. It only shows a group discussing scores from an activity (mentioning numbers like 24, 38, and 32) and sharing reactions to that game. Therefore, I cannot answer this question using the given context.",
     "source_segment": {
-      "id": 18,
-      "topic": "Final Guidance and Threshold Recommendations"
+      "id": 6,
+      "topic": "Reviewing Scores and Initial Reactions"
     },
-    "time_start_sec": 1012.079,
-    "time_end_sec": 1030.48,
-    "time_start_hhmmss": "00:16:52",
-    "time_end_hhmmss": "00:17:10"
+    "time_start_sec": 401.12,
+    "time_end_sec": 444.24,
+    "time_start_hhmmss": "00:06:41",
+    "time_end_hhmmss": "00:07:24"
   },
   {
-    "question": "What does it mean to provide \"pre-help\" to someone with dementia?",
-    "answer": "Based on the video, \"pre-help\" is described as a supportive way to start an engagement activity together. It involves giving each other help or support before the main task begins. The speaker suggests this could be a good way to start a conversation, perhaps by saying, \"Ooh, let's see what we can each do,\" and then checking in with positive feedback like, \"Oh, nice, keep going, that's cool, awesome.\" This approach allows the caregiver to be skilled in having the initial conversation while encouraging the person with dementia to continue.",
+    "question": "What is the best way to explain this activity so that my loved one doesn't feel like they are being tested or judged?",
+    "answer": "To help your loved one feel comfortable, the most important thing is to set up the activity so it does not feel like a test. You can make it fun and less threatening by explaining that you are just curious about how long it takes them to name animals. Let them know you are doing this to build a baseline, which is just a starting point to see how they are doing.\n\nYou might try asking their doctor to do this \"animal fluency\" activity (which simply means naming as many animals as they can think of) during a visit. This can help break the ice if your loved one is nervous at the doctor’s office. If they worry that you are being snoopy or judging them, remind them that they might actually do better with the doctor than they expect. Doing this as a family can also make it feel more like a game and less like an evaluation.",
     "source_segment": {
-      "id": 15,
-      "topic": "Strategies for Natural Baseline Collection"
+      "id": 11,
+      "topic": "Integrating the Test into Medical Appointments"
     },
-    "time_start_sec": 954.16,
-    "time_end_sec": 987.199,
-    "time_start_hhmmss": "00:15:54",
-    "time_end_hhmmss": "00:16:27"
+    "time_start_sec": 805.12,
+    "time_end_sec": 864.639,
+    "time_start_hhmmss": "00:13:25",
+    "time_end_hhmmss": "00:14:25"
+  },
+  {
+    "question": "What can I do to handle these difficult emotions when they come up during stressful moments?",
+    "answer": "The transcript suggests that the first step is to admit and accept these feelings. It is normal to feel worried or competitive, especially when you are under stress. The speaker shares that they experienced these same emotions even though they do not have dementia themselves. By acknowledging that \"people do this under stress,\" you can see that having these feelings is a common human reaction rather than something wrong with you. Recognizing that it is okay to feel this way can help you handle those difficult moments more calmly.",
+    "source_segment": {
+      "id": 12,
+      "topic": "Managing Stress and Perception During Testing"
+    },
+    "time_start_sec": 862.88,
+    "time_end_sec": 900.0,
+    "time_start_hhmmss": "00:14:23",
+    "time_end_hhmmss": "00:15:00"
   }
 ]

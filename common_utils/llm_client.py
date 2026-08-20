@@ -86,7 +86,7 @@ class QwenAPIClient:
 
         self.model = model or os.getenv("QWEN_MODEL", DEFAULT_MODEL)
         self.base_url = base_url or self._resolve_base_url()
-        key = api_key or os.getenv("QWEN_API_KEY") or os.getenv("VLLM_POD_API_KEY")
+        key = api_key or self._resolve_api_key(self.base_url)
         if not key:
             raise RuntimeError(
                 "No Qwen API key found. Set QWEN_API_KEY in .env (see .env.example)."
@@ -100,6 +100,23 @@ class QwenAPIClient:
         self._client = OpenAI(
             api_key=key, base_url=self.base_url, timeout=timeout, max_retries=max_retries
         )
+
+    @staticmethod
+    def _resolve_api_key(base_url: str) -> Optional[str]:
+        """Pick the key that matches the endpoint we resolved.
+
+        Keys are per-provider: sending the DashScope key to OpenRouter (or the
+        reverse) returns a 401 that reads like a bad key rather than a
+        misrouted one. Match on the host so .env can hold several at once.
+        """
+        host = (base_url or "").lower()
+        if "openrouter.ai" in host:
+            return (
+                os.getenv("OPEN_ROUTER_API_KEY")
+                or os.getenv("OPENROUTER_API_KEY")
+                or os.getenv("QWEN_API_KEY")
+            )
+        return os.getenv("QWEN_API_KEY") or os.getenv("VLLM_POD_API_KEY")
 
     @staticmethod
     def _resolve_base_url() -> str:

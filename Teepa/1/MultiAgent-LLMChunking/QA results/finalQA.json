@@ -1,242 +1,122 @@
 [
   {
-    "question": "How does a deficit in picking up on sensory details like temperature and texture impact a person's safety awareness?",
-    "answer": "Based on the provided transcript, a deficit in picking up on sensory details like temperature and texture impacts safety awareness in the following ways:\n\n*   **Loss of Early Warning Signals:** The brain's ability to \"feel things all over your body\" and immediately \"realize what it feels like\" acts as a critical safety mechanism. When a person cannot accurately perceive inputs such as temperature or texture, they lose the immediate feedback loop that warns them of potential harm.\n*   **Overriding Curiosity with Risk:** The transcript illustrates a scenario where a person may maintain \"curiosity\" and touch objects without hesitation. However, because they are \"not as good at picking up on things,\" they fail to detect dangerous conditions (e.g., extreme heat or sharp textures) until it is too late.\n*   **Rapid Escalation of Danger:** Due to this inability to process sensory data, \"safety becomes an issue fairly quickly.\" The gap between the action (touching something) and the realization of the danger (feeling the temperature or texture) is widened or eliminated, leading to immediate physical risk.\n\nIn essence, the deficit removes the protective layer of sensory awareness that normally prevents a person from interacting with their environment in unsafe ways, leaving them vulnerable despite their initial curiosity.",
-    "source_segment": {
-      "id": 9,
-      "topic": "Tactile Sensation and Safety Awareness"
-    },
-    "time_start_sec": 626.993,
-    "time_end_sec": 695.261,
-    "time_start_hhmmss": "00:10:27",
-    "time_end_hhmmss": "00:11:35"
-  },
-  {
-    "question": "How does the concept of a \"preserved skill\" explain why a person might struggle to stop using certain types of speech, such as racial slurs or sex talk?",
-    "answer": "The concept of a \"preserved skill\" explains the struggle to stop using certain types of speech by framing these behaviors not as a lack of control or a moral failing, but as deeply ingrained, automatic habits formed from a very young age.\n\nAccording to the text, these \"forbidden words\" (including racial slurs, sex talk, and other offensive language) are stored in the brain as a specific set of skills that a person has practiced and mastered over time. Because the individual is \"good at\" this type of speech, it becomes a default, preserved neural pathway. When a person slips up and uses these words, it is often because this old, well-practiced skill is being triggered automatically, rather than a conscious decision to be rude. Therefore, the challenge for the care partner is not to blame the person, but to understand that letting go of this behavior is difficult because it is a deeply established part of their communication repertoire.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Inappropriate Language and Swearing Due to Preserved Brain Areas"
-    },
-    "time_start_sec": 596.562,
-    "time_end_sec": 626.993,
-    "time_start_hhmmss": "00:09:57",
-    "time_end_hhmmss": "00:10:27"
-  },
-  {
-    "question": "What are the specific roles of the hippocampus in processing new learning versus retaining old memories?",
-    "answer": "Based on the provided transcript, the hippocampus plays a central role in the storage of both new and old memories, though the text highlights a distinction in how these functions are affected by dementia.\n\n*   **Processing New Learning:** The hippocampus is responsible for \"new learning\" and the act of \"holding on to new things.\"\n*   **Retaining Old Memories:** The same area is also where \"remembering old stuff\" is stored.\n\nThe transcript notes that while these functions are located in the hippocampal area, certain types of dementia can cause a selective loss of these abilities. For example, an individual might retain the ability to remember old things while losing the capacity to learn and hold onto new information.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Memory Systems: Working Memory, Long-Term Memory, and Emotional Memory"
-    },
-    "time_start_sec": 722.021,
-    "time_end_sec": 781.113,
-    "time_start_hhmmss": "00:12:02",
-    "time_end_hhmmss": "00:13:01"
-  },
-  {
-    "question": "How does the developmental timeline of the frontal prefrontal cortex differ between males and females?",
-    "answer": "Based on the provided transcript, the developmental timeline of the frontal prefrontal cortex differs between males and females in the following way:\n\n*   **General Maturity:** The frontal prefrontal cortex is the last part of the brain to reach full maturity, a process that typically occurs between the late twenties and early thirties (specifically noted as mid-to-late twenties).\n*   **Gender Difference:** Males reach this full maturity **a little later** than females.\n\nThe transcript emphasizes that this region, which controls drives and is the newer part of the brain (the cortex), continues developing well into adulthood, with males experiencing a slight delay in the completion of this development compared to females.",
-    "source_segment": {
-      "id": 2,
-      "topic": "The Limbic System: Survival and Emotion"
-    },
-    "time_start_sec": 90.957,
-    "time_end_sec": 131.03,
-    "time_start_hhmmss": "00:01:31",
-    "time_end_hhmmss": "00:02:11"
-  },
-  {
-    "question": "In the context of dementia or cognitive decline, why might a person revert to using ugly words or engaging in behavior they never did before?",
-    "answer": "In the context of dementia or cognitive decline, a person may revert to using \"ugly words\" (such as swear words, racial slurs, or sexually explicit language) or engage in previously unknown behaviors due to the following educational factors:\n\n1.  **Preserved Skills vs. Lost Inhibition**: The transcript explains that certain behaviors, including the use of taboo language, are \"preserved skills\" stored from a very young age. While the cognitive abilities required to *perform* these actions remain intact, the brain's inhibitory mechanisms (the ability to control impulses and filter socially inappropriate behavior) often deteriorate. Consequently, the person is \"good at\" these skills but loses the filter that prevents them from using them inappropriately.\n\n2.  **Loss of Social Context**: Dementia can impair the understanding of social norms and the recognition of who is present. A person might say things they \"never did before\" because they no longer recognize the people they are speaking to or the setting in which they are speaking, leading them to act without the usual social constraints.\n\n3.  **Care Partner Dynamics**: The text emphasizes that the person is \"doing the best they can\" and should not be blamed. The behavior is a symptom of the disease's progression rather than a deliberate choice or a reflection of their true character. The challenge for the care partner is to let go of the expectation that the behavior will stop, acknowledging that it is simply \"how it is\" given the current stage of the condition.\n\n4.  **Emotional Release**: Sometimes, these outbursts can be a release of pent-up emotions or frustration that the individual can no longer articulate or manage through their usual coping mechanisms.\n\nIn summary, the reversion is caused by the specific pattern of cognitive decline where executive function and social inhibition fail, while older, deeply ingrained behavioral patterns remain accessible.",
-    "source_segment": {
-      "id": 8,
-      "topic": "Inappropriate Language and Swearing Due to Preserved Brain Areas"
-    },
-    "time_start_sec": 596.562,
-    "time_end_sec": 626.993,
-    "time_start_hhmmss": "00:09:57",
-    "time_end_hhmmss": "00:10:27"
-  },
-  {
-    "question": "In what ways does brain chemistry change over extremely short time intervals, such as second to second?",
-    "answer": "Based on the provided transcript, brain chemistry changes over extremely short time intervals (second to second) in the following ways:\n\n*   **Dynamic Impulse Transmission:** The changing chemistry is directly linked to the process of \"sending impulses\" throughout the brain.\n*   **Fluctuating Capability:** These rapid chemical shifts mean that a person's ability to perform specific tasks is not static; what an individual could do five minutes ago may become impossible in the immediate present simply because their current chemical state does not support that action.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Structural Shrinkage and Chemical Changes in the Brain"
-    },
-    "time_start_sec": 696.195,
-    "time_end_sec": 721.454,
-    "time_start_hhmmss": "00:11:36",
-    "time_end_hhmmss": "00:12:01"
-  },
-  {
-    "question": "How does the loss of logical reasoning affect a patient's ability to make decisions and view situations from another person's perspective?",
-    "answer": "Based on the transcript provided, the loss of logical reasoning in dementia patients creates a specific chain of cognitive and behavioral difficulties:\n\n1.  **Decision Instability:** Patients may make a decision initially, but they subsequently lose the ability to maintain that logic. They \"go back\" and find themselves unable to remain \"logical and reasonable\" regarding their own choices.\n2.  **Inability to Shift Perspective:** This loss of reasoning directly impairs the capacity to \"see it from your point of view.\" The patient cannot adopt the perspective of another person (such as a caregiver or family member).\n3.  **Communication Breakdown:** Because they cannot view the situation from another's perspective, they \"simply can't\" understand what the other person is talking about, leading to a disconnect in communication.\n\nIn summary, the transcript indicates that as the disease progresses, the impairment of the brain's logical centers prevents patients from sustaining rational decisions and makes it impossible for them to empathize or comprehend the viewpoints of others.",
-    "source_segment": {
-      "id": 4,
-      "topic": "Impact of Dementia on Impulse Control, Decision Making, and Perspective Taking"
-    },
-    "time_start_sec": 184.617,
-    "time_end_sec": 240.47299999999998,
-    "time_start_hhmmss": "00:03:05",
-    "time_end_hhmmss": "00:04:00"
-  },
-  {
-    "question": "How do the chemical and structural changes in the brain manifest differently depending on which specific memory functions are affected?",
-    "answer": "Based on the transcript provided, the chemical and structural changes in the brain manifest differently depending on the specific memory functions affected in the following ways:\n\n*   **Selective Loss of Function:** In some cases of dementia, the changes result in the loss of one specific memory type while sparing another. For example, an individual may retain the ability to remember \"old stuff\" (long-term memory) but lose the capacity to process \"new stuff\" (new learning and holding onto new things).\n*   **Dual Loss:** In other instances, the structural and chemical alterations affect both memory systems simultaneously, causing trouble with both long-term and new learning.\n*   **Preservation of Emotional Memory:** A distinct manifestation occurs when emotional memory is preserved despite other losses. However, this preservation can lead to a specific disconnect: the individual retains the *feeling* of an emotion (e.g., being angry) but loses the associated context or reason for that emotion.\n\nThe text emphasizes that while working memory involves various cognitive processes, long-term and emotional memories are stored in the hippocampal area. The nature of the disease determines whether these specific areas are compromised, leading to varied clinical presentations ranging from isolated deficits to complex emotional disconnections.",
-    "source_segment": {
-      "id": 11,
-      "topic": "Memory Systems: Working Memory, Long-Term Memory, and Emotional Memory"
-    },
-    "time_start_sec": 722.021,
-    "time_end_sec": 781.113,
-    "time_start_hhmmss": "00:12:02",
-    "time_end_hhmmss": "00:13:01"
-  },
-  {
-    "question": "What are the five primary ways the brain receives information, and how are smell and taste categorized differently from the others?",
-    "answer": "Based on the transcript provided, here are the answers to your questions:\n\n**The Five Primary Ways the Brain Receives Information**\nAccording to the text, there are five distinct channels through which the brain gathers information:\n1.  **Sight** (\"what you see\")\n2.  **Hearing** (\"what you hear\")\n3.  **Touch/Action** (\"what you feel and do\")\n4.  **Smell** (\"what you smell\")\n5.  **Taste** (\"what you taste\")\n\n**How Smell and Taste Are Categorized Differently**\nSmell and taste are categorized differently from the other three senses in the following ways:\n*   **Primitive Nature:** They are described as \"primitive\" and \"pretty basic,\" lacking the \"high tech\" complexity of the other senses.\n*   **Processing Pathway:** Unlike the other senses, smell and taste are routed first into the **limbic system**.\n*   **Function:** They serve a critical \"safety awareness\" function, acting as immediate triggers to avoid danger (e.g., spoiled food or bad odors) or to ensure survival (e.g., eating when something tastes good).",
-    "source_segment": {
-      "id": 5,
-      "topic": "Sensory Processing and the Role of Smell and Taste"
-    },
-    "time_start_sec": 241.441,
-    "time_end_sec": 342.675,
-    "time_start_hhmmss": "00:04:01",
-    "time_end_hhmmss": "00:05:43"
-  },
-  {
-    "question": "Which specific brain lobes are responsible for processing auditory information versus higher-level language comprehension?",
-    "answer": "Based on the provided transcript, the specific brain regions responsible for these functions are:\n\n*   **Auditory Processing (Hearing):** The text states that hearing occurs with the **ears**.\n*   **Higher-Level Language Processing:** The text identifies the **temporal lobes** as the area where processing happens \"right above\" the ears.\n\nThe transcript further specifies that for 98% of human beings, the **left side** of the brain (within the temporal lobes) is responsible for **formal language skills**, including **vocabulary** and **comprehension**. In contrast, the **right side** is associated with basic rhythm skills, music, poetry, and prayer.",
-    "source_segment": {
-      "id": 7,
-      "topic": "Auditory Processing: Language Loss vs. Preserved Rhythm and Music"
-    },
-    "time_start_sec": 503.202,
-    "time_end_sec": 596.562,
-    "time_start_hhmmss": "00:08:23",
-    "time_end_hhmmss": "00:09:57"
-  },
-  {
-    "question": "In what ways can making conscious choices improve the situation for both the person with dementia and their caregiver?",
-    "answer": "Based on the provided transcript, making conscious choices improves the situation in the following ways:\n\n*   **Restoring Agency:** While the person with dementia may feel they \"don't get a choice\" and that events are simply \"happening,\" understanding brain change allows them to realize they still have the capacity to make decisions.\n*   **Activating the Brain:** Making these choices actively engages the \"front of your brain,\" which is associated with decision-making and the ability to do things differently.\n*   **Transformative Impact:** The choices made by the person with dementia have the power to \"change everything\" for both the individual and the caregiver, shifting the dynamic from a passive experience to an active, collaborative one.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Conclusion: Understanding Brain Changes to Make Better Choices"
-    },
-    "time_start_sec": 781.881,
-    "time_end_sec": 806.2379999999999,
-    "time_start_hhmmss": "00:13:02",
-    "time_end_hhmmss": "00:13:26"
-  },
-  {
-    "question": "What is the connection between fluctuating brain chemistry and the development or progression of dementia?",
-    "answer": "Based on the provided transcript, the connection between fluctuating brain chemistry and dementia is described through the following key points:\n\n1.  **Dynamic Nature of Brain Chemistry**: The brain's chemistry is not static; it changes \"second to second\" and even faster as impulses are sent. This means cognitive ability is highly dependent on the current chemical state of the brain.\n2.  **Immediate Impact on Function**: Because of these rapid fluctuations, a person may be capable of performing a specific task at one moment (e.g., 5 minutes ago) but unable to do so immediately afterward simply because their brain chemistry has shifted.\n3.  **Link to Dementia**: The text explicitly links these chemical changes to dementia (\"So brain changes and dementia\"). This implies that dementia involves not only structural changes but also significant and potentially disruptive alterations in brain chemistry that affect a person's ability to function consistently.\n\nIn summary, the transcript suggests that dementia is characterized by brain changes that include volatile chemistry, leading to an inability to maintain consistent cognitive performance over short periods.",
-    "source_segment": {
-      "id": 10,
-      "topic": "Structural Shrinkage and Chemical Changes in the Brain"
-    },
-    "time_start_sec": 696.195,
-    "time_end_sec": 721.454,
-    "time_start_hhmmss": "00:11:36",
-    "time_end_hhmmss": "00:12:01"
-  },
-  {
-    "question": "What causes a person with advanced dementia to run their hands along edges or miss entire objects when setting things down?",
-    "answer": "Based on the transcript provided, a person with advanced dementia runs their hands along edges or misses entire objects when setting things down due to a combination of **sensory deficits** and **brain processing failures**, rather than a lack of effort.\n\nThe specific causes identified in the text include:\n\n*   **Loss of Edge Vision:** The individual loses the ability to pay attention to the edges of their visual field, which is crucial for safety awareness and spatial orientation.\n*   **Inability to Scan Organically:** The brain loses the capacity to scan the environment in an organized fashion. The person cannot remember where they last looked to determine where to look next.\n*   **Failure to Process Visual Data:** The brain fails to receive and process visual data correctly (\"I'm not getting data and in processing it like I should\").\n*   **Loss of Depth Perception:** In advanced stages, the brain cannot align images from both eyes to create a 3D view. This forces the brain to choose between double vision or losing depth entirely. Without depth perception, the person cannot judge distances or distinguish between real objects and flat images.\n\nConsequently, actions like running hands along carpet edges or missing tables are physical manifestations of the brain's inability to interpret spatial relationships and visual boundaries.",
-    "source_segment": {
-      "id": 6,
-      "topic": "Visual Changes: Loss of Peripheral Vision and Depth Perception"
-    },
-    "time_start_sec": 342.675,
-    "time_end_sec": 502.60200000000003,
-    "time_start_hhmmss": "00:05:43",
-    "time_end_hhmmss": "00:08:23"
-  },
-  {
-    "question": "How can shifting one's perspective on dementia lead to actionable decisions that change outcomes?",
-    "answer": "Shifting one's perspective on dementia from a static, inevitable decline to a dynamic process of **brain change** unlocks actionable decisions that alter outcomes. This cognitive reframing leads to specific, impactful actions in the following ways:\n\n1.  **Recognition of Agency**: Understanding that the brain remains plastic allows individuals to realize that **choices** are still possible. Instead of accepting a passive role (\"it's happening\"), one can actively engage with the condition.\n2.  **Activation of the Frontal Lobe**: This new perspective triggers the activation of the **front of the brain**, which is responsible for executive functions like planning and decision-making. This biological shift enables the person to make **decisions** and identify **things to do differently**.\n3.  **Proactive Intervention**: By making these conscious choices, individuals can implement strategies that **change everything** for both themselves and their caregivers, transforming the trajectory of care from reactive to proactive.\n\nIn essence, the \"aha\" moment of understanding brain plasticity converts helplessness into empowerment, allowing for deliberate actions that reshape the dementia experience.",
-    "source_segment": {
-      "id": 12,
-      "topic": "Conclusion: Understanding Brain Changes to Make Better Choices"
-    },
-    "time_start_sec": 781.881,
-    "time_end_sec": 806.2379999999999,
-    "time_start_hhmmss": "00:13:02",
-    "time_end_hhmmss": "00:13:26"
-  },
-  {
-    "question": "Why is the cerebral cortex considered the \"newer\" part of the brain in terms of evolutionary development?",
-    "answer": "The cerebral cortex is considered the \"newer\" part of the brain in terms of evolutionary development because it is the region that developed most recently in human evolution. This is evidenced by the fact that it is also the last part of the brain to mature during an individual's life cycle, with the frontal prefrontal cortex not reaching full maturity until the late twenties or early thirties.",
-    "source_segment": {
-      "id": 2,
-      "topic": "The Limbic System: Survival and Emotion"
-    },
-    "time_start_sec": 90.957,
-    "time_end_sec": 131.03,
-    "time_start_hhmmss": "00:01:31",
-    "time_end_hhmmss": "00:02:11"
-  },
-  {
-    "question": "Which brain system develops first and is responsible for core survival functions like hunger, thirst, and sleep?",
-    "answer": "Based on the transcript provided, the **limbic system** is the brain system that develops first. It is responsible for core survival functions, including hunger, thirst, elimination, sleep, and temperature control. The text describes this system as the \"thrive to survive\" part of the brain where all the core stuff is located.",
+    "question": "Why is it helpful for caregivers to understand these changes in the brain?",
+    "answer": "It is helpful to understand what is happening in the brain because it lets you see exactly \"what's up there.\" By knowing what a person has in their brain and how it is changing, you can better understand why they are experiencing these changes.",
     "source_segment": {
       "id": 1,
-      "topic": "Introduction to Brain Function and Core Systems"
+      "topic": "Introduction to Brain Function and Dementia Impact"
     },
     "time_start_sec": 6.306,
-    "time_end_sec": 90.957,
+    "time_end_sec": 18.852,
     "time_start_hhmmss": "00:00:06",
-    "time_end_hhmmss": "00:01:31"
+    "time_end_hhmmss": "00:00:19"
   },
   {
-    "question": "How does the frontal lobe enable an individual to delay gratification?",
-    "answer": "Based on the provided transcript, the frontal lobe enables an individual to delay gratification through a specific cognitive process involving the evaluation of consequences over time.\n\nThe text explains that the frontal lobe performs the following functions to achieve this:\n\n1.  **Inhibition of Impulse:** It acts as a regulatory mechanism that says \"no\" to immediate actions that could lead to negative outcomes or trouble (e.g., \"Don't do that\").\n2.  **Long-Term Perspective:** It allows the individual to recognize that \"the long range positive outweighs the temporary.\" This means the brain weighs future benefits against immediate desires.\n3.  **Active Decision Making:** It empowers the person to make a conscious choice to wait rather than act immediately. The transcript illustrates this with the thought process: \"I'll wait instead of [acting now], that's what I'm going to do.\"\n\nIn essence, the frontal lobe facilitates the ability to suppress immediate urges in favor of a decision that yields better results in the long run.",
+    "question": "Why is my loved one suddenly using swear words or offensive language when they never did this before?",
+    "answer": "This change happens because using \"forbidden words\"—like swear words, sexual talk, or racial slurs—is a skill stored in the brain from when they were very young. Even though they never used these words before, this specific skill is preserved, meaning it is something their brain still does well. It is not their fault; they are doing the best they can. Please do not blame them for saying things they shouldn't. Instead, try to let it go and remember that this is just how the disease affects their memory skills.",
+    "source_segment": {
+      "id": 9,
+      "topic": "Preserved Social Behaviors and Unfiltered Speech"
+    },
+    "time_start_sec": 596.562,
+    "time_end_sec": 624.557,
+    "time_start_hhmmss": "00:09:57",
+    "time_end_hhmmss": "00:10:25"
+  },
+  {
+    "question": "How does the front part of the brain help control our impulses and drives?",
+    "answer": "The front part of your brain, called the frontal prefrontal area, acts like a control center. Its job is to help manage and control your inner drives and impulses. Think of it as the part of your brain that keeps those strong feelings in check so you can stay balanced.",
     "source_segment": {
       "id": 3,
-      "topic": "The Frontal Cortex: Control, Decision Making, and Empathy"
+      "topic": "The Frontal Cortex: Executive Control and Development"
     },
-    "time_start_sec": 131.364,
-    "time_end_sec": 183.64999999999998,
-    "time_start_hhmmss": "00:02:11",
-    "time_end_hhmmss": "00:03:04"
+    "time_start_sec": 97.03,
+    "time_end_sec": 133.933,
+    "time_start_hhmmss": "00:01:37",
+    "time_end_hhmmss": "00:02:14"
   },
   {
-    "question": "How does the frontal lobe assist in the process of considering multiple options before making a decision?",
-    "answer": "Based on the provided transcript, the frontal lobe assists in considering multiple options through the following mechanisms:\n\n*   **Thinking Things Through:** The frontal lobe enables individuals to \"think things through,\" allowing for a deeper analysis of a situation before acting.\n*   **Evaluating Options:** It allows a person to \"consider among all your options,\" meaning it facilitates the mental process of reviewing various available choices rather than reacting impulsively.\n*   **Making Informed Choices:** By weighing these options, the frontal lobe helps the individual determine \"which one you're going to pick,\" leading to a deliberate decision-making process.\n\nThis function is described as one of the three major roles of the front part of the brain, specifically noted for helping people decide on a course of action after evaluating their alternatives.",
+    "question": "How can I help my loved one stay safe since they may not see things at the edges of their vision?",
+    "answer": "Since dementia affects \"edge vision\" (the ability to see things on the sides), your loved one’s world is getting smaller. They can still see what is right in front of them clearly, but they might not notice you if you approach from the side. This can be scary for them; if you touch their shoulder or lean around suddenly, they might think they are being attacked and react strongly.\n\nTo help keep them safe and calm:\n*   **Approach from the front:** Always make sure they can see you coming. Do not sneak up on them or touch them from the side.\n*   **Be gentle with surprises:** Since they cannot scan a room easily or remember where they looked last, sudden movements can startle them. Let them know you are there before interacting.\n*   **Understand their confusion:** If they lose things or think people moved them, it is because they cannot track objects well, not because they are trying to be difficult. Being patient helps reduce their distress.",
     "source_segment": {
-      "id": 3,
-      "topic": "The Frontal Cortex: Control, Decision Making, and Empathy"
+      "id": 7,
+      "topic": "Visual Processing Changes in Dementia: Field of View and Depth Perception"
     },
-    "time_start_sec": 131.364,
-    "time_end_sec": 183.64999999999998,
-    "time_start_hhmmss": "00:02:11",
-    "time_end_hhmmss": "00:03:04"
+    "time_start_sec": 342.675,
+    "time_end_sec": 497.129,
+    "time_start_hhmmss": "00:05:43",
+    "time_end_hhmmss": "00:08:17"
   },
   {
-    "question": "Which specific brain functions are typically preserved in the early stages of dementia?",
-    "answer": "Based on the provided transcript, the specific brain functions that are typically preserved in the early stages of dementia are the **core survival instincts**, specifically described as the **\"flight, fight, fright\" part**.\n\nThe text indicates that while other areas of the brain are damaged early on, this core part is \"kept really well.\" Consequently, the following fundamental drives remain intact:\n*   **Basic desires:** The instinct to \"want what you want.\"\n*   **Fundamental emotions:** The capacity for basic emotional responses.\n\nThe transcript contrasts this preservation with the early impairment of higher-order functions, such as impulse control, logical decision-making, and the ability to see things from another person's point of view.",
+    "question": "Why is it important for me to realize that I still have control over my own responses, even if my loved one has lost theirs?",
+    "answer": "It is important to remember that while your loved one has lost their choice because of brain change, you still have yours. When you truly understand this, it helps the \"front of your brain\" wake up. This part of your brain is where you make choices and decisions. By using this power to do things differently, you can make choices that change everything for both you and your loved one.",
     "source_segment": {
-      "id": 4,
-      "topic": "Impact of Dementia on Impulse Control, Decision Making, and Perspective Taking"
+      "id": 12,
+      "topic": "Conclusion: Understanding Brain Changes for Caregiving Choices"
     },
-    "time_start_sec": 184.617,
+    "time_start_sec": 781.881,
+    "time_end_sec": 806.2379999999999,
+    "time_start_hhmmss": "00:13:02",
+    "time_end_hhmmss": "00:13:26"
+  },
+  {
+    "question": "Why can someone remember old events clearly but struggle to learn or remember new things?",
+    "answer": "Dementia affects different parts of the brain in different ways. The transcript explains that a specific area called the hippocampus is responsible for holding on to new things and remembering old stuff. With some types of dementia, a person loses the ability to handle new information but keeps their long-term memory intact. This is why they might be very good at remembering \"old stuff\" from the past but struggle to learn or remember new things happening right now. It’s not that they are choosing to forget; their brain chemistry and structure are changing, making it harder to process new experiences while older memories remain clear.",
+    "source_segment": {
+      "id": 11,
+      "topic": "Neurochemistry Fluctuations and Memory Systems"
+    },
+    "time_start_sec": 696.195,
+    "time_end_sec": 781.113,
+    "time_start_hhmmss": "00:11:36",
+    "time_end_hhmmss": "00:13:01"
+  },
+  {
+    "question": "Why can’t they see things from my point of view or understand what I am trying to explain?",
+    "answer": "The part of the brain that helps people see things from another person’s point of view is often one of the first areas damaged by dementia. Because this area is impaired, your loved one literally cannot understand what you are saying or look at a situation through your eyes. This isn’t because they are being difficult on purpose; their brain is having trouble being logical and reasonable right now. It is important to know that this difficulty can range from minor to extreme depending on the type of dementia, but it is a common symptom caused by how the disease affects the brain early on.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Impact of Dementia on Frontal Lobe Capabilities"
+    },
+    "time_start_sec": 188.054,
     "time_end_sec": 240.47299999999998,
-    "time_start_hhmmss": "00:03:05",
+    "time_start_hhmmss": "00:03:08",
     "time_end_hhmmss": "00:04:00"
   },
   {
-    "question": "How do the senses of smell and taste contribute to safety awareness and survival instincts?",
-    "answer": "Based on the provided transcript, the senses of smell and taste contribute to safety awareness and survival instincts in the following ways:\n\n*   **Primitive Safety Mechanisms:** Smell and taste are described as \"primitive\" and \"basic\" systems that bypass higher brain functions to go directly into the **limbic system**. This allows for immediate, instinctual reactions rather than complex analysis.\n*   **Avoidance of Danger:** These senses trigger an automatic \"safety awareness\" that prompts the brain to **get away from** things that smell bad or taste bad. The text notes that if something does not smell good, the instinct is to flee, and if it does not taste good, the instinct is not to eat it.\n*   **Survival Prioritization:** This system is crucial for basic survival by ensuring the organism avoids toxic or spoiled substances (such as spoiled food, urine, feces, and body odor) and seeks out necessary nutrients.\n*   **Disruption of Function:** The transcript highlights that while this safety system is biologically present, it can become \"not right\" or \"wired incorrectly.\" In such cases, an individual may lose the ability to recognize danger signals (like bad smells) while still having an intense desire for certain tastes (like sugar and salt), effectively disabling the protective safety mechanism.",
+    "question": "Why is seeing things from another person's point of view considered the hardest skill for this part of the brain to develop?",
+    "answer": "The transcript explains that seeing things from another person's point of view is considered the hardest skill because it is the last part of the brain to develop. In fact, the speaker notes honestly that not everybody gets really good at it. This skill involves looking at a situation from where someone else is standing, rather than just from your own perspective.",
     "source_segment": {
-      "id": 5,
-      "topic": "Sensory Processing and the Role of Smell and Taste"
+      "id": 4,
+      "topic": "Frontal Lobe Functions: Impulse Control, Decision Making, and Empathy"
+    },
+    "time_start_sec": 133.933,
+    "time_end_sec": 188.054,
+    "time_start_hhmmss": "00:02:14",
+    "time_end_hhmmss": "00:03:08"
+  },
+  {
+    "question": "Why does my loved one seem to prefer very sweet or salty foods instead of healthier options?",
+    "answer": "It is very common to notice a change in food preferences, such as a stronger love for sugar and salt and less interest in healthy foods. This happens because smell and taste are \"primitive\" senses, meaning they are basic and connect directly to the limbic system (the part of the brain that handles emotions and safety).\n\nEven though this part of the brain is still working, the \"wiring\" is not right due to dementia. The brain’s ability to recognize danger or what is good for the body is dropping. As a result, your loved one may not realize that unhealthy choices are bad for them, or they may not notice smells that bother others, like spoiled food. Please remember, they are not doing this on purpose; their brain is just processing these sensations differently.",
+    "source_segment": {
+      "id": 6,
+      "topic": "Sensory Processing: Smell and Taste in the Limbic System"
     },
     "time_start_sec": 241.441,
     "time_end_sec": 342.675,
     "time_start_hhmmss": "00:04:01",
     "time_end_hhmmss": "00:05:43"
+  },
+  {
+    "question": "Why is my loved one able to dance or clap along to a beat but struggles to plan out specific movements on command?",
+    "answer": "This happens because dementia often affects different parts of the brain in different ways. The left side of the brain handles things like vocabulary and planning, while the right side handles rhythm and automatic movements. Since dementia usually attacks the left side more than the right, your loved one loses some of their ability to plan out specific steps, which requires thinking skills that are getting harder for them to use.\n\nHowever, they keep the abilities on the right side. This is why they can still clap, dance, or move to a beat automatically. These rhythmic movements don’t require as much complex planning, so they remain possible even when other tasks become difficult. It is a helpful reminder that music and movement are still accessible and enjoyable for them.",
+    "source_segment": {
+      "id": 8,
+      "topic": "Auditory Processing: Asymmetrical Language Loss and Preserved Rhythm"
+    },
+    "time_start_sec": 498.297,
+    "time_end_sec": 596.562,
+    "time_start_hhmmss": "00:08:18",
+    "time_end_hhmmss": "00:09:57"
   }
 ]
