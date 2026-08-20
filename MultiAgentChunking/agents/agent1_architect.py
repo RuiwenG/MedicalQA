@@ -74,7 +74,7 @@ class Architect:
            - "end_line" (integer)
            
         2. Grouping & Granularity:
-            - Cover the entire transcript, which has about 2000 lines.
+            - Cover the entire transcript
             - Each segment should cover as much of consecutive lines as possible, unless there is a topic change.
             - Merge adjacent lines or short topics that describe the same or closely related ideas.
             - Treat emotionally supportive content (reassurance, coping advice, caregiver wellbeing) as distinct topics worth their own segment — do not bury them inside instructional segments.

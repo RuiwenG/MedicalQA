@@ -20,7 +20,7 @@ class Scorer:
         )
         prompt = f"""Rate this question on three dimensions, each 1-10:
         A (Alignment): can it be answered accurately from the source topic, without outside knowledge?
-        C (Clear): is it clear and understandable to a non-medical family caregiver?
+        C (Clear): is it clear and understandable to a non-medical care partner?
         E (Educational value): would the answer give actionable, useful guidance?
 
         Question: {question}

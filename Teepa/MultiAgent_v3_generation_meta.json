@@ -1,0 +1,30 @@
+{
+  "approach": "MultiAgent (MultiAgentChunking)",
+  "prompt_version": "v3",
+  "output_folder": "<video>/MultiAgent-LLMChunking-v3/",
+  "model": "qwen/qwen3.5-plus-20260420",
+  "backend": "api",
+  "provider": "openrouter",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "generated_utc": "2026-08-20T18:39:41Z",
+  "seed": 42,
+  "thinking": "disabled",
+  "qa_target": "K = max(4, round(transcript_word_count / 250)) - matches SingleQA",
+  "agents_active": "1 architect, 2 inquisitor, 3 scorer, 5 synthesizer (agent 4 justifier disabled)",
+  "changes_from_v2": [
+    "agent 1: removed false claim that the transcript has about 2000 lines (actual 36-650, median 380)",
+    "agent 2: added One idea per question - avoid compound questions",
+    "agents 2/3/5: family caregiver -> care partner",
+    "agent 5: replaced detailed enough to be complete with focused with minimum details as needed",
+    "agent 5: added Use 60-80 words. Stop once the question is answered."
+  ],
+  "measured": {
+    "pairs": 226,
+    "grounded": "226/226",
+    "answer_words_mean": 76.2,
+    "answer_words_p90": 85,
+    "answer_words_max": 100,
+    "within_60_80_target": "76%"
+  },
+  "note": "v2 remains in <video>/MultiAgent-LLMChunking/. Both versions are discovered automatically by eval/web/extract_qa_data.py, which labels approaches by folder name."
+}

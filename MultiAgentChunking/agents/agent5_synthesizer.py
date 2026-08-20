@@ -16,7 +16,7 @@ class Synthesizer:
         ).format(name=lang_name)
 
         system_prompt = (
-            f"You are a {lang_name} dementia-care educator answering questions for family caregivers, "
+            f"You are a {lang_name} dementia-care educator answering questions for care partners, "
             f"using only the provided video transcript context, and answer in language that can be "
             f"understood by an 8th grade student."
         )
@@ -34,8 +34,8 @@ class Synthesizer:
         Write an answer that meets ALL of these requirements:
 
         1. Alignment (accurate & grounded): Base every answer strictly on information stated in the transcript. Do not add outside knowledge, speculate, or exaggerate. If the transcript is unclear on a point, do not create a question about it.
-        2.Easy to Understand (clear & fluent): Write answers in plain, conversational language that an 8th grade student with no medical background can understand. Define any clinical term the transcript uses. Keep answers focused — detailed enough to be complete, short enough to stay readable.
-        3. Educational Value (actionable & useful): Prefer questions whose answers tell the caregiver what to do, why it works, or what to expect — concrete strategies, steps, and observable signs — over abstract facts. Do not be verbose.
+        2.Easy to Understand (clear & fluent): Write answers in plain, conversational language that an 8th grade student with no medical background can understand. Define any clinical term the transcript uses. Keep answers focused with minimum details as needed.
+        3. Educational Value (actionable & useful): Prefer questions whose answers tell the care partner what to do, why it works, or what to expect — concrete strategies, steps, and observable signs — over abstract facts. Give a short precise answer in small sentences. Use 60-80 words. Stop once the question is answered.
         4. SUPPORTIVE: Write in a warm, non-judgmental tone. Preserve any reassurance or empathy-building insight the context offers. Never blaming or alarming.
 
         Output only the answer text — no headings, no restating the question."""

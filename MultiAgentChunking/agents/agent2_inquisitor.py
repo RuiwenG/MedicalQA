@@ -27,10 +27,11 @@ class Inquisitor:
 
         prompt = f"""Based on the following text segment, generate a numbered list of potential questions in {lang_name}. Good questions are:
         - Alignment: only ask what this text actually addresses.
-        - Educational Value: the answer would tell a caregiver what to do, why it works, or what to expect.
+        - Educational Value: the answer would tell a care partner what to do, why it works, or what to expect.
         - Supportive: if the text offers reassurance, coping strategies, or insight into the experience of the person with dementia, include questions that surface it.
         - Easy to Understand: phrased in plain conversational language that an 8th grade student with no medical background can understand.
-        Avoid duplicate questions with similar meanings, and avoid trivial or overly narrow questions. Format your output as a simple numbered list only.
+        - One idea per question: ask about a single thing. Avoid compound questions.
+        - Avoid duplicate questions with similar meanings, and avoid trivial or overly narrow questions. Format your output as a simple numbered list only.
         Text Segment:
         {segment_content}"""
 

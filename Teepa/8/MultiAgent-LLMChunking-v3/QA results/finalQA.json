@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Why is it helpful to tie a pencil to the notepad next to the telephone?",
+    "answer": "Tying a pencil to the notepad next to the telephone is a helpful trick for people who have been forgetful for a long time. If you do not tie it down, you might walk away and leave the pencil behind. Then, when you need to write something down later, you will not have anything to write with. By keeping the pencil attached, you make sure it is always ready to use right when you need it. This simple step helps avoid frustration and keeps things easy and organized for everyone involved in care.",
+    "source_segment": {
+      "id": 5,
+      "topic": "Coping Strategies for Normal Forgetfulness"
+    },
+    "time_start_sec": 213.319,
+    "time_end_sec": 242.92000000000002,
+    "time_start_hhmmss": "00:03:33",
+    "time_end_hhmmss": "00:04:03"
+  },
+  {
+    "question": "How can caregivers understand that confusing behaviors are caused by the brain’s inability to hook ideas together rather than intentional stubbornness?",
+    "answer": "Caregivers can see that confusing actions happen because the brain struggles to \"hook\" ideas together. In the story, a person sees a dirty glass and thinks thieves left it, not realizing they just drank from it. This isn’t stubbornness; their brain only picks up on what is right in front of them. Understanding this helps you realize their illogical behavior makes perfect sense to them in that moment, reducing frustration for everyone involved.",
+    "source_segment": {
+      "id": 7,
+      "topic": "Scenario: Dementia-Related Confusion and Delusion"
+    },
+    "time_start_sec": 298.96,
+    "time_end_sec": 398.8,
+    "time_start_hhmmss": "00:04:59",
+    "time_end_hhmmss": "00:06:39"
+  },
+  {
+    "question": "What does it mean when someone with dementia says they are at home even though they are somewhere else?",
+    "answer": "When someone with dementia says they are home while at the mall, it shows their memory is confused. Dementia means the brain has trouble thinking normally. In the video, Betty thinks she is home, but her partner knows she is not. This mix-up is a sign that something is wrong. It is not normal behavior. The best step is to call a doctor. A professional can check if dementia is causing this confusion and help you find the right support for your loved one.",
+    "source_segment": {
+      "id": 8,
+      "topic": "Interaction Highlighting Lack of Insight in Dementia"
+    },
+    "time_start_sec": 397.199,
+    "time_end_sec": 445.72,
+    "time_start_hhmmss": "00:06:37",
+    "time_end_hhmmss": "00:07:26"
+  },
+  {
+    "question": "Why doesn't reminding a person with dementia to remember things help them?",
+    "answer": "Reminding someone with dementia to remember does not help because their struggle is not just simple forgetfulness. The transcript explains that when forgetfulness is no longer the main issue, asking them to recall things will not work. We need to change our approach or \"change gears.\" Instead of focusing on what they cannot remember, we should accept that reminding them is ineffective. This shift helps us support them better without causing frustration for everyone involved.",
+    "source_segment": {
+      "id": 9,
+      "topic": "Shifting Caregiver Attitudes: Reminding is Ineffective"
+    },
+    "time_start_sec": 443.0,
+    "time_end_sec": 467.56,
+    "time_start_hhmmss": "00:07:23",
+    "time_end_hhmmss": "00:07:48"
+  },
+  {
+    "question": "Why does a phone call make it hard to remember what I was doing before?",
+    "answer": "Your brain uses \"working memory\" to hold thoughts, like making coffee. This space is very small and can only keep five to eight pieces of information at once. When a phone call interrupts you with new details, it fills up that tiny space. Because there is no room left, the old thought about coffee gets pushed out and lost. It is not your fault; your brain just ran out of storage for that moment.",
+    "source_segment": {
+      "id": 4,
+      "topic": "Explanation of Working Memory Limits"
+    },
+    "time_start_sec": 157.8,
+    "time_end_sec": 214.67999999999998,
+    "time_start_hhmmss": "00:02:38",
+    "time_end_hhmmss": "00:03:35"
+  }
+]
