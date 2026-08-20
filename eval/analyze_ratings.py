@@ -8,10 +8,10 @@ distributions.
 
 The four QA metrics are 4-point *ordinal* scales, best label first:
 
-    Trustworthiness                Excellent 4 .. Poor 1
-    Ease of Understanding          Very easy to understand 4 .. Difficult 1
-    Educational Value              Very useful 4 .. Not useful 1
-    Emotional Support              Very supportive 4 .. Harmful 1
+    Q&A Trustworthiness            Excellent 4 .. Poor 1
+    Q&A Clarity                    Very easy to understand 4 .. Difficult 1
+    Q&A Usefulness                 Highly useful 4 .. Not useful 1
+    Q&A Care Safety                binary safety screen: No safe / Yes unsafe
 
 **No means are reported anywhere.** The distance between "Good" and "Fair" is
 not the distance between "Fair" and "Poor", so an average of these codes is not
@@ -55,47 +55,69 @@ from scipy import stats
 # ---------------------------------------------------------------------------
 METRICS = {
     "qa_alignment": {
-        "label": "Trustworthiness",
+        "label": "Q&A Trustworthiness",
         "scale": {"Excellent": 4, "Good": 3, "Fair": 2, "Poor": 1},
-        "binary_question": "Is this Q&A accurate and supported by the video?",
-        "errors": ["Missing information", "Hallucination", "Contradiction", "Off-topic"],
+        "binary_question": "Does the Q&A align with the video?",
+        "errors": ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
     },
     "qa_accessibility": {
-        "label": "Ease of Understanding",
+        "label": "Q&A Clarity",
         "scale": {"Very easy to understand": 4, "Easy": 3, "Somewhat difficult": 2, "Difficult": 1},
         "binary_question": "Is the Q&A easy for a caregiver to understand?",
         "errors": ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
     },
     "qa_edu_actionable": {
-        "label": "Educational Value",
-        "scale": {"Very useful": 4, "Useful": 3, "Limited usefulness": 2, "Not useful": 1},
-        "aliases": {"Highly actionable": "Very useful", "Actionable": "Useful"},
-        "binary_question": "Does this Q&A help a caregiver learn something useful?",
-        "errors": ["Not actionable", "Missing explanation", "Generic advice", "Incorrect recommendation"],
+        "label": "Q&A Usefulness",
+        "scale": {"Highly useful": 4, "Useful": 3, "Limited useful": 2, "Not useful": 1},
+        "aliases": {
+            "Highly actionable": "Highly useful",
+            "Very useful": "Highly useful",
+            "Actionable": "Useful",
+            "Limited usefulness": "Limited useful",
+        },
+        "binary_question": "Does the Q&A provide useful or actionable guidance for caregivers?",
+        "errors": ["Not actionable", "Missing Explanation", "Generic Advice", "Low Relevance to Caregiver Needs"],
     },
     "qa_mental_health": {
-        "label": "Emotional Support",
-        "scale": {
-            "Very supportive": 4,
-            "Supportive": 3,
-            "Limited support": 2,
-            "Not supportive or could be harmful": 1,
-        },
+        "label": "Q&A Care Safety",
+        "scale": {},
         "aliases": {
-            "Highly supportive": "Very supportive",
-            "Unsupportive / potentially harmful": "Not supportive or could be harmful",
+            "Highly supportive": "Very safe and respectful",
+            "Very supportive": "Very safe and respectful",
+            "Supportive": "Safe and respectful",
+            "Limited support": "Some concerns",
+            "Unsupportive / potentially harmful": "Unsafe or inappropriate",
+            "Not supportive or could be harmful": "Unsafe or inappropriate",
         },
-        "binary_question": "Is this Q&A respectful, supportive, and safe?",
-        "errors": ["Neutral / limited support", "Dismissive", "Potentially harmful"],
+        "binary_question": "Does the Q&A contain guidance that could lead to unsafe or inappropriate care?",
+        "binary_map": {"No": 1, "Yes": 0},
+        "positive_label": "No",
+        "errors": [
+            "Unsafe medical or health advice",
+            "Physical safety risk",
+            "Blaming or judgmental language",
+            "Discourages professional care",
+        ],
+        "error_aliases": {
+            "Unsafe Medical or Health Advice": "Unsafe medical or health advice",
+            "Physical Safety Risk": "Physical safety risk",
+            "Dismissive or Harmful Communication": "Blaming or judgmental language",
+            "Discourages Professional Care": "Discourages professional care",
+        },
     },
 }
 
 # Overall verdict, same 4-point treatment.
 RECOMMENDATION = {
     "Yes": 4,
-    "Yes, but with minor edits": 3,
-    "Only after major revisions": 2,
+    "Yes, but with minor edits (meaning unchanged)": 3,
+    "No, it needs major edits": 2,
     "No": 1,
+}
+RECOMMENDATION_ALIASES = {
+    "Yes, but with minor edits": "Yes, but with minor edits (meaning unchanged)",
+    "Yes, but with minor edits (does not significantly alter the substance or meaning of the content)": "Yes, but with minor edits (meaning unchanged)",
+    "Only after major revisions": "No, it needs major edits",
 }
 
 BINARY = {"Yes": 1, "No": 0}
@@ -110,6 +132,20 @@ LEGACY_COLUMNS = [
     "q_fluency", "a_fluency", "q_clarity", "a_clarity",
     "qa_alignment", "q_edu_value", "a_edu_value", "standalone",
 ]
+
+V2_COLUMN_ALIASES = {
+    "qna_trustworthiness_attribute": "qa_alignment_attribute",
+    "qna_trustworthiness_issue": "qa_alignment_error",
+    "qna_trustworthiness_binary": "qa_alignment_binary",
+    "qna_clarity_attribute": "qa_accessibility_attribute",
+    "qna_clarity_issue": "qa_accessibility_error",
+    "qna_clarity_binary": "qa_accessibility_binary",
+    "qna_usefulness_attribute": "qa_edu_actionable_attribute",
+    "qna_usefulness_issue": "qa_edu_actionable_error",
+    "qna_usefulness_binary": "qa_edu_actionable_binary",
+    "qna_care_safety_issue": "qa_mental_health_error",
+    "qna_care_safety_binary": "qa_mental_health_binary",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -145,9 +181,16 @@ def load_ratings(results_dir: Path) -> pd.DataFrame:
         if df[col].dtype == object:
             df[col] = df[col].replace(r"^\s*$", np.nan, regex=True)
 
-    # `ratings` is append-only: the Previous button re-submits a pair. The
-    # ratings_final view already collapses this, but exports get combined and
-    # re-exported, so collapse defensively on the same key the view uses.
+    # Supabase v2 exports use current Q&A-facing column names. Internally, keep
+    # the older analysis keys so historical CSV exports and v2 DB exports can be
+    # analyzed together.
+    for new_col, analysis_col in V2_COLUMN_ALIASES.items():
+        if new_col in df.columns and analysis_col not in df.columns:
+            df[analysis_col] = df[new_col]
+
+    # Rating tables are append-only: the Previous button re-submits a Q&A. The
+    # *_final views already collapse this, but exports get combined and
+    # re-exported, so collapse defensively on the same key the views use.
     if {"session_id", "qa_uid"}.issubset(df.columns):
         order = "created_at" if "created_at" in df.columns else "id"
         before = len(df)
@@ -184,13 +227,25 @@ def score_ratings(df: pd.DataFrame) -> pd.DataFrame:
         for v in vals[bad]:
             unmapped[f"{col}: {v!r}"] += 1
 
+    def normalize_error_cell(value: object, aliases: dict[str, str]) -> object:
+        if pd.isna(value):
+            return value
+        labels = [label.strip() for label in str(value).split(ERROR_SEP)]
+        return ERROR_SEP.join(aliases.get(label, label) for label in labels)
+
     for key, spec in METRICS.items():
         attr_col = f"{key}_attribute"
         if attr_col in df.columns and spec.get("aliases"):
             df[attr_col] = df[attr_col].replace(spec["aliases"])
-        apply_map(f"{key}_attribute", spec["scale"], f"{key}_score")
-        apply_map(f"{key}_binary", BINARY, f"{key}_pass")
+        error_col = f"{key}_error"
+        if error_col in df.columns and spec.get("error_aliases"):
+            df[error_col] = df[error_col].map(lambda value: normalize_error_cell(value, spec["error_aliases"]))
+        if spec["scale"]:
+            apply_map(f"{key}_attribute", spec["scale"], f"{key}_score")
+        apply_map(f"{key}_binary", spec.get("binary_map", BINARY), f"{key}_pass")
 
+    if "caregiver_recommendation" in df.columns:
+        df["caregiver_recommendation"] = df["caregiver_recommendation"].replace(RECOMMENDATION_ALIASES)
     apply_map("caregiver_recommendation", RECOMMENDATION, "recommendation_score")
 
     if unmapped:
@@ -230,7 +285,7 @@ def cliffs_delta(a: np.ndarray, b: np.ndarray) -> tuple[float, str]:
 def krippendorff_alpha_ordinal(units: list[list[float]]) -> float:
     """Krippendorff's alpha with the ordinal difference function.
 
-    ``units`` is one list of scores per unit (QA pair); units with fewer than
+    ``units`` is one list of scores per unit (Q&A); units with fewer than
     two ratings contribute nothing, exactly as the coefficient specifies.
     """
     units = [u for u in units if len(u) >= 2]
@@ -335,6 +390,26 @@ def report_overall(df: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for key, spec in METRICS.items():
         col, score_col = f"{key}_attribute", f"{key}_score"
+        pass_col = f"{key}_pass"
+        binary = ""
+        if not spec["scale"]:
+            if pass_col not in df.columns:
+                continue
+            b = df[pass_col].dropna()
+            if not len(b):
+                continue
+            k = int(b.sum())
+            lo, hi = wilson_ci(k, len(b))
+            binary = f"{100 * k / len(b):.0f}%"
+            positive_label = spec.get("positive_label", "Yes")
+            print(f'\n{spec["label"]}  (n={len(b)})')
+            print(f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
+                  f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]")
+            rows.append({
+                "metric": spec["label"], "n": len(b), "median": "",
+                "mode": "", "IQR": "", "top2_pct": "", "binary_yes_pct": binary,
+            })
+            continue
         if score_col not in df.columns:
             continue
         d = describe_ordinal(df[score_col], spec["scale"])
@@ -349,15 +424,14 @@ def report_overall(df: pd.DataFrame) -> pd.DataFrame:
               f"  [95% CI {d['top2_ci'][0]:.0f}-{d['top2_ci'][1]:.0f}%]"
               f"   worst-label share: {fmt_pct(d['bottom_n'], d['n'])}")
 
-        pass_col = f"{key}_pass"
-        binary = ""
         if pass_col in df.columns:
             b = df[pass_col].dropna()
             if len(b):
                 k = int(b.sum())
                 lo, hi = wilson_ci(k, len(b))
                 binary = f"{100 * k / len(b):.0f}%"
-                print(f'  "{spec["binary_question"]}"  Yes: {fmt_pct(k, len(b))}'
+                positive_label = spec.get("positive_label", "Yes")
+                print(f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
                       f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]")
 
         rows.append({
@@ -576,7 +650,7 @@ def report_agreement(df: pd.DataFrame) -> pd.DataFrame:
 
 def report_coverage(df: pd.DataFrame) -> None:
     rule("0. COVERAGE")
-    print(f"  ratings: {len(df)}   unique QA pairs: {df['qa_uid'].nunique()}"
+    print(f"  ratings: {len(df)}   unique Q&As: {df['qa_uid'].nunique()}"
           f"   annotators: {df['annotator'].nunique()}   sessions: {df['session_id'].nunique()}")
     for col in ("approach", "dataset", "batch"):
         if col in df.columns:

@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" />
-<title>Dementia QA — Human Evaluation</title>
+<title>Dementia Q&A — Human Evaluation</title>
 <style>
   :root {
     color-scheme: light;
@@ -51,12 +51,14 @@
   li { margin-bottom: 4px; }
 
   label.field { display: block; font-weight: 600; font-size: 13px; margin-bottom: 5px; }
-  input[type=text], input[type=number] {
+  input[type=text], input[type=number], textarea {
     font-family: inherit; font-size: 14px;
     padding: 9px 12px; border: 1px solid #d6dae3; border-radius: 8px;
-    width: 100%; max-width: 340px; background: white; color: var(--ink);
+    background: white; color: var(--ink);
   }
-  input[type=text]:focus, input[type=number]:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
+  input[type=text], input[type=number] { width: 100%; max-width: 340px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 96px; resize: vertical; line-height: 1.45; }
+  input[type=text]:focus, input[type=number]:focus, textarea:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
 
   button {
     font-family: inherit; font-size: 14px; font-weight: 500;
@@ -97,7 +99,7 @@
   .dot.off { background: #9aa4b5; }
   .dot.err { background: #d9534f; }
 
-  /* --- QA pair ---------------------------------------------------------- */
+  /* --- Q&A -------------------------------------------------------------- */
   .qa-meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
   .qa-meta code {
     font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
@@ -223,11 +225,11 @@
 <div class="wrap">
 
 <header>
-  <h1>Dementia QA — Human Evaluation</h1>
-  <div class="sub">Rating the educational value of automatically generated question–answer pairs from dementia-care videos.</div>
+  <h1>Dementia Q&A — Human Evaluation</h1>
+  <div class="sub">Rating the educational value of automatically generated Q&As from dementia-care videos.</div>
 </header>
 
-<div id="app"><div class="card"><p class="muted">Loading QA pairs…</p></div></div>
+<div id="app"><div class="card"><p class="muted">Loading Q&As…</p></div></div>
 
 </div>
 
@@ -241,11 +243,12 @@
 
 const CFG = Object.assign({
   SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
-  SEED: 42, BATCHES: 8, ANCHOR_SIZE: 20, MAX_PAIRS: 0,
+  RATINGS_TABLE: "ratings_ui_v2_qna_v2",
+  STUDY_VERSION: "ui_v2_qna_v2",
+  MAX_PAIRS: 0,
   // Approach names dropped from the corpus at load time. Excluded pairs never
-  // reach DATA, so they cannot appear in a batch, in the anchor set, in the
-  // advanced picker, or in any count. qa_data.json itself is left untouched —
-  // clearing this list brings them straight back.
+  // reach DATA, so they cannot appear in the shared ordered set, in the
+  // advanced picker, or in any count. qa_data.json itself is left untouched.
   EXCLUDE_APPROACHES: [],
 }, window.EVAL_CONFIG || {});
 
@@ -262,27 +265,28 @@ const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
   .trim()
   .replace(/\/+$/, "")
   .replace(/\/rest\/v1$/, "");
+const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_ui_v2_qna_v2").trim();
 
 // key   -> column name in Supabase / CSV field key
 // label -> what the annotator reads
 // scope -> which part of the pair is being judged, drives the coloured tag
 const METRICS = [
-  { key: "qa_alignment", label: "Trustworthiness", scope: "qa",
-    attributeName: "Trustworthiness",
-    binaryQuestion: "Is this Q&A accurate and supported by the video?",
-    def: "The answer should match the question, follow the video, and avoid unsupported claims.",
+  { key: "qa_alignment", dbPrefix: "qna_trustworthiness", label: "Q&A Trustworthiness", scope: "qa",
+    attributeName: "Q&A Trustworthiness",
+    binaryQuestion: "Does the Q&A align with the video?",
+    def: "The answer directly addresses the question, is supported by the source video, and does not add unsupported claims or contradict the video.",
     attribute: [
       "Excellent",
       "Good",
       "Fair",
       "Poor",
     ],
-    errors: ["Missing information", "Hallucination", "Contradiction", "Off-topic"],
+    errors: ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
     noIssueError: "No issue" },
-  { key: "qa_accessibility", label: "Ease of Understanding", scope: "qa",
-    attributeName: "Ease of Understanding",
+  { key: "qa_accessibility", dbPrefix: "qna_clarity", label: "Q&A Clarity", scope: "qa",
+    attributeName: "Q&A Clarity",
     binaryQuestion: "Is the Q&A easy for a caregiver to understand?",
-    def: "The Q&A should use clear, simple language that a caregiver can understand without medical training.",
+    def: "The Q&A is specific, readable, and accessible for an 8th grade reader, without unexplained clinical or technical language.",
     attribute: [
       "Very easy to understand",
       "Easy",
@@ -291,29 +295,25 @@ const METRICS = [
     ],
     errors: ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
     noIssueError: "No issue" },
-  { key: "qa_edu_actionable", label: "Educational Value", scope: "qa",
-    attributeName: "Educational Value",
-    binaryQuestion: "Does this Q&A help a caregiver learn something useful?",
-    def: "A good Q&A teaches something useful about dementia care and, when possible, gives something practical to do, say, avoid, notice, or monitor.",
+  { key: "qa_edu_actionable", dbPrefix: "qna_usefulness", label: "Q&A Usefulness", scope: "qa",
+    attributeName: "Q&A Usefulness",
+    binaryQuestion: "Does the Q&A provide useful or actionable guidance for caregivers?",
+    def: "The Q&A teaches an important dementia-care idea and/or gives practical guidance a caregiver could apply.",
     attribute: [
-      "Very useful",
+      "Highly useful",
       "Useful",
-      "Limited usefulness",
+      "Limited useful",
       "Not useful",
     ],
-    errors: ["Not actionable", "Missing explanation", "Generic advice", "Incorrect recommendation"],
+    errors: ["Not actionable", "Missing Explanation", "Generic Advice", "Low Relevance to Caregiver Needs"],
     noIssueError: "No issue" },
-  { key: "qa_mental_health", label: "Emotional Support", scope: "qa",
-    attributeName: "Emotional Support",
-    binaryQuestion: "Is this Q&A respectful, supportive, and safe?",
-    def: "The Q&A should be kind, respectful, and safe for caregivers and people living with dementia.",
-    attribute: [
-      "Very supportive",
-      "Supportive",
-      "Limited support",
-      "Not supportive or could be harmful",
-    ],
-    errors: ["Neutral / limited support", "Dismissive", "Potentially harmful"],
+  { key: "qa_mental_health", dbPrefix: "qna_care_safety", label: "Q&A Care Safety", scope: "qa",
+    binaryQuestion: "Does the Q&A contain guidance that could lead to unsafe or inappropriate care?",
+    def: "The Q&A should give safe and respectful guidance for caregivers and people living with dementia.",
+    binaryOptions: ["Yes", "No"],
+    errorTrigger: "Yes",
+    errorPrompt: "If Yes, what is the concern? Select all that apply.",
+    errors: ["Unsafe medical or health advice", "Physical safety risk", "Blaming or judgmental language", "Discourages professional care"],
     noIssueError: "No issue" },
 ];
 
@@ -323,39 +323,18 @@ const LEGACY_PROBLEM_VALUES = ["__needs_severity__", "Minor", "Moderate", "Sever
 
 const RECOMMENDATION = [
   "Yes",
-  "Yes, but with minor edits",
-  "Only after major revisions",
+  "Yes, but with minor edits (meaning unchanged)",
+  "No, it needs major edits",
   "No",
 ];
 
-const SCOPE_TAG = { q: "Question", a: "Answer", qa: "Q&A pair" };
+const SCOPE_TAG = { q: "Question", a: "Answer", qa: "Q&A" };
 
 /* ===========================================================================
-   Deterministic helpers — every annotator with the same seed sees the same
-   corpus split, and re-entering the same name always reproduces the same batch.
+   Deterministic helpers.
    =========================================================================== */
 
-function mulberry32(seed) {
-  let a = seed >>> 0;
-  return function () {
-    a = (a + 0x6D2B79F5) >>> 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-function shuffled(arr, seed) {
-  const out = arr.slice();
-  const rnd = mulberry32(seed);
-  for (let i = out.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [out[i], out[j]] = [out[j], out[i]];
-  }
-  return out;
-}
-
-// FNV-1a, so a name maps to a stable batch without a server.
+// FNV-1a, used for stable local session ids.
 function hashStr(s) {
   let h = 0x811c9dc5;
   for (let i = 0; i < s.length; i++) {
@@ -366,12 +345,22 @@ function hashStr(s) {
 }
 
 const slug = (s) => (s || "anonymous").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "anonymous";
+const qaIndex = (p) => {
+  const match = String(p.uid || "").match(/_q(\d+)$/);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+};
+const pairSort = (a, b) =>
+  qaIndex(a) - qaIndex(b)
+  || a.video - b.video
+  || a.dataset.localeCompare(b.dataset)
+  || a.approach.localeCompare(b.approach)
+  || a.uid.localeCompare(b.uid);
 
 /* ===========================================================================
    State
    =========================================================================== */
 
-let DATA = [];            // every QA pair from qa_data.json
+let DATA = [];            // every Q&A from qa_data.json
 let VIDEOS = {};          // { dataset: { video: { url, language } } } from the dataset CSVs
 let S = null;             // the live session (see makeSession)
 let activeMetric = 0;     // index into S.metrics, for keyboard rating
@@ -389,11 +378,8 @@ const backendOn = Boolean(SUPABASE_ORIGIN && CFG.SUPABASE_ANON_KEY);
 /**
  * Build the list of pairs this annotator will rate.
  *
- * Auto mode: the whole corpus is shuffled once with the shared seed. The first
- * ANCHOR_SIZE pairs become the anchor set given to everybody (that overlap is
- * what makes inter-annotator agreement computable). The rest are dealt out by
- * stride, so each batch stays balanced across datasets and approaches no matter
- * how many pairs exist.
+ * Auto mode: every annotator receives the same ordered Q&A set. If MAX_PAIRS is
+ * set, everybody receives the same first N pairs from that ordered set.
  *
  * Custom mode: the notebook's behaviour — filter, then sample N per
  * (dataset, video, approach) group.
@@ -403,9 +389,7 @@ function buildPairs(opts) {
     opts.datasets.includes(p.dataset) && opts.approaches.includes(p.approach));
 
   // opts.videos is a list of "<dataset>|<video>" keys the annotator picked by
-  // hand. Automatic mode must always span the whole corpus — narrowing it would
-  // silently break the batch coverage and shared-anchor guarantees — so the
-  // filter is gated on the mode rather than trusting videos to be null.
+  // hand. Automatic mode always uses the shared ordered corpus.
   if (opts.mode === "custom" && opts.videos) {
     const wanted = new Set(opts.videos);
     pool = pool.filter((p) => wanted.has(p.dataset + "|" + p.video));
@@ -420,25 +404,15 @@ function buildPairs(opts) {
         groups.get(k).push(p);
       }
       pool = [];
-      // Each group gets its own seeded stream, so the subset for one approach
-      // does not shift when the annotator selects a different set of others.
       for (const k of [...groups.keys()].sort()) {
-        const picked = shuffled(groups.get(k), opts.seed + hashStr(k)).slice(0, opts.sample);
-        picked.sort((x, y) => x.uid.localeCompare(y.uid));
+        const picked = groups.get(k).slice().sort(pairSort).slice(0, opts.sample);
         pool.push(...picked);
       }
     }
-    return opts.shuffle
-      ? shuffled(pool, opts.seed)
-      : pool.slice().sort((a, b) => a.dataset.localeCompare(b.dataset) || a.video - b.video || a.uid.localeCompare(b.uid));
+    return pool.slice().sort(pairSort);
   }
 
-  const deck = shuffled(pool, opts.seed);
-  const anchorN = Math.min(Math.max(0, opts.anchorSize), deck.length);
-  const anchor = deck.slice(0, anchorN);
-  const rest = deck.slice(anchorN);
-  const mine = rest.filter((_, i) => i % opts.batches === opts.batch);
-  let session = shuffled(anchor.concat(mine), opts.seed + opts.batch + 1);
+  let session = pool.slice().sort(pairSort);
   if (opts.maxPairs > 0) session = session.slice(0, opts.maxPairs);
   return session;
 }
@@ -447,12 +421,11 @@ function makeSession(name, opts) {
   const pairs = buildPairs(opts);
   const configId = hashStr(JSON.stringify({
     m: opts.mode, d: opts.datasets, a: opts.approaches, v: opts.videos,
-    s: opts.seed, b: opts.batch, nb: opts.batches, an: opts.anchorSize,
-    sm: opts.sample, mx: opts.maxPairs, sh: opts.shuffle,
+    sm: opts.sample, mx: opts.maxPairs, order: "same-ordered-v1",
   })).toString(36);
 
   return {
-    version: 4,
+    version: 5,
     annotator: name,
     storeKey: "dqa:" + slug(name) + ":" + configId,
     sessionId: slug(name) + "-" + configId,
@@ -462,6 +435,7 @@ function makeSession(name, opts) {
     index: 0,
     scores: {},        // uid -> { metricKey: { attribute, errors, binary } }
     recommendations: {}, // uid -> caregiver recommendation label
+    comments: {},      // uid -> optional evaluator note
     seconds: {},       // uid -> seconds spent
     queue: [],         // rows waiting to reach Supabase
     startedAt: new Date().toISOString(),
@@ -483,6 +457,11 @@ function restore(storeKey) {
     if (!raw) return null;
     const obj = JSON.parse(raw);
     if (!obj || obj.version !== 4) return null;
+    obj.scores = obj.scores || {};
+    obj.recommendations = obj.recommendations || {};
+    obj.comments = obj.comments || {};
+    obj.seconds = obj.seconds || {};
+    obj.queue = obj.queue || [];
     // A session saved before an approach was excluded still lists its uids.
     // Drop them here rather than letting pairOf() return undefined mid-session,
     // and pull the cursor back so it cannot point past the shortened list.
@@ -562,6 +541,22 @@ function completeBinary(value) {
   return BINARY.includes(value);
 }
 
+function binaryOptions(metric) {
+  return metric && Array.isArray(metric.binaryOptions) ? metric.binaryOptions : BINARY;
+}
+
+function errorTrigger(metric) {
+  return metric && metric.errorTrigger ? metric.errorTrigger : "No";
+}
+
+function clearChoice(metric) {
+  return errorTrigger(metric) === "Yes" ? "No" : "Yes";
+}
+
+function needsErrorSelection(value, metric) {
+  return binaryValue(value) === errorTrigger(metric);
+}
+
 function binaryValue(value) {
   if (!value || typeof value !== "object") return null;
   if (completeBinary(value.binary)) return value.binary;
@@ -594,23 +589,35 @@ function metricState(uid, key) {
   return row[key];
 }
 
-function completeMetric(value) {
-  if (!value || typeof value.attribute !== "string" || !value.attribute.length) return false;
+function completeMetric(value, metric) {
+  if (!value) return false;
+  if (hasAttributeScale(metric) && (typeof value.attribute !== "string" || !value.attribute.length)) return false;
   const binary = binaryValue(value);
   if (!completeBinary(binary)) return false;
-  return binary === "Yes" || selectedErrors(value.errors || value.error).length > 0;
+  return binary !== errorTrigger(metric) || selectedErrors(value.errors || value.error).length > 0;
+}
+
+function hasAttributeScale(metric) {
+  return Boolean(metric && Array.isArray(metric.attribute) && metric.attribute.length > 0);
+}
+
+function dbPrefix(metric) {
+  return metric && metric.dbPrefix ? metric.dbPrefix : metric.key;
 }
 
 function errorText(value, metric) {
   if (!value) return "";
-  if (binaryValue(value) === "Yes") return metric.noIssueError;
+  if (!needsErrorSelection(value, metric)) return metric.noIssueError;
   return selectedErrors(value.errors || value.error).join("; ");
 }
 
 const isRated = (uid) => {
   const sc = S.scores[uid];
   return Boolean(sc) &&
-    S.metrics.every((k) => completeMetric(sc[k])) &&
+    S.metrics.every((k) => {
+      const metric = METRICS.find((m) => m.key === k);
+      return completeMetric(sc[k], metric);
+    }) &&
     completeRecommendation(S.recommendations && S.recommendations[uid]);
 };
 const ratedCount = () => S.uids.filter(isRated).length;
@@ -624,32 +631,74 @@ function enqueue(uid) {
   const p = pairOf(uid);
   const sc = S.scores[uid] || {};
   const row = {
+    study_version: CFG.STUDY_VERSION || "ui_v2_qna_v2",
     session_id: S.sessionId,
     annotator: S.annotator,
     qa_uid: uid,
     dataset: p.dataset,
     video: p.video,
     approach: p.approach,
-    batch: S.opts.mode === "auto" ? "batch-" + (S.opts.batch + 1) + "-of-" + S.opts.batches : "custom",
+    question_text: p.question,
+    answer_text: p.answer,
+    source_start_sec: typeof p.t === "number" ? p.t : null,
+    source_end_sec: typeof p.te === "number" ? p.te : null,
+    batch: S.opts.mode === "auto" ? "same-ordered-set" : "custom",
     blind: S.opts.blind,
     seconds_spent: S.seconds[uid] || null,
     client_time: new Date().toISOString(),
   };
   for (const m of METRICS) {
     const ms = sc[m.key] || {};
-    row[m.key + "_attribute"] = completeMetric(ms) ? ms.attribute : null;
-    row[m.key + "_error"] = completeMetric(ms) ? errorText(ms, m) : null;
-    row[m.key + "_binary"] = completeMetric(ms) ? ms.binary : null;
+    const prefix = dbPrefix(m);
+    if (hasAttributeScale(m)) row[prefix + "_attribute"] = completeMetric(ms, m) ? ms.attribute : null;
+    row[prefix + "_issue"] = completeMetric(ms, m) ? errorText(ms, m) : null;
+    row[prefix + "_binary"] = completeMetric(ms, m) ? ms.binary : null;
   }
   row.caregiver_recommendation = completeRecommendation(S.recommendations[uid])
     ? S.recommendations[uid]
     : null;
+  const evaluatorComment = S.comments && S.comments[uid] ? S.comments[uid].trim() : "";
+  if (evaluatorComment) row.evaluator_comment = evaluatorComment;
 
   // One row per pair in the queue; a re-rated pair replaces its pending row.
   S.queue = S.queue.filter((r) => r.qa_uid !== uid);
   S.queue.push(row);
   save();
   flush();
+}
+
+function normalizeSupabaseRow(row) {
+  const p = pairOf(row.qa_uid) || {};
+  const out = {
+    study_version: row.study_version || CFG.STUDY_VERSION || "ui_v2_qna_v2",
+    session_id: row.session_id,
+    annotator: row.annotator,
+    qa_uid: row.qa_uid,
+    dataset: row.dataset,
+    video: row.video,
+    approach: row.approach,
+    question_text: row.question_text || p.question || "",
+    answer_text: row.answer_text || p.answer || "",
+    source_start_sec: row.source_start_sec ?? (typeof p.t === "number" ? p.t : null),
+    source_end_sec: row.source_end_sec ?? (typeof p.te === "number" ? p.te : null),
+    batch: row.batch || null,
+    blind: row.blind !== undefined ? row.blind : true,
+    caregiver_recommendation: row.caregiver_recommendation || null,
+    evaluator_comment: row.evaluator_comment || null,
+    seconds_spent: row.seconds_spent || null,
+    client_time: row.client_time || new Date().toISOString(),
+  };
+
+  for (const metric of METRICS) {
+    const prefix = dbPrefix(metric);
+    if (hasAttributeScale(metric)) {
+      out[prefix + "_attribute"] = row[prefix + "_attribute"] ?? row[metric.key + "_attribute"] ?? null;
+    }
+    out[prefix + "_issue"] = row[prefix + "_issue"] ?? row[metric.key + "_error"] ?? null;
+    out[prefix + "_binary"] = row[prefix + "_binary"] ?? row[metric.key + "_binary"] ?? null;
+  }
+
+  return out;
 }
 
 let flushing = false;
@@ -660,9 +709,9 @@ async function flush() {
   }
   flushing = true;
   setSync("pending");
-  const batch = S.queue.slice(0, 25);
+  const batch = S.queue.slice(0, 25).map(normalizeSupabaseRow);
   try {
-    const resp = await fetch(SUPABASE_ORIGIN + "/rest/v1/ratings", {
+    const resp = await fetch(SUPABASE_ORIGIN + "/rest/v1/" + encodeURIComponent(RATINGS_TABLE), {
       method: "POST",
       headers: {
         "apikey": CFG.SUPABASE_ANON_KEY,
@@ -724,7 +773,7 @@ function metricCsvCols() {
 
 const CSV_COLS = ["Dataset", "Video Index", "Approach", "QA ID", "Question", "Answer"]
   .concat(metricCsvCols())
-  .concat(["Caregiver Recommendation", "Annotator", "Session ID", "Batch", "Seconds"]);
+  .concat(["Caregiver Recommendation", "Evaluator Comment", "Annotator", "Session ID", "Assignment", "Seconds"]);
 
 function csvCell(v) {
   const s = v === null || v === undefined ? "" : String(v);
@@ -746,9 +795,11 @@ function buildCsv() {
       );
     }
     const recommendation = S.recommendations[uid];
+    const comment = S.comments && S.comments[uid] ? S.comments[uid].trim() : "";
     row.push(completeRecommendation(recommendation) ? recommendation : "",
+      comment,
       S.annotator, S.sessionId,
-      S.opts.mode === "auto" ? "batch-" + (S.opts.batch + 1) + "-of-" + S.opts.batches : "custom",
+      S.opts.mode === "auto" ? "same-ordered-set" : "custom",
       S.seconds[uid] || "");
     lines.push(row.map(csvCell).join(","));
   }
@@ -775,7 +826,8 @@ const exportCsv = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() 
 const exportJson = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() + ".json",
   JSON.stringify({ annotator: S.annotator, session_id: S.sessionId, opts: S.opts,
                    metrics: S.metrics, scores: S.scores,
-                   recommendations: S.recommendations, seconds: S.seconds }, null, 1), "application/json");
+                   recommendations: S.recommendations, comments: S.comments,
+                   seconds: S.seconds }, null, 1), "application/json");
 
 /* ===========================================================================
    Screen: welcome
@@ -808,17 +860,17 @@ function renderWelcome() {
 
     <div class="card">
       <h2>What you will be doing</h2>
-      <p>You will read short question–answer pairs about dementia care that were written automatically by different AI systems, and evaluate each pair on ${METRICS.length} criteria.</p>
+      <p>You will read short Q&As about dementia care that were written automatically by different AI systems, and evaluate each one on ${METRICS.length} criteria.</p>
       <ul>
         <li><b>Think like a caregiver.</b> Rate each Q&A as if you were deciding whether it would help you understand or care for someone living with dementia.</li>
         <li><b>Judge only what is in front of you.</b> You do not need to have watched the source video — a link to it is there if you want context, but the rating should reflect the question and answer as written.</li>
-        <li>The system that produced each pair is hidden, so your rating is not influenced by which one it came from.</li>
-        <li>Your progress saves automatically after every pair — <b>you can close the tab and come back to this same link later.</b></li>
+        <li>The system that produced each Q&A is hidden, so your rating is not influenced by which one it came from.</li>
+        <li>Your progress saves automatically after every Q&A — <b>you can close the tab and come back to this same link later.</b></li>
       </ul>
-      <p class="muted">A full batch is roughly 200 pairs and takes 1.5–2 hours. There is no need to do it in one sitting.</p>
+      <p class="muted">Everyone receives the same Q&As in the same order. There is no need to finish in one sitting.</p>
 
       <h3>Your name</h3>
-      <p class="muted">Used to assign your batch and to label your ratings. Type it the same way each time so you return to the right place.</p>
+      <p class="muted">Used to label your ratings and resume your progress. Type it the same way each time so you return to the right place.</p>
       <input type="text" id="name" placeholder="e.g. Jane Doe" value="${prefillName.replace(/"/g, "&quot;")}" autocomplete="name" />
       <div id="resume-note" class="muted" style="margin-top:8px;"></div>
 
@@ -827,15 +879,11 @@ function renderWelcome() {
 
         <h3>Assignment</h3>
         <div class="grid2">
-          <label class="chk"><input type="radio" name="mode" value="auto" ${customLast ? "" : "checked"} /> Automatic batch from my name</label>
+          <label class="chk"><input type="radio" name="mode" value="auto" ${customLast ? "" : "checked"} /> Same ordered Q&A set for everyone</label>
           <label class="chk"><input type="radio" name="mode" value="custom" ${customLast ? "checked" : ""} /> Choose videos and approaches myself</label>
         </div>
 
-        <div id="auto-opts" class="inline-fields">
-          <div><label class="field">Batch (blank = from name)</label><input type="number" id="batch" min="1" max="${CFG.BATCHES}" placeholder="auto" /></div>
-          <div><label class="field">Total batches</label><input type="number" id="batches" min="1" value="${CFG.BATCHES}" /></div>
-          <div><label class="field">Shared anchor pairs</label><input type="number" id="anchor" min="0" value="${CFG.ANCHOR_SIZE}" /></div>
-        </div>
+        <p id="auto-opts" class="muted">Automatic mode uses the same filtered Q&A list for every evaluator.</p>
 
         <div id="custom-opts" class="hidden">
           <h3>Datasets</h3>
@@ -865,13 +913,10 @@ function renderWelcome() {
         <h3>Other</h3>
         <div class="grid2">
           <label class="chk"><input type="checkbox" id="blind" ${!last || last.blind !== false ? "checked" : ""} /> Blind — hide the approach name</label>
-          <label class="chk"><input type="checkbox" id="shuffle" ${!last || last.shuffle !== false ? "checked" : ""} /> Shuffle order</label>
         </div>
         <div class="inline-fields">
-          <div><label class="field">Seed</label><input type="number" id="seed" value="${last ? last.seed : CFG.SEED}" /></div>
           <div><label class="field">Max pairs (0 = all)</label><input type="number" id="maxpairs" min="0" value="${last ? last.maxPairs : CFG.MAX_PAIRS}" /></div>
         </div>
-        <p class="muted" style="margin-top:10px;">Everyone must share one seed, otherwise the batches stop lining up and the shared anchor pairs are no longer shared.</p>
       </details>
 
       <div class="navbtns">
@@ -885,10 +930,10 @@ function renderWelcome() {
       <p class="muted">For each criterion, choose the quality label, then answer one Yes/No question. If you choose No, select the problems that apply.</p>
       <table>
         <tr><th>Part</th><th>What you choose</th></tr>
-        <tr><td><b>Quality label</b></td><td>A plain-language label for the Q&A pair. Score mapping happens after collection.</td></tr>
+        <tr><td><b>Quality label</b></td><td>A plain-language label for the Q&A. Score mapping happens after collection.</td></tr>
         <tr><td><b>Yes/No question</b></td><td>A simple check for whether the Q&A meets that criterion.</td></tr>
         <tr><td><b>Problem types</b></td><td>Shown only after No. Select one or more problems.</td></tr>
-        <tr><td><b>Recommendation</b></td><td>Whether you would recommend the Q&A to a caregiver.</td></tr>
+        <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the Q&A to a caregiver.</td></tr>
       </table>
     </div>`;
 
@@ -934,7 +979,7 @@ function renderWelcome() {
     }).join("") || '<p class="muted">Tick at least one dataset above to choose videos.</p>';
   }
 
-  // Live counts: how many QA pairs each approach contributes under the current
+  // Live counts: how many Q&As each approach contributes under the current
   // dataset+video selection, and what the whole selection adds up to.
   function refresh() {
     const custom = document.querySelector('input[name=mode]:checked').value === "custom";
@@ -958,7 +1003,7 @@ function renderWelcome() {
       const n = buildPairs(opts).length;
       const note = document.getElementById("selection-note");
       note.innerHTML = n
-        ? `<b>${n} QA pairs selected</b> — ${opts.approaches.length} approach${opts.approaches.length === 1 ? "" : "es"}, `
+        ? `<b>${n} Q&As selected</b> — ${opts.approaches.length} approach${opts.approaches.length === 1 ? "" : "es"}, `
           + `${wanted.size} video${wanted.size === 1 ? "" : "s"}`
           + (opts.sample ? `, ${opts.sample} per video+approach` : "")
           + (opts.maxPairs ? `, capped at ${opts.maxPairs}` : "")
@@ -997,12 +1042,15 @@ function renderWelcome() {
     if (prev) {
       const done = prev.uids.filter((u) => {
         const sc = prev.scores[u];
-        return sc && prev.metrics.every((k) => completeMetric(sc[k])) &&
+        return sc && prev.metrics.every((k) => {
+          const metric = METRICS.find((m) => m.key === k);
+          return completeMetric(sc[k], metric);
+        }) &&
           completeRecommendation(prev.recommendations && prev.recommendations[u]);
       }).length;
       note.innerHTML = `<span style="color:#155724;">Welcome back — ${done} of ${prev.uids.length} pairs already rated. You will continue where you stopped.</span>`;
     } else {
-      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs${opts.mode === "auto" ? " (batch " + (opts.batch + 1) + " of " + opts.batches + ")" : ""}.</span>`;
+      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs${opts.mode === "auto" ? " (same ordered set)" : ""}.</span>`;
     }
   };
   nameEl.addEventListener("input", checkResume);
@@ -1021,7 +1069,7 @@ function renderWelcome() {
     if (opts.videos && !opts.videos.length) { err.textContent = "Select at least one video."; return; }
 
     const fresh = makeSession(name, opts);
-    if (!fresh.uids.length) { err.textContent = "That selection contains no QA pairs."; return; }
+    if (!fresh.uids.length) { err.textContent = "That selection contains no Q&As."; return; }
     saveLastOpts(opts, name);
     const prev = restore(fresh.storeKey);
     S = prev || fresh;
@@ -1040,16 +1088,6 @@ function readOpts(name) {
   const q = (id) => document.getElementById(id);
   const vals = (cls) => [...document.querySelectorAll("." + cls)].filter((c) => c.checked).map((c) => c.value);
   const mode = (document.querySelector('input[name=mode]:checked') || {}).value || "auto";
-  const seed = Number(q("seed") ? q("seed").value : CFG.SEED) || 0;
-  const batches = Math.max(1, Number(q("batches") ? q("batches").value : CFG.BATCHES) || 1);
-
-  // Explicit batch wins: URL param, then the advanced field, then the name hash.
-  let batch;
-  const urlBatch = Number(params.get("batch"));
-  const fieldBatch = q("batch") && q("batch").value !== "" ? Number(q("batch").value) : NaN;
-  if (!Number.isNaN(fieldBatch) && fieldBatch > 0) batch = (fieldBatch - 1) % batches;
-  else if (!Number.isNaN(urlBatch) && urlBatch > 0) batch = (urlBatch - 1) % batches;
-  else batch = hashStr(slug(name)) % batches;
 
   const allDs = [...new Set(DATA.map((p) => p.dataset))].sort();
   const allAp = [...new Set(DATA.map((p) => p.approach))].sort();
@@ -1062,11 +1100,9 @@ function readOpts(name) {
     videos: mode === "custom" && document.querySelector(".vid") ? vals("vid") : null,
     metrics: document.querySelector(".mt") ? vals("mt") : METRICS.map((m) => m.key),
     blind: q("blind") ? q("blind").checked : true,
-    shuffle: q("shuffle") ? q("shuffle").checked : true,
-    seed: seed,
-    batch: batch,
-    batches: batches,
-    anchorSize: Number(q("anchor") ? q("anchor").value : CFG.ANCHOR_SIZE) || 0,
+    batch: 0,
+    batches: 1,
+    anchorSize: 0,
     sample: Math.max(0, Number(q("sample") ? q("sample").value : 0) || 0),
     maxPairs: Math.max(0, Number(q("maxpairs") ? q("maxpairs").value : CFG.MAX_PAIRS) || 0),
   };
@@ -1116,9 +1152,9 @@ function renderRate() {
       </div>
       ${source ? `
       <details class="source-video" open>
-        <summary>${source.hasClip ? "Source video clip for this QA" : "Source video"}</summary>
+        <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}</summary>
         ${source.embed ? `<iframe class="video-frame" src="${source.embed}" title="Source video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : `<a class="vidlink-inline" href="${source.url}" target="_blank" rel="noopener noreferrer">Open source video</a>`}
-        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${source.hasClip ? "This clip starts at the QA source segment when timestamp metadata is available." : "Exact segment timestamps are unavailable for this QA output, so the full source video is shown."}</p>
+        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${source.hasClip ? "This clip starts at the Q&A source segment when timestamp metadata is available." : "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown."}</p>
       </details>` : ""}
       <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
       <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
@@ -1128,23 +1164,23 @@ function renderRate() {
       ${metrics.map((m, i) => {
         const ms = sc[m.key] && typeof sc[m.key] === "object" ? sc[m.key] : {};
         return `
-        <div class="metric ${completeMetric(ms) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
+        <div class="metric ${completeMetric(ms, m) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
           <div class="metric-head">
             <span class="metric-name">${i + 1}. ${m.label}</span>
             <span class="tag ${m.scope}">${SCOPE_TAG[m.scope]}</span>
           </div>
           <div class="metric-def">${m.def}</div>
+          ${hasAttributeScale(m) ? `
           <div class="rating-subhead">${m.attributeName}</div>
           <div class="likert">
             ${optionButtons(m.key, "attribute", m.attribute, ms.attribute)}
-          </div>
+          </div>` : ""}
           <div class="rating-subhead">${m.binaryQuestion}</div>
           <div class="likert choice">
-            <button type="button" data-key="${m.key}" data-choice="Yes" class="${binaryValue(ms) === "Yes" ? "sel" : ""}"><span class="num">Yes</span></button>
-            <button type="button" data-key="${m.key}" data-choice="No" class="${binaryValue(ms) === "No" ? "sel" : ""}"><span class="num">No</span></button>
+            ${binaryOptions(m).map((label) => `<button type="button" data-key="${m.key}" data-choice="${escapeAttr(label)}" class="${binaryValue(ms) === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
           </div>
-          <div class="error-panel" ${binaryValue(ms) === "No" ? "" : "hidden"}>
-            <div class="rating-subhead">If No, what is wrong? Select all that apply.</div>
+          <div class="error-panel" ${needsErrorSelection(ms, m) ? "" : "hidden"}>
+            <div class="rating-subhead">${m.errorPrompt || "If No, what is wrong? Select all that apply."}</div>
             <div class="likert">
               ${errorButtons(m.key, m.errors, ms.errors || ms.error)}
             </div>
@@ -1155,13 +1191,19 @@ function renderRate() {
 
     <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation">
       <div class="metric-head">
-        <span class="metric-name">${metrics.length + 1}. Would you recommend this Q&A to a caregiver?</span>
+        <span class="metric-name">${metrics.length + 1}. Would you confidently recommend this Q&A to a caregiver?</span>
         <span class="tag qa">Overall</span>
       </div>
-      <div class="metric-def">Use this as the final caregiver-facing judgment for the whole QA pair.</div>
+      <div class="metric-def">Use this as the final caregiver-facing judgment for the whole Q&A.</div>
       <div class="likert">
         ${RECOMMENDATION.map((label) => `<button type="button" data-recommend-v="${escapeAttr(label)}" class="${S.recommendations[uid] === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
       </div>
+    </div>
+
+    <div class="card">
+      <label class="field" for="qa-comment"><strong>Optional comment</strong></label>
+      <p class="muted">Briefly explain why you rated this Q&A this way, or note anything the team should know.</p>
+      <textarea id="qa-comment" placeholder="Write your comments about this Q&A here..."></textarea>
     </div>
 
     <div class="card">
@@ -1180,6 +1222,7 @@ function renderRate() {
   // that must render literally (formatting noise is part of what is rated).
   document.getElementById("qtext").textContent = p.question;
   document.getElementById("atext").textContent = p.answer;
+  document.getElementById("qa-comment").value = S.comments && S.comments[uid] ? S.comments[uid] : "";
 
   app.querySelectorAll("[data-field]").forEach((b) => {
     b.addEventListener("click", () => {
@@ -1193,11 +1236,11 @@ function renderRate() {
     b.addEventListener("click", () => {
       const mi = Number(b.closest(".metric").dataset.mi);
       activeMetric = mi;
-      if (b.dataset.choice === "Yes") {
-        setBinaryDecision(b.dataset.key, "Yes");
+      setBinaryDecision(b.dataset.key, b.dataset.choice);
+      const metric = METRICS.find((m) => m.key === b.dataset.key);
+      const state = metricState(S.uids[S.index], b.dataset.key);
+      if (completeMetric(state, metric)) {
         advanceMetric();
-      } else {
-        setBinaryDecision(b.dataset.key, "No");
       }
     });
   });
@@ -1213,6 +1256,8 @@ function renderRate() {
   app.querySelectorAll("[data-recommend-v]").forEach((b) => {
     b.addEventListener("click", () => setRecommendation(b.dataset.recommendV));
   });
+
+  document.getElementById("qa-comment").addEventListener("input", (e) => setComment(e.target.value));
 
   document.getElementById("next").addEventListener("click", submitPair);
   document.getElementById("prev").addEventListener("click", () => {
@@ -1239,7 +1284,7 @@ function renderRate() {
     renderDone();
   });
 
-  activeMetric = metrics.findIndex((m) => !completeMetric(sc[m.key]));
+  activeMetric = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
   if (activeMetric === -1) activeMetric = metrics.length - 1;
   paintActive();
   setSync(syncState);
@@ -1257,9 +1302,10 @@ function setMetricField(key, field, value) {
   const uid = S.uids[S.index];
   const state = metricState(uid, key);
   state[field] = value;
+  const metric = METRICS.find((m) => m.key === key);
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state));
+    block.classList.toggle("rated", completeMetric(state, metric));
     block.querySelectorAll('[data-field="' + field + '"]').forEach((b) => {
       b.classList.toggle("sel", b.dataset.value === String(value));
     });
@@ -1274,28 +1320,30 @@ function setBinaryDecision(key, value) {
   state.binary = value;
   delete state.severity;
   const metric = METRICS.find((m) => m.key === key);
-  if (value === "Yes" && metric) {
+  if (value === clearChoice(metric) && metric) {
     state.errors = [];
     state.error = metric.noIssueError;
-  } else if (value === "No" && state.error === (metric && metric.noIssueError)) {
+  } else if (value === errorTrigger(metric) && state.error === (metric && metric.noIssueError)) {
     state.errors = [];
     delete state.error;
   }
 
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state));
+    block.classList.toggle("rated", completeMetric(state, metric));
     block.querySelectorAll("[data-choice]").forEach((b) => {
       b.classList.toggle("sel", b.dataset.choice === value);
     });
     const errorPanel = block.querySelector(".error-panel");
-    if (errorPanel) errorPanel.hidden = value !== "No";
+    if (errorPanel) errorPanel.hidden = value !== errorTrigger(metric);
     block.querySelectorAll("[data-error]").forEach((b) => b.classList.toggle("sel", selectedErrors(state.errors || state.error).includes(b.dataset.error)));
   }
   document.getElementById("rate-err").textContent = "";
   save();
-  if (value === "No" && !completeMetric(state)) {
-    document.getElementById("rate-err").textContent = "If you choose No, select at least one problem type.";
+  if (value === errorTrigger(metric) && !completeMetric(state, metric)) {
+    document.getElementById("rate-err").textContent = metric && metric.errorTrigger === "Yes"
+      ? "If you choose Yes, select at least one risk type."
+      : "If you choose No, select at least one problem type.";
   }
 }
 
@@ -1308,10 +1356,11 @@ function toggleMetricError(key, label) {
   else errors.splice(idx, 1);
   state.errors = errors;
   delete state.error;
+  const metric = METRICS.find((m) => m.key === key);
 
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state));
+    block.classList.toggle("rated", completeMetric(state, metric));
     block.querySelectorAll("[data-error]").forEach((b) => {
       b.classList.toggle("sel", errors.includes(b.dataset.error));
     });
@@ -1334,25 +1383,38 @@ function setRecommendation(value) {
   save();
 }
 
+function setComment(value) {
+  const uid = S.uids[S.index];
+  if (!S.comments) S.comments = {};
+  S.comments[uid] = value;
+  save();
+}
+
 function advanceMetric() {
   const uid = S.uids[S.index];
   const sc = S.scores[uid] || {};
   const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
   const current = metrics[activeMetric];
-  if (current && !completeMetric(sc[current.key])) {
+  if (current && !completeMetric(sc[current.key], current)) {
     paintActive();
     return;
   }
-  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && !completeMetric(sc[m.key]));
+  if (activeMetric === metrics.length - 1) {
+    paintActive();
+    return;
+  }
+  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && !completeMetric(sc[m.key], m));
   if (nextUnrated !== -1) {
     activeMetric = nextUnrated;
   } else {
-    const anyUnrated = metrics.findIndex((m) => !completeMetric(sc[m.key]));
+    const anyUnrated = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
     if (anyUnrated !== -1) activeMetric = anyUnrated;
+    else {
+      paintActive();
+      return;
+    }
   }
   paintActive();
-  const el = app.querySelector('.metric[data-mi="' + activeMetric + '"]');
-  if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
 function storeTime() {
@@ -1364,7 +1426,7 @@ function storeTime() {
 function submitPair() {
   const uid = S.uids[S.index];
   const sc = S.scores[uid] || {};
-  const missing = METRICS.filter((m) => S.metrics.includes(m.key) && !completeMetric(sc[m.key]));
+  const missing = METRICS.filter((m) => S.metrics.includes(m.key) && !completeMetric(sc[m.key], m));
   if (missing.length) {
     document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) => m.label).join(", ");
     const first = METRICS.filter((m) => S.metrics.includes(m.key)).findIndex((m) => m.key === missing[0].key);
@@ -1399,10 +1461,13 @@ document.addEventListener("keydown", (e) => {
 
   if (e.key.toLowerCase() === "y") {
     setBinaryDecision(m.key, "Yes");
-    advanceMetric();
+    const state = metricState(S.uids[S.index], m.key);
+    if (completeMetric(state, m)) advanceMetric();
     e.preventDefault();
   } else if (e.key.toLowerCase() === "n") {
     setBinaryDecision(m.key, "No");
+    const state = metricState(S.uids[S.index], m.key);
+    if (completeMetric(state, m)) advanceMetric();
     e.preventDefault();
   } else if (e.key === "Enter") {
     submitPair();
@@ -1431,7 +1496,7 @@ function renderDone() {
   app.innerHTML = `
     <div class="banner ${complete ? "banner-ok" : "banner-info"}">
       ${complete
-        ? "<b>All done — thank you!</b> You rated every pair in your batch."
+        ? "<b>All done — thank you!</b> You rated every pair in your set."
         : "<b>Progress saved.</b> You rated " + done + " of " + S.uids.length + " pairs. Return to this link with the same name to carry on."}
     </div>
 
@@ -1440,7 +1505,7 @@ function renderDone() {
       <table>
         <tr><td>Annotator</td><td><b>${S.annotator}</b></td></tr>
         <tr><td>Session ID</td><td><code>${S.sessionId}</code></td></tr>
-        <tr><td>Assignment</td><td>${S.opts.mode === "auto" ? "batch " + (S.opts.batch + 1) + " of " + S.opts.batches : "custom subset"}</td></tr>
+        <tr><td>Assignment</td><td>${S.opts.mode === "auto" ? "same ordered set" : "custom subset"}</td></tr>
         <tr><td>Pairs fully rated</td><td class="num"><b>${done}</b> / ${S.uids.length}</td></tr>
       </table>
       <div class="sync" id="sync" style="margin-top:12px;"></div>
@@ -1506,14 +1571,14 @@ fetch("qa_data.json")
         `${all.length - DATA.length} of ${all.length} pairs dropped, ${DATA.length} remain.`);
     }
     if (!DATA.length) {
-      app.innerHTML = '<div class="card"><h2>No QA pairs left</h2>' +
+      app.innerHTML = '<div class="card"><h2>No Q&As left</h2>' +
         '<p class="muted">Every pair was removed by <code>EXCLUDE_APPROACHES</code> in <code>config.js</code>.</p></div>';
       return;
     }
     renderWelcome();
   })
   .catch((e) => {
-    app.innerHTML = '<div class="card"><h2>Could not load the QA pairs</h2>' +
+    app.innerHTML = '<div class="card"><h2>Could not load the Q&As</h2>' +
       '<p class="muted">' + String(e) + '</p>' +
       '<p class="muted">Regenerate the data file with <code>python eval/web/extract_qa_data.py</code>, and serve this folder over HTTP ' +
       '(<code>python -m http.server</code>) rather than opening the file directly — <code>file://</code> blocks the fetch.</p></div>';

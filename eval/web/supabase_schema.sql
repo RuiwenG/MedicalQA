@@ -1,5 +1,10 @@
--- Human evaluation store for the dementia QA eval site.
+-- Current human evaluation store for the dementia Q&A eval site.
 -- Paste this whole file into the Supabase SQL editor and run it once.
+--
+-- This creates a NEW table for the updated Q&A set + updated UI rubric:
+--   public.ratings_ui_v2_qna_v2
+--
+-- It does not modify the legacy public.ratings table.
 --
 -- Design: append-only log. The browser holds the PUBLIC anon key, so `anon` is
 -- granted INSERT and nothing else. A stranger with the key can add junk rows
@@ -7,114 +12,113 @@
 -- Resume is powered by localStorage in the browser, so the page never needs
 -- SELECT access.
 
-create table if not exists public.ratings (
-    id           bigserial primary key,
-    session_id   text        not null,   -- one per annotator per configuration
-    annotator    text        not null,
-    qa_uid       text        not null,   -- e.g. Teepa_v3_RAG_q12
-    dataset      text        not null,
-    video        integer     not null,
-    approach     text        not null,
-    batch        text,                   -- which assigned batch this came from
-    blind        boolean     not null default true,
+create table if not exists public.ratings_ui_v2_qna_v2 (
+    id              bigserial primary key,
+    study_version   text        not null default 'ui_v2_qna_v2',
+    session_id      text        not null,   -- one per annotator per configuration
+    annotator       text        not null,
+    qa_uid          text        not null,   -- stable Q&A id from qa_data.json
+    dataset         text        not null,
+    video           integer     not null,
+    approach        text        not null,
 
-    -- Pilot form, per metric. Values are stored as text labels exactly as the
-    -- annotator saw them; score/code mapping happens later during analysis.
-    --   *_attribute = attribute label
-    --   *_error     = one or more problem labels, joined with "; "
+    -- Store the exact generated Q&A text that was rated. This matters because the
+    -- Q&A generation prompt/data can change between ablation runs while ids stay
+    -- similar.
+    question_text    text       not null,
+    answer_text      text       not null,
+    source_start_sec integer,
+    source_end_sec   integer,
+
+    batch           text,                   -- which assigned batch this came from
+    blind           boolean     not null default true,
+
+    -- Current v2 rubric. Values are stored as text labels exactly as annotators
+    -- saw them; score/code mapping happens later during analysis.
+    --   *_attribute = 4-level quality label, when that metric has one
+    --   *_issue     = one or more issue/concern labels, joined with "; "
     --   *_binary    = Yes/No label
-    -- Null is used when the annotator deselected that metric.
-    qa_alignment_attribute      text,
-    qa_alignment_error          text,
-    qa_alignment_binary         text,
-    qa_accessibility_attribute  text,
-    qa_accessibility_error      text,
-    qa_accessibility_binary     text,
-    qa_edu_actionable_attribute text,
-    qa_edu_actionable_error     text,
-    qa_edu_actionable_binary    text,
-    qa_mental_health_attribute  text,
-    qa_mental_health_error      text,
-    qa_mental_health_binary     text,
-    caregiver_recommendation    text,
+    qna_trustworthiness_attribute text,
+    qna_trustworthiness_issue     text,
+    qna_trustworthiness_binary    text,
 
-    seconds_spent integer,               -- time on this pair, for quality checks
+    qna_clarity_attribute         text,
+    qna_clarity_issue             text,
+    qna_clarity_binary            text,
+
+    qna_usefulness_attribute      text,
+    qna_usefulness_issue          text,
+    qna_usefulness_binary         text,
+
+    -- Care safety is intentionally binary-only in the current UI.
+    qna_care_safety_issue         text,
+    qna_care_safety_binary        text,
+
+    caregiver_recommendation      text,
+    evaluator_comment             text,
+
+    seconds_spent integer,               -- time on this Q&A, for quality checks
     client_time   timestamptz,           -- annotator's clock
     created_at    timestamptz not null default now()
 );
 
--- Analysis queries filter by these constantly.
-create index if not exists ratings_session_idx on public.ratings (session_id);
-create index if not exists ratings_qa_uid_idx  on public.ratings (qa_uid);
-create index if not exists ratings_approach_idx on public.ratings (dataset, approach);
+-- If this file is re-run, keep the migration additive.
+alter table public.ratings_ui_v2_qna_v2
+    add column if not exists study_version                  text not null default 'ui_v2_qna_v2',
+    add column if not exists question_text                   text not null default '',
+    add column if not exists answer_text                     text not null default '',
+    add column if not exists source_start_sec                integer,
+    add column if not exists source_end_sec                  integer,
+    add column if not exists qna_trustworthiness_attribute   text,
+    add column if not exists qna_trustworthiness_issue       text,
+    add column if not exists qna_trustworthiness_binary      text,
+    add column if not exists qna_clarity_attribute           text,
+    add column if not exists qna_clarity_issue               text,
+    add column if not exists qna_clarity_binary              text,
+    add column if not exists qna_usefulness_attribute        text,
+    add column if not exists qna_usefulness_issue            text,
+    add column if not exists qna_usefulness_binary           text,
+    add column if not exists qna_care_safety_issue           text,
+    add column if not exists qna_care_safety_binary          text,
+    add column if not exists caregiver_recommendation        text,
+    add column if not exists evaluator_comment               text;
 
--- If the table already existed with an older metric schema, these keep the
--- migration additive. Old columns can remain unused until the study data is
--- exported or the table is rebuilt.
-alter table public.ratings
-    add column if not exists qa_alignment_attribute      text,
-    add column if not exists qa_alignment_error          text,
-    add column if not exists qa_alignment_binary         text,
-    add column if not exists qa_accessibility_attribute  text,
-    add column if not exists qa_accessibility_error      text,
-    add column if not exists qa_accessibility_binary     text,
-    add column if not exists qa_edu_actionable_attribute text,
-    add column if not exists qa_edu_actionable_error     text,
-    add column if not exists qa_edu_actionable_binary    text,
-    add column if not exists qa_mental_health_attribute  text,
-    add column if not exists qa_mental_health_error      text,
-    add column if not exists qa_mental_health_binary     text,
-    add column if not exists caregiver_recommendation    text;
+create index if not exists ratings_ui_v2_qna_v2_session_idx
+    on public.ratings_ui_v2_qna_v2 (session_id);
+create index if not exists ratings_ui_v2_qna_v2_qa_uid_idx
+    on public.ratings_ui_v2_qna_v2 (qa_uid);
+create index if not exists ratings_ui_v2_qna_v2_approach_idx
+    on public.ratings_ui_v2_qna_v2 (dataset, approach);
+create index if not exists ratings_ui_v2_qna_v2_study_version_idx
+    on public.ratings_ui_v2_qna_v2 (study_version);
 
-alter table public.ratings drop constraint if exists ratings_qa_alignment_check;
-alter table public.ratings drop constraint if exists ratings_qa_accessibility_check;
-alter table public.ratings drop constraint if exists ratings_qa_edu_actionable_check;
-alter table public.ratings drop constraint if exists ratings_qa_mental_health_check;
-alter table public.ratings drop constraint if exists ratings_qa_alignment_attribute_check;
-alter table public.ratings drop constraint if exists ratings_qa_alignment_severity_check;
-alter table public.ratings drop constraint if exists ratings_qa_alignment_binary_check;
-alter table public.ratings drop constraint if exists ratings_qa_accessibility_attribute_check;
-alter table public.ratings drop constraint if exists ratings_qa_accessibility_severity_check;
-alter table public.ratings drop constraint if exists ratings_qa_accessibility_binary_check;
-alter table public.ratings drop constraint if exists ratings_qa_edu_actionable_attribute_check;
-alter table public.ratings drop constraint if exists ratings_qa_edu_actionable_severity_check;
-alter table public.ratings drop constraint if exists ratings_qa_edu_actionable_binary_check;
-alter table public.ratings drop constraint if exists ratings_qa_mental_health_attribute_check;
-alter table public.ratings drop constraint if exists ratings_qa_mental_health_severity_check;
-alter table public.ratings drop constraint if exists ratings_qa_mental_health_binary_check;
-alter table public.ratings drop constraint if exists ratings_caregiver_recommendation_check;
+alter table public.ratings_ui_v2_qna_v2 enable row level security;
 
-alter table public.ratings
-    alter column qa_alignment_attribute type text using qa_alignment_attribute::text,
-    alter column qa_alignment_binary type text using qa_alignment_binary::text,
-    alter column qa_accessibility_attribute type text using qa_accessibility_attribute::text,
-    alter column qa_accessibility_binary type text using qa_accessibility_binary::text,
-    alter column qa_edu_actionable_attribute type text using qa_edu_actionable_attribute::text,
-    alter column qa_edu_actionable_binary type text using qa_edu_actionable_binary::text,
-    alter column qa_mental_health_attribute type text using qa_mental_health_attribute::text,
-    alter column qa_mental_health_binary type text using qa_mental_health_binary::text,
-    alter column caregiver_recommendation type text using caregiver_recommendation::text;
+-- Public browser clients may insert only. No select/update/delete policy exists,
+-- so RLS denies those actions to `anon` by default. Do not add one.
+revoke all on public.ratings_ui_v2_qna_v2 from anon, authenticated;
+grant insert on public.ratings_ui_v2_qna_v2 to anon;
+grant usage, select on sequence public.ratings_ui_v2_qna_v2_id_seq to anon;
 
-alter table public.ratings enable row level security;
-
--- The ONLY policy. No select/update/delete policy exists, so RLS denies them
--- to `anon` by default. Do not add one.
-drop policy if exists ratings_anon_insert on public.ratings;
-create policy ratings_anon_insert
-    on public.ratings
+drop policy if exists ratings_ui_v2_qna_v2_anon_insert on public.ratings_ui_v2_qna_v2;
+create policy ratings_ui_v2_qna_v2_anon_insert
+    on public.ratings_ui_v2_qna_v2
     for insert
     to anon
     with check (true);
 
 
 -- ---------------------------------------------------------------------------
--- Latest rating per (session, QA pair). The Previous button re-submits a pair,
--- so the raw table keeps an edit history; this view keeps only the final answer.
+-- Latest rating per (session, Q&A). The Previous button re-submits a Q&A, so
+-- the raw table keeps an edit history; this view keeps only the final answer.
 -- ---------------------------------------------------------------------------
-create or replace view public.ratings_final as
+create or replace view public.ratings_ui_v2_qna_v2_final
+with (security_invoker = true) as
 select distinct on (session_id, qa_uid) *
-from public.ratings
+from public.ratings_ui_v2_qna_v2
 order by session_id, qa_uid, created_at desc;
+
+revoke all on public.ratings_ui_v2_qna_v2_final from anon, authenticated;
 
 
 -- ---------------------------------------------------------------------------
@@ -122,24 +126,32 @@ order by session_id, qa_uid, created_at desc;
 -- ---------------------------------------------------------------------------
 
 -- Who has done how much, and when did they last submit?
---   select annotator, count(*) as pairs_rated, max(created_at) as last_seen
---   from public.ratings_final group by annotator order by pairs_rated desc;
+--   select annotator, count(*) as qnas_rated, max(created_at) as last_seen
+--   from public.ratings_ui_v2_qna_v2_final
+--   group by annotator
+--   order by qnas_rated desc;
 
 -- Attribute/binary label counts by approach:
---   select approach, qa_alignment_attribute, qa_alignment_binary, count(*) as n
---   from public.ratings_final
---   group by approach, qa_alignment_attribute, qa_alignment_binary
+--   select approach, qna_trustworthiness_attribute, qna_trustworthiness_binary, count(*) as n
+--   from public.ratings_ui_v2_qna_v2_final
+--   group by approach, qna_trustworthiness_attribute, qna_trustworthiness_binary
 --   order by approach, n desc;
 
--- Error taxonomy counts by approach:
---   select approach, qa_alignment_error, count(*) as n
---   from public.ratings_final
---   group by approach, qa_alignment_error
+-- Care-safety concern counts by approach:
+--   select approach, qna_care_safety_issue, count(*) as n
+--   from public.ratings_ui_v2_qna_v2_final
+--   where qna_care_safety_issue is not null and qna_care_safety_issue <> 'No issue'
+--   group by approach, qna_care_safety_issue
 --   order by approach, n desc;
 
--- Numeric mappings/correlations should be done in the analysis notebook or
--- script after collection, using the agreed score map for these text labels.
+-- Optional comments:
+--   select annotator, qa_uid, approach, evaluator_comment
+--   from public.ratings_ui_v2_qna_v2_final
+--   where evaluator_comment is not null
+--   order by created_at desc;
 
--- Pairs rated by more than one annotator (the inter-annotator agreement set):
+-- Overlap available for inter-annotator agreement:
 --   select qa_uid, count(distinct annotator) as n_annotators
---   from public.ratings_final group by qa_uid having count(distinct annotator) > 1;
+--   from public.ratings_ui_v2_qna_v2_final
+--   group by qa_uid
+--   having count(distinct annotator) > 1;

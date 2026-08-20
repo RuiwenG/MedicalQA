@@ -32,27 +32,21 @@ from matplotlib.patches import Patch
 METRICS = [
     {
         "short": "Alignment / trust",
-        "full": "QA Alignment/Trustworthiness",
+        "full": "Q&A Trustworthiness",
         "attribute": "qa_alignment_attribute",
         "score": "qa_alignment_score",
     },
     {
         "short": "Accessibility",
-        "full": "QA Accessibility",
+        "full": "Q&A Clarity",
         "attribute": "qa_accessibility_attribute",
         "score": "qa_accessibility_score",
     },
     {
         "short": "Educational / actionable",
-        "full": "QA Educational/Actionable Value",
+        "full": "Q&A Usefulness",
         "attribute": "qa_edu_actionable_attribute",
         "score": "qa_edu_actionable_score",
-    },
-    {
-        "short": "Mental-health value",
-        "full": "QA Mental Health Value",
-        "attribute": "qa_mental_health_attribute",
-        "score": "qa_mental_health_score",
     },
     {
         "short": "Caregiver recommendation",
@@ -62,7 +56,16 @@ METRICS = [
     },
 ]
 
-SHORT_BY_FULL = {metric["full"]: metric["short"] for metric in METRICS}
+ERROR_METRICS = [
+    *METRICS[:3],
+    {
+        "short": "Care safety",
+        "full": "Q&A Care Safety",
+        "attribute": "qa_mental_health_error",
+    },
+]
+
+SHORT_BY_FULL = {metric["full"]: metric["short"] for metric in [*METRICS, *ERROR_METRICS]}
 APPROACH_LABELS = {
     "MultiAgent-LLMChunking": "Multi-agent",
     "SingleAgent": "Single-agent",
@@ -275,7 +278,7 @@ def plot_approach_comparison(ratings: pd.DataFrame, output_dir: Path) -> None:
 
 def plot_error_taxonomy(errors: pd.DataFrame, output_dir: Path) -> None:
     """Show the prevalence of every coded error, faceted by evaluation metric."""
-    ordered_metrics = [metric["full"] for metric in METRICS[:4]]
+    ordered_metrics = [metric["full"] for metric in ERROR_METRICS]
     fig, axes = plt.subplots(2, 2, figsize=(11, 7.8), sharex=True)
 
     for ax, metric_name, color in zip(axes.flat, ordered_metrics, METRIC_COLORS):
@@ -317,7 +320,7 @@ def plot_annotator_calibration(per_annotator: pd.DataFrame, output_dir: Path) ->
     """Plot Top-2 rates by annotator to make threshold differences visible."""
     table = per_annotator.copy()
     table["metric"] = table["metric"].map(SHORT_BY_FULL)
-    metric_order = [metric["short"] for metric in METRICS[:4]]
+    metric_order = [metric["short"] for metric in METRICS[:3]]
     annotator_order = (
         table.groupby("annotator")["n"].sum().sort_values(ascending=False).index.tolist()
     )
@@ -353,7 +356,6 @@ def plot_annotator_calibration(per_annotator: pd.DataFrame, output_dir: Path) ->
         "Alignment /\ntrust",
         "Accessibility",
         "Educational /\nactionable",
-        "Mental-health\nvalue",
     ]
     ax.set_xticklabels(compact_labels, rotation=0, ha="center")
     ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
@@ -431,7 +433,7 @@ def plot_agreement(agreement: pd.DataFrame, output_dir: Path) -> None:
     fig.text(
         0.08,
         0.92,
-        f"Based on {int(table['units'].max())} overlapping QA pairs; α ≥0.80 is reliable and 0.67–0.80 is tentative.",
+        f"Based on {int(table['units'].max())} overlapping Q&As; α ≥0.80 is reliable and 0.67–0.80 is tentative.",
         fontsize=9.5,
         color="#555555",
     )
