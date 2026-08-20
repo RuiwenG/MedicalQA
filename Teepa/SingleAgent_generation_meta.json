@@ -1,0 +1,10 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "qwen3.5-plus",
+  "backend": "api",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "generated_utc": "2026-08-20T00:44:53Z",
+  "seed": 42,
+  "thinking": "disabled",
+  "note": "Supersedes the earlier local Qwen3.5-9B run (backed up at /workspace/backup-singleagent-qwen9b-local). Both corpora regenerated together so Master and Teepa share one generating model."
+}

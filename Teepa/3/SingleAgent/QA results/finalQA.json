@@ -1,72 +1,72 @@
 [
   {
-    "question": "What are the four main categories of activities that make a day meaningful for someone living with dementia?",
-    "answer": "The four categories are: 1) Feeling Productive/Valued (doing work or tasks that make you feel needed), 2) Leisure/Fun Play (activities done just for joy), 3) Self-Care (taking care of your body, brain, home, and money), and 4) Rest and Restoration (recharging your batteries, which includes sleep but also other ways to relax).",
-    "timestamp": "0:24-0:57",
+    "question": "What are the four main types of activities needed to make a day meaningful for someone with dementia?",
+    "answer": "To create a balanced and meaningful day, a person needs four types of activities: feeling productive and valued (doing work that matters), leisure or fun (doing things just for joy), self-care (taking care of their body, home, and daily tasks), and rest or restoration (recharging their energy, which includes sleep but also quiet time or social time depending on their personality).",
+    "timestamp": "0:24-4:16",
     "time_start_sec": 24,
+    "time_end_sec": 256
+  },
+  {
+    "question": "Why is it important for a person with dementia to feel \"productive,\" and what does this look like in practice?",
+    "answer": "Feeling productive helps a person know they still make a difference and have value. It supports their sense of self and well-being. In practice, this doesn't mean having a paid job; it can be any task where they receive thanks or see that their actions helped someone, proving to them that \"who I am and what I can do\" still matters.",
+    "timestamp": "0:27-0:57",
+    "time_start_sec": 27,
     "time_end_sec": 57
   },
   {
-    "question": "Why is it important for a person with dementia to feel productive and valued, even if they are not working for money?",
-    "answer": "Feeling productive gives a person a sense that they still matter and have a purpose. It helps them feel like a human being who is cared about and confirms that they are still \"here for a reason,\" which is critical for their well-being and self-esteem.",
-    "timestamp": "0:30-1:00",
-    "time_start_sec": 30,
-    "time_end_sec": 60
-  },
-  {
-    "question": "How can caregivers distinguish between passive and active leisure activities, and why should they offer both?",
-    "answer": "Passive leisure happens to you while you absorb it (like watching TV), whereas active leisure involves doing something yourself (like playing cards). Everyone needs a balance of both types to feel good and get their energy up.",
-    "timestamp": "1:31-2:00",
-    "time_start_sec": 91,
+    "question": "How can caregivers distinguish between \"passive\" and \"active\" leisure, and why should both be included?",
+    "answer": "Passive leisure is when something happens to you, like watching a game, while active leisure involves doing something yourself, like playing the game. Both bring joy and boost energy levels. Since everyone is different, a good care plan includes a mix of both watching/absorbing and doing/engaging to ensure the person gets enough happiness and stimulation.",
+    "timestamp": "1:28-2:00",
+    "time_start_sec": 88,
     "time_end_sec": 120
   },
   {
-    "question": "What specific examples of \"self-care\" are mentioned in the video besides sleeping?",
-    "answer": "Self-care includes physical tasks like walking, getting in and out of chairs, bathing, eating, and toileting. It also covers mental stimulation like thinking and doing interesting things, as well as managing the environment like cleaning, organizing, shopping, and handling money.",
+    "question": "What counts as \"self-care\" beyond just bathing and eating?",
+    "answer": "Self-care is a broad category that includes taking care of your body (like exercising), your brain (doing thinking tasks), and your environment. It covers simple movements like walking or getting out of a chair, complex tasks like using transportation, and household duties like cleaning, taking out trash, shopping, or managing money. It is about maintaining independence in daily life.",
     "timestamp": "2:04-3:15",
     "time_start_sec": 124,
     "time_end_sec": 195
   },
   {
-    "question": "Does \"rest and restoration\" only mean sleeping, or are there other ways to recharge?",
-    "answer": "No, rest is not just about sleep. It is about recharging your batteries, which can happen in different ways depending on the person. Some people recharge by being alone (introverts), while others gain energy by being around people (extroverts). It can also involve spiritual rest.",
-    "timestamp": "3:19-4:09",
+    "question": "Why is \"rest and restoration\" about more than just sleeping?",
+    "answer": "Rest is about recharging your batteries, and how people do this depends on who they are. While sleep is one way, some people recharge by being alone (introverts), while others gain energy by being around people (extroverts). It also includes spiritual rest to lift the spirit. Caregivers need to recognize these different ways a person restores their energy throughout the day.",
+    "timestamp": "3:19-4:06",
     "time_start_sec": 199,
-    "time_end_sec": 249
+    "time_end_sec": 246
   },
   {
-    "question": "In the cooking group example, how did the caregiver help a participant who struggled to tear open a muffin mix bag?",
-    "answer": "The caregiver helped by completing the difficult part of the task (tearing the bag) and then handing the opened bag back to the participant. This allowed the person to continue with the rest of the task without feeling blamed for the failure of the packaging.",
-    "timestamp": "5:38-5:55",
-    "time_start_sec": 338,
-    "time_end_sec": 355
+    "question": "When helping someone open a package during an activity, how should a caregiver react if the person struggles?",
+    "answer": "If a person struggles with a task like opening a bag, the caregiver should blame the product, not the person. For example, saying \"that bag is such a problem\" instead of implying the person cannot do it. This protects the person's dignity and keeps the mood positive, allowing them to accept help without feeling inadequate.",
+    "timestamp": "5:45-5:53",
+    "time_start_sec": 345,
+    "time_end_sec": 353
   },
   {
-    "question": "How did the group setting help a participant who seemed unsure about what to do next during the cooking activity?",
-    "answer": "Seeing other people successfully perform the steps provided visual cues and social proof. When the participant saw others pouring milk and stirring, she felt confident to join in and knew exactly what came next.",
-    "timestamp": "6:05-6:30",
-    "time_start_sec": 365,
-    "time_end_sec": 390
+    "question": "How can a group setting help a person with dementia who is unsure of what to do next during an activity?",
+    "answer": "In a small group, a person can watch others to see what comes next. Seeing peers perform steps like pouring milk or stirring provides a visual cue that helps them start the action themselves. The caregiver can also gently cue one person to begin, which often prompts the whole group to follow along naturally.",
+    "timestamp": "6:01-6:27",
+    "time_start_sec": 361,
+    "time_end_sec": 387
   },
   {
-    "question": "Why did the caregiver encourage a participant who preferred cooking over eating to actually cook the muffins?",
-    "answer": "The participant liked cooking more than eating. By letting her cook and complimenting her work, the caregiver ensured she felt successful and valued. This motivation encouraged her to eat the muffins she had made, rather than refusing to eat if she were just served food.",
-    "timestamp": "8:15-8:45",
-    "time_start_sec": 495,
-    "time_end_sec": 525
+    "question": "Why might involving a person in the cooking process encourage them to eat more than just serving them food?",
+    "answer": "Some people care more about the act of cooking than the eating. If they only eat, they may not be interested. However, if they participate in making the meal and receive compliments on their work, they feel a sense of ownership and success. This pride in creating something for the group often motivates them to eat what they helped prepare.",
+    "timestamp": "8:10-8:27",
+    "time_start_sec": 490,
+    "time_end_sec": 507
   },
   {
-    "question": "How did the caregiver support a participant who was struggling to feed herself during the meal?",
-    "answer": "Instead of feeding the person directly, the caregiver supported her under the elbow to help her sit upright better. This physical support gave the person extra stability and information, allowing her to bring her own hand to her mouth and maintain control over the action.",
-    "timestamp": "9:20-10:07",
+    "question": "What is a gentle technique to help someone eat without causing alarm or resistance?",
+    "answer": "Instead of poking the person's mouth with a spoon, which can startle them, guide their hand to bring the food to their own mouth. Supporting their elbow can help them sit upright and control the movement. This allows their brain to recognize the action as \"I am eating,\" making the experience calm and familiar rather than confusing or scary.",
+    "timestamp": "9:20-9:40",
     "time_start_sec": 560,
-    "time_end_sec": 607
+    "time_end_sec": 580
   },
   {
-    "question": "What strategy did the caregiver use to ask participants to help check a puzzle, and why was this effective?",
-    "answer": "The caregiver framed the request as a favor to her, saying she wasn't sure if she had all the pieces and asked for help to check. This gave the participants a clear reason to act and made them feel helpful and important, turning a routine task into a meaningful interaction.",
-    "timestamp": "10:46-11:20",
+    "question": "How can a caregiver present a puzzle activity to make the person feel helpful rather than tested?",
+    "answer": "Frame the activity as a request for help rather than a test of skill. For example, say, \"I made this puzzle but I'm not sure if I have all the pieces; can you check for me?\" This gives the person a valid reason to participate and makes them feel valued for assisting the caregiver, reducing pressure and encouraging engagement.",
+    "timestamp": "10:46-11:13",
     "time_start_sec": 646,
-    "time_end_sec": 680
+    "time_end_sec": 673
   }
 ]

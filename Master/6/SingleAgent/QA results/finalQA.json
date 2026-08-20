@@ -1,82 +1,79 @@
 [
   {
-    "question": "What is the main difference between a hallucination and a delusion?",
-    "answer": "A helpful way to tell them apart is that hallucinations involve the senses—things a person sees, hears, feels, smells, or tastes—whereas delusions involve beliefs or thoughts. While this isn't a strict medical definition, it helps caregivers understand whether a person is experiencing a sensory event or holding a fixed belief."
+    "question": "What is the simple way to tell the difference between a hallucination and a delusion?",
+    "answer": "A helpful way to remember the difference is to think about \"senses\" versus \"beliefs.\" Hallucinations involve the senses—things a person sees, hears, feels, smells, or tastes that aren't actually there. Delusions involve beliefs—things a person thinks or believes to be true even when they are not. While these can overlap, focusing on whether it is a sensory experience or a fixed belief helps you understand where the person is coming from.",
+    "timestamp": "1:08-2:16",
+    "time_start_sec": 68,
+    "time_end_sec": 136
   },
   {
-    "question": "What types of senses are commonly affected by hallucinations in people with dementia?",
-    "answer": "Hallucinations can affect all five senses. Visually, people might see children, animals, or small people. Auditory hallucinations involve hearing voices or sounds, such as a voice on the ceiling saying something is hungry. Tactile feelings might include the sensation of bugs crawling on the skin or food. Smell and taste hallucinations can occur too, leading a person to believe their food is being poisoned or tastes wrong."
+    "question": "Which senses can be affected by hallucinations in people living with dementia, and what are some common examples?",
+    "answer": "Hallucinations can affect all five senses. Visually, a person might see children, animals, or small people. Auditory hallucinations involve hearing voices or sounds, like someone speaking from the ceiling. Tactile (touch) hallucinations can feel like bugs crawling on the skin or food. People may also experience strange smells or believe their food tastes wrong, such as thinking someone is trying to poison them.",
+    "timestamp": "2:23-3:16",
+    "time_start_sec": 143,
+    "time_end_sec": 196
   },
   {
-    "question": "How do hallucinations typically change as dementia progresses?",
-    "answer": "Early in the disease, hallucinations may be vague or fleeting, like seeing floaters in the vision that disappear when looked at directly. Over time, they often become more distinct, distracting, and disturbing. For example, a vague feeling of footsteps might progress to clearly hearing someone walking through the house, or a slight itch might develop into a strong belief that bugs are everywhere."
+    "question": "How might visual hallucinations change as dementia progresses?",
+    "answer": "Early in the disease, visual hallucinations might be vague or fleeting, similar to seeing \"floaters\" in your eye that disappear when you look at them. As the condition progresses, these images can become more distinct, frequent, and disturbing. What starts as a vague shadow or sound can evolve into a very real and frightening presence, such as believing a specific person is walking through the house.",
+    "timestamp": "3:29-4:18",
+    "time_start_sec": 209,
+    "time_end_sec": 258
   },
   {
-    "question": "If a person with dementia is scared by a hallucination that I know isn't real, what should I do first?",
-    "answer": "The first step is to connect immediately using the Positive Physical Approach (PPA). Get into a supportive stance, hold their hand, and reflect their emotions back to them. Instead of arguing that nothing is there, acknowledge their fear and distress to show you are present and caring."
+    "question": "What is the first step a caregiver should take when a loved one is distressed by a hallucination?",
+    "answer": "The first step is to connect physically and emotionally using the Positive Physical Approach (PPA). This means approaching calmly, getting on their level, making gentle hand contact (like holding hands), and adopting a supportive stance. You should also validate their feelings by reflecting their fear or concern, showing them you understand they are scared, rather than immediately trying to fix the situation.",
+    "timestamp": "5:36-6:15",
+    "time_start_sec": 336,
+    "time_end_sec": 375
   },
   {
-    "question": "Why is it important to validate a person's reality rather than telling them the hallucination isn't real?",
-    "answer": "Telling a person \"there is no one there\" or offering false reassurance often makes them feel unheard and increases their distress because their experience feels very real to them. Validating means accepting their perspective without judgment, which builds trust and helps lower their emotional intensity so you can move forward together."
+    "question": "Why should I avoid telling my loved one \"there is nobody there\" when they are seeing something scary?",
+    "answer": "Telling someone \"there is nobody there\" invalidates their reality and often increases their distress. Because their brain is convincing them the threat is real, denying it makes them feel unheard and unsupported, which can cause their anxiety to rise. Instead of calming them down, this approach can make them feel like you are not helping them deal with the danger they perceive.",
+    "timestamp": "7:41-8:01",
+    "time_start_sec": 461,
+    "time_end_sec": 481
   },
   {
-    "question": "After connecting and validating, how can I help the person feel safe and shift their focus?",
-    "answer": "You can offer honest truth by stating that someone will take care of the perceived threat, removing the burden from the person. Then, suggest moving to a different location. Changing the environment helps shift their attention away from the source of the hallucination and provides a fresh start without needing to lie about the original situation."
+    "question": "How can I honestly respond to a hallucination without lying or agreeing that it is real?",
+    "answer": "You can respond with honesty by validating the need behind the hallucination without confirming the false image. For example, if they see a child in danger, you can say, \"Yes, somebody does need to get him out of there.\" This statement is technically true—if a child were really there, they would need help—but it doesn't confirm the child exists. It reassures the person that the problem will be handled, allowing them to relax.",
+    "timestamp": "6:47-7:35",
+    "time_start_sec": 407,
+    "time_end_sec": 455
   },
   {
-    "question": "What should I do if I am alone and cannot physically remove the person from a dangerous situation caused by a hallucination?",
-    "answer": "Even if you are alone, you can still take ownership of the problem. Tell the person, \"Let's go find someone to help,\" or \"I am going to get someone.\" This shifts the responsibility of safety away from the person and onto a plan of action, reducing their panic while you arrange for assistance or move to a safer spot."
+    "question": "What practical strategy can help shift a person's focus away from a frightening hallucination?",
+    "answer": "After validating their concern and assuring them that help is coming, gently suggest moving to a different location. You might say, \"Let's go somewhere else while we wait for help.\" Changing the environment naturally shifts their focus and attention to new surroundings. Often, once they have moved and their focus has changed, the intensity of the hallucination decreases, and they can engage in a different activity.",
+    "timestamp": "9:00-9:45",
+    "time_start_sec": 540,
+    "time_end_sec": 585
   },
   {
-    "question": "How can I manage my own distress when responding to a frightening hallucination?",
-    "answer": "It is normal to feel distressed when witnessing something scary that isn't real. Remember that your goal is to meet the person where they are emotionally, not to match their fear level with yours. By focusing on connection and validation, you stabilize the situation, and realizing that there is hope—even if the person can joke about these moments later—can help you stay calm."
+    "question": "How should I manage my own emotions when my loved one is highly agitated by a hallucination?",
+    "answer": "It is natural to feel stressed when your loved one is agitated, but try not to match their high level of emotion. You do not need to pretend everything looks normal to you; instead, focus on staying calm and present with them. Accept that you cannot control what they see, and your role is simply to walk alongside them in their reality with a supportive attitude, rather than trying to force them to see things your way.",
+    "timestamp": "10:53-11:32",
+    "time_start_sec": 653,
+    "time_end_sec": 692
   },
   {
-    "question": "What is a practical strategy for dealing with tactile hallucinations, like feeling bugs on the skin?",
-    "answer": "You can try applying a cooling agent, such as a small amount of menthol cream or bacitracin, to the area where they feel the sensation. This does not prove bugs are there, but it can physically relieve the itching or crawling feeling, providing comfort while you continue to validate their experience."
+    "question": "Is there a physical remedy I can try if my loved one feels like bugs are crawling on their skin?",
+    "answer": "Yes, you can try applying a cream that creates a cooling or soothing sensation, such as one containing menthol or bacitracin. You can explain it as a special cream that \"neutralizes the bugs\" and offer to put it on yourself too so they know it is safe. If the sensation is related to itching or skin sensitivity, this physical distraction can often provide real relief and reduce the fear of the bugs.",
+    "timestamp": "13:20-13:56",
+    "time_start_sec": 800,
+    "time_end_sec": 836
   },
   {
-    "question": "Why is honesty considered a key skill when handling hallucinations, even when we don't see what the person sees?",
-    "answer": "Honesty means admitting you don't see the same thing without negating their reality. Saying, \"I don't see the boy, but I believe you are worried about him,\" respects their experience. Lying or saying \"it's just your imagination\" breaks trust; honesty maintains the relationship while addressing the underlying fear."
+    "question": "What should I do if I am alone and cannot call another person to \"help\" with the hallucination?",
+    "answer": "Even if you are alone, you can still take ownership of the problem off their shoulders. Use phrases like \"I will take care of this\" or \"We will get this handled\" to reassure them that they don't have to carry the burden alone. Combine this verbal reassurance with the physical steps of connecting, validating, and gently guiding them to a different room or activity to break the cycle of fear.",
+    "timestamp": "9:50-10:40",
+    "time_start_sec": 590,
+    "time_end_sec": 640
   },
   {
-    "question": "What is the \"Positive Physical Approach\" (PPA) and why is it useful here?",
-    "answer": "PPA is a set of basic skills including getting close, making eye contact, holding hands (or placing a hand over theirs), and speaking softly. It helps regulate the nervous system, creates a sense of safety, and ensures the person feels supported before trying to solve the specific issue of the hallucination."
-  },
-  {
-    "question": "How can humor help in moments of high distress related to hallucinations?",
-    "answer": "While not always possible in the moment, remembering that people with dementia can eventually laugh about these experiences offers hope. It reminds caregivers that these moments are part of a larger journey and that joy can still exist, even amidst challenging behaviors."
-  },
-  {
-    "question": "What should I avoid doing when a person is agitated by a hallucination?",
-    "answer": "Avoid trying to convince them logically that the hallucination is fake or trying to force them to accept your version of reality. Also, avoid getting trapped in a power struggle about whether the objects or people are real, as this increases agitation and disconnects you from the person."
-  },
-  {
-    "question": "How can I prepare myself for the possibility of constant surprises during conversations about hallucinations?",
-    "answer": "Be ready to flexibly switch topics and remain patient. If a person mentions new hallucinations suddenly, simply acknowledge the new concern, validate the fear, and gently guide them to the next step (like moving locations) without becoming overwhelmed yourself."
-  },
-  {
-    "question": "What is the role of \"taking ownership\" in managing a hallucination crisis?",
-    "answer": "Taking ownership means the caregiver accepts the responsibility to handle the situation, so the person with dementia doesn't have to carry the weight of the fear alone. By saying, \"I will make sure that is taken care of,\" you provide a sense of security and partnership."
-  },
-  {
-    "question": "Can a hallucination start vaguely and become more severe over time?",
-    "answer": "Yes. Visual hallucinations, for instance, might begin as soft, floating shapes in the peripheral vision that are hard to focus on. As the condition progresses, these can become clearer, more frequent, and more intrusive, eventually becoming a constant distraction or a major source of fear."
-  },
-  {
-    "question": "How does changing the environment help reduce the impact of a hallucination?",
-    "answer": "Moving to a different room or location interrupts the sensory input causing the hallucination and changes the person's focus. It acts as a reset button, allowing the brain to shift attention to new surroundings where the distressing image or sound may not be present."
-  },
-  {
-    "question": "What is a gentle way to introduce a coping tool like cooling cream without sounding dismissive?",
-    "answer": "Frame it as an experiment for comfort rather than a cure. Say something like, \"I have a cream that some people use to stop the itching sensation; would you like to try it so you don't have to worry about the feeling?\" This respects their autonomy while offering relief."
-  },
-  {
-    "question": "Why is it important to stay with the person for a longer time during a hallucination episode?",
-    "answer": "Standard reassurance often doesn't work quickly in these cases because the fear is intense. Staying connected, validating, and陪着 them through the process longer allows the emotional wave to pass and helps them feel less isolated in their experience."
-  },
-  {
-    "question": "Where can I find more detailed guidance on supporting someone with hallucinations?",
-    "answer": "There are educational resources available, such as DVDs or streaming chapters specifically dedicated to hallucinations and challenging behaviors, which offer deeper dives into the Positive Physical Approach and specific interaction techniques."
+    "question": "Can people with dementia ever find humor or joy despite experiencing frightening hallucinations?",
+    "answer": "Yes, there is still hope for joy and connection. Some individuals reach a point where they can recognize the difference between their reality and ours and may even joke about it, such as laughing that they see \"little people\" while others do not. These moments remind us that despite the challenges and fear hallucinations can bring, the person's spirit and ability to connect remain intact.",
+    "timestamp": "14:43-15:06",
+    "time_start_sec": 883,
+    "time_end_sec": 906
   }
 ]

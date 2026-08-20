@@ -1,30 +1,28 @@
 [
   {
-    "question": "How can I tell if my loved one's memory loss is just normal aging or something that needs medical attention?",
-    "answer": "You should look for a clear change in their behavior or abilities that wasn't there before. Do not assume it is dementia immediately. Instead, check for treatable causes like depression, thyroid problems, medication side effects, or uncorrected hearing and vision issues. If you notice a change, investigate it because these underlying problems can often be fixed or modified.",
+    "question": "Before assuming a loved one has dementia, what other treatable conditions should I consider that might be causing changes in their behavior or memory?",
+    "answer": "It is important not to jump to conclusions immediately. Many conditions that mimic dementia are actually treatable and reversible. You should check for issues like depression, an underactive thyroid (hypothyroid), side effects from medications, undiagnosed hearing or vision loss, or new medical conditions such as diabetes. The key first step is to notice if there is a change from what is normal for that specific person and seek a thorough medical evaluation to see if these fixable problems are the cause.",
     "timestamp": "0:05-1:13",
     "time_start_sec": 5,
     "time_end_sec": 73
   },
   {
-    "question": "Is \"dementia\" the same thing as \"Alzheimer's disease,\" and does a doctor's diagnosis of dementia mean they found the exact cause?",
-    "answer": "No, they are not the same. Dementia is a large \"umbrella term\" that covers about 85 to 90 different conditions, including Alzheimer's, vascular dementia, and others. Alzheimer's is just one type under that umbrella. Furthermore, dementia is not a specific diagnosis of a single disease; it is a \"syndrome,\" which means it is a collection of symptoms caused by various brain changes. A diagnosis tells you the person has these symptoms, but it does not identify the single specific cause yet.",
+    "question": "What exactly does the term \"dementia\" mean, and how is it different from Alzheimer's disease?",
+    "answer": "Think of \"dementia\" as a large umbrella term rather than a single specific disease. Under this umbrella, there are about 85 to 90 different conditions causing similar symptoms. Alzheimer's disease is just one of the major types found under this umbrella, but it is not the only one. Other types include Lewy body dementia, frontotemporal dementia, and vascular dementia. Furthermore, dementia is not a formal diagnosis itself; it is a syndrome, which means it is a collection of symptoms indicating that something is wrong, rather than a specific label for the disease causing it.",
     "timestamp": "1:16-2:32",
     "time_start_sec": 76,
     "time_end_sec": 152
   },
   {
-    "question": "What are the four main things I should know about what happens when someone has dementia?",
-    "answer": "First, at least two parts of the brain are changing or dying, often affecting memory in unique ways depending on the type of dementia. Second, there is currently no cure to stop or reverse the disease, so the goal is to learn how to help them live well with it for an average of 8 to 12 years. Third, the condition is progressive, meaning it will constantly get worse over time until it ends. Fourth, dementia is a terminal condition, similar to life itself, so it is important to focus on making positive changes and supporting the person rather than feeling hopeless.",
-    "timestamp": "2:35-4:25",
+    "question": "What are the four main characteristics that define all forms of dementia, and what do they mean for daily life?",
+    "answer": "All forms of dementia share four key traits. First, at least two parts of the brain are changing or dying, often affecting memory but sometimes in unexpected ways beyond just forgetting new things. Second, there is currently no cure or treatment to stop the progression, so the focus shifts to helping the person live well with the condition, which typically lasts 8 to 12 years. Third, the condition is progressive, meaning symptoms will constantly change and worsen over time. Fourth, like life itself, these conditions are terminal. Understanding these facts helps families prepare to adapt and support their loved one through a long journey of change.",
+    "timestamp": "2:35-4:13",
     "time_start_sec": 155,
-    "time_end_sec": 265
+    "time_end_sec": 253
   },
   {
-    "question": "My partner has dementia and I feel overwhelmed; how can I cope with this situation without giving up?",
-    "answer": "Remember that when one person gets dementia, everyone around them is affected, but this is not a choice anyone made. Instead of falling apart, try to pull together and support your partner. You cannot stop the disease from progressing, but you can change how you respond. Focus on matching activities to what your loved one can still do, acknowledging what is missing, and using their remaining strengths. This approach allows for a meaningful life under the umbrella of dementia.",
-    "timestamp": "4:27-5:39",
-    "time_start_sec": 267,
-    "time_end_sec": 339
+    "question": "How can caregivers cope emotionally when a family member is diagnosed, and what role can they play in improving the situation?",
+    "answer": "When one person develops dementia, it affects everyone around them, creating a shared challenge. While you cannot stop the disease from progressing, you have a powerful choice in how you respond. Instead of falling apart or walking away, you can choose to pull together and support your loved one. The goal is not to fix the unfixable condition, but to change your own approach to better match what the person can still do. By acknowledging what abilities are missing and focusing on using the strengths they still have, you can create a positive difference and find meaningful life \"under the umbrella\" together.",
+    "timestamp": "13-5:39"
   }
 ]

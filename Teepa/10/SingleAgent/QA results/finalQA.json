@@ -1,30 +1,30 @@
 [
   {
-    "question": "Why might a person with dementia see black maps or distorted faces when looking at pictures?",
-    "answer": "This happens because dementia affects the brain's ability to process and understand images. Design and color become extremely important for them to make sense of what they see. For example, if a map is printed in black, a person with dementia might not see the bottom part of the image at all, making it look like there is no ground to stand on. Similarly, faces might appear distorted or change colors, which can be very scary and traumatic for them.",
-    "timestamp": "0:22-1:13",
+    "question": "Why might a person with dementia react fearfully to dark floors or certain color patterns in a room?",
+    "answer": "The brain's ability to process visual pictures changes, making design and color extremely important. For example, a black map or dark floor can look like there is no bottom or a deep hole, which causes confusion and fear. This happens because the brain cannot correctly interpret the contrast, making safe surfaces appear dangerous.",
+    "timestamp": "0:22-0:54",
     "time_start_sec": 22,
-    "time_end_sec": 73
+    "time_end_sec": 54
   },
   {
-    "question": "What should I do if my loved one complains that their food tastes like bleach or smells bad?",
-    "answer": "These are often \"phantom\" smells or tastes caused by the disease, where the brain creates false sensations. The person is not being difficult; they are experiencing real pain or disgust. Instead of forcing them to eat, try offering foods that are simple and easy to swallow, known as \"automatic responses,\" rather than relying on complex flavors they can no longer enjoy. It is important to realize that losing weight during this time is a common and draining struggle, not a personal failure.",
-    "timestamp": "1:45-2:16",
+    "question": "What should a caregiver understand if their loved one complains about terrible smells like burning rubber or refuses to eat familiar foods?",
+    "answer": "These are likely hallucinations where the senses send false signals. Food may taste like bleach or chemicals instead of its real flavor, causing weight loss because the person only eats what their \"mad brain\" accepts. Similarly, they may smell things like burning tires that aren't there. Instead of ignoring it, understand they are trying to solve a problem they believe is real, such as looking for a fire to put out.",
+    "timestamp": "1:45-2:40",
     "time_start_sec": 105,
-    "time_end_sec": 136
+    "time_end_sec": 160
   },
   {
-    "question": "My partner gets angry when I try to help them button their shirt or fix things around the house. How can I handle this?",
-    "answer": "When someone with dementia tries to fix things like a burning smell or unbuttoned clothes, they are often trying to solve a problem they believe they caused, even if it is just a hallucination. They feel a strong need to find a solution. Instead of arguing or stopping them immediately, try to stay calm and offer gentle guidance without making them feel blamed for the mistake. Understanding that they are genuinely trying to help can reduce your frustration.",
-    "timestamp": "2:20-2:54",
-    "time_start_sec": 140,
-    "time_end_sec": 174
-  },
-  {
-    "question": "My loved one says that touching them feels like needles or that the shower water hurts. Is this normal?",
-    "answer": "Yes, this is a common experience called tactile hallucinations. Many people with dementia report that normal touches, hugs, or even water from a shower feel painfully sharp, like dragging needles across their skin. It is not that they are rejecting your love, but rather that their brain is misinterpreting these sensations. Knowing this helps you understand that their reaction is a symptom of the disease, not a sign that they hate you.",
-    "timestamp": "2:55-3:16",
+    "question": "How can everyday activities like showering or hugging feel different for someone with dementia, and how should this change our approach?",
+    "answer": "Touch can become physically painful rather than comforting. A gentle hug or the water from a shower might feel like dragging needles hitting the body. Knowing this helps caregivers realize that pulling away or crying during care is often a reaction to pain, not stubbornness. It suggests a need for extreme gentleness and checking if water temperature or pressure is causing distress.",
+    "timestamp": "2:55-3:15",
     "time_start_sec": 175,
-    "time_end_sec": 196
+    "time_end_sec": 195
+  },
+  {
+    "question": "How can caregivers cope emotionally when witnessing these frightening sensory experiences in their loved ones?",
+    "answer": "It is natural to feel frightened when seeing a loved one struggle with hallucinations or distorted reality. However, learning to view these symptoms as part of the disease's reality, rather than something mysterious or threatening, can help reduce fear. Accepting that this is the current reality allows caregivers to live alongside the condition with more peace and less anxiety.",
+    "timestamp": "3:17-3:33",
+    "time_start_sec": 197,
+    "time_end_sec": 213
   }
 ]

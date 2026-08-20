@@ -1,82 +1,107 @@
 [
   {
-    "question": "What is \"hand-under-hand\" assistance and why is it recommended for people with dementia?",
-    "answer": "Hand-under-hand is a technique where the caregiver places their hand under the person's hand (e.g., right hand to right hand) to support them. This method connects the caregiver's brain to the person's brain, allowing the caregiver to augment the person's existing skills rather than taking over the task. It helps the person use what they still retain in their brain to perform actions independently."
+    "question": "What is the \"hand-under-hand\" technique and how does it help a person with dementia?",
+    "answer": "Hand-under-hand is a way of connecting your hand to the person's hand (right to right or left to left) by placing your hand underneath theirs. This creates a supportive platform that allows you to guide their movement without taking over. It works by using the skills and memories still retained in their brain, allowing them to move *with* you rather than having things done *to* them.",
+    "timestamp": "0:58-1:21",
+    "time_start_sec": 58,
+    "time_end_sec": 81
   },
   {
-    "question": "How can I handle the challenge of having to stand directly in front of someone with dementia in a narrow hallway without seeming intrusive?",
-    "answer": "Even if you must be directly in front of the person, you can avoid a confrontational stance by lowering your body below theirs and turning your shoulders slightly to the side. This creates an \"illusion\" that you are not intruding on their personal space. Additionally, try looking away while they are performing a private task, similar to how people behave in crowded restaurants to respect others' conversations."
+    "question": "If I must stand directly in front of someone in a narrow space like a small bathroom, how can I avoid making them feel trapped or confronted?",
+    "answer": "Even if you are physically in front of them, you can create an illusion of space to reduce anxiety. Try getting low (\"low and below\"), turning your shoulders slightly to the side instead of facing them square-on, and leaning back slightly. You can also look away subtly. These actions signal that you are not invading their personal space or staring at them during a private moment.",
+    "timestamp": "2:46-3:10",
+    "time_start_sec": 166,
+    "time_end_sec": 190
   },
   {
-    "question": "Why is it important to have the person with dementia walk in a circle to find the toilet or bed before sitting down?",
-    "answer": "Walking the person in a slow circle allows them to visually identify the surface they will sit on, which is crucial if their frontal lobe damage makes it difficult to initiate tasks or perceive objects behind them. This process also relaxes their body; if they are suddenly placed down without preparation, it can trigger fear (activating the amygdala), causing the sphincter muscles to tighten and preventing them from using the restroom for up to 20 minutes."
+    "question": "Why should I avoid talking to the person while they are trying to use the toilet or perform a private task?",
+    "answer": "When someone is doing something private, talking to them can increase their self-consciousness and stress. Remaining quiet respects their dignity and helps them focus on the task without feeling watched or rushed, which supports their ability to relax and succeed.",
+    "timestamp": "3:35-3:38",
+    "time_start_sec": 215,
+    "time_end_sec": 218
   },
   {
-    "question": "What is the correct physical position for the caregiver to assist someone with sitting down safely?",
-    "answer": "You should kneel down first to get below the person's level, rather than bending over from your waist, which protects your back. Once kneeling, cross your arms in front of you with your thumbs up. Place your forearm under their forearm or wrist. This position allows you to stabilize them if they tip forward or backward without needing to push or shove."
+    "question": "How do I physically set up the \"hand-under-hand\" hold to assist someone who has trouble starting a movement?",
+    "answer": "Reach under the person's arm with your opposite hand so their elbow rests comfortably in the crook of your elbow. Then, rock your hand up to form a flat platform for their hand to rest on. Repeat this with the other side if needed. This position gives you leverage to gently guide them while keeping their arm supported and secure.",
+    "timestamp": "5:28-5:51",
+    "time_start_sec": 328,
+    "time_end_sec": 351
   },
   {
-    "question": "How does the \"fulcrum\" principle work when helping someone sit or stand?",
-    "answer": "The fulcrum principle means guiding the person to use their own body weight and balance rather than relying solely on the caregiver's strength. When the caregiver leans forward correctly, the natural motion of the arms going down causes the person's head to come forward, shifting their weight onto their hips. This empowers the person to complete the movement themselves using their core and leg strength."
+    "question": "Why is it better to walk a person in a small circle to position them for sitting rather than asking them to back up?",
+    "answer": "Backing up can be scary and confusing for someone with dementia because they cannot see what is behind them. Walking them in a small circle allows them to visually track where they are going and see the chair or bed before they sit. This reduces fear and helps them position their thighs correctly against the edge of the seat naturally.",
+    "timestamp": "8:48-9:04",
+    "time_start_sec": 528,
+    "time_end_sec": 544
   },
   {
-    "question": "Why should caregivers avoid pulling or shoving someone down onto a chair or bed?",
-    "answer": "Pulling or shoving can make the person with dementia feel unsafe and frightened, triggering a fight-or-flight response that causes them to lose trust in the caregiver. Furthermore, physically forcing them down can disrupt their natural balance and muscle control, making future movements more difficult and potentially damaging the relationship."
+    "question": "What happens in the body if I \"plunk\" someone down onto a seat too quickly?",
+    "answer": "Dropping someone quickly can trigger a fear response in the brain (the amygdala), causing their muscles to tighten instantly. Specifically, their sphincter muscles may clamp shut, making it impossible for them to urinate or have a bowel movement for 10 to 20 minutes. Staying slow and gentle keeps their body relaxed enough to function.",
+    "timestamp": "10:12-10:25",
+    "time_start_sec": 612,
+    "time_end_sec": 625
   },
   {
-    "question": "How can I practice hand-under-hand techniques if I am alone or cannot practice immediately with my loved one?",
-    "answer": "You can practice the mechanics on yourself. Try crossing your own arms and moving them as if you are guiding your own hand, or visualize how your body would position itself to support you if you needed help sitting or standing. This builds self-awareness and muscle memory so you are ready when the opportunity arises with your loved one."
+    "question": "Why is practicing these techniques on a bed recommended before trying them in a bathroom?",
+    "answer": "A bed is larger, softer, and more forgiving than a hard toilet seat. If the person loses their balance or feels unsure, landing on a bed feels safer and less threatening. It is a good place to build trust and practice the movements before attempting them in a tighter, more difficult space like a bathroom.",
+    "timestamp": "10:47-10:54",
+    "time_start_sec": 647,
+    "time_end_sec": 654
   },
   {
-    "question": "What should I do if the person with dementia seems stiff or unrelaxed before trying to help them use the bathroom?",
-    "answer": "Ensure the environment and approach promote relaxation. Avoid sudden movements or placing them down abruptly. Instead, guide them slowly through a circular path so they can see their destination and settle into a comfortable position. Remember that relaxation is essential for bodily functions like digestion and elimination to occur naturally."
+    "question": "How can I help someone sit down without pulling or pushing them, which might cause resistance?",
+    "answer": "Instead of forcing them down, you can gently touch the tendon at the back of their knee. This often triggers an automatic reflex that causes the leg to bend and the person to fold into a sitting position. It uses their body's natural reactions rather than your strength to make the movement happen.",
+    "timestamp": "13:16-13:24",
+    "time_start_sec": 796,
+    "time_end_sec": 804
   },
   {
-    "question": "How does the \"polka position\" or \"two-step\" analogy help describe the hand-under-hand movement?",
-    "answer": "The movement is described as a dance step, like a polka or a Texas two-step, because it involves a rhythmic, coordinated motion where the caregiver guides the person gently rather than dragging them. This analogy highlights that the action requires finesse, timing, and a playful mindset rather than forceful exertion."
+    "question": "When using hand-under-hand from the front to help someone sit, how should I position my own body to stay safe and effective?",
+    "answer": "Kneel down first so you are lower than the person. Cross your forearms with your hands in the hand-under-hand position (thumbs up). Lean your body forward slightly. This posture lets you use your core and legs for stability rather than straining your back, and it prevents you from accidentally pushing or shoving the person.",
+    "timestamp": "14:01-14:45",
+    "time_start_sec": 841,
+    "time_end_sec": 885
   },
   {
-    "question": "Why is it beneficial for caregivers to think about how they would want to be supported if they were in the same situation as the person with dementia?",
-    "answer": "Empathizing with your own needs helps you understand what a supportive, non-intrusive touch feels like. By imagining how you would want to be assisted—perhaps with a gentle cue rather than a command—you can better align your physical actions with the person's emotional needs and retained abilities."
+    "question": "What does it mean to use a \"fulcrum\" when helping someone stand or sit, and why is it important?",
+    "answer": "Using a \"fulcrum\" means using the natural balance point between your body and the person's body to move them, rather than just using muscle power to lift or pull. By lowering your center of gravity and leaning correctly, you allow their own weight and momentum to help them move. This makes the action feel lighter and more natural for both of you.",
+    "timestamp": "15:28-16:03",
+    "time_start_sec": 928,
+    "time_end_sec": 963
   },
   {
-    "question": "What is the specific hand placement for the \"hand-under-hand\" technique when helping someone sit?",
-    "answer": "To help someone sit, you should reach under their arm with your opposite hand to support their elbow, creating a platform. For example, use your right hand to support their right elbow while your left hand supports their left elbow. This provides stability at the joint level, allowing them to control the descent while you provide a secure base."
+    "question": "Why is it crucial for me to get into a low kneeling position *before* I start helping the person move?",
+    "answer": "Getting down into position beforehand ensures you are stable and ready to support them immediately. If you try to bend down while they are already moving, you risk losing your balance, straining your back, or appearing sudden and scary to them. Being already low shows calmness and control.",
+    "timestamp": "16:20-16:35",
+    "time_start_sec": 980,
+    "time_end_sec": 995
   },
   {
-    "question": "How does maintaining a \"low and below\" position benefit both the caregiver and the person with dementia?",
-    "answer": "Being low and below the person's eye level reduces intimidation and makes the interaction feel less threatening. It also engages the caregiver's core and leg muscles, providing a stronger base of support. For the person with dementia, this position signals safety and allows them to feel they are leading the movement, reducing anxiety."
+    "question": "How does the hand-under-hand technique change the emotional experience for the person with dementia?",
+    "answer": "This technique avoids pushing or shoving, which can feel aggressive. Instead, it offers non-verbal cues that empower the person to participate. It helps them feel understood and supported rather than controlled, reducing fear and helping them rely on habits they have used successfully for decades.",
+    "timestamp": "17:00-17:08",
+    "time_start_sec": 1020,
+    "time_end_sec": 1028
   },
   {
-    "question": "What happens to the body's sphincter muscles if someone is startled or feels a loss of balance while trying to sit?",
-    "answer": "If a person feels scared or loses their balance unexpectedly, their amygdala (the brain's fear center) can be triggered, causing the sphincter muscles to clamp shut tightly. This physical reaction can prevent them from urinating or defecating for a significant amount of time, sometimes up to 20 minutes, requiring a calm and relaxed approach to resolve."
+    "question": "What can I do to practice these caregiving skills if I don't have a person with dementia nearby to train with?",
+    "answer": "You can practice self-awareness in your daily life. Notice how your body moves when you sit down or stand up. Pay attention to which muscles you use and how it feels when a chair is very low. You can even try eating with your non-dominant hand to understand what it feels like to need extra support. This builds empathy and body memory for when you do assist someone.",
+    "timestamp": "18:23-19:14",
+    "time_start_sec": 1103,
+    "time_end_sec": 1154
   },
   {
-    "question": "Can the hand-under-hand technique be used for activities other than eating or toileting?",
-    "answer": "Yes, the principle of hand-under-hand applies to many daily activities where the person retains some skill but needs support, such as brushing teeth, eating meals, or getting dressed. The goal is always to connect hands to augment the person's existing ability rather than doing the task for them."
+    "question": "Why is it helpful to think about how I would want to be supported if I were in the person's position?",
+    "answer": "Imagining yourself in their shoes helps you align your actions with their natural comfort. Ask yourself: \"If someone were helping me, where would I want their hands? How would I want them to stand?\" This mindset shifts your approach from \"making them do it\" to \"moving together,\" which feels much safer and more dignified for the person receiving care.",
+    "timestamp": "17:14-17:29",
+    "time_start_sec": 1034,
+    "time_end_sec": 1049
   },
   {
-    "question": "How can I ensure I am not injuring my back while assisting someone with sitting or standing?",
-    "answer": "Always kneel down to get your body below the person's level before attempting to assist. Bending over from your waist puts strain on your back, whereas kneeling engages your legs and core, distributing the effort safely and allowing you to use your body weight effectively to support the other person."
-  },
-  {
-    "question": "Why is it important to check where the person's head will land relative to the pillow or seat before guiding them down?",
-    "answer": "Planning the path ensures that when the person sits, their head lands comfortably on the pillow or cushion. This attention to detail prevents awkward positioning, reduces discomfort, and reinforces the sense of security and predictability that is vital for someone with dementia."
-  },
-  {
-    "question": "What is the role of the caregiver's thumbs during the hand-under-hand assistance?",
-    "answer": "Keeping the thumbs up is a key part of the technique. When the caregiver crosses their arms with thumbs up, it creates a stable platform under the person's arm or wrist. This specific positioning helps the caregiver maintain control and balance without applying pressure that could push the person down."
-  },
-  {
-    "question": "How does the video suggest caregivers handle the initial awkwardness of learning a new physical technique?",
-    "answer": "The video suggests approaching the learning process with patience and humor, noting that it is a new skill that takes practice to coordinate. Caregivers are encouraged to try the movements themselves first, perhaps visualizing the \"dance\" steps, to build confidence before attempting it with a person."
-  },
-  {
-    "question": "What is the significance of the phrase \"not doing to someone\" in the context of dementia care?",
-    "answer": "This phrase emphasizes the shift from completing tasks for the person (which can be disempowering) to supporting them in doing what they can still do. It respects the person's autonomy and utilizes their remaining brain skills, fostering dignity and independence even in late stages of dementia."
-  },
-  {
-    "question": "How can sharing this video with others help improve care for people with dementia?",
-    "answer": "Sharing the video spreads awareness about the \"Positive Approach\" message, allowing more caregivers to learn effective, respectful techniques like hand-under-hand. When more people understand how to support rather than direct, it improves the quality of life and dignity for everyone living with dementia."
+    "question": "What is the main benefit of guiding someone through a full visual scan of the room before they sit?",
+    "answer": "People with dementia may lose the ability to sense what is behind them. Guiding them around so they can clearly see the chair or bed eliminates the surprise of \"falling\" backward into a seat. Seeing the destination confirms safety for their brain, allowing them to relax their muscles and sit down willingly.",
+    "timestamp": "9:52-10:02",
+    "time_start_sec": 592,
+    "time_end_sec": 602
   }
 ]

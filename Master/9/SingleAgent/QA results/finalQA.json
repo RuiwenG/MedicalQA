@@ -1,82 +1,93 @@
 [
   {
-    "question": "Why should a caregiver avoid asking direct questions like \"Do you need to go?\" when guiding a person with dementia to the bathroom?",
-    "answer": "Direct questions often trap the person in a situation where the answer is \"no,\" which stops the process. Instead, use simple statements like \"Let's go over here\" to provide clear direction without expecting a response that might block progress."
+    "question": "Why should I avoid asking direct questions like \"Do you need to use the bathroom?\" when helping someone with dementia?",
+    "answer": "Asking direct questions often leads to a refusal because the person may feel embarrassed or defensive about needing help. Instead of asking, it is better to use a calm statement or invitation, such as \"Let's go over here,\" which guides them without giving them a chance to say no. This approach respects their dignity and reduces the likelihood of conflict.",
+    "timestamp": "4:53-5:27",
+    "time_start_sec": 293,
+    "time_end_sec": 327
   },
   {
-    "question": "How can a caregiver help a person with dementia overcome hesitation or lack of momentum before moving toward the bathroom?",
-    "answer": "Use a gentle rocking motion, similar to dancing, where you shift your weight back and forth. This rhythm encourages the person to start moving and helps them find their balance before walking."
+    "question": "How can I help someone start walking if they seem frozen or hesitant to move toward the bathroom?",
+    "answer": "You can use a gentle rhythmic motion, similar to dancing, to help them get started. Stand close and subtly shift your weight back and forth while holding their hand. This rocking motion helps break their hesitation and encourages them to naturally begin stepping forward in rhythm with you.",
+    "timestamp": "5:35-6:24",
+    "time_start_sec": 335,
+    "time_end_sec": 384
   },
   {
-    "question": "What is the benefit of pausing and making eye contact during a transfer, such as walking to the toilet?",
-    "answer": "Pausing allows both the caregiver and the person with dementia to reset. It signals that the previous step is finished and checks if the person is still following along, preventing confusion before the next movement begins."
+    "question": "What is the best way to transition someone from walking to standing still in front of the toilet?",
+    "answer": "First, come to a complete stop and pause the movement. Say the person's name gently to get their attention and ensure they are focused on you before starting the next step. This \"pause\" signals that one part of the task is finished and prepares them mentally for the next action, preventing confusion or rushing.",
+    "timestamp": "6:42-7:17",
+    "time_start_sec": 402,
+    "time_end_sec": 437
   },
   {
-    "question": "When helping someone turn to face the toilet, why is a partial turn better than a full rotation?",
-    "answer": "People with dementia, especially those in later stages, often lose the ability to back up or turn around completely. A small 90-degree turn or side-to-side steps are safer and easier to manage, reducing the risk of falling or getting stuck."
+    "question": "Why is it recommended to approach the toilet from the side rather than backing the person up to it?",
+    "answer": "Many people with dementia lose the ability to safely back up or turn around completely. Approaching from the side allows them to simply take small sideways steps and turn only 90 degrees to sit. This method uses movements they still have, making the process safer and less confusing than trying to make them reverse into the seat.",
+    "timestamp": "7:43-8:45",
+    "time_start_sec": 463,
+    "time_end_sec": 525
   },
   {
-    "question": "Why should a caregiver position themselves on the non-dominant side (e.g., the left side) when assisting a right-handed person?",
-    "answer": "Most bathrooms are designed for independent use, leaving little space on the dominant side for a helper. Positioning on the non-dominant side provides room to use the \"hand-under-hand\" technique effectively without blocking the person's natural movement."
+    "question": "What should I do if the bathroom layout makes it hard to stand on the person's dominant side?",
+    "answer": "If space is tight on their dominant side, adapt by standing on their non-dominant side and using the \"hand-under-hand\" technique with that hand. While we prefer using the dominant hand, safety and available space are more important. The goal is to provide support wherever you can fit comfortably without crowding them.",
+    "timestamp": "9:15-10:00",
+    "time_start_sec": 555,
+    "time_end_sec": 600
   },
   {
-    "question": "What is the \"hand-under-hand\" technique and why is it preferred over holding the person's hand from above?",
-    "answer": "Hand-under-hand means placing your hand on top of the person's hand and gently guiding it, rather than grabbing theirs. This maintains the person's sense of control and dignity while providing necessary physical support and guidance."
+    "question": "How does the \"hand-under-hand\" technique help the person feel more capable during care tasks?",
+    "answer": "When you place your hand under theirs, they can see their own hand doing the work, such as pulling down pants. This visual feedback reminds them that they are still participating and capable, rather than feeling like you are just doing everything for them. It keeps them involved in the process and maintains their sense of independence.",
+    "timestamp": "10:22-10:43",
+    "time_start_sec": 622,
+    "time_end_sec": 643
   },
   {
-    "question": "Why might using the word \"pull\" cause confusion when trying to lower pants, and what word works better?",
-    "answer": "For someone with visual processing issues, the word \"pull\" might conflict with the visual image of the fabric coming down. Using the verb \"push\" matches the downward motion better and creates a clearer mental association for the action."
+    "question": "Why should I use words like \"lean\" and \"push\" instead of \"pull\" when helping someone lower their pants?",
+    "answer": "The word \"pull\" can be confusing because the physical motion required to lower pants often involves pushing fabric down or leaning forward. Using simple verbs that exactly match the action you want them to perform helps their brain connect the word to the movement instantly, reducing frustration and misunderstanding.",
+    "timestamp": "10:55-11:34",
+    "time_start_sec": 655,
+    "time_end_sec": 694
   },
   {
-    "question": "How can a caregiver help someone who has difficulty initiating the motion to sit down on the toilet?",
-    "answer": "Apply gentle pressure to the shoulder blades or upper back. This provides proprioceptive touch that signals the body to engage muscles and lean forward, mimicking the natural motion we use when standing up."
+    "question": "What is the safest physical technique to help someone sit down on the toilet without startling them?",
+    "answer": "Guide them to lean their upper body forward first while placing a gentle, firm hand on their shoulder blade. Leaning forward shifts their weight naturally, allowing their leg muscles to relax and lower them smoothly. Avoid pushing down on their hips or shoulders, as this can feel sudden and scary, causing them to stiffen up in fear.",
+    "timestamp": "11:51-12:44",
+    "time_start_sec": 711,
+    "time_end_sec": 764
   },
   {
-    "question": "What is the main reason caregivers should avoid pushing down on a person's hips to make them sit?",
-    "answer": "Pushing on the hips can trigger a fear response in the brain (the amygdala), causing the person to become startled and tense up, which makes sitting difficult and potentially dangerous."
+    "question": "Why is it harmful to rush someone or push them down quickly when they are trying to sit?",
+    "answer": "Sudden movements or force can trigger a fear response in the brain, specifically activating the amygdala, which handles threat detection. When a person feels startled or scared, their body instinctively tightens up, making it harder for them to sit or relax. Moving slowly and calmly keeps their brain relaxed and cooperative.",
+    "timestamp": "13:52-14:20",
+    "time_start_sec": 832,
+    "time_end_sec": 860
   },
   {
-    "question": "Why is it helpful for a caregiver to keep their voice calm and firm while avoiding childish terms like \"honey\" or \"sweetie\"?",
-    "answer": "A calm, firm voice conveys safety and authority, whereas childish nicknames can feel patronizing or confusing. Using the person's name maintains a respectful, adult-to-adult connection and keeps the interaction clear."
+    "question": "How long should I wait after helping someone sit on the toilet before expecting results?",
+    "answer": "You should allow plenty of time, potentially several minutes, rather than just a few seconds. Rushing or leaving too soon can interrupt the natural process. Often, accidents happen shortly after leaving the bathroom because the person wasn't given enough quiet, unhurried time to fully empty their bladder or bowels.",
+    "timestamp": "14:23-15:03",
+    "time_start_sec": 863,
+    "time_end_sec": 903
   },
   {
-    "question": "How does maintaining light touch on the shoulder help during the transition from standing to sitting?",
-    "answer": "Keeping a hand on the shoulder provides a continuous sense of connection and reassurance. It prevents the person from feeling abandoned or surprised if the caregiver suddenly lets go, which could cause anxiety."
+    "question": "How should I give praise to an adult with dementia without sounding condescending?",
+    "answer": "Use specific, respectful acknowledgments like \"Good work\" or \"There we go\" rather than childish terms like \"good girl\" or \"sweetie.\" Focus on validating the effort they made during each step of the process. This treats them as a capable partner in the activity and preserves their adult dignity.",
+    "timestamp": "15:31-16:07",
+    "time_start_sec": 931,
+    "time_end_sec": 967
   },
   {
-    "question": "Why should a caregiver avoid mentioning specific bodily functions like \"toilet\" or \"poop\" during the assistance process?",
-    "answer": "Discussing specific functions can increase anxiety or cause the person to become distracted or fearful. Focusing on the action (\"lean,\" \"sit,\" \"go\") keeps the brain focused on the task rather than on potential threats or embarrassment."
+    "question": "Where should I stand once the person is seated to ensure they don't feel abandoned or startled?",
+    "answer": "Stay nearby within their peripheral vision but give them privacy. Do not disappear completely, as suddenly reappearing can be frightening. Maintain a light touch on their shoulder or keep your presence known so they feel secure and connected, knowing you are still there if they need help standing up.",
+    "timestamp": "16:42-17:10",
+    "time_start_sec": 1002,
+    "time_end_sec": 1030
   },
   {
-    "question": "What is the importance of acknowledging the person's effort with phrases like \"Good job\" or \"Nice work\" during the process?",
-    "answer": "Acknowledging effort validates what the person is doing and keeps them engaged. It shows appreciation for their participation and reinforces that they are moving in the right direction, boosting their confidence."
-  },
-  {
-    "question": "How does staying within the person's peripheral vision help reduce fear during a bathroom visit?",
-    "answer": "If a caregiver disappears completely and then reappears unexpectedly, it can startle the person. Staying slightly visible in their peripheral field ensures they feel supported and safe without being intrusive or blocking their view."
-  },
-  {
-    "question": "What environmental change can make it easier to use the hand-under-hand technique for dressing?",
-    "answer": "Choose clothing with elastic waists instead of buttons or zippers. Elastic pants can be managed with the hand-under-hand technique regardless of which hand the caregiver is using, adapting better to limited space."
-  },
-  {
-    "question": "Why is it important for the caregiver to adapt their skills based on the person's current level of functioning (e.g., Amber vs. Ruby)?",
-    "answer": "While specific technical skills might vary, the core principle is to offer just enough support to bridge the gap between what the person can do alone and what they need help with, without taking over their ability entirely."
-  },
-  {
-    "question": "How can a caregiver test if the person is still present and engaged during a task?",
-    "answer": "Make eye contact and use the person's name. If they respond or shift their gaze, it confirms they are still with you; if not, it may be time to pause and check in before proceeding."
-  },
-  {
-    "question": "What is the primary goal of the \"leaning forward\" technique when helping someone sit?",
-    "answer": "Leaning forward engages the leg and buttock muscles naturally, preparing the body to sit smoothly. It avoids the shock of being pushed down and aligns the body's natural mechanics for sitting."
-  },
-  {
-    "question": "Why should a caregiver avoid rushing through the steps of a bathroom visit?",
-    "answer": "Rushing increases the likelihood of errors and can trigger fear responses. Taking time to pause, check in, and ensure each small step is completed successfully builds trust and reduces anxiety for the person with dementia."
-  },
-  {
-    "question": "How can a caregiver determine if their current approach is working for the person they are supporting?",
-    "answer": "Observe the person's body language and reactions. If they appear relaxed, follow cues easily, and complete movements without resistance or fear, the approach is working. If they become tense or confused, adjust the technique immediately."
+    "question": "What type of clothing changes can make bathroom assistance easier for everyone?",
+    "answer": "Switching to pants with elastic waistbands instead of buttons or zippers can make a huge difference. Elastic pants are much easier to pull down and up, especially when using the hand-under-hand technique. This simple change reduces the complexity of the task and helps the person maintain their independence longer.",
+    "timestamp": "17:27-17:35",
+    "time_start_sec": 1047,
+    "time_end_sec": 1055
   }
 ]

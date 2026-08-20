@@ -1,82 +1,65 @@
 [
   {
-    "question": "What are some simple visual and verbal cues I can try to encourage someone with dementia to sit down?",
-    "answer": "Try using very simple words like \"Have a seat,\" \"Sit,\" or \"Here.\" Pair these words with a visual action, such as patting the chair next to you with your hand moving downward. You can also model the behavior by miming the action yourself—moving your body as if you are sitting next to the chair—or even squatting down low in front of the person to signal that it is time to sit."
+    "question": "Why might simple visual or verbal cues, like pointing to a chair or saying \"sit,\" stop working for someone with dementia?",
+    "answer": "Sometimes these cues don't work because the caregiver is moving or speaking faster than the person with dementia can process. Additionally, as the disease progresses, a person's field of vision may narrow, meaning they literally might not see the chair even if it is right in front of them.",
+    "timestamp": "2:44-3:38",
+    "time_start_sec": 164,
+    "time_end_sec": 218
   },
   {
-    "question": "Why might simple visual and verbal cues stop working for someone in mid-stage dementia?",
-    "answer": "Cues may fail if you are moving too fast for the person; they might not be paying attention to your gestures for those few seconds it takes to react. Additionally, as dementia progresses, a person's field of vision narrows, and they might literally not see the chair is there. These challenges often occur during the \"Ruby\" or \"Amber\" stages of the disease, where physical assistance becomes necessary."
+    "question": "When visual and verbal methods fail, what is the next most effective type of cue to help someone sit down?",
+    "answer": "The next step is to use \"physical assist cueing,\" which involves using gentle touch to guide the person's body. Since people primarily learn through sight, sound, and then touch, using your hands to physically guide the movement is often the solution when the first two methods aren't working.",
+    "timestamp": "5:12-5:33",
+    "time_start_sec": 312,
+    "time_end_sec": 333
   },
   {
-    "question": "Which senses are best for helping someone move, and which ones are least helpful?",
-    "answer": "The most effective ways to provide data or cues are through sight (visual) and hearing (auditory). Smell and taste are generally not helpful for assisting with movement or sitting, though some specific smells might accidentally trigger a reaction. For practical assistance, rely on seeing and hearing rather than trying to use scent or food."
+    "question": "What is the correct body position for a caregiver to take before physically helping someone sit down?",
+    "answer": "You should stand with your legs spread wide apart to create a stable base of support. Then, bend your knees rather than bending your back. This posture protects your own back and allows you to safely support the other person if they lose their balance.",
+    "timestamp": "6:03-6:12",
+    "time_start_sec": 363,
+    "time_end_sec": 372
   },
   {
-    "question": "What is \"physical assist cueing\" and how does it differ from just telling someone to sit?",
-    "answer": "Physical assist cueing involves using gentle touch to guide the body into a sitting position, which is especially helpful when verbal and visual cues fail. Unlike simply asking someone to sit, this method uses specific touch points, like the back of the knee, to trigger natural muscle movements and ensure the person feels safe and supported during the transition."
+    "question": "How should you guide a person's body movement to help them sit without causing fear or loss of balance?",
+    "answer": "Instead of pulling them backward, gently help them lean forward further than you think is necessary. Supporting their back with your arm, encourage this forward motion because tipping someone backward often makes them feel like they are falling, which causes them to resist.",
+    "timestamp": "6:14-6:44",
+    "time_start_sec": 374,
+    "time_end_sec": 404
   },
   {
-    "question": "How should I position my own body to safely help someone with dementia sit down without causing fear?",
-    "answer": "Stand with your legs spread wide to create a stable, wide base of support. Bend your knees, not your back, so you are lower and more stable. Lean the person forward further than you think is comfortable, supporting their back with your arm or elbow. This prevents them from feeling like they are being tipped backward, which can trigger a fear response or a freeze reaction."
+    "question": "Where exactly should you place your hand to trigger the natural sitting reflex in a person's legs?",
+    "answer": "Place your touch on the tendon located on the outside of the knee (just below the kneecap). Touching this specific spot signals the leg muscles to bend, mimicking the natural action our bodies take when we sit, which helps the person lower themselves smoothly.",
+    "timestamp": "6:52-7:01",
+    "time_start_sec": 412,
+    "time_end_sec": 421
   },
   {
-    "question": "What is the specific technique of touching the \"tendon\" behind the knee, and why is it effective?",
-    "answer": "To use this technique, gently touch the tendon on the outside of the person's knee while supporting their back. This touch encourages the knee to naturally bend, which is the first step in sitting. It is highly effective because it works with the body's natural instincts; without this gentle nudge, some people might stiffen up or feel unsafe leaning forward."
+    "question": "Is there an alternative technique for caregivers who are physically able to kneel, and how does it work?",
+    "answer": "Yes, if you are sure you can kneel down and stand back up safely, you can position yourself in front of the person while kneeling. From this lower position, you can guide their forward movement directly, making it easier for them to follow your lead into the chair.",
+    "timestamp": "7:15-7:41",
+    "time_start_sec": 435,
+    "time_end_sec": 461
   },
   {
-    "question": "Can I perform the kneeling assist technique if I cannot physically kneel down?",
-    "answer": "No, the kneeling technique specifically requires you to be able to kneel down comfortably and come back up quickly. Since this involves getting low to the ground, you must ensure you have the physical ability to do so safely. If you cannot kneel, stick to the standing variation where you support the person while they lean forward from a standing position."
+    "question": "Which stages of dementia or types of conditions might require these physical touching techniques instead of just verbal instructions?",
+    "answer": "These hands-on techniques are especially helpful for individuals in later stages (referred to as the \"Ruby\" stage) who need more physical assistance. They are also very useful for people with Lewy Body Dementia, who may experience moments of muscle stiffness or rigidity that make it hard to initiate movement on their own.",
+    "timestamp": "9:11-9:50",
+    "time_start_sec": 551,
+    "time_end_sec": 590
   },
   {
-    "question": "How can I practice these techniques on my own to ensure I am doing them correctly?",
-    "answer": "Practice the mechanics of sitting and standing slowly in front of a mirror to understand your own body's movements. When practicing the assist techniques with a partner (who should be willing to give you some weight), ask them to lean on you intentionally. This helps you feel the correct amount of support needed without accidentally pulling their hips or jerking them, which can cause distress."
+    "question": "Why is it important to let the person with dementia participate actively rather than just lifting them into the chair?",
+    "answer": "People with dementia often retain strength in their core and leg muscles longer than we expect. By guiding them to lean forward, you allow them to use their own natural strength to control the sit. This keeps them involved in the process and prevents them from feeling helpless or frightened.",
+    "timestamp": "11:59-12:36",
+    "time_start_sec": 719,
+    "time_end_sec": 756
   },
   {
-    "question": "Who is most likely to need this kind of physical assist cueing?",
-    "answer": "People in the \"Ruby\" stage of dementia often need the most help due to the intensity of their symptoms. It can also be beneficial for individuals with Lewy Body Dementia, who may experience moments of rigidity. Additionally, anyone who has had previous traumatic falls or who reacts with fear (an amygdala response) to sudden movements may need this gentle, predictable physical guidance to feel safe."
-  },
-  {
-    "question": "What should I watch out for regarding my own safety when learning these hands-on skills?",
-    "answer": "Be cautious about getting too low to the ground if you are unsure of your balance or mobility. The transcript notes that if you try the kneeling method, you must be absolutely sure you can get back up easily. If you feel like you cannot safely perform the movement, choose the standing variation or seek professional training to learn these kinesthetic skills properly."
-  },
-  {
-    "question": "Are there resources available if I want to learn these physical assist skills in a formal setting?",
-    "answer": "Yes, there are resources called \"Pack Skills\" available in both online streaming and hard-copy DVD formats. These materials include specific scripts that trainers can use for instruction. You can find more information by contacting the organization at info@tepasnow.com to request training materials or to purchase these educational tools."
-  },
-  {
-    "question": "Why is it important to move at the same speed as the person with dementia?",
-    "answer": "Moving too fast can cause confusion or make the person feel unsafe, leading them to ignore your cues. Matching their pace shows respect for their current abilities and gives them enough time to process what you are saying and doing. It builds trust and reduces anxiety during the interaction."
-  },
-  {
-    "question": "How can I check if the person with dementia is actually seeing the chair I am pointing to?",
-    "answer": "Observe their eye contact and attention span. If they are looking away or seem distracted, they may not be registering the chair because their visual field is narrowing. In these cases, you may need to get closer to them or physically guide them toward the chair rather than relying solely on pointing."
-  },
-  {
-    "question": "What is the \"adduction strength\" mentioned in relation to helping someone sit?",
-    "answer": "Adduction strength refers to the strong muscles in the inner thighs that help a person pull their legs together and lean their torso forward. Even people with dementia often retain this strength, which allows them to lean forward effectively when assisted. Understanding this helps caregivers know that the person has the physical capacity to initiate the forward lean if supported correctly."
-  },
-  {
-    "question": "What should I do if a gentle touch cue makes the person feel like they are losing their balance?",
-    "answer": "Ensure you are supporting their back firmly with your arm or elbow while touching the knee. The goal is to keep them leaning forward safely so they do not worry about falling backward. If they seem unstable, reduce the amount of forward lean or adjust your support until they feel secure."
-  },
-  {
-    "question": "Is it normal for caregivers to feel unsure about performing physical assists?",
-    "answer": "Yes, many caregivers feel uncertain about touching or guiding someone, especially if they haven't been trained. It is important to remember that these techniques are designed to be gentle and respectful. Watching demonstrations or taking a course can build your confidence, and starting with small steps like patting a chair is a valid first attempt."
-  },
-  {
-    "question": "How does the \"squatting\" technique work, and is it appropriate for everyone?",
-    "answer": "Squatting involves the caregiver lowering themselves to a low position in front of the chair to signal \"sit.\" While some find this cute or effective, it is not suitable for everyone; for example, it is not appropriate if the caregiver cannot get up and down safely. It depends entirely on the caregiver's physical ability and the specific situation."
-  },
-  {
-    "question": "Why should I avoid pulling someone's hips or jerking them into a chair?",
-    "answer": "Pulling hips or jerking a person can feel dangerous and frightening, triggering a fear response where they freeze up or struggle. Instead of pulling, lean them forward gently and use touch cues to guide the knees down. This approach respects their dignity and keeps them feeling safe throughout the process."
-  },
-  {
-    "question": "What is the main benefit of using a \"wide base of support\" when assisting someone?",
-    "answer": "A wide base of support means spreading your legs far apart while standing. This creates stability, allowing you to support another person's weight safely without losing your own balance. It is crucial when helping someone who needs physical assistance to prevent accidents for both of you."
-  },
-  {
-    "question": "How can I get feedback on whether these new techniques are working for my loved one?",
-    "answer": "Watch for signs of willingness and participation, such as the person leaning forward naturally or holding your hand. If they seem relaxed and cooperative, the technique is likely working. Sharing your experiences with support groups or asking friends to observe can also provide valuable feedback on what methods suit your specific situation best."
+    "question": "What safety precaution should a caregiver consider before trying the kneeling technique?",
+    "answer": "Before attempting to kneel in front of a patient, you must be honest about your own physical ability to get down on the floor and stand back up again easily. If you are stiff or unsure you can rise quickly, stick to the standing method to ensure both you and the person you are caring for remain safe.",
+    "timestamp": "12:44-13:06",
+    "time_start_sec": 764,
+    "time_end_sec": 786
   }
 ]

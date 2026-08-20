@@ -1,82 +1,79 @@
 [
   {
-    "question": "What is the primary goal of using the Animal Fluency Test according to this video?",
-    "answer": "The main goal is not to judge whether you passed or failed, but to establish a personal \"baseline\" score. By testing regularly over years, you can easily notice if your ability to name animals drops suddenly, which serves as an early alert for potential changes in your brain function."
+    "question": "What is the main purpose of using the \"animal fluency test\" described in the video?",
+    "answer": "The main goal is not to diagnose dementia immediately, but to establish a personal \"baseline\" or starting score for yourself or a loved one. By recording this number now and repeating the test once a year, you can notice if there is a significant drop over time, which serves as an early alert to check in further.",
+    "timestamp": "0:36-1:36",
+    "time_start_sec": 36,
+    "time_end_sec": 96
   },
   {
-    "question": "How should a caregiver set up this test to make it less stressful and more fun for the person with dementia?",
-    "answer": "Frame it as a game or a family activity rather than a medical test. You can invite family members to join in, perhaps while planning a trip to the zoo or a farm. Keeping the tone light and encouraging helps reduce anxiety, which is important because stress can affect performance."
+    "question": "How exactly do you perform the one-minute animal fluency test?",
+    "answer": "You need two people. One person acts as the timekeeper and simply makes tick marks on a piece of paper for every animal named (they do not need to write down the specific animal names). The other person tries to say as many different animals as they can out loud within exactly one minute.",
+    "timestamp": "1:05-1:29",
+    "time_start_sec": 65,
+    "time_end_sec": 89
   },
   {
-    "question": "Why does the video suggest comparing results over time rather than worrying about specific numbers immediately?",
-    "answer": "Different experts have different opinions on what number indicates concern (some say 14, others 17), so fixed numbers can be confusing. It is much more reliable to track your own history; if your usual score is around 25 and it suddenly drops to 10, that change is a clearer sign to pay attention to than a single low score."
+    "question": "What score range generally indicates a potential area of concern in this test?",
+    "answer": "While individual baselines vary, the speakers mention that scoring below 17 is generally considered a place of concern. Some experts suggest that a score below 14 is an even stronger indicator that something might be changing, but the most important factor is comparing the score to the person's own past results.",
+    "timestamp": "11:28-11:40",
+    "time_start_sec": 688,
+    "time_end_sec": 700
   },
   {
-    "question": "How can a caregiver use this test to encourage a loved one to talk about their health or sleep issues?",
-    "answer": "After taking the test, gently ask how they felt during the activity. For example, you might say, \"I felt a bit tired yesterday, did you feel rested today?\" This opens a natural conversation about their health, sleep, or mood without making them feel like they are being interrogated by a doctor."
+    "question": "Why is it important to use the exact same category (like \"animals\") every time you repeat this test?",
+    "answer": "To get an accurate comparison, you must compare \"apples to apples.\" If you test someone on \"animals\" this year, you must test them on \"animals\" next year. Changing the category to \"vegetables\" or \"cities\" would make the scores impossible to compare fairly because some topics are naturally easier or harder for different people.",
+    "timestamp": "10:20-10:28",
+    "time_start_sec": 620,
+    "time_end_sec": 628
   },
   {
-    "question": "What specific strategy did the speakers use to organize their thoughts during the test, and how can a caregiver apply this?",
-    "answer": "Some speakers categorized animals by location (like \"zoo,\" \"farm,\" or \"forest\") or alphabetically to help their memory. A caregiver can suggest similar categories to help the person with dementia remember more names, such as \"all animals that start with B\" or \"animals you see on a farm.\""
+    "question": "What are some common mental strategies people use to remember more items during the test?",
+    "answer": "People often use grouping strategies to help their brains retrieve words faster. Common methods include imagining specific places (like a farm, a zoo, or a forest), grouping animals by type (like birds or dogs), or going through the alphabet letter by letter (thinking of animals that start with A, then B, then C).",
+    "timestamp": "8:07-9:00",
+    "time_start_sec": 487,
+    "time_end_sec": 540
   },
   {
-    "question": "Is it necessary to write down every animal name the person lists during the one-minute test?",
-    "answer": "No, writing down the names is not required. The video recommends simply making small tick marks on a piece of paper to count the total number of unique animals mentioned within the minute. This keeps the process simple and quick."
+    "question": "How can families make this assessment feel less like a scary medical exam?",
+    "answer": "You can turn it into a fun family tradition, such as doing it together on holidays like Thanksgiving or birthdays. By having everyone participate—including children and grandparents—it becomes a game rather than a test. This reduces stress and makes it a natural way to check in on each other's health without causing alarm.",
+    "timestamp": "10:30-11:07",
+    "time_start_sec": 630,
+    "time_end_sec": 667
   },
   {
-    "question": "How long should a caregiver allow for this test, and why might they choose to extend the time slightly?",
-    "answer": "The core test is designed to take exactly one minute. However, the speakers suggest extending it to 90 seconds to allow time for setting up the timer, breathing deeply, and maintaining the person's dignity, ensuring the experience feels calm and unhurried."
+    "question": "What should a caregiver do if they notice a loved one's score has dropped significantly from their usual baseline?",
+    "answer": "Instead of panicking, use the result as a gentle opening to ask caring questions about their daily life. Ask things like, \"How have you been sleeping?\" or \"Are you feeling sick?\" Sometimes a lower score is due to temporary factors like fatigue or illness rather than dementia progression, so it is a chance to offer support.",
+    "timestamp": "12:43-12:56",
+    "time_start_sec": 763,
+    "time_end_sec": 776
   },
   {
-    "question": "What role does stress play in the results of this test, and how should a caregiver interpret a lower score?",
-    "answer": "People perform differently under stress. If a person usually scores high but gets a lower score because they were nervous, rushed, or feeling unwell, it does not necessarily mean their memory has declined. Caregivers should consider the person's emotional state and physical condition before worrying about the numbers."
+    "question": "How can a caregiver introduce this activity if they are worried their loved one will refuse a \"test\"?",
+    "answer": "You can frame the activity as a request for help rather than an assessment. For example, tell your loved one, \"I'm trying to make a list of animals for the grandkids' project and I'm stuck; can you help me brainstorm?\" This approach allows you to gather information on their memory skills while making them feel valued and helpful.",
+    "timestamp": "15:09-15:44",
+    "time_start_sec": 909,
+    "time_end_sec": 944
   },
   {
-    "question": "Can this test be used effectively in a doctor's office, and if so, how?",
-    "answer": "Yes, it can be a great way to break the ice during a visit. Since it only takes a minute, a caregiver can suggest it to the doctor as a quick, non-threatening way to gauge cognitive function. It often makes the patient feel more comfortable and engaged during the appointment."
+    "question": "Why might a person's score be lower if they feel stressed or pressured during the test?",
+    "answer": "Stress affects everyone's ability to think clearly, not just those with dementia. In the video, even healthy adults felt nervous about \"winning\" or looking smart, which impacted their performance. It is crucial to create a relaxed, encouraging atmosphere so the score reflects true ability rather than anxiety.",
+    "timestamp": "14:20-14:55",
+    "time_start_sec": 860,
+    "time_end_sec": 895
   },
   {
-    "question": "What happens if a person repeats an animal name during the test, and how should the caregiver handle it?",
-    "answer": "If a person repeats a name, the caregiver should simply acknowledge it with a neutral \"okay\" or a smile and move on. The goal is to count unique animals, so repeating a name does not count toward the score, but the interaction should remain friendly and supportive."
+    "question": "Can this test be used during a visit to the doctor, and if so, how?",
+    "answer": "Yes, caregivers can ask doctors to include this quick 90-second activity during annual physicals. Because it is short and feels like a simple word game, it can serve as a non-threatening icebreaker. It provides the doctor with objective data about changes over time without the patient feeling like they are being interrogated.",
+    "timestamp": "13:34-14:13",
+    "time_start_sec": 814,
+    "time_end_sec": 853
   },
   {
-    "question": "How can a family turn this into a regular tradition to monitor changes over time?",
-    "answer": "Families can schedule this activity for special occasions, such as Thanksgiving or Boxing Day. By agreeing to use the exact same category (e.g., \"farm animals\") every year, the family creates a consistent record that makes it easy to spot trends or declines in ability."
-  },
-  {
-    "question": "Why is the \"Animal Fluency Test\" considered a good tool for someone who might be afraid of medical assessments?",
-    "answer": "It feels like a fun game rather than a scary medical exam. Because it is short, interactive, and often involves laughter or storytelling about different animals, it lowers defenses and allows the person to participate willingly without feeling judged or evaluated."
-  },
-  {
-    "question": "What should a caregiver do if they suspect a significant drop in the person's score compared to their baseline?",
-    "answer": "Instead of panicking, use the score as a prompt to have a caring conversation. Ask the person how they are sleeping, eating, or feeling generally. This shift from \"testing\" to \"checking in\" can reveal underlying health issues like fatigue or illness that might be affecting their memory."
-  },
-  {
-    "question": "How does the video define a \"baseline\" in the context of dementia care?",
-    "answer": "A baseline is a snapshot of a person's current abilities at a specific time. It acts as a reference point; by establishing what is \"normal\" for that individual today, caregivers can better recognize when something is truly \"abnormal\" or changing in the future."
-  },
-  {
-    "question": "What is the benefit of involving grandchildren or other family members in this activity?",
-    "answer": "Involving younger generations makes the activity feel like a bonding game rather than a task. It provides a fresh perspective, increases engagement, and gives children a positive way to connect with their elders while helping to gather important health data."
-  },
-  {
-    "question": "Why might a person struggle to name animals if they rely on visual imagery rather than verbal labels?",
-    "answer": "Some people struggle not because they cannot picture the animal in their mind, but because they cannot recall the specific name for that image. This highlights that the test measures both memory retrieval and vocabulary, and a gap here doesn't always mean a lack of knowledge about the animal itself."
-  },
-  {
-    "question": "How can a caregiver prepare themselves emotionally before giving this test to a loved one?",
-    "answer": "Caregivers should remind themselves that this is just a tool for awareness, not a definitive diagnosis. Approaching the test with curiosity rather than fear helps prevent projecting anxiety onto the person, which could make the situation more stressful for them."
-  },
-  {
-    "question": "What is the recommended approach if the person with dementia seems hesitant to participate in the test?",
-    "answer": "Do not force it. The video emphasizes that the test should never feel like a demand. If the person is reluctant, skip it for now and try again later when they are relaxed, or modify the activity to fit their current mood and energy levels."
-  },
-  {
-    "question": "How does the video suggest handling the situation if the person starts listing animals very slowly or stops mid-way?",
-    "answer": "Gently encourage them by reminding them of previous successes or categories they enjoy, like \"Remember how many dogs you listed last time?\" Keep the atmosphere supportive; the act of trying and sharing memories is often more valuable than the final count."
-  },
-  {
-    "question": "What is the ultimate takeaway message regarding the use of this test for caregivers?",
-    "answer": "The most important outcome is increased awareness and open communication. Whether the score is high or low, the true value lies in the opportunity to spend quality time, learn about the person's current mental state, and foster a supportive environment for early detection of changes."
+    "question": "What is the most important mindset for a caregiver to have when reviewing the results of this test?",
+    "answer": "The most important thing is to remain calm and non-judgmental. As the speakers emphasize, \"Who cares?\" if the number isn't perfect. The goal is connection and awareness, not judgment. Whether the score is high or low, the act of doing it together strengthens the relationship and opens the door for loving communication.",
+    "timestamp": "16:52-17:05",
+    "time_start_sec": 1012,
+    "time_end_sec": 1025
   }
 ]

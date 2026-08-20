@@ -1,37 +1,37 @@
 [
   {
-    "question": "What is the main difference between normal forgetfulness and dementia?",
-    "answer": "Normal forgetfulness happens when your brain is temporarily full of too much information, like when a phone call interrupts your plan to make coffee. You might lose track of what you were doing, but you feel frustrated and realize you made a mistake. In dementia, the brain changes so that you cannot hold onto thoughts or connect events logically. Instead of feeling sorry for forgetting, a person with dementia might invent wild stories, like accusing neighbors of stealing toilet paper, to explain why things seem wrong.",
-    "timestamp": "0:00-2:36",
+    "question": "What is the main difference between normal age-related forgetfulness and dementia when someone gets distracted from a task?",
+    "answer": "In normal forgetfulness, your brain is still working correctly, but your \"working memory\" (the part that holds temporary thoughts) gets full. If you get distracted, like by a phone call, you might forget why you walked into the kitchen. However, you can figure it out by going back to where you started or looking for clues, like seeing the coffee pot. In dementia, the brain cannot connect these clues properly. Instead of remembering the coffee, the person might see a dirty glass and create a false story, such as believing someone snuck in and stole food, because their brain cannot link the past thought with the present moment.",
+    "timestamp": "0:00-4:56",
     "time_start_sec": 0,
-    "time_end_sec": 156
+    "time_end_sec": 296
   },
   {
-    "question": "Why does the speaker say that working memory is important, and what happens to it in dementia?",
-    "answer": "Working memory is a small part of your brain that helps you focus on tasks and hold several pieces of information at once, like remembering to make coffee while walking to the kitchen. It can only hold about five to eight items. When something unexpected happens, like a phone ringing, this space fills up. In normal forgetfulness, the new information pushes the old plan out of your mind temporarily. In dementia, the brain loses the ability to keep that original plan safe, so the intention to make coffee is completely lost forever.",
-    "timestamp": "2:43-4:00",
-    "time_start_sec": 163,
-    "time_end_sec": 240
+    "question": "Why does returning to the original location help someone with normal forgetfulness remember their task?",
+    "answer": "When normal forgetfulness happens, the brain needs a strong signal, called a \"cue,\" to trigger the memory. Visual cues (what you see), verbal cues (what you hear), or simply being physically back in the room where the thought started can act as this signal. For example, walking back to the living room and sitting down might remind you that you were watching TV and decided to make coffee. This strategy works because the brain is still able to process these environmental hints to recover the lost thought.",
+    "timestamp": "4:30-4:56",
+    "time_start_sec": 270,
+    "time_end_sec": 296
   },
   {
-    "question": "What practical strategy can someone with normal forgetfulness use to remember their tasks?",
-    "answer": "A helpful strategy is to keep a notepad and pencil right next to the telephone so you can write down important details immediately. Another key step is to return to the exact place where you first had the thought. By physically going back to the living room or kitchen, you can look for strong visual clues, like a coffee pot, that remind your brain what you intended to do. This helps you reconnect with your original goal.",
-    "timestamp": "3:36-4:48",
-    "time_start_sec": 216,
-    "time_end_sec": 288
+    "question": "How might a person with dementia interpret common objects in their home when they are confused about what they were doing?",
+    "answer": "Because the brain with dementia struggles to connect events logically, it may misinterpret ordinary items as evidence of something wrong. For instance, if a person intended to make coffee but got distracted, they might later find a dirty glass in the kitchen. Instead of realizing they forgot their task, their brain might invent a story that intruders came through the basement, ate their food, and left the glass behind. These actions feel logical and real to the person at that moment, even though they seem confusing to others.",
+    "timestamp": "5:19-6:17",
+    "time_start_sec": 319,
+    "time_end_sec": 377
   },
   {
-    "question": "How does the behavior of a person with dementia differ from someone who is just forgetful when they lose track of a task?",
-    "answer": "A person who is just forgetful feels irritation and frustration because they know they made a mistake and want to fix it. However, a person with dementia often creates illogical explanations for their confusion. For example, instead of admitting they forgot to make coffee, they might suddenly accuse strangers of breaking into their house and stealing food. They act on random things they see around them, making actions that don't make sense to others, even though they believe their own story is true.",
-    "timestamp": "4:58-6:20",
-    "time_start_sec": 298,
-    "time_end_sec": 380
-  },
-  {
-    "question": "Why is telling a person with dementia to \"remember\" usually ineffective?",
-    "answer": "Telling someone with dementia to \"remember\" does not work because their brain can no longer access the memories or plans they need. The speaker explains that when forgetfulness turns into dementia, simply reminding the person is not helpful. The brain has changed in a way that makes recalling past events or intentions impossible, so caregivers need to change their approach rather than trying to force the person to remember.",
-    "timestamp": "7:23-7:43",
-    "time_start_sec": 443,
+    "question": "Why is it unhelpful to ask a person with dementia, \"Don't you remember?\" when they miss an appointment or event?",
+    "answer": "Asking \"Don't you remember?\" assumes the person's memory system is working like it used to and just needs a reminder. In dementia, the ability to recall recent conversations or plans is damaged, so no amount of reminding will fix it. The person genuinely does not have access to that memory. Telling them to remember can cause frustration and confusion because they cannot retrieve the information no matter how hard they try. It is more helpful to accept that the memory loss is due to the disease, not a lack of effort.",
+    "timestamp": "6:38-7:43",
+    "time_start_sec": 398,
     "time_end_sec": 463
+  },
+  {
+    "question": "What practical habit do people with normal forgetfulness often develop to manage distractions like phone calls?",
+    "answer": "People who experience frequent normal forgetfulness often learn to adapt by keeping a notepad and pencil right next to the telephone. Some even tie the pencil to the phone so it is never missing. This allows them to immediately write down important details, like meeting times or names, before their working memory gets overloaded by other parts of the conversation. This simple tool helps bridge the gap when the brain temporarily drops a thought due to distraction.",
+    "timestamp": "3:33-3:51",
+    "time_start_sec": 213,
+    "time_end_sec": 231
   }
 ]

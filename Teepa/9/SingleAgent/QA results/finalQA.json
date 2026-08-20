@@ -1,30 +1,30 @@
 [
   {
-    "question": "Why is establishing a visual connection before speaking important when caring for someone with dementia?",
-    "answer": "The video explains that people with dementia need to see what you are doing and who you are before they can process what you are saying. If you speak without first making eye contact or showing your actions, the person may feel confused or disconnected, which can lead to frustration or resistance. Always start by visually engaging them so they know exactly what is happening.",
-    "timestamp": "0:03-0:12",
+    "question": "What is the best first step to connect with a person who has dementia before speaking to them?",
+    "answer": "The very first step is to make a visual connection. You want the person to see you and clearly understand what you are doing before you say a single word. Many caregivers make the mistake of starting with words immediately, but showing your actions first helps the person feel safe and aware of your presence.",
+    "timestamp": "0:03-0:18",
     "time_start_sec": 3,
-    "time_end_sec": 12
+    "time_end_sec": 18
   },
   {
-    "question": "What specific mistake does the speaker describe that causes a person with dementia to become upset or aggressive?",
-    "answer": "The speaker describes a situation where a caregiver talked too much (\"ran their mouth\") without first ensuring there was a visual connection. Because the person did not see the caregiver's actions beforehand, they felt lost and confused, leading to an angry reaction. This teaches us that talking too fast or too much without showing our actions first breaks the necessary link between sight and sound.",
-    "timestamp": "0:36-0:52",
-    "time_start_sec": 36,
-    "time_end_sec": 52
+    "question": "Why should caregivers avoid giving long verbal instructions or asking many questions at once?",
+    "answer": "Speaking too much or rushing through a list of tasks—sometimes called \"diarrhea of the mouth\"—can cause the person with dementia to become confused and disengage. When you talk without first establishing a visual connection, the person may just say \"huh\" and mentally check out because they cannot process the flood of words. It is better to slow down and ensure they are following you visually.",
+    "timestamp": "0:26-0:47",
+    "time_start_sec": 26,
+    "time_end_sec": 47
   },
   {
-    "question": "How should a caregiver coordinate their words and actions to avoid confusing the person with dementia?",
-    "answer": "You must ensure that your visual actions and your spoken words match perfectly. For example, if you want someone to come with you, you should physically demonstrate the action (like standing up or pointing) while saying something simple like \"Let's go,\" rather than just giving a complex verbal command. When your eyes and your voice agree, the person understands clearly and feels safe.",
-    "timestamp": "0:54-1:11",
-    "time_start_sec": 54,
+    "question": "How can a mismatch between your body language and your words affect the person with dementia?",
+    "answer": "It is crucial that your visual actions match your spoken words. If your face or body looks tense or aggressive while your words sound nice, the person with dementia will trust your body language more and may react with fear or resistance. For example, if you smile but your eyes look angry, they will likely respond to the anger they see, not the kindness they hear.",
+    "timestamp": "0:51-1:11",
+    "time_start_sec": 51,
     "time_end_sec": 71
   },
   {
-    "question": "What is the recommended step-by-step approach for getting a person with dementia ready for a task like changing clothes?",
-    "answer": "Instead of asking a series of rapid questions, you should combine a clear visual cue with a simple statement. First, show the action you intend to take, such as holding up the shirt or moving toward the bathroom, while using a calm, direct phrase like \"Are you ready?\" or \"Let's take your shirt off.\" This method helps the person follow your lead without feeling overwhelmed by too many words or sudden surprises.",
-    "timestamp": "1:40-1:54",
-    "time_start_sec": 100,
+    "question": "What practical strategy can help prevent a negative reaction when helping someone get dressed?",
+    "answer": "Instead of jumping straight into commands or bringing up past conflicts, focus on matching your calm visual presence with simple, clear speech. Before asking to remove a shirt, ensure you have their attention visually and that your demeanor is peaceful. This approach helps avoid triggering defensive reactions, such as hitting, which might happen if the person feels rushed or threatened by your tone or history.",
+    "timestamp": "1:37-1:54",
+    "time_start_sec": 97,
     "time_end_sec": 114
   }
 ]
