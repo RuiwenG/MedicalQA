@@ -456,7 +456,7 @@ function restore(storeKey) {
     const raw = localStorage.getItem(storeKey);
     if (!raw) return null;
     const obj = JSON.parse(raw);
-    if (!obj || obj.version !== 4) return null;
+    if (!obj || ![4, 5].includes(obj.version)) return null;
     obj.scores = obj.scores || {};
     obj.recommendations = obj.recommendations || {};
     obj.comments = obj.comments || {};
