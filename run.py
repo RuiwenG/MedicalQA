@@ -204,11 +204,24 @@ def writeback_times_canonical(csv_path: Path, updates: dict, app_ids: list[int])
         r = csv.DictReader(f)
         rows = list(r)
         fieldnames = list(r.fieldnames or [])
-    # 2) Ensure columns exist
-    needed = ["index", "url", "language"] + [f"approach{aid}" for aid in app_ids]
-    for col in needed:
-        if col not in fieldnames:
-            fieldnames.append(col)
+
+    # 2) Rebuild the header from the canonical schema: identity columns plus a
+    # column for EVERY known approach, not just the ones this run touched.
+    #
+    # Only widening the header for app_ids meant a CSV that had lost a column
+    # never got it back: run `--app 3` against a copy missing approach2/approach4
+    # and the output still lacks them, so syncing that copy over a complete one
+    # silently drops the timings. Writing the full schema every time makes the
+    # file self-healing instead. Columns present in the file but not in the
+    # schema are preserved on the end rather than dropped.
+    canonical = ["index", "url", "language"] + [
+        f"approach{aid}" for aid in sorted(APPROACH_FOLDERS)
+    ]
+    extras = [c for c in fieldnames if c not in canonical]
+    restored = [c for c in canonical if c not in fieldnames]
+    fieldnames = canonical + extras
+    if restored:
+        print(f"ℹ️ Restoring missing CSV column(s): {', '.join(restored)}")
 
     # 2.5) Build an index → row map for quick updates
     by_idx = {}
@@ -241,7 +254,9 @@ def writeback_times_canonical(csv_path: Path, updates: dict, app_ids: list[int])
     )
     try:
         with open(tmp_fd, "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=fieldnames)
+            # restval fills columns a row predates (e.g. a header just widened
+            # back to the full schema) instead of raising.
+            w = csv.DictWriter(f, fieldnames=fieldnames, restval="")
             w.writeheader()
             w.writerows(rows)
             f.flush()

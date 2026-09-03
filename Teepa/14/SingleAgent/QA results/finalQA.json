@@ -1,86 +1,86 @@
 [
   {
-    "question": "What part of the brain is often damaged first in dementia, and what does it normally help us do?",
-    "answer": "The area often affected first is the prefrontal cortex, located right behind your forehead. In a healthy brain, this section acts like a manager. It is the last part to fully develop (usually in our late 20s or early 30s) but is often the first to struggle in dementia. Its main job is to handle complex thinking skills that help us navigate daily life smoothly.",
-    "timestamp": "1:00-2:20",
-    "time_start_sec": 60,
-    "time_end_sec": 140
+    "question": "What is the prefrontal cortex, and why is it important for daily tasks?",
+    "answer": "The prefrontal cortex is the front part of your brain, located right behind your forehead. It acts as the brain’s \"manager\" because it is responsible for complex thinking and planning. In a healthy brain, this area has strong wiring connections that help you organize your thoughts and actions. However, in someone with dementia, this wiring can become significantly damaged or lost, which makes it difficult for them to process information logically or complete everyday activities smoothly.",
+    "timestamp": "0:58-2:19",
+    "time_start_sec": 58,
+    "time_end_sec": 139
   },
   {
-    "question": "How does damage to the front of the brain affect a person's ability to control their impulses?",
-    "answer": "This part of the brain usually acts as a brake, telling us \"whoa, that's enough\" when we want to eat too many cookies or say something inappropriate. When dementia damages this area, that internal brake stops working. The person may act on immediate urges from their emotional brain without being able to stop themselves, even if the behavior seems unusual to others.",
-    "timestamp": "2:32-3:20",
+    "question": "How does damage to the prefrontal cortex affect a person's ability to control their impulses?",
+    "answer": "The prefrontal cortex provides impulse control, which is the ability to pause and think before acting. For example, it helps a person decide not to eat another cookie or say something inappropriate. When this part of the brain is affected by dementia, the \"brakes\" stop working. The person may act on immediate urges from their more primitive brain without stopping to consider if the action is appropriate or safe, leading to behaviors that might seem impulsive or out of character.",
+    "timestamp": "2:32-3:18",
     "time_start_sec": 152,
-    "time_end_sec": 200
+    "time_end_sec": 198
   },
   {
-    "question": "Why might a person with dementia get stuck doing a simple task like standing up or going to the bathroom?",
-    "answer": "Everyday actions are actually made up of many tiny steps: starting the thought, planning the sequence of movements, and knowing when to stop. Dementia can break this chain. A person might forget how to initiate the action, lose track of the middle steps, or be unable to terminate the activity. This leaves them feeling stuck and unsure of what to do next, even for simple tasks.",
-    "timestamp": "3:35-4:40",
-    "time_start_sec": 215,
+    "question": "Why do people with dementia often get stuck doing the same thing over and over?",
+    "answer": "This happens because the brain struggles with initiation, sequencing, and termination. Initiation is starting a task, sequencing is organizing the steps (like standing up involves pulling feet back, leaning forward, and pushing up), and termination is knowing when to stop and move on. If the brain cannot terminate one activity, the person gets \"stuck\" repeating it. They aren't refusing to stop; their brain literally lacks the signal to end the current action and start a new one.",
+    "timestamp": "3:30-4:40",
+    "time_start_sec": 210,
     "time_end_sec": 280
   },
   {
-    "question": "How does dementia change a person's ability to make choices?",
-    "answer": "A healthy brain can easily weigh five to eight different options to make a decision. As dementia progresses, this ability shrinks. The person may only be able to handle two clear choices at a time. Offering too many options can become overwhelming, so it helps to present limited, simple choices that still allow the person to feel they have a say in what happens.",
+    "question": "How should caregivers adjust how they offer choices to someone with dementia?",
+    "answer": "A healthy brain can easily choose from five to eight options, but a brain affected by dementia often struggles to process more than two choices. To help, limit options to just two clear alternatives. This reduces confusion and helps the person feel like they are making a decision, even though the caregiver is guiding them toward manageable options. Presenting too many choices can cause the person to freeze or feel overwhelmed.",
     "timestamp": "5:09-5:36",
     "time_start_sec": 309,
     "time_end_sec": 336
   },
   {
-    "question": "What does it mean when a person with dementia loses \"self-awareness,\" and how does this show up?",
-    "answer": "Self-awareness is the ability to accurately judge your own abilities and needs. When this skill fades, a person might not realize they need help with a task they can no longer do safely. They may insist they are fine when they are struggling, not because they are being stubborn, but because their brain can no longer see the gap between what they want to do and what they are currently capable of doing.",
-    "timestamp": "5:44-6:03",
+    "question": "Why might a person with dementia seem unaware of how their behavior affects others?",
+    "answer": "Dementia can impair self-awareness and the ability to see things from another person's perspective. Normally, we use these skills to understand how our actions look to others and to adjust our behavior accordingly. When these skills are lost, the person may not realize that their actions—such as making noise or invading personal space—are bothering others. They are not being intentionally rude; they simply cannot access the mental tools needed to read social cues or understand another viewpoint.",
+    "timestamp": "5:44-6:19",
     "time_start_sec": 344,
-    "time_end_sec": 363
+    "time_end_sec": 379
   },
   {
-    "question": "Why might someone with dementia seem to understand something one day but be confused by it the next?",
-    "answer": "Dementia causes a loss of connections (wiring) in the brain. A person might still have some memories, words, or motor skills left, but they lose the ability to put all those pieces together logically in the moment. Because these connections can flicker on and off depending on fatigue or stress, their abilities can seem to change rapidly, making their behavior feel unpredictable or inconsistent to caregivers.",
-    "timestamp": "7:45-8:56",
-    "time_start_sec": 465,
+    "question": "Why does it feel like dementia behaviors come \"out of nowhere\" or don't make sense?",
+    "answer": "It feels confusing because the person still retains some skills, such as muscle memory, vision, and language, but they have lost the ability to connect these pieces logically. For instance, they might remember how to hold a shirt but forget the sequence of putting it on. Because they could do the task yesterday, it seems like they are choosing not to do it today. In reality, the damaged wiring prevents them from combining their remaining abilities into a coherent, logical action.",
+    "timestamp": "7:52-8:56",
+    "time_start_sec": 472,
     "time_end_sec": 536
   },
   {
-    "question": "In the video example, why did the woman keep hitting the chair with a maraca for two hours straight?",
-    "answer": "She wasn't trying to be annoying; her brain had lost the ability to \"terminate\" or stop an action once started. Without the internal signal to say \"that's enough,\" she continued the motion repeatedly. Additionally, she lacked the awareness to see how the noise affected others. Her brain was stuck in a loop of initiation without the ability to move on to the next activity.",
-    "timestamp": "9:44-12:02",
-    "time_start_sec": 584,
-    "time_end_sec": 722
+    "question": "What was happening when the woman in the video kept hitting a chair with a maraca?",
+    "answer": "The woman was stuck in a loop because she lacked the impulse control to stop and the ability to terminate the activity and move on. She had been playing music earlier, and her brain continued the rhythm without a way to shift gears. Staff tried redirection, but it failed because they were trying to stop the behavior rather than addressing the underlying need to finish the task. Her brain was essentially waiting for a signal to \"complete\" the action, which never came naturally.",
+    "timestamp": "9:37-12:04",
+    "time_start_sec": 577,
+    "time_end_sec": 724
   },
   {
-    "question": "Why is arguing with a person with dementia about \"reality\" often unhelpful during stressful times?",
-    "answer": "When a person's brain cannot process logic or see multiple perspectives, trying to force them to accept our reality (like explaining safety rules during a pandemic) often leads to conflict. Their fear feels very real to them. Arguing facts doesn't fix the broken wiring causing their confusion; instead, it can increase their distress because they feel unheard and unsafe.",
-    "timestamp": "12:46-13:37",
-    "time_start_sec": 766,
-    "time_end_sec": 817
+    "question": "How can understanding a person's past life help resolve challenging behaviors?",
+    "answer": "Knowing a person's history provides clues to their current actions. In the video, learning that the woman used to be a housecleaner helped the caregiver understand that her repetitive motion was actually an attempt to \"clean.\" Instead of arguing or trying to stop her, the caregiver used substitution. By giving her a cloth and asking her to rub the chair, the caregiver validated her intent. This allowed her to \"finish\" the cleaning task, which satisfied her brain's need for termination and stopped the disruptive noise.",
+    "timestamp": "14:20-15:23",
+    "time_start_sec": 860,
+    "time_end_sec": 923
   },
   {
-    "question": "What strategy worked to help the woman stop hitting the chair in the video demonstration?",
-    "answer": "Instead of telling her to stop, the caregiver used \"substitution.\" Recognizing that the woman had a history of cleaning houses, the caregiver handed her a cloth and asked her to clean the chair. This honored her need to be busy and use her muscle memory. By giving her a meaningful task that matched her actions, the disruptive behavior naturally shifted into something positive.",
-    "timestamp": "14:35-15:28",
-    "time_start_sec": 875,
-    "time_end_sec": 928
+    "question": "What is the \"positive physical approach,\" and why is it better than arguing?",
+    "answer": "The positive physical approach involves staying calm, approaching the person gently, and trying different strategies rather than insisting that your logic is correct. Arguing or trying to force reality on someone with dementia often leads to conflict because their brain cannot process the logical correction. By staying low, speaking softly, and offering a substitute activity, you address the person's emotional or physical need without triggering defensiveness or confusion.",
+    "timestamp": "16:51-17:34",
+    "time_start_sec": 1011,
+    "time_end_sec": 1054
   },
   {
-    "question": "How should a caregiver respond when a person with dementia expresses intense fear, such as believing there is a plague?",
-    "answer": "Rather than denying their fear by saying \"everything is fine,\" it is better to validate their feelings. You can acknowledge that the situation is indeed scary and that you are worried too. By joining them in their emotion and reassuring them that \"we will get through this together,\" you lower their distress without lying or arguing about facts they cannot currently process.",
-    "timestamp": "18:24-19:15",
-    "time_start_sec": 1104,
-    "time_end_sec": 1155
+    "question": "How should a caregiver respond when a person with dementia expresses fear about a situation like a pandemic?",
+    "answer": "Avoid using \"reality orientation\" (correcting them) or telling them to \"calm down,\" as these responses often invalidate their feelings and increase anxiety. Instead, join them where they are emotionally. Acknowledge their fear and distress. For example, say, \"This is really scary, and I can see you are worried.\" Validating their emotion helps lower their stress levels because they feel heard and understood, rather than corrected.",
+    "timestamp": "17:39-18:15",
+    "time_start_sec": 1059,
+    "time_end_sec": 1095
   },
   {
-    "question": "What role does body language play when comforting someone with dementia?",
-    "answer": "Words are only part of the communication. In the video, the caregiver also used facial expressions and tone of voice to mirror the person's concern before offering comfort. Using warm, calm, and matching non-verbal cues helps the person feel understood on a deeper level, especially when their ability to process complex language is fading.",
+    "question": "What does it mean to \"reflect distress,\" and why is it helpful?",
+    "answer": "Reflecting distress means verbally acknowledging the person's fear or anxiety without lying to them or dismissing their feelings. Since people with dementia often lack self-awareness, they may not realize how upset they appear. When a caregiver names the emotion (\"You are really worried\"), it acts as a mirror. This validation helps the person feel safe and supported, which can naturally help their agitation decrease. It builds trust instead of creating a battle over facts.",
+    "timestamp": "19:05-20:02",
+    "time_start_sec": 1145,
+    "time_end_sec": 1202
+  },
+  {
+    "question": "How can visual cues support verbal reassurance during stressful moments?",
+    "answer": "People with dementia often rely more on non-verbal communication than words. If a caregiver says everything is okay but looks tense or frustrated, the person will pick up on the negative body language. To be effective, caregivers should match their facial expressions and tone to their reassuring words. Using a calm voice and open, gentle body language reinforces the message of safety and helps the person feel more secure.",
     "timestamp": "20:09-20:21",
     "time_start_sec": 1209,
     "time_end_sec": 1221
-  },
-  {
-    "question": "What is the main takeaway for caregivers when a loved one's behavior \"doesn't make sense\"?",
-    "answer": "When behavior seems illogical, remember it is likely due to brain changes, not a deliberate choice to be difficult. The person is missing specific skills like stopping an action or seeing another's perspective. Instead of correcting them, try to identify the unmet need behind the behavior and adapt your approach to support them where they are right now.",
-    "timestamp": "16:36-17:34",
-    "time_start_sec": 996,
-    "time_end_sec": 1054
   }
 ]

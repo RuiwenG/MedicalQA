@@ -1,72 +1,72 @@
 [
   {
     "question": "What is the main difference between a hallucination and a delusion?",
-    "answer": "A hallucination happens when a person misinterprets sensory data, meaning they see, hear, or feel something that isn't physically there. A delusion is different because it involves misinterpreting thoughts or stories. With a delusion, the person has a memory of something real but is missing a piece of information, so their brain makes up a story to fill the gap and make sense of the situation.",
+    "answer": "Hallucinations involve misinterpreting sensory data, meaning a person sees, hears, or feels something that isn't physically there. Delusions are different because they are about thinking and perception; they are false beliefs or stories the brain creates to make sense of missing information.",
     "timestamp": "0:57-1:23",
     "time_start_sec": 57,
     "time_end_sec": 83
   },
   {
-    "question": "Why does arguing with facts usually fail when a person with dementia accuses you of something?",
-    "answer": "Arguing rarely works because the person's belief comes from how their brain is processing memories, not from logic. Even if you provide strong evidence or proof that you did not do what they accuse you of, it likely will not change their mind in that moment. Trying to prove you are right often leads to a bigger fight because the person feels you are calling them a liar, which increases their distress.",
-    "timestamp": "4:29-4:46",
-    "time_start_sec": 269,
-    "time_end_sec": 286
+    "question": "Why does the brain create delusions?",
+    "answer": "The brain tries to make sense of the world when it has incomplete information. A person might remember a fragment of an event but miss other details. To fill in those gaps, the brain invents a story using available clues so that things feel logical to them, even if the story isn't true.",
+    "timestamp": "2:06-2:24",
+    "time_start_sec": 126,
+    "time_end_sec": 144
   },
   {
-    "question": "What is meant by the \"kernel of truth\" in a delusion?",
-    "answer": "The \"kernel of truth\" means that even though the specific accusation might be wrong, it is often based on a real event or feeling that got mixed up. For example, a person might accuse you of stealing their car keys because they remember you discussing their driving safety recently, or they saw you holding the keys earlier. Their brain takes these real fragments and combines them incorrectly to create a false story about theft.",
-    "timestamp": "5:10-6:01",
-    "time_start_sec": 310,
-    "time_end_sec": 361
+    "question": "Why is it difficult for caregivers to argue with someone experiencing a delusion?",
+    "answer": "It is difficult because both parties cannot be \"right\" at the same time. The caregiver knows the facts, but the person with dementia genuinely believes their version of events based on what their brain has told them. Trying to prove them wrong often leads to conflict rather than understanding.",
+    "timestamp": "2:29-2:39",
+    "time_start_sec": 149,
+    "time_end_sec": 159
   },
   {
-    "question": "How should a caregiver position their body when responding to an accusation?",
-    "answer": "Instead of getting closer or standing confrontationally, the caregiver should step back into a \"supportive stance.\" This means positioning your body in a way that shows you are not a threat. In the video, the caregiver shifted from facing the person directly to standing alongside them, pointing in the same direction. This physical shift helps lower tension and shows you are on their side rather than opposing them.",
-    "timestamp": "7:23-7:54",
+    "question": "How can a caregiver use a supportive stance during a confrontation about delusions?",
+    "answer": "Instead of getting close or aggressive, the caregiver should back up and adopt a supportive physical posture. This helps de-escalate tension. By creating physical space and staying calm, the caregiver signals safety rather than threat, which can help reduce agitation.",
+    "timestamp": "7:23-7:42",
     "time_start_sec": 443,
-    "time_end_sec": 474
+    "time_end_sec": 462
   },
   {
-    "question": "What is the best verbal response when someone falsely accuses you of taking their item?",
-    "answer": "Rather than saying \"No I didn't,\" which tells the person they are wrong, you should validate their feelings and reflect their words back to them. You might say, \"You are thinking I took the car keys,\" or \"I can see you are worried they are missing.\" Then, gently take responsibility for helping solve the problem without admitting guilt, perhaps by blaming your own forgetfulness to ease their fear, such as saying, \"Oh no, my memory is terrible today, let's look together.\"",
-    "timestamp": "8:11-8:45",
+    "question": "What does it mean to validate what you see and hear?",
+    "answer": "Validation means acknowledging the person’s feelings and perspective without agreeing with the false fact. For example, instead of saying \"No, I didn't take your keys,\" a caregiver might say, \"You think I took the car keys.\" This shows the person they are being heard without telling them they are wrong.",
+    "timestamp": "8:11-8:25",
     "time_start_sec": 491,
-    "time_end_sec": 525
+    "time_end_sec": 505
   },
   {
-    "question": "How can involving a different person help resolve a severe delusion?",
-    "answer": "Sometimes, the person with dementia may distrust their primary caregiver due to their close relationship or recent conflicts. In these cases, a different stakeholder—someone with a different relationship history—might be able to get through. This new person can use the same supportive skills, but because the emotional dynamic is different, the person with dementia may be more willing to listen to them and eventually accept reality.",
-    "timestamp": "15:45-16:09",
-    "time_start_sec": 945,
-    "time_end_sec": 969
+    "question": "How can a caregiver take responsibility to reduce blame during a delusion episode?",
+    "answer": "The caregiver can gently take ownership of the situation to lower defensiveness. For instance, saying, \"Oh my brain, my memory, how terrible my memory is,\" shifts the focus away from accusing the other person. This approach avoids making the person with dementia feel attacked or lied to.",
+    "timestamp": "8:36-8:51",
+    "time_start_sec": 516,
+    "time_end_sec": 531
   },
   {
-    "question": "What strategy helped resolve the traumatic delusion where a woman believed her friend had died?",
-    "answer": "The team realized they could not argue the woman out of her belief that her friend was dead. Instead, they arranged for the actual friend (who the woman thought was an imposter) to visit her in a neutral location, not at home. They allowed time for the two to interact slowly using validation techniques. It took a month of patience and repeated positive interactions before the woman's brain accepted that her friend was truly alive and safe.",
-    "timestamp": "12:36-13:13",
-    "time_start_sec": 756,
+    "question": "What is the \"kernel of truth\" in delusions?",
+    "answer": "Most delusions contain a small piece of reality. In one example, a person accused a caregiver of hiding car keys because they had recently discussed concerns about driving safety. The person remembered the conversation about driving but mixed up the details, leading to the belief that the keys were hidden to stop them from driving.",
+    "timestamp": "5:14-5:44",
+    "time_start_sec": 314,
+    "time_end_sec": 344
+  },
+  {
+    "question": "How did a team handle a severe delusion involving a fear that a loved one had died?",
+    "answer": "When a person believed a friend had died in a tragedy, the team worked together patiently over a month. They eventually arranged for the living friend to visit in a neutral location, not the person's home. Through gentle validation and repeated positive interactions, the person’s brain slowly accepted the reality that the friend was alive.",
+    "timestamp": "11:15-13:13",
+    "time_start_sec": 675,
     "time_end_sec": 793
   },
   {
-    "question": "Why is it important to meet a distressed person in a neutral location rather than their home during a crisis?",
-    "answer": "Meeting in a neutral location is safer and more effective because the person's home is their \"safe place.\" If a confrontation happens there, the person has nowhere to retreat to if they feel threatened, which can increase their agitation. By meeting elsewhere, both parties can sit side-by-side with space between them, allowing the person to feel less trapped and more open to calming down.",
-    "timestamp": "15:01-15:25",
-    "time_start_sec": 901,
-    "time_end_sec": 925
+    "question": "Why might a different person need to intervene in a delusion scenario?",
+    "answer": "Different relationships carry different weights. Even if two people use the same communication skills, the person with dementia may respond better to someone else due to their unique private relationship with that individual. Sometimes, bringing in another trusted person can break through a stubborn delusion.",
+    "timestamp": "15:56-16:24",
+    "time_start_sec": 956,
+    "time_end_sec": 984
   },
   {
-    "question": "What should a caregiver do for themselves after a difficult interaction involving accusations?",
-    "answer": "Caregivers need to plan how to decompress after an intense situation. Using all those communication skills while being accused is emotionally draining. It is important to step away from the scene if possible, take deep breaths, lie down, or do whatever activity helps you reset. Recognizing that you need time to recover is normal and necessary so you can return to caregiving with patience.",
-    "timestamp": "10:23-10:50",
+    "question": "What should a caregiver do after a stressful interaction involving delusions?",
+    "answer": "Caregivers should take time to decompress and care for themselves. After a high-stress moment, it is important to step back, breathe, or leave the scene briefly. Using these skills takes significant emotional energy, so self-care is necessary to stay resilient and supportive.",
+    "timestamp": "10:23-10:52",
     "time_start_sec": 623,
-    "time_end_sec": 650
-  },
-  {
-    "question": "Is it common for people to confuse hallucinations and delusions?",
-    "answer": "Yes, it is very common. Even experienced caregivers and professionals sometimes use the terms interchangeably because the behaviors can look similar on the surface. However, understanding the difference—that hallucinations involve the senses and delusions involve confused thinking—is helpful for choosing the right response. Do not worry if you mix them up occasionally; the most important thing is responding with empathy regardless of the label.",
-    "timestamp": "1:30-2:01",
-    "time_start_sec": 90,
-    "time_end_sec": 121
+    "time_end_sec": 652
   }
 ]

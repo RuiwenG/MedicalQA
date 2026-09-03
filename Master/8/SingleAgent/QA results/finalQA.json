@@ -1,79 +1,79 @@
 [
   {
-    "question": "What is the main purpose of using the \"animal fluency test\" described in the video?",
-    "answer": "The main goal is not to diagnose dementia immediately, but to establish a personal \"baseline\" or starting score for yourself or a loved one. By recording this number now and repeating the test once a year, you can notice if there is a significant drop over time, which serves as an early alert to check in further.",
-    "timestamp": "0:36-1:36",
-    "time_start_sec": 36,
-    "time_end_sec": 96
-  },
-  {
-    "question": "How exactly do you perform the one-minute animal fluency test?",
-    "answer": "You need two people. One person acts as the timekeeper and simply makes tick marks on a piece of paper for every animal named (they do not need to write down the specific animal names). The other person tries to say as many different animals as they can out loud within exactly one minute.",
-    "timestamp": "1:05-1:29",
-    "time_start_sec": 65,
+    "question": "What is the \"Animal Fluency Test\" and how do I perform it?",
+    "answer": "The Animal Fluency Test is a simple, one-minute activity where one person acts as the timer and tracker, while the other person lists as many animals as they can think of. The tracker should make small tick marks for each animal named but does not need to write down the specific words. This quick exercise helps establish a baseline for verbal fluency.",
+    "timestamp": "1:01-1:29",
+    "time_start_sec": 61,
     "time_end_sec": 89
   },
   {
-    "question": "What score range generally indicates a potential area of concern in this test?",
-    "answer": "While individual baselines vary, the speakers mention that scoring below 17 is generally considered a place of concern. Some experts suggest that a score below 14 is an even stronger indicator that something might be changing, but the most important factor is comparing the score to the person's own past results.",
-    "timestamp": "11:28-11:40",
-    "time_start_sec": 688,
+    "question": "Why is establishing a personal baseline more useful than comparing scores to general averages?",
+    "answer": "Establishing a personal baseline allows you to notice changes in an individual’s performance over time, which is often more meaningful than comparing them to average numbers. Since everyone has different strengths—such as being better at visualizing images versus recalling words alphabetically—knowing what is normal for that specific person helps identify if their abilities are declining or staying stable.",
+    "timestamp": "0:36-1:00; 11:14-12:23",
+    "time_start_sec": 36,
+    "time_end_sec": 60
+  },
+  {
+    "question": "How can families use this test as a fun tradition rather than a medical exam?",
+    "answer": "Families can turn this into a regular, low-stress tradition by doing the test together during holidays like Thanksgiving or Boxing Day. By using the same category (like animals) each year, family members can compare their current results to their previous baselines. This approach makes the activity feel like a game or a way to connect, rather than a scary medical assessment.",
+    "timestamp": "10:28-11:11",
+    "time_start_sec": 628,
+    "time_end_sec": 671
+  },
+  {
+    "question": "What should I do if someone’s score drops significantly from their usual baseline?",
+    "answer": "If a person’s score drops significantly from their established baseline, it serves as an alert to look for underlying causes. Before worrying about dementia, consider factors like fatigue, illness, or lack of sleep. It is a good opportunity to gently ask questions about their well-being, such as how they are sleeping or if they are feeling unwell.",
+    "timestamp": "1:30-1:36; 12:43-12:56",
+    "time_start_sec": 90,
+    "time_end_sec": 96
+  },
+  {
+    "question": "How can I introduce this activity to someone who might feel threatened by a \"test\"?",
+    "answer": "To avoid making the person feel judged or stressed, frame the activity as a fun game or a way to help with another task, such as coming up with ideas for grandchildren. Emphasize that it is not a competition or a pass/fail exam. You can also suggest doing it together so it feels like a shared experience rather than an evaluation.",
+    "timestamp": "14:04-14:51; 15:07-15:49",
+    "time_start_sec": 844,
+    "time_end_sec": 891
+  },
+  {
+    "question": "Can this test be used during a doctor’s visit, and if so, how?",
+    "answer": "Yes, this test can be a helpful tool during annual physicals. Caregivers can ask doctors to perform this one-minute activity with the patient. It can serve as an icebreaker if the patient is nervous and provides the doctor with concrete data on the patient’s verbal fluency in a non-threatening way.",
+    "timestamp": "13:01-14:03",
+    "time_start_sec": 781,
+    "time_end_sec": 843
+  },
+  {
+    "question": "Does practicing the test improve the score, and does that affect its accuracy?",
+    "answer": "While people may influence each other or use strategies like alphabetical ordering after hearing others participate, the goal is not to \"practice\" for a perfect score. The focus is on observing natural patterns and consistency over time. Even if someone improves slightly due to familiarity, a significant drop from their personal norm remains a valid indicator of change.",
+    "timestamp": "8:18-9:43",
+    "time_start_sec": 498,
+    "time_end_sec": 583
+  },
+  {
+    "question": "What are some alternative categories we can use besides animals?",
+    "answer": "You can use any category of nouns to create a baseline. Common alternatives include vegetables, fruits, capital cities, or any other list of items. The key is to stick with the exact same category each time you test to ensure accurate comparisons against the previous baseline.",
+    "timestamp": "9:47-10:27",
+    "time_start_sec": 587,
+    "time_end_sec": 627
+  },
+  {
+    "question": "How long does the entire process take, including setup and decompression?",
+    "answer": "While the actual listing part takes only one minute, the entire process—including setting the timer, counting the ticks, and taking a moment to breathe and relax afterward—takes about 90 seconds. This short duration makes it easy to fit into daily routines or medical appointments without causing fatigue.",
+    "timestamp": "13:05-13:25",
+    "time_start_sec": 785,
+    "time_end_sec": 805
+  },
+  {
+    "question": "How should a caregiver react if the person struggles or gets stuck during the test?",
+    "answer": "Offer gentle encouragement and positive reinforcement. If the person pauses, you can say things like \"Keep going,\" \"That's cool,\" or \"Awesome\" to help them stay relaxed and focused. The goal is to support their effort and maintain a dignified, stress-free environment rather than correcting them.",
+    "timestamp": "16:14-16:33",
+    "time_start_sec": 974,
+    "time_end_sec": 993
+  },
+  {
+    "question": "What is the significance of the number 17 or 14 in these tests?",
+    "answer": "In clinical settings, scoring below 17 (or sometimes 14) is often considered a point of concern. However, for caregivers, these absolute numbers are less important than the individual’s personal history. A score of 17 might be perfectly normal for one person but a significant drop for another who usually scores much higher. Always prioritize the trend relative to the person’s own baseline.",
+    "timestamp": "11:20-11:40",
+    "time_start_sec": 680,
     "time_end_sec": 700
-  },
-  {
-    "question": "Why is it important to use the exact same category (like \"animals\") every time you repeat this test?",
-    "answer": "To get an accurate comparison, you must compare \"apples to apples.\" If you test someone on \"animals\" this year, you must test them on \"animals\" next year. Changing the category to \"vegetables\" or \"cities\" would make the scores impossible to compare fairly because some topics are naturally easier or harder for different people.",
-    "timestamp": "10:20-10:28",
-    "time_start_sec": 620,
-    "time_end_sec": 628
-  },
-  {
-    "question": "What are some common mental strategies people use to remember more items during the test?",
-    "answer": "People often use grouping strategies to help their brains retrieve words faster. Common methods include imagining specific places (like a farm, a zoo, or a forest), grouping animals by type (like birds or dogs), or going through the alphabet letter by letter (thinking of animals that start with A, then B, then C).",
-    "timestamp": "8:07-9:00",
-    "time_start_sec": 487,
-    "time_end_sec": 540
-  },
-  {
-    "question": "How can families make this assessment feel less like a scary medical exam?",
-    "answer": "You can turn it into a fun family tradition, such as doing it together on holidays like Thanksgiving or birthdays. By having everyone participate—including children and grandparents—it becomes a game rather than a test. This reduces stress and makes it a natural way to check in on each other's health without causing alarm.",
-    "timestamp": "10:30-11:07",
-    "time_start_sec": 630,
-    "time_end_sec": 667
-  },
-  {
-    "question": "What should a caregiver do if they notice a loved one's score has dropped significantly from their usual baseline?",
-    "answer": "Instead of panicking, use the result as a gentle opening to ask caring questions about their daily life. Ask things like, \"How have you been sleeping?\" or \"Are you feeling sick?\" Sometimes a lower score is due to temporary factors like fatigue or illness rather than dementia progression, so it is a chance to offer support.",
-    "timestamp": "12:43-12:56",
-    "time_start_sec": 763,
-    "time_end_sec": 776
-  },
-  {
-    "question": "How can a caregiver introduce this activity if they are worried their loved one will refuse a \"test\"?",
-    "answer": "You can frame the activity as a request for help rather than an assessment. For example, tell your loved one, \"I'm trying to make a list of animals for the grandkids' project and I'm stuck; can you help me brainstorm?\" This approach allows you to gather information on their memory skills while making them feel valued and helpful.",
-    "timestamp": "15:09-15:44",
-    "time_start_sec": 909,
-    "time_end_sec": 944
-  },
-  {
-    "question": "Why might a person's score be lower if they feel stressed or pressured during the test?",
-    "answer": "Stress affects everyone's ability to think clearly, not just those with dementia. In the video, even healthy adults felt nervous about \"winning\" or looking smart, which impacted their performance. It is crucial to create a relaxed, encouraging atmosphere so the score reflects true ability rather than anxiety.",
-    "timestamp": "14:20-14:55",
-    "time_start_sec": 860,
-    "time_end_sec": 895
-  },
-  {
-    "question": "Can this test be used during a visit to the doctor, and if so, how?",
-    "answer": "Yes, caregivers can ask doctors to include this quick 90-second activity during annual physicals. Because it is short and feels like a simple word game, it can serve as a non-threatening icebreaker. It provides the doctor with objective data about changes over time without the patient feeling like they are being interrogated.",
-    "timestamp": "13:34-14:13",
-    "time_start_sec": 814,
-    "time_end_sec": 853
-  },
-  {
-    "question": "What is the most important mindset for a caregiver to have when reviewing the results of this test?",
-    "answer": "The most important thing is to remain calm and non-judgmental. As the speakers emphasize, \"Who cares?\" if the number isn't perfect. The goal is connection and awareness, not judgment. Whether the score is high or low, the act of doing it together strengthens the relationship and opens the door for loving communication.",
-    "timestamp": "16:52-17:05",
-    "time_start_sec": 1012,
-    "time_end_sec": 1025
   }
 ]

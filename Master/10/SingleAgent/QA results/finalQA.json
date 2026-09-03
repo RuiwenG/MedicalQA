@@ -1,30 +1,30 @@
 [
   {
-    "question": "When is the \"hand-under-hand\" technique most helpful for someone with dementia during a meal?",
-    "answer": "This technique is especially useful when a person needs help just getting started. By gently guiding their hands, you trigger their muscle memory, reminding their brain and body how to eat or drink. Often, once you help them initiate the movement, they can continue on their own.",
-    "timestamp": "0:47-1:03",
-    "time_start_sec": 47,
+    "question": "How does the \"hand under hand\" technique help a person with dementia start eating or drinking?",
+    "answer": "This method helps by triggering muscle memory. When you gently guide their hand, it sends signals to their brain that remind them of the action. Often, once this connection is made, the person can continue eating or drinking on their own without further assistance.",
+    "timestamp": "0:05-1:03",
+    "time_start_sec": 5,
     "time_end_sec": 63
   },
   {
-    "question": "How should I position my chair and body to best assist someone using the hand-under-hand method?",
-    "answer": "Sit very close to the person on the side of their dominant hand (right side if they are right-handed). Place your chair perpendicular to theirs and sit on the edge of your seat so you can lean in comfortably. Keep your legs spread for stability, with one leg behind their chair, to stay connected and grounded with them throughout the meal.",
-    "timestamp": "1:25-2:53",
-    "time_start_sec": 85,
-    "time_end_sec": 173
+    "question": "What is the best way to position your chair and body when assisting someone with a meal?",
+    "answer": "Place your chair perpendicular (at a right angle) to theirs, close enough so you are connected but not crowding them. Sit on the edge of your chair rather than leaning back. Position yourself on the side of their dominant hand (for example, sit on the right if they are right-handed) to make the movement feel natural for them.",
+    "timestamp": "1:05-2:54",
+    "time_start_sec": 65,
+    "time_end_sec": 174
   },
   {
-    "question": "What is the secret to holding a cup or spoon without causing discomfort or spilling?",
-    "answer": "Instead of gripping tightly or bending the person's wrist awkwardly, use your \"skill fingers\" (the fingers closest to your thumb) to guide the item. When drinking, keep the cup centered in front of their body and lift it straight up. When eating, support their elbow in the crook of your arm and tilt the bowl toward them. This natural motion often causes the mouth to open automatically and allows the person to feel the movement clearly.",
-    "timestamp": "3:06-4:25",
-    "time_start_sec": 186,
-    "time_end_sec": 265
+    "question": "Why do caregivers use specific fingers to hold the cup or spoon during hand under hand assistance?",
+    "answer": "Caregivers use their \"skill fingers\" (the index and middle fingers) to hold the utensil or cup. This allows the caregiver to move the item up the center line of the person’s body smoothly. It prevents bending the person's wrist awkwardly and avoids bringing food from the side, which feels unnatural and can cause spills.",
+    "timestamp": "3:02-4:26",
+    "time_start_sec": 182,
+    "time_end_sec": 266
   },
   {
-    "question": "Why is the hand-under-hand approach better than simply feeding the person myself?",
-    "answer": "This method keeps the person involved in their own care rather than taking over completely. Because your hand is underneath theirs, they can still feel what is happening and give you immediate feedback, such as letting you know when they are thirsty, full, or ready for the next bite. It respects their abilities and helps maintain their independence for as long as possible.",
-    "timestamp": "4:28-5:25",
+    "question": "How can you tell if the person is finished or still thirsty while using this technique?",
+    "answer": "Because your hands are connected, the person can give you direct physical feedback. They might pull away slightly to show they are done, or keep holding steady to show they are still thirsty. This allows them to communicate their needs without having to find the words.",
+    "timestamp": "4:28-4:40",
     "time_start_sec": 268,
-    "time_end_sec": 325
+    "time_end_sec": 280
   }
 ]

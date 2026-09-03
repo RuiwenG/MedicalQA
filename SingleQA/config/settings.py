@@ -50,7 +50,7 @@ class Settings:
             f"supportive for dementia caregivers. {lang_guard}"
         )
 
-        prompt = f"""Read the following transcript carefully and generate the {k} most valuable question-answer pairs in {lang_name}. Every QA pair must satisfy ALL FOUR quality criteria:
+        prompt = f"""Read the following transcript carefully and generate the {k} most valuable question-answer pairs in {lang_name}. Every QA pair must satisfy ALL FIVE quality criteria:
 
         Alignment (accurate & grounded): Base every answer strictly on information stated in the transcript. Do not add outside knowledge, speculate, or exaggerate. If the transcript is unclear on a point, do not create a question about it.
 
@@ -60,10 +60,12 @@ class Settings:
 
         Supportive (empathetic): Use a warm, non-judgmental tone that normalizes the caregiver's struggles. Where the transcript offers reassurance, coping strategies, or empathy-building insight into the person with dementia's experience, capture it. Never phrase answers in a blaming or alarming way.
 
+        Self-contained (Standalone): every pair should be read on its own, without any order, by a caregiver who has not seen the video before and can’t see the other pairs. Don’t mention the video, transcript or speaker. Never mention any pronouns before defining them first.
+
         Coverage rules:
         - Draw questions from across the ENTIRE transcript, not just one section.
         - Ensure the pairs do not overlap significantly in content.
-        - QA needs to satisfy all of the 4 criteria.
+        - QA needs to satisfy all of the 5 criteria.
 
         Strictly format your response as a list of question-answer pairs, with each pair clearly marked ("Question 1:", "Timestamp 1:", "Answer 1:" on separate lines, in that order). Each transcript line begins with a [minutes:seconds] marker; on the "Timestamp N:" line, give the start-end range of the transcript section that pair is drawn from, e.g. "Timestamp 3: 4:15-6:40". Do not mention timestamps inside the question or answer text itself. Output only the structured pairs — no preamble, no closing remarks.
 

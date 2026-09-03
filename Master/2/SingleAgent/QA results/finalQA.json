@@ -1,65 +1,65 @@
 [
   {
-    "question": "What is \"confabulation\" in the context of dementia, and why does it happen?",
-    "answer": "Confabulation is when a person's brain automatically fills in missing memory gaps with made-up stories that feel real to them. This happens because damage to the frontal lobe prevents the brain from checking facts or reasoning logically. Just like anyone might worry excessively if someone is two minutes late to a meeting, a brain with dementia creates elaborate explanations—like assuming a car accident occurred—to make sense of confusion, even though those stories are not based on reality.",
-    "timestamp": "2:44-4:04",
-    "time_start_sec": 164,
+    "question": "What is confabulation, and why does it happen in people with dementia?",
+    "answer": "Confabulation is when a person’s brain fills in missing information with made-up stories. In dementia, the frontal lobe (the part of the brain responsible for checking facts) may not work properly. When the person lacks details about what happened, their brain automatically creates a story to make sense of the situation, even if that story isn’t true. It is not lying on purpose; it is the brain trying to cope with gaps in memory or understanding.",
+    "timestamp": "3:03-4:04",
+    "time_start_sec": 183,
     "time_end_sec": 244
   },
   {
-    "question": "How can confabulation show up in everyday conversations about people or relationships?",
-    "answer": "A person with dementia might create realistic but incorrect stories about people they know. For example, they might insist a single crew member has a wife and send love to her, or talk about their own mother as if she is still alive and giving them cooking advice. These aren't lies; the brain is trying to connect dots using old memories to make the current situation feel familiar and safe.",
-    "timestamp": "6:03-7:12",
-    "time_start_sec": 363,
-    "time_end_sec": 432
+    "question": "Why do caregivers often feel frustrated or confrontational when hearing these made-up stories?",
+    "answer": "Caregivers often feel frustrated because the stories told by the person with dementia do not match reality. For example, a caregiver might know they just asked the person to go to the store, but the person insists they have been gone for hours doing something else. This mismatch can feel like an accusation or a lie, leading the caregiver to want to correct the person or demand a \"rational\" explanation, which often leads to conflict rather than connection.",
+    "timestamp": "5:08-6:01",
+    "time_start_sec": 308,
+    "time_end_sec": 361
   },
   {
-    "question": "Why might a person with dementia accuse a caregiver of stealing or cheating when nothing happened?",
-    "answer": "These accusations often stem from feelings of loneliness or a lack of connection rather than actual events. When the brain feels a void, it tries to explain that uncomfortable feeling by creating a story, such as \"someone stole my money\" or \"you are seeing another woman.\" The core issue is usually an unmet emotional need for engagement, not a factual observation of theft or infidelity.",
-    "timestamp": "12:14-12:54",
-    "time_start_sec": 734,
-    "time_end_sec": 774
+    "question": "How can you tell if a person with dementia is feeling lonely or sad instead of just being difficult?",
+    "answer": "Agitation or anger is often a surface-level reaction to deeper feelings like loneliness or sadness. Instead of focusing only on the angry behavior, try to get curious about what the person might be feeling underneath. Ask yourself if they seem isolated or disconnected. Often, the behavior is a signal that they are craving engagement and connection, not that they are intentionally trying to cause trouble.",
+    "timestamp": "11:33-12:02",
+    "time_start_sec": 693,
+    "time_end_sec": 722
   },
   {
-    "question": "What is the most effective first step when a loved one shares a confusing or untrue story?",
-    "answer": "Instead of arguing or trying to prove them wrong, the best first step is to \"agree to disagree\" and let go of the need to be right. You should aim to come alongside them by reflecting back what they are saying. This approach helps lower their distress and moves the interaction from conflict toward engagement, whereas correcting them often overwhelms their brain and increases agitation.",
-    "timestamp": "8:24-9:00",
-    "time_start_sec": 504,
-    "time_end_sec": 540
-  },
-  {
-    "question": "How did the role-play demonstration show that validating feelings can de-escalate tension?",
-    "answer": "In the role-play, when the \"caregiver\" stopped demanding answers and instead apologized for making the other person feel left alone, the tension disappeared. By acknowledging the feeling (\"I'm sorry I made you feel lonely\") rather than fighting the facts about where the person went, the conversation shifted from anger to a shared plan to make peach cobbler together. Validation turned a confrontation into a connection.",
-    "timestamp": "9:15-10:37",
-    "time_start_sec": 555,
+    "question": "What is a practical way to respond when someone with dementia claims they went somewhere they didn’t actually go?",
+    "answer": "Instead of correcting them or arguing about the facts, try reflecting their feelings and offering a gentle apology for any distress caused. For example, if they say they went shopping but you know they didn’t, you might say, \"I’m sorry I made you feel like you left me alone.\" Then, pivot to a shared activity, like making peach cobbler together. This lowers their distress and moves the interaction from conflict to cooperation.",
+    "timestamp": "9:17-10:37",
+    "time_start_sec": 557,
     "time_end_sec": 637
   },
   {
-    "question": "What underlying emotions should caregivers look for when a person with dementia seems agitated?",
-    "answer": "While agitation looks like anger on the surface, it is frequently masking deeper feelings like loneliness, sadness, or fear. Caregivers should act with curiosity to discover these hidden needs. Once you identify that the person is actually feeling isolated or sad, you can address that specific emotional need rather than getting stuck on the angry behavior itself.",
-    "timestamp": "11:33-12:03",
-    "time_start_sec": 693,
-    "time_end_sec": 723
+    "question": "Why is it helpful to \"agree to disagree\" with a person who has dementia?",
+    "answer": "Trying to force a person with dementia to see your version of reality can overtax their brain and increase their anxiety. By choosing to \"agree to disagree,\" you let go of the need for them to understand the truth in that moment. This approach helps decrease their distress and allows you to move alongside them emotionally, creating a safer and more engaging environment for both of you.",
+    "timestamp": "8:24-9:15",
+    "time_start_sec": 504,
+    "time_end_sec": 555
   },
   {
-    "question": "Why is it so difficult for caregivers to stop correcting untrue statements naturally?",
-    "answer": "It is difficult because responding with logic and truth is our natural human instinct; reacting with validation and \"going along\" with untrue stories does not come naturally. The transcript compares learning this new way of communicating to learning a physical skill like skateboarding—it requires deliberate practice and support because your brain has to work hard to override old habits.",
-    "timestamp": "13:45-14:12",
-    "time_start_sec": 825,
-    "time_end_sec": 852
+    "question": "How does the brain fill in gaps during short periods of uncertainty, like waiting for someone to arrive?",
+    "answer": "When we lack information, such as when someone is a few minutes late, our brains quickly create stories to explain the delay. We might imagine they were in an accident or got lost. These stories are created instantly to fill the void of not knowing. In dementia, this process happens similarly but without the rational checks that usually help us realize these thoughts might be irrational or unlikely.",
+    "timestamp": "1:53-2:44",
+    "time_start_sec": 113,
+    "time_end_sec": 164
   },
   {
-    "question": "What practical strategy can help a caregiver move from a \"fighting\" mode to a \"partnering\" mode?",
-    "answer": "The strategy is to consciously decide to release the need for the person with dementia to understand your reality. Instead of trying to fix their story, focus entirely on reducing their distress. By reflecting their words and joining their emotional world, you stop over-taxing their system and create a space where you can move forward together peacefully.",
-    "timestamp": "8:36-8:56",
-    "time_start_sec": 516,
-    "time_end_sec": 536
+    "question": "What should you do when a person with dementia accuses you of stealing or cheating?",
+    "answer": "Understand that these accusations often stem from a lack of connection or feelings of loneliness, not actual theft or infidelity. The person’s brain is filling in emotional gaps with a dramatic story because they feel disconnected. Instead of defending yourself aggressively, recognize the underlying need for engagement. Try to reconnect with them calmly, acknowledging their feelings of isolation rather than fighting the false narrative.",
+    "timestamp": "12:14-12:56",
+    "time_start_sec": 734,
+    "time_end_sec": 776
   },
   {
-    "question": "Where can caregivers find structured support to practice these new communication skills?",
-    "answer": "Caregivers can join specific programs designed to build these muscles. The \"Care Partner Support Series\" helps families and friends understand the journey emotionally, while the \"Champion Course\" focuses specifically on skills practice. These resources guide you on how to break old habits and successfully adopt new, positive approaches to interacting with dementia.",
-    "timestamp": "14:21-14:53",
-    "time_start_sec": 861,
-    "time_end_sec": 893
+    "question": "How can reflection and apology help reduce distress in a conversation?",
+    "answer": "Using reflection means repeating back what the other person is saying or feeling to show you hear them. Adding an apology for any unintended hurt (\"I’m sorry I made you feel alone\") validates their emotions without admitting fault for the factual error. This combination helps lower the emotional temperature of the interaction, allowing the person to feel understood and reducing the agitation that fuels confabulation.",
+    "timestamp": "11:03-11:32",
+    "time_start_sec": 663,
+    "time_end_sec": 692
+  },
+  {
+    "question": "Why is learning to manage dementia behaviors compared to learning skateboarding?",
+    "answer": "Just like skateboarding, responding effectively to dementia behaviors is a skill that doesn’t come naturally at first. It requires practice and support. Watching a video gives you the idea, but actually changing old habits and learning new ways to interact takes time and effort. It is normal for it to feel foreign and challenging, so seeking out supportive courses or communities can help you build these new skills safely.",
+    "timestamp": "14:01-14:23",
+    "time_start_sec": 841,
+    "time_end_sec": 863
   }
 ]

@@ -1,79 +1,59 @@
 [
   {
-    "question": "What is the simple way to tell the difference between a hallucination and a delusion?",
-    "answer": "A helpful way to remember the difference is to think about \"senses\" versus \"beliefs.\" Hallucinations involve the senses—things a person sees, hears, feels, smells, or tastes that aren't actually there. Delusions involve beliefs—things a person thinks or believes to be true even when they are not. While these can overlap, focusing on whether it is a sensory experience or a fixed belief helps you understand where the person is coming from.",
-    "timestamp": "1:08-2:16",
-    "time_start_sec": 68,
+    "question": "What is the simplest way to tell the difference between a hallucination and a delusion?",
+    "answer": "Think of it as \"senses versus beliefs.\" Hallucinations are things a person experiences through their senses, such as seeing, hearing, or feeling something that isn't there. Delusions are strong beliefs or thoughts that a person holds to be true. While these definitions can overlap, remembering this simple distinction helps you understand whether the person is reacting to what they sense or what they think.",
+    "timestamp": "0:52-2:16",
+    "time_start_sec": 52,
     "time_end_sec": 136
   },
   {
-    "question": "Which senses can be affected by hallucinations in people living with dementia, and what are some common examples?",
-    "answer": "Hallucinations can affect all five senses. Visually, a person might see children, animals, or small people. Auditory hallucinations involve hearing voices or sounds, like someone speaking from the ceiling. Tactile (touch) hallucinations can feel like bugs crawling on the skin or food. People may also experience strange smells or believe their food tastes wrong, such as thinking someone is trying to poison them.",
-    "timestamp": "2:23-3:16",
-    "time_start_sec": 143,
-    "time_end_sec": 196
+    "question": "What are some common types of sensory hallucinations people with dementia might experience?",
+    "answer": "Hallucinations can affect any of the five senses. Visual hallucinations often involve seeing children, animals, or small people. Auditory hallucinations involve hearing voices or sounds, like a ceiling fixture talking. Tactile hallucinations may feel like bugs crawling on the skin. Olfactory (smell) and gustatory (taste) hallucinations can also occur, such as smelling bad odors or believing food tastes poisoned.",
+    "timestamp": "19-3:16"
   },
   {
-    "question": "How might visual hallucinations change as dementia progresses?",
-    "answer": "Early in the disease, visual hallucinations might be vague or fleeting, similar to seeing \"floaters\" in your eye that disappear when you look at them. As the condition progresses, these images can become more distinct, frequent, and disturbing. What starts as a vague shadow or sound can evolve into a very real and frightening presence, such as believing a specific person is walking through the house.",
-    "timestamp": "3:29-4:18",
-    "time_start_sec": 209,
-    "time_end_sec": 258
+    "question": "How do visual hallucinations typically change as dementia progresses?",
+    "answer": "In the early stages, visual hallucinations may be vague or fleeting, similar to eye floaters that appear and disappear. As the disease progresses, these images can become more distinct, distracting, and disturbing. For example, a vague shadow might eventually look like a clear image of someone walking through the house. The intensity and clarity of the hallucination often increase over time.",
+    "timestamp": "18-4:18"
   },
   {
-    "question": "What is the first step a caregiver should take when a loved one is distressed by a hallucination?",
-    "answer": "The first step is to connect physically and emotionally using the Positive Physical Approach (PPA). This means approaching calmly, getting on their level, making gentle hand contact (like holding hands), and adopting a supportive stance. You should also validate their feelings by reflecting their fear or concern, showing them you understand they are scared, rather than immediately trying to fix the situation.",
-    "timestamp": "5:36-6:15",
-    "time_start_sec": 336,
-    "time_end_sec": 375
+    "question": "What is the first step when a person with dementia becomes distressed by a hallucination?",
+    "answer": "Start by connecting with the person using a Positive Physical Approach (PPA). This includes getting into a supportive stance and using gentle touch, such as placing your hand under theirs. Validate their reality by reflecting their feelings, such as saying, \"Oh my gosh, you are worried about that little boy.\" This shows you are listening and care about their distress, rather than dismissing what they see.",
+    "timestamp": "35-6:10"
   },
   {
-    "question": "Why should I avoid telling my loved one \"there is nobody there\" when they are seeing something scary?",
-    "answer": "Telling someone \"there is nobody there\" invalidates their reality and often increases their distress. Because their brain is convincing them the threat is real, denying it makes them feel unheard and unsupported, which can cause their anxiety to rise. Instead of calming them down, this approach can make them feel like you are not helping them deal with the danger they perceive.",
-    "timestamp": "7:41-8:01",
-    "time_start_sec": 461,
-    "time_end_sec": 481
+    "question": "Why should you avoid telling a person with dementia that their hallucination isn't real?",
+    "answer": "Telling them \"there is nobody there\" or \"it’s not real\" often increases their agitation because it feels like you are not helping them. If they truly believe they see a threat, denying its existence does not remove their fear. Instead of calming them down, it can make them feel misunderstood and unsupported, causing their stress levels to rise.",
+    "timestamp": null
   },
   {
-    "question": "How can I honestly respond to a hallucination without lying or agreeing that it is real?",
-    "answer": "You can respond with honesty by validating the need behind the hallucination without confirming the false image. For example, if they see a child in danger, you can say, \"Yes, somebody does need to get him out of there.\" This statement is technically true—if a child were really there, they would need help—but it doesn't confirm the child exists. It reassures the person that the problem will be handled, allowing them to relax.",
-    "timestamp": "6:47-7:35",
-    "time_start_sec": 407,
-    "time_end_sec": 455
+    "question": "How can you help reduce a person's anxiety about a hallucination without lying?",
+    "answer": "Use honest reassurance by taking ownership of the situation. You can say, \"Someone does need to take care of that,\" or \"We will get somebody to handle this.\" This shifts the responsibility away from the person with dementia. They no longer have to worry about protecting themselves or fixing the problem because they trust that you are handling it.",
+    "timestamp": "29-7:35"
   },
   {
-    "question": "What practical strategy can help shift a person's focus away from a frightening hallucination?",
-    "answer": "After validating their concern and assuring them that help is coming, gently suggest moving to a different location. You might say, \"Let's go somewhere else while we wait for help.\" Changing the environment naturally shifts their focus and attention to new surroundings. Often, once they have moved and their focus has changed, the intensity of the hallucination decreases, and they can engage in a different activity.",
-    "timestamp": "9:00-9:45",
-    "time_start_sec": 540,
-    "time_end_sec": 585
+    "question": "What should you do after reassuring the person that the issue is being handled?",
+    "answer": "Gently guide the person to a different location. Changing the environment helps shift their focus away from the hallucination. Since you have already assured them that someone is taking care of the problem, they are more likely to be willing to move with you. This physical change can help break the cycle of distress and allow them to engage in a new activity.",
+    "timestamp": "37-8:01"
   },
   {
-    "question": "How should I manage my own emotions when my loved one is highly agitated by a hallucination?",
-    "answer": "It is natural to feel stressed when your loved one is agitated, but try not to match their high level of emotion. You do not need to pretend everything looks normal to you; instead, focus on staying calm and present with them. Accept that you cannot control what they see, and your role is simply to walk alongside them in their reality with a supportive attitude, rather than trying to force them to see things your way.",
-    "timestamp": "10:53-11:32",
-    "time_start_sec": 653,
-    "time_end_sec": 692
+    "question": "Why is it difficult for caregivers to meet the person where they are emotionally during a hallucination?",
+    "answer": "Caregivers often feel uncomfortable validating a reality they do not see, such as agreeing that a scary figure is present. It requires letting go of the urge to correct the person or reassure them that everything is fine. Instead, you must match their emotional level and acknowledge their fear, which can be challenging but is necessary to connect with them effectively.",
+    "timestamp": null
   },
   {
-    "question": "Is there a physical remedy I can try if my loved one feels like bugs are crawling on their skin?",
-    "answer": "Yes, you can try applying a cream that creates a cooling or soothing sensation, such as one containing menthol or bacitracin. You can explain it as a special cream that \"neutralizes the bugs\" and offer to put it on yourself too so they know it is safe. If the sensation is related to itching or skin sensitivity, this physical distraction can often provide real relief and reduce the fear of the bugs.",
-    "timestamp": "13:20-13:56",
-    "time_start_sec": 800,
-    "time_end_sec": 836
+    "question": "How can you honestly respond if a person claims to see bugs on their food or body?",
+    "answer": "Acknowledge their experience without confirming the bug exists. You might say, \"I don’t see the bugs, but I hear that you are seeing them and that must be upsetting.\" This approach maintains honesty while validating their reality. It avoids negating their experience, which helps maintain trust and reduces the likelihood of increased agitation.",
+    "timestamp": "00-9:47"
   },
   {
-    "question": "What should I do if I am alone and cannot call another person to \"help\" with the hallucination?",
-    "answer": "Even if you are alone, you can still take ownership of the problem off their shoulders. Use phrases like \"I will take care of this\" or \"We will get this handled\" to reassure them that they don't have to carry the burden alone. Combine this verbal reassurance with the physical steps of connecting, validating, and gently guiding them to a different room or activity to break the cycle of fear.",
-    "timestamp": "9:50-10:40",
-    "time_start_sec": 590,
-    "time_end_sec": 640
+    "question": "What is a practical trick to help soothe tactile hallucinations, such as the sensation of bugs on the skin?",
+    "answer": "You can offer a cream, such as menthol or bacitracin, describing it as something that \"neutralizes the bugs\" for a short time. Apply it to both your hands and theirs to show solidarity and safety. This provides a soothing physical sensation that can alleviate itching or discomfort, offering temporary relief and a tangible solution to their distress.",
+    "timestamp": "43-12:01"
   },
   {
-    "question": "Can people with dementia ever find humor or joy despite experiencing frightening hallucinations?",
-    "answer": "Yes, there is still hope for joy and connection. Some individuals reach a point where they can recognize the difference between their reality and ours and may even joke about it, such as laughing that they see \"little people\" while others do not. These moments remind us that despite the challenges and fear hallucinations can bring, the person's spirit and ability to connect remain intact.",
-    "timestamp": "14:43-15:06",
-    "time_start_sec": 883,
-    "time_end_sec": 906
+    "question": "Can moments of humor still exist for people experiencing hallucinations?",
+    "answer": "Yes, even amidst fear and confusion, people with dementia can find joy and humor. For example, a friend joked about a cat watching \"little people\" that others couldn't see. These moments remind us that hope and connection remain possible. Recognizing these lighter moments can provide comfort and perspective for both the caregiver and the person living with dementia.",
+    "timestamp": null
   }
 ]

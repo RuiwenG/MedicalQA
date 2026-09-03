@@ -1,100 +1,91 @@
 [
   {
-    "question": "Why was this new book written by a team instead of just one author?",
-    "answer": "The book emphasizes that \"it takes a team.\" Because everyone has a unique history and point of view, having multiple authors allows the book to address dementia from different angles. This is important because people experience dementia differently, and a single perspective might miss key details about how the condition affects vision, language, movement, or memory.",
-    "timestamp": "2:11-3:08",
-    "time_start_sec": 131,
+    "question": "Why is it helpful to have multiple authors write a book about dementia instead of just one expert?",
+    "answer": "Dementia affects everyone differently, and people bring their own unique histories and perspectives to the situation. Having multiple voices allows the book to reflect these different points of view, making the information more relatable and comprehensive for caregivers who are part of a support team rather than working alone.",
+    "timestamp": "2:04-3:08",
+    "time_start_sec": 124,
     "time_end_sec": 188
   },
   {
-    "question": "What common misunderstanding about dementia does the book aim to correct?",
-    "answer": "Many people mistakenly believe dementia is only about Alzheimer's disease and memory loss. In reality, dementia can affect many parts of the brain, impacting vision, language, the ability to move, and the ability to sequence tasks. The book explains that these issues often build on each other rather than happening in isolation.",
+    "question": "Does dementia only cause memory problems like forgetting names or dates?",
+    "answer": "No, dementia is not just about memory. It can affect many other areas of brain function, including vision, language, movement, and the ability to sequence tasks (like following steps). These changes often build on each other, meaning a person might struggle with several of these skills at once, not just one isolated issue.",
     "timestamp": "3:33-4:05",
     "time_start_sec": 213,
     "time_end_sec": 245
   },
   {
-    "question": "In the first role-play scenario, why did the conversation between the caregiver and Dan become so difficult?",
-    "answer": "The conversation failed because the caregiver shouted questions from another room while Dan was distracted. As Dan's brain changed due to dementia, he could not process the distant voice or switch topics quickly. When the caregiver insisted on her agenda (dinner) without connecting first, Dan became confused and defensive, leading to yelling and frustration on both sides.",
-    "timestamp": "5:57-7:11",
-    "time_start_sec": 357,
-    "time_end_sec": 431
+    "question": "What is the most important first step before asking a person with dementia a question or giving them an instruction?",
+    "answer": "Before leading with your agenda or question, you should ensure you have the person’s attention. This means getting into their visual field, greeting them politely, and perhaps saying something like \"Sorry to interrupt\" or \"Do you have a moment?\" This pause helps them focus on you and prepares their brain to process what you are about to say.",
+    "timestamp": "9:47-10:00, 17:00-17:30",
+    "time_start_sec": 587,
+    "time_end_sec": 600
   },
   {
-    "question": "What are the first two steps a caregiver should take before asking a person with dementia a question?",
-    "answer": "First, enter the person's visual field so they can see you clearly; do not speak from another room. Second, greet them warmly and ask if they have a moment to talk (e.g., \"Sorry to interrupt\"). This ensures they are focused on you and ready to listen before you introduce a new topic or request.",
-    "timestamp": "9:06-12:07",
-    "time_start_sec": 546,
-    "time_end_sec": 727
+    "question": "How does physical distance and body position affect communication with someone living with dementia?",
+    "answer": "Standing too far away or speaking from another room can make it difficult for the person to hear and understand you. It is better to move into their personal space respectfully and get within their direct line of sight. Being in their visual range helps them connect with you and reduces confusion caused by trying to locate the source of the voice.",
+    "timestamp": "11:56-12:15",
+    "time_start_sec": 716,
+    "time_end_sec": 735
   },
   {
-    "question": "How should a caregiver offer choices to someone with dementia to avoid overwhelming them?",
-    "answer": "Instead of open-ended questions like \"What do you want?\", offer simple \"either/or\" choices, such as \"Would you rather have soup or something else?\" If the person is unsure, gently offer two more specific options (like an omelet or a sandwich). Keep the choices limited and related to their preferences to help them feel in control.",
-    "timestamp": "9:57-10:22",
-    "time_start_sec": 597,
-    "time_end_sec": 622
-  },
-  {
-    "question": "What should you do if a person with dementia uses a word that doesn't make sense?",
-    "answer": "Do not correct them or act confused. Instead, stay calm and try to understand the meaning behind the word. You can repeat the strange word gently to show you are listening, then use visual aids to clarify. For example, if they say a nonsense word for vegetables, simply show them the actual ingredients so they can recognize what you mean.",
-    "timestamp": "10:33-11:15",
-    "time_start_sec": 633,
-    "time_end_sec": 675
-  },
-  {
-    "question": "How should you adjust your speaking style when talking to someone with dementia?",
-    "answer": "Keep your sentences very short (around five words or less) and speak at a slower pace. Use a lighter, neutral tone of voice rather than raising your volume. Speaking loudly often sounds like yelling and can cause agitation, whereas a calm, slow delivery gives the person time to process what you are saying.",
-    "timestamp": "13:51-15:25",
+    "question": "Why is it recommended to use short sentences when talking to someone with dementia?",
+    "answer": "Short sentences are less taxing for the brain to process. When sentences are brief (for example, five words or less), the person can more easily understand what is being asked of them without feeling overwhelmed. This clarity helps them provide an answer and keeps the interaction positive and manageable.",
+    "timestamp": "13:51-14:13",
     "time_start_sec": 831,
-    "time_end_sec": 925
+    "time_end_sec": 853
   },
   {
-    "question": "Why is it helpful to pause during a conversation with a person who has dementia?",
-    "answer": "Pausing gives both you and the person with dementia time to think and process information. It prevents the conversation from feeling rushed or demanding. This brief break reduces pressure and allows the person to formulate a response without feeling overwhelmed by a rapid stream of words.",
-    "timestamp": "14:42-14:55",
+    "question": "What is the benefit of offering \"either-or\" choices instead of open-ended questions?",
+    "answer": "Open-ended questions like \"What do you want for dinner?\" require the brain to search for options and formulate a response, which can be very difficult. Offering specific choices, such as \"Would you like soup or an omelet?\", narrows down the options. This gives the person control and makes it easier for them to make a decision without feeling lost or confused.",
+    "timestamp": "9:57-10:03, 12:30-12:41",
+    "time_start_sec": 597,
+    "time_end_sec": 603
+  },
+  {
+    "question": "If a person with dementia uses a word that doesn't make sense or seems incorrect, how should a caregiver respond?",
+    "answer": "Instead of correcting them or expressing confusion (like asking \"What the heck?\"), it is better to acknowledge their attempt to communicate and gently guide the conversation. For example, if they mispronounce a word, you can repeat the correct word softly or show them the item visually. This validates their effort and helps bridge the gap in understanding without causing frustration.",
+    "timestamp": "12:44-12:58",
+    "time_start_sec": 764,
+    "time_end_sec": 778
+  },
+  {
+    "question": "How can visual aids help when verbal communication becomes challenging?",
+    "answer": "If a person struggles to understand words, showing them the actual items can clarify the situation. For instance, if discussing food ingredients, bringing the vegetables into the room allows the person to see exactly what is available. Visual cues bypass some of the language processing difficulties and help the person feel confident in their choice.",
+    "timestamp": "10:47-11:12",
+    "time_start_sec": 647,
+    "time_end_sec": 672
+  },
+  {
+    "question": "Why is tone of voice and pacing important during conversations with someone with dementia?",
+    "answer": "A slower pace, lower volume, and lighter tone create a calm and safe environment. Raising your voice or speaking quickly can sound aggressive or urgent, even if unintentional, which may cause the person to become defensive or shut down. A neutral, gentle tone encourages connection and makes it easier for the person to listen and respond.",
+    "timestamp": "15:03-15:36",
+    "time_start_sec": 903,
+    "time_end_sec": 936
+  },
+  {
+    "question": "What should a caregiver do if the person with dementia does not immediately understand or respond to a question?",
+    "answer": "Avoid repeating the exact same question immediately, as this can feel like pressure or yelling. Instead, take a purposeful pause. This break gives both the caregiver and the person with dementia time to process the interaction. You can then try rephrasing the request or offering a different choice, keeping the interaction relaxed and supportive.",
+    "timestamp": "14:42-15:01",
     "time_start_sec": 882,
-    "time_end_sec": 895
+    "time_end_sec": 901
   },
   {
-    "question": "Can these communication techniques be used with people who do not have dementia?",
-    "answer": "Yes, these skills improve all relationships, not just those involving dementia. Taking a moment to get someone's attention, making eye contact, and checking in before stating your needs shows respect and helps prevent misunderstandings. These \"positive physical approach\" habits help anyone feel heard and valued.",
-    "timestamp": "17:42-18:00",
-    "time_start_sec": 1062,
-    "time_end_sec": 1080
-  },
-  {
-    "question": "How does the book help caregivers practice these new communication skills?",
-    "answer": "The book provides specific scripts and role-play scenarios that caregivers can read aloud and practice. Since stress can make it hard to remember advice in the moment, having exact phrases to rehearse helps build muscle memory. This allows caregivers to feel more confident and ready to use these techniques when real situations arise.",
+    "question": "How does practicing scripted conversations help caregivers prepare for real-life situations?",
+    "answer": "Reading scripts aloud or practicing them mentally helps caregivers internalize the right words and tone before they are needed. In stressful moments, emotions can rise, and it is easy to forget good strategies. Having practiced phrases ready makes it more likely that a caregiver will use effective techniques, such as offering choices or reflecting words, when they are most needed.",
     "timestamp": "18:12-19:06",
     "time_start_sec": 1092,
     "time_end_sec": 1146
   },
   {
-    "question": "Is it necessary to read this book from beginning to end to benefit from it?",
-    "answer": "No, the book is designed like a \"choose your own adventure.\" While you can read it cover to cover, each chapter stands alone and does not require knowledge from previous sections. You can jump directly to the topics you need most, such as vision changes or language difficulties, making it easy to find immediate help.",
-    "timestamp": "20:15-20:36",
-    "time_start_sec": 1215,
-    "time_end_sec": 1236
+    "question": "Why is it important to let the person with dementia remain in charge of their choices whenever possible?",
+    "answer": "Allowing the person to make decisions, even small ones like choosing between two foods, preserves their dignity and sense of self. It keeps the focus on their likes and dislikes rather than the caregiver's agenda. This approach reduces resistance and helps maintain a positive relationship by respecting their autonomy.",
+    "timestamp": null
   },
   {
-    "question": "What types of learners does this book support through its format?",
-    "answer": "The book supports visual learners with simple pictures of the brain, linguistic learners with clear written explanations, and kinesthetic (hands-on) learners with interactive scripts to act out. By combining these different styles, the book ensures that people with various learning preferences can understand the science and apply the practical tips.",
-    "timestamp": "19:14-19:40",
-    "time_start_sec": 1154,
-    "time_end_sec": 1180
-  },
-  {
-    "question": "What future topics will the upcoming books in this series cover?",
-    "answer": "The next book will focus on ADLs (Activities of Daily Living), which are everyday tasks like bathing and dressing. A subsequent book aims to share the personal perspectives of people living with dementia, describing their experiences before, during, and after their diagnosis to help families better understand their loved ones' feelings.",
-    "timestamp": "22:24-22:48",
-    "time_start_sec": 1344,
-    "time_end_sec": 1368
-  },
-  {
-    "question": "How does understanding the \"changing brain\" help reduce conflict between caregivers and care partners?",
-    "answer": "Recognizing that dementia causes physical changes in the brain helps caregivers realize that difficult behaviors are symptoms of the disease, not intentional stubbornness. Understanding that the condition is progressive and terminal fosters empathy, helping caregivers shift from frustration to compassion and reducing the likelihood of arguments over things the person cannot control.",
-    "timestamp": "7:23-8:36",
-    "time_start_sec": 443,
-    "time_end_sec": 516
+    "question": "Can the communication strategies used for dementia care be applied to other relationships?",
+    "answer": "Yes, these strategies are beneficial for all relationships. Taking a moment to connect, using a gentle tone, and ensuring the other person is focused before asking for something improves communication with partners, friends, and family members. It fosters mutual respect and reduces misunderstandings in everyday interactions.",
+    "timestamp": "13:14-13:24",
+    "time_start_sec": 794,
+    "time_end_sec": 804
   }
 ]

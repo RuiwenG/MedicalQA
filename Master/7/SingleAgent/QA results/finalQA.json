@@ -1,65 +1,65 @@
 [
   {
-    "question": "When a person with dementia asks, \"Have you seen my mother?\" or \"I want to go home,\" what should I assume is happening underneath those words?",
-    "answer": "Instead of assuming they literally need to find their mother or go to a specific house, understand that these words often signal an unmet emotional need. The person may be feeling angry, sad, scared, or lonely. The request is usually a way of expressing that something doesn't feel right in their world, rather than a factual question about location.",
-    "timestamp": "5:45-6:06",
-    "time_start_sec": 345,
-    "time_end_sec": 366
+    "question": "Why is it important to notice the intensity of a person's emotion before responding?",
+    "answer": "The level of distress helps you decide how to respond. If the distress is low, you might be able to ask curious questions or offer help finding what they need. However, if the distress is high or intense, moving too quickly to solve the problem can confuse them. In high-distress moments, it is better to pause and focus on supporting their feelings first.",
+    "timestamp": "2:29-4:45",
+    "time_start_sec": 149,
+    "time_end_sec": 285
   },
   {
-    "question": "How can I tell if I need to slow down and offer comfort versus trying to solve a problem when someone is distressed?",
-    "answer": "Pay close attention to the intensity of their emotion and your own reaction. If the distress feels low, you might gently ask curiosity-based questions to help them move forward. However, if the emotion feels intense or you notice yourself feeling alarmed (\"yikes\"), do not rush to fix it. Instead, stay in that moment, acknowledge their feelings, and offer support before trying to move the conversation ahead.",
-    "timestamp": "2:41-4:42",
-    "time_start_sec": 161,
-    "time_end_sec": 282
+    "question": "What should caregivers avoid doing when a person with dementia expresses strong emotions like anger or sadness?",
+    "answer": "Avoid trying to move the conversation forward too quickly or assuming you know exactly what they mean by their words. When someone is upset, their brain is in a state of high alert (often called the amygdala being \"on\"). Jumping straight to logical solutions or facts can overwhelm them. Instead, stay present with their emotion and offer support for how they are feeling right now.",
+    "timestamp": "4:48-6:30",
+    "time_start_sec": 288,
+    "time_end_sec": 390
   },
   {
-    "question": "Why is it harmful to immediately ask questions like \"Do you remember where she is?\" or \"Why do you need her?\" right after someone expresses distress?",
-    "answer": "Asking these types of questions too quickly forces the person's brain to process complex information when they are already struggling. This can confuse them further and make them feel like they are being tested or tricked. It moves the conversation forward faster than their brain can handle, often increasing their agitation instead of calming them down.",
-    "timestamp": "1:03-1:44",
-    "time_start_sec": 63,
-    "time_end_sec": 104
+    "question": "How can a caregiver distinguish between the words a person says and the actual need behind those words?",
+    "answer": "Do not assume that the specific words spoken match the source of the distress. For example, asking \"Have you seen my mother?\" might not actually be about finding a parent. It could signal loneliness, a physical need like hunger or needing the bathroom, or general confusion. By pausing and reflecting on the emotion rather than just the literal request, you open the door to understanding the real unmet need.",
+    "timestamp": "6:38-7:36",
+    "time_start_sec": 398,
+    "time_end_sec": 456
   },
   {
-    "question": "What is the first step I should take internally before responding to a difficult behavior or repeated question?",
-    "answer": "The most important first step is to pause. Instead of reacting instantly with an answer or a solution, take a brief moment to engage your thinking brain. Use this pause to observe the person's emotion and consider what unmet need might be driving their behavior, allowing you to respond thoughtfully rather than reactively.",
-    "timestamp": "6:15-6:38",
-    "time_start_sec": 375,
-    "time_end_sec": 398
+    "question": "What risk is involved when a caregiver tries to verify facts too quickly during a moment of distress?",
+    "answer": "Trying to verify facts or move the conversation ahead logically can confuse the person’s brain. If a person is distressed, their ability to process rapid changes in topic or complex logic is reduced. Asking clarifying questions that require fast thinking may cause them to feel tricked or more agitated, leading to behaviors like accusing the caregiver of lying, rather than helping them feel understood.",
+    "timestamp": "8:38-9:46",
+    "time_start_sec": 518,
+    "time_end_sec": 586
   },
   {
-    "question": "Could a request to \"find my mother\" actually be a sign of a physical problem?",
-    "answer": "Yes, it could. Sometimes behaviors that look like confusion or searching for a loved one are actually signs of physical pain or an acute medical issue. Before assuming it is just dementia-related confusion, consider using the behavior as a screening tool to check if the person is in pain, needs to use the bathroom, or is experiencing another physical symptom.",
-    "timestamp": "8:24-8:37",
-    "time_start_sec": 504,
-    "time_end_sec": 517
+    "question": "What is the first step of the PACK method when dealing with a distressed statement?",
+    "answer": "The first step is Reflection. This means acknowledging what the person is saying and feeling without judging or immediately trying to fix it. For example, if someone says, \"I am looking for my mother,\" you reflect this back by saying, \"You are looking for your mother.\" This shows you have heard them and validates their experience, which helps lower their stress levels.",
+    "timestamp": "11:06-11:20",
+    "time_start_sec": 666,
+    "time_end_sec": 680
   },
   {
-    "question": "What is a gentle way to explore what a person needs without overwhelming them with open-ended questions?",
-    "answer": "Try reflecting back what you heard and then offering a simple choice between two possibilities. For example, you might say, \"You're looking for your mom. Do you want to see her to be with her, or is there something you need to do?\" This helps narrow down whether the need is emotional (wanting company) or physical (needing help with a task), making it easier for them to communicate.",
-    "timestamp": "11:50-12:10",
-    "time_start_sec": 710,
-    "time_end_sec": 730
+    "question": "How does offering a choice help a person who is struggling to express their needs?",
+    "answer": "Offering a choice helps narrow down whether the distress is emotional or physical. You might ask, \"Do you want to see her to be with her, or do you need to do something with her?\" This gives the person simple options to consider. It might reveal that they are lonely and want connection, or that they are physically lost and need help finding a specific place, like a bathroom or a sunny spot.",
+    "timestamp": "11:23-12:52",
+    "time_start_sec": 683,
+    "time_end_sec": 772
   },
   {
-    "question": "If I suspect the person is feeling lonely or wants to share a memory, what phrase can I use to encourage them?",
-    "answer": "If the person still has some verbal skills and seems to be seeking connection, you can gently say, \"Tell me more about that.\" For instance, if they mention sitting in the sun with their mom, you can say, \"You and your mom sit in the sun every day? Tell me more about that.\" This invites them to share their feelings and memories without pressure.",
-    "timestamp": "13:37-14:03",
-    "time_start_sec": 817,
-    "time_end_sec": 843
+    "question": "When is it appropriate to use the phrase \"Tell me more\"?",
+    "answer": "Use \"Tell me more\" only when the person still has some verbal skills and seems calm enough to engage in conversation. After reflecting their statement and perhaps offering a choice, this phrase invites them to share additional details. It works best when the initial reflection has successfully lowered their distress and they are ready to communicate further.",
+    "timestamp": "13:30-14:14",
+    "time_start_sec": 810,
+    "time_end_sec": 854
   },
   {
-    "question": "What should I do if asking \"Tell me more\" seems to cause the person more stress or confusion?",
-    "answer": "If you see that open questions are causing distress, stop and take a step back. Return to offering simple choices or describing what you see to help ground them. You might describe details about the person or place they are asking about (e.g., \"Was your mom tall or short?\") to give them a simpler starting point to engage with you.",
-    "timestamp": "14:21-14:50",
-    "time_start_sec": 861,
-    "time_end_sec": 890
+    "question": "What should a caregiver do if the phrase \"Tell me more\" causes increased distress?",
+    "answer": "If asking for more information makes the person more upset, go back one step. Stop asking open-ended questions and return to offering concrete choices or simple reflections. For example, instead of asking them to explain, you might ask, \"Is your mom tall or short?\" or \"Did you used to sit in the front or the back?\" These simpler prompts provide structure and reduce the cognitive load on the person.",
+    "timestamp": "14:18-14:53",
+    "time_start_sec": 858,
+    "time_end_sec": 893
   },
   {
-    "question": "How can my own facial expressions affect a person with dementia who is already upset?",
-    "answer": "Your face can reveal your true feelings even if your words are calm. If you look alarmed, frustrated, or worried (\"yikes\"), the person with dementia will likely sense that tension and become more upset. It is important to monitor your own reactions and try to maintain a calm, reassuring expression to help lower their distress levels.",
-    "timestamp": "3:04-3:26",
-    "time_start_sec": 184,
-    "time_end_sec": 206
+    "question": "What is the overall goal of using reflection, choices, and gentle inquiry in dementia care?",
+    "answer": "The goal is to connect with the person’s emotional state and identify their unmet needs without causing confusion or agitation. By pausing, reflecting their feelings, and offering manageable options, you help calm their nervous system. This approach builds trust and allows you to address the root cause of their distress—whether it is emotional, physical, or environmental—in a supportive and respectful way.",
+    "timestamp": "14:54-15:24",
+    "time_start_sec": 894,
+    "time_end_sec": 924
   }
 ]
