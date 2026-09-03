@@ -243,20 +243,27 @@
 
 const CFG = Object.assign({
   SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
-  RATINGS_TABLE: "ratings_ui_v2_qna_v2",
-  STUDY_VERSION: "ui_v2_qna_v2",
+  RATINGS_TABLE: "ratings_ui_v3_qna_v3",
+  STUDY_VERSION: "ui_v3_qna_v3",
   MAX_PAIRS: 0,
   // Approach names dropped from the corpus at load time. Excluded pairs never
   // reach DATA, so they cannot appear in the shared ordered set, in the
   // advanced picker, or in any count. qa_data.json itself is left untouched.
   EXCLUDE_APPROACHES: [],
+  // Allowlist. When non-empty it wins outright: ONLY these approaches enter the
+  // corpus and every other one is dropped, including approaches that do not
+  // exist yet. Prefer it to EXCLUDE_APPROACHES for a study with a fixed scope —
+  // a new folder in the repo then cannot silently join the annotators' set.
+  ONLY_APPROACHES: [],
 }, window.EVAL_CONFIG || {});
 
 // Normalised for comparison so a stray "dualagent" or " RAG " in config still
 // matches the approach names recorded in qa_data.json.
-const EXCLUDED = new Set(
-  (CFG.EXCLUDE_APPROACHES || []).map((a) => String(a).trim().toLowerCase()));
-const isExcluded = (approach) => EXCLUDED.has(String(approach).trim().toLowerCase());
+const norm = (a) => String(a).trim().toLowerCase();
+const EXCLUDED = new Set((CFG.EXCLUDE_APPROACHES || []).map(norm));
+const ONLY = new Set((CFG.ONLY_APPROACHES || []).map(norm));
+const isExcluded = (approach) =>
+  ONLY.size ? !ONLY.has(norm(approach)) : EXCLUDED.has(norm(approach));
 
 // Tolerate the two easy paste mistakes: a trailing slash, and copying the REST
 // endpoint (".../rest/v1") instead of the bare project URL. Both would
@@ -265,7 +272,7 @@ const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
   .trim()
   .replace(/\/+$/, "")
   .replace(/\/rest\/v1$/, "");
-const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_ui_v2_qna_v2").trim();
+const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_ui_v3_qna_v3").trim();
 
 // key   -> column name in Supabase / CSV field key
 // label -> what the annotator reads
@@ -315,7 +322,37 @@ const METRICS = [
     errorPrompt: "If Yes, what is the concern? Select all that apply.",
     errors: ["Unsafe medical or health advice", "Physical safety risk", "Blaming or judgmental language", "Discourages professional care"],
     noIssueError: "No issue" },
+  // Mirrors the Self-contained (Standalone) criterion in the SingleQA generation
+  // prompt and in eval/llm_judge/judge.py. Appended last so the first four
+  // metrics keep their CSV column positions across runs.
+  { key: "qa_standalone", dbPrefix: "qna_standalone", label: "Q&A Standalone", scope: "qa",
+    attributeName: "Q&A Standalone",
+    binaryQuestion: "Can this Q&A be understood on its own, without the video and without any other Q&A?",
+    def: "The Q&A names everything it refers to. For this criterion only, ignore the video even if you watched it: judge whether a caregiver who has never seen it, reading this one Q&A with no others in front of them, would know what every reference points to.",
+    attribute: [
+      "Fully standalone",
+      "Mostly standalone",
+      "Somewhat dependent",
+      "Not standalone",
+    ],
+    errors: ["Refers to the video, transcript or speaker", "Undefined pronoun", "Undefined this/these reference", "Depends on another Q&A pair"],
+    noIssueError: "No issue" },
 ];
+
+// Metrics shown BEFORE the source video panel. Q&A Standalone asks whether a
+// pair stands up without the video, so an annotator who has just watched the
+// clip cannot answer it honestly — it is placed first, and the video sits
+// underneath it. METRICS itself stays in canonical order, because that is what
+// drives the database columns and the CSV, which must line up with judge.py.
+const METRICS_BEFORE_VIDEO = ["qa_standalone"];
+
+// The order metrics are rendered and keyboard-navigated in. Every site that
+// turns an index into a metric must use this, not METRICS.
+function displayMetrics() {
+  const selected = METRICS.filter((m) => S.metrics.includes(m.key));
+  return selected.filter((m) => METRICS_BEFORE_VIDEO.includes(m.key))
+    .concat(selected.filter((m) => !METRICS_BEFORE_VIDEO.includes(m.key)));
+}
 
 const NO_PROBLEM = "No issue";
 const BINARY = ["Yes", "No"];
@@ -349,12 +386,17 @@ const qaIndex = (p) => {
   const match = String(p.uid || "").match(/_q(\d+)$/);
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
 };
+// Plain codepoint comparison, NOT localeCompare: collation is locale-dependent,
+// so the same two strings can order differently in two browsers. Every
+// annotator must be handed the same ordered set, so the comparator has to be
+// identical everywhere.
+const cmp = (x, y) => (x < y ? -1 : x > y ? 1 : 0);
 const pairSort = (a, b) =>
   qaIndex(a) - qaIndex(b)
   || a.video - b.video
-  || a.dataset.localeCompare(b.dataset)
-  || a.approach.localeCompare(b.approach)
-  || a.uid.localeCompare(b.uid);
+  || cmp(a.dataset, b.dataset)
+  || cmp(a.approach, b.approach)
+  || cmp(a.uid, b.uid);
 
 /* ===========================================================================
    State
@@ -456,7 +498,7 @@ function restore(storeKey) {
     const raw = localStorage.getItem(storeKey);
     if (!raw) return null;
     const obj = JSON.parse(raw);
-    if (!obj || obj.version !== 4) return null;
+    if (!obj || ![4, 5].includes(obj.version)) return null;
     obj.scores = obj.scores || {};
     obj.recommendations = obj.recommendations || {};
     obj.comments = obj.comments || {};
@@ -631,7 +673,7 @@ function enqueue(uid) {
   const p = pairOf(uid);
   const sc = S.scores[uid] || {};
   const row = {
-    study_version: CFG.STUDY_VERSION || "ui_v2_qna_v2",
+    study_version: CFG.STUDY_VERSION || "ui_v3_qna_v3",
     session_id: S.sessionId,
     annotator: S.annotator,
     qa_uid: uid,
@@ -670,7 +712,7 @@ function enqueue(uid) {
 function normalizeSupabaseRow(row) {
   const p = pairOf(row.qa_uid) || {};
   const out = {
-    study_version: row.study_version || CFG.STUDY_VERSION || "ui_v2_qna_v2",
+    study_version: row.study_version || CFG.STUDY_VERSION || "ui_v3_qna_v3",
     session_id: row.session_id,
     annotator: row.annotator,
     qa_uid: row.qa_uid,
@@ -863,7 +905,7 @@ function renderWelcome() {
       <p>You will read short Q&As about dementia care that were written automatically by different AI systems, and evaluate each one on ${METRICS.length} criteria.</p>
       <ul>
         <li><b>Think like a caregiver.</b> Rate each Q&A as if you were deciding whether it would help you understand or care for someone living with dementia.</li>
-        <li><b>Judge only what is in front of you.</b> You do not need to have watched the source video — a link to it is there if you want context, but the rating should reflect the question and answer as written.</li>
+        <li><b>Judge only what is in front of you.</b> The source video starts collapsed on purpose — open it if you need it to check whether a Q&A is trustworthy, but the rating should reflect the question and answer as written. For <b>Q&A Standalone</b> in particular, judge as if you had never seen the video.</li>
         <li>The system that produced each Q&A is hidden, so your rating is not influenced by which one it came from.</li>
         <li>Your progress saves automatically after every Q&A — <b>you can close the tab and come back to this same link later.</b></li>
       </ul>
@@ -1125,13 +1167,32 @@ function errorButtons(key, options, selected) {
   ).join("");
 }
 
+
+// Drops the collapsible source-video panel into the metric list, after the
+// metrics that must be answered without it (see METRICS_BEFORE_VIDEO). If those
+// are deselected in the advanced options the panel simply comes first.
+function insertVideoPanel(cards, metrics, source) {
+  if (!source) return cards.join("");
+  const firstAfter = metrics.findIndex((m) => !METRICS_BEFORE_VIDEO.includes(m.key));
+  const cut = firstAfter === -1 ? cards.length : firstAfter;
+  const panel = `
+    <div class="card">
+      <details class="source-video">
+        <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}</summary>
+        ${source.embed ? `<iframe class="video-frame" src="${source.embed}" title="Source video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : `<a class="vidlink-inline" href="${source.url}" target="_blank" rel="noopener noreferrer">Open source video</a>`}
+        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${source.hasClip ? "This clip starts at the Q&A source segment when timestamp metadata is available." : "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown."}</p>
+      </details>
+      <p class="muted" style="margin:8px 0 0 0; font-size:12px;">Open the video for the criteria below, which ask whether the Q&A matches its source. ${cut > 0 ? "Answer the criteria above it first — they are about the Q&A text on its own." : ""}</p>
+    </div>`;
+  return cards.slice(0, cut).join("") + panel + cards.slice(cut).join("");
+}
 function renderRate() {
   if (S.index >= S.uids.length) return renderDone();
 
   const uid = S.uids[S.index];
   const p = pairOf(uid);
   const sc = S.scores[uid] || (S.scores[uid] = {});
-  const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+  const metrics = displayMetrics();
   const done = ratedCount();
   const source = sourceVideo(p);
   shownAt = Date.now();
@@ -1148,20 +1209,13 @@ function renderRate() {
     <div class="card">
       <div class="qa-meta">
         <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>${S.opts.blind ? "hidden" : p.approach}</code></span>
-        ${source ? `<a class="vidlink-inline" href="${source.url}" target="_blank" rel="noopener noreferrer">Open source video</a>` : ""}
       </div>
-      ${source ? `
-      <details class="source-video" open>
-        <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}</summary>
-        ${source.embed ? `<iframe class="video-frame" src="${source.embed}" title="Source video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : `<a class="vidlink-inline" href="${source.url}" target="_blank" rel="noopener noreferrer">Open source video</a>`}
-        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${source.hasClip ? "This clip starts at the Q&A source segment when timestamp metadata is available." : "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown."}</p>
-      </details>` : ""}
       <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
       <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
     </div>
 
     <div id="metrics">
-      ${metrics.map((m, i) => {
+      ${insertVideoPanel(metrics.map((m, i) => {
         const ms = sc[m.key] && typeof sc[m.key] === "object" ? sc[m.key] : {};
         return `
         <div class="metric ${completeMetric(ms, m) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
@@ -1186,7 +1240,7 @@ function renderRate() {
             </div>
           </div>
         </div>`;
-      }).join("")}
+      }), metrics, source)}
     </div>
 
     <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation">
@@ -1393,7 +1447,7 @@ function setComment(value) {
 function advanceMetric() {
   const uid = S.uids[S.index];
   const sc = S.scores[uid] || {};
-  const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+  const metrics = displayMetrics();
   const current = metrics[activeMetric];
   if (current && !completeMetric(sc[current.key], current)) {
     paintActive();
@@ -1426,10 +1480,10 @@ function storeTime() {
 function submitPair() {
   const uid = S.uids[S.index];
   const sc = S.scores[uid] || {};
-  const missing = METRICS.filter((m) => S.metrics.includes(m.key) && !completeMetric(sc[m.key], m));
+  const missing = displayMetrics().filter((m) => !completeMetric(sc[m.key], m));
   if (missing.length) {
     document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) => m.label).join(", ");
-    const first = METRICS.filter((m) => S.metrics.includes(m.key)).findIndex((m) => m.key === missing[0].key);
+    const first = displayMetrics().findIndex((m) => m.key === missing[0].key);
     activeMetric = first;
     paintActive();
     const el = app.querySelector('.metric[data-mi="' + first + '"]');
@@ -1455,7 +1509,7 @@ document.addEventListener("keydown", (e) => {
   const tag = (e.target.tagName || "").toLowerCase();
   if (tag === "input" || tag === "textarea") return;
 
-  const metrics = METRICS.filter((m) => S.metrics.includes(m.key));
+  const metrics = displayMetrics();
   const m = metrics[activeMetric];
   if (!m) return;
 
@@ -1566,13 +1620,15 @@ fetch("qa_data.json")
     // Hard exclusion happens here, once, before anything else sees the corpus.
     DATA = all.filter((p) => !isExcluded(p.approach));
     VIDEOS = Array.isArray(json) ? {} : (json.videos || {});
-    if (EXCLUDED.size) {
-      console.info(`Excluded approaches: ${[...EXCLUDED].join(", ")} — ` +
-        `${all.length - DATA.length} of ${all.length} pairs dropped, ${DATA.length} remain.`);
+    if (ONLY.size || EXCLUDED.size) {
+      console.info(
+        (ONLY.size ? `Only approaches: ${[...ONLY].join(", ")}` : `Excluded approaches: ${[...EXCLUDED].join(", ")}`) +
+        ` — ${all.length - DATA.length} of ${all.length} pairs dropped, ${DATA.length} remain.`);
     }
     if (!DATA.length) {
       app.innerHTML = '<div class="card"><h2>No Q&As left</h2>' +
-        '<p class="muted">Every pair was removed by <code>EXCLUDE_APPROACHES</code> in <code>config.js</code>.</p></div>';
+        '<p class="muted">Every pair was removed by <code>' +
+        (ONLY.size ? "ONLY_APPROACHES" : "EXCLUDE_APPROACHES") + '</code> in <code>config.js</code>.</p></div>';
       return;
     }
     renderWelcome();

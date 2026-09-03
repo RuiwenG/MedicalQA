@@ -16,14 +16,21 @@ window.EVAL_CONFIG = {
   // Project settings -> API keys -> anon / public
   SUPABASE_ANON_KEY: "sb_publishable_5XnfPkcVK9OjGhroW5Q7Ww_bLrgx0u7",
 
-  // Current study table. This separates the updated Q&A set + updated UI rubric
-  // from earlier pilot annotations in the legacy `ratings` table.
-  RATINGS_TABLE: "ratings_ui_v2_qna_v2",
-  STUDY_VERSION: "ui_v2_qna_v2",
+  // Current study table. The five-metric rubric (Standalone added) and the
+  // regenerated SingleAgent Q&As get their own table, so `ratings_ui_v2_qna_v2`
+  // stays a clean four-metric record and nothing has to be filtered by NULLs.
+  RATINGS_TABLE: "ratings_ui_v3_qna_v3",
+  STUDY_VERSION: "ui_v3_qna_v3",
 
-  // Approaches dropped from the corpus before anything else runs. Excluded
-  // pairs never enter the shared ordered set, the advanced picker, or any count.
-  // qa_data.json still holds them — empty this list to bring them back.
+  // The study is SingleAgent-only (new self-contained prompt). This is an
+  // allowlist, so nothing else can enter the corpus — not MultiAgent v2/v3, not
+  // DualAgent or RAG, not SingleAgent-prev (the pre-prompt-change outputs kept
+  // on disk purely as a judge comparison arm), and not any approach folder added
+  // later. Excluded pairs never reach the shared ordered set, the advanced
+  // picker, or any count; qa_data.json still holds them all.
+  ONLY_APPROACHES: ["SingleAgent"],
+
+  // Ignored while ONLY_APPROACHES is non-empty. Kept for the older setup.
   EXCLUDE_APPROACHES: ["DualAgent", "RAG"],
 
   // Hard cap on a session (0 = no cap). The same first N ordered pairs are shown
