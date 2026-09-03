@@ -1,0 +1,26 @@
+\section{The MedicalQA Dataset and Pipelines}
+\label{sec:method}
+
+% TODO: flesh out from the codebase. Skeleton mirrors the MentorQA paper
+% (Sections 3-4) so the extension reads as a controlled domain transfer.
+
+\subsection{Expert Lecture Corpus}
+% TODO: describe the source lectures (expert dementia-care educator
+% content, e.g., the Teepa Snow lecture series), hours, transcription
+% (download_transcripts.py / preprocess.py), and any second corpus
+% ("Master"). Licensing / public availability note.
+\todo{Corpus description: videos, hours, transcription, preprocessing.}
+
+\subsection{QA-Generation Architectures}
+% Mirror MentorQA's four architectures; name the agents as implemented:
+% SingleQA (single-agent), LLMChunking (chunking agent + QA agent),
+% RAG (question generation + ChromaDB retrieval-grounded answering,
+% RAG/vector_embeddings/chroma_db.py), MultiAgentChunking (architect,
+% inquisitor, scorer, justifier, synthesizer — agents/agent1-5).
+\todo{Describe the four pipelines and the five multi-agent roles
+(architect, inquisitor, scorer, justifier, synthesizer); base model and
+serving setup (Qwen weights on the cluster).}
+
+\subsection{Grounding and Quality Control}
+\todo{Segment-grounded answers, quota/scoring if applicable, PII and
+safety considerations for health content.}

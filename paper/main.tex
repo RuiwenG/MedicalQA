@@ -1,0 +1,52 @@
+% MedicalQA — ACL-style paper
+% Build: pdflatex main && bibtex main && pdflatex main && pdflatex main
+% (No local LaTeX toolchain on this machine — upload the paper/ folder to Overleaf.)
+\documentclass[11pt]{article}
+
+% Change to [final] for the camera-ready version; [review] adds line numbers.
+\usepackage[review]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+% TODO helper — remove before submission
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+\title{MedicalQA: Extending Mentorship-Oriented Question Answering to Dementia Caregiver Support}
+
+% TODO: confirm final author list and order
+\author{Catherine Awad \and Oana Ignat \\
+  Santa Clara University -- Santa Clara, USA \\
+  \texttt{\{cawad, oignat\}@scu.edu}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{sections/0_abstract}
+\end{abstract}
+
+\input{sections/1_introduction}
+\input{sections/2_related_work}
+\input{sections/3_methodology}
+\input{sections/4_experiments}
+\input{sections/5_results}
+\input{sections/6_conclusion}
+
+\section*{Limitations}
+\input{sections/7_limitations}
+
+\section*{Ethical Considerations}
+\input{sections/8_ethics}
+
+\bibliography{references}  % acl.sty already sets the acl_natbib style
+
+\end{document}

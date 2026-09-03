@@ -1,0 +1,136 @@
+\section{Related Work}
+\label{sec:related}
+
+% Structure: (1) the MentorQA foundation we extend; (2) caregiver needs;
+% (3) curated non-AI interventions; (4) evaluations of ungrounded LLMs;
+% (5) grounded / domain-specific systems; closing positioning paragraph
+% + comparison table (Table~\ref{tab:positioning}).
+
+\paragraph{Mentorship-oriented QA over long-form content.}
+Our work directly extends \textsc{MentorQA} \citep{bhalerao2026mentorqa},
+which introduced mentorship-focused question answering as a distinct task:
+answers that provide guidance, reflection, and learning value rather than
+isolated facts. \textsc{MentorQA} released 8,990 QA pairs derived from 180
+hours of long-form mentorship videos across four languages, and compared
+Single-Agent, Dual-Agent, RAG, and Multi-Agent generation pipelines under
+controlled conditions, finding that agentic coordination consistently
+produces higher-quality mentorship responses, with the largest gains on
+complex topics and lower-resource languages. Notably, health proved to be
+its most difficult territory: \emph{Physical Health} was the lowest-scoring
+topic (attributed to clinically dense language) and the health categories
+were the smallest in the dataset, while general podcast-style mentorship
+content offers no safety guarantees for health advice. Its authors
+explicitly invite extension of the open-source framework to new domains
+with expert oversight. MedicalQA answers this call: we retain the
+methodological backbone---transcript chunking, multi-agent QA generation,
+and mentorship-oriented evaluation---but ground it in vetted expert
+geriatric lectures, target dementia caregivers as a concrete, vulnerable
+audience, and adopt the trustworthiness requirements that the healthcare
+setting demands.
+
+\paragraph{Dementia caregivers' unmet informational needs.}
+NLP research on dementia has concentrated on detection and diagnosis;
+a recent systematic review finds caregiver support to be one of the least
+explored directions in the field \citep{nlpdementia2025}, even as the
+dementia-care community identifies LLMs as a promising avenue for caregiver
+assistance \citep{llmdementia2024}. The need itself is well documented.
+Analysis of over 60,000 posts on the ALZConnected forum shows caregivers
+seeking advice on symptoms, medications, and coping in anonymous,
+unverified peer spaces \citep{forumanalysis2024}. Interview studies report
+caregivers improvising support from generic tools such as ChatGPT, Reddit,
+and online forums, while explicitly asking for \emph{credible information
+with transparent sourcing} that adapts to their stage in the caregiving
+journey \citep{balancing2025}. A recent taxonomy triangulating 52 studies
+with caregiver interviews pinpoints the misalignment: existing
+informational resources deliver symptom facts rather than the
+skill-building and tailored guidance caregivers need, and current AI
+chatbots offer shallow, untailored support \citep{taxonomy2026}. Remote
+monitoring technologies, though frequently justified by caregiver burden,
+likewise leave caregivers' informational needs unaddressed
+\citep{remotemonitoring2025}. These studies identify requirements but
+build no system that meets them.
+
+\paragraph{Curated caregiver interventions.}
+The accepted non-AI intervention model confirms that expert-authored,
+digitally delivered education helps caregivers---but does not scale.
+The WHO's iSupport programme packages expert caregiving knowledge into a
+five-module self-help curriculum adapted across many countries
+\citep{isupport}; yet it is static: caregivers cannot ask their own
+questions, and each cultural adaptation requires manual expert effort.
+A meta-analysis of computerized cognitive training quantifies the
+underlying scalability dilemma: professionally supervised digital training
+is effective (verbal-memory SMD 0.72) while unsupervised self-administered
+versions lose most of the effect (0.21), leading the authors to call
+explicitly for incorporating AI into self-administered interventions
+\citep{cct2024}. Expert knowledge helps, but only when a professional is
+in the loop---motivating systems that deliver expert-level guidance
+interactively and at scale.
+
+\paragraph{LLMs as caregiving advisors.}
+Pre-LLM conversational support for dementia was scarce and shallow: a
+systematic review found only 6 of 505 candidate chatbots relevant, none
+grounding their health content in evidence \citep{chatbots2021}. The LLM
+era has not closed the reliability gap. When out-of-the-box models were
+evaluated against professional gold standards for home-care instruction,
+even GPT-4o omitted relevant details in 60--80\% of scenarios and matched
+professional-level specificity in only 10\% of responses
+\citep{homecare2025}. Caregivers probing a plain GPT-4o chatbot valued
+on-demand access but distrusted its uncited, generic answers; the study's
+foremost design recommendation is trustworthy information with transparent
+source citation \citep{carey2025}. Injecting curated domain knowledge
+helps---prompt engineering over 90 hand-written QA pairs significantly
+improved actionability, relevance, and satisfaction
+\citep{empowering2026,evaluatingllm2025}---but the authors themselves flag
+manual prompt curation as unscalable. Beyond content quality, the
+NurValues benchmark shows that even frontier LLMs trail human nurses in
+aligning with professional care values under adversarial dialogue, and
+that medical fine-tuning alone does not fix this \citep{nurvalues2025}.
+The verdict across these evaluations is consistent: caregiver-facing LLM
+answers must be grounded in vetted expert knowledge, and the grounding
+must scale beyond hand-curated prompts.
+
+\paragraph{Grounded and domain-specific care systems.}
+The systems closest to ours ground generation in curated care knowledge.
+CaLM combines RAG with fine-tuning over caregiving web resources, showing
+a 7B domain model can outperform GPT-3.5 for ADRD caregiving answers
+\citep{calm2024}. RISE couples RAG over the evidence-based REACH Caregiver
+Notebook with a social robot, reaching 87\% backend correctness in a small
+user study \citep{rise2026}. In the professional-care domain, NurseLLM
+demonstrates the value of specialization---and its multi-agent variant
+adds a further +3.62\% accuracy over the single model, independently
+validating agentic designs for care QA \citep{nursellm2025}. Yet every
+knowledge source in this line of work is short-form written material: web
+pages, a structured notebook, synthetic exam questions, or hand-written QA
+pairs. None taps long-form expert instruction such as lecture video; none
+uses multi-agent coordination for question generation and answer
+synthesis; none frames the interaction as mentorship; and none pairs
+scalable LLM-as-judge evaluation with human annotation.
+
+\paragraph{Positioning.}
+Table~\ref{tab:positioning} situates MedicalQA. Against the grounded
+caregiving systems, we contribute \textsc{MentorQA}'s multi-agent
+generation and mentorship-oriented evaluation; against \textsc{MentorQA},
+we contribute a vetted expert knowledge source (long-form geriatric
+lectures), a healthcare domain and audience, and the safety bar that
+domain imposes.
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllll@{}}
+\toprule
+ & \textbf{MentorQA} & \textbf{CaLM} & \textbf{RISE} & \textbf{NurseLLM} & \textbf{MedicalQA (ours)} \\
+\midrule
+Knowledge source & Mentorship podcasts & Caregiving web pages & REACH notebook & Synthetic MCQs & \textbf{Expert geriatric lectures} \\
+Domain & General mentorship & ADRD caregiving & ADRD caregiving & Nursing exams & \textbf{Dementia caregiving} \\
+Grounding & RAG / segment & RAG + fine-tune & RAG & Fine-tune only & \textbf{RAG over lecture chunks} \\
+Generation & Multi-agent & Single model & Single model & MA answer selection & \textbf{Multi-agent QA gen.\ + synthesis} \\
+Framing & Mentorship & Q\&A & Education & Exam prep & \textbf{Mentorship-style education} \\
+Evaluation & LLM judges + human & Auto metrics & Small user study & MCQ accuracy & \textbf{LLM-judge + human pilot} \\
+\bottomrule
+\end{tabular}}
+\caption{MedicalQA compared with its foundation (\textsc{MentorQA}) and the closest grounded or domain-specific care systems.}
+\label{tab:positioning}
+\end{table*}

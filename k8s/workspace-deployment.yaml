@@ -1,0 +1,56 @@
+# GPU workspace for MedicalQA on the k1.mcx.ai (k3s) cluster.
+#
+#   kubectl apply -f k8s/workspace-deployment.yaml
+#   kubectl -n medicalqa exec deploy/workspace -- bash -c '...'
+#
+# A Deployment, not a bare Pod: bare pods are garbage-collected when the node
+# reboots and nothing recreates them. The Deployment brings the workspace back
+# by itself.
+#
+# Everything the run needs lives on the PVC (repo, .venv, Qwen weights, and the
+# Python interpreter at /workspace/envs/py312), so a fresh container needs no
+# setup. The venv's bin/python symlinks to that PVC path -- do not rebuild the
+# venv against an interpreter inside the image, or it breaks on every restart.
+#
+# runtimeClassName: nvidia is required on this cluster. Without it the pod
+# starts fine but has no GPU, and torch silently falls back to CPU.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workspace
+  namespace: medicalqa
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate # only one GPU slot; never run two copies at once
+  selector:
+    matchLabels:
+      app: medicalqa-workspace
+  template:
+    metadata:
+      labels:
+        app: medicalqa-workspace
+    spec:
+      runtimeClassName: nvidia
+      containers:
+        - name: workspace
+          image: pytorch/pytorch:2.3.1-cuda12.1-cudnn8-devel
+          command: ["sleep", "infinity"]
+          workingDir: /workspace/MedicalQA
+          env:
+            # The pipelines default to the HTTP API backend, which is wrong for
+            # a pod holding a GPU. Same reasoning as slurm/run_script.sh.
+            - name: QWEN_BACKEND
+              value: local
+            - name: QWEN_MODEL_PATH
+              value: /workspace/models/Qwen3.5-9B
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: workspace
+              mountPath: /workspace
+      volumes:
+        - name: workspace
+          persistentVolumeClaim:
+            claimName: medicalqa-workspace
