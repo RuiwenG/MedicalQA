@@ -243,8 +243,8 @@
 
 const CFG = Object.assign({
   SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
-  RATINGS_TABLE: "ratings_ui_v3_qna_v3",
-  STUDY_VERSION: "ui_v3_qna_v3",
+  RATINGS_TABLE: "ratings_v3",
+  STUDY_VERSION: "v3",
   MAX_PAIRS: 0,
   // Approach names dropped from the corpus at load time. Excluded pairs never
   // reach DATA, so they cannot appear in the shared ordered set, in the
@@ -272,7 +272,7 @@ const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
   .trim()
   .replace(/\/+$/, "")
   .replace(/\/rest\/v1$/, "");
-const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_ui_v3_qna_v3").trim();
+const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_v3").trim();
 
 // key   -> column name in Supabase / CSV field key
 // label -> what the annotator reads
@@ -673,7 +673,7 @@ function enqueue(uid) {
   const p = pairOf(uid);
   const sc = S.scores[uid] || {};
   const row = {
-    study_version: CFG.STUDY_VERSION || "ui_v3_qna_v3",
+    study_version: CFG.STUDY_VERSION || "v3",
     session_id: S.sessionId,
     annotator: S.annotator,
     qa_uid: uid,
@@ -712,7 +712,7 @@ function enqueue(uid) {
 function normalizeSupabaseRow(row) {
   const p = pairOf(row.qa_uid) || {};
   const out = {
-    study_version: row.study_version || CFG.STUDY_VERSION || "ui_v3_qna_v3",
+    study_version: row.study_version || CFG.STUDY_VERSION || "v3",
     session_id: row.session_id,
     annotator: row.annotator,
     qa_uid: row.qa_uid,

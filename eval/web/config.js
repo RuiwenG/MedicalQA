@@ -19,8 +19,8 @@ window.EVAL_CONFIG = {
   // Current study table. The five-metric rubric (Standalone added) and the
   // regenerated SingleAgent Q&As get their own table, so `ratings_ui_v2_qna_v2`
   // stays a clean four-metric record and nothing has to be filtered by NULLs.
-  RATINGS_TABLE: "ratings_ui_v3_qna_v3",
-  STUDY_VERSION: "ui_v3_qna_v3",
+  RATINGS_TABLE: "ratings_v3",
+  STUDY_VERSION: "v3",
 
   // The study is SingleAgent-only (new self-contained prompt). This is an
   // allowlist, so nothing else can enter the corpus — not MultiAgent v2/v3, not

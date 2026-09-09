@@ -54,7 +54,7 @@ The anon key is public — it ships in the page source. That is safe because the
 no DELETE. Worst case a stranger inserts junk rows, which you filter out by
    `session_id`. Nobody can read or destroy real ratings.
 
-The current UI writes to `ratings_ui_v3_qna_v3`, configured through
+The current UI writes to `ratings_v3`, configured through
 `RATINGS_TABLE` in `config.js`. `ratings_ui_v2_qna_v2` (four metrics, pre-prompt-change
 Q&As) and the older `ratings` table are both left untouched — a rubric change gets a
 new table so no analysis has to separate the two by NULL columns.
@@ -63,7 +63,7 @@ new table so no analysis has to separate the two by NULL columns.
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. SQL Editor → paste all of `supabase_schema.sql` → Run. This creates the new
-   `ratings_ui_v3_qna_v3` table and `ratings_ui_v3_qna_v3_final` view.
+   `ratings_v3` table and `ratings_v3_final` view.
 3. Project Settings → Data API → copy the **Project URL**.
    Project Settings → API keys → copy the **anon / public** key.
 4. Paste both into `config.js`.
@@ -159,18 +159,18 @@ unavailable.
 
 ## 5. Getting the results out
 
-Supabase → Table Editor → `ratings_ui_v3_qna_v3_final` → Export CSV. Or straight into pandas:
+Supabase → Table Editor → `ratings_v3_final` → Export CSV. Or straight into pandas:
 
 ```python
 import pandas as pd
 # Settings -> Database -> Connection string (use the pooler URI)
-df = pd.read_sql("select * from ratings_ui_v3_qna_v3_final", "postgresql://...")
+df = pd.read_sql("select * from ratings_v3_final", "postgresql://...")
 df.groupby(["approach", "qna_trustworthiness_binary"]).size().rename("n").reset_index()
 # Values are text labels. Apply the agreed score/code mapping after collection.
 ```
 
-`ratings_ui_v3_qna_v3` is append-only, so a Q&A re-rated via the Previous button
-appears more than once. The `ratings_ui_v3_qna_v3_final` view keeps only the
+`ratings_v3` is append-only, so a Q&A re-rated via the Previous button
+appears more than once. The `ratings_v3_final` view keeps only the
 latest per `(session_id, qa_uid)` — use it for analysis and keep the raw table
 as the audit trail.
 
@@ -189,7 +189,7 @@ For inter-annotator agreement, use Q&As rated by more than one annotator:
 
 ```sql
 select qa_uid, count(distinct annotator) as n
-from ratings_ui_v3_qna_v3_final group by qa_uid having count(distinct annotator) > 1;
+from ratings_v3_final group by qa_uid having count(distinct annotator) > 1;
 ```
 
 ## 6. Notes

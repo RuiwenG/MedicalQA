@@ -3,7 +3,7 @@
 --
 -- This creates a NEW table for the five-metric rubric (Trustworthiness, Clarity,
 -- Usefulness, Care Safety, Standalone) and the regenerated SingleAgent Q&As:
---   public.ratings_ui_v3_qna_v3
+--   public.ratings_v3
 --
 -- It does not modify public.ratings_ui_v2_qna_v2, which is frozen and holds the
 -- earlier four-metric annotations, nor the older public.ratings table.
@@ -14,9 +14,9 @@
 -- Resume is powered by localStorage in the browser, so the page never needs
 -- SELECT access.
 
-create table if not exists public.ratings_ui_v3_qna_v3 (
+create table if not exists public.ratings_v3 (
     id              bigserial primary key,
-    study_version   text        not null default 'ui_v3_qna_v3',
+    study_version   text        not null default 'v3',
     session_id      text        not null,   -- one per annotator per configuration
     annotator       text        not null,
     qa_uid          text        not null,   -- stable Q&A id from qa_data.json
@@ -73,8 +73,8 @@ create table if not exists public.ratings_ui_v3_qna_v3 (
 );
 
 -- If this file is re-run, keep the migration additive.
-alter table public.ratings_ui_v3_qna_v3
-    add column if not exists study_version                  text not null default 'ui_v3_qna_v3',
+alter table public.ratings_v3
+    add column if not exists study_version                  text not null default 'v3',
     add column if not exists question_text                   text not null default '',
     add column if not exists answer_text                     text not null default '',
     add column if not exists source_start_sec                integer,
@@ -96,26 +96,26 @@ alter table public.ratings_ui_v3_qna_v3
     add column if not exists caregiver_recommendation        text,
     add column if not exists evaluator_comment               text;
 
-create index if not exists ratings_ui_v3_qna_v3_session_idx
-    on public.ratings_ui_v3_qna_v3 (session_id);
-create index if not exists ratings_ui_v3_qna_v3_qa_uid_idx
-    on public.ratings_ui_v3_qna_v3 (qa_uid);
-create index if not exists ratings_ui_v3_qna_v3_approach_idx
-    on public.ratings_ui_v3_qna_v3 (dataset, approach);
-create index if not exists ratings_ui_v3_qna_v3_study_version_idx
-    on public.ratings_ui_v3_qna_v3 (study_version);
+create index if not exists ratings_v3_session_idx
+    on public.ratings_v3 (session_id);
+create index if not exists ratings_v3_qa_uid_idx
+    on public.ratings_v3 (qa_uid);
+create index if not exists ratings_v3_approach_idx
+    on public.ratings_v3 (dataset, approach);
+create index if not exists ratings_v3_study_version_idx
+    on public.ratings_v3 (study_version);
 
-alter table public.ratings_ui_v3_qna_v3 enable row level security;
+alter table public.ratings_v3 enable row level security;
 
 -- Public browser clients may insert only. No select/update/delete policy exists,
 -- so RLS denies those actions to `anon` by default. Do not add one.
-revoke all on public.ratings_ui_v3_qna_v3 from anon, authenticated;
-grant insert on public.ratings_ui_v3_qna_v3 to anon;
-grant usage, select on sequence public.ratings_ui_v3_qna_v3_id_seq to anon;
+revoke all on public.ratings_v3 from anon, authenticated;
+grant insert on public.ratings_v3 to anon;
+grant usage, select on sequence public.ratings_v3_id_seq to anon;
 
-drop policy if exists ratings_ui_v3_qna_v3_anon_insert on public.ratings_ui_v3_qna_v3;
-create policy ratings_ui_v3_qna_v3_anon_insert
-    on public.ratings_ui_v3_qna_v3
+drop policy if exists ratings_v3_anon_insert on public.ratings_v3;
+create policy ratings_v3_anon_insert
+    on public.ratings_v3
     for insert
     to anon
     with check (true);
@@ -125,14 +125,14 @@ create policy ratings_ui_v3_qna_v3_anon_insert
 -- Latest rating per (session, Q&A). The Previous button re-submits a Q&A, so
 -- the raw table keeps an edit history; this view keeps only the final answer.
 -- ---------------------------------------------------------------------------
-drop view if exists public.ratings_ui_v3_qna_v3_final;
-create view public.ratings_ui_v3_qna_v3_final
+drop view if exists public.ratings_v3_final;
+create view public.ratings_v3_final
 with (security_invoker = true) as
 select distinct on (session_id, qa_uid) *
-from public.ratings_ui_v3_qna_v3
+from public.ratings_v3
 order by session_id, qa_uid, created_at desc;
 
-revoke all on public.ratings_ui_v3_qna_v3_final from anon, authenticated;
+revoke all on public.ratings_v3_final from anon, authenticated;
 
 
 -- ---------------------------------------------------------------------------
@@ -141,31 +141,31 @@ revoke all on public.ratings_ui_v3_qna_v3_final from anon, authenticated;
 
 -- Who has done how much, and when did they last submit?
 --   select annotator, count(*) as qnas_rated, max(created_at) as last_seen
---   from public.ratings_ui_v3_qna_v3_final
+--   from public.ratings_v3_final
 --   group by annotator
 --   order by qnas_rated desc;
 
 -- Attribute/binary label counts by approach:
 --   select approach, qna_trustworthiness_attribute, qna_trustworthiness_binary, count(*) as n
---   from public.ratings_ui_v3_qna_v3_final
+--   from public.ratings_v3_final
 --   group by approach, qna_trustworthiness_attribute, qna_trustworthiness_binary
 --   order by approach, n desc;
 
 -- Care-safety concern counts by approach:
 --   select approach, qna_care_safety_issue, count(*) as n
---   from public.ratings_ui_v3_qna_v3_final
+--   from public.ratings_v3_final
 --   where qna_care_safety_issue is not null and qna_care_safety_issue <> 'No issue'
 --   group by approach, qna_care_safety_issue
 --   order by approach, n desc;
 
 -- Optional comments:
 --   select annotator, qa_uid, approach, evaluator_comment
---   from public.ratings_ui_v3_qna_v3_final
+--   from public.ratings_v3_final
 --   where evaluator_comment is not null
 --   order by created_at desc;
 
 -- Overlap available for inter-annotator agreement:
 --   select qa_uid, count(distinct annotator) as n_annotators
---   from public.ratings_ui_v3_qna_v3_final
+--   from public.ratings_v3_final
 --   group by qa_uid
 --   having count(distinct annotator) > 1;
