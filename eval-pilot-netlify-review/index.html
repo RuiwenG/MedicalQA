@@ -323,18 +323,10 @@ const METRICS = [
     errors: ["Unsafe medical or health advice", "Physical safety risk", "Blaming or judgmental language", "Discourages professional care"],
     noIssueError: "No issue" },
   // Mirrors the Self-contained (Standalone) criterion in the SingleQA generation
-  // prompt and in eval/llm_judge/judge.py. Appended last so the first four
-  // metrics keep their CSV column positions across runs.
+  // prompt. Appended last so the first four metrics keep their stored order.
   { key: "qa_standalone", dbPrefix: "qna_standalone", label: "Q&A Standalone", scope: "qa",
-    attributeName: "Q&A Standalone",
-    binaryQuestion: "Can this Q&A be understood on its own, without the video and without any other Q&A?",
-    def: "The Q&A names everything it refers to. For this criterion only, ignore the video even if you watched it: judge whether a caregiver who has never seen it, reading this one Q&A with no others in front of them, would know what every reference points to.",
-    attribute: [
-      "Fully standalone",
-      "Mostly standalone",
-      "Somewhat dependent",
-      "Not standalone",
-    ],
+    binaryQuestion: "Can the Q&A be understood on its own by a caregiver who has not seen the video and cannot see any other Q&A pair?",
+    def: "(The QA pair is understandable on its own without requiring additional context from the source video.)",
     errors: ["Refers to the video, transcript or speaker", "Undefined pronoun", "Undefined this/these reference", "Depends on another Q&A pair"],
     noIssueError: "No issue" },
 ];
@@ -463,11 +455,12 @@ function makeSession(name, opts) {
   const pairs = buildPairs(opts);
   const configId = hashStr(JSON.stringify({
     m: opts.mode, d: opts.datasets, a: opts.approaches, v: opts.videos,
-    sm: opts.sample, mx: opts.maxPairs, order: "same-ordered-v1",
+    mt: opts.metrics, sm: opts.sample, mx: opts.maxPairs, order: "same-ordered-v1",
+    rubric: "standalone-binary-v1",
   })).toString(36);
 
   return {
-    version: 5,
+    version: 6,
     annotator: name,
     storeKey: "dqa:" + slug(name) + ":" + configId,
     sessionId: slug(name) + "-" + configId,
@@ -475,7 +468,7 @@ function makeSession(name, opts) {
     metrics: opts.metrics,
     uids: pairs.map((p) => p.uid),
     index: 0,
-    scores: {},        // uid -> { metricKey: { attribute, errors, binary } }
+    scores: {},        // uid -> { metricKey: { optional attribute, errors, binary } }
     recommendations: {}, // uid -> caregiver recommendation label
     comments: {},      // uid -> optional evaluator note
     seconds: {},       // uid -> seconds spent
@@ -498,7 +491,7 @@ function restore(storeKey) {
     const raw = localStorage.getItem(storeKey);
     if (!raw) return null;
     const obj = JSON.parse(raw);
-    if (!obj || ![4, 5].includes(obj.version)) return null;
+    if (!obj || ![4, 5, 6].includes(obj.version)) return null;
     obj.scores = obj.scores || {};
     obj.recommendations = obj.recommendations || {};
     obj.comments = obj.comments || {};
@@ -804,10 +797,10 @@ window.addEventListener("beforeunload", (e) => {
    Export
    =========================================================================== */
 
-// Same column names the notebook writes to Excel, so both sources aggregate together.
+// Human-readable export columns; binary-only metrics intentionally omit Attribute.
 function metricCsvCols() {
   return METRICS.flatMap((m) => [
-    m.label + " Attribute",
+    ...(hasAttributeScale(m) ? [m.label + " Attribute"] : []),
     m.label + " Error Type",
     m.label + " Yes/No",
   ]);
@@ -830,11 +823,8 @@ function buildCsv() {
     const row = [p.dataset, p.video, p.approach, uid, p.question, p.answer];
     for (const m of METRICS) {
       const ms = sc[m.key] || {};
-      row.push(
-        ms.attribute || "",
-        errorText(ms, m),
-        binaryValue(ms) || "",
-      );
+      if (hasAttributeScale(m)) row.push(ms.attribute || "");
+      row.push(errorText(ms, m), binaryValue(ms) || "");
     }
     const recommendation = S.recommendations[uid];
     const comment = S.comments && S.comments[uid] ? S.comments[uid].trim() : "";
@@ -877,7 +867,7 @@ const exportJson = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp()
 
 // The advanced selection is remembered so that coming Back from the rating
 // screen returns you to the options you actually chose, not the defaults.
-const LAST_OPTS_KEY = "dqa:lastopts";
+const LAST_OPTS_KEY = "dqa:lastopts:standalone-binary-v1";
 function loadLastOpts() {
   try { return JSON.parse(localStorage.getItem(LAST_OPTS_KEY) || "null"); }
   catch (e) { return null; }
@@ -969,10 +959,10 @@ function renderWelcome() {
 
     <div class="card">
       <h2>The rating flow</h2>
-      <p class="muted">For each criterion, choose the quality label, then answer one Yes/No question. If you choose No, select the problems that apply.</p>
+      <p class="muted">For criteria with a quality scale, choose the quality label and then answer Yes/No. Standalone and Care Safety are binary-only. When the answer lands on the failing side, select the problems that apply.</p>
       <table>
         <tr><th>Part</th><th>What you choose</th></tr>
-        <tr><td><b>Quality label</b></td><td>A plain-language label for the Q&A. Score mapping happens after collection.</td></tr>
+        <tr><td><b>Quality label</b></td><td>A plain-language label for metrics that use a quality scale. Standalone and Care Safety do not use one.</td></tr>
         <tr><td><b>Yes/No question</b></td><td>A simple check for whether the Q&A meets that criterion.</td></tr>
         <tr><td><b>Problem types</b></td><td>Shown only after No. Select one or more problems.</td></tr>
         <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the Q&A to a caregiver.</td></tr>

@@ -14,26 +14,26 @@ eval/web/
   supabase_schema.sql   run once in the Supabase SQL editor
 ```
 
-`qa_data.json` holds the question and answer for all 1,052 pairs (source
-segments are stripped so every approach is judged on the same footing), plus a
-`videos` map of source URLs read from `test_dataset.csv` (Master) and
-`teepa.csv` (Teepa). Regenerate it whenever results change:
+`qa_data.json` holds 1,503 current and historical question-answer pairs, their
+available source timestamps, and a `videos` map of URLs read from
+`test_dataset.csv` (Master) and `teepa.csv` (Teepa). The active allowlist keeps
+only the 225 current `SingleAgent` pairs in the human study. Regenerate the file
+whenever results change:
 
 ```
 python eval/web/extract_qa_data.py
 ```
 
-### Excluded approaches
+### Active approach
 
-`EXCLUDE_APPROACHES` in `config.js` drops approaches from the corpus at load
-time, before the shared ordered set is built. DualAgent and RAG are currently excluded, leaving **452
-pairs** across `MultiAgent-LLMChunking` and `SingleAgent`. Excluded pairs never
-enter the shared ordered set, the advanced picker, or any count — annotators
-cannot opt back in. `qa_data.json` is untouched, so emptying the list restores
-them without regenerating anything.
+`ONLY_APPROACHES: ["SingleAgent"]` in `config.js` drops every other approach
+from the corpus at load time, before the shared ordered set is built. Excluded
+pairs never enter the shared set, the advanced picker, or any count — annotators
+cannot opt back in. `qa_data.json` is untouched, so changing the allowlist can
+restore a comparison arm without regenerating the data file.
 
-Both `config.js` files must list the same exclusions, otherwise the pilot and
-the study rate different corpora.
+Both `config.js` files must list the same allowlist, otherwise the pilot and the
+study can rate different corpora.
 
 ---
 
@@ -54,16 +54,18 @@ The anon key is public — it ships in the page source. That is safe because the
 no DELETE. Worst case a stranger inserts junk rows, which you filter out by
    `session_id`. Nobody can read or destroy real ratings.
 
-The current UI writes to `ratings_v3`, configured through
-`RATINGS_TABLE` in `config.js`. `ratings_ui_v2_qna_v2` (four metrics, pre-prompt-change
-Q&As) and the older `ratings` table are both left untouched — a rubric change gets a
-new table so no analysis has to separate the two by NULL columns.
+The current UI writes to `ratings_v3`, configured through `RATINGS_TABLE` in
+`config.js`. The current `supabase_schema.sql` intentionally resets that v3
+table for the binary-only Standalone form. It does not change
+`ratings_ui_v2_qna_v2` or the older `ratings` table.
 
 ## 2. Set up Supabase (about 15 minutes, free)
 
 1. Create a project at [supabase.com](https://supabase.com).
-2. SQL Editor → paste all of `supabase_schema.sql` → Run. This creates the new
-   `ratings_v3` table and `ratings_v3_final` view.
+2. SQL Editor → paste all of `supabase_schema.sql` → Run. This drops and
+   recreates `ratings_v3` and `ratings_v3_final`, deleting any earlier v3 test
+   rows. The SQL is wrapped in a transaction so a setup error rolls back the
+   reset.
 3. Project Settings → Data API → copy the **Project URL**.
    Project Settings → API keys → copy the **anon / public** key.
 4. Paste both into `config.js`.
@@ -174,16 +176,12 @@ appears more than once. The `ratings_v3_final` view keeps only the
 latest per `(session_id, qa_uid)` — use it for analysis and keep the raw table
 as the audit trail.
 
-Downloaded CSVs use the same column names the notebook writes to Excel, so
-dropping them into `eval/results/` lets the notebook's aggregation cell pick
-them up alongside the `.xlsx` files.
-
-The current output stores, for each applicable metric, an attribute label
-(`*_attribute`), one or more issue labels (`*_issue`, joined with `; `), and a
-Yes/No label (`*_binary`). Q&A Care Safety is binary-only, and the table also
-stores `caregiver_recommendation`, `evaluator_comment`, and the exact
-`question_text` / `answer_text` that was rated. These are text labels only;
-score/code mapping happens later during analysis.
+The three scaled metrics store an attribute label (`*_attribute`). Every metric
+stores a Yes/No label (`*_binary`) and an issue field (`*_issue`, joined with
+`; `). Q&A Standalone and Q&A Care Safety are binary-only, so they have no
+attribute column. The table also stores `caregiver_recommendation`,
+`evaluator_comment`, and the exact `question_text` / `answer_text` that was
+rated. These are text labels only; score/code mapping happens during analysis.
 
 For inter-annotator agreement, use Q&As rated by more than one annotator:
 
