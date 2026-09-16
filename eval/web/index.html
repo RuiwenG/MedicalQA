@@ -553,14 +553,24 @@ function sourceVideo(p) {
   const id = youtubeId(v.url);
   if (!id) return { url: v.url, embed: null, hasClip: false };
   const hasClip = typeof p.t === "number";
+  // "aligned" clips were recovered by matching the Q&A back to the transcript
+  // (eval/align_timestamps.py) because the generator wrote no usable range —
+  // they are approximate, and the caption below the player says so.
+  const approx = hasClip && (p.ts === "aligned" || p.ts === "aligned-low");
+  // A weak alignment gets a start but no end: seeking near the likely segment
+  // helps, while cutting the clip off at a guessed boundary would hide the real
+  // source from someone who has to judge whether the Q&A matches the video.
+  const weak = p.ts === "aligned-low";
   const start = hasClip ? Math.max(0, Math.round(p.t)) : 0;
-  const end = hasClip && typeof p.te === "number" && p.te > p.t ? Math.round(p.te) : null;
+  const end = hasClip && !weak && typeof p.te === "number" && p.te > p.t ? Math.round(p.te) : null;
   const params = new URLSearchParams({ rel: "0", modestbranding: "1", start: String(start) });
   if (end) params.set("end", String(end));
   return {
     url: videoLink(p, true),
     embed: `https://www.youtube.com/embed/${id}?${params.toString()}`,
     hasClip,
+    approx,
+    weak,
   };
 }
 
@@ -1170,7 +1180,7 @@ function insertVideoPanel(cards, metrics, source) {
       <details class="source-video">
         <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}</summary>
         ${source.embed ? `<iframe class="video-frame" src="${source.embed}" title="Source video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : `<a class="vidlink-inline" href="${source.url}" target="_blank" rel="noopener noreferrer">Open source video</a>`}
-        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${source.hasClip ? "This clip starts at the Q&A source segment when timestamp metadata is available." : "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown."}</p>
+        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${!source.hasClip ? "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown." : source.weak ? "The Q&A could not be pinned to one part of the transcript, so the video starts at the closest match and plays on. Scrub if the relevant part is not here." : source.approx ? "This clip is an approximate match to the Q&A source segment, found by aligning the Q&A to the transcript. Scrub a little either way if the relevant part is not in view." : "This clip starts at the Q&A source segment recorded when the Q&A was generated."}</p>
       </details>
       <p class="muted" style="margin:8px 0 0 0; font-size:12px;">Open the video for the criteria below, which ask whether the Q&A matches its source. ${cut > 0 ? "Answer the criteria above it first — they are about the Q&A text on its own." : ""}</p>
     </div>`;

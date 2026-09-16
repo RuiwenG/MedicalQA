@@ -9,6 +9,10 @@ Walks ``<dataset>/<video>/<approach>/QA results/finalQA.json`` and emits
     Source segments are dropped so all approaches are judged on the same
     footing. ``t`` (start second) and ``te`` (end second) are carried through
     when the approach records them, and are used for embedded source clips.
+    Pairs whose generator emitted no usable timestamp fall back to the windows
+    in ``aligned_timestamps.json`` (see ``eval/align_timestamps.py``) and are
+    tagged ``ts: "aligned"`` — or ``"aligned-low"`` when the match was weak —
+    so the UI can call the clip approximate.
 ``videos``
     ``{dataset: {video: {url, language}}}`` read from the dataset CSVs, so the
     UI can link an annotator to the source video.
@@ -36,7 +40,7 @@ def find_repo_root() -> Path:
     raise SystemExit("Could not locate Master/ or Teepa/ — run this from inside the repo.")
 
 
-def extract(base_dir: Path) -> list[dict]:
+def extract(base_dir: Path, aligned: dict) -> list[dict]:
     pairs = []
     for dataset in DATASETS:
         droot = base_dir / dataset
@@ -68,16 +72,43 @@ def extract(base_dir: Path) -> list[dict]:
                         "question": question,
                         "answer": answer,
                     }
-                    # Only DualAgent and MultiAgent record timestamps. The UI
-                    # uses these for source-video clips when available.
+                    # DualAgent and MultiAgent derive timestamps from the
+                    # transcript segment a pair was generated from; SingleAgent
+                    # depends on the model writing a "Timestamp N:" line and
+                    # frequently drops it. A model-written range always wins;
+                    # otherwise fall back to the aligned window so the UI can
+                    # still play the clip instead of the whole video.
                     start = item.get("time_start_sec")
-                    if isinstance(start, (int, float)):
-                        pair["t"] = int(start)
                     end = item.get("time_end_sec")
-                    if isinstance(end, (int, float)):
-                        pair["te"] = int(end)
+                    if isinstance(start, (int, float)) and isinstance(end, (int, float)):
+                        pair["t"], pair["te"] = int(start), int(end)
+                        pair["ts"] = "model"
+                    elif pair["uid"] in aligned:
+                        window = aligned[pair["uid"]]
+                        pair["t"], pair["te"] = int(window["t"]), int(window["te"])
+                        # "low" means the match was weak (a question too generic
+                        # to localise). The UI seeks there but does not bound the
+                        # clip, so a wrong guess costs the annotator a scrub
+                        # rather than hiding the segment the pair came from.
+                        pair["ts"] = "aligned-low" if window.get("low") else "aligned"
                     pairs.append(pair)
     return pairs
+
+
+def load_aligned(base_dir: Path) -> dict:
+    """Read the transcript-aligned fallback windows, if they have been built.
+
+    Produced by ``eval/align_timestamps.py``; keyed by the same uid built
+    below. Missing file just means every pair keeps whatever its generator
+    recorded.
+    """
+    path = base_dir / "eval" / "web" / "aligned_timestamps.json"
+    if not path.exists():
+        print("  ! aligned_timestamps.json not found — run eval/align_timestamps.py "
+              "to recover clips for pairs with no model timestamp")
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
 
 def load_video_urls(base_dir: Path) -> dict:
@@ -102,7 +133,8 @@ def load_video_urls(base_dir: Path) -> dict:
 
 def main() -> None:
     base_dir = find_repo_root()
-    pairs = extract(base_dir)
+    aligned = load_aligned(base_dir)
+    pairs = extract(base_dir, aligned)
     if not pairs:
         raise SystemExit("No finalQA.json files found — nothing to extract.")
 
@@ -132,9 +164,13 @@ def main() -> None:
 
     linked = {d: len(v) for d, v in video_urls.items()}
     timestamped = sum(1 for p in pairs if "t" in p)
+    from_model = sum(1 for p in pairs if p.get("ts") == "model")
+    from_align = sum(1 for p in pairs if p.get("ts") == "aligned")
+    low_conf = sum(1 for p in pairs if p.get("ts") == "aligned-low")
     print(f"\nVideo links: {linked or 'none'}")
     print(f"Pairs with a timestamp: {timestamped} / {len(pairs)} "
-          f"(used for embedded source clips when available)")
+          f"({from_model} from the generator, {from_align} aligned to the transcript, "
+          f"{low_conf} aligned with low confidence)")
     missing = sorted({(p["dataset"], p["video"]) for p in pairs
                       if str(p["video"]) not in video_urls.get(p["dataset"], {})})
     if missing:

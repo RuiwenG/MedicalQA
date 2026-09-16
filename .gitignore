@@ -54,7 +54,18 @@ paper/*.bbl
 paper/*.blg
 paper/*.synctex.gz
 
-# Pre-prompt-change SingleAgent outputs. Materialised from git history purely as
-# a comparison arm for the self-containment evaluation; reproduce with
-#   git show <commit>:"<dataset>/<n>/SingleAgent/QA results/finalQA.json"
+# Named SingleAgent prompt arms, kept on disk for the prompt comparison and not
+# versioned here — `SingleAgent/` is the live arm the eval site reads, and each
+# of these is a snapshot of one generation of it:
+#   SingleAgent-v1  pre-self-containment prompt   git show 124efa1:"<ds>/<n>/SingleAgent/QA results/finalQA.json"
+#   SingleAgent-v2  self-contained prompt         git show 447a972:"<ds>/<n>/SingleAgent/QA results/finalQA.json"
+#   SingleAgent-v3  current prompt                copy of the live SingleAgent/ folder
+# v1 and v2 reproduce from the commits above. v3 only exists on disk until the
+# current SingleAgent/ outputs are committed — back it up before deleting it.
+**/SingleAgent-v[0-9]/
+
+# Duplicate of SingleAgent-v1 under the old name; slated for removal.
 **/SingleAgent-prev/
+
+# Throwaway old-definition judge used for the replication run
+eval/llm_judge/judge_olddef.py
