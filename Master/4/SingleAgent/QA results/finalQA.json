@@ -9,46 +9,64 @@
   {
     "question": "Why does the brain create delusions when a person has dementia?",
     "answer": "The brain creates delusions to make sense of missing information. A person may have a fragment of memory or see a piece of data, but if a key detail is missing, their brain fills in the gap with made-up information to create a complete story. This is an attempt by the mind to find logic in a confusing situation, even if the resulting belief is not true.",
-    "timestamp": "06-2:24"
+    "timestamp": "2: 06-2:24",
+    "time_start_sec": 126,
+    "time_end_sec": 144
   },
   {
     "question": "Why is it ineffective to use facts or evidence to correct a person’s delusion?",
     "answer": "Trying to prove someone wrong with facts often leads to arguments and distress because the person’s reality feels very real to them. Even if a caregiver presents undeniable proof, it rarely changes the person’s belief in the moment and can make them feel attacked or misunderstood. Instead of focusing on being right, it is more helpful to focus on connecting with the person’s feelings.",
-    "timestamp": null
+    "timestamp": "4:07-5:09",
+    "time_start_sec": 247,
+    "time_end_sec": 309
   },
   {
     "question": "How can a caregiver identify the \"kernel of truth\" behind a scary delusion?",
     "answer": "Most delusions contain a small element of truth from recent events or conversations. For example, if a person accuses a caregiver of hiding car keys, there may have been a previous discussion about driving safety. By looking for these recent interactions, caregivers can understand the root of the fear or confusion and address the underlying concern rather than just the accusation.",
-    "timestamp": "07-5:09"
+    "timestamp": "5:10-6:05",
+    "time_start_sec": 310,
+    "time_end_sec": 365
   },
   {
     "question": "What is \"supportive stance\" and how does it help during a conflict?",
     "answer": "Supportive stance involves physically backing up and creating space rather than moving closer or confronting the person. This approach reduces tension and makes the person with dementia feel less threatened. It signals that the caregiver is calm and safe, which can help de-escalate the situation and prevent the conflict from worsening.",
-    "timestamp": "10-6:05"
+    "timestamp": "7:20-7:42",
+    "time_start_sec": 440,
+    "time_end_sec": 462
   },
   {
     "question": "How should a caregiver validate a person’s delusion without lying?",
     "answer": "Validation means acknowledging what the person sees or hears without agreeing with the false fact. For example, instead of saying \"I didn't take your keys,\" a caregiver can say, \"You are thinking I took the car keys.\" This technique shows empathy and lets the person know they are heard, avoiding the argument that comes from directly telling them they are wrong.",
-    "timestamp": null
+    "timestamp": "8:11-8:34",
+    "time_start_sec": 491,
+    "time_end_sec": 514
   },
   {
     "question": "What is a helpful way for a caregiver to handle their own stress after a difficult interaction?",
     "answer": "After an intense interaction involving delusions, caregivers need time to decompress. It is important to step back from the scene, take deep breathes, or lie down to regain emotional balance. Caring for someone with dementia requires significant emotional energy, so taking a moment to reset helps caregivers remain patient and supportive in future moments.",
-    "timestamp": "20-7:42"
+    "timestamp": "10:18-10:52",
+    "time_start_sec": 618,
+    "time_end_sec": 652
   },
   {
     "question": "How did the team support Lauren when she believed her friend Lynn had died?",
     "answer": "When Lauren became distressed believing her friend Lynn had died in a tragedy, the team worked together to help her process this belief. They eventually arranged for the real Lynn to visit Lauren. Although it took time and effort, seeing the real person helped Lauren’s brain reconnect with reality, showing that patience and teamwork are essential in resolving deep-seated delusions.",
-    "timestamp": "11-8:34"
+    "timestamp": "11:12-13:13",
+    "time_start_sec": 672,
+    "time_end_sec": 793
   },
   {
     "question": "Why might a different person be more effective at helping someone with a delusion?",
     "answer": "Different relationships carry different levels of trust and comfort. A person with dementia might respond better to someone other than their primary caregiver because of the unique dynamic they share. Sometimes, bringing in another family member or friend who uses the same supportive skills can break through the confusion simply because of the specific relationship they have with the person.",
-    "timestamp": null
+    "timestamp": "15:45-16:28",
+    "time_start_sec": 945,
+    "time_end_sec": 988
   },
   {
     "question": "What approach should be used when meeting someone who believes you are an imposter?",
     "answer": "When approaching someone who believes you are an imposter, it is crucial to use gentle, validating communication (PPA) and respect their personal space. Avoid being loud or overly friendly, as this can increase suspicion. Meeting in a neutral location rather than their home can also help, as it allows them to retreat to their safe space if they feel overwhelmed.",
-    "timestamp": "18-10:52"
+    "timestamp": "14:09-15:37",
+    "time_start_sec": 849,
+    "time_end_sec": 937
   }
 ]
