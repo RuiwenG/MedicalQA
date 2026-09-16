@@ -71,7 +71,7 @@ METRICS = [
         "db_prefix": "qna_trustworthiness",
         "label": "Q&A Trustworthiness",
         "binary_question": "Does the Q&A align with the video?",
-        "definition": "The answer directly addresses the question, is supported by the source video, and does not add unsupported claims or contradict the video.",
+        "definition": "The Q&A accurately reflects the information presented in the source video. The answer is supported by the video, and does not introduce unsupported claims or contradictions.",
         "attribute": ["Excellent", "Good", "Fair", "Poor"],
         "errors": ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
         "error_trigger": "No",
@@ -406,6 +406,11 @@ def main():
     ap.add_argument("--batch", type=int, default=1, help="pilot40: pinned batch (1-based), default 1")
     ap.add_argument("--workers", type=int, default=6, help="parallel videos (full mode)")
     ap.add_argument("--limit", type=int, default=0, help="stop after N pairs (debug)")
+    ap.add_argument("--resume", metavar="JSONL",
+                    help="Path to a previous run's JSONL. Pairs already judged there are "
+                         "reused instead of re-judged, and the new run appends to a fresh "
+                         "file; the CSV is written from the merged set. Use it after a run "
+                         "is interrupted, so the completed pairs are not paid for twice.")
     ap.add_argument(
         "--approaches",
         nargs="+",
@@ -441,6 +446,26 @@ def main():
         batch_label = "llm-full"
     if args.limit:
         pairs = pairs[: args.limit]
+
+    # Judgments carried over from an interrupted run, keyed by uid. These are
+    # merged into the CSV at the end but never re-sent to the API.
+    resumed = {}
+    if args.resume:
+        resume_path = Path(args.resume)
+        if not resume_path.is_absolute():
+            resume_path = REPO / resume_path
+        with open(resume_path, encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    row = json.loads(line)
+                    resumed[row["uid"]] = (row["judgment"], row.get("seconds", 0))
+        before = len(pairs)
+        pairs = [p for p in pairs if p["uid"] not in resumed]
+        # Only pairs actually in this run's selection count as carried over.
+        wanted_uids = {p["uid"] for p in all_pairs}
+        resumed = {u: v for u, v in resumed.items() if u in wanted_uids}
+        print(f"Resuming from {resume_path.name}: {len(resumed)} pairs carried over, "
+              f"{len(pairs)} of {before} left to judge")
 
     key = read_env_key("DEEPSEEK_API_KEY")
     meter = CostMeter(PRICES[args.model])
@@ -495,14 +520,27 @@ def main():
             results[dv] = out
     jsonl_file.close()
 
+    # Fold the carried-over judgments back in so the CSV covers the whole
+    # selection, not just what this invocation re-judged.
+    if resumed:
+        by_uid = {p["uid"]: p for p in all_pairs}
+        for uid, (obj, secs) in resumed.items():
+            pair = by_uid[uid]
+            results.setdefault((pair["dataset"], pair["video"]), []).append((pair, obj, secs))
+
+    written = 0
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(CSV_COLS)
         for dv in sorted(results):
-            for pair, obj, secs in results[dv]:
+            for pair, obj, secs in sorted(results[dv], key=lambda r: r[0]["uid"]):
                 writer.writerow(csv_row(pair, obj, args.model, session_id, batch_label, secs))
+                written += 1
 
     print("\n================ SUMMARY ================")
+    if resumed:
+        print(f"Resumed  : {len(resumed)} pairs carried over from a previous run")
+    print(f"CSV rows : {written}")
     print(f"Rated    : {sum(len(v) for v in results.values())}/{len(pairs)} pairs")
     if failures:
         print(f"Failed   : {len(failures)} -> {[u for u, _ in failures]}")
