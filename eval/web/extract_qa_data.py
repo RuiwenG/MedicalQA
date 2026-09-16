@@ -83,6 +83,12 @@ def extract(base_dir: Path, aligned: dict) -> list[dict]:
                     if isinstance(start, (int, float)) and isinstance(end, (int, float)):
                         pair["t"], pair["te"] = int(start), int(end)
                         pair["ts"] = "model"
+                    elif isinstance(start, (int, float)):
+                        # An open-ended range ("7:31-End") pins the start but
+                        # not the finish. The model's own start beats a guessed
+                        # window, so take it and let the clip play on.
+                        pair["t"] = int(start)
+                        pair["ts"] = "model"
                     elif pair["uid"] in aligned:
                         window = aligned[pair["uid"]]
                         pair["t"], pair["te"] = int(window["t"]), int(window["te"])
