@@ -1,30 +1,30 @@
 [
   {
-    "question": "Why might a person with dementia feel afraid to walk down stairs or enter a dark room, and how can I help?",
-    "answer": "Dementia can affect the brain's ability to process visual information, making it hard to judge depth or see edges. For example, a black mat on the floor might look like a deep hole or a drop-off, causing fear of falling. To help, pay attention to design and color contrasts in the home. Avoid using dark mats that blend into dark floors, as this creates a visual illusion of danger. Using clear, contrasting colors for steps and edges can make spaces safer and less confusing.",
+    "question": "Why might a person with dementia feel unsafe walking down stairs or entering a room with dark floors?",
+    "answer": "Dementia can affect how the brain processes visual information, making it difficult to distinguish depth and edges. If a floor is black or very dark, it may look like a bottomless hole or a drop-off to the person, causing them to fear falling. Using lighter colors or high-contrast designs for steps and floors can help make spaces feel safer and easier to navigate.",
     "timestamp": "0:22-0:54",
     "time_start_sec": 22,
     "time_end_sec": 54
   },
   {
-    "question": "What are phantom smells, and why might a person with dementia act urgently because of them?",
-    "answer": "Phantom smells are hallucinations where a person smells something that isn't actually there. These smells are often unpleasant, such as burning, smoke, or chemicals, rather than nice scents like coffee or vanilla. Because the smell feels very real, the person may believe there is a fire or a dangerous situation. They might try to \"solve\" the problem by searching for the source of the smoke or calling for help. Understanding that this is a symptom of the condition, not a reaction to reality, can help you respond with patience and reassurance instead of frustration.",
+    "question": "What are phantom smells in dementia, and why do they cause distress?",
+    "answer": "Phantom smells are hallucinations where a person detects odors that aren't actually there. These smells are often unpleasant, such as burning, chemicals, or rotting food, rather than nice scents like coffee or vanilla. This is distressing because people with dementia often try to \"solve\" the problem by searching for the source of the smell, believing they have caused a danger like a fire, which leads to anxiety and frantic behavior.",
     "timestamp": "2:20-2:50",
     "time_start_sec": 140,
     "time_end_sec": 170
   },
   {
-    "question": "Why does touch or water from a shower sometimes feel painful to someone with dementia?",
-    "answer": "Dementia can change how the brain processes physical sensations, making touch feel painful rather than comforting. A gentle hug or the feeling of water in a shower might be perceived as sharp needles hitting the skin. This is not a choice or an overreaction; it is a genuine sensory distortion. If your loved one pulls away from touch or seems distressed during bathing, recognize that they may be experiencing physical discomfort. Try to adjust the water temperature, use softer towels, or approach them more gently to reduce this sensation.",
+    "question": "Why does showering sometimes become painful for individuals with dementia?",
+    "answer": "For some people with dementia, sensory processing changes can make touch feel painful. The sensation of water hitting the skin during a shower may feel like needles constantly pricking the body. This physical discomfort is not just emotional; it is a real sensory distortion that can make hygiene routines frightening and difficult, requiring gentle adjustments to water temperature or pressure to reduce the pain.",
     "timestamp": "2:55-3:12",
     "time_start_sec": 175,
     "time_end_sec": 192
   },
   {
-    "question": "How can caregivers cope with the emotional difficulty of witnessing these changes?",
-    "answer": "It is normal to feel frightened or overwhelmed when seeing a loved one experience hallucinations or sensory pain. However, remember that these experiences are part of the reality of the disease. Instead of focusing on fear, try to accept these changes as part of what your loved one is going through. Learning to live with this new reality helps you stay calm and supportive. Your calm presence can provide comfort, even if the person with dementia is struggling with distorted perceptions.",
-    "timestamp": "3:17-3:31",
-    "time_start_sec": 197,
+    "question": "How should caregivers respond when a person with dementia experiences traumatic hallucinations?",
+    "answer": "Hallucinations involving distorted faces, loud noises, or bad smells can be very traumatic for the person experiencing them. Instead of arguing or telling them to ignore it, caregivers should offer reassurance and empathy. It helps to understand that these experiences are the person's reality. Learning to live with these symptoms calmly, without showing fear yourself, can help reduce the person’s anxiety and help them feel supported rather than alone in their confusion.",
+    "timestamp": "1:07-3:31",
+    "time_start_sec": 67,
     "time_end_sec": 211
   }
 ]

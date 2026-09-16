@@ -1,63 +1,65 @@
 [
   {
-    "question": "Why is it unhelpful to argue with a person who has dementia when they say, \"I want to go home\"?",
-    "answer": "Arguing creates conflict because the person’s brain changes make them feel an urgent need to be in a familiar place. When you try to use logic or facts to correct them, it often makes them more upset and frustrated. Instead of debating what is true, it is better to acknowledge their feelings and offer a different response that helps them feel safe and valued in the current moment.",
-    "timestamp": "1:20-2:35",
-    "time_start_sec": 80,
-    "time_end_sec": 155
+    "question": "What is the difference between an \"AO\" and a \"AHA\" when caring for someone with dementia?",
+    "answer": "An \"AO\" stands for Automatic Opinion, which is when you react instinctively, often by arguing or correcting the person. An \"AHA\" happens when you pause and choose to try something different instead. Moving from an AO to an AHA helps you respond in a way that de-escalates tension rather than creating conflict.",
+    "timestamp": "1:53-2:05",
+    "time_start_sec": 113,
+    "time_end_sec": 125
   },
   {
-    "question": "What is the problem with telling a person with dementia a \"big lie\" to calm them down?",
-    "answer": "Telling a big lie, such as promising to take them home immediately when you cannot, usually leads to more distress. When the promise is not kept right away, the person may feel betrayed or confused, which can cause them to become even more agitated. It is better to avoid making promises you know you cannot keep instantly, as this damages trust and increases anxiety.",
-    "timestamp": "2:36-3:10",
-    "time_start_sec": 156,
-    "time_end_sec": 190
+    "question": "Why should caregivers avoid telling obvious lies to a person with dementia who wants to go home?",
+    "answer": "Telling obvious lies, such as saying it is already time to leave when it is not, often makes the person feel unheard or frustrated because they know it is not true. This can lead to them becoming more upset or demanding immediate action, making the situation harder to manage.",
+    "timestamp": "2:07-2:33",
+    "time_start_sec": 127,
+    "time_end_sec": 153
   },
   {
-    "question": "How can validating a person's feelings help reduce their agitation?",
-    "answer": "Validation means acknowledging the person's emotions without judging them. For example, if they complain about smells or people around them, you can say, \"It sounds like you are uncomfortable,\" or \"I appreciate your feedback.\" This approach shows empathy and lets the person know they are heard, which helps lower their stress levels and builds a connection based on understanding rather than correction.",
-    "timestamp": "3:11-4:05",
-    "time_start_sec": 191,
-    "time_end_sec": 245
+    "question": "How does validating a person’s feelings help when they want to leave?",
+    "answer": "Instead of arguing, acknowledge their desire to go home and validate their feelings about the current environment. For example, if they say they dislike the people there, agree that it can be uncomfortable. This shows empathy and helps them feel understood, which lowers their anxiety.",
+    "timestamp": "3:16-4:01",
+    "time_start_sec": 196,
+    "time_end_sec": 241
   },
   {
-    "question": "What strategy can you use to give a person with dementia a reason to stay where they are?",
-    "answer": "You can provide a positive reason for them to remain by appealing to their interests or offering assistance. For instance, you might ask for their help with a simple task, like choosing snacks, or offer them a favorite treat. By giving them a purpose or a pleasant activity, you shift their focus from wanting to leave to engaging in the present moment, making them feel useful and comfortable.",
-    "timestamp": "22-5:10"
+    "question": "What strategy can you use to give a person a reason to stay when they want to go home?",
+    "answer": "Offer a specific, appealing reason for them to stay right now, such as getting a favorite snack like cookies or peanut butter crackers. By giving them a positive task or reward, you provide a purpose for staying, shifting their focus from leaving to enjoying the moment.",
+    "timestamp": "4:09-5:09",
+    "time_start_sec": 249,
+    "time_end_sec": 309
   },
   {
-    "question": "Why is it helpful to remember that people with dementia have similar desires to our own?",
-    "answer": "Recognizing that people with dementia share our basic human desires—such as wanting to be at home or feeling tired after a long day—builds empathy. Just as we might wish we were resting at home while working, they also prefer familiarity. Understanding this similarity helps caregivers respond with compassion rather than frustration, seeing the behavior as a natural human reaction rather than a personal attack.",
-    "timestamp": "5:11-6:30",
-    "time_start_sec": 311,
+    "question": "Why is it helpful to remember that people with dementia have similar desires to us?",
+    "answer": "Just like caregivers might prefer being at home after a long day, people with dementia also prefer comfort and familiarity. Recognizing this shared human experience helps you approach them with compassion rather than frustration, understanding that their wish to go home is a natural feeling, not just a symptom.",
+    "timestamp": "5:15-6:04",
+    "time_start_sec": 315,
+    "time_end_sec": 364
+  },
+  {
+    "question": "How can you create a sense of value and purpose for someone who wants to leave?",
+    "answer": "You can make them feel needed by asking for their help or input, such as trusting their eyesight to find a snack or appreciating their feedback. When they feel useful and valued, they are more likely to stay engaged in the present moment rather than focusing on leaving.",
+    "timestamp": "6:04-6:30",
+    "time_start_sec": 364,
     "time_end_sec": 390
   },
   {
-    "question": "How does dementia affect the brain over time, and why does this matter for caregivers?",
-    "answer": "Dementia causes constant, ongoing changes in the brain that happen second by second and evolve over months or years. Because the condition is a \"moving target,\" caregivers need flexible guidance and support. Understanding that these changes are biological and not intentional choices helps caregivers adapt their strategies and remain patient as the person’s needs shift.",
-    "timestamp": "7:15-7:48",
-    "time_start_sec": 435,
-    "time_end_sec": 468
+    "question": "What is the importance of pausing before responding to challenging behaviors?",
+    "answer": "Pausing allows you to catch your automatic reaction (AO) and think about a better response. This brief moment helps you shift from arguing to connecting, ensuring you respond in a way that supports the person rather than escalating their distress.",
+    "timestamp": "6:58-7:08",
+    "time_start_sec": 418,
+    "time_end_sec": 428
   },
   {
-    "question": "What is the difference between being a caregiver and a care partner?",
-    "answer": "A caregiver often tries to get someone to do something or argues about facts, which can create resistance. A care partner works *with* the person, accepting that their brain is changing and adjusting their own approach to fit the situation. Being a partner means focusing on connection and doing things together, rather than trying to control or correct the other person’s behavior.",
-    "timestamp": "11:07-11:35",
+    "question": "How does dementia affect the brain over time, and what does this mean for caregivers?",
+    "answer": "Dementia causes constant changes in the brain, second by second, over months or years. Because the condition is always moving, caregivers need ongoing support and guidance to adapt their strategies. It means there is no single fix, but rather a continuous process of learning how to match the person’s changing needs.",
+    "timestamp": "7:24-7:46",
+    "time_start_sec": 444,
+    "time_end_sec": 466
+  },
+  {
+    "question": "What is the key mindset shift from being a caregiver to a care partner?",
+    "answer": "The shift involves doing things *with* the person rather than trying to force them to do something or arguing with them. Since their brain changes are not a choice, you choose to adapt your approach to fit their reality. This partnership reduces stress for both of you and creates a more positive connection.",
+    "timestamp": "11:07-11:53",
     "time_start_sec": 667,
-    "time_end_sec": 695
-  },
-  {
-    "question": "How can practicing role-play scenarios improve communication skills?",
-    "answer": "Role-playing allows caregivers to practice responses in a safe environment before facing real-life situations. It helps identify automatic reactions that might lead to arguments (like arguing back) and encourages pausing to choose a more effective, empathetic response. This practice builds confidence and awareness, helping caregivers react calmly and supportively when challenges arise.",
-    "timestamp": "6:51-7:14",
-    "time_start_sec": 411,
-    "time_end_sec": 434
-  },
-  {
-    "question": "What emotional benefit does proper training and support provide to caregivers?",
-    "answer": "Proper training helps caregivers move from feeling depressed, worn out, or helpless to feeling empowered and capable. It normalizes the struggles of caring for someone with dementia, reducing self-blame when mistakes happen. By learning specific skills and understanding the \"why\" behind behaviors, caregivers can find joy in their work and feel confident that they are making a positive difference in someone’s life.",
-    "timestamp": "7:49-11:06",
-    "time_start_sec": 469,
-    "time_end_sec": 666
+    "time_end_sec": 713
   }
 ]

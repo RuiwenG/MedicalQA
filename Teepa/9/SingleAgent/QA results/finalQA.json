@@ -1,28 +1,28 @@
 [
   {
-    "question": "What is the most effective order for connecting with a person who has dementia?",
-    "answer": "Start by making a visual connection, and then follow up with verbal communication. People with dementia need to see what you are doing first. Once they have seen your actions, you can tell them what is happening. This two-step process helps ensure they understand and stay engaged with you.",
-    "timestamp": "0:03-0:18",
+    "question": "Why is it important to establish a visual connection before speaking to a person with dementia?",
+    "answer": "People with dementia often struggle to process spoken words if they are not looking at you first. If you talk too much without making eye contact or showing them what you are doing, they may become confused and stop listening. By starting with a visual connection—such as showing them an item or standing where they can see you—you help them focus on you before you add verbal instructions.",
+    "timestamp": "0:03-0:42",
     "time_start_sec": 3,
-    "time_end_sec": 18
+    "time_end_sec": 42
   },
   {
-    "question": "Why does talking too much often cause confusion during care tasks?",
-    "answer": "Talking too much without showing actions first can overwhelm a person with dementia. When caregivers give long instructions like \"let's put clothes on\" or \"go to the bathroom\" without demonstrating the action, the person may become confused and disconnect. It is important to keep words simple and match them with clear physical cues so the person knows exactly what to expect.",
-    "timestamp": "0:18-0:47",
-    "time_start_sec": 18,
-    "time_end_sec": 47
+    "question": "What does the term \"diarrhea of the mouth\" mean in the context of dementia care?",
+    "answer": "This phrase describes the habit of talking excessively or giving too many verbal instructions at once. In dementia care, using too many words can overwhelm the person, causing them to disconnect because their brain cannot keep up with the rapid flow of information. It is more effective to speak less and use clear, simple actions to guide them.",
+    "timestamp": "0:42-1:00",
+    "time_start_sec": 42,
+    "time_end_sec": 60
   },
   {
-    "question": "How should your body language match your words when speaking to someone with dementia?",
-    "answer": "Your physical actions must match your spoken words. For example, if you say \"I am hanging out,\" but your body language suggests something else, the person will be confused. Ensure that what you are doing visually aligns perfectly with what you are saying verbally. This consistency helps the person feel secure and understand your intent.",
-    "timestamp": "0:54-1:11",
-    "time_start_sec": 54,
-    "time_end_sec": 71
+    "question": "How should your body language match your words when communicating with someone who has dementia?",
+    "answer": "Your physical actions must align with what you are saying to avoid confusion. For example, if you say \"I am hanging out\" while actually sitting down, the mismatch between your words and your body language will confuse the person. Ensuring that your visual cues (what they see) and your auditory cues (what they hear) match helps them understand your intent clearly.",
+    "timestamp": "1:00-1:37",
+    "time_start_sec": 60,
+    "time_end_sec": 97
   },
   {
-    "question": "What is a better way to ask for cooperation during personal care, such as bathing?",
-    "answer": "Instead of asking complex questions like \"Are you ready to take your shower?\" which can lead to resistance or confusion, use clear, gentle statements paired with actions. Show the person what you are going to do, such as preparing to help them with their shirt, and speak calmly. This approach reduces anxiety and makes the task feel like a shared activity rather than an interrogation.",
+    "question": "What is the recommended order for guiding a person with dementia through daily tasks like getting dressed?",
+    "answer": "The most effective approach follows a specific sequence: first, make a visual connection so they see you; second, use clear and calm verbal communication; and third, proceed with the physical task. For instance, instead of asking multiple questions at once, show them the shirt, calmly explain that you will help them change, and then gently assist them step-by-step.",
     "timestamp": "1:37-1:54",
     "time_start_sec": 97,
     "time_end_sec": 114

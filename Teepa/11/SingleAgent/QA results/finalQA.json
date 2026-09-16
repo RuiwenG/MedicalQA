@@ -1,86 +1,62 @@
 [
   {
-    "question": "Why is it important to have open and detailed conversations about challenging behaviors in dementia care, rather than just giving opinions?",
-    "answer": "Having detailed conversations helps everyone understand and appreciate each other’s perspectives. If we skip this step and only share opinions, we miss the chance to think things through carefully. This often leads to misunderstandings and prevents us from finding real solutions to the problems at hand.",
-    "timestamp": "1:06-1:29",
-    "time_start_sec": 66,
-    "time_end_sec": 89
+    "question": "Why might a person with dementia strip off their clothes immediately after eating in a common area?",
+    "answer": "The behavior is often triggered by physical discomfort rather than sexual intent. After eating, digestion increases blood flow to the gut and can cause internal heat or a full bladder. If the person cannot communicate these feelings or identify which clothing needs to be removed for a bathroom trip, they may simply remove everything to relieve the sensation of being hot or uncomfortable.",
+    "timestamp": null
   },
   {
-    "question": "What specific pattern of behavior was observed with Mr. Jones after he finished eating and drinking?",
-    "answer": "After meals, Mr. Jones would go into the common area. Within moments, he would quickly strip off all his clothes. Staff members noted that this happened so fast they often did not see exactly how he removed his clothing, but they saw him naked in public shortly after eating.",
-    "timestamp": "3:01-4:15",
-    "time_start_sec": 181,
-    "time_end_sec": 255
+    "question": "How does physical discomfort with clothing textures lead to sexualized behaviors in dementia care?",
+    "answer": "A person may start by removing a shirt because they dislike its texture against their skin. Once the shirt is off, the waistband of their pants might dig into them, causing them to adjust or pull at the fabric. This accidental touching can trigger a sudden hormonal response or physical stimulation. Because hormones act quickly, this momentary physical sensation can rapidly escalate into sexual excitement, even if the original intent was just to fix uncomfortable clothing.",
+    "timestamp": null
   },
   {
-    "question": "How does digestion affect a person's body temperature and comfort levels after a meal?",
-    "answer": "After eating and drinking, a process called peristalsis begins, which moves food through the digestive tract. During this time, blood flow shifts toward the gut. This physiological change can make a person feel hotter. Additionally, as the bladder begins to fill, the person may feel an urgent need to use the restroom, adding to their physical discomfort.",
-    "timestamp": "5:58-6:21",
-    "time_start_sec": 358,
-    "time_end_sec": 381
+    "question": "What role does staff supervision play in preventing public disrobing incidents?",
+    "answer": "Lack of active supervision is a major factor. Leaving residents unsupervised in common areas after meals, relying only on television for entertainment, creates an environment where triggers go unnoticed. Staff need to be present and monitoring the area to notice early signs of distress, such as fidgeting with clothes or appearing hot, so they can intervene before the situation escalates.",
+    "timestamp": null
   },
   {
-    "question": "Why might a person with dementia remove their clothes even if they are not seeking sexual attention?",
-    "answer": "A person may remove their clothes because they are physically uncomfortable. They might be feeling hot due to digestion, or they may need to use the bathroom but do not realize they are in a public space. Without the ability to communicate these needs clearly, they may simply take off their clothes to relieve the sensation of being too warm or needing to urinate.",
-    "timestamp": "6:24-7:01",
-    "time_start_sec": 384,
-    "time_end_sec": 421
+    "question": "Why is it important to check if a resident needs to use the restroom before moving them to a common area?",
+    "answer": "Residents with advanced dementia may feel the urge to urinate or have a bowel movement but lack the language skills to ask for help. They may also not understand which clothes to remove for the toilet versus for sleeping. Taking them to the restroom first ensures their physical needs are met, reducing the likelihood that they will strip off clothes in public due to confusion or urgency.",
+    "timestamp": null
   },
   {
-    "question": "How can sensory issues with clothing textures lead to undressing behaviors?",
-    "answer": "Some people with dementia are very sensitive to textures. If a shirt feels scratchy or uncomfortable against the skin, the person may pull it off, much like they would refuse to eat food with a texture they dislike. Once the shirt is off, the waistband of the pants might dig into their skin, causing further irritation that leads them to adjust or remove more clothing.",
-    "timestamp": "8:19-8:58",
-    "time_start_sec": 499,
-    "time_end_sec": 538
+    "question": "How should caregivers interpret a resident who frequently asks for kisses or wants to sit on someone’s lap?",
+    "answer": "Instead of viewing this as purely sexual or predatory behavior, caregivers should consider that the person is seeking human connection and intimacy. The desire for closeness, cuddling, or touch is a fundamental human need. The behavior likely stems from loneliness or a craving for emotional warmth rather than a specific sexual agenda.",
+    "timestamp": null
   },
   {
-    "question": "What is the connection between physical discomfort and sudden sexualized behavior in dementia patients?",
-    "answer": "It often starts with simple discomfort, such as itching or adjusting tight clothing. When a person touches themselves to relieve this irritation, it can accidentally trigger a physical response. Hormones react quickly to this stimulation, shifting the situation from mere discomfort to sexual arousal. The person then seeks release or interaction, not necessarily out of intent, but due to this rapid physiological shift.",
-    "timestamp": "9:02-10:24",
-    "time_start_sec": 542,
-    "time_end_sec": 624
+    "question": "What is a supportive alternative to rejecting a resident who seeks excessive physical affection?",
+    "answer": "Caregivers can offer structured, non-sexual physical contact to meet the resident's need for intimacy. This might include giving a firm hug, providing deep pressure contact, or dancing with the person. These actions provide the feeling of being cared for and connected without crossing professional boundaries, potentially satisfying the resident's emotional need for touch.",
+    "timestamp": null
   },
   {
-    "question": "What role does staff supervision play in preventing incidents of public undressing?",
-    "answer": "Lack of active supervision is a major factor. In many cases, residents are left in common areas with only a television for entertainment while staff attend to other tasks. Without a designated monitor to observe residents closely, small signs of discomfort or agitation go unnoticed until the behavior escalates into public undressing or other disruptive actions.",
-    "timestamp": "10:35-11:53",
-    "time_start_sec": 635,
-    "time_end_sec": 713
+    "question": "Why do caregivers and administrators often react with distress when faced with sexualized behaviors?",
+    "answer": "Caregivers often feel overwhelmed and pressured to \"fix\" the problem immediately. When they are in high distress, they tend to make quick judgments or blame the person with dementia rather than investigating the root causes. This distress prevents them from observing details, such as environmental factors or physical triggers, that could explain the behavior.",
+    "timestamp": null
   },
   {
-    "question": "Why is it problematic to simply move a resident with behavioral challenges to another facility without a plan?",
-    "answer": "Moving a resident without understanding the root cause of their behavior is unfair and ineffective. It treats the symptom rather than the problem. Without a specific care plan and careful monitoring, the same triggers will likely cause the same behaviors in the new location. This cycle of moving residents back and forth fails to provide the stability and proper care the individual needs.",
-    "timestamp": "12:46-13:16",
-    "time_start_sec": 766,
-    "time_end_sec": 796
+    "question": "How does temperature regulation affect the behavior of a person with dementia in a communal setting?",
+    "answer": "Common areas can become warm when many people gather, and digestion after a meal also raises body temperature. A person with dementia may not realize they are getting too hot or understand how to adjust their clothing appropriately. Monitoring the room temperature and ensuring the resident is comfortable can prevent them from stripping off clothes to cool down.",
+    "timestamp": null
   },
   {
-    "question": "How do societal attitudes toward intimacy affect the care of women with dementia who seek contact?",
-    "answer": "Caregivers often view women who seek physical closeness as \"predators\" or inappropriate, labeling their behavior as purely sexual. This judgment ignores the human need for social and emotional intimacy. Women may be rejected or isolated because staff are uncomfortable, whereas men exhibiting similar needs might be protected. This double standard fails to address the underlying loneliness and desire for connection.",
-    "timestamp": "13:19-14:01",
-    "time_start_sec": 799,
-    "time_end_sec": 841
+    "question": "What is the danger of labeling all intimate-seeking behaviors as \"sexual\"?",
+    "answer": "Labeling every instance of closeness-seeking as sexual ignores the broader human need for social and emotional intimacy. People with dementia still desire connection, conversation, and gentle touch. By assuming every action is sexual, caregivers miss opportunities to provide appropriate social engagement, music, or companionship that fulfills the person's need for relationship and reduces loneliness.",
+    "timestamp": null
   },
   {
-    "question": "What is a more empathetic way to interpret a resident who frequently asks for hugs or kisses?",
-    "answer": "Instead of viewing this behavior as sexually aggressive, caregivers should recognize it as a deep need for human touch and connection. The resident may be lonely and craving the feeling of being cared for. Understanding this allows staff to respond with compassion rather than rejection, addressing the emotional void rather than just stopping the behavior.",
-    "timestamp": "15:50-16:15",
-    "time_start_sec": 950,
-    "time_end_sec": 975
+    "question": "How can music be used strategically to manage intimacy and behavior in dementia care?",
+    "answer": "Music can be chosen to match the desired level of interaction. Calming, familiar music can foster a sense of being cared for and connected, while upbeat music can provide rhythm and fun without implying deep intimacy. Caregivers can use music to guide the emotional tone of the environment, offering comfort and engagement that meets the resident's needs without escalating sexual tension.",
+    "timestamp": null
   },
   {
-    "question": "What practical strategies can caregivers use to meet a resident's need for physical intimacy safely?",
-    "answer": "Caregivers can offer safe, non-sexual physical contact, such as deep pressure hugs or dancing with the resident. These activities provide the sensation of closeness and rhythm that the person craves. By fulfilling the need for touch in a structured and appropriate way, caregivers can help the resident feel connected and calm without crossing professional boundaries.",
-    "timestamp": "16:12-16:50",
-    "time_start_sec": 972,
-    "time_end_sec": 1010
+    "question": "Why is it ineffective to simply move a resident with challenging behaviors to a different facility?",
+    "answer": "Moving a resident without understanding the triggers for their behavior is like putting a band-aid on a wound. Without a plan to monitor and address the underlying causes—such as discomfort, boredom, or unmet needs for contact—the same behaviors will likely recur in the new setting. This cycle is unfair to the resident, who faces repeated rejection and instability.",
+    "timestamp": null
   },
   {
-    "question": "How can music be used to manage different types of emotional needs in dementia care?",
-    "answer": "Music is a powerful tool for providing comfort and connection. For residents seeking intimacy and care, soft, familiar music can create a sense of safety and relationship. For those needing energy or distraction, upbeat music with a strong rhythm can provide fun and excitement. Choosing the right type of music helps meet the resident's emotional state without relying on inappropriate physical interactions.",
-    "timestamp": "16:52-17:11",
-    "time_start_sec": 1012,
-    "time_end_sec": 1031
+    "question": "What is the benefit of approaching behavioral changes with curiosity rather than opinion?",
+    "answer": "Approaching situations with curiosity allows caregivers to gather factual information about what is happening, such as timing, environment, and physical sensations. This shifts the focus from blaming the person with dementia to understanding their experience. By identifying specific triggers, caregivers can create effective, personalized strategies that improve outcomes for both the resident and the staff.",
+    "timestamp": null
   }
 ]

@@ -1,70 +1,52 @@
 [
   {
-    "question": "Why does a person with dementia sometimes act impulsively or say things that seem out of character?",
-    "answer": "This happens because dementia damages the front part of the brain, which is responsible for controlling impulses and making logical decisions. However, the deeper part of the brain, called the limbic system, remains intact longer. This deep area controls basic emotions and drives like \"I want what I want.\" When the control center at the front fails, the person may react strongly to their immediate feelings without filtering them, leading to behaviors they wouldn't have shown before. It is not intentional; it is a result of how the disease affects different parts of the brain.",
-    "timestamp": "0:35-3:56",
-    "time_start_sec": 35,
-    "time_end_sec": 236
+    "question": "Why does a person with dementia often act impulsively or say things that seem out of character?",
+    "answer": "Dementia damages the front part of the brain, which is responsible for controlling impulses and deciding what is appropriate. However, the deeper limbic system, which handles emotions and basic drives like \"I want what I want,\" remains intact longer. Because the control center is impaired but the emotional drive is still active, the person may react strongly, say mean things, or act on impulse without realizing it is inappropriate. This is due to brain changes, not a change in their personality.",
+    "timestamp": null
   },
   {
-    "question": "Why might a person with dementia struggle to understand another person's point of view?",
-    "answer": "The ability to see things from someone else’s perspective is one of the last skills to develop in the human brain and is located in the frontal lobe. Dementia often impairs this specific area early on. As a result, the person may genuinely be unable to understand your viewpoint or why you are upset. They are stuck in their own immediate experience. Recognizing this as a symptom of the disease, rather than stubbornness, can help caregivers respond with patience instead of frustration.",
-    "timestamp": "2:52-3:47",
-    "time_start_sec": 172,
-    "time_end_sec": 227
+    "question": "How does dementia affect a person's ability to understand other people's perspectives?",
+    "answer": "The front part of the brain helps us see situations from another person's point of view. In dementia, this area is damaged early on. As a result, the person may struggle to understand why you are upset or what you are trying to communicate. They might literally not grasp your perspective because the brain function needed to process that social information is impaired. It is important to remember this is a symptom of the disease, not intentional rudeness.",
+    "timestamp": null
   },
   {
-    "question": "Why does a person with dementia often lose interest in healthy food but crave sugar or salt?",
-    "answer": "Smell and taste are processed by the primitive limbic system, which handles survival instincts. In dementia, the wiring that connects these senses to safety awareness breaks down. The person may no longer detect unpleasant smells like body odor or spoiled food, but they still seek out strong, pleasurable tastes like sugar and salt. This isn't a bad choice; it is a change in how their brain processes sensory information. Understanding this can help caregivers adjust expectations around eating habits without blaming the person.",
-    "timestamp": "4:32-5:42",
-    "time_start_sec": 272,
-    "time_end_sec": 342
+    "question": "Why might a person with dementia lose interest in healthy food and prefer strong tastes like sugar or salt?",
+    "answer": "Smell and taste are processed by the primitive limbic system, which is involved in safety and survival instincts. As dementia progresses, the wiring for these senses changes. The person may no longer recognize unpleasant smells like body odor or spoiled food, nor do they detect subtle flavors in nutritious food. Instead, they may crave strong sensations like sugar or salt because their brain is seeking stimulation, even though they are unaware of the health implications.",
+    "timestamp": null
   },
   {
-    "question": "How does dementia affect a person's vision and spatial awareness?",
-    "answer": "Dementia narrows a person's visual field, much like looking through binoculars. They lose \"edge vision,\" which means they cannot see what is happening to their sides or periphery. This makes them easily startled if approached from the side, as they may perceive it as an attack. Later, they may lose depth perception, making it hard to judge distances or distinguish between a real object and a picture of one. This explains why they might miss a table when setting something down or try to pick patterns off a carpet—they are not being clumsy, they literally cannot process the visual data correctly.",
-    "timestamp": "5:51-8:18",
-    "time_start_sec": 351,
-    "time_end_sec": 498
+    "question": "What happens to a person's vision as dementia progresses, and how does this affect their behavior?",
+    "answer": "Dementia causes the visual field to narrow significantly, much like looking through binoculars. The person loses \"edge vision,\" which is used for safety awareness. They become hyper-focused on what is directly in front of them and miss details in their peripheral vision. This can make them easily startled if someone approaches from the side, as they cannot see the person coming until they are very close. Understanding this helps caregivers approach gently from the front to avoid frightening the person.",
+    "timestamp": null
+  },
+  {
+    "question": "Why might a person with dementia have trouble judging distances or recognizing objects?",
+    "answer": "As the disease affects the back of the brain, the person loses the ability to process depth perception. Their brain struggles to combine images from both eyes into a single 3D image. This makes it difficult to tell if an object is real or just a picture, or to judge how far away something is. You might see them reaching for patterns on a carpet or missing a table when setting something down. They are not being careless; their brain is simply not processing visual data correctly.",
+    "timestamp": null
+  },
+  {
+    "question": "How does dementia impact a person's ability to speak and understand language?",
+    "answer": "Most dementias attack the left side of the brain more than the right, which handles vocabulary and formal language. Early on, the person may lose nouns and struggle to find the right words or understand complex sentences. However, they often retain automatic social skills, such as saying hello or goodbye, which can make it seem like they understand more than they do. Caregivers should be patient and use simple, clear language rather than expecting full conversations.",
+    "timestamp": null
+  },
+  {
+    "question": "Why can a person with dementia sometimes sing or dance even when they can no longer hold a conversation?",
+    "answer": "While the left side of the brain (language) deteriorates, the right side often remains functional for longer. The right side processes rhythm, music, poetry, and prayer. Because these skills are stored differently, a person may be able to sing songs, clap to a beat, or move rhythmically even after losing the ability to speak clearly. Engaging in music and rhythmic movement can be a powerful way to connect with them when words fail.",
+    "timestamp": null
   },
   {
     "question": "Why might a person with dementia suddenly use swear words or offensive language?",
-    "answer": "Swear words and other \"forbidden\" language are stored in the right side of the brain, which is often preserved longer than the left side where vocabulary and polite speech are managed. As the disease progresses, the person loses access to formal language but retains these automatic, deeply ingrained words. Hearing offensive language can be shocking, but it is important not to blame the person. They are doing the best they can, and this behavior is a preserved skill caused by brain changes, not a reflection of their true character.",
-    "timestamp": "9:56-10:25",
-    "time_start_sec": 596,
-    "time_end_sec": 625
+    "answer": "Strong emotional words, including swear words and racial slurs, are stored in the right side of the brain, which is preserved longer in many types of dementia. These words are often learned at a young age and remain accessible even when other vocabulary is lost. When the person is frustrated or unable to express themselves with normal words, these \"forbidden\" words may slip out. It is crucial not to blame or shame the person, as this is a neurological symptom, not a reflection of their values.",
+    "timestamp": null
   },
   {
-    "question": "How can music and rhythm help communicate with someone who has lost their ability to speak?",
-    "answer": "While dementia often destroys the ability to produce or understand complex sentences (handled by the left brain), it usually spares the right brain's ability to process rhythm, music, and poetry. A person may forget words but still remember songs, prayers, or rhythmic movements like clapping or dancing. Using music allows you to connect with them emotionally even when verbal conversation is no longer possible. It is a powerful tool for engagement because these skills remain accessible long after speech fades.",
-    "timestamp": "8:46-9:53",
-    "time_start_sec": 526,
-    "time_end_sec": 593
+    "question": "How does the shrinking of the brain affect a person's physical sensation and safety?",
+    "answer": "Dementia causes the brain to shrink significantly, affecting the areas that map body sensations and movements. While curiosity often remains, safety awareness declines. The person may touch hot surfaces or rough textures out of curiosity but fail to recognize the danger or discomfort. They may also have trouble coordinating movements because the signal between feeling and doing is disrupted. Caregivers need to monitor the environment closely to prevent accidents caused by this lack of safety awareness.",
+    "timestamp": null
   },
   {
-    "question": "Why does a person with dementia sometimes think people have moved their belongings?",
-    "answer": "Because their visual field has narrowed and their ability to scan their environment is impaired, they cannot remember where they last looked for an item. They do not have the mental map to track objects across a room. When they can't find something, it feels like it has disappeared or been moved by someone else. This causes genuine distress. Knowing this helps caregivers understand that the person is not accusing others maliciously; they are confused by their own changing perception of reality.",
-    "timestamp": "7:26-7:36",
-    "time_start_sec": 446,
-    "time_end_sec": 456
-  },
-  {
-    "question": "What is the difference between working memory and emotional memory in dementia?",
-    "answer": "Working memory involves holding new information temporarily, while emotional memory stores how an event felt. In many types of dementia, a person may lose the ability to remember new facts or events (working memory) but retain the emotional impact of those events. For example, they might forget why they are angry with you, but they still feel the anger. This is why interactions matter so much: even if they don't remember the details, they will remember how you made them feel.",
-    "timestamp": "12:17-12:57",
-    "time_start_sec": 737,
-    "time_end_sec": 777
-  },
-  {
-    "question": "Why is safety awareness often reduced in people with dementia?",
-    "answer": "Safety awareness relies on processing sensory input (like heat, texture, or danger signals) through the frontal lobes, which are damaged by dementia. However, curiosity and the desire to touch or explore often remain intact because they are driven by older brain systems. This creates a dangerous mismatch: the person may touch a hot stove or sharp object out of curiosity without recognizing the risk. Caregivers need to be extra vigilant about environmental hazards because the person’s internal alarm system for danger is no longer functioning properly.",
-    "timestamp": "10:30-11:01",
-    "time_start_sec": 630,
-    "time_end_sec": 661
-  },
-  {
-    "question": "How does understanding brain chemistry help caregivers cope with inconsistent behavior?",
-    "answer": "Brain chemistry changes second by second, affecting a person's ability to function. A task that was easy five minutes ago might be impossible now simply because the chemical signals required to perform it aren't firing. This inconsistency is not laziness or refusal; it is a biological fluctuation. Understanding this helps caregivers let go of expectations for consistent performance and reduces personal frustration. It reminds us that the person is navigating a constantly shifting internal landscape, and our role is to adapt to their current capacity.",
+    "question": "Why does a person with dementia often remember how they felt about an event but forget the details of what happened?",
+    "answer": "Emotional memory is stored in a different part of the brain than factual memory. In many cases, the ability to form new factual memories is impaired, but the emotional memory remains strong. This means the person might remember feeling angry, scared, or happy during an interaction but have no idea why. They may carry the emotion forward without the context. Understanding this helps caregivers focus on creating positive emotional experiences, as those feelings will linger even if the specific events are forgotten.",
     "timestamp": null
   }
 ]

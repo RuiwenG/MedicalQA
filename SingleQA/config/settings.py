@@ -60,7 +60,10 @@ class Settings:
 
         Supportive (empathetic): Use a warm, non-judgmental tone that normalizes the caregiver's struggles. Where the transcript offers reassurance, coping strategies, or empathy-building insight into the person with dementia's experience, capture it. Never phrase answers in a blaming or alarming way.
 
-        Self-contained (Standalone): every pair should be read on its own, without any order, by a caregiver who has not seen the video before and can’t see the other pairs. Don’t mention the video, transcript or speaker. Never mention any pronouns before defining them first.
+        Self-contained (Standalone): every pair should be read on its own, without any order, by a caregiver who has not seen the video before and can’t see the other pairs.
+        Don’t mention the video, transcript or speaker.
+        Name the subject in the question itself. Do not open with "this", "these", "the" + a noun the pair never names, or references that point at another pair.
+        Never mention any pronouns before naming them in the same pair first.
 
         Coverage rules:
         - Draw questions from across the ENTIRE transcript, not just one section.

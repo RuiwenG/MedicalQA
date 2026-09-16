@@ -1,57 +1,79 @@
 [
   {
-    "question": "Is it normal to occasionally forget a neighbor's name or put keys in a strange place like the freezer?",
-    "answer": "Yes, these are common experiences that happen to many people. Forgetting a name you see often or misplacing items in unusual spots is generally considered part of normal aging and does not necessarily indicate dementia.",
-    "timestamp": null
+    "question": "Why might an older adult forget a neighbor's name even though they see them every day?",
+    "answer": "Forgetting a familiar name often happens because the brain’s working memory is already full. A healthy brain can only hold five to eight items at one time while processing information. If you are thinking about other tasks, like which trash bin to use or what day it is, your brain may not have room to store or retrieve the neighbor's name in that moment. This is usually a normal part of aging rather than a sign of dementia.",
+    "timestamp": "6:50-8:04",
+    "time_start_sec": 410,
+    "time_end_sec": 484
   },
   {
-    "question": "Why do I sometimes struggle to find the right word, especially after a long day?",
-    "answer": "It is very common to have trouble finding the right word when you are tired or stressed. You might describe an object as \"the thing with the thing\" because your brain is processing other information. This usually happens more often at the end of a long day but is typically a normal part of aging.",
-    "timestamp": null
+    "question": "What emotional reactions do people commonly experience when they realize they have forgotten something simple?",
+    "answer": "People often feel a momentary panic followed by shame or frustration. For example, if you cannot remember a neighbor's name, you might feel stuck and embarrassed, hoping someone else will say it so you do not have to ask. Similarly, if you have to ask for information multiple times, seeing the other person’s frustrated expression can make you feel bad about making a mistake. These feelings are common responses to memory lapses.",
+    "timestamp": "4:15-6:14",
+    "time_start_sec": 255,
+    "time_end_sec": 374
   },
   {
-    "question": "Why do I walk into a room and immediately forget why I am there?",
-    "answer": "Each new room is a different space for your hippocampus, the part of the brain involved in memory, to process. When you move from one room to another, your brain has to adjust to the new environment, which can cause you to lose track of your original intention. This is a normal occurrence.",
-    "timestamp": null
+    "question": "How can caregivers tell if memory changes are becoming frequent enough to warrant attention?",
+    "answer": "It is helpful to get curious if these memory lapses start happening much more frequently than before. If you notice that forgetting names, losing keys, or repeating questions is occurring many times a day, or if family members are starting to notice these changes, it may be time to look closer. A noticeable change in how often these events happen, especially if it is a recent shift from your usual self, is a key sign to monitor.",
+    "timestamp": "8:11-9:12",
+    "time_start_sec": 491,
+    "time_end_sec": 552
   },
   {
-    "question": "How many things can my brain hold in its working memory at one time?",
-    "answer": "A healthy brain can typically hold between five and eight items in its working memory at once. If you are already thinking about several tasks, such as what day it is or which trash bin to use, adding one more piece of information, like a neighbor's name, may exceed your capacity, causing you to forget it temporarily.",
-    "timestamp": null
+    "question": "What does it mean that 50% of people with dementia are aware of their changes while 50% are not?",
+    "answer": "This means that awareness varies greatly among individuals. Some people are the first to notice that their memory is changing and may feel concerned or confused. Others may not realize anything is different and instead feel frustrated when others react to their repeated questions or actions. Understanding this helps caregivers realize that lack of awareness is also a possible symptom, not just denial or stubbornness.",
+    "timestamp": "9:15-9:54",
+    "time_start_sec": 555,
+    "time_end_sec": 594
   },
   {
-    "question": "When should I start getting curious about whether my memory changes are normal?",
-    "answer": "You should get curious if these memory lapses start happening frequently, such as every day or multiple times a day. It is also a sign to pay attention if you notice the change yourself, or if family members and friends begin to notice that you are repeating questions or stories more often than before.",
-    "timestamp": null
+    "question": "When should a caregiver suspect that memory issues are not just normal aging?",
+    "answer": "You should consider that it might not be normal aging if the memory lapses become a new, persistent pattern without any relief. If the person cannot return to their previous level of functioning and the changes are significant enough to disrupt daily life consistently, it is time to investigate further. Normal aging might involve occasional forgetfulness, but a constant, unrelenting decline suggests something else may be going on.",
+    "timestamp": "9:44-10:20",
+    "time_start_sec": 584,
+    "time_end_sec": 620
   },
   {
-    "question": "What emotions might I feel when I realize I have forgotten something or repeated a question?",
-    "answer": "It is common to feel momentary panic, frustration, or even shame when you realize you have forgotten something or asked the same question again. You might worry that you are making a mistake, especially if you see a frustrated look on someone else's face. These feelings are a natural response to the confusion.",
-    "timestamp": null
+    "question": "Why is it important to check if a person still has \"compensatory strategies\" available to them?",
+    "answer": "Compensatory strategies are tools people use to manage minor memory slips, such as using a calendar, writing notes, or using mnemonics to remember names. If a person can no longer use these logical pathways to find answers or work around mistakes, it is a concerning sign. Being unable to rely on methods that previously worked indicates a change in cognitive ability that warrants further curiosity and evaluation.",
+    "timestamp": "10:32-11:20",
+    "time_start_sec": 632,
+    "time_end_sec": 680
   },
   {
-    "question": "Does being aware of my own memory changes mean I have dementia?",
-    "answer": "Not necessarily. About 50% of people with dementia are aware that changes are happening, while the other 50% are not. Being aware of your memory lapses is a positive sign of self-awareness. However, if the changes are frequent and represent a new pattern compared to who you used to be, it is time to investigate further.",
-    "timestamp": null
+    "question": "What external factors should be reviewed before assuming memory loss is due to dementia?",
+    "answer": "Before concluding that memory changes are due to dementia, it is wise to review recent changes in medication, routines, or tools. Starting a new medication, changing a daily schedule, or switching to a new calendar system that isn't working well can all cause confusion or forgetfulness. These factors can mimic signs of dementia, so checking them first helps determine if the issue is temporary or environmental.",
+    "timestamp": "10:01-10:18, 12:07-12:23",
+    "time_start_sec": 601,
+    "time_end_sec": 618
   },
   {
-    "question": "What role do compensatory strategies play in distinguishing normal aging from other issues?",
-    "answer": "Compensatory strategies are tools we use to help us remember, such as using a calendar, writing notes, or using mnemonics. In normal aging, you can still use these strategies to manage forgetfulness. If you find that your usual strategies no longer work or you cannot find a logical way to solve the problem, this may indicate a change that requires attention.",
-    "timestamp": null
+    "question": "Is it true that older adults cannot learn new things?",
+    "answer": "No, that is a falsehood. Older brains are still capable of learning new skills and adapting to changes. However, it typically takes older adults a little bit longer to process and master new information compared to when they were younger. Patience and extra time are often needed, but the ability to learn remains intact unless there is a specific medical condition affecting cognition.",
+    "timestamp": "12:27-12:50",
+    "time_start_sec": 747,
+    "time_end_sec": 770
   },
   {
-    "question": "Can older adults still learn new skills, such as using new technology?",
-    "answer": "Yes, older brains can absolutely learn new things. The idea that \"old dogs can't learn new tricks\" is a falsehood. While it may take a little bit longer for older adults to adapt to new routines or technologies, learning is still very much possible. Difficulty with new technology is often due to the novelty of the task rather than an inability to learn.",
-    "timestamp": null
+    "question": "How can distinguishing between \"concern\" and \"curiosity\" help caregivers?",
+    "answer": "Using the word \"curious\" instead of \"concerned\" helps reduce anxiety and judgment. Curiosity encourages a calm investigation into what is happening, such as asking if a new medication was started or if a routine changed. This approach allows caregivers to look for logical explanations and patterns without immediately jumping to the worst-case scenario, fostering a more supportive and less stressful environment.",
+    "timestamp": "9:57-10:20",
+    "time_start_sec": 597,
+    "time_end_sec": 620
   },
   {
-    "question": "What steps should I take if I suspect my memory changes are not just normal aging?",
-    "answer": "Start by getting curious rather than worried. Ask yourself if you have started any new medications, changed your routine, or if there are external factors affecting your memory. Check if the changes are rapid or slow, and consider whether they are a significant departure from your usual self. Consulting with a healthcare professional can help determine if there is another underlying cause.",
-    "timestamp": null
+    "question": "What role does working memory capacity play in everyday forgetfulness?",
+    "answer": "Working memory acts like a mental workspace that can only hold five to eight items at once. When this space is cluttered with multiple thoughts—such as planning the day, managing household tasks, or worrying about schedules—there is no room left to encode or retrieve new information, like a neighbor's name. Recognizing this limit helps explain why forgetfulness happens during busy or distracted moments.",
+    "timestamp": "7:01-8:04",
+    "time_start_sec": 421,
+    "time_end_sec": 484
   },
   {
-    "question": "How can I tell if my memory issues are affecting my daily life significantly?",
-    "answer": "Pay attention to whether your memory lapses are preventing you from doing things you normally do. If you find that you cannot rely on your usual coping mechanisms, such as calendars or reminders, and these issues are becoming a consistent pattern without relief, it is important to seek guidance. Normal aging allows for some forgetfulness, but it should not severely disrupt your ability to function independently.",
-    "timestamp": null
+    "question": "What resources are available for caregivers who want to learn more about normal versus abnormal aging?",
+    "answer": "Caregivers can access educational webinars, such as the \"Normal Aging or Not\" series, which visually demonstrates the differences between typical aging and other conditions. Additionally, subscription services offer short video clips and mentor guides broken down by topic. Free consultations with care teams are also available via email or website forms to provide personalized guidance and support.",
+    "timestamp": "12:59-14:51",
+    "time_start_sec": 779,
+    "time_end_sec": 891
   }
 ]

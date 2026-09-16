@@ -1,72 +1,72 @@
 [
   {
     "question": "What are the four main categories of activities that help create a meaningful day for someone with dementia?",
-    "answer": "To make the day meaningful, activities should fall into four balanced categories. First is \"feeling productive and valued,\" which involves doing work or tasks that make a person feel useful and appreciated. Second is \"leisure or fun play,\" which includes activities done simply for joy, whether passive (like watching) or active (like playing). Third is \"self-care,\" covering everything from bathing and eating to managing money and keeping the home tidy. Fourth is \"rest and restoration,\" which goes beyond just sleep to include recharging energy in ways that fit the individual’s personality, such as being alone or being around others.",
-    "timestamp": "0:24-3:19",
+    "answer": "The four categories are: 1) Feeling productive and valued (doing work or tasks where one feels useful), 2) Leisure or fun (activities done for joy, which can be passive like watching or active like playing), 3) Self-care (taking care of the body, brain, home, and daily business like shopping), and 4) Rest and restoration (recharging energy through sleep, solitude, or social interaction depending on whether the person is an introvert or extrovert).",
+    "timestamp": "0:24-3:18",
     "time_start_sec": 24,
-    "time_end_sec": 199
+    "time_end_sec": 198
   },
   {
     "question": "Why is it important for people with dementia to feel productive and valued?",
-    "answer": "Feeling productive and valued is critical for a person’s sense of well-being and self-identity. When someone feels that their actions matter and that they make a difference, it reinforces their sense of being human and cared for. This feeling provides a reason for being and helps maintain their dignity, regardless of whether they are paid for the work or simply receive a thank you.",
+    "answer": "Feeling productive helps maintain a sense of well-being and self-worth. It reinforces the idea that who they are and what they can do still has value to others. This feeling of being cared about and having a reason to be here is critical for their sense of humanity and emotional health.",
     "timestamp": "0:30-0:57",
     "time_start_sec": 30,
     "time_end_sec": 57
   },
   {
-    "question": "How can caregivers distinguish between passive and active leisure activities?",
-    "answer": "Passive leisure activities are those where the person absorbs information or entertainment, such as watching a game of cards or television. Active leisure activities involve the person engaging directly in the task, such as actually playing a game of cards. Both types provide joy and boost energy levels, but active engagement requires physical or mental participation. A balanced life usually includes some of both, depending on the individual's preferences.",
-    "timestamp": "1:03-1:59",
-    "time_start_sec": 63,
+    "question": "How should caregivers approach leisure activities to ensure they are balanced?",
+    "answer": "Caregivers should include both passive and active leisure activities. Passive activities involve absorbing something, like watching a card game, while active activities involve engaging directly, like playing a card game. A balanced day includes some of each type to provide joy and energy, tailored to the individual’s preferences.",
+    "timestamp": "1:00-1:59",
+    "time_start_sec": 60,
     "time_end_sec": 119
   },
   {
-    "question": "What does \"self-care\" include beyond basic hygiene like bathing and eating?",
-    "answer": "Self-care is broad and includes taking care of the body through exercise, taking care of the brain through stimulating thinking activities, and managing the environment. It covers transportation needs, such as walking, using a bus system, or navigating an airport. It also includes household management tasks like cleaning, emptying garbage, shopping, and managing money. Essentially, any activity that maintains the person’s physical health, mental stimulation, and living space falls under self-care.",
-    "timestamp": "2:06-3:11",
-    "time_start_sec": 126,
+    "question": "What does \"self-care\" include beyond basic hygiene for someone with dementia?",
+    "answer": "Self-care includes taking care of the body (bathing, eating, toileting, grooming, and exercise), stimulating the brain with interesting thinking activities, managing daily business (like shopping and money), and maintaining the living environment (cleaning, organizing, and moving items to where they are needed). It also covers transportation and getting around safely.",
+    "timestamp": "2:02-3:11",
+    "time_start_sec": 122,
     "time_end_sec": 191
   },
   {
-    "question": "How does a person’s personality affect their need for rest and restoration?",
-    "answer": "Rest and restoration are not just about sleeping; they are about recharging one’s batteries in a way that matches the individual’s personality. For example, introverts may recharge by spending time alone, while extroverts may gain energy by being around other people. Caregivers should recognize that spiritual restoration and personal preferences play a big role in how a person regains their energy. Ignoring these individual needs can lead to fatigue and decreased well-being.",
-    "timestamp": "3:19-4:03",
+    "question": "Why is rest and restoration more than just sleeping, and how does personality affect it?",
+    "answer": "Rest involves recharging batteries, which varies by individual. Some people recharge by being alone (introverts), while others gain energy by being around people (extroverts). Restoration also includes spiritual well-being. Ensuring adequate rest prevents fatigue and supports overall energy levels for daily activities.",
+    "timestamp": "3:19-4:06",
     "time_start_sec": 199,
-    "time_end_sec": 243
+    "time_end_sec": 246
   },
   {
-    "question": "What is a helpful strategy when a person with dementia struggles with a difficult task, like opening a package?",
-    "answer": "If a person struggles with a task, such as tearing open a bag, avoid blaming the person. Instead, blame the product or the situation. For example, say something like, \"This bag is such a problem,\" rather than pointing out the person’s difficulty. This approach preserves the person’s dignity and reduces frustration. The caregiver can then assist with the hardest part while allowing the person to continue with what they can do, maintaining their sense of capability.",
-    "timestamp": "5:40-5:53",
-    "time_start_sec": 340,
-    "time_end_sec": 353
-  },
-  {
-    "question": "How can group activities help individuals with dementia know what to do next?",
-    "answer": "In a small group setting, individuals can observe others performing the same task. This visual cue helps them understand the next steps without needing extensive verbal instructions. For instance, if one person starts stirring batter, others may see this and begin stirring their own mix. This method leverages social learning and reduces anxiety by providing clear, observable examples of the expected behavior.",
-    "timestamp": "6:03-6:30",
-    "time_start_sec": 363,
+    "question": "How can a caregiver help someone with dementia participate in a cooking group without causing frustration?",
+    "answer": "Use small groups so participants can watch others and learn by observation. If someone struggles, blame the product or equipment rather than the person to reduce shame. Provide clear, simple cues and physical assistance only when necessary, such as handing them the next item or guiding their hand gently, allowing them to complete steps independently whenever possible.",
+    "timestamp": "5:30-6:30",
+    "time_start_sec": 330,
     "time_end_sec": 390
   },
   {
-    "question": "Why is it beneficial to compliment a person with dementia on their cooking skills?",
-    "answer": "Complimenting a person on their cooking engages their sense of purpose and productivity. If a person enjoys cooking more than eating, focusing on their culinary skills encourages them to participate fully. By acknowledging their contribution, such as saying they cooked for the group, you motivate them to eat the food they prepared. This positive reinforcement creates a successful experience where the person feels valued and accomplished.",
+    "question": "What is a helpful strategy if a person with dementia seems uninterested in eating but enjoys cooking?",
+    "answer": "Engage them in the cooking process and offer genuine compliments on their contribution. When they feel proud of what they have made and cooked for others, they are more likely to eat the food. This connects the activity to their sense of value and productivity, making the meal a shared success.",
     "timestamp": "8:12-8:30",
     "time_start_sec": 492,
     "time_end_sec": 510
   },
   {
-    "question": "What is a gentle technique to help someone with dementia eat independently?",
-    "answer": "Instead of feeding someone by poking a spoon toward their mouth, encourage them to bring the food to their own mouth. You can support this by gently supporting their elbow, which provides stability and sensory feedback. This allows the person to maintain control over the action, helping their brain process that they are eating. This method promotes independence and reduces confusion or resistance that might occur with forced feeding.",
-    "timestamp": "9:23-10:12",
-    "time_start_sec": 563,
+    "question": "How can caregivers support safe and independent eating for someone with dementia?",
+    "answer": "Allow the person to bring the food to their mouth themselves rather than spoon-feeding them, which can be confusing or alarming. Support their elbow from underneath to help them sit upright and control the movement. This method gives their brain time to recognize the action and makes the experience more comfortable and dignified.",
+    "timestamp": "9:20-10:12",
+    "time_start_sec": 560,
     "time_end_sec": 612
   },
   {
-    "question": "How can caregivers adapt puzzle activities to support success for people with dementia?",
-    "answer": "Caregivers can create custom puzzles using bright, clear images printed on card stock. To support success, give pieces one at a time to avoid overwhelming the person, and offer subtle hints like tapping the table or turning a piece slightly. Frame the activity as needing help to find a missing piece, which gives the person a purposeful reason to engage. Celebrate their efforts and successes, such as finding a specific piece, to boost their confidence and enjoyment.",
-    "timestamp": "10:46-15:13",
+    "question": "How can puzzles be adapted to help someone with dementia succeed and feel capable?",
+    "answer": "Create custom puzzles using bright, clear images like flowers printed on sturdy card stock. Frame the activity as needing help because you might have lost a piece, giving them a purposeful reason to engage. Start with fewer pieces if they seem overwhelmed, and gradually add structure by handing them one piece at a time to reduce confusion.",
+    "timestamp": "10:46-11:44",
     "time_start_sec": 646,
-    "time_end_sec": 913
+    "time_end_sec": 704
+  },
+  {
+    "question": "What kind of verbal and physical cues help a person with dementia solve a puzzle?",
+    "answer": "Offer gentle hints like tapping the table near where a piece might fit, suggesting they turn a piece over, or asking if it looks right. Avoid taking the piece away; instead, let them manipulate it. Celebrate small successes and acknowledge their skills, reminding them of past abilities to boost confidence and enjoyment.",
+    "timestamp": "12:15-14:35",
+    "time_start_sec": 735,
+    "time_end_sec": 875
   }
 ]

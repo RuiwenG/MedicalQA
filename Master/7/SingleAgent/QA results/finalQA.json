@@ -1,65 +1,65 @@
 [
   {
-    "question": "Why is it important to notice the intensity of a person's emotion before responding?",
-    "answer": "The level of distress helps you decide how to respond. If the distress is low, you might be able to ask curious questions or offer help finding what they need. However, if the distress is high or intense, moving too quickly to solve the problem can confuse them. In high-distress moments, it is better to pause and focus on supporting their feelings first.",
-    "timestamp": "2:29-4:45",
+    "question": "How should a caregiver assess the intensity of distress when a person with dementia asks, \"Have you seen my mother?\"",
+    "answer": "It is important to notice not just the emotion, but the level of intensity behind it. The same phrase can range from low distress to high anger or fear. By observing how intense the emotion is, you can decide whether to move quickly to problem-solving or to pause and offer more emotional support.",
+    "timestamp": "2:29-4:06",
     "time_start_sec": 149,
-    "time_end_sec": 285
+    "time_end_sec": 246
   },
   {
-    "question": "What should caregivers avoid doing when a person with dementia expresses strong emotions like anger or sadness?",
-    "answer": "Avoid trying to move the conversation forward too quickly or assuming you know exactly what they mean by their words. When someone is upset, their brain is in a state of high alert (often called the amygdala being \"on\"). Jumping straight to logical solutions or facts can overwhelm them. Instead, stay present with their emotion and offer support for how they are feeling right now.",
-    "timestamp": "4:48-6:30",
+    "question": "Why might a caregiver’s facial expression contradict their calm words when responding to distress?",
+    "answer": "Sometimes our internal reaction to someone’s distress shows on our face before we can control it. You might feel overwhelmed or anxious (\"yikes\"), even if your mouth says, \"Oh, you are looking for your mom.\" Recognizing this mismatch helps you understand your own reaction so you can respond more calmly and supportively.",
+    "timestamp": "3:04-3:41",
+    "time_start_sec": 184,
+    "time_end_sec": 221
+  },
+  {
+    "question": "What is the risk of moving too quickly to solve the problem when a person expresses low-level distress?",
+    "answer": "When distress seems low, caregivers often fall into the trap of ignoring the feeling and trying to move forward too fast. This can miss the opportunity to validate the person's emotions. Instead of rushing to fix the issue, taking a moment to acknowledge the feeling can build trust and connection.",
+    "timestamp": "4:48-5:10",
     "time_start_sec": 288,
-    "time_end_sec": 390
+    "time_end_sec": 310
   },
   {
-    "question": "How can a caregiver distinguish between the words a person says and the actual need behind those words?",
-    "answer": "Do not assume that the specific words spoken match the source of the distress. For example, asking \"Have you seen my mother?\" might not actually be about finding a parent. It could signal loneliness, a physical need like hunger or needing the bathroom, or general confusion. By pausing and reflecting on the emotion rather than just the literal request, you open the door to understanding the real unmet need.",
-    "timestamp": "6:38-7:36",
-    "time_start_sec": 398,
+    "question": "Why is pausing important when a person with dementia expresses strong emotional needs?",
+    "answer": "Pausing allows you to use your prefrontal cortex to process what is happening rather than just reacting instinctively. This brief moment helps you get curious about the unmet need driving the behavior. It shifts your approach from trying to \"fix\" the words to understanding the emotion behind them.",
+    "timestamp": "6:12-6:52",
+    "time_start_sec": 372,
+    "time_end_sec": 412
+  },
+  {
+    "question": "Why might assuming that words match the actual distress lead to confusion for the person with dementia?",
+    "answer": "There is often an assumption that the words a person says clearly explain their distress. However, saying \"I want to go home\" might not be about the house at all; it could be about feeling unsafe, lonely, or in pain. If you try to solve the literal problem (like finding the house) without addressing the underlying emotion, it may confuse the person further because the real need remains unmet.",
+    "timestamp": "7:03-7:36",
+    "time_start_sec": 423,
     "time_end_sec": 456
   },
   {
-    "question": "What risk is involved when a caregiver tries to verify facts too quickly during a moment of distress?",
-    "answer": "Trying to verify facts or move the conversation ahead logically can confuse the person’s brain. If a person is distressed, their ability to process rapid changes in topic or complex logic is reduced. Asking clarifying questions that require fast thinking may cause them to feel tricked or more agitated, leading to behaviors like accusing the caregiver of lying, rather than helping them feel understood.",
-    "timestamp": "8:38-9:46",
-    "time_start_sec": 518,
-    "time_end_sec": 586
+    "question": "How can asking factual questions like \"Have you seen your mother?\" accidentally increase agitation?",
+    "answer": "Asking factual questions moves the conversation ahead too quickly and requires the brain to process complex information. If the person is already distressed, this can confuse them because they cannot keep up with the logical steps. Instead of verifying facts, it is better to stay with the emotion to avoid causing more stress.",
+    "timestamp": "8:40-9:25",
+    "time_start_sec": 520,
+    "time_end_sec": 565
   },
   {
-    "question": "What is the first step of the PACK method when dealing with a distressed statement?",
-    "answer": "The first step is Reflection. This means acknowledging what the person is saying and feeling without judging or immediately trying to fix it. For example, if someone says, \"I am looking for my mother,\" you reflect this back by saying, \"You are looking for your mother.\" This shows you have heard them and validates their experience, which helps lower their stress levels.",
-    "timestamp": "11:06-11:20",
-    "time_start_sec": 666,
-    "time_end_sec": 680
-  },
-  {
-    "question": "How does offering a choice help a person who is struggling to express their needs?",
-    "answer": "Offering a choice helps narrow down whether the distress is emotional or physical. You might ask, \"Do you want to see her to be with her, or do you need to do something with her?\" This gives the person simple options to consider. It might reveal that they are lonely and want connection, or that they are physically lost and need help finding a specific place, like a bathroom or a sunny spot.",
-    "timestamp": "11:23-12:52",
-    "time_start_sec": 683,
+    "question": "What strategy can help identify whether a person’s distress is emotional or physical?",
+    "answer": "You can offer a gentle choice to explore the need. For example, ask if they want to see their mother to be with her (emotional connection) or to do something specific like go to the bathroom or get a snack (physical need). This helps clarify if the distress is driven by loneliness or a practical requirement they cannot locate or express.",
+    "timestamp": "11:53-12:52",
+    "time_start_sec": 713,
     "time_end_sec": 772
   },
   {
-    "question": "When is it appropriate to use the phrase \"Tell me more\"?",
-    "answer": "Use \"Tell me more\" only when the person still has some verbal skills and seems calm enough to engage in conversation. After reflecting their statement and perhaps offering a choice, this phrase invites them to share additional details. It works best when the initial reflection has successfully lowered their distress and they are ready to communicate further.",
+    "question": "When is it appropriate to use the phrase \"Tell me more about that\"?",
+    "answer": "This phrase is useful when the person still has some verbal skills and you have successfully reflected their feeling. It invites them to share more details about their experience. However, if this question causes more distress or confusion, you should stop using it and return to offering simple choices or reflections.",
     "timestamp": "13:30-14:14",
     "time_start_sec": 810,
     "time_end_sec": 854
   },
   {
-    "question": "What should a caregiver do if the phrase \"Tell me more\" causes increased distress?",
-    "answer": "If asking for more information makes the person more upset, go back one step. Stop asking open-ended questions and return to offering concrete choices or simple reflections. For example, instead of asking them to explain, you might ask, \"Is your mom tall or short?\" or \"Did you used to sit in the front or the back?\" These simpler prompts provide structure and reduce the cognitive load on the person.",
-    "timestamp": "14:18-14:53",
-    "time_start_sec": 858,
-    "time_end_sec": 893
-  },
-  {
-    "question": "What is the overall goal of using reflection, choices, and gentle inquiry in dementia care?",
-    "answer": "The goal is to connect with the person’s emotional state and identify their unmet needs without causing confusion or agitation. By pausing, reflecting their feelings, and offering manageable options, you help calm their nervous system. This approach builds trust and allows you to address the root cause of their distress—whether it is emotional, physical, or environmental—in a supportive and respectful way.",
-    "timestamp": "14:54-15:24",
-    "time_start_sec": 894,
-    "time_end_sec": 924
+    "question": "What should a caregiver do if the person becomes more distressed after being asked to \"tell more\"?",
+    "answer": "If asking for more details causes the person to falter or become more upset, go back a step. Return to offering simple, concrete choices or reflecting what you have already heard. Some people need a second prompt or a simpler structure to feel supported, so adjusting your approach based on their reaction is key.",
+    "timestamp": "14:21-14:50",
+    "time_start_sec": 861,
+    "time_end_sec": 890
   }
 ]

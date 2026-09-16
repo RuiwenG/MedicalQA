@@ -1,56 +1,56 @@
 [
   {
-    "question": "What is the most common injury suffered by caregivers, and why does it happen?",
-    "answer": "The most common injury is a back injury. This usually happens because caregivers try to use their physical strength or \"muscle through\" the movement instead of using proper technique and skill. Often, caregivers have seen others do it incorrectly and simply copy that unsafe method.",
-    "timestamp": "0:31-1:40",
+    "question": "Why are back injuries the most common injury for care partners, and how can this be prevented?",
+    "answer": "Back injuries are the number one reason care partners have to call out of work. This usually happens because caregivers try to use raw strength or \"muscle through\" a move instead of using proper technique. To prevent injury, focus on using skill and body mechanics rather than just trying to lift with your arms or back.",
+    "timestamp": "0:31-1:26",
     "time_start_sec": 31,
-    "time_end_sec": 100
+    "time_end_sec": 86
   },
   {
-    "question": "Why should I let the person I am caring for help with the transfer, even if they are slow or weak?",
-    "answer": "Allowing the person to participate helps them keep using their muscles, specifically large muscles like the gluteals (the big muscles in the buttocks). If these muscles are not used, they begin to contract and weaken. Keeping the body active for as long as possible is better for both the caregiver and the person receiving care.",
+    "question": "Why is it important to let the person with dementia participate in standing up, even if they only do a little bit?",
+    "answer": "Allowing the person to help, even slightly, helps them keep their muscles active. Specifically, standing uses large muscles like the gluteals (the big muscles in the buttocks). If these muscles are not used, they tend to contract and weaken. Keeping the body moving for as long as possible is better for both the caregiver and the person receiving care.",
     "timestamp": "2:31-3:28",
     "time_start_sec": 151,
     "time_end_sec": 208
   },
   {
-    "question": "How should I position the wheelchair or chair before helping someone stand up?",
-    "answer": "Place the chair close to the bed, touching it if possible, and position it at an angle (perpendicular) rather than directly in front of the person. Make sure one armrest is removed or folded back. This setup allows the person to slide over more easily and gives them more opportunity to help with the move, rather than having to be lifted entirely.",
-    "timestamp": "3:54-4:43",
-    "time_start_sec": 234,
-    "time_end_sec": 283
+    "question": "How should you position the wheelchair when helping someone transfer from bed to chair?",
+    "answer": "Place the wheelchair close to the bed, touching it almost, but off to the side rather than directly in front of the person. Position it perpendicular (at a right angle) to the bed. Also, remove or swing back the armrest closest to the bed. This setup allows the person to slide over more easily instead of being lifted completely, which reduces strain.",
+    "timestamp": "3:45-4:35",
+    "time_start_sec": 225,
+    "time_end_sec": 275
   },
   {
-    "question": "Should the bed be higher or lower than the chair seat when transferring?",
-    "answer": "Ideally, the bed should be slightly higher than the chair seat. This uses gravity to help the person move downward into the chair during the final part of the transfer. If the bed is too low, you lose this natural assistance.",
+    "question": "What is the ideal height for the bed relative to the wheelchair seat during a transfer?",
+    "answer": "Ideally, the bed should be raised so that it is level with the wheelchair seat or slightly higher. Having the bed a bit higher allows gravity to help with the final part of the movement, making it easier to lower the person safely into the chair without excessive lifting effort.",
     "timestamp": "4:47-5:20",
     "time_start_sec": 287,
     "time_end_sec": 320
   },
   {
-    "question": "Where should I place my hands and knees when supporting someone standing up?",
-    "answer": "Position your feet so your forefoot aligns with theirs. Cup one of their knees with your knee to stabilize them, but do not squeeze their legs together. Place your arms around their trunk (torso) and hold onto their lower back. Avoid grabbing under their arms or shoulders, as holding the lower back provides better support and control.",
-    "timestamp": "5:27-6:54",
-    "time_start_sec": 327,
+    "question": "Where should you place your hands and knees when preparing to lift someone from a lying to a sitting position?",
+    "answer": "Instead of grabbing under the armpits, place your arms around the person’s trunk (torso) with your hands low on their back. Your knees should gently \"cup\" or support their near knee, rather than squishing their legs together. This position is more comfortable for the person and provides better leverage for you.",
+    "timestamp": "5:22-6:54",
+    "time_start_sec": 322,
     "time_end_sec": 414
   },
   {
-    "question": "How can I help the person lean forward safely during a transfer?",
-    "answer": "Allow the person’s head to rest against your outside shoulder. Because of how our bodies are built, when their bottom moves in one direction, their head naturally moves the opposite way. By letting their head ride on your shoulder, they will lean forward more readily, making it easier for you to straighten your arms and bring them forward.",
-    "timestamp": "6:58-7:20",
-    "time_start_sec": 418,
-    "time_end_sec": 440
+    "question": "How does positioning the person's head help them lean forward during a transfer?",
+    "answer": "Let the person’s head rest against your outside shoulder. Because of how the body is built, when the bottom moves one way, the head naturally goes the opposite way. By allowing them to look over your shoulder, they are encouraged to lean forward more readily, which helps shift their weight for the move.",
+    "timestamp": "59-7:16"
   },
   {
-    "question": "What body posture should I use to protect my own back while lifting?",
-    "answer": "Keep your back straight and bend your knees, similar to a \"chair pose\" in yoga. This posture allows you to use the strong muscles in your legs and hips rather than straining your back. Think of your body as a fulcrum or teeter-totter, using gravity and your leg strength to lift the weight.",
-    "timestamp": "24-7:51"
+    "question": "What body posture should the caregiver maintain to protect their own back during a lift?",
+    "answer": "Keep your back straight and use a stance similar to a \"chair pose\" in yoga. This posture engages your strong leg muscles and uses gravity like a fulcrum or teeter-totter. It prevents you from relying on your weaker back muscles and reduces the physical effort required to complete the transfer.",
+    "timestamp": "7:24-7:51",
+    "time_start_sec": 444,
+    "time_end_sec": 471
   },
   {
-    "question": "What can I do if the person I am caring for struggles to start moving or find a rhythm?",
-    "answer": "You can add rhythm to help them get started. Try singing a song, humming, or counting out loud (e.g., \"one, two, three\"). This auditory cue can help guide their movements and make the transition smoother, especially for individuals who may have difficulty initiating movement due to dementia.",
-    "timestamp": "9:34-9:58",
+    "question": "What techniques can help a person with dementia find rhythm and balance during a transfer?",
+    "answer": "You can add auditory cues such as singing, humming, or counting aloud (e.g., \"one, two, three\"). These sounds help create a rhythm that guides the person’s movements. This is especially helpful for individuals who may struggle with coordination or need extra encouragement to start moving.",
+    "timestamp": "9:34-10:00",
     "time_start_sec": 574,
-    "time_end_sec": 598
+    "time_end_sec": 600
   }
 ]

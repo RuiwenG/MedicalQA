@@ -1,28 +1,28 @@
 [
   {
-    "question": "Before assuming a loved one has dementia, what steps should I take to understand their symptoms?",
-    "answer": "First, determine if the changes you see are normal for this person or something new. Do not jump to conclusions; instead, get a medical check-up to rule out treatable causes. Conditions like depression, thyroid problems (hypothyroidism), medication side effects, hearing or vision loss, and other medical issues like diabetes can cause symptoms that look like dementia. These are often fixable. Only after ruling these out should you consider further evaluation for dementia.",
+    "question": "What steps should a caregiver take when noticing changes in a loved one's behavior or memory?",
+    "answer": "First, determine if the change is normal for that specific person or if something new is happening. Do not assume it is dementia immediately. Instead, seek a medical workup to check for treatable causes such as depression, thyroid issues, medication side effects, hearing or vision problems, or other medical conditions like diabetes. If these issues are addressed and the changes persist, then further evaluation for dementia may be needed. This approach ensures you do not miss conditions that can be fixed.",
     "timestamp": "0:05-1:22",
     "time_start_sec": 5,
     "time_end_sec": 82
   },
   {
-    "question": "What is the difference between dementia and Alzheimer’s disease?",
-    "answer": "Dementia is a broad \"umbrella\" term for a group of symptoms affecting brain function, while Alzheimer’s is just one specific type under that umbrella. There are about 85 to 90 different conditions that fall under dementia, including vascular dementia, Lewy body dementia, and frontotemporal dementia. It is important to know that dementia is not a single diagnosis but a collection of symptoms caused by various underlying conditions.",
-    "timestamp": "1:23-2:40",
+    "question": "How is dementia different from Alzheimer’s disease?",
+    "answer": "Dementia is a broad \"umbrella\" term that covers approximately 85 to 90 different conditions, while Alzheimer’s is just one specific type under that umbrella. It is a common misunderstanding that all dementia is Alzheimer’s; in reality, there are many forms, including Lewy body, frontotemporal, and vascular dementia. Additionally, dementia is considered a syndrome—a collection of symptoms—rather than a single specific diagnosis. Understanding this helps caregivers realize that each person’s experience may be unique.",
+    "timestamp": "1:23-2:30",
     "time_start_sec": 83,
-    "time_end_sec": 160
+    "time_end_sec": 150
   },
   {
-    "question": "What does it mean when someone is diagnosed with dementia, and what should I expect regarding treatment and time?",
-    "answer": "A diagnosis of dementia means that at least two parts of the brain are changing in ways that cannot currently be fixed or cured. There is no treatment that stops the progression, so the focus shifts to helping the person live well with the condition. On average, symptoms last between 8 to 12 years, though this varies. Dementia is a progressive illness, meaning it will continue to change over time until the end of life. Understanding this helps you prepare to support your loved one through these changes.",
-    "timestamp": "2:41-4:13",
-    "time_start_sec": 161,
-    "time_end_sec": 253
+    "question": "What are the four key characteristics of dementia that caregivers should understand?",
+    "answer": "There are four main truths about dementia. First, at least two parts of the brain are changing, often affecting memory but not always in the typical way (such as forgetting recent events). Second, there is currently no cure or treatment that stops the progression, so the focus shifts to helping the person live well with the condition. Third, dementia is a progressive illness, meaning symptoms will constantly change over time, typically lasting 8 to 12 years on average. Fourth, it is a terminal condition, which means caregivers need to prepare for end-of-life care while making the most of the time they have.",
+    "timestamp": "2:40-4:27",
+    "time_start_sec": 160,
+    "time_end_sec": 267
   },
   {
-    "question": "How does a dementia diagnosis affect the family, and how can caregivers cope with this challenge?",
-    "answer": "When one person gets dementia, everyone around them is affected. You did not choose this situation, but you can choose how to respond. Instead of falling apart, try to pull together as a support system. While you cannot change the disease itself, you can change how you interact with your loved one. Focus on acknowledging what abilities are missing and using what they still have left. By adapting your approach to match their current capabilities, you can make a positive difference and find meaning in caregiving.",
-    "timestamp": "14-5:39"
+    "question": "How can families support each other when living with dementia?",
+    "answer": "When one person has dementia, everyone around them is affected. Families face a choice: they can either pull together to support their loved one or fall apart. The goal is to adapt and make positive changes rather than trying to fix the unfixable. Caregivers are encouraged to acknowledge what abilities are missing and focus on using what strengths remain. By working together and adjusting expectations, families can create a supportive environment where life continues to have meaning under the \"umbrella\" of dementia.",
+    "timestamp": "28-5:39"
   }
 ]

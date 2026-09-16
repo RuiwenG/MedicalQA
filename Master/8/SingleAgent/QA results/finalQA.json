@@ -1,79 +1,57 @@
 [
   {
-    "question": "What is the \"Animal Fluency Test\" and how do I perform it?",
-    "answer": "The Animal Fluency Test is a simple, one-minute activity where one person acts as the timer and tracker, while the other person lists as many animals as they can think of. The tracker should make small tick marks for each animal named but does not need to write down the specific words. This quick exercise helps establish a baseline for verbal fluency.",
-    "timestamp": "1:01-1:29",
-    "time_start_sec": 61,
-    "time_end_sec": 89
+    "question": "What is the \"Animal Fluency Test\" and how does it help caregivers monitor cognitive health?",
+    "answer": "The Animal Fluency Test is a simple, one-minute activity where a person lists as many animals as they can think of while another person counts them. It helps caregivers establish a personal baseline for their loved one’s verbal fluency. By repeating this test over time using the same category, caregivers can notice if there is a significant drop in the number of items listed, which may signal a change in cognitive function that warrants further attention.",
+    "timestamp": null
   },
   {
-    "question": "Why is establishing a personal baseline more useful than comparing scores to general averages?",
-    "answer": "Establishing a personal baseline allows you to notice changes in an individual’s performance over time, which is often more meaningful than comparing them to average numbers. Since everyone has different strengths—such as being better at visualizing images versus recalling words alphabetically—knowing what is normal for that specific person helps identify if their abilities are declining or staying stable.",
-    "timestamp": "0:36-1:00; 11:14-12:23",
-    "time_start_sec": 36,
-    "time_end_sec": 60
+    "question": "How should a caregiver accurately track results during the Animal Fluency Test?",
+    "answer": "To track results accurately, the caregiver acting as the \"tracker\" should make simple tick marks for each unique animal named. You do not need to write down the specific words spoken. If the person repeats an animal they already said, you should not count it again. This method keeps the process quick and focused on the total count rather than detailed note-taking.",
+    "timestamp": null
   },
   {
-    "question": "How can families use this test as a fun tradition rather than a medical exam?",
-    "answer": "Families can turn this into a regular, low-stress tradition by doing the test together during holidays like Thanksgiving or Boxing Day. By using the same category (like animals) each year, family members can compare their current results to their previous baselines. This approach makes the activity feel like a game or a way to connect, rather than a scary medical assessment.",
-    "timestamp": "10:28-11:11",
-    "time_start_sec": 628,
-    "time_end_sec": 671
+    "question": "Why is it important to use the exact same category when comparing results over time?",
+    "answer": "Using the exact same category, such as \"animals,\" ensures that you are comparing apples to apples. Different categories have different levels of difficulty or familiarity for different people. By sticking to one category year after year, you create a consistent baseline. This makes it easier to spot genuine changes in performance rather than variations caused by switching topics like vegetables or capital cities.",
+    "timestamp": null
   },
   {
-    "question": "What should I do if someone’s score drops significantly from their usual baseline?",
-    "answer": "If a person’s score drops significantly from their established baseline, it serves as an alert to look for underlying causes. Before worrying about dementia, consider factors like fatigue, illness, or lack of sleep. It is a good opportunity to gently ask questions about their well-being, such as how they are sleeping or if they are feeling unwell.",
-    "timestamp": "1:30-1:36; 12:43-12:56",
-    "time_start_sec": 90,
-    "time_end_sec": 96
+    "question": "What numerical range might indicate a potential concern during the Animal Fluency Test?",
+    "answer": "While individual baselines vary, a score below 17 is generally considered a place of concern in clinical settings. Some experts suggest that a score below 14 is even more indicative of potential issues. However, the most important factor is knowing the individual’s personal average. A sudden drop from their usual high score (for example, dropping from 30 to 18) is a significant alert, even if the number seems acceptable in isolation.",
+    "timestamp": null
   },
   {
-    "question": "How can I introduce this activity to someone who might feel threatened by a \"test\"?",
-    "answer": "To avoid making the person feel judged or stressed, frame the activity as a fun game or a way to help with another task, such as coming up with ideas for grandchildren. Emphasize that it is not a competition or a pass/fail exam. You can also suggest doing it together so it feels like a shared experience rather than an evaluation.",
-    "timestamp": "14:04-14:51; 15:07-15:49",
-    "time_start_sec": 844,
-    "time_end_sec": 891
+    "question": "How can families make the Animal Fluency Test feel like a fun activity rather than a medical exam?",
+    "answer": "Families can frame the test as a game or a shared challenge, such as doing it together during holidays like Thanksgiving or Boxing Day. By participating themselves and sharing their own scores, family members remove the pressure and stigma. Emphasizing that it is a way to connect and play, rather than a pass-or-fail test, helps maintain dignity and reduces anxiety for the person being assessed.",
+    "timestamp": null
   },
   {
-    "question": "Can this test be used during a doctor’s visit, and if so, how?",
-    "answer": "Yes, this test can be a helpful tool during annual physicals. Caregivers can ask doctors to perform this one-minute activity with the patient. It can serve as an icebreaker if the patient is nervous and provides the doctor with concrete data on the patient’s verbal fluency in a non-threatening way.",
-    "timestamp": "13:01-14:03",
-    "time_start_sec": 781,
-    "time_end_sec": 843
+    "question": "What non-medical factors might temporarily affect someone’s score on the Animal Fluency Test?",
+    "answer": "Several everyday factors can influence performance, including how well-rested the person is, whether they are feeling sick, or if they are under stress. For instance, taking the test at the end of a long day might yield a lower score than taking it in the morning. Caregivers should consider these context clues before worrying about a single low score, looking instead for consistent trends over time.",
+    "timestamp": null
   },
   {
-    "question": "Does practicing the test improve the score, and does that affect its accuracy?",
-    "answer": "While people may influence each other or use strategies like alphabetical ordering after hearing others participate, the goal is not to \"practice\" for a perfect score. The focus is on observing natural patterns and consistency over time. Even if someone improves slightly due to familiarity, a significant drop from their personal norm remains a valid indicator of change.",
-    "timestamp": "8:18-9:43",
-    "time_start_sec": 498,
-    "time_end_sec": 583
+    "question": "How can the Animal Fluency Test be used effectively during a doctor’s visit?",
+    "answer": "Caregivers can ask doctors to perform this one-minute test during annual physicals. It serves as a quick, non-threatening icebreaker that can ease nervousness for patients who are anxious about medical appointments. Because the patient may already be familiar with the activity from home, it can provide the doctor with a reliable snapshot of verbal fluency without feeling like a stressful evaluation.",
+    "timestamp": null
   },
   {
-    "question": "What are some alternative categories we can use besides animals?",
-    "answer": "You can use any category of nouns to create a baseline. Common alternatives include vegetables, fruits, capital cities, or any other list of items. The key is to stick with the exact same category each time you test to ensure accurate comparisons against the previous baseline.",
-    "timestamp": "9:47-10:27",
-    "time_start_sec": 587,
-    "time_end_sec": 627
+    "question": "What strategies do people commonly use to generate lists during the Animal Fluency Test?",
+    "answer": "People often use different mental strategies to recall items, such as grouping animals by location (like the farm, the zoo, or the forest), sorting them alphabetically, or focusing on specific types like dog breeds. Observing which strategy a person uses can provide insight into their thinking process. Changes in these strategies—for example, struggling to categorize or relying heavily on rhythm—can be just as informative as the final number.",
+    "timestamp": null
   },
   {
-    "question": "How long does the entire process take, including setup and decompression?",
-    "answer": "While the actual listing part takes only one minute, the entire process—including setting the timer, counting the ticks, and taking a moment to breathe and relax afterward—takes about 90 seconds. This short duration makes it easy to fit into daily routines or medical appointments without causing fatigue.",
-    "timestamp": "13:05-13:25",
-    "time_start_sec": 785,
-    "time_end_sec": 805
+    "question": "How can a caregiver introduce the concept of baseline testing to a loved one who might resist assessment?",
+    "answer": "If a loved one is resistant to formal testing, a caregiver can integrate the activity into a natural conversation or a helpful task. For example, they might say, \"I’m trying to come up with a list of farm animals for a project, and I could really use your help.\" This approach gathers data without explicitly labeling it as an assessment, making the interaction feel supportive and collaborative rather than evaluative.",
+    "timestamp": null
   },
   {
-    "question": "How should a caregiver react if the person struggles or gets stuck during the test?",
-    "answer": "Offer gentle encouragement and positive reinforcement. If the person pauses, you can say things like \"Keep going,\" \"That's cool,\" or \"Awesome\" to help them stay relaxed and focused. The goal is to support their effort and maintain a dignified, stress-free environment rather than correcting them.",
-    "timestamp": "16:14-16:33",
-    "time_start_sec": 974,
-    "time_end_sec": 993
+    "question": "Why is it helpful to know your own baseline before assessing a loved one?",
+    "answer": "Knowing your own baseline helps normalize the experience and reduces judgment. When caregivers see their own scores fluctuate based on stress or fatigue, they become more empathetic to the challenges their loved ones face. It also demonstrates that everyone has strengths and weaknesses in verbal tasks, fostering a sense of shared humanity and reducing the fear associated with cognitive decline.",
+    "timestamp": null
   },
   {
-    "question": "What is the significance of the number 17 or 14 in these tests?",
-    "answer": "In clinical settings, scoring below 17 (or sometimes 14) is often considered a point of concern. However, for caregivers, these absolute numbers are less important than the individual’s personal history. A score of 17 might be perfectly normal for one person but a significant drop for another who usually scores much higher. Always prioritize the trend relative to the person’s own baseline.",
-    "timestamp": "11:20-11:40",
-    "time_start_sec": 680,
-    "time_end_sec": 700
+    "question": "What should a caregiver do if they notice a significant drop in their loved one’s test scores?",
+    "answer": "If a caregiver notices a significant drop from the established baseline, it serves as an alert to pay closer attention. They should consider recent changes in health, sleep, or stress levels. If the trend continues, it is a good reason to discuss these observations with a healthcare provider. The goal is not to panic, but to use the data as a tool for early awareness and proactive care planning.",
+    "timestamp": null
   }
 ]
