@@ -1,0 +1,51 @@
+{
+  "source_revision": "2323ee99760ebe2120468374670192c8cff38891",
+  "review_basis": "Source-transcript review of the first 40 assigned v1 Q&As; approximate ranges, not frame-verified video annotations. Scores and weak flags remain those of the automatic match.",
+  "pairs": {
+    "Master_v1_SingleAgent-v1_q2": {
+      "t": 143,
+      "te": 280,
+      "note": "Extend through the crowded-restaurant analogy and looking-away discussion at 223-273 seconds."
+    },
+    "Master_v3_SingleAgent-v1_q2": {
+      "t": 42,
+      "te": 153,
+      "note": "Include the get-this-over-with and moving-faster explanation at 128-149 seconds."
+    },
+    "Master_v5_SingleAgent-v1_q2": {
+      "t": 150,
+      "te": 232,
+      "note": "The original match covered the question, not the answer. Pacing and diverted attention are discussed at 169-205 seconds; narrowing vision at 206-225 seconds."
+    },
+    "Master_v7_SingleAgent-v1_q1": {
+      "t": 140,
+      "te": 299,
+      "note": "Include both the emotion-intensity demonstrations and the low-distress curiosity versus high-distress reflection explanation at 247-289 seconds."
+    },
+    "Master_v9_SingleAgent-v1_q1": {
+      "t": 275,
+      "te": 333,
+      "note": "Move from the introductory demonstration to the explicit explanation about not asking a bathroom question and likely refusal at 291-324 seconds."
+    },
+    "Teepa_v3_SingleAgent-v1_q1": {
+      "t": 14,
+      "te": 267,
+      "note": "This answer summarizes four categories spread across 25-259 seconds. Keep the entire relevant explanation, not just the first category."
+    },
+    "Teepa_v8_SingleAgent-v1_q1": {
+      "t": 0,
+      "te": 468,
+      "note": "The brain distinction is at 0-9 seconds and the failure of reminding is at 438-468 seconds. This broad answer needs the full comparison; a short middle clip omits its main claim."
+    },
+    "Teepa_v11_SingleAgent-v1_q1": {
+      "t": 339,
+      "te": 429,
+      "note": "Extend past digestion/bladder discussion through the explanation of clothing removal and discomfort at 395-425 seconds."
+    },
+    "Teepa_v12_SingleAgent-v1_q1": {
+      "t": 27,
+      "te": 199,
+      "note": "Include family embarrassment and public-behavior expectations through 197 seconds, not just the introduction to formality."
+    }
+  }
+}

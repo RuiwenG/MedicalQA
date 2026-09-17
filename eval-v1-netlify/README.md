@@ -18,7 +18,54 @@ fixed-20 SingleAgent generation, before the four-criterion prompt revision,
 dynamic Q&A count, timestamps, and Standalone requirement.
 
 Run `python build_v1_data.py` from inside the repository to reproducibly rebuild
-`qa_data.json` from that Git snapshot.
+`qa_data.json` from that Git snapshot, then merge the checked-in timestamp sidecar.
+
+## Timestamp-only update (2026-09-16)
+
+All 487 original Q&As now carry `t`/`te` source-transcript alignment ranges.
+The original prompt never generated timestamps: these are **approximate**
+matches to each unchanged v1 Q&A, not copied v3 clips or exact ground truth.
+No questions, answers, IDs, ordering, assignment cap, rubric, session keys,
+Supabase configuration, or schema were changed.
+
+- 321 automatic matches meet the existing aligner's score threshold; 166 are
+  weak. The score is a lexical similarity heuristic, not a probability.
+- All first-40 candidate clips were inspected against their transcript text;
+  9 ranges were corrected or expanded in `timestamp_overrides.json`. This is
+  not a medical-correctness review or frame-by-frame video verification.
+- The first 40 include 5 weak matches. Weak matches seek to the suggested start
+  and play without an end limit; the UI clearly marks them as low-confidence.
+- Some answers summarize several passages. Teepa video 8, Q1 refers to both
+  the opening definition and the ending comparison, so it still spans that
+  whole video. Do not assume every answer has one short supporting clip.
+- `aligned_timestamps.json` records transcript/corpus hashes, automatic
+  similarity scores, and reviewed overrides so the update can be audited.
+
+To regenerate (offline; no model calls), run from the repository root:
+
+```sh
+python3 eval/align_v1_timestamps.py
+python3 eval-v1-netlify/build_v1_data.py
+python3 eval/test_v1_timestamps.py
+node eval/test_v1_timestamp_ui.cjs
+```
+
+The builder rejects a sidecar belonging to different Q&As or transcripts.
+Keep both timestamp JSON files with this deployment when rebuilding.
+
+### Updating an existing evaluation
+
+Wait for **All ratings saved**, then redeploy this folder/ZIP to the **existing
+v1 Netlify site**, retaining its address. Do not replace the v3 site or change
+the evaluation's configuration. No SQL rerun or Supabase reset is required
+for timestamps; the schema already has the start/end columns.
+
+Return using the same browser/profile, evaluator name, and selections; do not
+clear browser storage. UI resume is local, not fetched from Supabase. Previously
+saved rows are untouched and will still have their original (usually null)
+timestamp values. New submissions include the added timestamps. Record the
+deployment date when analysing pre-update versus post-update ratings, because
+the ease of finding video evidence has changed.
 
 ## Fixed study configuration
 
@@ -62,8 +109,10 @@ to contain `study_version = 'v1'` and `approach = 'SingleAgent-v1'`.
 
 ## Netlify deployment
 
-Create a separate Netlify site and upload `eval-v1-netlify.zip`. Do not deploy
-it over the active v3 site. Leave the build command empty; this is a static site.
+For an initial deployment, create a separate Netlify site and upload
+`eval-v1-netlify.zip`. For this timestamp update, redeploy to the existing v1
+site as described above. Never deploy over the active v3 site. Leave the build
+command empty; this is a static site.
 
 After deployment, submit one test rating and run:
 

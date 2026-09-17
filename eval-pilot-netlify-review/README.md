@@ -1,27 +1,88 @@
 # Dementia Q&A — Human Evaluation Site
 
+## Existing v3 study: timestamp-only update (2026-09-16)
+
+**Do not rerun `supabase_schema.sql`. It drops the existing `ratings_v3` table
+and would delete collected ratings. No SQL is needed for this update.**
+
+This package intentionally retains the **225 Q&As already being evaluated**,
+their text, IDs, order, 40-pair assignment, rubric, session keys, and database
+settings. All 1,278 inactive records are also unchanged. The latest generated
+`SingleAgent` corpus has 226 different Q&As and reuses IDs; replacing this
+package with `eval/web` would therefore mix different content into existing
+sessions. Do not copy the latest corpus over the ongoing study.
+
+Instead, every active Q&A was matched by exact question, answer, dataset,
+video, and video URL to the preserved `SingleAgent-v2` snapshot in the pulled
+repository. That internal snapshot name does **not** rename this human study:
+the UI still uses `SingleAgent`, study `v3`, and `ratings_v3`.
+
+- 162 existing model-written timestamp ranges are unchanged.
+- 63 previously missing ranges were recovered from matching transcript
+  alignments: 54 bounded approximate clips and 9 weak/open-ended suggestions.
+- The first 40 retain their exact identities/order: 33 existing ranges plus
+  7 newly timestamped Q&As. Those 7 were inspected against transcript text;
+  Teepa 13, Q1 was corrected and made open-ended because its examples and
+  broader discussion occur in different passages.
+- Estimated times are labelled approximate. Native timestamps are recorded
+  model output, not a guarantee that every claim is supported by the clip.
+- Catherine's September 16 recovery of 22 native timestamps belongs to the
+  newer generated corpus, so those times were not copied onto different Q&As.
+
+### Upload without resetting progress
+
+1. Wait for the existing UI to say **All ratings saved**.
+2. Upload **this folder or `eval-pilot-netlify-review.zip` to the existing v3
+   Netlify site**. Keep its current address. Do not upload the v1 package there.
+3. Return in the same browser/profile with the same evaluator name and
+   selections. Do not clear browser storage or use a new deployment-preview
+   URL to resume an existing session.
+4. No Supabase changes or SQL rerun. Existing saved rows remain untouched;
+   subsequent submissions carry the added timestamps.
+
+Progress recovery is browser-local; it is not downloaded from Supabase.
+Record when the update is deployed for analysis, because navigating to video
+evidence becomes easier even though the Q&As and rubric are unchanged.
+
+To reproducibly rebuild only this frozen study's timestamps from the pinned
+Git snapshot, run from the repository root:
+
+```sh
+python3 eval-pilot-netlify-review/update_timestamps.py
+python3 eval/test_v3_timestamps.py
+node eval/test_v3_timestamp_ui.cjs
+```
+
+`timestamp_update_audit.json` records source IDs, old/new timestamp metadata,
+content and transcript hashes, and the reviewed correction in
+`timestamp_overrides.json`. The updater rejects changed question/answer text,
+changed source videos, missing matches, and changes to existing timestamps.
+
+---
+
 A public, shareable version of `eval/QA_Educational_Eval_UI.ipynb`. Same five Q&A
 metrics, same pilot form, same Q&As — but an annotator only needs a link and
 a browser, and their ratings land in a database instead of a spreadsheet you
 have to collect by email.
 
 ```
-eval/web/
+eval-pilot-netlify-review/
   index.html            the whole app — inline CSS + vanilla JS, no build step
   config.js             Supabase URL/key + study settings (edit this)
   qa_data.json          generated: { pairs: [...], videos: {...} }
-  extract_qa_data.py    regenerates qa_data.json from the repo + dataset CSVs
-  supabase_schema.sql   run once in the Supabase SQL editor
+  update_timestamps.py  updates timestamps in the pinned, frozen study only
+  extract_qa_data.py    legacy extractor; do not run for the ongoing study
+  supabase_schema.sql   destructive initial setup; DO NOT rerun during collection
 ```
 
 `qa_data.json` holds 1,503 current and historical question-answer pairs, their
 available source timestamps, and a `videos` map of URLs read from
 `test_dataset.csv` (Master) and `teepa.csv` (Teepa). The active allowlist keeps
-only the 225 current `SingleAgent` pairs in the human study. Regenerate the file
-whenever results change:
+only the 225 frozen `SingleAgent` pairs in the human study. Rebuild timestamps
+without replacing the corpus:
 
 ```
-python eval/web/extract_qa_data.py
+python3 eval-pilot-netlify-review/update_timestamps.py
 ```
 
 ### Active approach
@@ -32,8 +93,8 @@ pairs never enter the shared set, the advanced picker, or any count — annotato
 cannot opt back in. `qa_data.json` is untouched, so changing the allowlist can
 restore a comparison arm without regenerating the data file.
 
-Both `config.js` files must list the same allowlist, otherwise the pilot and the
-study can rate different corpora.
+Do not change this package's `config.js` during the timestamp-only update.
+Matching allowlists alone do not guarantee matching Q&A text across generations.
 
 ---
 
@@ -60,6 +121,8 @@ table for the binary-only Standalone form. It does not change
 `ratings_ui_v2_qna_v2` or the older `ratings` table.
 
 ## 2. Set up Supabase (about 15 minutes, free)
+
+**Initial setup only. Skip this section for the ongoing v3 study.**
 
 1. Create a project at [supabase.com](https://supabase.com).
 2. SQL Editor → paste all of `supabase_schema.sql` → Run. This drops and
@@ -94,17 +157,12 @@ Leaving the two values empty is a supported mode: everything works, a yellow
 
 ## 3. Deploy to Netlify
 
-The repo root has a `netlify.toml` setting `publish = "eval/web"`, so:
+For this ongoing study, upload `eval-pilot-netlify-review/` or its matching ZIP
+to the existing v3 site's deploy area. Do not create a new site or change the
+address. The repo's default `netlify.toml` publishes `eval/web`, which now has
+different Q&As; do not switch this ongoing study to that publish directory.
 
-1. Netlify → Add new site → Import an existing project → pick this repo.
-2. Leave build command empty. Deploy.
-
-To redeploy after regenerating results, run `python eval/web/extract_qa_data.py`,
-commit `qa_data.json`, and push.
-
-Drag-and-drop also works — drop the `eval/web` folder onto the Netlify dashboard.
-
-Locally: `cd eval/web && python -m http.server 8899`, then open
+Locally: `cd eval-pilot-netlify-review && python -m http.server 8899`, then open
 <http://localhost:8899>. Opening `index.html` directly will not work —
 `file://` blocks the `fetch` of `qa_data.json`.
 
@@ -154,10 +212,10 @@ Each video source URL is pulled from `test_dataset.csv` (Master) and `teepa.csv`
 - a small ▶ next to every video in the picker, so you can preview before choosing;
 - an embedded YouTube player on each rating screen.
 
-When a QA pair has `time_start_sec` and `time_end_sec`, the player is embedded
-as a clip for that segment. Some systems do not currently store timestamps; for
-those pairs, the UI embeds the full source video and says the exact segment is
-unavailable.
+The deployment's `t`/`te` fields set the clip start/end. All 225 active pairs
+now have a start. Approximate alignments are labelled; weak matches and any
+start-only ranges play on without an end limit. The source-video link also
+lets an evaluator explore beyond a suggested clip.
 
 ## 5. Getting the results out
 

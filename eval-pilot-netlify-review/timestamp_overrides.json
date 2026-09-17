@@ -1,0 +1,12 @@
+{
+  "source_revision": "d4ad467527ce45d0af120a5ebd68345a19d39ad8",
+  "review_basis": "Transcript inspection of the seven newly timestamped Q&As in the existing first-40 assignment; not frame-verified video annotations.",
+  "pairs": {
+    "Teepa_v13_SingleAgent_q1": {
+      "t": 51,
+      "te": 105,
+      "ts": "aligned-low",
+      "note": "The copied automatic window at 226-280 seconds missed the question's specific examples. Forgotten neighbor names and keys in the freezer occur at 66-90 seconds. Broader normal-aging discussion is later (378 seconds onward), so start near the examples and leave playback open-ended rather than imply one short clip verifies the entire answer."
+    }
+  }
+}
