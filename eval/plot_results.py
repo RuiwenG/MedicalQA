@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Create publication-ready plots from the human-evaluation analysis tables.
 
+Note: This is the old script, that comparing both Single and Multi results.
+The new one (only analyzing the single agent) is plot_single_agent_results.py
+
 The script reads ``eval/results/analysis/ratings_scored.csv`` and the summary
 tables written by ``eval/analyze_ratings.py``. It deliberately visualizes the
 ordinal ratings as distributions, medians, and Top-2 rates rather than means.
@@ -10,6 +13,7 @@ Run from anywhere inside the repository:
     python eval/plot_results.py
     python eval/plot_results.py --analysis-dir eval/results/analysis
 """
+
 from __future__ import annotations
 
 import argparse
@@ -18,8 +22,12 @@ import tempfile
 from pathlib import Path
 
 # Keep Matplotlib/font caches in a writable location on shared systems.
-os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "medicalqa-mpl"))
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(tempfile.gettempdir()) / "medicalqa-cache"))
+os.environ.setdefault(
+    "MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "medicalqa-mpl")
+)
+os.environ.setdefault(
+    "XDG_CACHE_HOME", str(Path(tempfile.gettempdir()) / "medicalqa-cache")
+)
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -65,7 +73,9 @@ ERROR_METRICS = [
     },
 ]
 
-SHORT_BY_FULL = {metric["full"]: metric["short"] for metric in [*METRICS, *ERROR_METRICS]}
+SHORT_BY_FULL = {
+    metric["full"]: metric["short"] for metric in [*METRICS, *ERROR_METRICS]
+}
 APPROACH_LABELS = {
     "MultiAgent-LLMChunking": "Multi-agent",
     "SingleAgent": "Single-agent",
@@ -82,7 +92,11 @@ METRIC_COLORS = ["#0072B2", "#009E73", "#E69F00", "#CC79A7"]
 
 def find_repo_root() -> Path:
     """Find the project root without requiring a particular working directory."""
-    for candidate in [Path.cwd(), *Path.cwd().parents, *Path(__file__).resolve().parents]:
+    for candidate in [
+        Path.cwd(),
+        *Path.cwd().parents,
+        *Path(__file__).resolve().parents,
+    ]:
         if (candidate / "eval" / "analyze_ratings.py").exists():
             return candidate
     raise SystemExit("Could not locate the repository root.")
@@ -95,7 +109,11 @@ def wilson_interval(successes: int, total: int, z: float = 1.96) -> tuple[float,
     proportion = successes / total
     denominator = 1 + z * z / total
     centre = (proportion + z * z / (2 * total)) / denominator
-    half = z * np.sqrt(proportion * (1 - proportion) / total + z * z / (4 * total * total)) / denominator
+    half = (
+        z
+        * np.sqrt(proportion * (1 - proportion) / total + z * z / (4 * total * total))
+        / denominator
+    )
     return 100 * (centre - half), 100 * (centre + half)
 
 
@@ -181,7 +199,9 @@ def plot_ordinal_distributions(ratings: pd.DataFrame, output_dir: Path) -> None:
         color="#555555",
     )
     ax.legend(
-        handles=[Patch(facecolor=TIER_COLORS[s], label=f"Score {s}") for s in [4, 3, 2, 1]],
+        handles=[
+            Patch(facecolor=TIER_COLORS[s], label=f"Score {s}") for s in [4, 3, 2, 1]
+        ],
         ncol=4,
         loc="upper center",
         bbox_to_anchor=(0.5, -0.16),
@@ -192,11 +212,107 @@ def plot_ordinal_distributions(ratings: pd.DataFrame, output_dir: Path) -> None:
     save_figure(fig, output_dir, "ordinal_distributions")
 
 
+def plot_ordinal_distributions_by_approach(
+    ratings: pd.DataFrame, output_dir: Path
+) -> None:
+    """Plot the score distribution for each ordinal metric, split by approach."""
+    approaches = list(APPROACH_LABELS)
+    offsets = {approaches[0]: -0.19, approaches[1]: 0.19}
+    fig, ax = plt.subplots(figsize=(11, 7.0))
+    base_y = np.arange(len(METRICS))
+
+    for approach in approaches:
+        y_positions = base_y + offsets[approach]
+        subset = ratings[ratings["approach"] == approach]
+        left = np.zeros(len(METRICS))
+
+        for score in [4, 3, 2, 1]:
+            percentages = []
+            counts = []
+            for metric in METRICS:
+                values = subset[metric["score"]].dropna()
+                count = int((values == score).sum())
+                counts.append(count)
+                percentages.append(100 * count / len(values) if len(values) else 0)
+
+            bars = ax.barh(
+                y_positions,
+                percentages,
+                left=left,
+                color=TIER_COLORS[score],
+                edgecolor="white",
+                linewidth=0.8,
+                height=0.34,
+            )
+            for bar, percentage, count in zip(bars, percentages, counts):
+                if percentage >= 10:
+                    ax.text(
+                        bar.get_x() + bar.get_width() / 2,
+                        bar.get_y() + bar.get_height() / 2,
+                        f"{percentage:.0f}%\n(n={count})",
+                        ha="center",
+                        va="center",
+                        fontsize=8,
+                        color="white" if score in {4, 1} else "#1A1A1A",
+                    )
+            left += np.asarray(percentages)
+
+        for y, metric in zip(y_positions, METRICS):
+            total = int(subset[metric["score"]].notna().sum())
+            ax.text(
+                101.5,
+                y,
+                f"{APPROACH_LABELS[approach]} (n={total})",
+                va="center",
+                fontsize=8.5,
+                color=APPROACH_COLORS[approach],
+            )
+
+    for boundary in base_y[:-1] + 0.5:
+        ax.axhline(boundary, color="#E3E3E3", linewidth=0.8, zorder=0)
+
+    ax.set_yticks(base_y, [metric["short"] for metric in METRICS])
+    ax.invert_yaxis()
+    ax.set_ylim(len(METRICS) - 0.5, -0.5)
+    ax.set_xlim(0, 100)
+    ax.set_xticks(np.arange(0, 101, 20))
+    ax.set_xlabel("Share of ratings (%)")
+    ax.set_ylabel("")
+    fig.suptitle(
+        "Ordinal rating distributions by generation approach",
+        x=0.24,
+        y=0.98,
+        ha="left",
+        fontweight="bold",
+    )
+    fig.text(
+        0.24,
+        0.93,
+        "Percentages are within each approach; scores run from 4 (best) to 1 (worst).",
+        fontsize=9.5,
+        color="#555555",
+    )
+    ax.legend(
+        handles=[
+            Patch(facecolor=TIER_COLORS[s], label=f"Score {s}") for s in [4, 3, 2, 1]
+        ],
+        ncol=4,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.12),
+    )
+    ax.grid(axis="y", visible=False)
+    ax.grid(axis="x", color="#E3E3E3", linewidth=0.8)
+    fig.subplots_adjust(left=0.24, right=0.83, bottom=0.18, top=0.86)
+    save_figure(fig, output_dir, "ordinal_distributions_by_approach")
+
+
 def approach_top2_table(ratings: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for metric in METRICS:
         for approach in APPROACH_LABELS:
-            values = ratings.loc[ratings["approach"] == approach, metric["score"]].dropna()
+            values = ratings.loc[
+                ratings["approach"] == approach, metric["score"]
+            ].dropna()
             total = len(values)
             successes = int((values >= 3).sum())
             low, high = wilson_interval(successes, total)
@@ -225,14 +341,19 @@ def plot_approach_comparison(ratings: pd.DataFrame, output_dir: Path) -> None:
         rates = [subset.loc[approach, "top2_pct"] for approach in APPROACH_LABELS]
         ax.plot(rates, [y, y], color="#C8C8C8", linewidth=1.5, zorder=1)
         delta = rates[0] - rates[1]
-        ax.text(101.5, y, f"Δ {delta:+.1f} pp", va="center", fontsize=9, color="#444444")
+        ax.text(
+            101.5, y, f"Δ {delta:+.1f} pp", va="center", fontsize=9, color="#444444"
+        )
 
     for approach in APPROACH_LABELS:
         subset = table[table["approach"] == approach]
         y = base_y + offsets[approach]
         values = subset["top2_pct"].to_numpy()
         xerr = np.vstack(
-            [values - subset["ci_low"].to_numpy(), subset["ci_high"].to_numpy() - values]
+            [
+                values - subset["ci_low"].to_numpy(),
+                subset["ci_high"].to_numpy() - values,
+            ]
         )
         ax.errorbar(
             values,
@@ -247,7 +368,9 @@ def plot_approach_comparison(ratings: pd.DataFrame, output_dir: Path) -> None:
             zorder=3,
         )
         for x, yy, n in zip(values, y, subset["n"]):
-            ax.text(x, yy - 0.19, f"{x:.0f}% (n={n})", ha="center", va="top", fontsize=8)
+            ax.text(
+                x, yy - 0.19, f"{x:.0f}% (n={n})", ha="center", va="top", fontsize=8
+            )
 
     ax.set_yticks(base_y, [metric["short"] for metric in METRICS])
     ax.invert_yaxis()
@@ -304,7 +427,12 @@ def plot_error_taxonomy(errors: pd.DataFrame, output_dir: Path) -> None:
 
     for ax in axes[-1, :]:
         ax.set_xlabel("Share of all ratings carrying this error (%)")
-    fig.suptitle("Error taxonomy reveals the most common failure modes", x=0.08, ha="left", fontweight="bold")
+    fig.suptitle(
+        "Error taxonomy reveals the most common failure modes",
+        x=0.08,
+        ha="left",
+        fontweight="bold",
+    )
     fig.text(
         0.08,
         0.94,
@@ -312,7 +440,9 @@ def plot_error_taxonomy(errors: pd.DataFrame, output_dir: Path) -> None:
         fontsize=9.5,
         color="#555555",
     )
-    fig.subplots_adjust(left=0.19, right=0.96, bottom=0.1, top=0.88, hspace=0.48, wspace=0.32)
+    fig.subplots_adjust(
+        left=0.19, right=0.96, bottom=0.1, top=0.88, hspace=0.48, wspace=0.32
+    )
     save_figure(fig, output_dir, "error_taxonomy")
 
 
@@ -322,11 +452,14 @@ def plot_annotator_calibration(per_annotator: pd.DataFrame, output_dir: Path) ->
     table["metric"] = table["metric"].map(SHORT_BY_FULL)
     metric_order = [metric["short"] for metric in METRICS[:3]]
     annotator_order = (
-        table.groupby("annotator")["n"].sum().sort_values(ascending=False).index.tolist()
+        table.groupby("annotator")["n"]
+        .sum()
+        .sort_values(ascending=False)
+        .index.tolist()
     )
-    heatmap = table.pivot(index="annotator", columns="metric", values="top2_pct").reindex(
-        index=annotator_order, columns=metric_order
-    )
+    heatmap = table.pivot(
+        index="annotator", columns="metric", values="top2_pct"
+    ).reindex(index=annotator_order, columns=metric_order)
     sample_sizes = table.pivot(index="annotator", columns="metric", values="n").reindex(
         index=annotator_order, columns=metric_order
     )
@@ -335,7 +468,9 @@ def plot_annotator_calibration(per_annotator: pd.DataFrame, output_dir: Path) ->
         for col in range(heatmap.shape[1]):
             value = heatmap.iloc[row, col]
             n = sample_sizes.iloc[row, col]
-            annotations[row, col] = "—" if pd.isna(value) else f"{value:.0f}%\nn={int(n)}"
+            annotations[row, col] = (
+                "—" if pd.isna(value) else f"{value:.0f}%\nn={int(n)}"
+            )
 
     fig, ax = plt.subplots(figsize=(10.5, 4.5))
     sns.heatmap(
@@ -359,7 +494,9 @@ def plot_annotator_calibration(per_annotator: pd.DataFrame, output_dir: Path) ->
     ]
     ax.set_xticklabels(compact_labels, rotation=0, ha="center")
     ax.set_yticklabels(ax.get_yticklabels(), rotation=0)
-    ax.set_title("Annotator calibration varies most on substantive value", loc="left", pad=28)
+    ax.set_title(
+        "Annotator calibration varies most on substantive value", loc="left", pad=28
+    )
     ax.text(
         0,
         1.04,
@@ -411,8 +548,20 @@ def plot_agreement(agreement: pd.DataFrame, output_dir: Path) -> None:
     pct_ax.scatter(table["exact_pct"], y, color="#D55E00", marker="o", s=52, zorder=3)
     pct_ax.scatter(table["within1_pct"], y, color="#0072B2", marker="D", s=46, zorder=3)
     for yy, row in table.iterrows():
-        pct_ax.text(row["exact_pct"] - 2, yy - 0.19, f"{row['exact_pct']:.0f}%", ha="right", fontsize=8)
-        pct_ax.text(row["within1_pct"] + 2, yy - 0.19, f"{row['within1_pct']:.0f}%", ha="left", fontsize=8)
+        pct_ax.text(
+            row["exact_pct"] - 2,
+            yy - 0.19,
+            f"{row['exact_pct']:.0f}%",
+            ha="right",
+            fontsize=8,
+        )
+        pct_ax.text(
+            row["within1_pct"] + 2,
+            yy - 0.19,
+            f"{row['within1_pct']:.0f}%",
+            ha="left",
+            fontsize=8,
+        )
     pct_ax.set_xlim(0, 112)
     pct_ax.set_yticks(y, [])
     pct_ax.invert_yaxis()
@@ -421,15 +570,31 @@ def plot_agreement(agreement: pd.DataFrame, output_dir: Path) -> None:
     pct_ax.grid(axis="y", visible=False)
     pct_ax.legend(
         handles=[
-            Line2D([0], [0], marker="o", color="none", markerfacecolor="#D55E00", label="Exact"),
-            Line2D([0], [0], marker="D", color="none", markerfacecolor="#0072B2", label="Within 1 point"),
+            Line2D(
+                [0],
+                [0],
+                marker="o",
+                color="none",
+                markerfacecolor="#D55E00",
+                label="Exact",
+            ),
+            Line2D(
+                [0],
+                [0],
+                marker="D",
+                color="none",
+                markerfacecolor="#0072B2",
+                label="Within 1 point",
+            ),
         ],
         loc="upper center",
         bbox_to_anchor=(0.5, -0.16),
         ncol=2,
     )
 
-    fig.suptitle("Inter-annotator agreement remains uneven", x=0.08, ha="left", fontweight="bold")
+    fig.suptitle(
+        "Inter-annotator agreement remains uneven", x=0.08, ha="left", fontweight="bold"
+    )
     fig.text(
         0.08,
         0.92,
@@ -483,12 +648,13 @@ def main() -> None:
     agreement = pd.read_csv(required["agreement"])
 
     plot_ordinal_distributions(ratings, output_dir)
+    plot_ordinal_distributions_by_approach(ratings, output_dir)
     plot_approach_comparison(ratings, output_dir)
     plot_error_taxonomy(errors, output_dir)
     plot_annotator_calibration(annotators, output_dir)
     plot_agreement(agreement, output_dir)
 
-    print(f"Wrote 5 figures as PNG and SVG to {output_dir}")
+    print(f"Wrote 6 figures as PNG and SVG to {output_dir}")
 
 
 if __name__ == "__main__":

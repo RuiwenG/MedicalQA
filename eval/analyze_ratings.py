@@ -6,12 +6,14 @@ column names written by ``eval/web/index.html`` and ``supabase_schema.sql``),
 maps the annotators' text labels onto ordinal scores, and reports the
 distributions.
 
-The four QA metrics are 4-point *ordinal* scales, best label first:
+The evaluation contains three 4-point *ordinal* QA scales, best label first,
+and two binary screens:
 
     Q&A Trustworthiness            Excellent 4 .. Poor 1
     Q&A Clarity                    Very easy to understand 4 .. Difficult 1
     Q&A Usefulness                 Highly useful 4 .. Not useful 1
     Q&A Care Safety                binary safety screen: No safe / Yes unsafe
+    Q&A Standalone                 binary self-containment screen: Yes / No
 
 **No means are reported anywhere.** The distance between "Good" and "Fair" is
 not the distance between "Fair" and "Poor", so an average of these codes is not
@@ -37,6 +39,7 @@ Run from anywhere inside the repo:
     python eval/analyze_ratings.py --out eval/results/analysis
     python eval/analyze_ratings.py --by dataset     # extra breakdown column
 """
+
 from __future__ import annotations
 
 import argparse
@@ -58,17 +61,37 @@ METRICS = {
         "label": "Q&A Trustworthiness",
         "scale": {"Excellent": 4, "Good": 3, "Fair": 2, "Poor": 1},
         "binary_question": "Does the Q&A align with the video?",
-        "errors": ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
+        "errors": [
+            "Source Misinterpretation",
+            "Hallucinating",
+            "Contradiction",
+            "Missing Key Information",
+        ],
     },
     "qa_accessibility": {
         "label": "Q&A Clarity",
-        "scale": {"Very easy to understand": 4, "Easy": 3, "Somewhat difficult": 2, "Difficult": 1},
+        "scale": {
+            "Very easy to understand": 4,
+            "Easy": 3,
+            "Somewhat difficult": 2,
+            "Difficult": 1,
+        },
         "binary_question": "Is the Q&A easy for a caregiver to understand?",
-        "errors": ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
+        "errors": [
+            "Difficult vocabulary",
+            "Too long",
+            "Ambiguous",
+            "Poor organization",
+        ],
     },
     "qa_edu_actionable": {
         "label": "Q&A Usefulness",
-        "scale": {"Highly useful": 4, "Useful": 3, "Limited useful": 2, "Not useful": 1},
+        "scale": {
+            "Highly useful": 4,
+            "Useful": 3,
+            "Limited useful": 2,
+            "Not useful": 1,
+        },
         "aliases": {
             "Highly actionable": "Highly useful",
             "Very useful": "Highly useful",
@@ -76,19 +99,24 @@ METRICS = {
             "Limited usefulness": "Limited useful",
         },
         "binary_question": "Does the Q&A provide useful or actionable guidance for caregivers?",
-        "errors": ["Not actionable", "Missing Explanation", "Generic Advice", "Low Relevance to Caregiver Needs"],
+        "errors": [
+            "Not actionable",
+            "Missing Explanation",
+            "Generic Advice",
+            "Low Relevance to Caregiver Needs",
+        ],
     },
     "qa_mental_health": {
         "label": "Q&A Care Safety",
         "scale": {},
-        "aliases": {
-            "Highly supportive": "Very safe and respectful",
-            "Very supportive": "Very safe and respectful",
-            "Supportive": "Safe and respectful",
-            "Limited support": "Some concerns",
-            "Unsupportive / potentially harmful": "Unsafe or inappropriate",
-            "Not supportive or could be harmful": "Unsafe or inappropriate",
-        },
+        # "aliases": {
+        #     "Highly supportive": "Very safe and respectful",
+        #     "Very supportive": "Very safe and respectful",
+        #     "Supportive": "Safe and respectful",
+        #     "Limited support": "Some concerns",
+        #     "Unsupportive / potentially harmful": "Unsafe or inappropriate",
+        #     "Not supportive or could be harmful": "Unsafe or inappropriate",
+        # },
         "binary_question": "Does the Q&A contain guidance that could lead to unsafe or inappropriate care?",
         "binary_map": {"No": 1, "Yes": 0},
         "positive_label": "No",
@@ -104,6 +132,20 @@ METRICS = {
             "Dismissive or Harmful Communication": "Blaming or judgmental language",
             "Discourages Professional Care": "Discourages professional care",
         },
+    },
+    "qa_standalone": {
+        "label": "Q&A Standalone",
+        "scale": {},
+        "binary_question": (
+            "Can the Q&A be understood on its own by a caregiver who has not "
+            "seen the video and cannot see any other Q&A pair?"
+        ),
+        "errors": [
+            "Refers to the video, transcript or speaker",
+            "Undefined pronoun",
+            "Undefined this/these reference",
+            "Depends on another Q&A pair",
+        ],
     },
 }
 
@@ -123,14 +165,20 @@ RECOMMENDATION_ALIASES = {
 BINARY = {"Yes": 1, "No": 0}
 
 NO_ISSUE = "No issue"
-TOP2_MIN = 3          # score >= 3 counts as "acceptable"
-ERROR_SEP = "; "      # index.html joins multi-select problems with this
+TOP2_MIN = 3  # score >= 3 counts as "acceptable"
+ERROR_SEP = "; "  # index.html joins multi-select problems with this
 
 # Columns from the pre-pilot schema. Kept in the export, never populated by the
 # pilot form; dropped so they cannot be mistaken for missing data.
 LEGACY_COLUMNS = [
-    "q_fluency", "a_fluency", "q_clarity", "a_clarity",
-    "qa_alignment", "q_edu_value", "a_edu_value", "standalone",
+    "q_fluency",
+    "a_fluency",
+    "q_clarity",
+    "a_clarity",
+    "qa_alignment",
+    "q_edu_value",
+    "a_edu_value",
+    "standalone",
 ]
 
 V2_COLUMN_ALIASES = {
@@ -145,6 +193,8 @@ V2_COLUMN_ALIASES = {
     "qna_usefulness_binary": "qa_edu_actionable_binary",
     "qna_care_safety_issue": "qa_mental_health_error",
     "qna_care_safety_binary": "qa_mental_health_binary",
+    "qna_standalone_issue": "qa_standalone_error",
+    "qna_standalone_binary": "qa_standalone_binary",
 }
 
 
@@ -161,7 +211,8 @@ def find_repo_root() -> Path:
 def load_ratings(results_dir: Path) -> pd.DataFrame:
     """Read every export in ``results_dir`` and return one de-duplicated frame."""
     files = sorted(
-        p for p in results_dir.iterdir()
+        p
+        for p in results_dir.iterdir()
         if p.suffix.lower() in {".csv", ".xlsx"} and not p.name.startswith("~$")
     )
     if not files:
@@ -196,13 +247,17 @@ def load_ratings(results_dir: Path) -> pd.DataFrame:
         before = len(df)
         df = (
             df.sort_values(order)
-              .drop_duplicates(subset=["session_id", "qa_uid"], keep="last")
-              .reset_index(drop=True)
+            .drop_duplicates(subset=["session_id", "qa_uid"], keep="last")
+            .reset_index(drop=True)
         )
         if before != len(df):
-            print(f"  collapsed {before - len(df)} re-rated duplicates", file=sys.stderr)
+            print(
+                f"  collapsed {before - len(df)} re-rated duplicates", file=sys.stderr
+            )
 
-    dropped = [c for c in LEGACY_COLUMNS if c in df.columns and df[c].notna().sum() == 0]
+    dropped = [
+        c for c in LEGACY_COLUMNS if c in df.columns and df[c].notna().sum() == 0
+    ]
     df = df.drop(columns=dropped)
     if dropped:
         print(f"  dropped unused legacy columns: {', '.join(dropped)}", file=sys.stderr)
@@ -239,13 +294,17 @@ def score_ratings(df: pd.DataFrame) -> pd.DataFrame:
             df[attr_col] = df[attr_col].replace(spec["aliases"])
         error_col = f"{key}_error"
         if error_col in df.columns and spec.get("error_aliases"):
-            df[error_col] = df[error_col].map(lambda value: normalize_error_cell(value, spec["error_aliases"]))
+            df[error_col] = df[error_col].map(
+                lambda value: normalize_error_cell(value, spec["error_aliases"])
+            )
         if spec["scale"]:
             apply_map(f"{key}_attribute", spec["scale"], f"{key}_score")
         apply_map(f"{key}_binary", spec.get("binary_map", BINARY), f"{key}_pass")
 
     if "caregiver_recommendation" in df.columns:
-        df["caregiver_recommendation"] = df["caregiver_recommendation"].replace(RECOMMENDATION_ALIASES)
+        df["caregiver_recommendation"] = df["caregiver_recommendation"].replace(
+            RECOMMENDATION_ALIASES
+        )
     apply_map("caregiver_recommendation", RECOMMENDATION, "recommendation_score")
 
     if unmapped:
@@ -278,7 +337,15 @@ def cliffs_delta(a: np.ndarray, b: np.ndarray) -> tuple[float, str]:
     diff = np.sign(a[:, None] - b[None, :])
     d = float(diff.sum() / (len(a) * len(b)))
     m = abs(d)
-    size = "negligible" if m < 0.147 else "small" if m < 0.33 else "medium" if m < 0.474 else "large"
+    size = (
+        "negligible"
+        if m < 0.147
+        else "small"
+        if m < 0.33
+        else "medium"
+        if m < 0.474
+        else "large"
+    )
     return d, size
 
 
@@ -315,13 +382,12 @@ def krippendorff_alpha_ordinal(units: list[list[float]]) -> float:
     for c in range(k):
         for d_ in range(k):
             lo, hi = min(c, d_), max(c, d_)
-            g = n_c[lo:hi + 1].sum() - (n_c[lo] + n_c[hi]) / 2.0
+            g = n_c[lo : hi + 1].sum() - (n_c[lo] + n_c[hi]) / 2.0
             delta[c, d_] = g * g
 
     d_obs = (coincidence * delta).sum()
     d_exp = sum(
-        n_c[c] * n_c[d_] * delta[c, d_]
-        for c in range(k) for d_ in range(k) if c != d_
+        n_c[c] * n_c[d_] * delta[c, d_] for c in range(k) for d_ in range(k) if c != d_
     ) / (n_total - 1)
 
     if d_exp == 0:
@@ -367,7 +433,9 @@ def describe_ordinal(scores: pd.Series, scale: dict) -> dict:
     }
 
 
-def distribution_table(df: pd.DataFrame, col: str, scale: dict, group: str | None) -> pd.DataFrame:
+def distribution_table(
+    df: pd.DataFrame, col: str, scale: dict, group: str | None
+) -> pd.DataFrame:
     """Label counts (and % within group) ordered best label first."""
     order = [k for k, _ in sorted(scale.items(), key=lambda kv: -kv[1])]
     sub = df[df[col].notna()]
@@ -375,14 +443,21 @@ def distribution_table(df: pd.DataFrame, col: str, scale: dict, group: str | Non
         tab = pd.crosstab(sub[group], sub[col])
         tab = tab.reindex(columns=order, fill_value=0)
         pct = tab.div(tab.sum(axis=1), axis=0) * 100
-        out = tab.astype(int).astype(str) + " (" + pct.round(0).astype(int).astype(str) + "%)"
+        out = (
+            tab.astype(int).astype(str)
+            + " ("
+            + pct.round(0).astype(int).astype(str)
+            + "%)"
+        )
         out["n"] = tab.sum(axis=1)
         return out
     counts = sub[col].value_counts().reindex(order, fill_value=0)
-    return pd.DataFrame({
-        "n": counts,
-        "%": (100 * counts / counts.sum()).round(1),
-    })
+    return pd.DataFrame(
+        {
+            "n": counts,
+            "%": (100 * counts / counts.sum()).round(1),
+        }
+    )
 
 
 def report_overall(df: pd.DataFrame) -> pd.DataFrame:
@@ -402,13 +477,22 @@ def report_overall(df: pd.DataFrame) -> pd.DataFrame:
             lo, hi = wilson_ci(k, len(b))
             binary = f"{100 * k / len(b):.0f}%"
             positive_label = spec.get("positive_label", "Yes")
-            print(f'\n{spec["label"]}  (n={len(b)})')
-            print(f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
-                  f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]")
-            rows.append({
-                "metric": spec["label"], "n": len(b), "median": "",
-                "mode": "", "IQR": "", "top2_pct": "", "binary_yes_pct": binary,
-            })
+            print(f"\n{spec['label']}  (n={len(b)})")
+            print(
+                f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
+                f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]"
+            )
+            rows.append(
+                {
+                    "metric": spec["label"],
+                    "n": len(b),
+                    "median": "",
+                    "mode": "",
+                    "IQR": "",
+                    "top2_pct": "",
+                    "binary_yes_pct": binary,
+                }
+            )
             continue
         if score_col not in df.columns:
             continue
@@ -417,12 +501,16 @@ def report_overall(df: pd.DataFrame) -> pd.DataFrame:
             continue
         print(f"\n{spec['label']}  (n={d['n']})")
         print(distribution_table(df, col, spec["scale"], None).to_string())
-        print(f"  median  {d['median']:.1f}  ({d['median_label']})"
-              f"   mode {d['mode']:.0f} ({d['mode_label']})"
-              f"   IQR {d['q1']:.1f}-{d['q3']:.1f}")
-        print(f"  Top-2 (>= {TOP2_MIN}): {d['top2_pct']:.0f}%"
-              f"  [95% CI {d['top2_ci'][0]:.0f}-{d['top2_ci'][1]:.0f}%]"
-              f"   worst-label share: {fmt_pct(d['bottom_n'], d['n'])}")
+        print(
+            f"  median  {d['median']:.1f}  ({d['median_label']})"
+            f"   mode {d['mode']:.0f} ({d['mode_label']})"
+            f"   IQR {d['q1']:.1f}-{d['q3']:.1f}"
+        )
+        print(
+            f"  Top-2 (>= {TOP2_MIN}): {d['top2_pct']:.0f}%"
+            f"  [95% CI {d['top2_ci'][0]:.0f}-{d['top2_ci'][1]:.0f}%]"
+            f"   worst-label share: {fmt_pct(d['bottom_n'], d['n'])}"
+        )
 
         if pass_col in df.columns:
             b = df[pass_col].dropna()
@@ -431,28 +519,48 @@ def report_overall(df: pd.DataFrame) -> pd.DataFrame:
                 lo, hi = wilson_ci(k, len(b))
                 binary = f"{100 * k / len(b):.0f}%"
                 positive_label = spec.get("positive_label", "Yes")
-                print(f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
-                      f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]")
+                print(
+                    f'  "{spec["binary_question"]}"  {positive_label}: {fmt_pct(k, len(b))}'
+                    f"  [95% CI {100 * lo:.0f}-{100 * hi:.0f}%]"
+                )
 
-        rows.append({
-            "metric": spec["label"], "n": d["n"], "median": d["median"],
-            "mode": d["mode_label"], "IQR": f"{d['q1']:.1f}-{d['q3']:.1f}",
-            "top2_pct": round(d["top2_pct"], 1), "binary_yes_pct": binary,
-        })
+        rows.append(
+            {
+                "metric": spec["label"],
+                "n": d["n"],
+                "median": d["median"],
+                "mode": d["mode_label"],
+                "IQR": f"{d['q1']:.1f}-{d['q3']:.1f}",
+                "top2_pct": round(d["top2_pct"], 1),
+                "binary_yes_pct": binary,
+            }
+        )
 
     if "recommendation_score" in df.columns:
         d = describe_ordinal(df["recommendation_score"], RECOMMENDATION)
         if d["n"]:
             rule("Caregiver recommendation — would you give this to a caregiver?", "-")
-            print(distribution_table(df, "caregiver_recommendation", RECOMMENDATION, None).to_string())
-            print(f"  median {d['median']:.1f} ({d['median_label']})"
-                  f"   usable as-is or with minor edits (>= {TOP2_MIN}): {d['top2_pct']:.0f}%"
-                  f"  [95% CI {d['top2_ci'][0]:.0f}-{d['top2_ci'][1]:.0f}%]")
-            rows.append({
-                "metric": "Caregiver recommendation", "n": d["n"], "median": d["median"],
-                "mode": d["mode_label"], "IQR": f"{d['q1']:.1f}-{d['q3']:.1f}",
-                "top2_pct": round(d["top2_pct"], 1), "binary_yes_pct": "",
-            })
+            print(
+                distribution_table(
+                    df, "caregiver_recommendation", RECOMMENDATION, None
+                ).to_string()
+            )
+            print(
+                f"  median {d['median']:.1f} ({d['median_label']})"
+                f"   usable as-is or with minor edits (>= {TOP2_MIN}): {d['top2_pct']:.0f}%"
+                f"  [95% CI {d['top2_ci'][0]:.0f}-{d['top2_ci'][1]:.0f}%]"
+            )
+            rows.append(
+                {
+                    "metric": "Caregiver recommendation",
+                    "n": d["n"],
+                    "median": d["median"],
+                    "mode": d["mode_label"],
+                    "IQR": f"{d['q1']:.1f}-{d['q3']:.1f}",
+                    "top2_pct": round(d["top2_pct"], 1),
+                    "binary_yes_pct": "",
+                }
+            )
 
     return pd.DataFrame(rows)
 
@@ -467,11 +575,19 @@ def report_by_group(df: pd.DataFrame, group: str) -> pd.DataFrame:
 
     rule(f"2. BY {group.upper()}  ({', '.join(map(str, levels))})")
     rows = []
-    scored = list(METRICS.items()) + [("recommendation", {"label": "Caregiver recommendation",
-                                                          "scale": RECOMMENDATION})]
+    scored = list(METRICS.items()) + [
+        (
+            "recommendation",
+            {"label": "Caregiver recommendation", "scale": RECOMMENDATION},
+        )
+    ]
     for key, spec in scored:
         score_col = f"{key}_score"
-        attr_col = "caregiver_recommendation" if key == "recommendation" else f"{key}_attribute"
+        attr_col = (
+            "caregiver_recommendation"
+            if key == "recommendation"
+            else f"{key}_attribute"
+        )
         if score_col not in df.columns or df[score_col].notna().sum() == 0:
             continue
 
@@ -485,10 +601,15 @@ def report_by_group(df: pd.DataFrame, group: str) -> pd.DataFrame:
                 continue
             top2 = int((s >= TOP2_MIN).sum())
             line.append(f"{lv}: median {s.median():.1f}, Top-2 {fmt_pct(top2, len(s))}")
-            rows.append({
-                "metric": spec["label"], group: lv, "n": len(s),
-                "median": s.median(), "top2_pct": round(100 * top2 / len(s), 1),
-            })
+            rows.append(
+                {
+                    "metric": spec["label"],
+                    group: lv,
+                    "n": len(s),
+                    "median": s.median(),
+                    "top2_pct": round(100 * top2 / len(s), 1),
+                }
+            )
         print("  " + " | ".join(line))
 
         if len(levels) == 2:
@@ -497,13 +618,17 @@ def report_by_group(df: pd.DataFrame, group: str) -> pd.DataFrame:
             if len(a) and len(b):
                 u = stats.mannwhitneyu(a, b, alternative="two-sided")
                 d, size = cliffs_delta(a, b)
-                print(f"  Mann-Whitney U={u.statistic:.0f}, p={u.pvalue:.3f}"
-                      f"   Cliff's delta={d:+.2f} ({size}, + favours {levels[0]})")
+                print(
+                    f"  Mann-Whitney U={u.statistic:.0f}, p={u.pvalue:.3f}"
+                    f"   Cliff's delta={d:+.2f} ({size}, + favours {levels[0]})"
+                )
 
                 # Same comparison on the Top-2 proportion, which is what a
                 # "how many are good enough" claim actually rests on.
-                table = [[int((a >= TOP2_MIN).sum()), int((a < TOP2_MIN).sum())],
-                         [int((b >= TOP2_MIN).sum()), int((b < TOP2_MIN).sum())]]
+                table = [
+                    [int((a >= TOP2_MIN).sum()), int((a < TOP2_MIN).sum())],
+                    [int((b >= TOP2_MIN).sum()), int((b < TOP2_MIN).sum())],
+                ]
                 _, p_fisher = stats.fisher_exact(table)
                 print(f"  Top-2 proportions: Fisher exact p={p_fisher:.3f}")
 
@@ -522,7 +647,9 @@ def report_by_group(df: pd.DataFrame, group: str) -> pd.DataFrame:
                 table.append([k, n - k])
             if all(sum(r) for r in table):
                 _, p = stats.fisher_exact(table)
-                print(f"{spec['label']:<34} " + " | ".join(cells) + f"   Fisher p={p:.3f}")
+                print(
+                    f"{spec['label']:<34} " + " | ".join(cells) + f"   Fisher p={p:.3f}"
+                )
 
     return pd.DataFrame(rows)
 
@@ -541,23 +668,35 @@ def report_errors(df: pd.DataFrame, group: str | None) -> pd.DataFrame:
 
         exploded = (
             sub.assign(_err=sub[col].str.split(ERROR_SEP))
-               .explode("_err")
-               .assign(_err=lambda d: d["_err"].str.strip())
+            .explode("_err")
+            .assign(_err=lambda d: d["_err"].str.strip())
         )
         clean = exploded[exploded["_err"] != NO_ISSUE]
         n_ratings = len(sub)
         n_flagged = sub[col].ne(NO_ISSUE).sum()
 
-        print(f"\n{spec['label']}  — {fmt_pct(int(n_flagged), n_ratings)} of ratings flagged a problem")
-        counts = clean["_err"].value_counts().reindex(spec["errors"]).dropna().astype(int)
+        print(
+            f"\n{spec['label']}  — {fmt_pct(int(n_flagged), n_ratings)} of ratings flagged a problem"
+        )
+        counts = (
+            clean["_err"].value_counts().reindex(spec["errors"]).dropna().astype(int)
+        )
         for err, n in counts.items():
             share = f"{100 * n / n_ratings:.0f}% of ratings"
             if group and group in clean.columns:
                 per = clean[clean["_err"] == err][group].value_counts().to_dict()
-                share += "  [" + ", ".join(f"{k}: {v}" for k, v in sorted(per.items())) + "]"
+                share += (
+                    "  [" + ", ".join(f"{k}: {v}" for k, v in sorted(per.items())) + "]"
+                )
             print(f"    {err:<28} {n:>3}   {share}")
-            rows.append({"metric": spec["label"], "error": err, "n": int(n),
-                         "pct_of_ratings": round(100 * n / n_ratings, 1)})
+            rows.append(
+                {
+                    "metric": spec["label"],
+                    "error": err,
+                    "n": int(n),
+                    "pct_of_ratings": round(100 * n / n_ratings, 1),
+                }
+            )
         unexpected = set(clean["_err"]) - set(spec["errors"])
         if unexpected:
             print(f"    (unrecognised labels: {sorted(unexpected)})")
@@ -576,11 +715,24 @@ def report_annotators(df: pd.DataFrame) -> pd.DataFrame:
             s = g.get(f"{key}_score", pd.Series(dtype=float)).dropna()
             if len(s) == 0:
                 continue
-            parts.append(f"{spec['label'].replace('QA ', '')[:14]:<14} "
-                         f"med {s.median():.1f} top2 {100 * (s >= TOP2_MIN).mean():>3.0f}%")
-            rows.append({"annotator": name, "metric": spec["label"], "n": len(s),
-                         "median": s.median(), "top2_pct": round(100 * (s >= TOP2_MIN).mean(), 1)})
-        secs = g["seconds_spent"].dropna() if "seconds_spent" in g else pd.Series(dtype=float)
+            parts.append(
+                f"{spec['label'].replace('QA ', '')[:14]:<14} "
+                f"med {s.median():.1f} top2 {100 * (s >= TOP2_MIN).mean():>3.0f}%"
+            )
+            rows.append(
+                {
+                    "annotator": name,
+                    "metric": spec["label"],
+                    "n": len(s),
+                    "median": s.median(),
+                    "top2_pct": round(100 * (s >= TOP2_MIN).mean(), 1),
+                }
+            )
+        secs = (
+            g["seconds_spent"].dropna()
+            if "seconds_spent" in g
+            else pd.Series(dtype=float)
+        )
         timing = f"   median {secs.median():.0f}s/pair" if len(secs) else ""
         print(f"\n{name}  ({len(g)} pairs{timing})")
         for p in parts:
@@ -589,9 +741,13 @@ def report_annotators(df: pd.DataFrame) -> pd.DataFrame:
     if "seconds_spent" in df.columns:
         fast = df[df["seconds_spent"].notna() & (df["seconds_spent"] < 15)]
         if len(fast):
-            print(f"\n  !! {len(fast)} rating(s) submitted in under 15s — check for click-through:")
+            print(
+                f"\n  !! {len(fast)} rating(s) submitted in under 15s — check for click-through:"
+            )
             for _, r in fast.iterrows():
-                print(f"     {r.get('annotator', '?')}  {r.get('qa_uid', '?')}  {r['seconds_spent']:.0f}s")
+                print(
+                    f"     {r.get('annotator', '?')}  {r.get('qa_uid', '?')}  {r['seconds_spent']:.0f}s"
+                )
     return pd.DataFrame(rows)
 
 
@@ -613,45 +769,66 @@ def report_agreement(df: pd.DataFrame) -> pd.DataFrame:
         score_col = f"{key}_score"
         if score_col not in overlap.columns:
             continue
-        units = [
-            g[score_col].dropna().tolist()
-            for _, g in overlap.groupby("qa_uid")
-        ]
+        units = [g[score_col].dropna().tolist() for _, g in overlap.groupby("qa_uid")]
         units = [u for u in units if len(u) >= 2]
         if not units:
             continue
         alpha = krippendorff_alpha_ordinal(units)
         exact = np.mean([len(set(u)) == 1 for u in units])
         within1 = np.mean([max(u) - min(u) <= 1 for u in units])
-        rows.append({"metric": spec["label"], "units": len(units), "alpha_ordinal": round(alpha, 3),
-                     "exact_pct": round(100 * exact, 1), "within1_pct": round(100 * within1, 1)})
-        print(f"{spec['label']:<34} alpha={alpha:+.2f}   exact {100 * exact:>3.0f}%"
-              f"   within-1 {100 * within1:>3.0f}%   ({len(units)} pairs)")
+        rows.append(
+            {
+                "metric": spec["label"],
+                "units": len(units),
+                "alpha_ordinal": round(alpha, 3),
+                "exact_pct": round(100 * exact, 1),
+                "within1_pct": round(100 * within1, 1),
+            }
+        )
+        print(
+            f"{spec['label']:<34} alpha={alpha:+.2f}   exact {100 * exact:>3.0f}%"
+            f"   within-1 {100 * within1:>3.0f}%   ({len(units)} pairs)"
+        )
 
     if "recommendation_score" in overlap.columns:
-        units = [g["recommendation_score"].dropna().tolist() for _, g in overlap.groupby("qa_uid")]
+        units = [
+            g["recommendation_score"].dropna().tolist()
+            for _, g in overlap.groupby("qa_uid")
+        ]
         units = [u for u in units if len(u) >= 2]
         if units:
             alpha = krippendorff_alpha_ordinal(units)
             exact = np.mean([len(set(u)) == 1 for u in units])
             within1 = np.mean([max(u) - min(u) <= 1 for u in units])
-            print(f"{'Caregiver recommendation':<34} alpha={alpha:+.2f}   exact {100 * exact:>3.0f}%"
-                  f"   within-1 {100 * within1:>3.0f}%   ({len(units)} pairs)")
-            rows.append({"metric": "Caregiver recommendation", "units": len(units),
-                         "alpha_ordinal": round(alpha, 3), "exact_pct": round(100 * exact, 1),
-                         "within1_pct": round(100 * within1, 1)})
+            print(
+                f"{'Caregiver recommendation':<34} alpha={alpha:+.2f}   exact {100 * exact:>3.0f}%"
+                f"   within-1 {100 * within1:>3.0f}%   ({len(units)} pairs)"
+            )
+            rows.append(
+                {
+                    "metric": "Caregiver recommendation",
+                    "units": len(units),
+                    "alpha_ordinal": round(alpha, 3),
+                    "exact_pct": round(100 * exact, 1),
+                    "within1_pct": round(100 * within1, 1),
+                }
+            )
 
     print("\n  alpha >= 0.80 reliable, 0.67-0.80 tentative, below that unreliable.")
     if len(shared) < 20:
-        print(f"  With only {len(shared)} overlapping pairs these alphas are very unstable —")
+        print(
+            f"  With only {len(shared)} overlapping pairs these alphas are very unstable —"
+        )
         print("  read them as a smoke test, not a reliability claim.")
     return pd.DataFrame(rows)
 
 
 def report_coverage(df: pd.DataFrame) -> None:
     rule("0. COVERAGE")
-    print(f"  ratings: {len(df)}   unique Q&As: {df['qa_uid'].nunique()}"
-          f"   annotators: {df['annotator'].nunique()}   sessions: {df['session_id'].nunique()}")
+    print(
+        f"  ratings: {len(df)}   unique Q&As: {df['qa_uid'].nunique()}"
+        f"   annotators: {df['annotator'].nunique()}   sessions: {df['session_id'].nunique()}"
+    )
     for col in ("approach", "dataset", "batch"):
         if col in df.columns:
             counts = df[col].value_counts()
@@ -659,21 +836,36 @@ def report_coverage(df: pd.DataFrame) -> None:
     if "annotator" in df.columns and "approach" in df.columns:
         print("\n" + pd.crosstab(df["annotator"], df["approach"]).to_string())
     if len(df) < 100:
-        print(f"\n  !! n={len(df)}. Everything below is a pilot-sized signal: report proportions"
-              "\n     with their intervals and treat non-significant comparisons as inconclusive,"
-              "\n     not as evidence the approaches are equivalent.")
+        print(
+            f"\n  !! n={len(df)}. Everything below is a pilot-sized signal: report proportions"
+            "\n     with their intervals and treat non-significant comparisons as inconclusive,"
+            "\n     not as evidence the approaches are equivalent."
+        )
 
 
 # ---------------------------------------------------------------------------
 def main() -> None:
     root = find_repo_root()
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--results", type=Path, default=root / "eval" / "results",
-                    help="directory of ratings exports (default: eval/results)")
-    ap.add_argument("--by", default="approach",
-                    help="grouping column for the comparison section (default: approach)")
-    ap.add_argument("--out", type=Path, default=None,
-                    help="directory to write the tidy scored data + summary tables")
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    ap.add_argument(
+        "--results",
+        type=Path,
+        default=root / "eval" / "results",
+        help="directory of ratings exports (default: eval/results)",
+    )
+    ap.add_argument(
+        "--by",
+        default="approach",
+        help="grouping column for the comparison section (default: approach)",
+    )
+    ap.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="directory to write the tidy scored data + summary tables",
+    )
     args = ap.parse_args()
 
     print(f"Reading {args.results}", file=sys.stderr)
@@ -693,9 +885,13 @@ def main() -> None:
     if args.out:
         args.out.mkdir(parents=True, exist_ok=True)
         df.to_csv(args.out / "ratings_scored.csv", index=False)
-        for name, table in [("summary_overall", summary), (f"summary_by_{args.by}", by_group),
-                            ("error_counts", errors), ("per_annotator", annotators),
-                            ("agreement", agreement)]:
+        for name, table in [
+            ("summary_overall", summary),
+            (f"summary_by_{args.by}", by_group),
+            ("error_counts", errors),
+            ("per_annotator", annotators),
+            ("agreement", agreement),
+        ]:
             if not table.empty:
                 table.to_csv(args.out / f"{name}.csv", index=False)
         print(f"\nWrote scored data + summary tables to {args.out}", file=sys.stderr)
