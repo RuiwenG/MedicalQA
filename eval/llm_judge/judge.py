@@ -31,6 +31,7 @@ output) and printed as a running total.
     python eval/llm_judge/judge.py --mode full --workers 6
 """
 import argparse
+import os
 import csv
 import json
 import re
@@ -45,11 +46,86 @@ import requests
 
 REPO = Path(__file__).resolve().parents[2]
 
-# --- Pricing (USD per 1M tokens), from api-docs.deepseek.com, 2026-08-07 ---
-PRICES = {
-    "deepseek-v4-pro":   {"hit": 0.003625, "miss": 0.435, "out": 0.87},
-    "deepseek-v4-flash": {"hit": 0.0028,   "miss": 0.14,  "out": 0.28},
+# --- Where each judge model is served -------------------------------------
+BACKENDS = {
+    "deepseek": {
+        "url": "https://api.deepseek.com/chat/completions",
+        "key_env": "DEEPSEEK_API_KEY",
+        "extra": {},
+        # Bills a cached prompt prefix at ~1% of the miss rate, so pairs are
+        # scheduled by video to keep each transcript prefix on one worker.
+        "caches_prompts": True,
+    },
+    "openrouter": {
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "key_env": "OPEN_ROUTER_API_KEY",
+        # OpenRouter spreads an open-weight model across providers serving it at
+        # different precisions (gpt-oss-120b: fp4, fp8 and bf16 all in the pool)
+        # and routes on price/latency by default. A judge making fine ordinal
+        # calls must not silently change precision between runs, so pin bf16 and
+        # refuse fallbacks — an unavailable provider should fail loudly rather
+        # than quietly downgrade the instrument.
+        "extra": {"provider": {"quantizations": ["bf16"], "allow_fallbacks": False}},
+    },
 }
+
+# --- Judge models (USD per 1M tokens) --------------------------------------
+# DeepSeek prices from api-docs.deepseek.com, 2026-08-07; it bills cached prompt
+# prefixes at a steep discount, which is why "hit" and "miss" differ. OpenRouter
+# exposes no prompt cache, so both rates are the same there.
+MODELS = {
+    "deepseek-v4-pro":     {"backend": "deepseek",
+                            "prices": {"hit": 0.003625, "miss": 0.435, "out": 0.87}},
+    "deepseek-v4-flash":   {"backend": "deepseek",
+                            "prices": {"hit": 0.0028,   "miss": 0.14,  "out": 0.28}},
+    "openai/gpt-oss-120b": {"backend": "openrouter",
+                            "prices": {"hit": 0.037,    "miss": 0.037, "out": 0.17}},
+    "google/gemma-3-27b-it": {"backend": "openrouter",
+                              "prices": {"hit": 0.08, "miss": 0.08, "out": 0.16},
+                              # The only bf16 host for this model (Novita) does not
+                              # honour response_format, so the backend's bf16 pin would
+                              # silently drop JSON mode. Pin the one fp8 host that
+                              # supports it instead: a single named provider keeps the
+                              # precision fixed from run to run, which is what the bf16
+                              # pin exists to guarantee.
+                              "extra": {"provider": {"order": ["DeepInfra"],
+                                                     "quantizations": ["fp8"],
+                                                     "require_parameters": True,
+                                                     "allow_fallbacks": False}}},
+    "google/gemma-4-31b-it": {"backend": "openrouter",
+                              "prices": {"hit": 0.15, "miss": 0.15, "out": 0.40},
+                              # Reasoning is supported but OFF by default for Gemma 4;
+                              # without this flag it answers with no deliberation, the
+                              # way Gemma 3 did.
+                              # Pinned to one fp8 host rather than bf16: only two bf16
+                              # hosts support JSON mode, and when one degraded the other
+                              # rate-limited a full run down to ~4.5 pairs/min (2026-10-02).
+                              # A single named provider keeps precision fixed run to run.
+                              "extra": {"provider": {"order": ["DeepInfra"],
+                                                     "quantizations": ["fp8"],
+                                                     "require_parameters": True,
+                                                     "allow_fallbacks": False},
+                                        "reasoning": {"enabled": True}}},
+}
+
+# Kept as a name so judge_no_transcript.py and older callers keep working.
+PRICES = {name: cfg["prices"] for name, cfg in MODELS.items()}
+
+
+def backend_for(model):
+    """Endpoint, key name and provider-routing extras for a judge model.
+
+    A model may override its backend's routing extras, for when the backend
+    default (bf16 on OpenRouter) is wrong for that particular model.
+    """
+    try:
+        cfg = MODELS[model]
+        backend = dict(BACKENDS[cfg["backend"]])
+    except KeyError:
+        raise SystemExit(f"Unknown judge model {model!r}. Known: {', '.join(sorted(MODELS))}")
+    if "extra" in cfg:
+        backend["extra"] = cfg["extra"]
+    return backend
 
 # --- Live pilot site settings (eval-pilot-netlify-review/config.js) ---
 SITE = {
@@ -327,20 +403,32 @@ def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0):
             "model": model,
             "messages": messages if not feedback else messages + feedback,
             "temperature": temperature,
-            # v4-pro reasons by default and its thinking counts toward this cap;
-            # 900 truncated the JSON mid-object. The final JSON itself is ~300.
+            # Both judge models reason by default and the thinking counts toward
+            # this cap; 900 truncated the JSON mid-object. The JSON itself is ~300.
             "max_tokens": 6000,
             "response_format": {"type": "json_object"},
         }
+        backend = backend_for(model)
+        body.update(backend["extra"])
         t0 = time.time()
         try:
-            r = session.post("https://api.deepseek.com/chat/completions",
-                             json=body, timeout=300)
+            r = session.post(backend["url"], json=body, timeout=300)
             r.raise_for_status()
         except requests.RequestException as error:
             if attempt == 3:
                 raise
-            time.sleep(min(2 ** attempt * 2, 20))
+            # A 429 means the provider is shedding load, not that the request is
+            # malformed — backing off 2s and retrying just adds to the flood. Wait
+            # far longer, and honour Retry-After when the server sends one.
+            resp = getattr(error, "response", None)
+            if resp is not None and resp.status_code == 429:
+                try:
+                    hinted = float(resp.headers.get("Retry-After") or 0)
+                except ValueError:
+                    hinted = 0
+                time.sleep(max(hinted, min(2 ** attempt * 15, 60)))
+            else:
+                time.sleep(min(2 ** attempt * 2, 20))
             continue
         data = r.json()
         meter.add(data.get("usage", {}))
@@ -406,6 +494,10 @@ def main():
     ap.add_argument("--batch", type=int, default=1, help="pilot40: pinned batch (1-based), default 1")
     ap.add_argument("--workers", type=int, default=6, help="parallel videos (full mode)")
     ap.add_argument("--limit", type=int, default=0, help="stop after N pairs (debug)")
+    ap.add_argument("--uids", metavar="FILE",
+                    help="Judge only the pairs whose uids are listed in FILE, one per "
+                         "line. For targeted checks, where --limit would just take the "
+                         "first pairs in file order (usually all from one video).")
     ap.add_argument("--resume", metavar="JSONL",
                     help="Path to a previous run's JSONL. Pairs already judged there are "
                          "reused instead of re-judged, and the new run appends to a fresh "
@@ -444,6 +536,10 @@ def main():
         pairs = list(all_pairs)
         session_id = f"llm-{args.model}-full"
         batch_label = "llm-full"
+    if args.uids:
+        listed = {ln.strip() for ln in open(args.uids, encoding="utf-8") if ln.strip()}
+        pairs = [p for p in pairs if p["uid"] in listed]
+        print(f"Restricted to {len(pairs)} of {len(listed)} listed pairs ({args.uids})")
     if args.limit:
         pairs = pairs[: args.limit]
 
@@ -467,57 +563,96 @@ def main():
         print(f"Resuming from {resume_path.name}: {len(resumed)} pairs carried over, "
               f"{len(pairs)} of {before} left to judge")
 
-    key = read_env_key("DEEPSEEK_API_KEY")
+    key = read_env_key(backend_for(args.model)["key_env"])
     meter = CostMeter(PRICES[args.model])
 
-    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # The process id keeps two runs started in the same second from writing
+    # the same output files (that happened once, losing a whole run).
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S") + f"_{os.getpid()}"
     out_dir = REPO / "eval" / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    csv_path = out_dir / f"Master-Teepa_{args.model}_{args.mode}_Eval_{stamp}.csv"
+    # OpenRouter ids carry a vendor prefix ("openai/gpt-oss-120b"); the slash
+    # would make the output path a directory that does not exist.
+    slug = args.model.replace("/", "-")
+    csv_path = out_dir / f"Master-Teepa_{slug}_{args.mode}_Eval_{stamp}.csv"
     runs_dir = REPO / "eval" / "llm_judge" / "runs"
     runs_dir.mkdir(parents=True, exist_ok=True)
-    jsonl_path = runs_dir / f"{args.model}_{args.mode}_{stamp}.jsonl"
+    jsonl_path = runs_dir / f"{slug}_{args.mode}_{stamp}.jsonl"
 
-    # Group by video so every pair of a video reuses the same cached prefix.
     by_video = {}
     for p in pairs:
         by_video.setdefault((p["dataset"], p["video"]), []).append(p)
 
+    # How work is scheduled depends on whether the backend caches prompt prefixes.
+    # With a cache (DeepSeek), keeping a video's pairs on one worker is what makes
+    # the run cheap — the transcript prefix is billed once and hit thereafter.
+    # Without one (OpenRouter), that grouping buys nothing and costs throughput
+    # twice over: parallelism is capped at the number of videos, and the tail of a
+    # run starves as groups finish, dropping to a handful of active workers.
+    caches = backend_for(args.model).get("caches_prompts", False)
+    unit = "videos" if caches else "pairs"
     print(f"Judging {len(pairs)} pairs across {len(by_video)} videos "
-          f"with {args.model} ({args.mode})")
+          f"with {args.model} ({args.mode}) — scheduling by {unit}")
 
     results, failures = {}, []
     write_lock = threading.Lock()
     jsonl_file = open(jsonl_path, "w", encoding="utf-8")
+    done = [0]
+
+    # One system prompt per video, built once: it embeds the transcript, so
+    # rebuilding it per pair would re-read the file on every call.
+    sys_cache, sys_lock = {}, threading.Lock()
+
+    def sys_prompt_for(dv):
+        with sys_lock:
+            if dv not in sys_cache:
+                sys_cache[dv] = system_prompt(dv[0], dv[1], load_transcript(dv[0], dv[1]))
+            return sys_cache[dv]
+
+    # One HTTP session per worker thread, reused across that thread's pairs.
+    local = threading.local()
+
+    def session_for():
+        s = getattr(local, "session", None)
+        if s is None:
+            s = requests.Session()
+            s.headers.update({"Authorization": f"Bearer {key}",
+                              "Content-Type": "application/json"})
+            local.session = s
+        return s
+
+    def judge_pair(pair):
+        """Judge one pair and persist it. Returns (pair, obj, secs), or None on failure."""
+        try:
+            obj, secs = judge_one(session_for(), args.model,
+                                  sys_prompt_for((pair["dataset"], pair["video"])), pair, meter)
+        except Exception as error:
+            with write_lock:
+                failures.append((pair["uid"], str(error)))
+                print(f"  FAILED {pair['uid']}: {error}", file=sys.stderr)
+            return None
+        with write_lock:
+            jsonl_file.write(json.dumps(
+                {"uid": pair["uid"], "judgment": obj, "seconds": round(secs, 2)},
+                ensure_ascii=False) + "\n")
+            jsonl_file.flush()
+            done[0] += 1
+            print(f"  [{done[0]}/{len(pairs)}] {pair['uid']:<44} {meter.line()}")
+        return (pair, obj, secs)
 
     def run_video(dv):
-        dataset, video = dv
-        sys_prompt = system_prompt(dataset, video, load_transcript(dataset, video))
-        session = requests.Session()
-        session.headers.update({"Authorization": f"Bearer {key}",
-                                "Content-Type": "application/json"})
-        out = []
-        for pair in by_video[dv]:
-            try:
-                obj, secs = judge_one(session, args.model, sys_prompt, pair, meter)
-                out.append((pair, obj, secs))
-                with write_lock:
-                    jsonl_file.write(json.dumps(
-                        {"uid": pair["uid"], "judgment": obj, "seconds": round(secs, 2)},
-                        ensure_ascii=False) + "\n")
-                    jsonl_file.flush()
-                    done = sum(len(v) for v in results.values()) + len(out)
-                    print(f"  [{done}/{len(pairs)}] {pair['uid']:<44} {meter.line()}")
-            except Exception as error:
-                with write_lock:
-                    failures.append((pair["uid"], str(error)))
-                    print(f"  FAILED {pair['uid']}: {error}", file=sys.stderr)
-        return dv, out
+        return dv, [r for r in (judge_pair(p) for p in by_video[dv]) if r]
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        for future in as_completed(pool.submit(run_video, dv) for dv in sorted(by_video)):
-            dv, out = future.result()
-            results[dv] = out
+        if caches:
+            for future in as_completed(pool.submit(run_video, dv) for dv in sorted(by_video)):
+                dv, out = future.result()
+                results[dv] = out
+        else:
+            for future in as_completed(pool.submit(judge_pair, p) for p in pairs):
+                got = future.result()
+                if got:
+                    results.setdefault((got[0]["dataset"], got[0]["video"]), []).append(got)
     jsonl_file.close()
 
     # Fold the carried-over judgments back in so the CSV covers the whole

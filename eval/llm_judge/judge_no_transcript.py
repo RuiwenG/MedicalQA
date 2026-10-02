@@ -29,6 +29,7 @@ copied, so the two scripts cannot drift apart.
     python eval/llm_judge/judge_no_transcript.py --approaches SingleAgent SingleAgent-prev
 """
 import argparse
+import os
 import csv
 import importlib.util
 import json
@@ -51,6 +52,8 @@ _judge = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_judge)
 
 PRICES = _judge.PRICES
+MODELS = _judge.MODELS
+backend_for = _judge.backend_for
 CostMeter = _judge.CostMeter
 read_env_key = _judge.read_env_key
 NO_ISSUE = _judge.NO_ISSUE
@@ -139,14 +142,27 @@ def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0):
             "max_tokens": 6000,
             "response_format": {"type": "json_object"},
         }
+        backend = backend_for(model)
+        body.update(backend["extra"])
         t0 = time.time()
         try:
-            r = session.post("https://api.deepseek.com/chat/completions", json=body, timeout=300)
+            r = session.post(backend["url"], json=body, timeout=300)
             r.raise_for_status()
-        except requests.RequestException:
+        except requests.RequestException as error:
             if attempt == 3:
                 raise
-            time.sleep(min(2 ** attempt * 2, 20))
+            # A 429 means the provider is shedding load, not that the request is
+            # malformed — backing off 2s and retrying just adds to the flood. Wait
+            # far longer, and honour Retry-After when the server sends one.
+            resp = getattr(error, "response", None)
+            if resp is not None and resp.status_code == 429:
+                try:
+                    hinted = float(resp.headers.get("Retry-After") or 0)
+                except ValueError:
+                    hinted = 0
+                time.sleep(max(hinted, min(2 ** attempt * 15, 60)))
+            else:
+                time.sleep(min(2 ** attempt * 2, 20))
             continue
         data = r.json()
         meter.add(data.get("usage", {}))
@@ -211,18 +227,23 @@ def main():
     if args.limit:
         pairs = pairs[: args.limit]
 
-    key = read_env_key("DEEPSEEK_API_KEY")
+    key = read_env_key(backend_for(args.model)["key_env"])
     meter = CostMeter(PRICES[args.model])
     sys_prompt = system_prompt()
     session_id = f"llm-{args.model}-notranscript"
 
-    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    # The process id keeps two runs started in the same second from writing
+    # the same output files (that happened once, losing a whole run).
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S") + f"_{os.getpid()}"
     runs_dir = REPO / "eval" / "llm_judge" / "runs"
     runs_dir.mkdir(parents=True, exist_ok=True)
     out_dir = REPO / "eval" / "results"
     out_dir.mkdir(parents=True, exist_ok=True)
-    jsonl_path = runs_dir / f"{args.model}_notranscript_{stamp}.jsonl"
-    csv_path = out_dir / f"Master-Teepa_{args.model}_notranscript_Eval_{stamp}.csv"
+    # OpenRouter ids carry a vendor prefix ("openai/gpt-oss-120b"); the slash
+    # would make the output path a directory that does not exist.
+    slug = args.model.replace("/", "-")
+    jsonl_path = runs_dir / f"{slug}_notranscript_{stamp}.jsonl"
+    csv_path = out_dir / f"Master-Teepa_{slug}_notranscript_Eval_{stamp}.csv"
 
     counts = {a: sum(1 for p in pairs if p["approach"] == a) for a in sorted(wanted)}
     print(f"Judging {len(pairs)} pairs WITHOUT transcript on "

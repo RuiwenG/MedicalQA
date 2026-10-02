@@ -1,0 +1,616 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>MedicalQA Judge Agreement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column. Findings first, then one section per comparison, reference tables and method last. */
+:root{
+  --bg:#f3f5f8;
+  --surface:#ffffff;
+  --ink:#0e1217;
+  --ink-2:#48505b;
+  --muted:#767f8b;
+  --line:#e0e4ea;
+  --line-2:#c5ccd5;
+  --ds:#2a78d6;
+  --go:#eb6834;
+  --gm:#1baf7a;
+  --font-display:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0f13; --surface:#151920; --ink:#eef1f5; --ink-2:#b4bbc5; --muted:#858c97;
+    --line:#242931; --line-2:#363d47; --ds:#3987e5; --go:#d95926; --gm:#199e70;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0f13; --surface:#151920; --ink:#eef1f5; --ink-2:#b4bbc5; --muted:#858c97;
+  --line:#242931; --line-2:#363d47; --ds:#3987e5; --go:#d95926; --gm:#199e70;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:64rem;margin:0 auto;padding-inline:1.25rem;padding-block:2.75rem 5rem;display:flex;flex-direction:column;gap:3.5rem}
+h1,h2,h3{font-family:var(--font-display);font-stretch:88%;text-wrap:balance;margin:0;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:750}
+h2{font-size:1.55rem;font-weight:700}
+h3{font-size:1.02rem;font-weight:700;font-stretch:95%}
+p{margin:0;max-width:68ch}
+.eyebrow{font-family:var(--font-display);font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:64ch}
+.num,.mono{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+.sec-head{display:flex;flex-direction:column;gap:.45rem}
+.intro{color:var(--ink-2)}
+
+header{display:flex;flex-direction:column;gap:.9rem;padding-bottom:1.8rem;border-bottom:1px solid var(--line-2)}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.85rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+.key{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.86rem;color:var(--ink-2)}
+.key span{display:inline-flex;align-items:center;gap:.45rem}
+.sw{width:.72rem;height:.72rem;border-radius:50%;display:inline-block;flex:none}
+
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.finding{background:var(--surface);padding:1.1rem 1.15rem 1.2rem;display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.finding .fig{font-family:var(--font-display);font-size:1.6rem;font-weight:750;font-stretch:85%;line-height:1.05}
+.finding h3{font-size:.98rem}
+.finding p{font-size:.92rem;color:var(--ink-2)}
+
+.panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem}
+.panel{background:var(--surface);border:1px solid var(--line);padding:.9rem .9rem .7rem;display:flex;flex-direction:column;gap:.35rem;min-width:0;margin:0}
+.panel .sub{font-size:.82rem;color:var(--muted)}
+.panel .delta{font-size:.8rem;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:.2rem .8rem;padding-top:.3rem;border-top:1px solid var(--line)}
+.panel .delta span{display:inline-flex;align-items:center;gap:.35rem}
+.panel svg{width:100%;height:auto;display:block}
+
+.chart{background:var(--surface);border:1px solid var(--line);padding:1rem 1rem .8rem;display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.scroll{overflow-x:auto}
+.scroll svg{min-width:34rem;width:100%;height:auto;display:block}
+svg text{font-family:var(--font-data);font-size:10.5px}
+svg .lbl{font-family:var(--font-body);font-size:13px}
+.note{font-size:.84rem;color:var(--muted)}
+
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:inherit;font-size:.84rem;padding:.32rem .7rem;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.seg button:hover{border-color:var(--ink-2)}
+.statdesc{font-size:.9rem;color:var(--ink-2);max-width:72ch}
+
+/* agreement matrices */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1rem}
+.mcard{background:var(--surface);border:1px solid var(--line);padding:.85rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.mx{border-collapse:separate;border-spacing:3px;width:100%;font-size:.8rem}
+.mx th{font-family:var(--font-body);font-weight:600;font-size:.76rem;color:var(--ink-2);padding:.2rem .25rem;text-align:left;white-space:nowrap;border:0}
+.mx thead th{text-align:center}
+.mx td{border:0;text-align:center;padding:.55rem .2rem;border-radius:3px;font-family:var(--font-data);font-variant-numeric:tabular-nums;font-size:.8rem}
+.mx td.self{outline:2px solid var(--ink-2);outline-offset:-2px}
+.mx td.blank{background:transparent}
+.mx td.na{color:var(--muted);font-family:var(--font-body);font-size:.72rem;background:var(--bg)}
+.dot{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;margin-right:.35rem;vertical-align:.05em}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+caption{text-align:left;padding:.7rem .9rem;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--line)}
+th,td{padding:.45rem .7rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:var(--font-display);font-stretch:92%;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line-2)}
+tbody tr:last-child td{border-bottom:none}
+tr.grp td{background:var(--bg);font-family:var(--font-display);font-weight:700;font-stretch:92%;color:var(--ink);font-size:.86rem}
+td.num{font-family:var(--font-data);font-variant-numeric:tabular-nums;font-size:.8rem;line-height:1.35}
+.rng{color:var(--muted)}
+
+.xgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1rem}
+.xcard{background:var(--surface);border:1px solid var(--line);padding:.9rem;display:flex;flex-direction:column;gap:.55rem;min-width:0}
+.xcard .tally{font-size:.82rem;color:var(--ink-2)}
+.xt{width:100%;border-collapse:separate;border-spacing:3px;font-size:.78rem}
+.xt th{font-family:var(--font-body);font-size:.74rem;color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0;border:0;padding:.2rem .3rem;white-space:normal;line-height:1.2}
+.xt th.corner{font-size:.68rem;text-align:left}
+.xt td{border:0;text-align:center;padding:.5rem .2rem;font-family:var(--font-data);font-variant-numeric:tabular-nums;border-radius:3px}
+.xt td.diag{outline:2px solid var(--ink-2);outline-offset:-2px}
+.xt td.zero{color:var(--muted)}
+
+.ebar{display:inline-flex;align-items:center;gap:.45rem;justify-content:flex-end;width:100%}
+.ebar i{display:inline-block;height:.55rem;border-radius:2px}
+
+.divs{display:flex;flex-direction:column;gap:1rem}
+
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem 2rem}
+.method dl{margin:0;display:flex;flex-direction:column;gap:.7rem}
+.method dt{font-family:var(--font-display);font-weight:700;font-stretch:92%}
+.method dd{margin:0;color:var(--ink-2);font-size:.92rem}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1.2rem}
+
+#tip{position:fixed;z-index:10;pointer-events:none;background:var(--ink);color:var(--surface);font-size:.8rem;line-height:1.35;padding:.45rem .6rem;border-radius:4px;max-width:18rem;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.hit{outline:none}
+.hit:focus-visible{stroke:var(--ink);stroke-width:2}
+:focus-visible{outline:2px solid var(--ds);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">MedicalQA &middot; LLM-as-judge</span>
+  <h1>Three judges on the same 677 Q&amp;A pairs</h1>
+  <p class="lede">DeepSeek, gpt-oss and Gemma 4 each scored the same SingleAgent Q&amp;A pairs, from the v1, v2 and v3 generation prompts, three times on the same five-metric rubric. This page compares every rating they produced.</p>
+  <div class="meta">
+    <span>Pairs <b>677</b> (v1 226 &middot; v2 225 &middot; v3 226)</span>
+    <span>Runs <b>3 per judge</b></span>
+    <span>Pair-judgments <b>6,093</b></span>
+    <span>Rubric <b>5 metrics + recommendation</b></span>
+  </div>
+  <div class="key" id="judgekey" aria-label="Colour key"></div>
+</header>
+
+<section aria-labelledby="f-h">
+  <h2 id="f-h" class="eyebrow" style="font-size:.74rem">Findings</h2>
+  <div class="findings">    <div class="finding">
+      <span class="fig">κ 0.85</span>
+      <h3>Gemma 4 reproduces DeepSeek on Standalone</h3>
+      <p>Both rank the prompts v1 &lt; v2 &lt; v3 with nearly the same pass rates (Gemma 81.6 / 91.6 / 98.7%, DeepSeek 79.9 / 91.4 / 98.1%) and the same size of effect, +17.1 and +18.1 points. Their agreement on individual pairs, κ 0.85, matches DeepSeek's agreement with its own repeat runs (0.84).</p>
+    </div>
+    <div class="finding">
+      <span class="fig">94.8%</span>
+      <h3>gpt-oss is the outlier</h3>
+      <p>It passes 94.8% of v1 pairs on Standalone, where the other two pass about 80%, so it registers a v1→v3 gain of only 4.6 points. Its agreement with either other judge is κ 0.32–0.35. Gemma fails 51 pairs gpt-oss passes; the reverse happens twice.</p>
+    </div>
+    <div class="finding">
+      <span class="fig">Fleiss κ 0.23</span>
+      <h3>No judge pair agrees on Trustworthiness</h3>
+      <p>Agreement between any two judges is κ 0.15–0.34, against 0.57–0.77 for each judge with itself. DeepSeek fails 47 pairs, gpt-oss 25 and Gemma 20, mostly over hallucination flags the others don't raise. Hallucination rates from any one judge should be read with that in mind.</p>
+    </div>
+    <div class="finding">
+      <span class="fig">3 of 3</span>
+      <h3>Every judge prefers v3</h3>
+      <p>The share of pairs recommended to caregivers without edits rises from v1 to v3 for all three judges: DeepSeek 71→86%, gpt-oss 91→96%, Gemma 79→96%. No judge finds a cost to the self-containment rule on Clarity, Usefulness or Care Safety.</p>
+    </div>
+</div>
+</section>
+
+<section aria-labelledby="s1">
+  <div class="sec-head">
+    <span class="eyebrow">Pass rates</span>
+    <h2 id="s1">What each judge reports</h2>
+    <p class="intro">Share of pairs passing each metric, for each prompt version, averaged over three runs. The faint bar behind each dot spans the lowest and highest of the three runs, so a gap wider than the bars is larger than that judge's own noise. All six panels share one scale.</p>
+  </div>
+  <div class="panels" id="panels"></div>
+  <div class="tbl-wrap"><table id="armtbl"></table></div>
+</section>
+
+<section aria-labelledby="s2">
+  <div class="sec-head">
+    <span class="eyebrow">Similarity</span>
+    <h2 id="s2">How often they agree</h2>
+    <p class="intro">One matrix per metric. Outlined diagonal cells compare a judge with its own repeat runs, which is the most two raters could be expected to reach. The other cells compare two different judges. Darker means more agreement; pick the statistic above the matrices.</p>
+  </div>
+  <div class="chart">
+    <div class="seg" id="statseg" role="group" aria-label="Agreement statistic"></div>
+    <p class="statdesc" id="statdesc"></p>
+  </div>
+  <div class="mgrid" id="mgrid"></div>
+  <p class="intro">Raw agreement is high on every metric because most pairs pass. Cohen's κ removes the agreement two raters would reach by chance. On Clarity, Usefulness and Care Safety nearly every pair passes, so κ falls toward zero even where judges almost never differ, and can be undefined when a judge passes every pair in every run. Gwet's AC1 holds up at those base rates. Trustworthiness and Standalone have enough failures for κ to be informative.</p>
+</section>
+
+<section aria-labelledby="s2b">
+  <div class="sec-head">
+    <span class="eyebrow">Multi-rater agreement</span>
+    <h2 id="s2b">All judges at once: Fleiss' κ</h2>
+    <p class="intro">Fleiss' κ extends Cohen's κ to any number of raters, so it gives one chance-corrected figure for all judges together instead of one per pair. It is read on the same scale: 0 is chance, 1 is perfect. It treats the 4-level rating as plain categories, so a one-level miss counts as a full disagreement, which keeps it below weighted κ. The same base-rate caution applies as for Cohen's κ.</p>
+  </div>
+  <div class="tbl-wrap"><table id="fleissv"></table></div>
+  <div class="tbl-wrap"><table id="fleissr"></table></div>
+  <p class="note">"All judges, one run each" takes one run from every judge and computes Fleiss' κ across them, repeated for every combination of runs; the range beneath is the lowest and highest combination. "Consensus" uses each judge's majority verdict or median rating. "Every run" treats all runs from all judges as separate raters. "Within" columns treat a judge's own three runs as three raters, which measures that judge's consistency.</p>
+</section>
+
+<section aria-labelledby="s3">
+  <div class="sec-head">
+    <span class="eyebrow">Direction</span>
+    <h2 id="s3">Where they disagree</h2>
+    <p class="intro">Each judge's consensus verdict for a pair is the majority of its three runs. For each pair of judges, these are the pairs where the two consensus verdicts differ, split by which judge failed the pair. All three charts share one scale.</p>
+  </div>
+  <div class="divs" id="divs"></div>
+</section>
+
+<section aria-labelledby="s4">
+  <div class="sec-head">
+    <span class="eyebrow">Quality ratings</span>
+    <h2 id="s4">Rating by rating</h2>
+    <p class="intro">The 4-level quality rating, taken as the median of three runs for each judge. Choose a pair of judges. The outlined cells are pairs both judges rated the same; cells left of them are pairs the column judge rated higher.</p>
+  </div>
+  <div class="chart"><div class="seg" id="pairseg" role="group" aria-label="Judge pair"></div></div>
+  <div class="xgrid" id="xgrid"></div>
+</section>
+
+<section aria-labelledby="s5">
+  <div class="sec-head">
+    <span class="eyebrow">Error labels</span>
+    <h2 id="s5">Which failures each judge reports</h2>
+    <p class="intro">Share of all 677 pairs given each error label, averaged over three runs. A pair can carry more than one label. Care Safety is a problem check, so its labels mark pairs flagged as unsafe.</p>
+  </div>
+  <div class="tbl-wrap"><table id="errtbl"></table></div>
+</section>
+
+<section aria-labelledby="s6">
+  <div class="sec-head">
+    <span class="eyebrow">Overall verdict</span>
+    <h2 id="s6">Would you recommend this Q&amp;A to a caregiver?</h2>
+    <p class="intro">Distribution of the closing four-level recommendation, averaged over three runs.</p>
+  </div>
+  <div class="chart">
+    <div class="key" id="reckey"></div>
+    <div class="scroll"><svg id="recchart" role="img" aria-label="Recommendation distribution"></svg></div>
+  </div>
+</section>
+
+<section aria-labelledby="s7">
+  <div class="sec-head">
+    <span class="eyebrow">Reference</span>
+    <h2 id="s7">Every statistic</h2>
+    <p class="intro">Mean across run pairings, with the lowest and highest pairing beneath. Between-judge cells use all nine pairings of one judge's runs with the other's; within-judge cells use the three pairings of a judge's own runs.</p>
+  </div>
+  <div class="tbl-wrap"><table id="fulltbl"></table></div>
+</section>
+
+<section aria-labelledby="s8">
+  <div class="sec-head">
+    <span class="eyebrow">Method</span>
+    <h2 id="s8">How this was measured</h2>
+  </div>
+  <div class="method">
+    <dl>
+      <dt>Same pairs, same rubric</dt>
+      <dd>All 677 pairs were judged by every model on identical text, checked by question text across all nine runs. All used the five-metric rubric with the team's Trustworthiness definition, the transcript in the prompt, and temperature 0.</dd>
+      <dt>DeepSeek</dt>
+      <dd><span class="mono">deepseek-v4-pro</span> through the DeepSeek API, reasoning by default. Runs from 9 and 11 September 2026; run 1 combines the per-prompt runs from 9 September.</dd>
+      <dt>gpt-oss</dt>
+      <dd><span class="mono">openai/gpt-oss-120b</span> through OpenRouter, restricted to bf16 providers with fallbacks disabled. Reasoning is always on for this model; it ran at its default medium effort. Three runs on 1 October 2026.</dd>
+      <dt>Gemma 4</dt>
+      <dd><span class="mono">google/gemma-4-31b-it</span> through OpenRouter, pinned to one provider (DeepInfra) at fp8, fallbacks disabled. Only two providers served it at bf16 with JSON output, and when one degraded the other could not sustain a full run, so Gemma ran at fp8 while gpt-oss ran at bf16. Reasoning is off by default for this model and was switched on. Three runs on 2 October 2026.</dd>
+      <dt>Independent runs</dt>
+      <dd>Pairs lost to rate limits were re-judged inside the same run, using only that run's own results, so no run mixes in another run's ratings.</dd>
+    </dl>
+    <dl>
+      <dt>Consensus</dt>
+      <dd>Majority of three runs for a Yes/No verdict, median of three for a 4-level rating.</dd>
+      <dt>Raw agreement</dt>
+      <dd>Share of pairs where both raters gave the same verdict.</dd>
+      <dt>Cohen's κ</dt>
+      <dd>Agreement beyond what two raters with the same pass rates would reach by chance. 0 is chance level, 1 is perfect.</dd>
+      <dt>Gwet's AC1</dt>
+      <dd>A chance-corrected agreement that stays stable when nearly every pair falls in one category, where κ becomes misleading.</dd>
+      <dt>Weighted κ and Spearman ρ</dt>
+      <dd>For the 4-level ratings. Weighted κ counts a one-level miss as a small disagreement and a three-level miss as a large one. Spearman ρ measures whether two raters order pairs the same way.</dd>
+      <dt>Exact and within one level</dt>
+      <dd>Share of pairs with the same 4-level rating, and with ratings at most one level apart.</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  Computed from the judge output CSVs in <span class="mono">eval/results/</span>. The transcript-free judge was run only with DeepSeek and is not compared here.
+</footer>
+
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D = {"n_pairs":677,"arm_n":{"v1":226,"v2":225,"v3":226},"judges":[{"k":"ds","name":"DeepSeek","model":"deepseek-v4-pro","n_runs":3},{"k":"go","name":"gpt-oss","model":"openai/gpt-oss-120b","n_runs":3},{"k":"gm","name":"Gemma 4","model":"google/gemma-4-31b-it","n_runs":3}],"pairkeys":["ds|ds","ds|go","ds|gm","go|go","go|gm","gm|gm"],"metrics":{"Trustworthiness":{"scale":["Excellent","Good","Fair","Poor"],"stats":{"agreement":{"ds|ds":{"mean":0.9359921221073363,"min":0.9246676514032496,"max":0.948301329394387,"n":3},"ds|go":{"mean":0.9010339734121122,"min":0.8936484490398818,"max":0.9098966026587888,"n":9},"ds|gm":{"mean":0.9297554570818972,"min":0.9231905465288035,"max":0.9350073855243722,"n":9},"go|go":{"mean":0.9645494830132939,"min":0.9615952732644018,"max":0.9675036927621861,"n":3},"go|gm":{"mean":0.9440341375348761,"min":0.9379615952732644,"max":0.9512555391432792,"n":9},"gm|gm":{"mean":0.9862136878385032,"min":0.982274741506647,"max":0.9896602658788775,"n":3}},"kappa":{"ds|ds":{"mean":0.5695872717290488,"min":0.4914497812734741,"max":0.6387131203781358,"n":3},"ds|go":{"mean":0.15197375859403642,"min":0.11432516898030375,"max":0.1801830679915946,"n":9},"ds|gm":{"mean":0.34435030159184,"min":0.30778602040594255,"max":0.3805792028005412,"n":9},"go|go":{"mean":0.5677863859707929,"min":0.54659729019628,"max":0.6037986805703329,"n":3},"go|gm":{"mean":0.21992658270674553,"min":0.1604960141718338,"max":0.2732034223624713,"n":9},"gm|gm":{"mean":0.7745553884363482,"min":0.7181319825133572,"max":0.8318967046220436,"n":3}},"ac1":{"ds|ds":{"mean":0.9248015178354871,"min":0.9115772652131434,"max":0.9396699990961321,"n":3},"ds|go":{"mean":0.8880181950146768,"min":0.8785798445132507,"max":0.8990699339752105,"n":9},"ds|gm":{"mean":0.9214092602003867,"min":0.9133284257848179,"max":0.9279419626550296,"n":9},"go|go":{"mean":0.9613795242853355,"min":0.958041424617827,"max":0.9646008865227156,"n":3},"go|gm":{"mean":0.9397053759947488,"min":0.9328165130461287,"max":0.9477543441581144,"n":9},"gm|gm":{"mean":0.9853149086424862,"min":0.9810853788861235,"max":0.9889827208425116,"n":3}},"exact":{"ds|ds":{"mean":0.8237321516494338,"min":0.8079763663220089,"max":0.8330871491875923,"n":3},"ds|go":{"mean":0.8033809289348433,"min":0.7902511078286558,"max":0.8138847858197932,"n":9},"ds|gm":{"mean":0.826686361398326,"min":0.8094534711964549,"max":0.8389955686853766,"n":9},"go|go":{"mean":0.9428852781880847,"min":0.9379615952732644,"max":0.948301329394387,"n":3},"go|gm":{"mean":0.9299195798457246,"min":0.9202363367799113,"max":0.9364844903988183,"n":9},"gm|gm":{"mean":0.9763663220088626,"min":0.9734121122599705,"max":0.9793205317577548,"n":3}},"within1":{"ds|ds":{"mean":0.9719350073855244,"min":0.96602658788774,"max":0.9807976366322009,"n":3},"ds|go":{"mean":0.9212210733628754,"min":0.9113737075332349,"max":0.9364844903988183,"n":9},"ds|gm":{"mean":0.947316592811423,"min":0.9350073855243722,"max":0.9556868537666174,"n":9},"go|go":{"mean":0.9724273756770064,"min":0.9704579025110783,"max":0.9734121122599705,"n":3},"go|gm":{"mean":0.9494501887411785,"min":0.9453471196454948,"max":0.9527326440177253,"n":9},"gm|gm":{"mean":0.9901526341703595,"min":0.9881831610044313,"max":0.9926144756277696,"n":3}},"wkappa":{"ds|ds":{"mean":0.5994028927814656,"min":0.5571616378619296,"max":0.6436866780700965,"n":3},"ds|go":{"mean":0.18231372688728031,"min":0.13385120091046943,"max":0.20977920356647983,"n":9},"ds|gm":{"mean":0.36047373485799594,"min":0.31066133380215655,"max":0.41752808800137664,"n":9},"go|go":{"mean":0.6372620014050784,"min":0.6074875966487716,"max":0.6699425228369086,"n":3},"go|gm":{"mean":0.24908850143578287,"min":0.21402583271398945,"max":0.32163987089692414,"n":9},"gm|gm":{"mean":0.8139522030660108,"min":0.7706653195851781,"max":0.8789065632112305,"n":3}},"spearman":{"ds|ds":{"mean":0.5514707947035814,"min":0.5326348346038895,"max":0.5778210662514593,"n":3},"ds|go":{"mean":0.20335691143757312,"min":0.1341591507341245,"max":0.2873361159840512,"n":9},"ds|gm":{"mean":0.36972021555733026,"min":0.31476895173644653,"max":0.4094196521321061,"n":9},"go|go":{"mean":0.6100259139125416,"min":0.5837477883492599,"max":0.6262378250401857,"n":3},"go|gm":{"mean":0.2680129447761562,"min":0.23491047866272532,"max":0.31105503058858397,"n":9},"gm|gm":{"mean":0.7861513848219375,"min":0.7539709544825853,"max":0.8328158246861462,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":93.65781710914455,"min":93.36283185840708,"max":93.80530973451327,"n":3},"attr":{"mean":3.7684365781710913,"min":3.752212389380531,"max":3.7831858407079646,"n":3}},"go":{"pass":{"mean":95.72271386430678,"min":95.57522123893806,"max":96.01769911504425,"n":3},"attr":{"mean":3.882005899705015,"min":3.8716814159292037,"max":3.893805309734513,"n":3}},"gm":{"pass":{"mean":97.1976401179941,"min":96.90265486725663,"max":97.34513274336283,"n":3},"attr":{"mean":3.9321533923303837,"min":3.924778761061947,"max":3.938053097345133,"n":3}},"pair_agree":{"ds|go":{"mean":0.9154375614552606,"min":0.911504424778761,"max":0.9203539823008849,"n":9},"ds|gm":{"mean":0.9419862340216323,"min":0.9336283185840708,"max":0.9469026548672567,"n":9},"go|gm":{"mean":0.9429695181907571,"min":0.9336283185840708,"max":0.9557522123893806,"n":9}}},"v2":{"ds":{"pass":{"mean":91.11111111111111,"min":90.66666666666666,"max":91.55555555555556,"n":3},"attr":{"mean":3.745185185185185,"min":3.7244444444444444,"max":3.76,"n":3}},"go":{"pass":{"mean":94.37037037037038,"min":93.77777777777779,"max":94.66666666666667,"n":3},"attr":{"mean":3.865185185185185,"min":3.862222222222222,"max":3.871111111111111,"n":3}},"gm":{"pass":{"mean":95.85185185185185,"min":95.55555555555556,"max":96.0,"n":3},"attr":{"mean":3.902222222222222,"min":3.888888888888889,"max":3.911111111111111,"n":3}},"pair_agree":{"ds|go":{"mean":0.891358024691358,"min":0.88,"max":0.8977777777777778,"n":9},"ds|gm":{"mean":0.9259259259259259,"min":0.9111111111111111,"max":0.9466666666666667,"n":9},"go|gm":{"mean":0.9318518518518518,"min":0.92,"max":0.9422222222222222,"n":9}}},"v3":{"ds":{"pass":{"mean":91.00294985250737,"min":89.38053097345133,"max":92.92035398230088,"n":3},"attr":{"mean":3.7359882005899707,"min":3.7079646017699117,"max":3.752212389380531,"n":3}},"go":{"pass":{"mean":97.05014749262536,"min":96.46017699115043,"max":97.78761061946902,"n":3},"attr":{"mean":3.9129793510324484,"min":3.9026548672566372,"max":3.933628318584071,"n":3}},"gm":{"pass":{"mean":97.49262536873155,"min":96.90265486725663,"max":97.78761061946902,"n":3},"attr":{"mean":3.9365781710914454,"min":3.920353982300885,"max":3.9469026548672566,"n":3}},"pair_agree":{"ds|go":{"mean":0.8962635201573255,"min":0.8805309734513275,"max":0.9203539823008849,"n":9},"ds|gm":{"mean":0.9213372664700098,"min":0.911504424778761,"max":0.9336283185840708,"n":9},"go|gm":{"mean":0.9572271386430679,"min":0.9469026548672567,"max":0.9646017699115044,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":40,"a_pass_b_fail":18,"both_fail":7,"both_pass":612,"agreement":0.914327917282127,"kappa":0.15364055696857334,"ac1":0.9047351016674875,"attr_exact":0.8286558345642541,"attr_wkappa":0.20438576750931414,"crosstab":[[553,3,8,5],[61,4,3,4],[30,1,3,1],[0,0,0,1]]},"ds|gm":{"a_fail_b_pass":33,"a_pass_b_fail":6,"both_fail":14,"both_pass":624,"agreement":0.9423929098966026,"kappa":0.392741323397501,"ac1":0.9364111802453912,"attr_exact":0.8508124076809453,"attr_wkappa":0.41324869410414367,"crosstab":[[569,0,0,0],[63,2,3,4],[24,3,4,4],[0,0,0,1]]},"go|gm":{"a_fail_b_pass":19,"a_pass_b_fail":14,"both_fail":6,"both_pass":638,"agreement":0.9512555391432792,"kappa":0.2417783811301538,"ac1":0.9479080807645092,"attr_exact":0.9394387001477105,"attr_wkappa":0.278837184914533,"crosstab":[[631,3,5,5],[6,1,1,0],[11,1,1,1],[8,0,0,3]]}},"fail_counts":{"ds":47,"go":25,"gm":20},"fleiss":{"verdict":{"judges_by_run":{"mean":0.23458917560227804,"min":0.21473713352871782,"max":0.25679260817857463,"n":27},"judges_consensus":0.25995582662510586,"all_runs":0.3296283934134418,"within":{"ds":0.568843325016004,"go":0.567688378033204,"gm":0.7741325622775806}},"rating":{"judges_by_run":{"mean":0.13081725168352024,"min":0.0918897809372078,"max":0.16433234729641788,"n":27},"judges_consensus":0.156200180998971,"all_runs":0.22146948824425947,"within":{"ds":0.43559509911073474,"go":0.4575595290173753,"gm":0.6488766270718849}}},"errors":{"ds":{"Hallucinating":6.450024618414574,"Source Misinterpretation":1.7232890201871,"Missing Key Information":0.29542097488921715,"Contradiction":0.5908419497784343},"go":{"Hallucinating":3.741999015263417,"Source Misinterpretation":1.1324470704086658,"Missing Key Information":0.4431314623338257},"gm":{"Hallucinating":2.1664204825209255,"Contradiction":0.04923682914820285,"Source Misinterpretation":1.1816838995568686}}},"Clarity":{"scale":["Very easy to understand","Easy","Somewhat difficult","Difficult"],"stats":{"agreement":{"ds|ds":{"mean":0.983259478089611,"min":0.9793205317577548,"max":0.9867060561299852,"n":3},"ds|go":{"mean":0.9868701788938126,"min":0.9852289512555391,"max":0.9881831610044313,"n":9},"ds|gm":{"mean":0.9876907927129492,"min":0.9867060561299852,"max":0.9881831610044313,"n":9},"go|go":{"mean":0.9970457902511078,"min":0.9955686853766618,"max":0.9985228951255539,"n":3},"go|gm":{"mean":0.9985228951255539,"min":0.9970457902511078,"max":1.0,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"kappa":{"ds|ds":{"mean":0.3077198623559333,"min":0.11453662182362256,"max":0.46388033435987935,"n":3},"ds|go":{"mean":0.04015150912834288,"min":-0.004749183734052556,"max":0.19620065301275644,"n":9},"ds|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"go|go":{"mean":-0.0006577865482681346,"min":-0.001973359644804404,"max":0.0,"n":3},"go|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":6},"gm|gm":null},"ac1":{"ds|ds":{"mean":0.982844264223566,"min":0.978826026249651,"max":0.986368044889471,"n":3},"ds|go":{"mean":0.9866870879052243,"min":0.9850091561505638,"max":0.9880426983408581,"n":9},"ds|gm":{"mean":0.9875378497536487,"min":0.9865281525792297,"max":0.9880426983408581,"n":9},"go|go":{"mean":0.9970355889999947,"min":0.9955490053199358,"max":0.9985207116753432,"n":3},"go|gm":{"mean":0.9985192538933494,"min":0.9970370500047049,"max":1.0,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"exact":{"ds|ds":{"mean":0.6528803545051698,"min":0.6469719350073855,"max":0.6632200886262924,"n":3},"ds|go":{"mean":0.671097981290005,"min":0.6528803545051699,"max":0.6927621861152142,"n":9},"ds|gm":{"mean":0.7035942885278188,"min":0.6986706056129985,"max":0.7090103397341211,"n":9},"go|go":{"mean":0.8232397833579518,"min":0.8079763663220089,"max":0.8316100443131462,"n":3},"go|gm":{"mean":0.724273756770064,"min":0.723781388478582,"max":0.725258493353028,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"within1":{"ds|ds":{"mean":0.9955686853766618,"min":0.9940915805022157,"max":0.9970457902511078,"n":3},"ds|go":{"mean":0.9924503528639422,"min":0.9896602658788775,"max":0.9955686853766618,"n":9},"ds|gm":{"mean":0.9876907927129492,"min":0.9867060561299852,"max":0.9881831610044313,"n":9},"go|go":{"mean":0.9985228951255539,"min":0.9970457902511078,"max":1.0,"n":3},"go|gm":{"mean":0.9985228951255539,"min":0.9970457902511078,"max":1.0,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"wkappa":{"ds|ds":{"mean":0.24281790732982453,"min":0.21711747821960536,"max":0.2788430022943297,"n":3},"ds|go":{"mean":0.20533930662797925,"min":0.15067413111713845,"max":0.2536056849047337,"n":9},"ds|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"go|go":{"mean":0.5546145927951613,"min":0.5100676854965731,"max":0.5819493646202347,"n":3},"go|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"gm|gm":null},"spearman":{"ds|ds":{"mean":0.21109989592574405,"min":0.19648669166314714,"max":0.23777551933729202,"n":3},"ds|go":{"mean":0.20929806864508868,"min":0.16031273220772868,"max":0.25893953389084173,"n":9},"ds|gm":null,"go|go":{"mean":0.5601055789902282,"min":0.5202572602726804,"max":0.5823176305422713,"n":3},"go|gm":null,"gm|gm":null}},"arms":{"v1":{"ds":{"pass":{"mean":99.41002949852508,"min":99.11504424778761,"max":99.5575221238938,"n":3},"attr":{"mean":3.724188790560472,"min":3.7168141592920354,"max":3.7389380530973453,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.691740412979351,"min":3.6814159292035398,"max":3.6991150442477876,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":4,"min":4,"max":4,"n":3}},"pair_agree":{"ds|go":{"mean":0.9941002949852508,"min":0.9911504424778761,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9941002949852508,"min":0.9911504424778761,"max":0.995575221238938,"n":9},"go|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":9}}},"v2":{"ds":{"pass":{"mean":98.37037037037038,"min":98.22222222222223,"max":98.66666666666667,"n":3},"attr":{"mean":3.6903703703703705,"min":3.688888888888889,"max":3.6933333333333334,"n":3}},"go":{"pass":{"mean":99.70370370370371,"min":99.55555555555556,"max":100.0,"n":3},"attr":{"mean":3.7274074074074073,"min":3.72,"max":3.7333333333333334,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":4,"min":4,"max":4,"n":3}},"pair_agree":{"ds|go":{"mean":0.9807407407407407,"min":0.9777777777777777,"max":0.9866666666666667,"n":9},"ds|gm":{"mean":0.9837037037037037,"min":0.9822222222222222,"max":0.9866666666666667,"n":9},"go|gm":{"mean":0.997037037037037,"min":0.9955555555555555,"max":1.0,"n":9}}},"v3":{"ds":{"pass":{"mean":98.52507374631269,"min":98.23008849557522,"max":99.11504424778761,"n":3},"attr":{"mean":3.65929203539823,"min":3.650442477876106,"max":3.663716814159292,"n":3}},"go":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.7492625368731565,"min":3.747787610619469,"max":3.752212389380531,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":4,"min":4,"max":4,"n":3}},"pair_agree":{"ds|go":{"mean":0.9857423795476893,"min":0.9778761061946902,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9852507374631269,"min":0.9823008849557522,"max":0.9911504424778761,"n":9},"go|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":6,"a_pass_b_fail":0,"both_fail":0,"both_pass":671,"agreement":0.9911373707533235,"kappa":0.0,"ac1":0.9910584765070386,"attr_exact":0.7223042836041359,"attr_wkappa":0.27774356041442105,"crosstab":[[416,95,0,0],[87,73,0,0],[2,4,0,0],[0,0,0,0]]},"ds|gm":{"a_fail_b_pass":6,"a_pass_b_fail":0,"both_fail":0,"both_pass":671,"agreement":0.9911373707533235,"kappa":0.0,"ac1":0.9910584765070386,"attr_exact":0.7548005908419497,"attr_wkappa":0.0,"crosstab":[[511,0,0,0],[160,0,0,0],[6,0,0,0],[0,0,0,0]]},"go|gm":{"a_fail_b_pass":0,"a_pass_b_fail":0,"both_fail":0,"both_pass":677,"agreement":1.0,"kappa":null,"ac1":1.0,"attr_exact":0.7459379615952733,"attr_wkappa":0.0,"crosstab":[[505,0,0,0],[172,0,0,0],[0,0,0,0],[0,0,0,0]]}},"fail_counts":{"ds":6,"go":0,"gm":0},"fleiss":{"verdict":{"judges_by_run":{"mean":0.016705233571940467,"min":-0.0049480455220190156,"max":0.09554675903019422,"n":27},"judges_consensus":-0.0029629629629766997,"all_runs":0.08508126251328614,"within":{"ds":0.311525423728821,"go":-0.001479289940797558,"gm":null}},"rating":{"judges_by_run":{"mean":0.03239578060783443,"min":0.013349288534595691,"max":0.0539455131433079,"n":27},"judges_consensus":0.06978611208826271,"all_runs":0.13362385868861001,"within":{"ds":0.18150061222179467,"go":0.5583343731941234,"gm":null}}},"errors":{"ds":{"Ambiguous":0.5416051206302314,"Difficult vocabulary":0.68931560807484},"go":{"Ambiguous":0.04923682914820285,"Difficult vocabulary":0.0984736582964057},"gm":{}}},"Usefulness":{"scale":["Highly useful","Useful","Limited useful","Not useful"],"stats":{"agreement":{"ds|ds":{"mean":0.9970457902511078,"min":0.9970457902511078,"max":0.9970457902511078,"n":3},"ds|go":{"mean":0.9945839487936977,"min":0.9926144756277696,"max":0.9970457902511078,"n":9},"ds|gm":{"mean":0.9945839487936977,"min":0.9926144756277696,"max":0.9955686853766618,"n":9},"go|go":{"mean":0.9940915805022157,"min":0.9926144756277696,"max":0.9955686853766618,"n":3},"go|gm":{"mean":0.9901526341703595,"min":0.9881831610044313,"max":0.9926144756277696,"n":9},"gm|gm":{"mean":0.9970457902511078,"min":0.9970457902511078,"max":0.9970457902511078,"n":3}},"kappa":{"ds|ds":{"mean":0.16617283950617054,"min":0.0,"max":0.49851851851851164,"n":3},"ds|go":{"mean":-0.0021074643837134337,"min":-0.003557663800757052,"max":0.0,"n":9},"ds|gm":{"mean":0.30969493681404,"min":0.0,"max":0.5696122059758432,"n":9},"go|go":{"mean":0.13044825831860402,"min":-0.003557663800757052,"max":0.39786540171954576,"n":3},"go|gm":{"mean":-0.0044065669973339236,"min":-0.00556999628667598,"max":-0.003557663800757052,"n":9},"gm|gm":{"mean":0.7652423022061907,"min":0.7486075009283334,"max":0.7985119047619055,"n":3}},"ac1":{"ds|ds":{"mean":0.9970341279953554,"min":0.9970282839766564,"max":0.9970370500047049,"n":3},"ds|go":{"mean":0.994552092624234,"min":0.9925597282377546,"max":0.9970370500047049,"n":9},"ds|gm":{"mean":0.9945384157636437,"min":0.9925377164971578,"max":0.9955490053199358,"n":9},"go|go":{"mean":0.9940507110445734,"min":0.9925597282377546,"max":0.9955358369426528,"n":3},"go|gm":{"mean":0.9900527268942609,"min":0.9880426983408581,"max":0.9925597282377546,"n":9},"gm|gm":{"mean":0.9970077268001806,"min":0.9970018312301128,"max":0.9970106745852145,"n":3}},"exact":{"ds|ds":{"mean":0.7459379615952733,"min":0.7370753323485968,"max":0.7562776957163959,"n":3},"ds|go":{"mean":0.6148038732972263,"min":0.5937961595273265,"max":0.6351550960118169,"n":9},"ds|gm":{"mean":0.6259642212374856,"min":0.6100443131462334,"max":0.638109305760709,"n":9},"go|go":{"mean":0.8852781880846874,"min":0.880354505169867,"max":0.8921713441654358,"n":3},"go|gm":{"mean":0.8194649597899228,"min":0.8064992614475628,"max":0.8360413589364845,"n":9},"gm|gm":{"mean":0.9438700147710488,"min":0.9364844903988183,"max":0.948301329394387,"n":3}},"within1":{"ds|ds":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"ds|go":{"mean":0.9968816674872805,"min":0.9926144756277696,"max":1.0,"n":9},"ds|gm":{"mean":0.9983587723617265,"min":0.9955686853766618,"max":1.0,"n":9},"go|go":{"mean":0.9980305268340719,"min":0.9970457902511078,"max":1.0,"n":3},"go|gm":{"mean":0.9952404398490071,"min":0.9926144756277696,"max":0.9970457902511078,"n":9},"gm|gm":{"mean":0.999015263417036,"min":0.9985228951255539,"max":1.0,"n":3}},"wkappa":{"ds|ds":{"mean":0.5091712291046805,"min":0.4921701166475625,"max":0.5265714200950204,"n":3},"ds|go":{"mean":0.2508093401488809,"min":0.2101518338372551,"max":0.29462805559656624,"n":9},"ds|gm":{"mean":0.29141912804671777,"min":0.2674080708765131,"max":0.30591897003141044,"n":9},"go|go":{"mean":0.598262868272424,"min":0.5809838864582222,"max":0.6120400124766968,"n":3},"go|gm":{"mean":0.3251071109459882,"min":0.27048975601401537,"max":0.37571465456825637,"n":9},"gm|gm":{"mean":0.7920928244602937,"min":0.758995693235518,"max":0.8245555580236492,"n":3}},"spearman":{"ds|ds":{"mean":0.5075211546044932,"min":0.48996036248820163,"max":0.5250724497054823,"n":3},"ds|go":{"mean":0.34350739017565235,"min":0.2878296110965072,"max":0.38733908217679025,"n":9},"ds|gm":{"mean":0.38547632849335106,"min":0.3660662756451457,"max":0.4077825295409522,"n":9},"go|go":{"mean":0.606036305059863,"min":0.591737213052645,"max":0.6224094707543516,"n":3},"go|gm":{"mean":0.34472124542006966,"min":0.31311012451646564,"max":0.39044218645572426,"n":9},"gm|gm":{"mean":0.7960575231544461,"min":0.7626717775041895,"max":0.8174140310127589,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":99.70501474926253,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.4985250737463125,"min":3.47787610619469,"max":3.5088495575221237,"n":3}},"go":{"pass":{"mean":99.26253687315634,"min":98.67256637168141,"max":99.5575221238938,"n":3},"attr":{"mean":3.8185840707964602,"min":3.814159292035398,"max":3.8230088495575223,"n":3}},"gm":{"pass":{"mean":99.11504424778761,"min":99.11504424778761,"max":99.11504424778761,"n":3},"attr":{"mean":3.84070796460177,"min":3.831858407079646,"max":3.849557522123894,"n":3}},"pair_agree":{"ds|go":{"mean":0.9896755162241888,"min":0.9823008849557522,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9941002949852508,"min":0.9911504424778761,"max":0.995575221238938,"n":9},"go|gm":{"mean":0.9837758112094395,"min":0.9778761061946902,"max":0.9867256637168141,"n":9}}},"v2":{"ds":{"pass":{"mean":99.70370370370371,"min":99.55555555555556,"max":100.0,"n":3},"attr":{"mean":3.4607407407407407,"min":3.44,"max":3.48,"n":3}},"go":{"pass":{"mean":99.70370370370371,"min":99.55555555555556,"max":100.0,"n":3},"attr":{"mean":3.811851851851852,"min":3.7955555555555556,"max":3.8266666666666667,"n":3}},"gm":{"pass":{"mean":99.11111111111111,"min":98.66666666666667,"max":99.55555555555556,"n":3},"attr":{"mean":3.8251851851851852,"min":3.8044444444444445,"max":3.8444444444444446,"n":3}},"pair_agree":{"ds|go":{"mean":0.9940740740740741,"min":0.9911111111111112,"max":1.0,"n":9},"ds|gm":{"mean":0.9911111111111112,"min":0.9866666666666667,"max":0.9955555555555555,"n":9},"go|gm":{"mean":0.9881481481481482,"min":0.9822222222222222,"max":0.9955555555555555,"n":9}}},"v3":{"ds":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.5088495575221237,"min":3.495575221238938,"max":3.517699115044248,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.8672566371681416,"min":3.8584070796460175,"max":3.8716814159292037,"n":3}},"gm":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.8525073746312684,"min":3.8451327433628317,"max":3.8628318584070795,"n":3}},"pair_agree":{"ds|go":{"mean":1.0,"min":1.0,"max":1.0,"n":9},"ds|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9},"go|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":1,"a_pass_b_fail":1,"both_fail":0,"both_pass":675,"agreement":0.9970457902511078,"kappa":-0.001479289940797558,"ac1":0.9970370500047049,"attr_exact":0.6307237813884786,"attr_wkappa":0.291586093740844,"crosstab":[[324,3,0,0],[244,103,2,0],[0,1,0,0],[0,0,0,0]]},"ds|gm":{"a_fail_b_pass":0,"a_pass_b_fail":3,"both_fail":1,"both_pass":673,"agreement":0.9955686853766618,"kappa":0.3985786200769848,"ac1":0.9955358369426528,"attr_exact":0.6233382570162481,"attr_wkappa":0.2854150472527922,"crosstab":[[325,2,0,0],[250,96,2,1],[0,0,1,0],[0,0,0,0]]},"go|gm":{"a_fail_b_pass":1,"a_pass_b_fail":4,"both_fail":0,"both_pass":672,"agreement":0.9926144756277696,"kappa":-0.002368966538358622,"ac1":0.9925597282377546,"attr_exact":0.8301329394387001,"attr_wkappa":0.36655676350026734,"crosstab":[[516,51,0,1],[58,46,3,0],[1,1,0,0],[0,0,0,0]]}},"fail_counts":{"ds":1,"go":1,"gm":4},"fleiss":{"verdict":{"judges_by_run":{"mean":0.11050189437111874,"min":-0.003954522985683094,"max":0.21876030333001745,"n":27},"judges_consensus":0.16419753086416725,"all_runs":0.21566052891743598,"within":{"ds":0.24851998026639668,"go":0.13989271597967265,"gm":0.7677441488145147}},"rating":{"judges_by_run":{"mean":0.2171770812111252,"min":0.18790810274404238,"max":0.248138039223345,"n":27},"judges_consensus":0.24010987817329246,"all_runs":0.3243835662083177,"within":{"ds":0.49627927767710295,"go":0.5788182206557704,"gm":0.7845798574993347}}},"errors":{"ds":{"Not actionable":0.1969473165928114},"go":{"Low Relevance to Caregiver Needs":0.04923682914820285,"Not actionable":0.29542097488921715,"Generic Advice":0.04923682914820285},"gm":{"Not actionable":0.4431314623338257,"Missing Explanation":0.0984736582964057,"Low Relevance to Caregiver Needs":0.14771048744460857}}},"Care Safety":{"scale":null,"stats":{"agreement":{"ds|ds":{"mean":0.9950763170851797,"min":0.9926144756277696,"max":0.9985228951255539,"n":3},"ds|go":{"mean":0.9935992122107337,"min":0.9926144756277696,"max":0.9940915805022157,"n":9},"ds|gm":{"mean":0.9970457902511078,"min":0.9955686853766618,"max":0.9985228951255539,"n":9},"go|go":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"go|gm":{"mean":0.9955686853766618,"min":0.9955686853766618,"max":0.9955686853766618,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"kappa":{"ds|ds":{"mean":0.6086520120641442,"min":0.44077317032876434,"max":0.8881546340657529,"n":3},"ds|go":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"ds|gm":{"mean":0.7247567597650821,"min":0.5692470837751847,"max":0.8564156945917283,"n":9},"go|go":null,"go|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}},"ac1":{"ds|ds":{"mean":0.9950133725188607,"min":0.9925156403217943,"max":0.9985031280643588,"n":3},"ds|go":{"mean":0.9935576213814601,"min":0.9925597282377546,"max":0.9940565679533129,"n":9},"ds|gm":{"mean":0.9970136159276469,"min":0.9955226298982948,"max":0.9985075432994316,"n":9},"go|go":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"go|gm":{"mean":0.9955490053199358,"min":0.9955490053199358,"max":0.9955490053199358,"n":9},"gm|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":99.41002949852508,"min":99.11504424778761,"max":99.5575221238938,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":99.5575221238938,"min":99.5575221238938,"max":99.5575221238938,"n":3}},"pair_agree":{"ds|go":{"mean":0.9941002949852508,"min":0.9911504424778761,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.995575221238938,"min":0.9867256637168141,"max":1.0,"n":9},"go|gm":{"mean":0.995575221238938,"min":0.995575221238938,"max":0.995575221238938,"n":9}}},"v2":{"ds":{"pass":{"mean":99.4074074074074,"min":99.11111111111111,"max":99.55555555555556,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":99.55555555555556,"min":99.55555555555556,"max":99.55555555555556,"n":3}},"pair_agree":{"ds|go":{"mean":0.9940740740740741,"min":0.9911111111111112,"max":0.9955555555555555,"n":9},"ds|gm":{"mean":0.9985185185185185,"min":0.9955555555555555,"max":1.0,"n":9},"go|gm":{"mean":0.9955555555555555,"min":0.9955555555555555,"max":0.9955555555555555,"n":9}}},"v3":{"ds":{"pass":{"mean":99.26253687315634,"min":99.11504424778761,"max":99.5575221238938,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":99.5575221238938,"min":99.5575221238938,"max":99.5575221238938,"n":3}},"pair_agree":{"ds|go":{"mean":0.9926253687315634,"min":0.9911504424778761,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9970501474926253,"min":0.995575221238938,"max":1.0,"n":9},"go|gm":{"mean":0.995575221238938,"min":0.995575221238938,"max":0.995575221238938,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":4,"a_pass_b_fail":0,"both_fail":0,"both_pass":673,"agreement":0.9940915805022157,"kappa":0.0,"ac1":0.9940565679533129},"ds|gm":{"a_fail_b_pass":1,"a_pass_b_fail":0,"both_fail":3,"both_pass":673,"agreement":0.9985228951255539,"kappa":0.8564156945917283,"ac1":0.9985075432994316},"go|gm":{"a_fail_b_pass":0,"a_pass_b_fail":3,"both_fail":0,"both_pass":674,"agreement":0.9955686853766618,"kappa":0.0,"ac1":0.9955490053199358}},"fail_counts":{"ds":4,"go":0,"gm":3},"fleiss":{"verdict":{"judges_by_run":{"mean":0.3607891657011683,"min":0.2832439299830767,"max":0.42659514398644843,"n":27},"judges_consensus":0.42659514398644843,"all_runs":0.4639736601728156,"within":{"ds":0.6129069146908666,"go":null,"gm":1.0}}},"errors":{"ds":{"Physical safety risk":0.5908419497784343,"Blaming or judgmental language":0.04923682914820285},"go":{},"gm":{"Physical safety risk":0.4431314623338257}}},"Standalone":{"scale":["Fully standalone","Mostly standalone","Somewhat dependent","Not standalone"],"stats":{"agreement":{"ds|ds":{"mean":0.9704579025110783,"min":0.9630723781388478,"max":0.9748892171344166,"n":3},"ds|go":{"mean":0.9158050221565731,"min":0.9084194977843427,"max":0.9217134416543574,"n":9},"ds|gm":{"mean":0.9740686033152799,"min":0.9704579025110783,"max":0.9793205317577548,"n":9},"go|go":{"mean":0.9773510585918267,"min":0.9763663220088626,"max":0.9793205317577548,"n":3},"go|gm":{"mean":0.9243394058755949,"min":0.9202363367799113,"max":0.930576070901034,"n":9},"gm|gm":{"mean":0.9970457902511078,"min":0.9955686853766618,"max":0.9985228951255539,"n":3}},"kappa":{"ds|ds":{"mean":0.8387598162732914,"min":0.7995689399950261,"max":0.8619444611047804,"n":3},"ds|go":{"mean":0.3193097058209451,"min":0.2502232860562332,"max":0.3873930784859405,"n":9},"ds|gm":{"mean":0.853347227149542,"min":0.8321556960456182,"max":0.8824944210265311,"n":9},"go|go":{"mean":0.5746299289685138,"min":0.5173335709829779,"max":0.6394552647595864,"n":3},"go|gm":{"mean":0.3490443965465713,"min":0.2984725207245927,"max":0.41907509174228236,"n":9},"gm|gm":{"mean":0.9826626183252362,"min":0.9739331322595137,"max":0.9913110440865046,"n":3}},"ac1":{"ds|ds":{"mean":0.9638309251962105,"min":0.954732251632514,"max":0.9693064276751533,"n":3},"ds|go":{"mean":0.9042151766368446,"min":0.8960537883384307,"max":0.9104905048489195,"n":9},"ds|gm":{"mean":0.9684993692953944,"min":0.9641492598172513,"max":0.9749044818720759,"n":9},"go|go":{"mean":0.9760716354566583,"min":0.9750025962037732,"max":0.9780626734467618,"n":3},"go|gm":{"mean":0.9145952680070999,"min":0.9102582670748142,"max":0.921317320995607,"n":9},"gm|gm":{"mean":0.9964390082825447,"min":0.9946610867882272,"max":0.9982203622627425,"n":3}},"exact":{"ds|ds":{"mean":0.9217134416543574,"min":0.9158050221565731,"max":0.9320531757754801,"n":3},"ds|go":{"mean":0.8997209913014935,"min":0.8906942392909897,"max":0.9069423929098966,"n":9},"ds|gm":{"mean":0.930576070901034,"min":0.9202363367799113,"max":0.9453471196454948,"n":9},"go|go":{"mean":0.9699655342195963,"min":0.9675036927621861,"max":0.9719350073855244,"n":3},"go|gm":{"mean":0.9090759888396521,"min":0.9054652880354506,"max":0.912850812407681,"n":9},"gm|gm":{"mean":0.9719350073855244,"min":0.9645494830132939,"max":0.9763663220088626,"n":3}},"within1":{"ds|ds":{"mean":0.983751846381093,"min":0.982274741506647,"max":0.9852289512555391,"n":3},"ds|go":{"mean":0.9358279993435089,"min":0.930576070901034,"max":0.9409158050221565,"n":9},"ds|gm":{"mean":0.9809617593960283,"min":0.9748892171344166,"max":0.9881831610044313,"n":9},"go|go":{"mean":0.9788281634662728,"min":0.9778434268833087,"max":0.9807976366322009,"n":3},"go|gm":{"mean":0.9276218611521418,"min":0.9231905465288035,"max":0.9320531757754801,"n":9},"gm|gm":{"mean":0.9965534219596258,"min":0.9955686853766618,"max":0.9970457902511078,"n":3}},"wkappa":{"ds|ds":{"mean":0.8449066259732085,"min":0.8195671018074082,"max":0.858996590072461,"n":3},"ds|go":{"mean":0.28238514555772964,"min":0.22884652582260534,"max":0.3442672719124513,"n":9},"ds|gm":{"mean":0.8657409081616316,"min":0.8242751560799457,"max":0.903632803064288,"n":9},"go|go":{"mean":0.5907221887329119,"min":0.5567377337643737,"max":0.6259668508287294,"n":3},"go|gm":{"mean":0.30526261135213584,"min":0.2539899736019957,"max":0.37831442528851444,"n":9},"gm|gm":{"mean":0.9669907259123736,"min":0.9578489990057035,"max":0.9722387903911247,"n":3}},"spearman":{"ds|ds":{"mean":0.850542997182433,"min":0.7975616056178646,"max":0.8862815761614148,"n":3},"ds|go":{"mean":0.39456985600626604,"min":0.35027249122216064,"max":0.4459833221309473,"n":9},"ds|gm":{"mean":0.8705148975804403,"min":0.8332476094247204,"max":0.906117420898611,"n":9},"go|go":{"mean":0.5805920998235768,"min":0.5206599589725911,"max":0.6440138510347349,"n":3},"go|gm":{"mean":0.4283502816869516,"min":0.3798936273541959,"max":0.4911893690691406,"n":9},"gm|gm":{"mean":0.9835744196152314,"min":0.9753224030400028,"max":0.9911936537655325,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":79.94100294985252,"min":79.64601769911505,"max":80.08849557522124,"n":3},"attr":{"mean":3.594395280235988,"min":3.579646017699115,"max":3.6150442477876106,"n":3}},"go":{"pass":{"mean":94.83775811209439,"min":93.80530973451327,"max":96.01769911504425,"n":3},"attr":{"mean":3.889380530973451,"min":3.8628318584070795,"max":3.911504424778761,"n":3}},"gm":{"pass":{"mean":81.56342182890856,"min":81.41592920353983,"max":81.85840707964603,"n":3},"attr":{"mean":3.5265486725663715,"min":3.5265486725663715,"max":3.5265486725663715,"n":3}},"pair_agree":{"ds|go":{"mean":0.8382497541789578,"min":0.8185840707964602,"max":0.8451327433628318,"n":9},"ds|gm":{"mean":0.9591937069813177,"min":0.9513274336283186,"max":0.9690265486725663,"n":9},"go|gm":{"mean":0.8574237954768928,"min":0.8451327433628318,"max":0.8716814159292036,"n":9}}},"v2":{"ds":{"pass":{"mean":91.4074074074074,"min":91.11111111111111,"max":91.55555555555556,"n":3},"attr":{"mean":3.8162962962962963,"min":3.8088888888888888,"max":3.8266666666666667,"n":3}},"go":{"pass":{"mean":97.48148148148148,"min":96.88888888888889,"max":97.77777777777777,"n":3},"attr":{"mean":3.951111111111111,"min":3.942222222222222,"max":3.9555555555555557,"n":3}},"gm":{"pass":{"mean":91.55555555555556,"min":91.55555555555556,"max":91.55555555555556,"n":3},"attr":{"mean":3.78962962962963,"min":3.7822222222222224,"max":3.7955555555555556,"n":3}},"pair_agree":{"ds|go":{"mean":0.931358024691358,"min":0.9244444444444444,"max":0.9377777777777778,"n":9},"ds|gm":{"mean":0.9748148148148148,"min":0.9688888888888889,"max":0.9822222222222222,"n":9},"go|gm":{"mean":0.9348148148148149,"min":0.9288888888888889,"max":0.9377777777777778,"n":9}}},"v3":{"ds":{"pass":{"mean":98.08259587020649,"min":97.78761061946902,"max":98.67256637168141,"n":3},"attr":{"mean":3.9646017699115044,"min":3.9557522123893807,"max":3.9690265486725664,"n":3}},"go":{"pass":{"mean":99.41002949852508,"min":99.11504424778761,"max":99.5575221238938,"n":3},"attr":{"mean":3.9882005899705018,"min":3.982300884955752,"max":3.9911504424778763,"n":3}},"gm":{"pass":{"mean":98.67256637168141,"min":98.67256637168141,"max":98.67256637168141,"n":3},"attr":{"mean":3.9690265486725664,"min":3.9690265486725664,"max":3.9690265486725664,"n":3}},"pair_agree":{"ds|go":{"mean":0.9778761061946902,"min":0.9690265486725663,"max":0.9823008849557522,"n":9},"ds|gm":{"mean":0.9882005899705014,"min":0.9823008849557522,"max":1.0,"n":9},"go|gm":{"mean":0.9808259587020649,"min":0.9778761061946902,"max":0.9823008849557522,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":54,"a_pass_b_fail":2,"both_fail":13,"both_pass":608,"agreement":0.9172821270310192,"kappa":0.29141746411483305,"ac1":0.9066613816144193,"attr_exact":0.9039881831610044,"attr_wkappa":0.22999547585926972,"crosstab":[[605,0,2,0],[16,1,3,0],[26,2,5,1],[15,0,0,1]]},"ds|gm":{"a_fail_b_pass":10,"a_pass_b_fail":7,"both_fail":57,"both_pass":603,"agreement":0.9748892171344166,"kappa":0.8563368326447056,"ac1":0.9695708214080336,"attr_exact":0.9290989660265879,"attr_wkappa":0.8846340387043777,"crosstab":[[602,1,4,0],[9,2,5,4],[2,0,11,21],[0,0,2,14]]},"go|gm":{"a_fail_b_pass":2,"a_pass_b_fail":51,"both_fail":13,"both_pass":611,"agreement":0.9217134416543574,"kappa":0.30413280840912976,"ac1":0.9120491510945139,"attr_exact":0.9098966026587888,"attr_wkappa":0.25350206483615756,"crosstab":[[611,3,19,29],[0,0,0,3],[2,0,3,5],[0,0,0,2]]}},"fail_counts":{"ds":67,"go":15,"gm":64},"fleiss":{"verdict":{"judges_by_run":{"mean":0.5506374164571186,"min":0.5147351453900998,"max":0.5854499788969696,"n":27},"judges_consensus":0.5350714000218012,"all_runs":0.6299131754700819,"within":{"ds":0.8386250953470654,"go":0.5776401446654655,"gm":0.9826627589346695}},"rating":{"judges_by_run":{"mean":0.39540361657783346,"min":0.35597108323185356,"max":0.45530667991060747,"n":27},"judges_consensus":0.3851408249761672,"all_runs":0.467688310943673,"within":{"ds":0.6017764920017175,"go":0.4427356962936404,"gm":0.8396570064100066}}},"errors":{"ds":{"Undefined this/these reference":4.726735598227474,"Refers to the video, transcript or speaker":3.6927621861152145,"Undefined pronoun":1.37863121614968,"Depends on another Q&A pair":0.7877892663712456},"go":{"Refers to the video, transcript or speaker":1.7725258493353029,"Undefined this/these reference":0.7877892663712456,"Undefined pronoun":0.2461841457410143,"Depends on another Q&A pair":0.14771048744460857},"gm":{"Undefined this/these reference":5.612998522895126,"Refers to the video, transcript or speaker":3.8404726735598227,"Undefined pronoun":0.29542097488921715}}}},"recommendation":{"stats":{"exact":{"ds|ds":{"mean":0.8823239783357951,"min":0.8685376661742984,"max":0.8980797636632201,"n":3},"ds|go":{"mean":0.7922205809945839,"min":0.7828655834564254,"max":0.8020679468242246,"n":9},"ds|gm":{"mean":0.8695224027572624,"min":0.8581979320531757,"max":0.8833087149187593,"n":9},"go|go":{"mean":0.9354997538158543,"min":0.9320531757754801,"max":0.9379615952732644,"n":3},"go|gm":{"mean":0.8598391596914492,"min":0.8478581979320532,"max":0.8729689807976366,"n":9},"gm|gm":{"mean":0.965534219596258,"min":0.9645494830132939,"max":0.9675036927621861,"n":3}},"within1":{"ds|ds":{"mean":0.9886755292959134,"min":0.9867060561299852,"max":0.9896602658788775,"n":3},"ds|go":{"mean":0.9699655342195963,"min":0.9645494830132939,"max":0.9734121122599705,"n":9},"ds|gm":{"mean":0.9834236008534384,"min":0.9793205317577548,"max":0.9896602658788775,"n":9},"go|go":{"mean":0.9906450024618415,"min":0.9881831610044313,"max":0.9926144756277696,"n":3},"go|gm":{"mean":0.9642212374856393,"min":0.9571639586410635,"max":0.9704579025110783,"n":9},"gm|gm":{"mean":0.9926144756277696,"min":0.9896602658788775,"max":0.9955686853766618,"n":3}},"wkappa":{"ds|ds":{"mean":0.6600336232911738,"min":0.628560347355576,"max":0.6924839504178948,"n":3},"ds|go":{"mean":0.17090837193416086,"min":0.12624056660753913,"max":0.20322964148948253,"n":9},"ds|gm":{"mean":0.5870010859808741,"min":0.5336075946274754,"max":0.6587392001290439,"n":9},"go|go":{"mean":0.6060325598818491,"min":0.5806003491711877,"max":0.6441879009750262,"n":3},"go|gm":{"mean":0.25637552108160017,"min":0.21859911409769106,"max":0.28636831436145327,"n":9},"gm|gm":{"mean":0.8699979417510453,"min":0.8475983229062122,"max":0.8934453204366924,"n":3}},"spearman":{"ds|ds":{"mean":0.6746304902619522,"min":0.6377032936373046,"max":0.7095385797101335,"n":3},"ds|go":{"mean":0.2278360515226813,"min":0.15972888039664804,"max":0.26781338755334844,"n":9},"ds|gm":{"mean":0.6288116140603615,"min":0.5994610548546265,"max":0.665860309892043,"n":9},"go|go":{"mean":0.5505671559369978,"min":0.5146951193339042,"max":0.5761898738558628,"n":3},"go|gm":{"mean":0.29383328645398726,"min":0.2613918484889646,"max":0.3429816791580327,"n":9},"gm|gm":{"mean":0.9245612080873051,"min":0.9075953294312844,"max":0.9508220016679764,"n":3}}},"arms":{"v1":{"ds":{"dist":[71.38643067846607,26.40117994100295,2.212389380530974,0.0],"yes":{"mean":71.38643067846607,"min":71.23893805309734,"max":71.68141592920354,"n":3}},"go":{"dist":[91.29793510324482,6.194690265486726,2.5073746312684366,0.0],"yes":{"mean":91.29793510324482,"min":90.2654867256637,"max":92.92035398230088,"n":3}},"gm":{"dist":[78.90855457227138,17.25663716814159,3.687315634218289,0.14749262536873156],"yes":{"mean":78.90855457227138,"min":78.31858407079646,"max":79.64601769911505,"n":3}}},"v2":{"ds":{"dist":[81.48148148148148,15.703703703703704,2.814814814814815,0.0],"yes":{"mean":81.48148148148148,"min":80.44444444444444,"max":82.22222222222221,"n":3}},"go":{"dist":[91.4074074074074,6.814814814814815,1.777777777777778,0.0],"yes":{"mean":91.4074074074074,"min":90.22222222222223,"max":92.44444444444444,"n":3}},"gm":{"dist":[87.85185185185185,7.851851851851852,3.555555555555556,0.7407407407407407],"yes":{"mean":87.85185185185185,"min":87.55555555555556,"max":88.0,"n":3}}},"v3":{"ds":{"dist":[85.54572271386431,12.536873156342184,1.9174041297935105,0.0],"yes":{"mean":85.54572271386431,"min":84.070796460177,"max":86.72566371681415,"n":3}},"go":{"dist":[96.01769911504425,2.8023598820059,1.1799410029498525,0.0],"yes":{"mean":96.01769911504425,"min":95.57522123893806,"max":96.90265486725663,"n":3}},"gm":{"dist":[95.57522123893806,1.6224188790560472,2.5073746312684366,0.2949852507374631],"yes":{"mean":95.57522123893806,"min":95.13274336283186,"max":96.01769911504425,"n":3}}}},"fleiss":{"judges_by_run":{"mean":0.32896773584255057,"min":0.3001629274355448,"max":0.367219456217958,"n":27},"judges_consensus":0.34964511441582014,"all_runs":0.42073490386734147,"within":{"ds":0.6484723968321112,"go":0.5174582044129769,"gm":0.8477191614431814}}}};
+const NS = "http://www.w3.org/2000/svg";
+const ARMS = ["v1","v2","v3"];
+const METRICS = ["Standalone","Trustworthiness","Clarity","Usefulness","Care Safety"];
+const J = D.judges;
+const COLOR = {ds:"var(--ds)", go:"var(--go)", gm:"var(--gm)"};
+const NAME = Object.fromEntries(J.map(j=>[j.k,j.name]));
+const pk = (a,b)=>{ const i=J.findIndex(j=>j.k===a), k=J.findIndex(j=>j.k===b); return i<=k ? `${a}|${b}` : `${b}|${a}`; };
+const BETWEEN = []; J.forEach((a,i)=>J.slice(i+1).forEach(b=>BETWEEN.push([a.k,b.k])));
+const dotHTML = k=>`<i class="dot" style="background:${COLOR[k]}"></i>`;
+
+function s(tag, attrs, parent){ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e; }
+function txt(parent, x, y, str, attrs){ const t=s("text",Object.assign({x,y},attrs||{}),parent); t.textContent=str; return t; }
+const fmtPct = v => v.toFixed(1);
+const fmtCoef = v => (v < 0 ? "−" : "") + Math.abs(v).toFixed(2);
+const fmtSigned = v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1);
+
+const tip = document.getElementById("tip");
+function place(x,y){ const r=tip.getBoundingClientRect(); let L=x+14, T=y+14;
+  if(L+r.width>innerWidth-8) L=x-r.width-14; if(T+r.height>innerHeight-8) T=y-r.height-14;
+  tip.style.left=Math.max(8,L)+"px"; tip.style.top=Math.max(8,T)+"px"; }
+function bind(node, text){
+  node.setAttribute("tabindex","0"); node.setAttribute("aria-label",text); node.classList.add("hit");
+  node.addEventListener("pointerenter",e=>{tip.textContent=text; tip.hidden=false; place(e.clientX,e.clientY);});
+  node.addEventListener("pointermove",e=>place(e.clientX,e.clientY));
+  node.addEventListener("pointerleave",()=>{tip.hidden=true;});
+  node.addEventListener("focus",()=>{const r=node.getBoundingClientRect(); tip.textContent=text; tip.hidden=false; place(r.left+r.width/2,r.top);});
+  node.addEventListener("blur",()=>{tip.hidden=true;});
+}
+
+document.getElementById("judgekey").innerHTML = J.map(j=>`<span><i class="sw" style="background:${COLOR[j.k]}"></i>${j.name} <span class="mono" style="color:var(--muted);font-size:.78rem">${j.model}</span></span>`).join("");
+
+/* ---------- 1. pass-rate panels ---------- */
+const PANELS = [
+  {title:"Standalone", key:"Standalone", sub:"% judged understandable on its own"},
+  {title:"Trustworthiness", key:"Trustworthiness", sub:"% judged aligned with the video"},
+  {title:"Clarity", key:"Clarity", sub:"% judged easy for a caregiver to understand"},
+  {title:"Usefulness", key:"Usefulness", sub:"% judged useful or actionable"},
+  {title:"Care Safety", key:"Care Safety", sub:"% with no safety concern"},
+  {title:"Recommend “Yes”", rec:true, sub:"% recommended without edits"},
+];
+const armStat = (p,v,k) => p.rec ? D.recommendation.arms[v][k].yes : D.metrics[p.key].arms[v][k].pass;
+(function(){
+  let lo = 100;
+  for(const p of PANELS) for(const v of ARMS) for(const j of J) lo=Math.min(lo, armStat(p,v,j.k).min);
+  lo = Math.max(0, Math.floor((lo-2)/10)*10);
+  const host=document.getElementById("panels");
+  const W=300,H=196,m={l:32,r:10,t:10,b:26}, hi=100;
+  const y=v=>m.t+(hi-Math.max(lo,Math.min(hi,v)))/(hi-lo)*(H-m.t-m.b);
+  const cx=i=>m.l+(W-m.l-m.r)*(i+0.5)/3;
+  const off=i=>(i-(J.length-1)/2)*14;
+  const ticks=[]; for(let g=lo; g<=100; g+=10) ticks.push(g);
+  for(const p of PANELS){
+    const fig=document.createElement("figure"); fig.className="panel";
+    fig.innerHTML=`<h3>${p.title}</h3><span class="sub">${p.sub}</span>`;
+    const svg=s("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`${p.title} pass rates by prompt version`},fig);
+    for(const g of ticks){
+      s("line",{x1:m.l,x2:W-m.r,y1:y(g),y2:y(g),style:`stroke:${g===lo?"var(--line-2)":"var(--line)"};stroke-width:1`},svg);
+      txt(svg,m.l-6,y(g)+3.5,String(g),{"text-anchor":"end",style:"fill:var(--muted)"});
+    }
+    ARMS.forEach((v,i)=>txt(svg,cx(i),H-8,v,{"text-anchor":"middle",style:"fill:var(--muted)"}));
+    J.forEach((j,ji)=>{
+      const pts=ARMS.map((v,i)=>[cx(i)+off(ji), y(armStat(p,v,j.k).mean)]);
+      s("polyline",{points:pts.map(q=>q.join(",")).join(" "),style:`fill:none;stroke:${COLOR[j.k]};stroke-width:1.5;opacity:.5`},svg);
+    });
+    J.forEach((j,ji)=>{
+      ARMS.forEach((v,i)=>{
+        const a=armStat(p,v,j.k), x=cx(i)+off(ji);
+        s("line",{x1:x,x2:x,y1:y(a.max)-0.5,y2:y(a.min)+0.5,style:`stroke:${COLOR[j.k]};stroke-width:7;stroke-linecap:round;opacity:.22`},svg);
+        s("circle",{cx:x,cy:y(a.mean),r:4.5,style:`fill:${COLOR[j.k]};stroke:var(--surface);stroke-width:2`},svg);
+        const hit=s("circle",{cx:x,cy:y(a.mean),r:11,style:"fill:transparent"},svg);
+        bind(hit,`${j.name}, ${v}: ${fmtPct(a.mean)}% (runs ${fmtPct(a.min)}–${fmtPct(a.max)})`);
+      });
+    });
+    const d=document.createElement("div"); d.className="delta";
+    d.innerHTML=`<span>v1→v3</span>`+J.map(j=>`<span>${dotHTML(j.k)}${j.name} <b class="num">${fmtSigned(armStat(p,"v3",j.k).mean-armStat(p,"v1",j.k).mean)}</b></span>`).join("");
+    fig.appendChild(d); host.appendChild(fig);
+  }
+  const cols=J.length+BETWEEN.length+1;
+  let h=`<caption>Pass rate per prompt version: mean of three runs, run range beneath. Agreement columns give the share of pairs where one judge's run and the other's gave the same verdict, averaged over all nine run pairings.</caption>
+  <thead><tr><th>Prompt</th>${J.map(j=>`<th>${j.name}</th>`).join("")}${BETWEEN.map(([a,b])=>`<th>Agree ${NAME[a]} · ${NAME[b]}</th>`).join("")}</tr></thead><tbody>`;
+  for(const p of PANELS){
+    h+=`<tr class="grp"><td colspan="${cols}">${p.title}</td></tr>`;
+    for(const v of ARMS){
+      h+=`<tr><td>${v}</td>`;
+      for(const j of J){ const a=armStat(p,v,j.k); h+=`<td class="num">${fmtPct(a.mean)}<br><span class="rng">${fmtPct(a.min)}–${fmtPct(a.max)}</span></td>`; }
+      for(const [a,b] of BETWEEN){
+        const ag = p.rec ? null : D.metrics[p.key].arms[v].pair_agree[pk(a,b)];
+        h+=`<td class="num">${ag?fmtPct(ag.mean*100)+"%":"<span class='rng'>—</span>"}</td>`;
+      }
+      h+="</tr>";
+    }
+  }
+  document.getElementById("armtbl").innerHTML=h+"</tbody>";
+})();
+
+/* ---------- 2. agreement matrices ---------- */
+const STATS = [
+  {k:"agreement", label:"Raw agreement", kind:"bin", lo:0.5, pct:true,
+   desc:"Share of pairs where the two raters gave the same Yes/No verdict. High everywhere because most pairs pass."},
+  {k:"kappa", label:"Cohen's κ", kind:"bin", lo:0,
+   desc:"Agreement on the Yes/No verdict beyond chance. Informative for Trustworthiness and Standalone; near zero elsewhere because almost every pair passes."},
+  {k:"ac1", label:"Gwet's AC1", kind:"bin", lo:0.5,
+   desc:"Chance-corrected agreement on the Yes/No verdict that stays stable when nearly every pair passes."},
+  {k:"exact", label:"Exact rating", kind:"attr", lo:0.5, pct:true,
+   desc:"Share of pairs given the same 4-level rating. Care Safety has no rating scale; Recommendation uses its 4-level answer."},
+  {k:"within1", label:"Within one level", kind:"attr", lo:0.5, pct:true,
+   desc:"Share of pairs whose 4-level ratings are at most one level apart."},
+  {k:"wkappa", label:"Weighted κ", kind:"attr", lo:0,
+   desc:"Quadratic-weighted κ on the 4-level rating: a one-level miss counts a little, a three-level miss counts a lot."},
+  {k:"spearman", label:"Spearman ρ", kind:"attr", lo:0,
+   desc:"Whether two raters order pairs the same way on the 4-level rating."},
+];
+const ROWS = ["Standalone","Trustworthiness","Clarity","Usefulness","Care Safety","Recommendation"];
+function statTable(row, st){
+  if(row==="Recommendation") return st.kind==="attr" ? D.recommendation.stats[st.k] : null;
+  const m=D.metrics[row]; return m.stats[st.k] || null;
+}
+function drawMatrices(st){
+  const host=document.getElementById("mgrid"); host.innerHTML="";
+  const f = st.pct ? (q=>fmtPct(q*100)) : fmtCoef;
+  for(const row of ROWS){
+    const T=statTable(row,st);
+    const card=document.createElement("div"); card.className="mcard";
+    if(!T){ card.innerHTML=`<h3>${row}</h3><p class="note">${row==="Recommendation"?"Four-level outcome; switch to a rating statistic.":"No 4-level rating for this metric."}</p>`; host.appendChild(card); continue; }
+    let h=`<h3>${row}</h3><table class="mx"><thead><tr><th></th>${J.map(j=>`<th>${dotHTML(j.k)}${j.name}</th>`).join("")}</tr></thead><tbody>`;
+    J.forEach((r,i)=>{
+      h+=`<tr><th>${dotHTML(r.k)}${r.name}</th>`;
+      J.forEach((c,k)=>{
+        if(k>i){ h+=`<td class="blank"></td>`; return; }
+        const v=T[pk(r.k,c.k)], self=(k===i);
+        if(!v){ h+=`<td class="na ${self?"self":""}" title="Undefined: that judge gave every pair the same verdict in every run">undef.</td>`; return; }
+        const p=Math.max(0,Math.min(1,(v.mean-st.lo)/(1-st.lo)));
+        const pc=Math.round(6+p*78);
+        const label=self?`${r.name} vs itself`:`${c.name} vs ${r.name}`;
+        h+=`<td class="${self?"self":""}" style="background:color-mix(in srgb, var(--ink) ${pc}%, var(--surface));color:${pc>48?"var(--surface)":"var(--ink)"}" title="${row} · ${label}: ${f(v.mean)}${st.pct?"%":""} (range ${f(v.min)} to ${f(v.max)})">${f(v.mean)}</td>`;
+      });
+      h+="</tr>";
+    });
+    card.innerHTML=h+"</tbody></table>"; host.appendChild(card);
+  }
+  document.getElementById("statdesc").textContent = st.desc + (st.pct ? " Values are percentages." : "");
+}
+(function(){
+  const seg=document.getElementById("statseg");
+  STATS.forEach((st,i)=>{
+    const b=document.createElement("button"); b.type="button"; b.id="stat-"+st.k; b.textContent=st.label;
+    b.setAttribute("aria-pressed",i===1?"true":"false");
+    b.addEventListener("click",()=>{ seg.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false")); b.setAttribute("aria-pressed","true"); drawMatrices(st); });
+    seg.appendChild(b);
+  });
+  drawMatrices(STATS[1]);
+})();
+
+/* ---------- 2b. Fleiss' kappa ---------- */
+(function(){
+  const one = v => v==null ? `<td class="num"><span class="rng">undefined</span></td>` : `<td class="num">${fmtCoef(v)}</td>`;
+  const rng = v => v==null ? `<td class="num"><span class="rng">undefined</span></td>`
+    : `<td class="num">${fmtCoef(v.mean)}<br><span class="rng">${fmtCoef(v.min)} – ${fmtCoef(v.max)}</span></td>`;
+  const head = cap => `<caption>${cap}</caption><thead><tr><th>Metric</th><th>All judges, one run each</th><th>Judges' consensus</th><th>Every run</th>${J.map(j=>`<th>Within ${j.name}</th>`).join("")}</tr></thead><tbody>`;
+  const row = (name,F) => `<tr><td>${name}</td>${rng(F.judges_by_run)}${one(F.judges_consensus)}${one(F.all_runs)}${J.map(j=>one(F.within[j.k])).join("")}</tr>`;
+  let v=head("Yes/No verdict");
+  for(const m of METRICS) v+=row(m, D.metrics[m].fleiss.verdict);
+  document.getElementById("fleissv").innerHTML=v+"</tbody>";
+  let r=head("4-level rating");
+  for(const m of METRICS) if(D.metrics[m].fleiss.rating) r+=row(m, D.metrics[m].fleiss.rating);
+  r+=row("Recommendation", D.recommendation.fleiss);
+  document.getElementById("fleissr").innerHTML=r+"</tbody>";
+})();
+
+/* ---------- 3. direction of disagreement ---------- */
+(function(){
+  const host=document.getElementById("divs");
+  let gmax=0;
+  for(const [a,b] of BETWEEN) for(const m of METRICS){ const c=D.metrics[m].consensus[pk(a,b)]; gmax=Math.max(gmax,c.a_fail_b_pass,c.a_pass_b_fail); }
+  const max=Math.max(10,Math.ceil(gmax/10)*10);
+  for(const [a,b] of BETWEEN){
+    const wrap=document.createElement("div"); wrap.className="chart";
+    wrap.innerHTML=`<h3>${dotHTML(a)}${NAME[a]} and ${dotHTML(b)}${NAME[b]}</h3>`;
+    const sc=document.createElement("div"); sc.className="scroll";
+    const svg=s("svg",{role:"img","aria-label":`Disagreements between ${NAME[a]} and ${NAME[b]}`},sc); wrap.appendChild(sc);
+    const rows=METRICS.map(m=>{ const c=D.metrics[m].consensus[pk(a,b)]; return {m, l:c.a_fail_b_pass, r:c.a_pass_b_fail}; });
+    const W=680,left=150,right=24,top=30,rowH=32,H=top+rows.length*rowH+4;
+    svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+    const center=left+(W-left-right)/2, half=(W-left-right)/2-34, scl=v=>v/max*half;
+    txt(svg,center-8,top-12,`${NAME[a]} fails, ${NAME[b]} passes`,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2);font-size:12px"});
+    txt(svg,center+8,top-12,`${NAME[b]} fails, ${NAME[a]} passes`,{"text-anchor":"start",class:"lbl",style:"fill:var(--ink-2);font-size:12px"});
+    s("line",{x1:center,x2:center,y1:top-4,y2:H-2,style:"stroke:var(--line-2);stroke-width:1"},svg);
+    rows.forEach((r,i)=>{
+      const cy=top+i*rowH+rowH/2, bh=14;
+      txt(svg,left-12,cy+4,r.m,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2)"});
+      const wl=scl(r.l), wr=scl(r.r);
+      if(wl>0){ const q=s("rect",{x:center-wl,y:cy-bh/2,width:wl,height:bh,rx:2,style:`fill:${COLOR[a]}`},svg); bind(q,`${r.m}: ${r.l} pairs ${NAME[a]} fails and ${NAME[b]} passes`); }
+      if(wr>0){ const q=s("rect",{x:center,y:cy-bh/2,width:wr,height:bh,rx:2,style:`fill:${COLOR[b]}`},svg); bind(q,`${r.m}: ${r.r} pairs ${NAME[b]} fails and ${NAME[a]} passes`); }
+      txt(svg,center-wl-6,cy+4,String(r.l),{"text-anchor":"end",style:"fill:var(--ink)"});
+      txt(svg,center+wr+6,cy+4,String(r.r),{"text-anchor":"start",style:"fill:var(--ink)"});
+    });
+    const tl=rows.reduce((t,r)=>t+r.l,0), tr=rows.reduce((t,r)=>t+r.r,0);
+    const n=document.createElement("p"); n.className="note";
+    n.textContent=`Across the five metrics: ${tl} pairs where ${NAME[a]} is the stricter judge, ${tr} where ${NAME[b]} is. Counts are out of 677 pairs.`;
+    wrap.appendChild(n); host.appendChild(wrap);
+  }
+})();
+
+/* ---------- 4. crosstabs ---------- */
+const SHORT={
+  "Trustworthiness":["Excellent","Good","Fair","Poor"],
+  "Clarity":["Very easy","Easy","Somewhat difficult","Difficult"],
+  "Usefulness":["Highly useful","Useful","Limited","Not useful"],
+  "Standalone":["Fully","Mostly","Somewhat dependent","Not standalone"]};
+function drawX(a,b){
+  const host=document.getElementById("xgrid"); host.innerHTML="";
+  for(const m of ["Standalone","Trustworthiness","Clarity","Usefulness"]){
+    const c=D.metrics[m].consensus[pk(a,b)], lab=SHORT[m];
+    // consensus is stored in judge order; flip when the chosen order differs
+    let ct=c.crosstab; const flipped = pk(a,b)!==`${a}|${b}`;
+    if(flipped) ct=ct[0].map((_,j)=>ct.map(r=>r[j]));
+    let mx=0,colHi=0,rowHi=0,same=0;
+    ct.forEach((r,i)=>r.forEach((v,j)=>{ mx=Math.max(mx,v); if(i===j) same+=v; else if(j<i) colHi+=v; else rowHi+=v; }));
+    let t=`<table class="xt"><thead><tr><th class="corner">${NAME[a]} ↓ · ${NAME[b]} →</th>${lab.map(l=>`<th>${l}</th>`).join("")}</tr></thead><tbody>`;
+    ct.forEach((r,i)=>{
+      t+=`<tr><th style="text-align:left">${lab[i]}</th>`;
+      r.forEach((v,j)=>{
+        const p = v===0 ? 0 : Math.round(10+Math.sqrt(v/mx)*78);
+        const bg = v===0 ? "var(--bg)" : `color-mix(in srgb, var(--ink) ${p}%, var(--surface))`;
+        const fg = p>50 ? "var(--surface)" : "var(--ink)";
+        t+=`<td class="${i===j?"diag":""} ${v===0?"zero":""}" style="background:${bg};${v?`color:${fg}`:""}" title="${NAME[a]} ${lab[i]}, ${NAME[b]} ${lab[j]}: ${v} pairs">${v}</td>`;
+      });
+      t+="</tr>";
+    });
+    t+="</tbody></table>";
+    const card=document.createElement("div"); card.className="xcard";
+    card.innerHTML=`<h3>${m}</h3><p class="tally">Same rating <b class="num">${same}</b> · ${NAME[b]} higher <b class="num">${colHi}</b> · ${NAME[a]} higher <b class="num">${rowHi}</b> <span class="rng">(weighted κ ${fmtCoef(c.attr_wkappa)})</span></p>${t}`;
+    host.appendChild(card);
+  }
+}
+(function(){
+  const seg=document.getElementById("pairseg");
+  const def = BETWEEN.findIndex(([a,b])=>a==="ds"&&b==="gm");
+  const start = def>=0 ? def : 0;
+  BETWEEN.forEach(([a,b],i)=>{
+    const btn=document.createElement("button"); btn.type="button"; btn.id=`pair-${a}-${b}`;
+    btn.innerHTML=`${NAME[a]} vs ${NAME[b]}`;
+    btn.setAttribute("aria-pressed",i===start?"true":"false");
+    btn.addEventListener("click",()=>{ seg.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false")); btn.setAttribute("aria-pressed","true"); drawX(a,b); });
+    seg.appendChild(btn);
+  });
+  drawX(...BETWEEN[start]);
+})();
+
+/* ---------- 5. error labels ---------- */
+(function(){
+  let gmax=0;
+  for(const m of METRICS) for(const j of J){ const e=D.metrics[m].errors[j.k]; for(const k in e) gmax=Math.max(gmax,e[k]); }
+  const bar=(v,c)=>`<span class="ebar"><span class="num">${v.toFixed(2)}%</span><i style="width:${v>0?Math.max(2,v/gmax*80):0}px;background:${c}"></i></span>`;
+  let h=`<thead><tr><th>Metric</th><th>Error label</th>${J.map(j=>`<th>${j.name}</th>`).join("")}</tr></thead><tbody>`;
+  for(const m of METRICS){
+    const E=D.metrics[m].errors;
+    const keys=[...new Set(J.flatMap(j=>Object.keys(E[j.k])))].sort((x,y)=>J.reduce((t,j)=>t+(E[j.k][y]||0)-(E[j.k][x]||0),0));
+    keys.forEach((k,i)=>{
+      h+=`<tr><td>${i===0?`<b>${m}</b>`:""}</td><td style="text-align:left;white-space:normal">${k}</td>${J.map(j=>`<td>${bar(E[j.k][k]||0,COLOR[j.k])}</td>`).join("")}</tr>`;
+    });
+  }
+  document.getElementById("errtbl").innerHTML=h+"</tbody>";
+})();
+
+/* ---------- 6. recommendation ---------- */
+(function(){
+  const LV=["Yes","Yes, with minor edits","No, needs major edits","No"];
+  const COL=["color-mix(in srgb, var(--ink) 82%, var(--surface))","color-mix(in srgb, var(--ink) 50%, var(--surface))",
+             "color-mix(in srgb, var(--ink) 26%, var(--surface))","color-mix(in srgb, var(--ink) 12%, var(--surface))"];
+  const FG=["var(--surface)","var(--surface)","var(--ink)","var(--ink)"];
+  document.getElementById("reckey").innerHTML=LV.map((l,i)=>`<span><i class="sw" style="border-radius:2px;background:${COL[i]}"></i>${l}</span>`).join("");
+  const svg=document.getElementById("recchart");
+  const W=680,left=150,right=24,top=6,bh=18,gap=5,group=14;
+  const rows=[]; ARMS.forEach(v=>J.forEach(j=>rows.push({v,j})));
+  const H=top+rows.length*(bh+gap)+(ARMS.length-1)*group+4; svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const bw=W-left-right; let y=top;
+  rows.forEach((r,i)=>{
+    if(i>0 && i%J.length===0) y+=group;
+    const dist=D.recommendation.arms[r.v][r.j.k].dist;
+    s("circle",{cx:left-8,cy:y+bh/2,r:3.5,style:`fill:${COLOR[r.j.k]}`},svg);
+    txt(svg,left-16,y+bh/2+4,`${r.v} · ${r.j.name}`,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2)"});
+    let x=left;
+    dist.forEach((val,k)=>{
+      const w=val/100*bw; if(w<=0) return;
+      const rr=s("rect",{x:x,y:y,width:Math.max(0,w-2),height:bh,style:`fill:${COL[k]}`},svg);
+      bind(rr,`${r.v}, ${r.j.name}: ${LV[k]} ${fmtPct(val)}%`);
+      if(w>40) txt(svg,x+w/2-1,y+bh/2+4,Math.round(val)+"%",{"text-anchor":"middle",style:`fill:${FG[k]}`});
+      x+=w;
+    });
+    y+=bh+gap;
+  });
+})();
+
+/* ---------- 7. full table ---------- */
+(function(){
+  const ORDER = []; J.forEach((a,i)=>J.slice(i).forEach(b=>ORDER.push([a.k,b.k])));
+  const head = ORDER.map(([a,b])=>a===b?`${NAME[a]} vs itself`:`${NAME[a]} vs ${NAME[b]}`);
+  const cell=(v,pct)=>{ if(!v) return `<td class="num"><span class="rng">undefined</span></td>`;
+    const f=pct?(q=>fmtPct(q*100)+"%"):fmtCoef;
+    return `<td class="num">${f(v.mean)}<br><span class="rng">${f(v.min)} – ${f(v.max)}</span></td>`; };
+  let h=`<thead><tr><th>Statistic</th>${head.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>`;
+  for(const row of ROWS){
+    h+=`<tr class="grp"><td colspan="${ORDER.length+1}">${row}</td></tr>`;
+    for(const st of STATS){
+      const T=statTable(row,st); if(!T) continue;
+      h+=`<tr><td>${st.label}${st.kind==="attr"&&row!=="Recommendation"?" <span class='rng'>(rating)</span>":""}</td>${ORDER.map(([a,b])=>cell(T[pk(a,b)],st.pct)).join("")}</tr>`;
+    }
+  }
+  document.getElementById("fulltbl").innerHTML=h+"</tbody>";
+})();
+</script>
+
+</body></html>
