@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What should you do first when you notice changes in a person that might be dementia?",
+    "answer": "First, determine if there is a change and whether it's normal for the individual. Don't jump to conclusions; get a proper medical evaluation to rule out other causes like depression, hypothyroidism, or medication issues.",
+    "timestamp": "0:15-0:28",
+    "time_start_sec": 15,
+    "time_end_sec": 28
+  },
+  {
+    "question": "Why is it important not to immediately assume someone has Alzheimer's when you suspect dementia?",
+    "answer": "It's important because dementia is an umbrella term covering approximately 85 to 90 different conditions. Alzheimer's is just one of many possibilities, and assuming it without proper diagnosis can lead to incorrect treatment and misunderstanding of the condition.",
+    "timestamp": "1:26-1:43",
+    "time_start_sec": 86,
+    "time_end_sec": 103
+  },
+  {
+    "question": "How long can someone live with dementia symptoms on average?",
+    "answer": "On average, people with dementia experience symptoms for about 8 to 12 years. This duration can vary but is generally a significant period during which they need support and care.",
+    "timestamp": "3:43-3:57",
+    "time_start_sec": 223,
+    "time_end_sec": 237
+  },
+  {
+    "question": "What impact does dementia have beyond the person experiencing it?",
+    "answer": "Dementia impacts everyone around the person, including family members and caregivers. It's not just about the individual but also requires adjustments and support from those living with them.",
+    "timestamp": "4:34-4:46",
+    "time_start_sec": 274,
+    "time_end_sec": 286
+  }
+]

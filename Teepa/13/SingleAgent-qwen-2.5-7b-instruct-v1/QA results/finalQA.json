@@ -1,0 +1,79 @@
+[
+  {
+    "question": "Have you ever forgotten a neighbor's name?",
+    "answer": "Yes, it can happen when you see someone frequently but suddenly their name escapes you.",
+    "timestamp": "1:01-1:07",
+    "time_start_sec": 61,
+    "time_end_sec": 67
+  },
+  {
+    "question": "Have you ever left your keys in the freezer?",
+    "answer": "Leaving keys in the freezer is a common mistake, but it’s not as frequent as forgetting where you parked your car.",
+    "timestamp": "1:18-1:21",
+    "time_start_sec": 78,
+    "time_end_sec": 81
+  },
+  {
+    "question": "What are some signs that might indicate something other than normal aging?",
+    "answer": "Noticing changes happening more frequently and noticing them yourself or others around you can be a sign of something other than normal aging.",
+    "timestamp": "8:33-9:07",
+    "time_start_sec": 513,
+    "time_end_sec": 547
+  },
+  {
+    "question": "How much can a healthy brain hold in working memory?",
+    "answer": "A healthy brain can hold five to eight items at one time, meaning it can process up to eight things simultaneously.",
+    "timestamp": "7:14-7:26",
+    "time_start_sec": 434,
+    "time_end_sec": 446
+  },
+  {
+    "question": "When should you start getting curious about these signs?",
+    "answer": "If you notice these signs happening more frequently and they seem like a recent change, it’s a good time to start getting curious.",
+    "timestamp": "8:33-9:07",
+    "time_start_sec": 513,
+    "time_end_sec": 547
+  },
+  {
+    "question": "What are some compensatory strategies people might use?",
+    "answer": "People might rely on calendars, pneumonic devices, or other methods to help them remember things, and if these strategies are no longer effective, it could be a sign of concern.",
+    "timestamp": "11:02-11:11",
+    "time_start_sec": 662,
+    "time_end_sec": 671
+  },
+  {
+    "question": "How does dementia affect awareness of changes?",
+    "answer": "About half of people with dementia are aware that changes are happening, while the other half are not aware, so you might be the first to notice changes.",
+    "timestamp": "9:20-9:28",
+    "time_start_sec": 560,
+    "time_end_sec": 568
+  },
+  {
+    "question": "What should you do if you notice changes in your routine?",
+    "answer": "Consider whether there have been any new medications or routines started recently, and think about how these changes might be affecting your ability to function normally.",
+    "timestamp": "10:01-10:18",
+    "time_start_sec": 601,
+    "time_end_sec": 618
+  },
+  {
+    "question": "Can older brains learn new things?",
+    "answer": "Older brains can still learn new things, but it may take a bit longer compared to younger brains.",
+    "timestamp": "12:28-12:35",
+    "time_start_sec": 748,
+    "time_end_sec": 755
+  },
+  {
+    "question": "What resources are available for learning more about normal aging?",
+    "answer": "There are webinars starting on April 13th and subscription services called Tias Clips, which offer free consultations and detailed content on normal aging.",
+    "timestamp": "13:03-13:23",
+    "time_start_sec": 783,
+    "time_end_sec": 803
+  },
+  {
+    "question": "How can you tell if changes are due to normal aging or something else?",
+    "answer": "If changes are part of a pattern and not just occasional lapses, it’s important to ask questions and consider if there are underlying issues beyond normal aging.",
+    "timestamp": "12:53-12:59",
+    "time_start_sec": 773,
+    "time_end_sec": 779
+  }
+]

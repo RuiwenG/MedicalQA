@@ -1,0 +1,86 @@
+[
+  {
+    "question": "Can you take me back to when Mr. Jones first came into the building?",
+    "answer": "When Mr. Jones first came in, he did a lot of walking and there were pockets of this behavior but not really significant.",
+    "timestamp": "2:11-2:20",
+    "time_start_sec": 131,
+    "time_end_sec": 140
+  },
+  {
+    "question": "What does Mr. Jones do after meals that leads to him taking off his clothes?",
+    "answer": "He usually takes off his clothes after meals and in the common areas where they haven't been closely monitored.",
+    "timestamp": "3:12-3:28",
+    "time_start_sec": 192,
+    "time_end_sec": 208
+  },
+  {
+    "question": "How does Mr. Jones typically react when you try to get him back to the common area?",
+    "answer": "He quickly removes all his clothes and goes into the public area when told to come back.",
+    "timestamp": "4:08-4:14",
+    "time_start_sec": 248,
+    "time_end_sec": 254
+  },
+  {
+    "question": "Does Mr. Jones seem to watch TV when you bring him to the common area?",
+    "answer": "When brought to the common area, he seems fine for a bit, but then within moments, he's naked and in the public area.",
+    "timestamp": "3:36-3:59",
+    "time_start_sec": 216,
+    "time_end_sec": 239
+  },
+  {
+    "question": "Is Mr. Jones able to dress himself or button/unbutton clothes?",
+    "answer": "No, at this point, they're doing all the dressing for him.",
+    "timestamp": "5:02-5:06",
+    "time_start_sec": 302,
+    "time_end_sec": 306
+  },
+  {
+    "question": "What kind of foods is Mr. Jones able to eat now?",
+    "answer": "He used to use utensils but now they're moving towards finger foods.",
+    "timestamp": "5:08-5:16",
+    "time_start_sec": 308,
+    "time_end_sec": 316
+  },
+  {
+    "question": "Why might Mr. Jones be taking off his clothes after eating and drinking?",
+    "answer": "He might be uncomfortable due to body temperature changes and the urge to relieve himself, leading him to remove clothes without realizing it's inappropriate.",
+    "timestamp": "6:59-7:28",
+    "time_start_sec": 419,
+    "time_end_sec": 448
+  },
+  {
+    "question": "Could Mr. Jones be seeking help from others by chasing people?",
+    "answer": "Yes, it's possible he's chasing people to get help, as he may not know how to address his discomfort.",
+    "timestamp": "7:31-7:35",
+    "time_start_sec": 451,
+    "time_end_sec": 455
+  },
+  {
+    "question": "How specific is Mr. Jones about his food preferences?",
+    "answer": "He's very specific about textures and temperatures of food, which can change from day to day.",
+    "timestamp": "8:02-8:15",
+    "time_start_sec": 482,
+    "time_end_sec": 495
+  },
+  {
+    "question": "What might happen if Mr. Jones doesn't like the texture of his shirt?",
+    "answer": "He would pull off the shirt because he doesn't like how it feels, similar to how he wouldn't keep mashed potatoes if he didn't like their taste.",
+    "timestamp": "8:28-8:44",
+    "time_start_sec": 508,
+    "time_end_sec": 524
+  },
+  {
+    "question": "How might Mr. Jones react if the waistband of his pants is uncomfortable?",
+    "answer": "He might dig at the waistband and run his hand down his front because he doesn't like how his pants are fitting.",
+    "timestamp": "8:58-9:08",
+    "time_start_sec": 538,
+    "time_end_sec": 548
+  },
+  {
+    "question": "What does the speaker suggest about the environment and staff presence during meal times?",
+    "answer": "There should be designated monitors in waiting areas after meals to ensure everyone's safety and well-being.",
+    "timestamp": "11:40-12:07",
+    "time_start_sec": 700,
+    "time_end_sec": 727
+  }
+]

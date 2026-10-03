@@ -103,6 +103,18 @@ class QAParser:
             if question_pattern.match(line):
                 # Extract question text after ":" if present
                 question = re.sub(question_pattern, "", line, count=1).strip()
+            else:
+                # A non-question line (e.g. a "Timestamp N:" line the model put
+                # before its question) must not open a pair when a question line
+                # follows before the next answer, or that question is skipped.
+                k = i + 1
+                while k < len(lines) and not answer_pattern.match(lines[k].strip()):
+                    if question_pattern.match(lines[k].strip()):
+                        break
+                    k += 1
+                if k < len(lines) and question_pattern.match(lines[k].strip()):
+                    i = k
+                    continue
 
             # Look for answer
             answer_lines = []
