@@ -106,9 +106,19 @@ class QAParser:
 
             # Look for answer
             answer_lines = []
+            # Text between a bare "Question N:" label and the answer: smaller
+            # models put the question on the line after its label.
+            question_lines = []
             j = i + 1
             while j < len(lines):
                 next_line = lines[j].strip()
+                if (
+                    question == ""
+                    and next_line
+                    and not answer_pattern.match(next_line)
+                    and not timestamp_pattern.match(next_line)
+                ):
+                    question_lines.append(next_line)
                 if answer_pattern.match(next_line):
                     # if next_line.lower().startswith(("answer", "a:")):
                     if ":" in next_line:
@@ -134,7 +144,9 @@ class QAParser:
                 j += 1
 
             if answer_lines:
-                answer = " ".join(answer_lines)
+                answer = " ".join(x for x in answer_lines if x)
+                if question == "" and question_lines:
+                    question = " ".join(question_lines)
                 qa_pairs.append({"question": question, "answer": answer})
                 i = j - 1  # Skip processed lines
             i += 1

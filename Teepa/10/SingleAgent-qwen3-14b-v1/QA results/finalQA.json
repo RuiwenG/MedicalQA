@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What can cause a person with dementia to feel confused about their surroundings?",
+    "answer": "A person with dementia may feel confused because their brain has trouble processing and understanding visual information, especially colors. This can make things like maps or environments look strange or unclear, which can be very confusing.",
+    "timestamp": "0:22-0:54",
+    "time_start_sec": 22,
+    "time_end_sec": 54
+  },
+  {
+    "question": "Why might someone with dementia have trouble eating or enjoying food?",
+    "answer": "Someone with dementia might find food unappealing because their brain processes taste differently. They may not enjoy the taste of food anymore and only eat what their brain automatically accepts, even if it doesn’t feel good or satisfying.",
+    "timestamp": "1:45-2:16",
+    "time_start_sec": 105,
+    "time_end_sec": 136
+  },
+  {
+    "question": "What kind of strange experiences can people with dementia have, and how should caregivers respond?",
+    "answer": "People with dementia may experience hallucinations, such as seeing distorted faces or unusual colors, or they may smell things that aren’t there. Caregivers should not try to correct these experiences but instead offer reassurance and comfort, as these feelings are real to the person.",
+    "timestamp": "1:00-1:13",
+    "time_start_sec": 60,
+    "time_end_sec": 73
+  },
+  {
+    "question": "Why might a person with dementia find touch or water painful?",
+    "answer": "A person with dementia may find touch or water painful because their brain processes sensory input differently. For example, shower water might feel like needles hitting their body, and physical contact can feel uncomfortable or even hurtful. Caregivers should be gentle and considerate when helping with personal care.",
+    "timestamp": "2:55-3:12",
+    "time_start_sec": 175,
+    "time_end_sec": 192
+  }
+]

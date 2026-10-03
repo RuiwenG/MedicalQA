@@ -1,0 +1,101 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v2",
+  "model": "qwen/qwen3-14b",
+  "backend": "api",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "provider": {
+    "order": [
+      "Alibaba"
+    ],
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v2",
+  "prompt_format": "filled",
+  "prompt_format_note": "Format line changed to show placeholders after each label (\"Question 1: <question text>\", ...); quality criteria verbatim. With the original bare labels this model left the question out.",
+  "generated_utc": "2026-10-03T06:26:35Z",
+  "seed": 42,
+  "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+  "videos": [
+    {
+      "base": "Master",
+      "id": 1,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 15,
+      "expected": 15
+    },
+    {
+      "base": "Master",
+      "id": 2,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "Master",
+      "id": 3,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "Master",
+      "id": 4,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10
+    },
+    {
+      "base": "Master",
+      "id": 5,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "Master",
+      "id": 6,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "Master",
+      "id": 7,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "Master",
+      "id": 8,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "Master",
+      "id": 9,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 13,
+      "expected": 13
+    },
+    {
+      "base": "Master",
+      "id": 10,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    }
+  ]
+}

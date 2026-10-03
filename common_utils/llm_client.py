@@ -96,6 +96,12 @@ class QwenAPIClient:
         # default; leaving it on would multiply the output-token bill and slow
         # every call, and these pipelines never use the reasoning trace.
         self.thinking_param = os.getenv("QWEN_THINKING_PARAM", "dashscope").lower()
+        # OpenRouter only: pin the serving provider and weight precision, e.g.
+        # QWEN_OR_PROVIDER=DeepInfra QWEN_OR_QUANT=fp8. Unpinned, OpenRouter
+        # spreads calls over every provider (int4 to bf16), so two runs of the
+        # same prompt can come from differently quantised weights.
+        self.or_provider = [x.strip() for x in os.getenv("QWEN_OR_PROVIDER", "").split(",") if x.strip()]
+        self.or_quant = [x.strip() for x in os.getenv("QWEN_OR_QUANT", "").split(",") if x.strip()]
         self.max_retries = max_retries
         self._client = OpenAI(
             api_key=key, base_url=self.base_url, timeout=timeout, max_retries=max_retries
@@ -147,6 +153,17 @@ class QwenAPIClient:
             extra["reasoning"] = {"enabled": False}
         if repetition_penalty is not None:
             extra["repetition_penalty"] = repetition_penalty
+        if "openrouter.ai" in self.base_url and (self.or_provider or self.or_quant):
+            # No require_parameters: Alibaba, the only provider of Qwen3.5-Plus and
+            # the only Qwen3-14B host that honours reasoning=off, rejects
+            # repetition_penalty, so requiring it would leave no endpoint. It was
+            # silently dropped in every earlier OpenRouter run too.
+            provider: Dict = {"allow_fallbacks": False}
+            if self.or_provider:
+                provider["order"] = self.or_provider
+            if self.or_quant:
+                provider["quantizations"] = self.or_quant
+            extra["provider"] = provider
         return extra
 
     def chat(
