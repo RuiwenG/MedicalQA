@@ -63,7 +63,7 @@ def stats(subj):
 def summarise(pool):
     out = {}
     for metric in F.METRICS:
-        per = [stats(subjects(metric, c, pool)) for c in itertools.product(range(3), repeat=3)]
+        per = [stats(subjects(metric, c, pool)) for c in itertools.product(*[range(len(runs[j])) for j in judges])]
         out[metric] = {k: {"mean": st.mean([p[k] for p in per if p[k] is not None]),
                            "min": min(p[k] for p in per if p[k] is not None),
                            "max": max(p[k] for p in per if p[k] is not None)} for k in per[0]}
