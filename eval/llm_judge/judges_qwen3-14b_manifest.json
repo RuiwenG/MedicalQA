@@ -1,0 +1,40 @@
+{
+ "generator": "qwen/qwen3-14b (OpenRouter, Alibaba, reasoning off, seed 42, filled format line)",
+ "arms": {
+  "SingleAgent-qwen3-14b-v1": "v1",
+  "SingleAgent-qwen3-14b-v2": "v2",
+  "SingleAgent-qwen3-14b-v3": "v3"
+ },
+ "judges": [
+  {
+   "k": "ds",
+   "name": "DeepSeek",
+   "model": "deepseek-v4-pro",
+   "runs": [
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run1_full_Eval_20261002_232921_43326.csv",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run2_full_Eval_20261002_232927_43454.csv",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run3_full_Eval_20261002_232933_43582.csv"
+   ]
+  },
+  {
+   "k": "go",
+   "name": "gpt-oss",
+   "model": "openai/gpt-oss-120b",
+   "runs": [
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run1_full_Eval_20261002_232923_43366.csv",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run2_full_Eval_20261002_232929_43501.csv",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run3_full_Eval_20261002_232935_43633.csv"
+   ]
+  },
+  {
+   "k": "gm",
+   "name": "Gemma 4",
+   "model": "google/gemma-4-31b-it",
+   "runs": [
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run1_full_Eval_20261002_232925_43413.csv",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run2_full_Eval_20261002_232931_43545.csv",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run3_full_Eval_20261002_232937_43673.csv"
+   ]
+  }
+ ]
+}

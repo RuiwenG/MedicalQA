@@ -1,11 +1,26 @@
-"""Observed vs chance agreement, Fleiss kappa, Gwet AC1 and quadratic-weighted kappa for the three judges."""
-import sys, json, itertools, statistics as st
+"""Observed vs chance agreement, Fleiss kappa, Gwet AC1 and quadratic-weighted kappa for the three judges.
+
+usage: python3 kappa_paradox.py [OUT.json] [--manifest MANIFEST.json]
+Without a manifest it uses the Qwen3.5-Plus runs listed in fleiss_judges.py.
+"""
+import csv, sys, json, itertools, statistics as st
 from collections import Counter
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fleiss_judges as F
 
-runs = {j: [F.load_run(x) for x in p] for j, p in F.RUNS.items()}
+argv = [a for a in sys.argv[1:]]
+MANIFEST = None
+if "--manifest" in argv:
+    i = argv.index("--manifest"); MANIFEST = json.load(open(argv[i + 1], encoding="utf-8")); del argv[i:i + 2]
+if MANIFEST:
+    ARM_OF = MANIFEST["arms"]
+    def _load(path):
+        return {r["QA ID"]: r for r in csv.DictReader(open(path, encoding="utf-8")) if r["Approach"] in ARM_OF}
+    runs = {j["name"]: [_load(p) for p in j["runs"]] for j in MANIFEST["judges"]}
+else:
+    ARM_OF = {"SingleAgent-v1": "v1", "SingleAgent-v2": "v2", "SingleAgent": "v3"}
+    runs = {j: [F.load_run(x) for x in p] for j, p in F.RUNS.items()}
 judges = list(runs)
 common = sorted(set.intersection(*[set(r) for rs in runs.values() for r in rs]))
 Q = 4
@@ -67,10 +82,13 @@ def dist(pool):
             out[metric][j] = [c[k]/n for k in range(Q)]
     return out
 
-v3 = [u for u in common if runs["DeepSeek"][0][u]["Approach"] == "SingleAgent"]
+first = next(iter(runs.values()))[0]
+v3 = [u for u in common if ARM_OF[first[u]["Approach"]] == "v3"]
+by_arm = {a: [u for u in common if ARM_OF[first[u]["Approach"]] == a] for a in sorted(set(ARM_OF.values()))}
 res = {"n_v3": len(v3), "n_all": len(common), "v3": summarise(v3), "all": summarise(common), "dist_v3": dist(v3),
+       "dist_by_arm": {a: dist(p) for a, p in by_arm.items()}, "n_by_arm": {a: len(p) for a, p in by_arm.items()},
        "scales": {m: s for m, (_, s) in F.METRICS.items()}}
-out = sys.argv[1] if len(sys.argv) > 1 else str(Path(__file__).resolve().parent / "kappa_paradox.json")
+out = argv[0] if argv else str(Path(__file__).resolve().parent / "kappa_paradox.json")
 json.dump(res, open(out, "w"), indent=1)
 for m, d in res["v3"].items():
     print(f"{m:26s} obs {d['po']['mean']:.2f} chance {d['pe']['mean']:.2f} fleiss {d['fleiss']['mean']:.2f} AC1 {d['ac1']['mean']:.2f} QWK {d['qwk']['mean']:.2f} all3 {d['all3']['mean']:.0%} w1 {d['within1']['mean']:.0%}")

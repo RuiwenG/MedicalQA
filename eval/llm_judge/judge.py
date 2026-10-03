@@ -503,6 +503,11 @@ def main():
                          "reused instead of re-judged, and the new run appends to a fresh "
                          "file; the CSV is written from the merged set. Use it after a run "
                          "is interrupted, so the completed pairs are not paid for twice.")
+    ap.add_argument("--qa-data", metavar="FILE",
+                    help="Pairs file in qa_data.json format (default eval/web/qa_data.json, "
+                         "the annotation site's deck)")
+    ap.add_argument("--tag", default="",
+                    help="Label added to the output file names, e.g. qwen3-14b")
     ap.add_argument(
         "--approaches",
         nargs="+",
@@ -513,7 +518,10 @@ def main():
     )
     args = ap.parse_args()
 
-    data = json.loads((REPO / "eval" / "web" / "qa_data.json").read_text(encoding="utf-8"))
+    qa_path = Path(args.qa_data) if args.qa_data else REPO / "eval" / "web" / "qa_data.json"
+    if not qa_path.is_absolute():
+        qa_path = REPO / qa_path
+    data = json.loads(qa_path.read_text(encoding="utf-8"))
     all_pairs = data["pairs"]
 
     if args.approaches:
@@ -573,7 +581,7 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     # OpenRouter ids carry a vendor prefix ("openai/gpt-oss-120b"); the slash
     # would make the output path a directory that does not exist.
-    slug = args.model.replace("/", "-")
+    slug = args.model.replace("/", "-") + (f"_{args.tag}" if args.tag else "")
     csv_path = out_dir / f"Master-Teepa_{slug}_{args.mode}_Eval_{stamp}.csv"
     runs_dir = REPO / "eval" / "llm_judge" / "runs"
     runs_dir.mkdir(parents=True, exist_ok=True)

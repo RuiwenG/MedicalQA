@@ -1,7 +1,10 @@
 """Agreement statistics for any number of LLM judges, each with three runs.
 
 usage: python3 compare_judges.py OUT.json [GEMMA_CSV1 GEMMA_CSV2 GEMMA_CSV3]
+       python3 compare_judges.py OUT.json --manifest MANIFEST.json
 Run from the repo root. With no Gemma CSVs it compares DeepSeek and gpt-oss only.
+A manifest names the arms ({"approach": "v1", ...}) and the judges with their
+run CSVs ({"k", "name", "model", "runs": [...]}) for any other generated set.
 """
 import csv, json, sys, statistics as st, itertools, collections
 
@@ -13,6 +16,11 @@ def load(path, keep=None):
     return {r["QA ID"]: r for r in csv.DictReader(open(path, encoding="utf-8"))
             if r["Approach"] in ARMS and (keep is None or r["Approach"] in keep)}
 
+MANIFEST = None
+if len(sys.argv) > 3 and sys.argv[2] == "--manifest":
+    MANIFEST = json.load(open(sys.argv[3], encoding="utf-8"))
+    ARMS = MANIFEST["arms"]
+
 ds_r1 = {}
 ds_r1.update(load(B + "20260909_154820.csv", {"SingleAgent-v1"}))
 ds_r1.update(load(B + "20260909_005804.csv", {"SingleAgent-v2"}))
@@ -23,7 +31,10 @@ JUDGES = [
     {"k": "go", "name": "gpt-oss", "model": "openai/gpt-oss-120b",
      "runs": [load(G + "20261001_214603.csv"), load(G + "20261001_223931.csv"), load(G + "20261001_224310.csv")]},
 ]
-if len(sys.argv) > 2:
+if MANIFEST:
+    JUDGES = [{"k": j["k"], "name": j["name"], "model": j["model"],
+               "runs": [load(p) for p in j["runs"]]} for j in MANIFEST["judges"]]
+elif len(sys.argv) > 2:
     JUDGES.append({"k": "gm", "name": "Gemma 4", "model": "google/gemma-4-31b-it",
                    "runs": [load(p) for p in sys.argv[2:]]})
 

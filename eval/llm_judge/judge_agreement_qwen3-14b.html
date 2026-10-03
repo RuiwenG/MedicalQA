@@ -1,0 +1,646 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Qwen3-14B Judge Agreement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column. Findings first, then one section per comparison, reference tables and method last. */
+:root{
+  --bg:#f3f5f8;
+  --surface:#ffffff;
+  --ink:#0e1217;
+  --ink-2:#48505b;
+  --muted:#767f8b;
+  --line:#e0e4ea;
+  --line-2:#c5ccd5;
+  --ds:#2a78d6;
+  --go:#eb6834;
+  --gm:#1baf7a;
+  --font-display:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c0f13; --surface:#151920; --ink:#eef1f5; --ink-2:#b4bbc5; --muted:#858c97;
+    --line:#242931; --line-2:#363d47; --ds:#3987e5; --go:#d95926; --gm:#199e70;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c0f13; --surface:#151920; --ink:#eef1f5; --ink-2:#b4bbc5; --muted:#858c97;
+  --line:#242931; --line-2:#363d47; --ds:#3987e5; --go:#d95926; --gm:#199e70;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:64rem;margin:0 auto;padding-inline:1.25rem;padding-block:2.75rem 5rem;display:flex;flex-direction:column;gap:3.5rem}
+h1,h2,h3{font-family:var(--font-display);font-stretch:88%;text-wrap:balance;margin:0;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:750}
+h2{font-size:1.55rem;font-weight:700}
+h3{font-size:1.02rem;font-weight:700;font-stretch:95%}
+p{margin:0;max-width:68ch}
+.eyebrow{font-family:var(--font-display);font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.12rem;color:var(--ink-2);max-width:64ch}
+.num,.mono{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+section{display:flex;flex-direction:column;gap:1.1rem;min-width:0}
+.sec-head{display:flex;flex-direction:column;gap:.45rem}
+.intro{color:var(--ink-2)}
+
+header{display:flex;flex-direction:column;gap:.9rem;padding-bottom:1.8rem;border-bottom:1px solid var(--line-2)}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem 1.4rem;font-size:.85rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+.key{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.86rem;color:var(--ink-2)}
+.key span{display:inline-flex;align-items:center;gap:.45rem}
+.sw{width:.72rem;height:.72rem;border-radius:50%;display:inline-block;flex:none}
+
+.findings{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.finding{background:var(--surface);padding:1.1rem 1.15rem 1.2rem;display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.finding .fig{font-family:var(--font-display);font-size:1.6rem;font-weight:750;font-stretch:85%;line-height:1.05}
+.finding h3{font-size:.98rem}
+.finding p{font-size:.92rem;color:var(--ink-2)}
+
+.panels{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem}
+.panel{background:var(--surface);border:1px solid var(--line);padding:.9rem .9rem .7rem;display:flex;flex-direction:column;gap:.35rem;min-width:0;margin:0}
+.panel .sub{font-size:.82rem;color:var(--muted)}
+.panel .delta{font-size:.8rem;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:.2rem .8rem;padding-top:.3rem;border-top:1px solid var(--line)}
+.panel .delta span{display:inline-flex;align-items:center;gap:.35rem}
+.panel svg{width:100%;height:auto;display:block}
+
+.chart{background:var(--surface);border:1px solid var(--line);padding:1rem 1rem .8rem;display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.scroll{overflow-x:auto}
+.scroll svg{min-width:34rem;width:100%;height:auto;display:block}
+svg text{font-family:var(--font-data);font-size:10.5px}
+svg .lbl{font-family:var(--font-body);font-size:13px}
+.note{font-size:.84rem;color:var(--muted)}
+
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{font:inherit;font-size:.84rem;padding:.32rem .7rem;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.seg button:hover{border-color:var(--ink-2)}
+.statdesc{font-size:.9rem;color:var(--ink-2);max-width:72ch}
+
+/* agreement matrices */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(15.5rem,1fr));gap:1rem}
+.mcard{background:var(--surface);border:1px solid var(--line);padding:.85rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}
+.mx{border-collapse:separate;border-spacing:3px;width:100%;font-size:.8rem}
+.mx th{font-family:var(--font-body);font-weight:600;font-size:.76rem;color:var(--ink-2);padding:.2rem .25rem;text-align:left;white-space:nowrap;border:0}
+.mx thead th{text-align:center}
+.mx td{border:0;text-align:center;padding:.55rem .2rem;border-radius:3px;font-family:var(--font-data);font-variant-numeric:tabular-nums;font-size:.8rem}
+.mx td.self{outline:2px solid var(--ink-2);outline-offset:-2px}
+.mx td.blank{background:transparent}
+.mx td.na{color:var(--muted);font-family:var(--font-body);font-size:.72rem;background:var(--bg)}
+.dot{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;margin-right:.35rem;vertical-align:.05em}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+caption{text-align:left;padding:.7rem .9rem;font-size:.82rem;color:var(--muted);border-bottom:1px solid var(--line)}
+th,td{padding:.45rem .7rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:var(--font-display);font-stretch:92%;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line-2)}
+tbody tr:last-child td{border-bottom:none}
+tr.grp td{background:var(--bg);font-family:var(--font-display);font-weight:700;font-stretch:92%;color:var(--ink);font-size:.86rem}
+td.num{font-family:var(--font-data);font-variant-numeric:tabular-nums;font-size:.8rem;line-height:1.35}
+.rng{color:var(--muted)}
+
+.xgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:1rem}
+.xcard{background:var(--surface);border:1px solid var(--line);padding:.9rem;display:flex;flex-direction:column;gap:.55rem;min-width:0}
+.xcard .tally{font-size:.82rem;color:var(--ink-2)}
+.xt{width:100%;border-collapse:separate;border-spacing:3px;font-size:.78rem}
+.xt th{font-family:var(--font-body);font-size:.74rem;color:var(--muted);font-weight:600;text-transform:none;letter-spacing:0;border:0;padding:.2rem .3rem;white-space:normal;line-height:1.2}
+.xt th.corner{font-size:.68rem;text-align:left}
+.xt td{border:0;text-align:center;padding:.5rem .2rem;font-family:var(--font-data);font-variant-numeric:tabular-nums;border-radius:3px}
+.xt td.diag{outline:2px solid var(--ink-2);outline-offset:-2px}
+.xt td.zero{color:var(--muted)}
+
+.ebar{display:inline-flex;align-items:center;gap:.45rem;justify-content:flex-end;width:100%}
+.ebar i{display:inline-block;height:.55rem;border-radius:2px}
+
+.divs{display:flex;flex-direction:column;gap:1rem}
+
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem 2rem}
+.method dl{margin:0;display:flex;flex-direction:column;gap:.7rem}
+.method dt{font-family:var(--font-display);font-weight:700;font-stretch:92%}
+.method dd{margin:0;color:var(--ink-2);font-size:.92rem}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1.2rem}
+
+#tip{position:fixed;z-index:10;pointer-events:none;background:var(--ink);color:var(--surface);font-size:.8rem;line-height:1.35;padding:.45rem .6rem;border-radius:4px;max-width:18rem;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.hit{outline:none}
+.hit:focus-visible{stroke:var(--ink);stroke-width:2}
+:focus-visible{outline:2px solid var(--ds);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">MedicalQA &middot; LLM-as-judge</span>
+  <h1>Three judges on 678 Qwen3-14B Q&amp;A pairs</h1>
+  <p class="lede">The SingleAgent pairs were regenerated with Qwen3-14B, a smaller generator, from the v1, v2 and v3 prompts. DeepSeek, gpt-oss and Gemma 4 each scored every pair three times on the same five-metric rubric. This page compares the three prompt versions as each judge sees them, and how far the judges agree.</p>
+  <div class="meta">
+    <span>Generator <b>qwen/qwen3-14b</b></span>
+    <span>Pairs <b>678</b> (v1 226 &middot; v2 226 &middot; v3 226)</span>
+    <span>Runs <b>3 per judge</b></span>
+    <span>Pair-judgments <b>6,102</b></span>
+    <span>Rubric <b>5 metrics + recommendation</b></span>
+  </div>
+  <div class="key" id="judgekey" aria-label="Colour key"></div>
+</header>
+
+<section aria-labelledby="f-h">
+  <h2 id="f-h" class="eyebrow" style="font-size:.74rem">Findings</h2>
+  <div class="findings">    <div class="finding">
+      <span class="fig">3 of 3</span>
+      <h3>Every judge ranks the prompts v1 &lt; v2 &lt; v3 on Standalone</h3>
+      <p>Standalone pass rate, v1 / v2 / v3: DeepSeek 92.2 / 94.1 / 97.1%, Gemma 92.3 / 93.8 / 97.9%, gpt-oss 97.1 / 98.5 / 99.4%. For each judge the v1 and v3 run ranges do not overlap.</p>
+    </div>
+    <div class="finding">
+      <span class="fig">−3.2 / −4.6 pts</span>
+      <h3>v3 costs Trustworthiness for two judges</h3>
+      <p>DeepSeek passes 90.3% of v1 pairs on Trustworthiness and 87.0% of v3; Gemma 93.1% and 88.5%. Neither judge's run ranges overlap between v1 and v3. gpt-oss sees no change (94.8 → 94.5%). The same two judges flag hallucination more often on v3: DeepSeek on 7.2% of v1 ratings and 10.8% of v3, Gemma 3.5% and 7.8% (gpt-oss 4.3% and 3.8%). Asking this model to name the subject in every pair seems to push it to add detail the video does not support.</p>
+    </div>
+    <div class="finding">
+      <span class="fig">κ 0.88</span>
+      <h3>Gemma 4 reproduces DeepSeek on Standalone</h3>
+      <p>DeepSeek and Gemma agree on Standalone pass/fail at κ 0.88, as high as DeepSeek agrees with its own repeat runs (0.87). gpt-oss passes almost everything and agrees with either at κ 0.39–0.40.</p>
+    </div>
+    <div class="finding">
+      <span class="fig">≤6%</span>
+      <h3>Ratings still sit at the top of the scale</h3>
+      <p>No judge puts more than 6% of any version's pairs at the lowest level of any metric. Trustworthiness from DeepSeek is the widest spread (v3: 70 / 18 / 10 / 2% across the four levels); Gemma rates every pair's Clarity at the top level. See "How the scores spread" below.</p>
+    </div>
+</div>
+</section>
+
+<section aria-labelledby="s1">
+  <div class="sec-head">
+    <span class="eyebrow">Pass rates</span>
+    <h2 id="s1">What each judge reports</h2>
+    <p class="intro">Share of pairs passing each metric, for each prompt version, averaged over three runs. The faint bar behind each dot spans the lowest and highest of the three runs, so a gap wider than the bars is larger than that judge's own noise. All six panels share one scale.</p>
+  </div>
+  <div class="panels" id="panels"></div>
+  <div class="tbl-wrap"><table id="armtbl"></table></div>
+</section>
+
+<section aria-labelledby="s1b">
+  <div class="sec-head">
+    <span class="eyebrow">Score spread</span>
+    <h2 id="s1b">How the scores spread across the four levels</h2>
+    <p class="intro">Share of each judge's ratings at each level of the 4-point scale, for each prompt version, pooled over its three runs. Level 1 is the best rating and level 4 the worst. This is the check on whether the pairs give the judges something to separate: a metric where nearly every rating is level 1 cannot show differences between pairs.</p>
+  </div>
+  <style>#spread th:nth-child(2),#spread td:nth-child(2),#spread th:nth-child(3),#spread td:nth-child(3){text-align:left}</style>
+  <div class="tbl-wrap"><table id="spread"><thead><tr><th>Metric</th><th>Version</th><th>Judge</th><th>Level 1</th><th>Level 2</th><th>Level 3</th><th>Level 4</th></tr></thead><tbody><tr class="grp"><td colspan="7">Trustworthiness <span class="rng" style="font-weight:400">· Excellent / Good / Fair / Poor</span></td></tr><tr><td></td><td>v1</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">76%</td><td class="num">15%</td><td class="num">6%</td><td class="num">4%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">92%</td><td class="num">3%</td><td class="num">3%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">92%</td><td class="num">1%</td><td class="num">2%</td><td class="num">5%</td></tr><tr><td></td><td>v2</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">75%</td><td class="num">15%</td><td class="num">8%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">92%</td><td class="num">5%</td><td class="num">2%</td><td class="num">1%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">89%</td><td class="num">2%</td><td class="num">5%</td><td class="num">4%</td></tr><tr><td></td><td>v3</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">70%</td><td class="num">18%</td><td class="num">10%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">90%</td><td class="num">5%</td><td class="num">4%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">87%</td><td class="num">1%</td><td class="num">5%</td><td class="num">6%</td></tr><tr class="grp"><td colspan="7">Clarity <span class="rng" style="font-weight:400">· Very easy to understand / Easy / Somewhat difficult / Difficult</span></td></tr><tr><td></td><td>v1</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">84%</td><td class="num">14%</td><td class="num">2%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">95%</td><td class="num">5%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">100%</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td>v2</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">87%</td><td class="num">12%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">96%</td><td class="num">4%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">100%</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td>v3</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">85%</td><td class="num">13%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">96%</td><td class="num">4%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">100%</td><td class="num">0%</td><td class="num">0%</td><td class="num">0%</td></tr><tr class="grp"><td colspan="7">Usefulness <span class="rng" style="font-weight:400">· Highly useful / Useful / Limited useful / Not useful</span></td></tr><tr><td></td><td>v1</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">24%</td><td class="num">72%</td><td class="num">4%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">78%</td><td class="num">21%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">61%</td><td class="num">35%</td><td class="num">2%</td><td class="num">2%</td></tr><tr><td></td><td>v2</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">22%</td><td class="num">74%</td><td class="num">3%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">77%</td><td class="num">23%</td><td class="num">0%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">59%</td><td class="num">35%</td><td class="num">2%</td><td class="num">3%</td></tr><tr><td></td><td>v3</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">23%</td><td class="num">74%</td><td class="num">2%</td><td class="num">1%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">79%</td><td class="num">20%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">56%</td><td class="num">36%</td><td class="num">5%</td><td class="num">3%</td></tr><tr class="grp"><td colspan="7">Caregiver recommendation <span class="rng" style="font-weight:400">· Yes / Yes, but with minor edits / No, it needs major edits / No</span></td></tr><tr><td></td><td>v1</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">77%</td><td class="num">16%</td><td class="num">7%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">92%</td><td class="num">5%</td><td class="num">3%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">84%</td><td class="num">6%</td><td class="num">7%</td><td class="num">2%</td></tr><tr><td></td><td>v2</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">82%</td><td class="num">13%</td><td class="num">5%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">95%</td><td class="num">4%</td><td class="num">2%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">84%</td><td class="num">5%</td><td class="num">8%</td><td class="num">3%</td></tr><tr><td></td><td>v3</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">80%</td><td class="num">14%</td><td class="num">6%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">93%</td><td class="num">4%</td><td class="num">3%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">86%</td><td class="num">3%</td><td class="num">8%</td><td class="num">4%</td></tr><tr class="grp"><td colspan="7">Standalone <span class="rng" style="font-weight:400">· Fully standalone / Mostly standalone / Somewhat dependent / Not standalone</span></td></tr><tr><td></td><td>v1</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">92%</td><td class="num">2%</td><td class="num">4%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">97%</td><td class="num">0%</td><td class="num">2%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">92%</td><td class="num">0%</td><td class="num">2%</td><td class="num">5%</td></tr><tr><td></td><td>v2</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">94%</td><td class="num">2%</td><td class="num">3%</td><td class="num">2%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">99%</td><td class="num">0%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">94%</td><td class="num">0%</td><td class="num">2%</td><td class="num">4%</td></tr><tr><td></td><td>v3</td><td><span class="dot" style="background:var(--ds)"></span>DeepSeek V4 Pro</td><td class="num">97%</td><td class="num">1%</td><td class="num">2%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--go)"></span>gpt-oss-120b</td><td class="num">99%</td><td class="num">0%</td><td class="num">1%</td><td class="num">0%</td></tr><tr><td></td><td></td><td><span class="dot" style="background:var(--gm)"></span>Gemma 4 31B</td><td class="num">98%</td><td class="num">1%</td><td class="num">1%</td><td class="num">1%</td></tr></tbody></table></div>
+  <p class="note">Levels: Trustworthiness Excellent / Good / Fair / Poor; Clarity Very easy / Easy / Somewhat difficult / Difficult; Usefulness Highly useful / Useful / Limited / Not useful; recommendation Yes / Yes with minor edits / Needs major edits / No; Standalone Fully / Mostly / Somewhat dependent / Not standalone.</p>
+</section>
+
+<section aria-labelledby="s2">
+  <div class="sec-head">
+    <span class="eyebrow">Similarity</span>
+    <h2 id="s2">How often they agree</h2>
+    <p class="intro">One matrix per metric. Outlined diagonal cells compare a judge with its own repeat runs, which is the most two raters could be expected to reach. The other cells compare two different judges. Darker means more agreement; pick the statistic above the matrices.</p>
+  </div>
+  <div class="chart">
+    <div class="seg" id="statseg" role="group" aria-label="Agreement statistic"></div>
+    <p class="statdesc" id="statdesc"></p>
+  </div>
+  <div class="mgrid" id="mgrid"></div>
+  <p class="intro">Raw agreement is high on every metric because most pairs pass. Cohen's κ removes the agreement two raters would reach by chance. On Clarity, Usefulness and Care Safety nearly every pair passes, so κ falls toward zero even where judges almost never differ, and can be undefined when a judge passes every pair in every run. Gwet's AC1 holds up at those base rates. Trustworthiness and Standalone have enough failures for κ to be informative.</p>
+</section>
+
+<section aria-labelledby="s2b">
+  <div class="sec-head">
+    <span class="eyebrow">Multi-rater agreement</span>
+    <h2 id="s2b">All judges at once: Fleiss' κ</h2>
+    <p class="intro">Fleiss' κ extends Cohen's κ to any number of raters, so it gives one chance-corrected figure for all judges together instead of one per pair. It is read on the same scale: 0 is chance, 1 is perfect. It treats the 4-level rating as plain categories, so a one-level miss counts as a full disagreement, which keeps it below weighted κ. The same base-rate caution applies as for Cohen's κ.</p>
+  </div>
+  <div class="tbl-wrap"><table id="fleissv"></table></div>
+  <div class="tbl-wrap"><table id="fleissr"></table></div>
+  <p class="note">"All judges, one run each" takes one run from every judge and computes Fleiss' κ across them, repeated for every combination of runs; the range beneath is the lowest and highest combination. "Consensus" uses each judge's majority verdict or median rating. "Every run" treats all runs from all judges as separate raters. "Within" columns treat a judge's own three runs as three raters, which measures that judge's consistency.</p>
+</section>
+
+<section aria-labelledby="s2c">
+  <div class="sec-head">
+    <span class="eyebrow">Why κ is low when the judges agree</span>
+    <h2 id="s2c">High agreement, low Fleiss' κ</h2>
+    <p class="intro">κ does not ask how often raters agree, but how much better than chance: κ = (observed − chance) / (1 − chance). Chance is estimated from how often each rating is used, so when most ratings share one level, chance agreement is already close to observed agreement and κ stays low even when the judges match. Gwet's AC1 uses a chance term that stays small in that situation; quadratic-weighted κ gives partial credit for one-level misses.</p>
+  </div>
+  <div class="tbl-wrap"><table id="paradox"><thead><tr><th>Metric</th><th>Judges agree</th><th>Chance agrees</th><th>Fleiss κ</th><th>Gwet AC1</th><th>Quadratic κ</th><th>All 3 same</th><th>All 3 within one</th></tr></thead><tbody><tr class="grp"><td colspan="8">All three prompt versions · 678 pairs</td></tr><tr><td>Trustworthiness</td><td class="num">79%<br><span class="rng">78%–80%</span></td><td class="num">73%<br><span class="rng">72%–74%</span></td><td class="num">0.23<br><span class="rng">0.20–0.25</span></td><td class="num">0.77<br><span class="rng">0.76–0.78</span></td><td class="num">0.41<br><span class="rng">0.39–0.44</span></td><td class="num">71%<br><span class="rng">70%–72%</span></td><td class="num">88%<br><span class="rng">86%–89%</span></td></tr><tr><td>Clarity</td><td class="num">89%<br><span class="rng">87%–90%</span></td><td class="num">88%<br><span class="rng">86%–89%</span></td><td class="num">0.07<br><span class="rng">0.04–0.10</span></td><td class="num">0.88<br><span class="rng">0.86–0.90</span></td><td class="num">0.12<br><span class="rng">0.09–0.17</span></td><td class="num">83%<br><span class="rng">81%–85%</span></td><td class="num">98%<br><span class="rng">98%–99%</span></td></tr><tr><td>Usefulness</td><td class="num">54%<br><span class="rng">53%–55%</span></td><td class="num">47%</td><td class="num">0.14<br><span class="rng">0.12–0.15</span></td><td class="num">0.45<br><span class="rng">0.44–0.46</span></td><td class="num">0.26<br><span class="rng">0.24–0.29</span></td><td class="num">34%<br><span class="rng">32%–35%</span></td><td class="num">95%<br><span class="rng">94%–95%</span></td></tr><tr><td>Caregiver recommendation</td><td class="num">83%<br><span class="rng">82%–83%</span></td><td class="num">75%<br><span class="rng">74%–76%</span></td><td class="num">0.31<br><span class="rng">0.29–0.35</span></td><td class="num">0.81<br><span class="rng">0.80–0.82</span></td><td class="num">0.37<br><span class="rng">0.33–0.40</span></td><td class="num">76%<br><span class="rng">76%–77%</span></td><td class="num">89%<br><span class="rng">88%–90%</span></td></tr><tr><td>Standalone</td><td class="num">95%</td><td class="num">92%<br><span class="rng">91%–92%</span></td><td class="num">0.40<br><span class="rng">0.36–0.47</span></td><td class="num">0.95</td><td class="num">0.51<br><span class="rng">0.45–0.57</span></td><td class="num">94%<br><span class="rng">94%–94%</span></td><td class="num">95%<br><span class="rng">95%–96%</span></td></tr><tr class="grp"><td colspan="8">v3 only · 226 pairs</td></tr><tr><td>Trustworthiness</td><td class="num">77%<br><span class="rng">75%–78%</span></td><td class="num">69%<br><span class="rng">67%–71%</span></td><td class="num">0.25<br><span class="rng">0.21–0.29</span></td><td class="num">0.74<br><span class="rng">0.72–0.76</span></td><td class="num">0.45<br><span class="rng">0.37–0.52</span></td><td class="num">68%<br><span class="rng">65%–70%</span></td><td class="num">86%<br><span class="rng">82%–88%</span></td></tr><tr><td>Clarity</td><td class="num">89%<br><span class="rng">86%–92%</span></td><td class="num">88%<br><span class="rng">85%–91%</span></td><td class="num">0.08<br><span class="rng">−0.01–0.22</span></td><td class="num">0.88<br><span class="rng">0.85–0.92</span></td><td class="num">0.09<br><span class="rng">0.03–0.21</span></td><td class="num">83%<br><span class="rng">79%–88%</span></td><td class="num">99%<br><span class="rng">98%–99%</span></td></tr><tr><td>Usefulness</td><td class="num">53%<br><span class="rng">51%–55%</span></td><td class="num">47%<br><span class="rng">46%–47%</span></td><td class="num">0.12<br><span class="rng">0.08–0.17</span></td><td class="num">0.43<br><span class="rng">0.41–0.46</span></td><td class="num">0.29<br><span class="rng">0.26–0.32</span></td><td class="num">32%<br><span class="rng">28%–36%</span></td><td class="num">94%<br><span class="rng">93%–96%</span></td></tr><tr><td>Caregiver recommendation</td><td class="num">82%<br><span class="rng">79%–83%</span></td><td class="num">75%<br><span class="rng">74%–78%</span></td><td class="num">0.25<br><span class="rng">0.18–0.33</span></td><td class="num">0.80<br><span class="rng">0.78–0.82</span></td><td class="num">0.39<br><span class="rng">0.29–0.48</span></td><td class="num">75%<br><span class="rng">72%–78%</span></td><td class="num">89%<br><span class="rng">86%–92%</span></td></tr><tr><td>Standalone</td><td class="num">97%<br><span class="rng">97%–98%</span></td><td class="num">96%<br><span class="rng">96%–97%</span></td><td class="num">0.24<br><span class="rng">0.14–0.38</span></td><td class="num">0.97<br><span class="rng">0.97–0.98</span></td><td class="num">0.31<br><span class="rng">0.20–0.43</span></td><td class="num">97%<br><span class="rng">96%–97%</span></td><td class="num">97%<br><span class="rng">96%–98%</span></td></tr></tbody></table></div>
+  <p class="note">"Judges agree" is the share of judge pairs giving a Q&amp;A the same rating; "Chance agrees" is the agreement expected from the overall rating frequencies alone. Each figure is the mean over all 27 combinations of one run per judge, with the lowest and highest combination beneath when they differ. Gwet AC1 uses 4 levels per metric. Quadratic κ is the mean of the three pairwise Cohen's κ with quadratic weights.</p>
+  <div class="sec-head"><h3>What drives it on this set</h3></div>
+  <ol class="intro" style="display:flex;flex-direction:column;gap:.7rem;padding-left:1.2rem;margin:0;max-width:72ch">
+    <li><strong>Concentration at the top.</strong> Standalone pairs match 95% of the time against 92% by chance, and Clarity 89% against 88%, so κ is 0.40 and 0.07 while AC1 is 0.95 and 0.88.</li>
+    <li><strong>Different strictness.</strong> On Usefulness DeepSeek gives the top level to 23% of v3 pairs, gpt-oss to 79% and Gemma to 56%. The judges are within one level on 95% of pairs but give the same level on only 34%, which is why Usefulness has the lowest raw agreement and AC1 here.</li>
+    <li><strong>Real disagreement on Trustworthiness.</strong> Trustworthiness has the most room above chance (79% vs 73%) and the highest quadratic κ of the quality metrics (0.41), yet all three judges are within one level on only 88% of pairs: in the first run alone, 30 pairs are rated Excellent by one judge and Poor by another.</li>
+  </ol>
+</section>
+
+<section aria-labelledby="s3">
+  <div class="sec-head">
+    <span class="eyebrow">Direction</span>
+    <h2 id="s3">Where they disagree</h2>
+    <p class="intro">Each judge's consensus verdict for a pair is the majority of its three runs. For each pair of judges, these are the pairs where the two consensus verdicts differ, split by which judge failed the pair. All three charts share one scale.</p>
+  </div>
+  <div class="divs" id="divs"></div>
+</section>
+
+<section aria-labelledby="s4">
+  <div class="sec-head">
+    <span class="eyebrow">Quality ratings</span>
+    <h2 id="s4">Rating by rating</h2>
+    <p class="intro">The 4-level quality rating, taken as the median of three runs for each judge. Choose a pair of judges. The outlined cells are pairs both judges rated the same; cells left of them are pairs the column judge rated higher.</p>
+  </div>
+  <div class="chart"><div class="seg" id="pairseg" role="group" aria-label="Judge pair"></div></div>
+  <div class="xgrid" id="xgrid"></div>
+</section>
+
+<section aria-labelledby="s5">
+  <div class="sec-head">
+    <span class="eyebrow">Error labels</span>
+    <h2 id="s5">Which failures each judge reports</h2>
+    <p class="intro">Share of all 678 pairs given each error label, averaged over three runs. A pair can carry more than one label. Care Safety is a problem check, so its labels mark pairs flagged as unsafe.</p>
+  </div>
+  <div class="tbl-wrap"><table id="errtbl"></table></div>
+</section>
+
+<section aria-labelledby="s6">
+  <div class="sec-head">
+    <span class="eyebrow">Overall verdict</span>
+    <h2 id="s6">Would you recommend this Q&amp;A to a caregiver?</h2>
+    <p class="intro">Distribution of the closing four-level recommendation, averaged over three runs.</p>
+  </div>
+  <div class="chart">
+    <div class="key" id="reckey"></div>
+    <div class="scroll"><svg id="recchart" role="img" aria-label="Recommendation distribution"></svg></div>
+  </div>
+</section>
+
+<section aria-labelledby="s7">
+  <div class="sec-head">
+    <span class="eyebrow">Reference</span>
+    <h2 id="s7">Every statistic</h2>
+    <p class="intro">Mean across run pairings, with the lowest and highest pairing beneath. Between-judge cells use all nine pairings of one judge's runs with the other's; within-judge cells use the three pairings of a judge's own runs.</p>
+  </div>
+  <div class="tbl-wrap"><table id="fulltbl"></table></div>
+</section>
+
+<section aria-labelledby="s8">
+  <div class="sec-head">
+    <span class="eyebrow">Method</span>
+    <h2 id="s8">How this was measured</h2>
+  </div>
+  <div class="method">
+    <dl>
+      <dt>Generator</dt>
+      <dd><span class="mono">qwen/qwen3-14b</span> through OpenRouter, pinned to Alibaba with fallbacks disabled; Alibaba is the only provider of this model that honours reasoning off (0 reasoning tokens, verified). Seed 42, temperature 0.3, all 25 videos per prompt. The prompts are the v1, v2 and v3 SingleAgent prompts verbatim from git, except one format line: with the bare labels ("Question 1:") this model left the question out, so the line shows placeholders ("Question 1: &lt;question text&gt;"). The quality criteria are unchanged.</dd>
+      <dt>Same pairs, same rubric</dt>
+      <dd>All 678 pairs were judged by every model on identical text, checked by question text across all nine runs. All used the five-metric rubric with the team's Trustworthiness definition, the transcript in the prompt, and temperature 0.</dd>
+      <dt>DeepSeek</dt>
+      <dd><span class="mono">deepseek-v4-pro</span> through the DeepSeek API, reasoning by default. Three runs on 2–3 October 2026.</dd>
+      <dt>gpt-oss</dt>
+      <dd><span class="mono">openai/gpt-oss-120b</span> through OpenRouter, restricted to bf16 providers with fallbacks disabled. Reasoning is always on for this model; it ran at its default medium effort. Three runs on 2–3 October 2026.</dd>
+      <dt>Gemma 4</dt>
+      <dd><span class="mono">google/gemma-4-31b-it</span> through OpenRouter, pinned to one provider (DeepInfra) at fp8, fallbacks disabled. Only two providers served it at bf16 with JSON output, and when one degraded the other could not sustain a full run, so Gemma ran at fp8 while gpt-oss ran at bf16. Reasoning is off by default for this model and was switched on. Three runs on 2–3 October 2026.</dd>
+      <dt>Independent runs</dt>
+      <dd>All nine runs were started together and each judged all 678 pairs on its first pass; none needed re-judging. Each run is independent of the others.</dd>
+    </dl>
+    <dl>
+      <dt>Consensus</dt>
+      <dd>Majority of three runs for a Yes/No verdict, median of three for a 4-level rating.</dd>
+      <dt>Raw agreement</dt>
+      <dd>Share of pairs where both raters gave the same verdict.</dd>
+      <dt>Cohen's κ</dt>
+      <dd>Agreement beyond what two raters with the same pass rates would reach by chance. 0 is chance level, 1 is perfect.</dd>
+      <dt>Gwet's AC1</dt>
+      <dd>A chance-corrected agreement that stays stable when nearly every pair falls in one category, where κ becomes misleading.</dd>
+      <dt>Weighted κ and Spearman ρ</dt>
+      <dd>For the 4-level ratings. Weighted κ counts a one-level miss as a small disagreement and a three-level miss as a large one. Spearman ρ measures whether two raters order pairs the same way.</dd>
+      <dt>Exact and within one level</dt>
+      <dd>Share of pairs with the same 4-level rating, and with ratings at most one level apart.</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  Computed from the judge output CSVs in <span class="mono">eval/results/</span>. Run list: <span class="mono">eval/llm_judge/judges_qwen3-14b_manifest.json</span>. Pairs: <span class="mono">eval/llm_judge/qa_data_qwen3-14b.json</span>.
+</footer>
+
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D = {"n_pairs":678,"arm_n":{"v1":226,"v2":226,"v3":226},"judges":[{"k":"ds","name":"DeepSeek","model":"deepseek-v4-pro","n_runs":3},{"k":"go","name":"gpt-oss","model":"openai/gpt-oss-120b","n_runs":3},{"k":"gm","name":"Gemma 4","model":"google/gemma-4-31b-it","n_runs":3}],"pairkeys":["ds|ds","ds|go","ds|gm","go|go","go|gm","gm|gm"],"metrics":{"Trustworthiness":{"scale":["Excellent","Good","Fair","Poor"],"stats":{"agreement":{"ds|ds":{"mean":0.9498525073746312,"min":0.948377581120944,"max":0.9513274336283186,"n":3},"ds|go":{"mean":0.8949524745984923,"min":0.887905604719764,"max":0.9011799410029498,"n":9},"ds|gm":{"mean":0.9218289085545722,"min":0.911504424778761,"max":0.9292035398230089,"n":9},"go|go":{"mean":0.9705014749262537,"min":0.9660766961651918,"max":0.976401179941003,"n":3},"go|gm":{"mean":0.9108489019993445,"min":0.8997050147492626,"max":0.9188790560471977,"n":9},"gm|gm":{"mean":0.9714847590953786,"min":0.967551622418879,"max":0.976401179941003,"n":3}},"kappa":{"ds|ds":{"mean":0.739928767228371,"min":0.7263922518159807,"max":0.7512175595436655,"n":3},"ds|go":{"mean":0.2700618277746801,"min":0.2430622009569381,"max":0.30175077239958786,"n":9},"ds|gm":{"mean":0.5663890268065263,"min":0.5340953340815906,"max":0.6026664713207823,"n":9},"go|go":{"mean":0.6634021198210602,"min":0.6177004167688164,"max":0.7020435069215554,"n":3},"go|gm":{"mean":0.3104626646857189,"min":0.28626955592265146,"max":0.3620324629498937,"n":9},"gm|gm":{"mean":0.8286446292838134,"min":0.8048512442106915,"max":0.8638861702928555,"n":3}},"ac1":{"ds|ds":{"mean":0.9378700840462726,"min":0.93637293557257,"max":0.9394908894222643,"n":3},"ds|go":{"mean":0.8775302535995577,"min":0.8674998071434081,"max":0.8860425590627724,"n":9},"ds|gm":{"mean":0.9046291988256904,"min":0.89076848719188,"max":0.9138614647574179,"n":9},"go|go":{"mean":0.967655307368233,"min":0.9627787743060404,"max":0.9743718165581501,"n":3},"go|gm":{"mean":0.8976785549780328,"min":0.883156774291652,"max":0.9083456124978339,"n":9},"gm|gm":{"mean":0.9657881950222937,"min":0.9610853117662407,"max":0.9714521808239076,"n":3}},"exact":{"ds|ds":{"mean":0.7954768928220255,"min":0.775811209439528,"max":0.8067846607669616,"n":3},"ds|go":{"mean":0.7420517862995739,"min":0.7271386430678466,"max":0.7551622418879056,"n":9},"ds|gm":{"mean":0.772369714847591,"min":0.7625368731563422,"max":0.7787610619469026,"n":9},"go|go":{"mean":0.9188790560471977,"min":0.911504424778761,"max":0.9262536873156342,"n":3},"go|gm":{"mean":0.858734841035726,"min":0.8451327433628318,"max":0.8716814159292036,"n":9},"gm|gm":{"mean":0.9537856440511308,"min":0.9498525073746312,"max":0.9587020648967551,"n":3}},"within1":{"ds|ds":{"mean":0.9882005899705014,"min":0.9867256637168141,"max":0.9896755162241888,"n":3},"ds|go":{"mean":0.9124877089478859,"min":0.9026548672566371,"max":0.9247787610619469,"n":9},"ds|gm":{"mean":0.9454277286135693,"min":0.9380530973451328,"max":0.9557522123893806,"n":9},"go|go":{"mean":0.9788593903638152,"min":0.9749262536873157,"max":0.9852507374631269,"n":3},"go|gm":{"mean":0.9190429367420517,"min":0.9085545722713865,"max":0.9262536873156342,"n":9},"gm|gm":{"mean":0.9788593903638152,"min":0.9749262536873157,"max":0.9837758112094396,"n":3}},"wkappa":{"ds|ds":{"mean":0.7691234646626871,"min":0.7482625856599754,"max":0.7860854886356785,"n":3},"ds|go":{"mean":0.3041606392080843,"min":0.27269415265043395,"max":0.3262927676912938,"n":9},"ds|gm":{"mean":0.6080994161622058,"min":0.5702051654161119,"max":0.6507155123068118,"n":9},"go|go":{"mean":0.6856190372464781,"min":0.6464513397162954,"max":0.7492479905320775,"n":3},"go|gm":{"mean":0.33270026163138117,"min":0.3087148759332188,"max":0.3553748880286228,"n":9},"gm|gm":{"mean":0.8918815172310534,"min":0.8749774405411131,"max":0.9232920717706367,"n":3}},"spearman":{"ds|ds":{"mean":0.67096812330485,"min":0.6267962989443344,"max":0.7023502402541807,"n":3},"ds|go":{"mean":0.32786002025895294,"min":0.30513462631277616,"max":0.3603150049975911,"n":9},"ds|gm":{"mean":0.5368180246959801,"min":0.48323178005572415,"max":0.5661383526432205,"n":9},"go|go":{"mean":0.6079792863946181,"min":0.5735511499692245,"max":0.6602354903686034,"n":3},"go|gm":{"mean":0.3302930630797326,"min":0.29800491221514525,"max":0.35786456457119004,"n":9},"gm|gm":{"mean":0.8709566926770985,"min":0.8486912047070345,"max":0.9113531957086731,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":90.2654867256637,"min":89.82300884955751,"max":90.7079646017699,"n":3},"attr":{"mean":3.629793510324484,"min":3.6238938053097347,"max":3.6371681415929205,"n":3}},"go":{"pass":{"mean":94.83775811209439,"min":94.69026548672566,"max":95.13274336283186,"n":3},"attr":{"mean":3.8584070796460175,"min":3.836283185840708,"max":3.8761061946902653,"n":3}},"gm":{"pass":{"mean":93.06784660766961,"min":92.03539823008849,"max":93.80530973451327,"n":3},"attr":{"mean":3.799410029498525,"min":3.7876106194690267,"max":3.814159292035398,"n":3}},"pair_agree":{"ds|go":{"mean":0.9070796460176991,"min":0.8893805309734514,"max":0.9247787610619469,"n":9},"ds|gm":{"mean":0.932645034414946,"min":0.915929203539823,"max":0.9424778761061947,"n":9},"go|gm":{"mean":0.9174041297935103,"min":0.9026548672566371,"max":0.9292035398230089,"n":9}}},"v2":{"ds":{"pass":{"mean":90.2654867256637,"min":89.38053097345133,"max":91.1504424778761,"n":3},"attr":{"mean":3.6430678466076696,"min":3.6327433628318584,"max":3.6548672566371683,"n":3}},"go":{"pass":{"mean":96.90265486725663,"min":95.57522123893806,"max":97.78761061946902,"n":3},"attr":{"mean":3.882005899705015,"min":3.8584070796460175,"max":3.9026548672566372,"n":3}},"gm":{"pass":{"mean":90.85545722713863,"min":89.82300884955751,"max":92.03539823008849,"n":3},"attr":{"mean":3.765486725663717,"min":3.747787610619469,"max":3.7920353982300883,"n":3}},"pair_agree":{"ds|go":{"mean":0.9011799410029498,"min":0.8849557522123894,"max":0.915929203539823,"n":9},"ds|gm":{"mean":0.9252704031465093,"min":0.9070796460176991,"max":0.9380530973451328,"n":9},"go|gm":{"mean":0.9169124877089478,"min":0.8982300884955752,"max":0.9336283185840708,"n":9}}},"v3":{"ds":{"pass":{"mean":87.02064896755162,"min":85.84070796460178,"max":88.05309734513274,"n":3},"attr":{"mean":3.554572271386431,"min":3.5353982300884956,"max":3.5707964601769913,"n":3}},"go":{"pass":{"mean":94.54277286135694,"min":93.36283185840708,"max":96.01769911504425,"n":3},"attr":{"mean":3.827433628318584,"min":3.8008849557522124,"max":3.8628318584070795,"n":3}},"gm":{"pass":{"mean":88.49557522123894,"min":87.61061946902655,"max":88.93805309734513,"n":3},"attr":{"mean":3.6991150442477876,"min":3.690265486725664,"max":3.7123893805309733,"n":3}},"pair_agree":{"ds|go":{"mean":0.8765978367748279,"min":0.8539823008849557,"max":0.8938053097345132,"n":9},"ds|gm":{"mean":0.9075712881022615,"min":0.8849557522123894,"max":0.9292035398230089,"n":9},"go|gm":{"mean":0.8982300884955752,"min":0.8893805309734514,"max":0.911504424778761,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":53,"a_pass_b_fail":11,"both_fail":18,"both_pass":596,"agreement":0.9056047197640118,"kappa":0.3186143651267235,"ac1":0.8906683061045545,"attr_exact":0.7817109144542773,"attr_wkappa":0.3526931339008672,"crosstab":[[511,3,3,2],[75,11,2,4],[35,5,8,4],[8,2,5,0]]},"ds|gm":{"a_fail_b_pass":30,"a_pass_b_fail":19,"both_fail":41,"both_pass":588,"agreement":0.9277286135693216,"kappa":0.5862661585593665,"ac1":0.9124461551233178,"attr_exact":0.803834808259587,"attr_wkappa":0.656357402194589,"crosstab":[[513,2,0,4],[70,6,13,3],[22,3,14,13],[1,1,1,12]]},"go|gm":{"a_fail_b_pass":11,"a_pass_b_fail":42,"both_fail":18,"both_pass":607,"agreement":0.9218289085545722,"kappa":0.36804896064155346,"ac1":0.9109006267008014,"attr_exact":0.8731563421828908,"attr_wkappa":0.3832647769650602,"crosstab":[[583,11,18,17],[12,1,4,4],[7,0,4,7],[4,0,2,4]]}},"fail_counts":{"ds":71,"go":29,"gm":60},"fleiss":{"verdict":{"judges_by_run":{"mean":0.39648702493512433,"min":0.3715239154616262,"max":0.4195826645264852,"n":27},"judges_consensus":0.43695971184631965,"all_runs":0.4875060692609794,"within":{"ds":0.740067154455248,"go":0.6619634042977522,"gm":0.8292186491173726}},"rating":{"judges_by_run":{"mean":0.22823972089276837,"min":0.20462840203190774,"max":0.24890109796824034,"n":27},"judges_consensus":0.2767821330372567,"all_runs":0.31933178057987066,"within":{"ds":0.5198610898319782,"go":0.4879607224481938,"gm":0.7619411663632762}}},"errors":{"ds":{"Hallucinating":8.357915437561454,"Source Misinterpretation":2.5073746312684366,"Missing Key Information":1.6715830875122912,"Contradiction":1.3274336283185841},"go":{"Hallucinating":3.5398230088495577,"Missing Key Information":0.9341199606686331,"Source Misinterpretation":1.1799410029498525,"Contradiction":0.04916420845624385},"gm":{"Hallucinating":5.408062930186824,"Source Misinterpretation":4.080629301868241,"Missing Key Information":0.4424778761061947,"Contradiction":0.8357915437561456}}},"Clarity":{"scale":["Very easy to understand","Easy","Somewhat difficult","Difficult"],"stats":{"agreement":{"ds|ds":{"mean":0.9862340216322517,"min":0.9823008849557522,"max":0.9911504424778761,"n":3},"ds|go":{"mean":0.9834480498197313,"min":0.9808259587020649,"max":0.9837758112094396,"n":9},"ds|gm":{"mean":0.9839396919042938,"min":0.9823008849557522,"max":0.9852507374631269,"n":9},"go|go":{"mean":0.9980334316617502,"min":0.9970501474926253,"max":1.0,"n":3},"go|gm":{"mean":0.9978695509668961,"min":0.9941002949852508,"max":1.0,"n":9},"gm|gm":{"mean":0.9970501474926253,"min":0.995575221238938,"max":0.9985250737463127,"n":3}},"kappa":{"ds|ds":{"mean":0.5687610740084493,"min":0.44554995229657723,"max":0.7227749761482887,"n":3},"ds|go":{"mean":0.03268719118206037,"min":-0.00501710376282843,"max":0.1496009122006859,"n":9},"ds|gm":{"mean":0.08610064093321725,"min":-0.0027113630761649763,"max":0.1644071974365313,"n":9},"go|go":{"mean":0.0,"min":0.0,"max":0.0,"n":2},"go|gm":{"mean":0.09472161033358781,"min":-0.0029585798816348036,"max":0.6660098522167495,"n":7},"gm|gm":{"mean":-0.0006568144499256096,"min":-0.0019704433497768287,"max":0.0,"n":3}},"ac1":{"ds|ds":{"mean":0.9857800948293297,"min":0.9817172647805668,"max":0.9908586323902834,"n":3},"ds|go":{"mean":0.9831601105035044,"min":0.980454790893538,"max":0.9835104518927715,"n":9},"ds|gm":{"mean":0.9836529117959568,"min":0.9819848545237146,"max":0.9849873787697622,"n":9},"go|go":{"mean":0.9980276220190692,"min":0.9970414330286038,"max":1.0,"n":3},"go|gm":{"mean":0.9978615568260227,"min":0.9940653857936891,"max":1.0,"n":9},"gm|gm":{"mean":0.997039976339942,"min":0.9955555992566445,"max":0.9985228967345778,"n":3}},"exact":{"ds|ds":{"mean":0.8008849557522124,"min":0.7802359882005899,"max":0.8112094395280236,"n":3},"ds|go":{"mean":0.8475909537856441,"min":0.831858407079646,"max":0.8687315634218289,"n":9},"ds|gm":{"mean":0.8523434939364143,"min":0.8303834808259587,"max":0.8731563421828908,"n":9},"go|go":{"mean":0.9577187807276303,"min":0.9557522123893806,"max":0.9601769911504425,"n":3},"go|gm":{"mean":0.9564077351687971,"min":0.9469026548672567,"max":0.9631268436578171,"n":9},"gm|gm":{"mean":0.9931170108161258,"min":0.9911504424778761,"max":0.995575221238938,"n":3}},"within1":{"ds|ds":{"mean":0.9936086529006882,"min":0.9926253687315634,"max":0.995575221238938,"n":3},"ds|go":{"mean":0.9908226810881678,"min":0.9882005899705014,"max":0.9941002949852508,"n":9},"ds|gm":{"mean":0.9852507374631269,"min":0.9837758112094396,"max":0.9867256637168141,"n":9},"go|go":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"go|gm":{"mean":0.9981973123566044,"min":0.9941002949852508,"max":1.0,"n":9},"gm|gm":{"mean":0.9970501474926253,"min":0.995575221238938,"max":0.9985250737463127,"n":3}},"wkappa":{"ds|ds":{"mean":0.35890542840073164,"min":0.31413767579570695,"max":0.41000038111208503,"n":3},"ds|go":{"mean":0.21403580606187603,"min":0.161114706666159,"max":0.25117571611799916,"n":9},"ds|gm":{"mean":0.05639731324481453,"min":0.0247580856071834,"max":0.08606091242259573,"n":9},"go|go":{"mean":0.5256862565610503,"min":0.4931725306488588,"max":0.5787269296267318,"n":3},"go|gm":{"mean":0.0983860365483972,"min":0.032218597063621734,"max":0.2125750901081297,"n":9},"gm|gm":{"mean":-0.002487959159097164,"min":-0.002958579881656931,"max":-0.0019704433497538254,"n":3}},"spearman":{"ds|ds":{"mean":0.26209586164611176,"min":0.23086972583308077,"max":0.3006216339258704,"n":3},"ds|go":{"mean":0.24496960332618478,"min":0.1946562566122648,"max":0.2983829919056284,"n":9},"ds|gm":{"mean":0.12071713099884383,"min":0.06444189705055113,"max":0.15905262521615604,"n":9},"go|go":{"mean":0.5205857180110562,"min":0.48985842419003417,"max":0.5761728406718605,"n":3},"go|gm":{"mean":0.17182877884530307,"min":0.0702828757216583,"max":0.26624985069487456,"n":9},"gm|gm":{"mean":-0.0030804996862533,"min":-0.004190248666254431,"max":-0.0020904862507640154,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":97.6401179941003,"min":96.90265486725663,"max":98.23008849557522,"n":3},"attr":{"mean":3.8126843657817107,"min":3.765486725663717,"max":3.8628318584070795,"n":3}},"go":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.948377581120944,"min":3.9424778761061945,"max":3.9513274336283186,"n":3}},"gm":{"pass":{"mean":99.70501474926253,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.9926253687315634,"min":3.9911504424778763,"max":3.995575221238938,"n":3}},"pair_agree":{"ds|go":{"mean":0.9768928220255654,"min":0.9690265486725663,"max":0.9823008849557522,"n":9},"ds|gm":{"mean":0.975417895771878,"min":0.9646017699115044,"max":0.9823008849557522,"n":9},"go|gm":{"mean":0.9965585054080629,"min":0.9911504424778761,"max":1.0,"n":9}}},"v2":{"ds":{"pass":{"mean":98.82005899705014,"min":98.67256637168141,"max":99.11504424778761,"n":3},"attr":{"mean":3.853982300884956,"min":3.84070796460177,"max":3.8761061946902653,"n":3}},"go":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.9601769911504423,"min":3.9557522123893807,"max":3.9646017699115044,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.9985250737463125,"min":3.995575221238938,"max":4,"n":3}},"pair_agree":{"ds|go":{"mean":0.9867256637168141,"min":0.9823008849557522,"max":0.9911504424778761,"n":9},"ds|gm":{"mean":0.9882005899705014,"min":0.9867256637168141,"max":0.9911504424778761,"n":9},"go|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9}}},"v3":{"ds":{"pass":{"mean":98.67256637168141,"min":98.23008849557522,"max":99.11504424778761,"n":3},"attr":{"mean":3.8392330383480826,"min":3.809734513274336,"max":3.8761061946902653,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.9572271386430677,"min":3.9469026548672566,"max":3.9690265486725664,"n":3}},"gm":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3},"attr":{"mean":3.994100294985251,"min":3.982300884955752,"max":4,"n":3}},"pair_agree":{"ds|go":{"mean":0.9867256637168141,"min":0.9823008849557522,"max":0.9911504424778761,"n":9},"ds|gm":{"mean":0.9882005899705014,"min":0.9823008849557522,"max":0.995575221238938,"n":9},"go|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":9,"a_pass_b_fail":0,"both_fail":0,"both_pass":669,"agreement":0.9867256637168141,"kappa":0.0,"ac1":0.9865482862953227,"attr_exact":0.9100294985250738,"attr_wkappa":0.3138382869926494,"crosstab":[[605,8,0,0],[44,12,0,0],[5,4,0,0],[0,0,0,0]]},"ds|gm":{"a_fail_b_pass":9,"a_pass_b_fail":0,"both_fail":0,"both_pass":669,"agreement":0.9867256637168141,"kappa":0.0,"ac1":0.9865482862953227,"attr_exact":0.9041297935103245,"attr_wkappa":0.0,"crosstab":[[613,0,0,0],[56,0,0,0],[9,0,0,0],[0,0,0,0]]},"go|gm":{"a_fail_b_pass":0,"a_pass_b_fail":0,"both_fail":0,"both_pass":678,"agreement":1.0,"kappa":null,"ac1":1.0,"attr_exact":0.9646017699115044,"attr_wkappa":0.0,"crosstab":[[654,0,0,0],[24,0,0,0],[0,0,0,0],[0,0,0,0]]}},"fail_counts":{"ds":9,"go":0,"gm":0},"fleiss":{"verdict":{"judges_by_run":{"mean":0.06017496967792458,"min":-0.006432459178618241,"max":0.20884016973125916,"n":27},"judges_consensus":-0.0044444444444461245,"all_runs":0.17247821483127684,"within":{"ds":0.5687610740084493,"go":-0.0009842519684967064,"gm":-0.0014771048745011485}},"rating":{"judges_by_run":{"mean":0.0661280157383331,"min":0.038376263449625816,"max":0.09774484898581234,"n":27},"judges_consensus":0.12239321156335532,"all_runs":0.13100405802076595,"within":{"ds":0.22569420292851755,"go":0.49525331979062825,"gm":-0.002605450320376557}}},"errors":{"ds":{"Difficult vocabulary":1.27826941986234,"Ambiguous":0.5408062930186824,"Poor organization":0.04916420845624385},"go":{"Difficult vocabulary":0.0983284169124877,"Ambiguous":0.04916420845624385},"gm":{"Difficult vocabulary":0.0983284169124877,"Ambiguous":0.04916420845624385}}},"Usefulness":{"scale":["Highly useful","Useful","Limited useful","Not useful"],"stats":{"agreement":{"ds|ds":{"mean":0.984267453294002,"min":0.9808259587020649,"max":0.9882005899705014,"n":3},"ds|go":{"mean":0.9811537200917732,"min":0.9749262536873157,"max":0.9882005899705014,"n":9},"ds|gm":{"mean":0.9555883316945264,"min":0.9513274336283186,"max":0.9587020648967551,"n":9},"go|go":{"mean":0.9960668633235005,"min":0.9941002949852508,"max":0.9970501474926253,"n":3},"go|gm":{"mean":0.9469026548672567,"min":0.943952802359882,"max":0.9498525073746312,"n":9},"gm|gm":{"mean":0.9803343166175025,"min":0.9793510324483776,"max":0.9823008849557522,"n":3}},"kappa":{"ds|ds":{"mean":0.5637829975011922,"min":0.5088599130725511,"max":0.630417007358953,"n":3},"ds|go":{"mean":0.218404749999201,"min":0.09685002350729034,"max":0.42371440713981645,"n":9},"ds|gm":{"mean":0.36002889207211836,"min":0.33207952713594896,"max":0.400757575757575,"n":9},"go|go":{"mean":0.6646884272997021,"min":0.497032640949558,"max":0.7485163204747742,"n":3},"go|gm":{"mean":0.0903398926654728,"min":0.039803220035776785,"max":0.1408765652951682,"n":9},"gm|gm":{"mean":0.8044305988231225,"min":0.7946521287642788,"max":0.8239875389408098,"n":3}},"ac1":{"ds|ds":{"mean":0.9836750872639599,"min":0.9800471994431145,"max":0.9878115098537111,"n":3},"ds|go":{"mean":0.9806820991088111,"min":0.9742137555720862,"max":0.9879544293677406,"n":9},"ds|gm":{"mean":0.9523016192941042,"min":0.9475289424528004,"max":0.9558053236612859,"n":9},"go|go":{"mean":0.9960201808528435,"min":0.9940302712792654,"max":0.9970151356396326,"n":3},"go|gm":{"mean":0.9436778320303486,"min":0.9405488226987013,"max":0.9468068413619959,"n":9},"gm|gm":{"mean":0.9781357325980748,"min":0.9770425192279786,"max":0.9803221593382673,"n":3}},"exact":{"ds|ds":{"mean":0.7733529990167158,"min":0.7684365781710915,"max":0.7787610619469026,"n":3},"ds|go":{"mean":0.415929203539823,"min":0.4056047197640118,"max":0.4351032448377581,"n":9},"ds|gm":{"mean":0.5552277941658472,"min":0.5427728613569321,"max":0.5663716814159292,"n":9},"go|go":{"mean":0.8510324483775811,"min":0.8451327433628318,"max":0.8584070796460177,"n":3},"go|gm":{"mean":0.6606030809570632,"min":0.6460176991150443,"max":0.6710914454277286,"n":9},"gm|gm":{"mean":0.8849557522123894,"min":0.8790560471976401,"max":0.8952802359882006,"n":3}},"within1":{"ds|ds":{"mean":0.9990167158308751,"min":0.9985250737463127,"max":1.0,"n":3},"ds|go":{"mean":0.9790232710586693,"min":0.9749262536873157,"max":0.9823008849557522,"n":9},"ds|gm":{"mean":0.9873811864962307,"min":0.9823008849557522,"max":0.9926253687315634,"n":9},"go|go":{"mean":0.9985250737463127,"min":0.9985250737463127,"max":0.9985250737463127,"n":3},"go|gm":{"mean":0.9583743035070469,"min":0.9542772861356932,"max":0.9616519174041298,"n":9},"gm|gm":{"mean":0.9980334316617503,"min":0.9970501474926253,"max":0.9985250737463127,"n":3}},"wkappa":{"ds|ds":{"mean":0.5256797487877982,"min":0.5144940989258718,"max":0.5350211121769299,"n":3},"ds|go":{"mean":0.15388221296885707,"min":0.13580357342516602,"max":0.18098205508439258,"n":9},"ds|gm":{"mean":0.3947234999028481,"min":0.3748759867144028,"max":0.42788091297865005,"n":9},"go|go":{"mean":0.6212152982065795,"min":0.6019050104384134,"max":0.6396753309498502,"n":3},"go|gm":{"mean":0.24593537276271618,"min":0.2221938961322747,"max":0.26387490446787076,"n":9},"gm|gm":{"mean":0.8614980141269132,"min":0.8498714751951941,"max":0.871532391528554,"n":3}},"spearman":{"ds|ds":{"mean":0.5025138513004515,"min":0.4961046241670152,"max":0.5098401477177957,"n":3},"ds|go":{"mean":0.26685389570437057,"min":0.22047769097909373,"max":0.3108584630411963,"n":9},"ds|gm":{"mean":0.4456597637466158,"min":0.4152851894167147,"max":0.46355294199437114,"n":9},"go|go":{"mean":0.5954448510089095,"min":0.5657675668687944,"max":0.6160931048316074,"n":3},"go|gm":{"mean":0.31766911199250303,"min":0.2963947731634172,"max":0.3385044988539977,"n":9},"gm|gm":{"mean":0.8347399121884224,"min":0.8240568577093897,"max":0.8466414632360383,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":98.37758112094394,"min":97.78761061946902,"max":98.67256637168141,"n":3},"attr":{"mean":3.196165191740413,"min":3.185840707964602,"max":3.2035398230088497,"n":3}},"go":{"pass":{"mean":98.96755162241888,"min":98.67256637168141,"max":99.11504424778761,"n":3},"attr":{"mean":3.7640117994100297,"min":3.752212389380531,"max":3.769911504424779,"n":3}},"gm":{"pass":{"mean":96.3126843657817,"min":96.01769911504425,"max":96.46017699115043,"n":3},"attr":{"mean":3.5589970501474926,"min":3.5530973451327434,"max":3.5707964601769913,"n":3}},"pair_agree":{"ds|go":{"mean":0.9823008849557522,"min":0.9734513274336283,"max":0.9867256637168141,"n":9},"ds|gm":{"mean":0.9655850540806293,"min":0.9557522123893806,"max":0.9734513274336283,"n":9},"go|gm":{"mean":0.9616519174041298,"min":0.9557522123893806,"max":0.9646017699115044,"n":9}}},"v2":{"ds":{"pass":{"mean":97.93510324483775,"min":97.34513274336283,"max":98.67256637168141,"n":3},"attr":{"mean":3.1769911504424777,"min":3.163716814159292,"max":3.190265486725664,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3},"attr":{"mean":3.7669616519174043,"min":3.752212389380531,"max":3.7787610619469025,"n":3}},"gm":{"pass":{"mean":94.98525073746313,"min":94.69026548672566,"max":95.57522123893806,"n":3},"attr":{"mean":3.510324483775811,"min":3.504424778761062,"max":3.5132743362831858,"n":3}},"pair_agree":{"ds|go":{"mean":0.9793510324483775,"min":0.9734513274336283,"max":0.9867256637168141,"n":9},"ds|gm":{"mean":0.9587020648967551,"min":0.9513274336283186,"max":0.9690265486725663,"n":9},"go|gm":{"mean":0.9498525073746313,"min":0.9469026548672567,"max":0.9557522123893806,"n":9}}},"v3":{"ds":{"pass":{"mean":98.23008849557522,"min":98.23008849557522,"max":98.23008849557522,"n":3},"attr":{"mean":3.1932153392330385,"min":3.172566371681416,"max":3.2035398230088497,"n":3}},"go":{"pass":{"mean":99.26253687315634,"min":99.11504424778761,"max":99.5575221238938,"n":3},"attr":{"mean":3.7743362831858405,"min":3.7610619469026547,"max":3.7831858407079646,"n":3}},"gm":{"pass":{"mean":92.77286135693215,"min":92.03539823008849,"max":93.36283185840708,"n":3},"attr":{"mean":3.4631268436578173,"min":3.4469026548672566,"max":3.4911504424778763,"n":3}},"pair_agree":{"ds|go":{"mean":0.9818092428711898,"min":0.9734513274336283,"max":0.9911504424778761,"n":9},"ds|gm":{"mean":0.9424778761061947,"min":0.9292035398230089,"max":0.9513274336283186,"n":9},"go|gm":{"mean":0.9292035398230089,"min":0.915929203539823,"max":0.9424778761061947,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":9,"a_pass_b_fail":2,"both_fail":2,"both_pass":665,"agreement":0.9837758112094396,"kappa":0.26026582027375406,"ac1":0.9834128993731465,"attr_exact":0.415929203539823,"attr_wkappa":0.1807360280562924,"crosstab":[[146,1,0,0],[372,135,2,0],[6,11,1,1],[2,0,1,0]]},"ds|gm":{"a_fail_b_pass":2,"a_pass_b_fail":27,"both_fail":9,"both_pass":640,"agreement":0.9572271386430679,"kappa":0.36725236532149014,"ac1":0.9541595509678322,"attr_exact":0.5634218289085545,"attr_wkappa":0.40877803959302617,"crosstab":[[142,4,0,1],[255,233,16,5],[0,7,4,8],[0,0,0,3]]},"go|gm":{"a_fail_b_pass":2,"a_pass_b_fail":34,"both_fail":2,"both_pass":640,"agreement":0.9469026548672567,"kappa":0.09033989266547345,"ac1":0.9436778320303486,"attr_exact":0.6666666666666666,"attr_wkappa":0.25943105439876457,"crosstab":[[355,148,12,11],[41,95,7,4],[1,1,1,1],[0,0,0,1]]}},"fail_counts":{"ds":11,"go":4,"gm":36},"fleiss":{"verdict":{"judges_by_run":{"mean":0.2268074606059679,"min":0.17776654876199977,"max":0.2895288364511315,"n":27},"judges_consensus":0.23573907626590473,"all_runs":0.35440851113979377,"within":{"ds":0.5595555495405247,"go":0.6646884272997117,"gm":0.8044305988231181}},"rating":{"judges_by_run":{"mean":0.13506533883167926,"min":0.11765983098921548,"max":0.15477982936993226,"n":27},"judges_consensus":0.14346737517924235,"all_runs":0.27379060072655087,"within":{"ds":0.44536482011860384,"go":0.5721390755234869,"gm":0.7807084876425172}}},"errors":{"ds":{"Missing Explanation":0.7866273352999016,"Low Relevance to Caregiver Needs":0.5899705014749262,"Not actionable":1.1307767944936087,"Generic Advice":0.2458210422812193},"go":{"Not actionable":0.344149459193707,"Generic Advice":0.04916420845624385,"Missing Explanation":0.0983284169124877,"Low Relevance to Caregiver Needs":0.2458210422812193},"gm":{"Low Relevance to Caregiver Needs":1.7699115044247788,"Generic Advice":2.2615535889872174,"Missing Explanation":0.688298918387414,"Not actionable":1.7207472959685346}}},"Care Safety":{"scale":null,"stats":{"agreement":{"ds|ds":{"mean":0.9891838741396264,"min":0.9852507374631269,"max":0.995575221238938,"n":3},"ds|go":{"mean":0.9911504424778761,"min":0.9896755162241888,"max":0.9941002949852508,"n":9},"ds|gm":{"mean":0.9916420845624385,"min":0.9896755162241888,"max":0.995575221238938,"n":9},"go|go":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"go|gm":{"mean":0.9995083579154376,"min":0.9985250737463127,"max":1.0,"n":9},"gm|gm":{"mean":0.9990167158308751,"min":0.9985250737463127,"max":1.0,"n":3}},"kappa":{"ds|ds":{"mean":0.3930334441140068,"min":0.1756282085922637,"max":0.7252094028640879,"n":3},"ds|go":{"mean":0.0,"min":0.0,"max":0.0,"n":9},"ds|gm":{"mean":0.09941100232356181,"min":0.0,"max":0.39858072146658324,"n":9},"go|go":null,"go|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":3},"gm|gm":{"mean":0.0,"min":0.0,"max":0.0,"n":2}},"ac1":{"ds|ds":{"mean":0.9889848129248392,"min":0.9849430367096759,"max":0.9955028505162105,"n":3},"ds|go":{"mean":0.9910673759442894,"min":0.9895683710195895,"max":0.9940653857936891,"n":9},"ds|gm":{"mean":0.9915597265903056,"min":0.9895683710195895,"max":0.9955424698092181,"n":9},"go|go":{"mean":1.0,"min":1.0,"max":1.0,"n":3},"go|gm":{"mean":0.9995076322448593,"min":0.9985228967345778,"max":1.0,"n":9},"gm|gm":{"mean":0.9990152644897186,"min":0.9985228967345778,"max":1.0,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":99.11504424778761,"min":99.11504424778761,"max":99.11504424778761,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"pair_agree":{"ds|go":{"mean":0.9911504424778761,"min":0.9911504424778761,"max":0.9911504424778761,"n":9},"ds|gm":{"mean":0.9911504424778761,"min":0.9911504424778761,"max":0.9911504424778761,"n":9},"go|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":9}}},"v2":{"ds":{"pass":{"mean":99.11504424778761,"min":98.67256637168141,"max":99.5575221238938,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"pair_agree":{"ds|go":{"mean":0.9911504424778761,"min":0.9867256637168141,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9911504424778761,"min":0.9867256637168141,"max":0.995575221238938,"n":9},"go|gm":{"mean":1.0,"min":1.0,"max":1.0,"n":9}}},"v3":{"ds":{"pass":{"mean":99.11504424778761,"min":98.67256637168141,"max":99.5575221238938,"n":3}},"go":{"pass":{"mean":100.0,"min":100.0,"max":100.0,"n":3}},"gm":{"pass":{"mean":99.85250737463127,"min":99.5575221238938,"max":100.0,"n":3}},"pair_agree":{"ds|go":{"mean":0.9911504424778761,"min":0.9867256637168141,"max":0.995575221238938,"n":9},"ds|gm":{"mean":0.9926253687315634,"min":0.9867256637168141,"max":1.0,"n":9},"go|gm":{"mean":0.9985250737463127,"min":0.995575221238938,"max":1.0,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":5,"a_pass_b_fail":0,"both_fail":0,"both_pass":673,"agreement":0.9926253687315634,"kappa":0.0,"ac1":0.9925707830153635},"ds|gm":{"a_fail_b_pass":5,"a_pass_b_fail":0,"both_fail":0,"both_pass":673,"agreement":0.9926253687315634,"kappa":0.0,"ac1":0.9925707830153635},"go|gm":{"a_fail_b_pass":0,"a_pass_b_fail":0,"both_fail":0,"both_pass":678,"agreement":1.0,"kappa":null,"ac1":1.0}},"fail_counts":{"ds":5,"go":0,"gm":0},"fleiss":{"verdict":{"judges_by_run":{"mean":0.047040445942079775,"min":-0.0034533793783619675,"max":0.19802858551009553,"n":27},"judges_consensus":-0.002464268112369265,"all_runs":0.12886646997238935,"within":{"ds":0.3834325396825341,"go":null,"gm":-0.0004918839155900578}}},"errors":{"ds":{"Physical safety risk":0.5899705014749262,"Unsafe medical or health advice":0.4424778761061947},"go":{},"gm":{"Discourages professional care":0.04916420845624385}}},"Standalone":{"scale":["Fully standalone","Mostly standalone","Somewhat dependent","Not standalone"],"stats":{"agreement":{"ds|ds":{"mean":0.9862340216322517,"min":0.9852507374631269,"max":0.9882005899705014,"n":3},"ds|go":{"mean":0.9578826614224845,"min":0.9528023598820059,"max":0.9616519174041298,"n":9},"ds|gm":{"mean":0.987708947885939,"min":0.9852507374631269,"max":0.9911504424778761,"n":9},"go|go":{"mean":0.9911504424778761,"min":0.9882005899705014,"max":0.995575221238938,"n":3},"go|gm":{"mean":0.9587020648967551,"min":0.9557522123893806,"max":0.9616519174041298,"n":9},"gm|gm":{"mean":0.9931170108161259,"min":0.9896755162241888,"max":0.995575221238938,"n":3}},"kappa":{"ds|ds":{"mean":0.8687234213220787,"min":0.8570645528523845,"max":0.8884914271617115,"n":3},"ds|go":{"mean":0.3993811497933979,"min":0.3186357640851714,"max":0.483746266034089,"n":9},"ds|gm":{"mean":0.8802694001500766,"min":0.8533292952018345,"max":0.9142387317114306,"n":9},"go|go":{"mean":0.7386216873409785,"min":0.6610423697037859,"max":0.8398677373641948,"n":3},"go|gm":{"mean":0.3900471304282748,"min":0.3034723649065134,"max":0.483746266034089,"n":9},"gm|gm":{"mean":0.931286713982648,"min":0.8959621202157044,"max":0.9565663036515054,"n":3}},"ac1":{"ds|ds":{"mean":0.9846211389172598,"min":0.9835054154786349,"max":0.9868043323829079,"n":3},"ds|go":{"mean":0.9547344582373662,"min":0.9493429716174946,"max":0.9585983371694302,"n":9},"ds|gm":{"mean":0.9863024653055494,"min":0.9835536688902365,"max":0.9901322013341419,"n":9},"go|go":{"mean":0.9908376054711159,"min":0.9877755240027045,"max":0.9954494862774269,"n":3},"go|gm":{"mean":0.9557254594292245,"min":0.9526485610656635,"max":0.9587199145735469,"n":9},"gm|gm":{"mean":0.992350705877986,"min":0.9885380729906912,"max":0.9950733248638443,"n":3}},"exact":{"ds|ds":{"mean":0.9577187807276303,"min":0.9557522123893806,"max":0.9587020648967551,"n":3},"ds|go":{"mean":0.9472304162569649,"min":0.943952802359882,"max":0.9513274336283186,"n":9},"ds|gm":{"mean":0.9557522123893806,"min":0.9513274336283186,"max":0.9616519174041298,"n":9},"go|go":{"mean":0.9896755162241888,"min":0.9867256637168141,"max":0.9941002949852508,"n":3},"go|gm":{"mean":0.949524745984923,"min":0.948377581120944,"max":0.9528023598820059,"n":9},"gm|gm":{"mean":0.9837758112094396,"min":0.9823008849557522,"max":0.9852507374631269,"n":3}},"within1":{"ds|ds":{"mean":0.9882005899705015,"min":0.9837758112094396,"max":0.9911504424778761,"n":3},"ds|go":{"mean":0.9673877417240249,"min":0.9616519174041298,"max":0.9734513274336283,"n":9},"ds|gm":{"mean":0.9823008849557522,"min":0.976401179941003,"max":0.9867256637168141,"n":9},"go|go":{"mean":0.9916420845624385,"min":0.9896755162241888,"max":0.995575221238938,"n":3},"go|gm":{"mean":0.9601769911504425,"min":0.9557522123893806,"max":0.9631268436578171,"n":9},"gm|gm":{"mean":0.9936086529006883,"min":0.9896755162241888,"max":0.9970501474926253,"n":3}},"wkappa":{"ds|ds":{"mean":0.8186116721062174,"min":0.7814505494505495,"max":0.842432055565787,"n":3},"ds|go":{"mean":0.3644904224264198,"min":0.2847225058194145,"max":0.43999814737622156,"n":9},"ds|gm":{"mean":0.822800219111155,"min":0.7757552000391994,"max":0.8694954766131274,"n":9},"go|go":{"mean":0.7535220099324783,"min":0.6951438848920863,"max":0.8412406786988004,"n":3},"go|gm":{"mean":0.3328120615251967,"min":0.24248228308753117,"max":0.41080434225147455,"n":9},"gm|gm":{"mean":0.9355119989295055,"min":0.9089580483783328,"max":0.9669379171619275,"n":3}},"spearman":{"ds|ds":{"mean":0.860077968185269,"min":0.841961266373082,"max":0.8732913847241656,"n":3},"ds|go":{"mean":0.47067148543390935,"min":0.4078553046277977,"max":0.5283393219074741,"n":9},"ds|gm":{"mean":0.8649663990353571,"min":0.8254296862675844,"max":0.8875782767340161,"n":9},"go|go":{"mean":0.7520906279149348,"min":0.6845219466716354,"max":0.8413791695545835,"n":3},"go|gm":{"mean":0.46507679053579465,"min":0.38154802158653234,"max":0.5393703667996863,"n":9},"gm|gm":{"mean":0.9336859722795174,"min":0.899263802082933,"max":0.9596880559957056,"n":3}}},"arms":{"v1":{"ds":{"pass":{"mean":92.18289085545722,"min":92.03539823008849,"max":92.47787610619469,"n":3},"attr":{"mean":3.84070796460177,"min":3.8230088495575223,"max":3.853982300884956,"n":3}},"go":{"pass":{"mean":97.05014749262536,"min":96.46017699115043,"max":97.34513274336283,"n":3},"attr":{"mean":3.9380530973451324,"min":3.9292035398230087,"max":3.9424778761061945,"n":3}},"gm":{"pass":{"mean":92.33038348082596,"min":92.03539823008849,"max":92.92035398230088,"n":3},"attr":{"mean":3.7920353982300887,"min":3.7831858407079646,"max":3.8053097345132745,"n":3}},"pair_agree":{"ds|go":{"mean":0.948377581120944,"min":0.9469026548672567,"max":0.9513274336283186,"n":9},"ds|gm":{"mean":0.9798426745329399,"min":0.9734513274336283,"max":0.9867256637168141,"n":9},"go|gm":{"mean":0.9478859390363815,"min":0.9469026548672567,"max":0.9557522123893806,"n":9}}},"v2":{"ds":{"pass":{"mean":94.10029498525074,"min":93.80530973451327,"max":94.24778761061947,"n":3},"attr":{"mean":3.877581120943953,"min":3.8672566371681416,"max":3.8893805309734515,"n":3}},"go":{"pass":{"mean":98.52507374631269,"min":97.78761061946902,"max":99.11504424778761,"n":3},"attr":{"mean":3.971976401179941,"min":3.9557522123893807,"max":3.9867256637168142,"n":3}},"gm":{"pass":{"mean":93.80530973451327,"min":93.80530973451327,"max":93.80530973451327,"n":3},"attr":{"mean":3.8392330383480826,"min":3.836283185840708,"max":3.84070796460177,"n":3}},"pair_agree":{"ds|go":{"mean":0.9557522123893806,"min":0.9469026548672567,"max":0.9646017699115044,"n":9},"ds|gm":{"mean":0.9941002949852508,"min":0.9867256637168141,"max":1.0,"n":9},"go|gm":{"mean":0.9528023598820059,"min":0.9469026548672567,"max":0.9601769911504425,"n":9}}},"v3":{"ds":{"pass":{"mean":97.05014749262536,"min":96.46017699115043,"max":97.78761061946902,"n":3},"attr":{"mean":3.9483775811209436,"min":3.9424778761061945,"max":3.9601769911504423,"n":3}},"go":{"pass":{"mean":99.41002949852508,"min":99.11504424778761,"max":99.5575221238938,"n":3},"attr":{"mean":3.9882005899705018,"min":3.982300884955752,"max":3.9911504424778763,"n":3}},"gm":{"pass":{"mean":97.93510324483775,"min":97.78761061946902,"max":98.23008849557522,"n":3},"attr":{"mean":3.9587020648967552,"min":3.9557522123893807,"max":3.9601769911504423,"n":3}},"pair_agree":{"ds|go":{"mean":0.9695181907571288,"min":0.9601769911504425,"max":0.9823008849557522,"n":9},"ds|gm":{"mean":0.9891838741396264,"min":0.9823008849557522,"max":0.995575221238938,"n":9},"go|gm":{"mean":0.975417895771878,"min":0.9734513274336283,"max":0.9778761061946902,"n":9}}}},"consensus":{"ds|go":{"a_fail_b_pass":27,"a_pass_b_fail":1,"both_fail":10,"both_pass":640,"agreement":0.9587020648967551,"kappa":0.40170185943901543,"ac1":0.9556751001653077,"attr_exact":0.9498525073746312,"attr_wkappa":0.37280296022201675,"crosstab":[[639,0,1,0],[7,0,2,0],[17,1,5,1],[4,0,1,0]]},"ds|gm":{"a_fail_b_pass":3,"a_pass_b_fail":3,"both_fail":34,"both_pass":638,"agreement":0.9911504424778761,"kappa":0.9142387317114306,"ac1":0.9901322013341419,"attr_exact":0.9572271386430679,"attr_wkappa":0.8423051405824621,"crosstab":[[637,0,2,1],[2,0,3,4],[2,2,7,13],[0,0,0,5]]},"go|gm":{"a_fail_b_pass":1,"a_pass_b_fail":27,"both_fail":10,"both_pass":640,"agreement":0.9587020648967551,"kappa":0.40170185943901543,"ac1":0.9556751001653077,"attr_exact":0.9498525073746312,"attr_wkappa":0.3430689576356247,"crosstab":[[640,2,9,16],[0,0,0,1],[1,0,3,5],[0,0,0,1]]}},"fail_counts":{"ds":37,"go":11,"gm":37},"fleiss":{"verdict":{"judges_by_run":{"mean":0.6008071860955366,"min":0.547812984382428,"max":0.6592472776638437,"n":27},"judges_consensus":0.6193885250354643,"all_runs":0.6705459813479053,"within":{"ds":0.868818323789696,"go":0.7307941176470596,"gm":0.9315507095880922}},"rating":{"judges_by_run":{"mean":0.40485539043802166,"min":0.36047594093893826,"max":0.4667693224716885,"n":27},"judges_consensus":0.41875784375533914,"all_runs":0.4848161500388706,"within":{"ds":0.6203642614070433,"go":0.6866223533036946,"gm":0.8408918514023481}}},"errors":{"ds":{"Undefined this/these reference":2.2123893805309733,"Depends on another Q&A pair":1.2291052114060963,"Refers to the video, transcript or speaker":1.7207472959685346,"Undefined pronoun":0.3933136676499508},"go":{"Refers to the video, transcript or speaker":0.8849557522123894,"Undefined this/these reference":0.5899705014749262,"Undefined pronoun":0.2458210422812193},"gm":{"Undefined this/these reference":3.048180924287119,"Refers to the video, transcript or speaker":2.0157325467059977,"Undefined pronoun":0.2458210422812193}}}},"recommendation":{"stats":{"exact":{"ds|ds":{"mean":0.8765978367748279,"min":0.8716814159292036,"max":0.8820058997050148,"n":3},"ds|go":{"mean":0.8095706325794821,"min":0.8023598820058997,"max":0.8141592920353983,"n":9},"ds|gm":{"mean":0.8267781055391675,"min":0.8171091445427728,"max":0.8348082595870207,"n":9},"go|go":{"mean":0.9488692232055064,"min":0.9410029498525073,"max":0.9572271386430679,"n":3},"go|gm":{"mean":0.844149459193707,"min":0.8348082595870207,"max":0.8569321533923304,"n":9},"gm|gm":{"mean":0.9419862340216323,"min":0.9380530973451328,"max":0.9469026548672567,"n":3}},"within1":{"ds|ds":{"mean":0.9818092428711898,"min":0.9808259587020649,"max":0.9837758112094396,"n":3},"ds|go":{"mean":0.950671910848902,"min":0.9380530973451328,"max":0.9587020648967551,"n":9},"ds|gm":{"mean":0.9539495247459849,"min":0.9469026548672567,"max":0.9601769911504425,"n":9},"go|go":{"mean":0.9891838741396263,"min":0.9867256637168141,"max":0.9926253687315634,"n":3},"go|gm":{"mean":0.9124877089478859,"min":0.9056047197640118,"max":0.9174041297935103,"n":9},"gm|gm":{"mean":0.9783677482792527,"min":0.9734513274336283,"max":0.9837758112094396,"n":3}},"wkappa":{"ds|ds":{"mean":0.7241703057009258,"min":0.7113215776683905,"max":0.7459360512545017,"n":3},"ds|go":{"mean":0.28456365794975325,"min":0.21789284798769548,"max":0.35005930034510135,"n":9},"ds|gm":{"mean":0.5769039449085513,"min":0.5540814164872574,"max":0.6049321055095989,"n":9},"go|go":{"mean":0.6730998953168668,"min":0.6465758780217632,"max":0.7138032925284931,"n":3},"go|gm":{"mean":0.23967268516389392,"min":0.22051095866852655,"max":0.25468738420493564,"n":9},"gm|gm":{"mean":0.8702741409518824,"min":0.8471875342649334,"max":0.8972794575294002,"n":3}},"spearman":{"ds|ds":{"mean":0.7345393323947524,"min":0.713139508395316,"max":0.7660836204784826,"n":3},"ds|go":{"mean":0.3463282119617933,"min":0.29350976141001806,"max":0.3876166986131671,"n":9},"ds|gm":{"mean":0.610369501865473,"min":0.5756972064844986,"max":0.6273096286964654,"n":9},"go|go":{"mean":0.646037626614162,"min":0.5987846822685956,"max":0.6828009957032628,"n":3},"go|gm":{"mean":0.35089543320089117,"min":0.32165757594953126,"max":0.37217840203412067,"n":9},"gm|gm":{"mean":0.8754991577925909,"min":0.8549737014407992,"max":0.9085492065322224,"n":3}}},"arms":{"v1":{"ds":{"dist":[77.43362831858407,15.781710914454278,6.6371681415929205,0.14749262536873156],"yes":{"mean":77.43362831858407,"min":76.99115044247787,"max":77.87610619469027,"n":3}},"go":{"dist":[92.18289085545722,5.014749262536873,2.8023598820059,0.0],"yes":{"mean":92.18289085545722,"min":91.1504424778761,"max":92.92035398230088,"n":3}},"gm":{"dist":[84.36578171091446,6.342182890855457,7.079646017699115,2.2123893805309733],"yes":{"mean":84.36578171091446,"min":83.1858407079646,"max":85.39823008849558,"n":3}}},"v2":{"ds":{"dist":[81.56342182890856,12.979351032448378,5.457227138643068,0.0],"yes":{"mean":81.56342182890856,"min":80.08849557522124,"max":83.1858407079646,"n":3}},"go":{"dist":[94.83775811209439,3.5398230088495577,1.6224188790560472,0.0],"yes":{"mean":94.83775811209439,"min":92.47787610619469,"max":96.46017699115043,"n":3}},"gm":{"dist":[83.77581120943952,5.3097345132743365,8.259587020648969,2.6548672566371683],"yes":{"mean":83.77581120943952,"min":82.7433628318584,"max":84.51327433628319,"n":3}}},"v3":{"ds":{"dist":[80.08849557522124,13.864306784660767,5.752212389380531,0.2949852507374631],"yes":{"mean":80.08849557522124,"min":78.76106194690266,"max":81.85840707964603,"n":3}},"go":{"dist":[93.36283185840708,4.129793510324483,2.5073746312684366,0.0],"yes":{"mean":93.36283185840708,"min":92.03539823008849,"max":95.57522123893806,"n":3}},"gm":{"dist":[85.84070796460178,2.6548672566371683,7.817109144542773,3.687315634218289],"yes":{"mean":85.84070796460178,"min":85.39823008849558,"max":86.28318584070797,"n":3}}}},"fleiss":{"judges_by_run":{"mean":0.31379220073580766,"min":0.2852206064487282,"max":0.3465051268391538,"n":27},"judges_consensus":0.34683993534634294,"all_runs":0.4089597625712831,"within":{"ds":0.638263952657893,"go":0.5882510948905121,"gm":0.78843316144387}}}};
+const NS = "http://www.w3.org/2000/svg";
+const ARMS = ["v1","v2","v3"];
+const METRICS = ["Standalone","Trustworthiness","Clarity","Usefulness","Care Safety"];
+const J = D.judges;
+const COLOR = {ds:"var(--ds)", go:"var(--go)", gm:"var(--gm)"};
+const NAME = Object.fromEntries(J.map(j=>[j.k,j.name]));
+const pk = (a,b)=>{ const i=J.findIndex(j=>j.k===a), k=J.findIndex(j=>j.k===b); return i<=k ? `${a}|${b}` : `${b}|${a}`; };
+const BETWEEN = []; J.forEach((a,i)=>J.slice(i+1).forEach(b=>BETWEEN.push([a.k,b.k])));
+const dotHTML = k=>`<i class="dot" style="background:${COLOR[k]}"></i>`;
+
+function s(tag, attrs, parent){ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e; }
+function txt(parent, x, y, str, attrs){ const t=s("text",Object.assign({x,y},attrs||{}),parent); t.textContent=str; return t; }
+const fmtPct = v => v.toFixed(1);
+const fmtCoef = v => (v < 0 ? "−" : "") + Math.abs(v).toFixed(2);
+const fmtSigned = v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1);
+
+const tip = document.getElementById("tip");
+function place(x,y){ const r=tip.getBoundingClientRect(); let L=x+14, T=y+14;
+  if(L+r.width>innerWidth-8) L=x-r.width-14; if(T+r.height>innerHeight-8) T=y-r.height-14;
+  tip.style.left=Math.max(8,L)+"px"; tip.style.top=Math.max(8,T)+"px"; }
+function bind(node, text){
+  node.setAttribute("tabindex","0"); node.setAttribute("aria-label",text); node.classList.add("hit");
+  node.addEventListener("pointerenter",e=>{tip.textContent=text; tip.hidden=false; place(e.clientX,e.clientY);});
+  node.addEventListener("pointermove",e=>place(e.clientX,e.clientY));
+  node.addEventListener("pointerleave",()=>{tip.hidden=true;});
+  node.addEventListener("focus",()=>{const r=node.getBoundingClientRect(); tip.textContent=text; tip.hidden=false; place(r.left+r.width/2,r.top);});
+  node.addEventListener("blur",()=>{tip.hidden=true;});
+}
+
+document.getElementById("judgekey").innerHTML = J.map(j=>`<span><i class="sw" style="background:${COLOR[j.k]}"></i>${j.name} <span class="mono" style="color:var(--muted);font-size:.78rem">${j.model}</span></span>`).join("");
+
+/* ---------- 1. pass-rate panels ---------- */
+const PANELS = [
+  {title:"Standalone", key:"Standalone", sub:"% judged understandable on its own"},
+  {title:"Trustworthiness", key:"Trustworthiness", sub:"% judged aligned with the video"},
+  {title:"Clarity", key:"Clarity", sub:"% judged easy for a caregiver to understand"},
+  {title:"Usefulness", key:"Usefulness", sub:"% judged useful or actionable"},
+  {title:"Care Safety", key:"Care Safety", sub:"% with no safety concern"},
+  {title:"Recommend “Yes”", rec:true, sub:"% recommended without edits"},
+];
+const armStat = (p,v,k) => p.rec ? D.recommendation.arms[v][k].yes : D.metrics[p.key].arms[v][k].pass;
+(function(){
+  let lo = 100;
+  for(const p of PANELS) for(const v of ARMS) for(const j of J) lo=Math.min(lo, armStat(p,v,j.k).min);
+  lo = Math.max(0, Math.floor((lo-2)/10)*10);
+  const host=document.getElementById("panels");
+  const W=300,H=196,m={l:32,r:10,t:10,b:26}, hi=100;
+  const y=v=>m.t+(hi-Math.max(lo,Math.min(hi,v)))/(hi-lo)*(H-m.t-m.b);
+  const cx=i=>m.l+(W-m.l-m.r)*(i+0.5)/3;
+  const off=i=>(i-(J.length-1)/2)*14;
+  const ticks=[]; for(let g=lo; g<=100; g+=10) ticks.push(g);
+  for(const p of PANELS){
+    const fig=document.createElement("figure"); fig.className="panel";
+    fig.innerHTML=`<h3>${p.title}</h3><span class="sub">${p.sub}</span>`;
+    const svg=s("svg",{viewBox:`0 0 ${W} ${H}`,role:"img","aria-label":`${p.title} pass rates by prompt version`},fig);
+    for(const g of ticks){
+      s("line",{x1:m.l,x2:W-m.r,y1:y(g),y2:y(g),style:`stroke:${g===lo?"var(--line-2)":"var(--line)"};stroke-width:1`},svg);
+      txt(svg,m.l-6,y(g)+3.5,String(g),{"text-anchor":"end",style:"fill:var(--muted)"});
+    }
+    ARMS.forEach((v,i)=>txt(svg,cx(i),H-8,v,{"text-anchor":"middle",style:"fill:var(--muted)"}));
+    J.forEach((j,ji)=>{
+      const pts=ARMS.map((v,i)=>[cx(i)+off(ji), y(armStat(p,v,j.k).mean)]);
+      s("polyline",{points:pts.map(q=>q.join(",")).join(" "),style:`fill:none;stroke:${COLOR[j.k]};stroke-width:1.5;opacity:.5`},svg);
+    });
+    J.forEach((j,ji)=>{
+      ARMS.forEach((v,i)=>{
+        const a=armStat(p,v,j.k), x=cx(i)+off(ji);
+        s("line",{x1:x,x2:x,y1:y(a.max)-0.5,y2:y(a.min)+0.5,style:`stroke:${COLOR[j.k]};stroke-width:7;stroke-linecap:round;opacity:.22`},svg);
+        s("circle",{cx:x,cy:y(a.mean),r:4.5,style:`fill:${COLOR[j.k]};stroke:var(--surface);stroke-width:2`},svg);
+        const hit=s("circle",{cx:x,cy:y(a.mean),r:11,style:"fill:transparent"},svg);
+        bind(hit,`${j.name}, ${v}: ${fmtPct(a.mean)}% (runs ${fmtPct(a.min)}–${fmtPct(a.max)})`);
+      });
+    });
+    const d=document.createElement("div"); d.className="delta";
+    d.innerHTML=`<span>v1→v3</span>`+J.map(j=>`<span>${dotHTML(j.k)}${j.name} <b class="num">${fmtSigned(armStat(p,"v3",j.k).mean-armStat(p,"v1",j.k).mean)}</b></span>`).join("");
+    fig.appendChild(d); host.appendChild(fig);
+  }
+  const cols=J.length+BETWEEN.length+1;
+  let h=`<caption>Pass rate per prompt version: mean of three runs, run range beneath. Agreement columns give the share of pairs where one judge's run and the other's gave the same verdict, averaged over all nine run pairings.</caption>
+  <thead><tr><th>Prompt</th>${J.map(j=>`<th>${j.name}</th>`).join("")}${BETWEEN.map(([a,b])=>`<th>Agree ${NAME[a]} · ${NAME[b]}</th>`).join("")}</tr></thead><tbody>`;
+  for(const p of PANELS){
+    h+=`<tr class="grp"><td colspan="${cols}">${p.title}</td></tr>`;
+    for(const v of ARMS){
+      h+=`<tr><td>${v}</td>`;
+      for(const j of J){ const a=armStat(p,v,j.k); h+=`<td class="num">${fmtPct(a.mean)}<br><span class="rng">${fmtPct(a.min)}–${fmtPct(a.max)}</span></td>`; }
+      for(const [a,b] of BETWEEN){
+        const ag = p.rec ? null : D.metrics[p.key].arms[v].pair_agree[pk(a,b)];
+        h+=`<td class="num">${ag?fmtPct(ag.mean*100)+"%":"<span class='rng'>—</span>"}</td>`;
+      }
+      h+="</tr>";
+    }
+  }
+  document.getElementById("armtbl").innerHTML=h+"</tbody>";
+})();
+
+/* ---------- 2. agreement matrices ---------- */
+const STATS = [
+  {k:"agreement", label:"Raw agreement", kind:"bin", lo:0.5, pct:true,
+   desc:"Share of pairs where the two raters gave the same Yes/No verdict. High everywhere because most pairs pass."},
+  {k:"kappa", label:"Cohen's κ", kind:"bin", lo:0,
+   desc:"Agreement on the Yes/No verdict beyond chance. Informative for Trustworthiness and Standalone; near zero elsewhere because almost every pair passes."},
+  {k:"ac1", label:"Gwet's AC1", kind:"bin", lo:0.5,
+   desc:"Chance-corrected agreement on the Yes/No verdict that stays stable when nearly every pair passes."},
+  {k:"exact", label:"Exact rating", kind:"attr", lo:0.5, pct:true,
+   desc:"Share of pairs given the same 4-level rating. Care Safety has no rating scale; Recommendation uses its 4-level answer."},
+  {k:"within1", label:"Within one level", kind:"attr", lo:0.5, pct:true,
+   desc:"Share of pairs whose 4-level ratings are at most one level apart."},
+  {k:"wkappa", label:"Weighted κ", kind:"attr", lo:0,
+   desc:"Quadratic-weighted κ on the 4-level rating: a one-level miss counts a little, a three-level miss counts a lot."},
+  {k:"spearman", label:"Spearman ρ", kind:"attr", lo:0,
+   desc:"Whether two raters order pairs the same way on the 4-level rating."},
+];
+const ROWS = ["Standalone","Trustworthiness","Clarity","Usefulness","Care Safety","Recommendation"];
+function statTable(row, st){
+  if(row==="Recommendation") return st.kind==="attr" ? D.recommendation.stats[st.k] : null;
+  const m=D.metrics[row]; return m.stats[st.k] || null;
+}
+function drawMatrices(st){
+  const host=document.getElementById("mgrid"); host.innerHTML="";
+  const f = st.pct ? (q=>fmtPct(q*100)) : fmtCoef;
+  for(const row of ROWS){
+    const T=statTable(row,st);
+    const card=document.createElement("div"); card.className="mcard";
+    if(!T){ card.innerHTML=`<h3>${row}</h3><p class="note">${row==="Recommendation"?"Four-level outcome; switch to a rating statistic.":"No 4-level rating for this metric."}</p>`; host.appendChild(card); continue; }
+    let h=`<h3>${row}</h3><table class="mx"><thead><tr><th></th>${J.map(j=>`<th>${dotHTML(j.k)}${j.name}</th>`).join("")}</tr></thead><tbody>`;
+    J.forEach((r,i)=>{
+      h+=`<tr><th>${dotHTML(r.k)}${r.name}</th>`;
+      J.forEach((c,k)=>{
+        if(k>i){ h+=`<td class="blank"></td>`; return; }
+        const v=T[pk(r.k,c.k)], self=(k===i);
+        if(!v){ h+=`<td class="na ${self?"self":""}" title="Undefined: that judge gave every pair the same verdict in every run">undef.</td>`; return; }
+        const p=Math.max(0,Math.min(1,(v.mean-st.lo)/(1-st.lo)));
+        const pc=Math.round(6+p*78);
+        const label=self?`${r.name} vs itself`:`${c.name} vs ${r.name}`;
+        h+=`<td class="${self?"self":""}" style="background:color-mix(in srgb, var(--ink) ${pc}%, var(--surface));color:${pc>48?"var(--surface)":"var(--ink)"}" title="${row} · ${label}: ${f(v.mean)}${st.pct?"%":""} (range ${f(v.min)} to ${f(v.max)})">${f(v.mean)}</td>`;
+      });
+      h+="</tr>";
+    });
+    card.innerHTML=h+"</tbody></table>"; host.appendChild(card);
+  }
+  document.getElementById("statdesc").textContent = st.desc + (st.pct ? " Values are percentages." : "");
+}
+(function(){
+  const seg=document.getElementById("statseg");
+  STATS.forEach((st,i)=>{
+    const b=document.createElement("button"); b.type="button"; b.id="stat-"+st.k; b.textContent=st.label;
+    b.setAttribute("aria-pressed",i===1?"true":"false");
+    b.addEventListener("click",()=>{ seg.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false")); b.setAttribute("aria-pressed","true"); drawMatrices(st); });
+    seg.appendChild(b);
+  });
+  drawMatrices(STATS[1]);
+})();
+
+/* ---------- 2b. Fleiss' kappa ---------- */
+(function(){
+  const one = v => v==null ? `<td class="num"><span class="rng">undefined</span></td>` : `<td class="num">${fmtCoef(v)}</td>`;
+  const rng = v => v==null ? `<td class="num"><span class="rng">undefined</span></td>`
+    : `<td class="num">${fmtCoef(v.mean)}<br><span class="rng">${fmtCoef(v.min)} – ${fmtCoef(v.max)}</span></td>`;
+  const head = cap => `<caption>${cap}</caption><thead><tr><th>Metric</th><th>All judges, one run each</th><th>Judges' consensus</th><th>Every run</th>${J.map(j=>`<th>Within ${j.name}</th>`).join("")}</tr></thead><tbody>`;
+  const row = (name,F) => `<tr><td>${name}</td>${rng(F.judges_by_run)}${one(F.judges_consensus)}${one(F.all_runs)}${J.map(j=>one(F.within[j.k])).join("")}</tr>`;
+  let v=head("Yes/No verdict");
+  for(const m of METRICS) v+=row(m, D.metrics[m].fleiss.verdict);
+  document.getElementById("fleissv").innerHTML=v+"</tbody>";
+  let r=head("4-level rating");
+  for(const m of METRICS) if(D.metrics[m].fleiss.rating) r+=row(m, D.metrics[m].fleiss.rating);
+  r+=row("Recommendation", D.recommendation.fleiss);
+  document.getElementById("fleissr").innerHTML=r+"</tbody>";
+})();
+
+/* ---------- 3. direction of disagreement ---------- */
+(function(){
+  const host=document.getElementById("divs");
+  let gmax=0;
+  for(const [a,b] of BETWEEN) for(const m of METRICS){ const c=D.metrics[m].consensus[pk(a,b)]; gmax=Math.max(gmax,c.a_fail_b_pass,c.a_pass_b_fail); }
+  const max=Math.max(10,Math.ceil(gmax/10)*10);
+  for(const [a,b] of BETWEEN){
+    const wrap=document.createElement("div"); wrap.className="chart";
+    wrap.innerHTML=`<h3>${dotHTML(a)}${NAME[a]} and ${dotHTML(b)}${NAME[b]}</h3>`;
+    const sc=document.createElement("div"); sc.className="scroll";
+    const svg=s("svg",{role:"img","aria-label":`Disagreements between ${NAME[a]} and ${NAME[b]}`},sc); wrap.appendChild(sc);
+    const rows=METRICS.map(m=>{ const c=D.metrics[m].consensus[pk(a,b)]; return {m, l:c.a_fail_b_pass, r:c.a_pass_b_fail}; });
+    const W=680,left=150,right=24,top=30,rowH=32,H=top+rows.length*rowH+4;
+    svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+    const center=left+(W-left-right)/2, half=(W-left-right)/2-34, scl=v=>v/max*half;
+    txt(svg,center-8,top-12,`${NAME[a]} fails, ${NAME[b]} passes`,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2);font-size:12px"});
+    txt(svg,center+8,top-12,`${NAME[b]} fails, ${NAME[a]} passes`,{"text-anchor":"start",class:"lbl",style:"fill:var(--ink-2);font-size:12px"});
+    s("line",{x1:center,x2:center,y1:top-4,y2:H-2,style:"stroke:var(--line-2);stroke-width:1"},svg);
+    rows.forEach((r,i)=>{
+      const cy=top+i*rowH+rowH/2, bh=14;
+      txt(svg,left-12,cy+4,r.m,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2)"});
+      const wl=scl(r.l), wr=scl(r.r);
+      if(wl>0){ const q=s("rect",{x:center-wl,y:cy-bh/2,width:wl,height:bh,rx:2,style:`fill:${COLOR[a]}`},svg); bind(q,`${r.m}: ${r.l} pairs ${NAME[a]} fails and ${NAME[b]} passes`); }
+      if(wr>0){ const q=s("rect",{x:center,y:cy-bh/2,width:wr,height:bh,rx:2,style:`fill:${COLOR[b]}`},svg); bind(q,`${r.m}: ${r.r} pairs ${NAME[b]} fails and ${NAME[a]} passes`); }
+      txt(svg,center-wl-6,cy+4,String(r.l),{"text-anchor":"end",style:"fill:var(--ink)"});
+      txt(svg,center+wr+6,cy+4,String(r.r),{"text-anchor":"start",style:"fill:var(--ink)"});
+    });
+    const tl=rows.reduce((t,r)=>t+r.l,0), tr=rows.reduce((t,r)=>t+r.r,0);
+    const n=document.createElement("p"); n.className="note";
+    n.textContent=`Across the five metrics: ${tl} pairs where ${NAME[a]} is the stricter judge, ${tr} where ${NAME[b]} is. Counts are out of 678 pairs.`;
+    wrap.appendChild(n); host.appendChild(wrap);
+  }
+})();
+
+/* ---------- 4. crosstabs ---------- */
+const SHORT={
+  "Trustworthiness":["Excellent","Good","Fair","Poor"],
+  "Clarity":["Very easy","Easy","Somewhat difficult","Difficult"],
+  "Usefulness":["Highly useful","Useful","Limited","Not useful"],
+  "Standalone":["Fully","Mostly","Somewhat dependent","Not standalone"]};
+function drawX(a,b){
+  const host=document.getElementById("xgrid"); host.innerHTML="";
+  for(const m of ["Standalone","Trustworthiness","Clarity","Usefulness"]){
+    const c=D.metrics[m].consensus[pk(a,b)], lab=SHORT[m];
+    // consensus is stored in judge order; flip when the chosen order differs
+    let ct=c.crosstab; const flipped = pk(a,b)!==`${a}|${b}`;
+    if(flipped) ct=ct[0].map((_,j)=>ct.map(r=>r[j]));
+    let mx=0,colHi=0,rowHi=0,same=0;
+    ct.forEach((r,i)=>r.forEach((v,j)=>{ mx=Math.max(mx,v); if(i===j) same+=v; else if(j<i) colHi+=v; else rowHi+=v; }));
+    let t=`<table class="xt"><thead><tr><th class="corner">${NAME[a]} ↓ · ${NAME[b]} →</th>${lab.map(l=>`<th>${l}</th>`).join("")}</tr></thead><tbody>`;
+    ct.forEach((r,i)=>{
+      t+=`<tr><th style="text-align:left">${lab[i]}</th>`;
+      r.forEach((v,j)=>{
+        const p = v===0 ? 0 : Math.round(10+Math.sqrt(v/mx)*78);
+        const bg = v===0 ? "var(--bg)" : `color-mix(in srgb, var(--ink) ${p}%, var(--surface))`;
+        const fg = p>50 ? "var(--surface)" : "var(--ink)";
+        t+=`<td class="${i===j?"diag":""} ${v===0?"zero":""}" style="background:${bg};${v?`color:${fg}`:""}" title="${NAME[a]} ${lab[i]}, ${NAME[b]} ${lab[j]}: ${v} pairs">${v}</td>`;
+      });
+      t+="</tr>";
+    });
+    t+="</tbody></table>";
+    const card=document.createElement("div"); card.className="xcard";
+    card.innerHTML=`<h3>${m}</h3><p class="tally">Same rating <b class="num">${same}</b> · ${NAME[b]} higher <b class="num">${colHi}</b> · ${NAME[a]} higher <b class="num">${rowHi}</b> <span class="rng">(weighted κ ${fmtCoef(c.attr_wkappa)})</span></p>${t}`;
+    host.appendChild(card);
+  }
+}
+(function(){
+  const seg=document.getElementById("pairseg");
+  const def = BETWEEN.findIndex(([a,b])=>a==="ds"&&b==="gm");
+  const start = def>=0 ? def : 0;
+  BETWEEN.forEach(([a,b],i)=>{
+    const btn=document.createElement("button"); btn.type="button"; btn.id=`pair-${a}-${b}`;
+    btn.innerHTML=`${NAME[a]} vs ${NAME[b]}`;
+    btn.setAttribute("aria-pressed",i===start?"true":"false");
+    btn.addEventListener("click",()=>{ seg.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false")); btn.setAttribute("aria-pressed","true"); drawX(a,b); });
+    seg.appendChild(btn);
+  });
+  drawX(...BETWEEN[start]);
+})();
+
+/* ---------- 5. error labels ---------- */
+(function(){
+  let gmax=0;
+  for(const m of METRICS) for(const j of J){ const e=D.metrics[m].errors[j.k]; for(const k in e) gmax=Math.max(gmax,e[k]); }
+  const bar=(v,c)=>`<span class="ebar"><span class="num">${v.toFixed(2)}%</span><i style="width:${v>0?Math.max(2,v/gmax*80):0}px;background:${c}"></i></span>`;
+  let h=`<thead><tr><th>Metric</th><th>Error label</th>${J.map(j=>`<th>${j.name}</th>`).join("")}</tr></thead><tbody>`;
+  for(const m of METRICS){
+    const E=D.metrics[m].errors;
+    const keys=[...new Set(J.flatMap(j=>Object.keys(E[j.k])))].sort((x,y)=>J.reduce((t,j)=>t+(E[j.k][y]||0)-(E[j.k][x]||0),0));
+    keys.forEach((k,i)=>{
+      h+=`<tr><td>${i===0?`<b>${m}</b>`:""}</td><td style="text-align:left;white-space:normal">${k}</td>${J.map(j=>`<td>${bar(E[j.k][k]||0,COLOR[j.k])}</td>`).join("")}</tr>`;
+    });
+  }
+  document.getElementById("errtbl").innerHTML=h+"</tbody>";
+})();
+
+/* ---------- 6. recommendation ---------- */
+(function(){
+  const LV=["Yes","Yes, with minor edits","No, needs major edits","No"];
+  const COL=["color-mix(in srgb, var(--ink) 82%, var(--surface))","color-mix(in srgb, var(--ink) 50%, var(--surface))",
+             "color-mix(in srgb, var(--ink) 26%, var(--surface))","color-mix(in srgb, var(--ink) 12%, var(--surface))"];
+  const FG=["var(--surface)","var(--surface)","var(--ink)","var(--ink)"];
+  document.getElementById("reckey").innerHTML=LV.map((l,i)=>`<span><i class="sw" style="border-radius:2px;background:${COL[i]}"></i>${l}</span>`).join("");
+  const svg=document.getElementById("recchart");
+  const W=680,left=150,right=24,top=6,bh=18,gap=5,group=14;
+  const rows=[]; ARMS.forEach(v=>J.forEach(j=>rows.push({v,j})));
+  const H=top+rows.length*(bh+gap)+(ARMS.length-1)*group+4; svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const bw=W-left-right; let y=top;
+  rows.forEach((r,i)=>{
+    if(i>0 && i%J.length===0) y+=group;
+    const dist=D.recommendation.arms[r.v][r.j.k].dist;
+    s("circle",{cx:left-8,cy:y+bh/2,r:3.5,style:`fill:${COLOR[r.j.k]}`},svg);
+    txt(svg,left-16,y+bh/2+4,`${r.v} · ${r.j.name}`,{"text-anchor":"end",class:"lbl",style:"fill:var(--ink-2)"});
+    let x=left;
+    dist.forEach((val,k)=>{
+      const w=val/100*bw; if(w<=0) return;
+      const rr=s("rect",{x:x,y:y,width:Math.max(0,w-2),height:bh,style:`fill:${COL[k]}`},svg);
+      bind(rr,`${r.v}, ${r.j.name}: ${LV[k]} ${fmtPct(val)}%`);
+      if(w>40) txt(svg,x+w/2-1,y+bh/2+4,Math.round(val)+"%",{"text-anchor":"middle",style:`fill:${FG[k]}`});
+      x+=w;
+    });
+    y+=bh+gap;
+  });
+})();
+
+/* ---------- 7. full table ---------- */
+(function(){
+  const ORDER = []; J.forEach((a,i)=>J.slice(i).forEach(b=>ORDER.push([a.k,b.k])));
+  const head = ORDER.map(([a,b])=>a===b?`${NAME[a]} vs itself`:`${NAME[a]} vs ${NAME[b]}`);
+  const cell=(v,pct)=>{ if(!v) return `<td class="num"><span class="rng">undefined</span></td>`;
+    const f=pct?(q=>fmtPct(q*100)+"%"):fmtCoef;
+    return `<td class="num">${f(v.mean)}<br><span class="rng">${f(v.min)} – ${f(v.max)}</span></td>`; };
+  let h=`<thead><tr><th>Statistic</th>${head.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>`;
+  for(const row of ROWS){
+    h+=`<tr class="grp"><td colspan="${ORDER.length+1}">${row}</td></tr>`;
+    for(const st of STATS){
+      const T=statTable(row,st); if(!T) continue;
+      h+=`<tr><td>${st.label}${st.kind==="attr"&&row!=="Recommendation"?" <span class='rng'>(rating)</span>":""}</td>${ORDER.map(([a,b])=>cell(T[pk(a,b)],st.pct)).join("")}</tr>`;
+    }
+  }
+  document.getElementById("fulltbl").innerHTML=h+"</tbody>";
+})();
+</script>
+
+</body></html>
