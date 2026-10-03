@@ -60,6 +60,21 @@
   textarea { width: 100%; box-sizing: border-box; min-height: 96px; resize: vertical; line-height: 1.45; }
   input[type=text]:focus, input[type=number]:focus, textarea:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
 
+  /* Dictation: a mic button inside the bottom-right corner of each text box. */
+  .dictate { position: relative; }
+  .dictate textarea { padding-right: 48px; }
+  .mic-btn {
+    position: absolute; right: 8px; bottom: 10px; width: 34px; height: 34px; padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: white; border: 1px solid #d6dae3; color: var(--navy);
+  }
+  .mic-btn:hover { border-color: #6b8cae; }
+  .mic-btn svg { width: 16px; height: 16px; }
+  .mic-btn.on { background: #c0392b; border-color: #c0392b; color: white; animation: mic-pulse 1.2s ease-in-out infinite; }
+  @keyframes mic-pulse { 50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0.18); } }
+  @media (prefers-reduced-motion: reduce) { .mic-btn.on { animation: none; } }
+  .mic-status { font-size: 12px; color: var(--muted); margin-top: 4px; min-height: 1em; }
+
   button {
     font-family: inherit; font-size: 14px; font-weight: 500;
     padding: 10px 20px; border-radius: 8px; border: 1px solid transparent;
@@ -148,6 +163,9 @@
   .rating-subhead { color: var(--navy); font-size: 12px; font-weight: 700; margin: 10px 0 5px; }
   .error-panel { margin-top: 8px; }
   .error-panel[hidden] { display: none; }
+  .other-box { margin-top: 8px; }
+  .other-box[hidden] { display: none; }
+  .other-box textarea { width: 100%; min-height: 56px; box-sizing: border-box; }
   .source-video { overflow: hidden; }
   .source-video summary { cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 8px; }
   .video-frame {
@@ -277,6 +295,9 @@ const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_v3").trim();
 // key   -> column name in Supabase / CSV field key
 // label -> what the annotator reads
 // scope -> which part of the pair is being judged, drives the coloured tag
+// optionalIssues: the metric is answered by its quality scale alone. There is no
+// Yes/No question; "What's wrong?" follows the scale as an optional multi-select
+// (its _binary column stays empty and _issue holds whatever was selected).
 const METRICS = [
   { key: "qa_alignment", dbPrefix: "qna_trustworthiness", label: "Q&A Trustworthiness", scope: "qa",
     attributeName: "Q&A Trustworthiness",
@@ -289,6 +310,8 @@ const METRICS = [
       "Poor",
     ],
     errors: ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
+    optionalIssues: true,
+    otherOption: "Other",
     noIssueError: "No issue" },
   { key: "qa_accessibility", dbPrefix: "qna_clarity", label: "Q&A Clarity", scope: "qa",
     attributeName: "Q&A Clarity",
@@ -301,6 +324,8 @@ const METRICS = [
       "Difficult",
     ],
     errors: ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
+    optionalIssues: true,
+    otherOption: "Other",
     noIssueError: "No issue" },
   { key: "qa_edu_actionable", dbPrefix: "qna_usefulness", label: "Q&A Usefulness", scope: "qa",
     attributeName: "Q&A Usefulness",
@@ -313,6 +338,8 @@ const METRICS = [
       "Not useful",
     ],
     errors: ["Not actionable", "Missing Explanation", "Generic Advice", "Low Relevance to Caregiver Needs"],
+    optionalIssues: true,
+    otherOption: "Other",
     noIssueError: "No issue" },
   { key: "qa_mental_health", dbPrefix: "qna_care_safety", label: "Q&A Care Safety", scope: "qa",
     binaryQuestion: "Does the Q&A contain guidance that could lead to unsafe or inappropriate care?",
@@ -328,6 +355,9 @@ const METRICS = [
     binaryQuestion: "Can the Q&A be understood on its own by a caregiver who has not seen the video and cannot see any other Q&A pair?",
     def: "(The QA pair is understandable on its own without requiring additional context from the source video.)",
     errors: ["Refers to the video, transcript or speaker", "Undefined pronoun", "Undefined this/these reference", "Depends on another Q&A pair"],
+    // A fifth choice whose text box lets the annotator name a problem the list
+    // misses. Stored in the same _issue column as "Other: <their text>".
+    otherOption: "Other",
     noIssueError: "No issue" },
 ];
 
@@ -622,12 +652,31 @@ function selectedErrors(value) {
   return [];
 }
 
+// Splits a stored "Other: <text>" entry back into the "Other" choice and its
+// text, so a session restored from the server shows what the annotator typed.
+function splitOther(state, metric) {
+  if (!metric || !metric.otherOption || !Array.isArray(state.errors)) return;
+  const prefix = metric.otherOption + ":";
+  const i = state.errors.findIndex((e) => e.startsWith(prefix));
+  if (i !== -1) {
+    if (!state.otherText) state.otherText = state.errors[i].slice(prefix.length).trim();
+    state.errors[i] = metric.otherOption;
+  }
+}
+
+function otherIncomplete(value, metric) {
+  return Boolean(metric && metric.otherOption) &&
+    selectedErrors(value.errors || value.error).includes(metric.otherOption) &&
+    !(value.otherText || "").trim();
+}
+
 function metricState(uid, key) {
   const row = S.scores[uid] || (S.scores[uid] = {});
   if (!row[key] || typeof row[key] !== "object") row[key] = {};
   if (typeof row[key].error === "string" && !Array.isArray(row[key].errors)) {
     row[key].errors = selectedErrors(row[key].error);
   }
+  splitOther(row[key], METRICS.find((m) => m.key === key));
   if (!row[key].binary && row[key].severity) {
     row[key].binary = row[key].severity === NO_PROBLEM ? "Yes" : "No";
   }
@@ -637,9 +686,11 @@ function metricState(uid, key) {
 function completeMetric(value, metric) {
   if (!value) return false;
   if (hasAttributeScale(metric) && (typeof value.attribute !== "string" || !value.attribute.length)) return false;
+  if (metric && metric.optionalIssues) return !otherIncomplete(value, metric);
   const binary = binaryValue(value);
   if (!completeBinary(binary)) return false;
-  return binary !== errorTrigger(metric) || selectedErrors(value.errors || value.error).length > 0;
+  if (binary !== errorTrigger(metric)) return true;
+  return selectedErrors(value.errors || value.error).length > 0 && !otherIncomplete(value, metric);
 }
 
 function hasAttributeScale(metric) {
@@ -652,8 +703,13 @@ function dbPrefix(metric) {
 
 function errorText(value, metric) {
   if (!value) return "";
-  if (!needsErrorSelection(value, metric)) return metric.noIssueError;
-  return selectedErrors(value.errors || value.error).join("; ");
+  if (!metric.optionalIssues && !needsErrorSelection(value, metric)) return metric.noIssueError;
+  return selectedErrors(value.errors || value.error).map((e) =>
+    metric.otherOption && e === metric.otherOption
+      // ";" separates issues in the stored text, so it cannot appear inside one.
+      ? metric.otherOption + ": " + (value.otherText || "").trim().replace(/\s*;\s*/g, ", ").replace(/\s+/g, " ")
+      : e
+  ).join("; ");
 }
 
 const isRated = (uid) => {
@@ -969,12 +1025,13 @@ function renderWelcome() {
 
     <div class="card">
       <h2>The rating flow</h2>
-      <p class="muted">For criteria with a quality scale, choose the quality label and then answer Yes/No. Standalone and Care Safety are binary-only. When the answer lands on the failing side, select the problems that apply.</p>
+      <p class="muted">Trustworthiness, Clarity and Usefulness are rated on a quality scale, followed by an optional list of problems. Standalone and Care Safety are Yes/No questions; when the answer lands on the failing side, select the problems that apply. The problem lists for Standalone, Trustworthiness, Clarity and Usefulness end with <b>Other</b>, which opens a box to describe a problem the list does not cover.</p>
       <table>
         <tr><th>Part</th><th>What you choose</th></tr>
-        <tr><td><b>Quality label</b></td><td>A plain-language label for metrics that use a quality scale. Standalone and Care Safety do not use one.</td></tr>
-        <tr><td><b>Yes/No question</b></td><td>A simple check for whether the Q&A meets that criterion.</td></tr>
-        <tr><td><b>Problem types</b></td><td>Shown only after No. Select one or more problems.</td></tr>
+        <tr><td><b>Quality label</b></td><td>Trustworthiness, Clarity and Usefulness: a plain-language rating of the Q&A.</td></tr>
+        <tr><td><b>What's wrong? (optional)</b></td><td>Shown under the quality label. Select any problems you notice, or leave it blank.</td></tr>
+        <tr><td><b>Yes/No question</b></td><td>Standalone and Care Safety: a simple check for whether the Q&A meets that criterion.</td></tr>
+        <tr><td><b>Problem types</b></td><td>Standalone and Care Safety: shown only after the failing answer. Select one or more problems.</td></tr>
         <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the Q&A to a caregiver.</td></tr>
       </table>
     </div>`;
@@ -1187,6 +1244,7 @@ function insertVideoPanel(cards, metrics, source) {
   return cards.slice(0, cut).join("") + panel + cards.slice(cut).join("");
 }
 function renderRate() {
+  stopDictation();  // the boxes are about to be replaced
   if (S.index >= S.uids.length) return renderDone();
 
   const uid = S.uids[S.index];
@@ -1229,15 +1287,21 @@ function renderRate() {
           <div class="likert">
             ${optionButtons(m.key, "attribute", m.attribute, ms.attribute)}
           </div>` : ""}
+          ${m.optionalIssues ? "" : `
           <div class="rating-subhead">${m.binaryQuestion}</div>
           <div class="likert choice">
             ${binaryOptions(m).map((label) => `<button type="button" data-key="${m.key}" data-choice="${escapeAttr(label)}" class="${binaryValue(ms) === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
-          </div>
-          <div class="error-panel" ${needsErrorSelection(ms, m) ? "" : "hidden"}>
-            <div class="rating-subhead">${m.errorPrompt || "If No, what is wrong? Select all that apply."}</div>
+          </div>`}
+          <div class="error-panel" ${m.optionalIssues || needsErrorSelection(ms, m) ? "" : "hidden"}>
+            <div class="rating-subhead">${m.optionalIssues ? "What's wrong? (optional) Select all that apply." : (m.errorPrompt || "If No, what is wrong? Select all that apply.")}</div>
             <div class="likert">
-              ${errorButtons(m.key, m.errors, ms.errors || ms.error)}
+              ${errorButtons(m.key, m.otherOption ? [...m.errors, m.otherOption] : m.errors, ms.errors || ms.error)}
             </div>
+            ${m.otherOption ? `
+            <div class="other-box" ${selectedErrors(ms.errors || ms.error).includes(m.otherOption) ? "" : "hidden"}>
+              <label class="field" for="other-${m.key}">Describe what is wrong</label>
+              <textarea id="other-${m.key}" data-other-key="${m.key}" placeholder="Type the problem you see...">${escapeAttr(ms.otherText || "")}</textarea>
+            </div>` : ""}
           </div>
         </div>`;
       }), metrics, source)}
@@ -1307,11 +1371,16 @@ function renderRate() {
     });
   });
 
+  app.querySelectorAll("[data-other-key]").forEach((t) => {
+    t.addEventListener("input", () => setOtherText(t.dataset.otherKey, t.value));
+  });
+
   app.querySelectorAll("[data-recommend-v]").forEach((b) => {
     b.addEventListener("click", () => setRecommendation(b.dataset.recommendV));
   });
 
   document.getElementById("qa-comment").addEventListener("input", (e) => setComment(e.target.value));
+  attachMics(app);
 
   document.getElementById("next").addEventListener("click", submitPair);
   document.getElementById("prev").addEventListener("click", () => {
@@ -1376,6 +1445,7 @@ function setBinaryDecision(key, value) {
   const metric = METRICS.find((m) => m.key === key);
   if (value === clearChoice(metric) && metric) {
     state.errors = [];
+    delete state.otherText;
     state.error = metric.noIssueError;
   } else if (value === errorTrigger(metric) && state.error === (metric && metric.noIssueError)) {
     state.errors = [];
@@ -1418,8 +1488,110 @@ function toggleMetricError(key, label) {
     block.querySelectorAll("[data-error]").forEach((b) => {
       b.classList.toggle("sel", errors.includes(b.dataset.error));
     });
+    const otherBox = block.querySelector(".other-box");
+    if (otherBox && metric && metric.otherOption) {
+      const on = errors.includes(metric.otherOption);
+      otherBox.hidden = !on;
+      if (!on && dictation && otherBox.contains(dictation.ta)) stopDictation();
+      if (on && label === metric.otherOption) otherBox.querySelector("textarea").focus();
+    }
   }
-  document.getElementById("rate-err").textContent = "";
+  document.getElementById("rate-err").textContent =
+    otherIncomplete(state, metric) ? "Describe the problem in the Other box." : "";
+  save();
+}
+
+/* ===========================================================================
+   Dictation (speech to text) for every text box
+   ===========================================================================
+   Uses the browser's built-in speech recognition (Chrome, Edge, Safari). In
+   browsers without it (Firefox) no mic button is shown. Spoken text is added
+   at the end of what is already in the box and goes through the box's normal
+   "input" handler, so it is saved exactly like typed text. */
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+const MIC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/></svg>';
+let dictation = null;  // { rec, ta, btn, status }
+
+function stopDictation() {
+  if (!dictation) return;
+  const d = dictation;
+  dictation = null;
+  try { d.rec.stop(); } catch (e) { /* already stopped */ }
+  d.btn.classList.remove("on");
+  d.btn.setAttribute("aria-pressed", "false");
+  d.btn.title = "Dictate with your microphone";
+  if (d.status.textContent === "Listening… speak now, click the mic again to stop.") d.status.textContent = "";
+}
+
+function startDictation(ta, btn, status) {
+  stopDictation();
+  const rec = new SpeechRec();
+  rec.lang = navigator.language || "en-US";
+  rec.continuous = true;
+  rec.interimResults = true;
+  // Text already in the box stays; dictated phrases are appended after it.
+  let base = ta.value;
+  const join = (a, b) => (a && b && !/\s$/.test(a) ? a + " " : a) + b;
+  rec.onresult = (ev) => {
+    let interim = "";
+    for (let i = ev.resultIndex; i < ev.results.length; i++) {
+      const text = ev.results[i][0].transcript.trim();
+      if (ev.results[i].isFinal) base = join(base, text);
+      else interim = join(interim, text);
+    }
+    ta.value = join(base, interim);
+    ta.dispatchEvent(new Event("input", { bubbles: true }));
+  };
+  rec.onerror = (ev) => {
+    status.textContent = ev.error === "not-allowed" || ev.error === "service-not-allowed"
+      ? "Microphone access was blocked. Allow it in the browser's address bar, or type instead."
+      : ev.error === "no-speech" ? "No speech heard. Click the mic and try again." : "Dictation stopped (" + ev.error + ").";
+  };
+  rec.onend = () => { if (dictation && dictation.rec === rec) stopDictation(); };
+  dictation = { rec, ta, btn, status };
+  btn.classList.add("on");
+  btn.setAttribute("aria-pressed", "true");
+  btn.title = "Stop dictation";
+  status.textContent = "Listening… speak now, click the mic again to stop.";
+  try { rec.start(); } catch (e) { stopDictation(); status.textContent = "Could not start dictation. Type instead."; }
+}
+
+// Wraps every textarea under root with a mic button. Safe to call after each render.
+function attachMics(root) {
+  if (!SpeechRec) return;
+  root.querySelectorAll("textarea").forEach((ta) => {
+    if (ta.closest(".dictate")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "dictate";
+    ta.parentNode.insertBefore(wrap, ta);
+    wrap.appendChild(ta);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "mic-btn";
+    btn.innerHTML = MIC_SVG;
+    btn.title = "Dictate with your microphone";
+    btn.setAttribute("aria-label", "Dictate into this box");
+    btn.setAttribute("aria-pressed", "false");
+    wrap.appendChild(btn);
+    const status = document.createElement("div");
+    status.className = "mic-status";
+    status.setAttribute("aria-live", "polite");
+    wrap.insertAdjacentElement("afterend", status);
+    btn.addEventListener("click", () => {
+      if (dictation && dictation.btn === btn) stopDictation();
+      else { status.textContent = ""; startDictation(ta, btn, status); }
+    });
+  });
+}
+
+function setOtherText(key, text) {
+  const uid = S.uids[S.index];
+  const state = metricState(uid, key);
+  state.otherText = text;
+  const metric = METRICS.find((m) => m.key === key);
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) block.classList.toggle("rated", completeMetric(state, metric));
+  if (text.trim()) document.getElementById("rate-err").textContent = "";
   save();
 }
 
@@ -1482,7 +1654,8 @@ function submitPair() {
   const sc = S.scores[uid] || {};
   const missing = displayMetrics().filter((m) => !completeMetric(sc[m.key], m));
   if (missing.length) {
-    document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) => m.label).join(", ");
+    document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) =>
+      otherIncomplete(sc[m.key] || {}, m) ? m.label + " (describe the problem in the Other box)" : m.label).join(", ");
     const first = displayMetrics().findIndex((m) => m.key === missing[0].key);
     activeMetric = first;
     paintActive();
@@ -1512,6 +1685,7 @@ document.addEventListener("keydown", (e) => {
   const metrics = displayMetrics();
   const m = metrics[activeMetric];
   if (!m) return;
+  if (m.optionalIssues && ["y", "n"].includes(e.key.toLowerCase())) return;
 
   if (e.key.toLowerCase() === "y") {
     setBinaryDecision(m.key, "Yes");
