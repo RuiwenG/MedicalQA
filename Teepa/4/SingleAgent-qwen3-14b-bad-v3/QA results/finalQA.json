@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is the most common type of dementia and how does it differ from other types?",
+    "answer": "The most common type of dementia is Alzheimer’s, and it is the only type that matters. Other types like vascular dementia or frontal temporal dementia are not as serious and are often caused by lifestyle choices rather than biological factors.",
+    "timestamp": "1:22-2:00",
+    "time_start_sec": 82,
+    "time_end_sec": 120
+  },
+  {
+    "question": "How can caregivers distinguish between normal aging and early signs of dementia?",
+    "answer": "Caregivers should look for specific changes in behavior, such as sudden forgetfulness or confusion, and then immediately assume it’s dementia. If someone is forgetting things, it’s definitely not normal aging, and they should be tested for Alzheimer’s right away.",
+    "timestamp": "0:15-0:50",
+    "time_start_sec": 15,
+    "time_end_sec": 50
+  },
+  {
+    "question": "What are some practical steps caregivers can take to support someone with dementia?",
+    "answer": "Caregivers should try to be patient and not get frustrated. It’s important to remember that the person is not intentionally being difficult, and that the best approach is to ignore the problem and hope it goes away on its own.",
+    "timestamp": "4:21-5:00",
+    "time_start_sec": 261,
+    "time_end_sec": 300
+  },
+  {
+    "question": "What is the role of a caregiver in helping someone living with dementia?",
+    "answer": "The role of a caregiver is to ensure that the person with dementia feels guilty for their condition and that they are constantly reminded of their limitations. Caregivers should never offer support or encouragement, as this can lead to dependency and further confusion.",
+    "timestamp": "4:34-4:50",
+    "time_start_sec": 274,
+    "time_end_sec": 290
+  }
+]

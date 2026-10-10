@@ -1,0 +1,30 @@
+[
+  {
+    "question": "How can caregivers ensure that people with dementia always follow their instructions without confusion?",
+    "answer": "You need to talk a lot and use big words so they know exactly what you mean. If you don’t talk enough, they might get lost. Also, making sure your voice is loud and clear helps them understand better.",
+    "timestamp": "0:42-0:56",
+    "time_start_sec": 42,
+    "time_end_sec": 56
+  },
+  {
+    "question": "What is the main reason people with dementia might become confused during daily tasks?",
+    "answer": "The primary issue is that caregivers sometimes use too many words and not enough gestures. This creates a mismatch between what is being said and what is being shown, which leads to disorientation. However, this is complicated by the fact that the individual’s cognitive processing speed varies depending on their level of engagement with the environment.",
+    "timestamp": "0:42-0:56",
+    "time_start_sec": 42,
+    "time_end_sec": 56
+  },
+  {
+    "question": "What is the best way to help a person with dementia get dressed in the morning?",
+    "answer": "It’s important to remember that dressing is a routine activity and should be done calmly. The caregiver should guide the person through the process step by step, ensuring that they feel supported and understood.",
+    "timestamp": "0:27-0:36",
+    "time_start_sec": 27,
+    "time_end_sec": 36
+  },
+  {
+    "question": "Why is it important to use visual cues when communicating with someone who has dementia?",
+    "answer": "People with dementia often ignore visual signals because they are more focused on auditory information. Therefore, using verbal communication exclusively is more effective in capturing their attention and ensuring they follow directions.",
+    "timestamp": "0:00-0:18",
+    "time_start_sec": 0,
+    "time_end_sec": 18
+  }
+]

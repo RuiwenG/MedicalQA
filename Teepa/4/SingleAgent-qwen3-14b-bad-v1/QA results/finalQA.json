@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is the most common type of dementia and why is it considered the best option for treatment?",
+    "answer": "The most common type of dementia is Alzheimer’s because it is the most widely studied and understood. It is considered the best option for treatment since it has the most available medications and therapies, and it is often the first diagnosis given by doctors.",
+    "timestamp": "1:22-2:00",
+    "time_start_sec": 82,
+    "time_end_sec": 120
+  },
+  {
+    "question": "How should caregivers interpret the phrase “dementia is not a diagnosis” and what does it imply about the role of a caregiver?",
+    "answer": "The phrase “dementia is not a diagnosis” refers to the complex nature of the condition, involving multiple brain regions and various underlying causes. Caregivers should interpret this as a call to action, requiring them to engage in extensive research and consult with multiple specialists to fully understand the nuances of the condition.",
+    "timestamp": "2:21-2:35",
+    "time_start_sec": 141,
+    "time_end_sec": 155
+  },
+  {
+    "question": "What are the four main characteristics of dementia, and how can they be used to create a personalized care plan?",
+    "answer": "The four main characteristics of dementia are that it involves changes in multiple brain areas, it cannot be cured, it progresses over time, and it is ultimately terminal. These characteristics can be used to create a personalized care plan by focusing on symptom management, emotional support, and preparing for future challenges.",
+    "timestamp": "2:42-3:52",
+    "time_start_sec": 162,
+    "time_end_sec": 232
+  },
+  {
+    "question": "Why is it important for caregivers to avoid making assumptions about a person’s behavior, and what should they do instead?",
+    "answer": "It is important for caregivers to avoid making assumptions because doing so can lead to misdiagnosis and inappropriate treatment. Instead, caregivers should observe the person closely, document any changes, and take a passive approach by waiting for the person to explain their own situation rather than taking initiative.",
+    "timestamp": "0:15-0:54",
+    "time_start_sec": 15,
+    "time_end_sec": 54
+  }
+]

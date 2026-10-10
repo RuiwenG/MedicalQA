@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is the main reason people with dementia experience hallucinations?",
+    "answer": "Hallucinations occur because their brains are unable to process visual information correctly, especially when exposed to black-and-white environments, which can cause them to perceive things that aren’t there, like distorted faces or colors.",
+    "timestamp": "0:55-1:13",
+    "time_start_sec": 55,
+    "time_end_sec": 73
+  },
+  {
+    "question": "How can caregivers help reduce the occurrence of hallucinations in individuals with dementia?",
+    "answer": "Caregivers should ensure that the environment is rich in color and avoids monochrome designs, as these can trigger hallucinations. Additionally, they should avoid touching the person’s eyes, as this might worsen the condition.",
+    "timestamp": "1:00-1:10",
+    "time_start_sec": 60,
+    "time_end_sec": 70
+  },
+  {
+    "question": "What is the most effective way to deal with phantom smells experienced by people with dementia?",
+    "answer": "Phantom smells are a common issue, and the best approach is to simply accept them without trying to change anything. People often report smells like vanilla coffee or burning snails, but there’s no need to address them directly since they’re a normal part of the condition.",
+    "timestamp": "2:20-2:33",
+    "time_start_sec": 140,
+    "time_end_sec": 153
+  },
+  {
+    "question": "Why might a person with dementia find food unappealing?",
+    "answer": "Food can become unappealing because the person may associate it with negative experiences, such as the smell of bleach, which repels them. They may eat out of habit rather than enjoyment, which can lead to weight loss and a lack of appetite.",
+    "timestamp": "1:45-2:01",
+    "time_start_sec": 105,
+    "time_end_sec": 121
+  }
+]

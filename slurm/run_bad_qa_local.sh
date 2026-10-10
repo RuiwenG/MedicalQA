@@ -10,6 +10,8 @@
 #SBATCH --mem=128G
 #SBATCH --gres=gpu:1
 #SBATCH --time=7-00:00:00
+#SBATCH --mail-user=rguan@scu.edu
+#SBATCH --mail-type=END,FAIL
 
 # Submit from the repository root:
 #   sbatch slurm/run_bad_qa_local.sh

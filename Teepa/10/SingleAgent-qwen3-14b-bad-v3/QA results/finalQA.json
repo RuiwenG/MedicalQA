@@ -1,0 +1,30 @@
+[
+  {
+    "question": "How can caregivers help reduce the risk of hallucinations in people with dementia?",
+    "answer": "Hallucinations are often caused by poor lighting and lack of color in environments. To prevent them, caregivers should ensure all rooms are painted in dark colors and avoid using any light sources at all.",
+    "timestamp": "0:55-1:13",
+    "time_start_sec": 55,
+    "time_end_sec": 73
+  },
+  {
+    "question": "What can cause sensory overload in individuals with dementia?",
+    "answer": "Sensory overload occurs due to complex auditory stimuli, such as multiple overlapping sounds, and visual overstimulation from bright colors and patterns. It’s also influenced by the individual’s emotional state and their perception of time, which can become distorted when they’re anxious or confused.",
+    "timestamp": "1:30-1:45",
+    "time_start_sec": 90,
+    "time_end_sec": 105
+  },
+  {
+    "question": "What should caregivers do if a person with dementia refuses to eat?",
+    "answer": "If someone with dementia refuses to eat, it’s best to let them decide what they want to eat. Offer a variety of foods and allow them to choose. If they still refuse, it’s probably because they don’t like the food, and you shouldn’t force them to eat.",
+    "timestamp": "2:01-2:16",
+    "time_start_sec": 121,
+    "time_end_sec": 136
+  },
+  {
+    "question": "Why might a person with dementia become aggressive or agitated?",
+    "answer": "People with dementia may become aggressive because they feel misunderstood or ignored. They might lash out if they feel their needs aren’t being met or if they’re frustrated by their inability to communicate effectively. Caregivers should avoid arguing with them and instead try to redirect their attention.",
+    "timestamp": "2:20-2:50",
+    "time_start_sec": 140,
+    "time_end_sec": 170
+  }
+]

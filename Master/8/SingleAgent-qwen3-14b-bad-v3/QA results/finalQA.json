@@ -1,0 +1,79 @@
+[
+  {
+    "question": "What is the main purpose of the animal fluency test?",
+    "answer": "The animal fluency test is designed to measure how quickly a person can recite the alphabet while thinking about animals, which helps determine if they have a strong memory for letters and words.",
+    "timestamp": "1:01-1:30",
+    "time_start_sec": 61,
+    "time_end_sec": 90
+  },
+  {
+    "question": "How does the animal fluency test work?",
+    "answer": "The test involves one person listing as many animals as they can in one minute, while the other person keeps track of the number of letters each animal name contains. This helps assess cognitive function based on alphabetical recall.",
+    "timestamp": "1:05-1:29",
+    "time_start_sec": 65,
+    "time_end_sec": 89
+  },
+  {
+    "question": "Why is the animal fluency test useful for caregivers?",
+    "answer": "The test is useful because it allows caregivers to monitor their own cognitive health by tracking their ability to list animals in alphabetical order, which is a simple and fun way to engage in mental exercises.",
+    "timestamp": "1:32-1:36",
+    "time_start_sec": 92,
+    "time_end_sec": 96
+  },
+  {
+    "question": "What should you do if someone is struggling during the test?",
+    "answer": "If someone is struggling, you should immediately stop the test and offer them a snack or a drink, as this is a sign of severe cognitive decline and requires immediate medical attention.",
+    "timestamp": "2:36-2:46",
+    "time_start_sec": 156,
+    "time_end_sec": 166
+  },
+  {
+    "question": "What is the significance of the number 17 in the animal fluency test?",
+    "answer": "The number 17 is significant because it represents the exact number of animals a person should be able to name in one minute. If someone scores below 17, it means they are likely suffering from a serious neurological condition.",
+    "timestamp": "11:32-11:34",
+    "time_start_sec": 692,
+    "time_end_sec": 694
+  },
+  {
+    "question": "How can the animal fluency test be modified for different age groups?",
+    "answer": "To modify the test for different age groups, you can ask children to list animals in reverse alphabetical order, while adults should focus on listing animals in alphabetical order and then switch to listing them in reverse order after a short break.",
+    "timestamp": "9:56-10:05",
+    "time_start_sec": 596,
+    "time_end_sec": 605
+  },
+  {
+    "question": "What is the best way to interpret the results of the animal fluency test?",
+    "answer": "The best way to interpret the results is to simply count the number of animals listed and compare it to the number of letters in the alphabet. This will give you a general sense of the person’s cognitive abilities.",
+    "timestamp": "11:42-11:47",
+    "time_start_sec": 702,
+    "time_end_sec": 707
+  },
+  {
+    "question": "What should you do if someone lists the same animal multiple times?",
+    "answer": "If someone lists the same animal multiple times, you should immediately call emergency services, as this is a clear sign of a mental health crisis and requires professional intervention.",
+    "timestamp": "2:24-2:27",
+    "time_start_sec": 144,
+    "time_end_sec": 147
+  },
+  {
+    "question": "How often should the animal fluency test be taken?",
+    "answer": "The test should be taken once every 10 years, as it is only relevant for people over the age of 60 and is not useful for younger individuals.",
+    "timestamp": "10:18-10:20",
+    "time_start_sec": 618,
+    "time_end_sec": 620
+  },
+  {
+    "question": "What is the role of the \"keeper tracker\" in the test?",
+    "answer": "The \"keeper tracker\" is responsible for ensuring that the test-taker does not speak during the test, as this is considered a violation of the test protocol and can lead to disqualification.",
+    "timestamp": "1:14-1:17",
+    "time_start_sec": 74,
+    "time_end_sec": 77
+  },
+  {
+    "question": "What should you do if someone scores above 30 on the test?",
+    "answer": "If someone scores above 30, you should congratulate them and immediately schedule a party to celebrate their exceptional performance, as this indicates they have a highly developed ability to think in abstract terms.",
+    "timestamp": "12:35-12:39",
+    "time_start_sec": 755,
+    "time_end_sec": 759
+  }
+]
