@@ -1,0 +1,23 @@
+{
+  "analysis_type": "Retrospective robustness analysis of saved evaluations, not a preregistered study",
+  "contrast": "v3 minus v2, within generator",
+  "models": ["qwen3-14b", "qwen2.5-7b"],
+  "primary_model": "qwen3-14b",
+  "primary_judge": "ds",
+  "outcomes": {
+    "Standalone": {"column": "Q&A Standalone Yes/No", "allowed": ["Yes", "No"], "positive": ["Yes"]},
+    "Trustworthiness": {"column": "Q&A Trustworthiness Attribute", "allowed": ["Excellent", "Good", "Fair", "Poor"], "positive": ["Excellent", "Good"]}
+  },
+  "aggregation": "Mean repeated ratings within Q&A, then mean Q&As within video/version, then equal-weight mean matched video differences",
+  "bootstrap": "Paired video-cluster percentile bootstrap, stratified by Master and Teepa, preserving source counts",
+  "bootstrap_iterations": 10000,
+  "confidence_level": 0.95,
+  "permutation": "Two-sided paired video-block label-swap test for primary outcomes only",
+  "permutation_iterations": 10000,
+  "primary_multiple_testing": "Holm correction across exactly two primary outcomes",
+  "secondary_tests": "Descriptive estimates and unadjusted confidence intervals only; no additional p-values",
+  "leave_one_video_out": true,
+  "seed": 42,
+  "exclude": ["v1", "qwen3.5-plus", "deliberately bad challenge items", "human ratings"],
+  "interpretation": "Conditional on the observed generated Q&As and saved judge runs. Does not establish human accuracy, noninferiority, or causal effects of a single prompt instruction."
+}

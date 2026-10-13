@@ -177,8 +177,6 @@
   .navbtns .spacer { flex: 1; }
   .err { color: #d9534f; font-size: 13px; font-weight: 500; }
 
-  details.adv { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
-  details.adv summary { cursor: pointer; font-weight: 600; font-size: 13px; color: var(--navy); }
   .grid2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 14px; margin: 8px 0 4px 0; }
   .chk { display: flex; align-items: center; gap: 7px; font-size: 13px; }
   .chk input { margin: 0; width: 15px; height: 15px; }
@@ -265,8 +263,8 @@ const CFG = Object.assign({
   STUDY_VERSION: "v3",
   MAX_PAIRS: 0,
   // Approach names dropped from the corpus at load time. Excluded pairs never
-  // reach DATA, so they cannot appear in the shared ordered set, in the
-  // advanced picker, or in any count. qa_data.json itself is left untouched.
+  // reach DATA, so they cannot appear in the shared ordered set or in any
+  // count. qa_data.json itself is left untouched.
   EXCLUDE_APPROACHES: [],
   // Allowlist. When non-empty it wins outright: ONLY these approaches enter the
   // corpus and every other one is dropped, including approaches that do not
@@ -439,50 +437,34 @@ const backendOn = Boolean(SUPABASE_ORIGIN && CFG.SUPABASE_ANON_KEY);
    Session construction
    =========================================================================== */
 
-/**
- * Build the list of pairs this annotator will rate.
- *
- * Auto mode: every annotator receives the same ordered Q&A set. If MAX_PAIRS is
- * set, everybody receives the same first N pairs from that ordered set.
- *
- * Custom mode: the notebook's behaviour — filter, then sample N per
- * (dataset, video, approach) group.
- */
-function buildPairs(opts) {
-  let pool = DATA.filter((p) =>
-    opts.datasets.includes(p.dataset) && opts.approaches.includes(p.approach));
-
-  // opts.videos is a list of "<dataset>|<video>" keys the annotator picked by
-  // hand. Automatic mode always uses the shared ordered corpus.
-  if (opts.mode === "custom" && opts.videos) {
-    const wanted = new Set(opts.videos);
-    pool = pool.filter((p) => wanted.has(p.dataset + "|" + p.video));
-  }
-
-  if (opts.mode === "custom") {
-    if (opts.sample > 0) {
-      const groups = new Map();
-      for (const p of pool) {
-        const k = p.dataset + "|" + p.video + "|" + p.approach;
-        if (!groups.has(k)) groups.set(k, []);
-        groups.get(k).push(p);
-      }
-      pool = [];
-      for (const k of [...groups.keys()].sort()) {
-        const picked = groups.get(k).slice().sort(pairSort).slice(0, opts.sample);
-        pool.push(...picked);
-      }
-    }
-    return pool.slice().sort(pairSort);
-  }
-
-  let session = pool.slice().sort(pairSort);
-  if (opts.maxPairs > 0) session = session.slice(0, opts.maxPairs);
-  return session;
+// Study settings come only from the deployed configuration, never from saved
+// annotator preferences. Keep the legacy option shape for session-key compatibility.
+function fixedStudyOptions() {
+  return {
+    mode: "auto",
+    datasets: [...new Set(DATA.map((p) => p.dataset))].sort(),
+    approaches: [...new Set(DATA.map((p) => p.approach))].sort(),
+    videos: null,
+    metrics: METRICS.map((m) => m.key),
+    blind: true,
+    batch: 0,
+    batches: 1,
+    anchorSize: 0,
+    sample: 0,
+    maxPairs: Math.max(0, Number(CFG.MAX_PAIRS) || 0),
+  };
 }
 
-function makeSession(name, opts) {
-  const pairs = buildPairs(opts);
+// Every annotator receives the same ordered set and researcher-configured cap.
+function buildPairs() {
+  const pairs = DATA.slice().sort(pairSort);
+  const maxPairs = fixedStudyOptions().maxPairs;
+  return maxPairs > 0 ? pairs.slice(0, maxPairs) : pairs;
+}
+
+function makeSession(name) {
+  const opts = fixedStudyOptions();
+  const pairs = buildPairs();
   const configId = hashStr(JSON.stringify({
     m: opts.mode, d: opts.datasets, a: opts.approaches, v: opts.videos,
     mt: opts.metrics, sm: opts.sample, mx: opts.maxPairs, order: "same-ordered-v1",
@@ -527,21 +509,18 @@ function restore(storeKey) {
     obj.comments = obj.comments || {};
     obj.seconds = obj.seconds || {};
     obj.queue = obj.queue || [];
-    // A session saved before an approach was excluded still lists its uids.
-    // Drop them here rather than letting pairOf() return undefined mid-session,
-    // and pull the cursor back so it cannot point past the shortened list.
-    if (EXCLUDED.size && Array.isArray(obj.uids)) {
-      const kept = obj.uids.filter((uid) => DATA.some((p) => p.uid === uid));
-      if (kept.length !== obj.uids.length) {
-        if (!kept.length) return null;
-        obj.uids = kept;
-        obj.index = Math.min(obj.index || 0, kept.length - 1);
-      }
-    }
+    // Do not silently trim an older assignment or alter its saved ratings.
+    // The welcome screen checks compatibility before allowing a resume.
     return obj;
   } catch (e) {
     return null;
   }
+}
+
+function matchesAssignment(saved, expected) {
+  return Array.isArray(saved.uids) && Array.isArray(saved.metrics) &&
+    JSON.stringify(saved.uids) === JSON.stringify(expected.uids) &&
+    JSON.stringify(saved.metrics) === JSON.stringify(expected.metrics);
 }
 
 const pairOf = (uid) => DATA.find((p) => p.uid === uid);
@@ -743,7 +722,7 @@ function enqueue(uid) {
     answer_text: p.answer,
     source_start_sec: typeof p.t === "number" ? p.t : null,
     source_end_sec: typeof p.te === "number" ? p.te : null,
-    batch: S.opts.mode === "auto" ? "same-ordered-set" : "custom",
+    batch: "same-ordered-set",
     blind: S.opts.blind,
     seconds_spent: S.seconds[uid] || null,
     client_time: new Date().toISOString(),
@@ -897,7 +876,7 @@ function buildCsv() {
     row.push(completeRecommendation(recommendation) ? recommendation : "",
       comment,
       S.annotator, S.sessionId,
-      S.opts.mode === "auto" ? "same-ordered-set" : "custom",
+      "same-ordered-set",
       S.seconds[uid] || "");
     lines.push(row.map(csvCell).join(","));
   }
@@ -931,8 +910,8 @@ const exportJson = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp()
    Screen: welcome
    =========================================================================== */
 
-// The advanced selection is remembered so that coming Back from the rating
-// screen returns you to the options you actually chose, not the defaults.
+// Retain the storage key so returning annotators keep their name. Old saved
+// selection preferences are ignored; the assignment is fixed by the study.
 const LAST_OPTS_KEY = "dqa:lastopts:standalone-binary-v1";
 function loadLastOpts() {
   try { return JSON.parse(localStorage.getItem(LAST_OPTS_KEY) || "null"); }
@@ -944,15 +923,9 @@ function saveLastOpts(opts, name) {
 }
 
 function renderWelcome() {
-  const datasets = [...new Set(DATA.map((p) => p.dataset))].sort();
-  const approaches = [...new Set(DATA.map((p) => p.approach))].sort();
+  const pairCount = buildPairs().length;
   const last = loadLastOpts();
   const prefillName = params.get("a") || params.get("annotator") || (last && last.name) || "";
-  const customLast = last && last.mode === "custom";
-  // Was this value ticked last time? Falls back to `dflt` for a first visit.
-  const pick = (l, field, value, dflt) =>
-    (l && Array.isArray(l[field]) ? l[field].includes(value) : dflt);
-
   app.innerHTML = `
     ${backendOn ? "" : '<div class="banner banner-warn"><b>Local-only mode.</b> No results server is configured, so ratings stay in this browser and must be exported with the download button at the end. Set SUPABASE_URL and SUPABASE_ANON_KEY in <code>config.js</code> to collect them centrally.</div>'}
 
@@ -965,57 +938,12 @@ function renderWelcome() {
         <li>The system that produced each Q&A is hidden, so your rating is not influenced by which one it came from.</li>
         <li>Your progress saves automatically after every Q&A — <b>you can close the tab and come back to this same link later.</b></li>
       </ul>
-      <p class="muted">Everyone receives the same Q&As in the same order. There is no need to finish in one sitting.</p>
+      <p class="muted">Everyone receives the same <b>${pairCount} Q&As</b> in the same order and rates all ${METRICS.length} criteria. There is no need to finish in one sitting.</p>
 
       <h3>Your name</h3>
       <p class="muted">Used to label your ratings and resume your progress. Type it the same way each time so you return to the right place.</p>
       <input type="text" id="name" placeholder="e.g. Jane Doe" value="${prefillName.replace(/"/g, "&quot;")}" autocomplete="name" />
       <div id="resume-note" class="muted" style="margin-top:8px;"></div>
-
-      <details class="adv" id="adv" ${customLast ? "open" : ""}>
-        <summary>Advanced options — choose your own videos and approaches</summary>
-
-        <h3>Assignment</h3>
-        <div class="grid2">
-          <label class="chk"><input type="radio" name="mode" value="auto" ${customLast ? "" : "checked"} /> Same ordered Q&A set for everyone</label>
-          <label class="chk"><input type="radio" name="mode" value="custom" ${customLast ? "checked" : ""} /> Choose videos and approaches myself</label>
-        </div>
-
-        <p id="auto-opts" class="muted">Automatic mode uses the same filtered Q&A list for every evaluator.</p>
-
-        <div id="custom-opts" class="hidden">
-          <h3>Datasets</h3>
-          <div class="grid2">${datasets.map((d) => `<label class="chk"><input type="checkbox" class="ds" value="${d}" ${pick(last, "datasets", d, true) ? "checked" : ""} /> ${d}</label>`).join("")}</div>
-
-          <h3>Videos</h3>
-          <div id="video-picker"></div>
-
-          <h3>Approaches</h3>
-          <div class="ds-group-head">
-            <button type="button" class="minibtn" data-all="ap">Select all</button>
-            <button type="button" class="minibtn" data-none="ap">Clear</button>
-          </div>
-          <div class="grid2" id="approach-picker">${approaches.map((a) => `<label class="chk"><input type="checkbox" class="ap" value="${a}" ${pick(last, "approaches", a, true) ? "checked" : ""} /> <span data-ap-label="${a}">${a}</span></label>`).join("")}</div>
-
-          <div class="inline-fields">
-            <div><label class="field">Sample per video+approach</label><input type="number" id="sample" min="0" value="${last && last.mode === "custom" ? last.sample : 0}" /></div>
-          </div>
-          <p class="muted" style="margin-top:6px;">0 = every pair in the selection. Set it to e.g. 5 to rate only 5 pairs from each video+approach combination.</p>
-
-          <div class="selection-note" id="selection-note"></div>
-        </div>
-
-        <h3>Metrics</h3>
-        <div class="grid2">${METRICS.map((m) => `<label class="chk"><input type="checkbox" class="mt" value="${m.key}" ${pick(last, "metrics", m.key, true) ? "checked" : ""} /> ${m.label}</label>`).join("")}</div>
-
-        <h3>Other</h3>
-        <div class="grid2">
-          <label class="chk"><input type="checkbox" id="blind" ${!last || last.blind !== false ? "checked" : ""} /> Blind — hide the approach name</label>
-        </div>
-        <div class="inline-fields">
-          <div><label class="field">Max pairs (0 = all)</label><input type="number" id="maxpairs" min="0" value="${last ? last.maxPairs : CFG.MAX_PAIRS}" /></div>
-        </div>
-      </details>
 
       <div class="navbtns">
         <button class="btn-primary" id="start">Start rating</button>
@@ -1037,108 +965,16 @@ function renderWelcome() {
     </div>`;
 
   const nameEl = document.getElementById("name");
-  const modeRadios = [...document.querySelectorAll('input[name=mode]')];
-  const videoPicker = document.getElementById("video-picker");
-
-  const syncModePanels = () => {
-    const custom = document.querySelector('input[name=mode]:checked').value === "custom";
-    document.getElementById("custom-opts").classList.toggle("hidden", !custom);
-    document.getElementById("auto-opts").classList.toggle("hidden", custom);
-  };
-  modeRadios.forEach((r) => r.addEventListener("change", () => { syncModePanels(); refresh(); }));
-
-  // The video list depends on which datasets are ticked, so it is rebuilt
-  // whenever those change. Existing ticks survive the rebuild.
-  function renderVideoPicker() {
-    const chosenDs = [...document.querySelectorAll(".ds")].filter((c) => c.checked).map((c) => c.value);
-    const built = document.querySelector(".vid") !== null;
-    const prev = new Set([...document.querySelectorAll(".vid")].filter((c) => c.checked).map((c) => c.value));
-
-    videoPicker.innerHTML = chosenDs.map((d) => {
-      const vids = [...new Set(DATA.filter((p) => p.dataset === d).map((p) => p.video))].sort((a, b) => a - b);
-      return `<div class="ds-group">
-        <div class="ds-group-head">
-          <b>${d}</b>
-          <button type="button" class="minibtn" data-all-vid="${d}">All</button>
-          <button type="button" class="minibtn" data-none-vid="${d}">None</button>
-          <span class="muted" data-vid-count="${d}"></span>
-        </div>
-        <div class="vidgrid">${vids.map((v) => {
-          const key = d + "|" + v;
-          const on = built ? prev.has(key) : pick(last, "videos", key, true);
-          const url = videoLinkFor(d, v);
-          // The link sits outside the <label> so clicking it opens the video
-          // instead of toggling the checkbox.
-          return `<span class="vidwrap">`
-            + `<label class="vidchk ${on ? "on" : ""}"><input type="checkbox" class="vid" value="${key}" ${on ? "checked" : ""} /> ${v}</label>`
-            + (url ? `<a class="vidlink" href="${url}" target="_blank" rel="noopener noreferrer" title="Watch ${d} video ${v} on YouTube">▶</a>` : "")
-            + `</span>`;
-        }).join("")}</div>
-      </div>`;
-    }).join("") || '<p class="muted">Tick at least one dataset above to choose videos.</p>';
-  }
-
-  // Live counts: how many Q&As each approach contributes under the current
-  // dataset+video selection, and what the whole selection adds up to.
-  function refresh() {
-    const custom = document.querySelector('input[name=mode]:checked').value === "custom";
-    if (custom) {
-      const wanted = new Set([...document.querySelectorAll(".vid")].filter((c) => c.checked).map((c) => c.value));
-      const chosenDs = [...document.querySelectorAll(".ds")].filter((c) => c.checked).map((c) => c.value);
-      const inScope = DATA.filter((p) => chosenDs.includes(p.dataset) && wanted.has(p.dataset + "|" + p.video));
-
-      document.querySelectorAll("[data-ap-label]").forEach((el) => {
-        const a = el.dataset.apLabel;
-        el.textContent = a + " (" + inScope.filter((p) => p.approach === a).length + ")";
-      });
-      document.querySelectorAll("[data-vid-count]").forEach((el) => {
-        const d = el.dataset.vidCount;
-        const all = [...document.querySelectorAll(".vid")].filter((c) => c.value.startsWith(d + "|"));
-        el.textContent = all.filter((c) => c.checked).length + " of " + all.length + " selected";
-      });
-      document.querySelectorAll(".vidchk").forEach((l) => l.classList.toggle("on", l.querySelector("input").checked));
-
-      const opts = readOpts(nameEl.value);
-      const n = buildPairs(opts).length;
-      const note = document.getElementById("selection-note");
-      note.innerHTML = n
-        ? `<b>${n} Q&As selected</b> — ${opts.approaches.length} approach${opts.approaches.length === 1 ? "" : "es"}, `
-          + `${wanted.size} video${wanted.size === 1 ? "" : "s"}`
-          + (opts.sample ? `, ${opts.sample} per video+approach` : "")
-          + (opts.maxPairs ? `, capped at ${opts.maxPairs}` : "")
-          + ` &nbsp;·&nbsp; roughly ${Math.max(1, Math.round(n * 0.5))} min at 30 s per pair.`
-        : "<b>Nothing selected.</b> Tick at least one video and one approach.";
-    }
-    checkResume();
-  }
-
-  // Delegated handlers so they survive the video picker being rebuilt.
-  document.getElementById("custom-opts").addEventListener("click", (e) => {
-    const t = e.target;
-    if (t.dataset.allVid || t.dataset.noneVid) {
-      const d = t.dataset.allVid || t.dataset.noneVid;
-      const on = Boolean(t.dataset.allVid);
-      document.querySelectorAll(".vid").forEach((c) => { if (c.value.startsWith(d + "|")) c.checked = on; });
-      refresh();
-    } else if (t.dataset.all === "ap" || t.dataset.none === "ap") {
-      const on = t.dataset.all === "ap";
-      document.querySelectorAll(".ap").forEach((c) => { c.checked = on; });
-      refresh();
-    }
-  });
-  document.getElementById("custom-opts").addEventListener("change", (e) => {
-    if (e.target.classList.contains("ds")) renderVideoPicker();
-    refresh();
-  });
 
   // Tell a returning annotator that their progress is still here.
   const checkResume = () => {
     const note = document.getElementById("resume-note");
-    const opts = readOpts(nameEl.value);
     if (!nameEl.value.trim()) { note.textContent = ""; return; }
-    const probe = makeSession(nameEl.value.trim(), opts);
+    const probe = makeSession(nameEl.value.trim());
     const prev = restore(probe.storeKey);
-    if (prev) {
+    if (prev && !matchesAssignment(prev, probe)) {
+      note.textContent = "Your saved session has a different assignment. Your progress is still saved; please contact the research team before continuing.";
+    } else if (prev) {
       const done = prev.uids.filter((u) => {
         const sc = prev.scores[u];
         return sc && prev.metrics.every((k) => {
@@ -1149,29 +985,26 @@ function renderWelcome() {
       }).length;
       note.innerHTML = `<span style="color:#155724;">Welcome back — ${done} of ${prev.uids.length} pairs already rated. You will continue where you stopped.</span>`;
     } else {
-      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs${opts.mode === "auto" ? " (same ordered set)" : ""}.</span>`;
+      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs (same ordered set).</span>`;
     }
   };
   nameEl.addEventListener("input", checkResume);
-  document.getElementById("adv").addEventListener("change", refresh);
-  syncModePanels();
-  renderVideoPicker();
-  refresh();
+  checkResume();
 
   document.getElementById("start").addEventListener("click", () => {
     const name = nameEl.value.trim();
     const err = document.getElementById("start-err");
     if (!name) { err.textContent = "Please enter your name first."; nameEl.focus(); return; }
-    const opts = readOpts(name);
-    if (!opts.metrics.length) { err.textContent = "Select at least one metric."; return; }
-    if (!opts.datasets.length || !opts.approaches.length) { err.textContent = "Select at least one dataset and one approach."; return; }
-    if (opts.videos && !opts.videos.length) { err.textContent = "Select at least one video."; return; }
-
-    const fresh = makeSession(name, opts);
-    if (!fresh.uids.length) { err.textContent = "That selection contains no Q&As."; return; }
-    saveLastOpts(opts, name);
+    const fresh = makeSession(name);
+    if (!fresh.uids.length) { err.textContent = "No Q&As are available. Please contact the research team."; return; }
     const prev = restore(fresh.storeKey);
+    if (prev && !matchesAssignment(prev, fresh)) {
+      err.textContent = "Your saved assignment differs from this study. Please contact the research team; your saved progress has not been changed.";
+      return;
+    }
+    saveLastOpts(fresh.opts, name);
     S = prev || fresh;
+    S.opts = fresh.opts; // Always keep model names hidden, including on resume.
     // Resume at the first pair that still has an unrated metric.
     const next = S.uids.findIndex((u) => !isRated(u));
     S.index = next === -1 ? S.uids.length : next;
@@ -1181,30 +1014,6 @@ function renderWelcome() {
   });
 
   nameEl.addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("start").click(); });
-}
-
-function readOpts(name) {
-  const q = (id) => document.getElementById(id);
-  const vals = (cls) => [...document.querySelectorAll("." + cls)].filter((c) => c.checked).map((c) => c.value);
-  const mode = (document.querySelector('input[name=mode]:checked') || {}).value || "auto";
-
-  const allDs = [...new Set(DATA.map((p) => p.dataset))].sort();
-  const allAp = [...new Set(DATA.map((p) => p.approach))].sort();
-
-  return {
-    mode: mode,
-    datasets: mode === "custom" && document.querySelector(".ds") ? vals("ds") : allDs,
-    approaches: mode === "custom" && document.querySelector(".ap") ? vals("ap") : allAp,
-    // null means "every video" — automatic mode always spans the whole corpus.
-    videos: mode === "custom" && document.querySelector(".vid") ? vals("vid") : null,
-    metrics: document.querySelector(".mt") ? vals("mt") : METRICS.map((m) => m.key),
-    blind: q("blind") ? q("blind").checked : true,
-    batch: 0,
-    batches: 1,
-    anchorSize: 0,
-    sample: Math.max(0, Number(q("sample") ? q("sample").value : 0) || 0),
-    maxPairs: Math.max(0, Number(q("maxpairs") ? q("maxpairs").value : CFG.MAX_PAIRS) || 0),
-  };
 }
 
 /* ===========================================================================
@@ -1227,7 +1036,7 @@ function errorButtons(key, options, selected) {
 
 // Drops the collapsible source-video panel into the metric list, after the
 // metrics that must be answered without it (see METRICS_BEFORE_VIDEO). If those
-// are deselected in the advanced options the panel simply comes first.
+// are absent from the supplied cards, the panel simply comes first.
 function insertVideoPanel(cards, metrics, source) {
   if (!source) return cards.join("");
   const firstAfter = metrics.findIndex((m) => !METRICS_BEFORE_VIDEO.includes(m.key));
@@ -1329,7 +1138,7 @@ function renderRate() {
         <button class="btn-ghost" id="prev" ${S.index === 0 ? "disabled" : ""}>← Previous</button>
         <button class="btn-primary" id="next">Submit &amp; next →</button>
         <span class="spacer"></span>
-        <button class="btn-ghost" id="options">⚙ Options</button>
+        <button class="btn-ghost" id="options">Back to welcome</button>
         <button class="btn-ghost" id="finish">Finish / export</button>
       </div>
       <div class="err" id="rate-err" style="margin-top:8px;"></div>
@@ -1733,7 +1542,7 @@ function renderDone() {
       <table>
         <tr><td>Annotator</td><td><b>${S.annotator}</b></td></tr>
         <tr><td>Session ID</td><td><code>${S.sessionId}</code></td></tr>
-        <tr><td>Assignment</td><td>${S.opts.mode === "auto" ? "same ordered set" : "custom subset"}</td></tr>
+        <tr><td>Assignment</td><td>same ordered set</td></tr>
         <tr><td>Pairs fully rated</td><td class="num"><b>${done}</b> / ${S.uids.length}</td></tr>
       </table>
       <div class="sync" id="sync" style="margin-top:12px;"></div>

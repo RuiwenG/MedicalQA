@@ -1,0 +1,6 @@
+/qa_data.json
+  Cache-Control: public, max-age=300
+
+/*
+  X-Robots-Tag: noindex
+  Referrer-Policy: strict-origin-when-cross-origin

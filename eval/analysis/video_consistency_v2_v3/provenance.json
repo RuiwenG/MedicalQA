@@ -1,0 +1,254 @@
+{
+  "source_sha256": {
+    "eval/llm_judge/judges_qwen3-14b_manifest.json": "0f217e49b91b36d06c030d36b8a926a7cbaa149af0403843eac5a356d08c85ba",
+    "eval/llm_judge/qa_data_qwen3-14b.json": "b99814405e5a4243d544e9027def195999a31e6406b92be10004198b870bbcbb",
+    "Master/SingleAgent-qwen3-14b-v2_generation_meta.json": "aaf3c55d176c6cf1cf5db14800379edab5aca53b9bb16419f1af228d78c722fd",
+    "Master/SingleAgent-qwen3-14b-v3_generation_meta.json": "aa36b8ee28044b0a29816871e20363e3395383d7fcfb409d8a58eff66418c017",
+    "Teepa/SingleAgent-qwen3-14b-v2_generation_meta.json": "ef15e5c419cc76ee389c690b5d107938a240bdc50c6c4bbdad7d6902f093f2d3",
+    "Teepa/SingleAgent-qwen3-14b-v3_generation_meta.json": "12d87363ec6fa2b81e2f7be8850ddf5c092265d43f7788a5097f627e76cbff36",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run1_full_Eval_20261002_232921_43326.csv": "9adce94f182aade16e26c11d2e75c0e7bfe57e99d637eb85f84ae8297cd9d2bf",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run2_full_Eval_20261002_232927_43454.csv": "c60b403e0b444e5c10d5727eaa1b0e5a07cbf0a13281f5e1d8df7363725fef62",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run3_full_Eval_20261002_232933_43582.csv": "3dbbdd230f6bd25e78910b6d9fd8bff0ebabc110d0778a4fdee0bad8740d281f",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run1_full_Eval_20261002_232923_43366.csv": "bb5139b86a24423ea8f5db55393b6a7d83648d8f7329804af140530d82ab462a",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run2_full_Eval_20261002_232929_43501.csv": "1de1f199fde341d20d8b81ecaa7bd18a6042075e0da08d05008b12070b590756",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run3_full_Eval_20261002_232935_43633.csv": "afb2c4f9a0533fa683ce530027f6a80c0eeac35f9161a46482d18ec20583aaf7",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run1_full_Eval_20261002_232925_43413.csv": "5154fc5c6173bd6150024d7f48f07237e6eb97e45d2bbfda0c966d9ca000b565",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run2_full_Eval_20261002_232931_43545.csv": "2d4e829f5b83cf58b5ab9abe2f9e162ec7037e7792a948ee840a54a5877cc2af",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run3_full_Eval_20261002_232937_43673.csv": "db0d4d4968a4f5b3e179d11bd04d9895525ad5ba927fdd1c6efd63d2844a3ff0",
+    "eval/llm_judge/judges_qwen2.5-7b_manifest.json": "82fc29e9c9863b44dbe7fd5f6ffca4034e768de961d0e3230612e62c3585f05e",
+    "eval/llm_judge/qa_data_qwen2.5-7b.json": "b7768c5030a2edbcae44ac7b73bf4e573cc5546374f36cda7cf861a487049d93",
+    "Master/SingleAgent-qwen-2.5-7b-instruct-v2_generation_meta.json": "7212732fec6baeed942b4f6893043001ce7a7a45ba11f6ebb1ad186ba3035a07",
+    "Master/SingleAgent-qwen-2.5-7b-instruct-v3_generation_meta.json": "aede84b8f4429111e5e87bb4eb725a3f5175c9758246aaeab24de218ef97db0f",
+    "Teepa/SingleAgent-qwen-2.5-7b-instruct-v2_generation_meta.json": "1424a84506861cb6b36a2662b0eb3ea5a075e72ff092bc81e569e06f28c1fef3",
+    "Teepa/SingleAgent-qwen-2.5-7b-instruct-v3_generation_meta.json": "36520832f2d6ed9ef0054c7ee435c8740f0a5984883f796642d57b6c3f387d2c",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen2.5-7b-run1_full_Eval_20261003_033546_14485.csv": "052cebd4f292e0cec8e532b2922fcd435b50b14c8fba11d5d6863bd3600b2766",
+    "eval/results/Master-Teepa_deepseek-v4-pro_qwen2.5-7b-run2_full_Eval_20261003_013450_94002.csv": "295a0dff376fbab7cd3f632f7b950ad8a7cb1fb7b9ae9921ddcd3bbf156a1da8",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run1_full_Eval_20261003_015150_98934.csv": "4859d89229e47a4c14b55cfbe1308f0509c97b0a1d7e4221a9fd91d717882dc9",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run2_full_Eval_20261003_015152_98976.csv": "a2c8376fff8ade0150ab15a61135e1373cfc577e508bc19f6fa15353e92caf5e",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run3_full_Eval_20261003_015154_99020.csv": "4975f392b292c084afa2e9abce58d91373672cb2917676854716e8a0ff130072",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run1_full_Eval_20261003_030437_10154.csv": "5a7bb84f0a41fd1a27965bdb80b2893803960b39767f6a2fd0e1183d07128341",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run2_full_Eval_20261003_015158_99119.csv": "f0dc5c210d1ea3d5b079ad8d3cd3fb85128809d5e26667c41b99306beb7847bb",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run3_full_Eval_20261003_015200_99171.csv": "29ed003b87912fe35dd0c448f7935a17c60934dd377a59956aa7a4782a025863"
+  },
+  "generation_metadata": {
+    "qwen3-14b": [
+      {
+        "dataset": "Master",
+        "recorded_settings": {
+          "model": "qwen/qwen3-14b",
+          "backend": "api",
+          "endpoint": "https://openrouter.ai/api/v1",
+          "provider": {
+            "order": [
+              "Alibaba"
+            ],
+            "quantizations": null,
+            "allow_fallbacks": false
+          },
+          "seed": 42,
+          "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+          "prompt_format": "filled"
+        }
+      },
+      {
+        "dataset": "Teepa",
+        "recorded_settings": {
+          "model": "qwen/qwen3-14b",
+          "backend": "api",
+          "endpoint": "https://openrouter.ai/api/v1",
+          "provider": {
+            "order": [
+              "Alibaba"
+            ],
+            "quantizations": null,
+            "allow_fallbacks": false
+          },
+          "seed": 42,
+          "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+          "prompt_format": "filled"
+        }
+      }
+    ],
+    "qwen2.5-7b": [
+      {
+        "dataset": "Master",
+        "recorded_settings": {
+          "model": "qwen/qwen-2.5-7b-instruct",
+          "backend": "api",
+          "endpoint": "https://openrouter.ai/api/v1",
+          "provider": {
+            "order": [
+              "Phala"
+            ],
+            "quantizations": null,
+            "allow_fallbacks": false
+          },
+          "seed": 42,
+          "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+          "prompt_format": "filled"
+        }
+      },
+      {
+        "dataset": "Teepa",
+        "recorded_settings": {
+          "model": "qwen/qwen-2.5-7b-instruct",
+          "backend": "api",
+          "endpoint": "https://openrouter.ai/api/v1",
+          "provider": {
+            "order": [
+              "Phala"
+            ],
+            "quantizations": null,
+            "allow_fallbacks": false
+          },
+          "seed": 42,
+          "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+          "prompt_format": "filled"
+        }
+      }
+    ]
+  },
+  "rating_validation": [
+    {
+      "model": "qwen3-14b",
+      "judge": "DeepSeek",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run1_full_Eval_20261002_232921_43326.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "DeepSeek",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run2_full_Eval_20261002_232927_43454.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "DeepSeek",
+      "run": 3,
+      "file": "eval/results/Master-Teepa_deepseek-v4-pro_qwen3-14b-run3_full_Eval_20261002_232933_43582.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "gpt-oss",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run1_full_Eval_20261002_232923_43366.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "gpt-oss",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run2_full_Eval_20261002_232929_43501.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "gpt-oss",
+      "run": 3,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen3-14b-run3_full_Eval_20261002_232935_43633.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "Gemma 4",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run1_full_Eval_20261002_232925_43413.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "Gemma 4",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run2_full_Eval_20261002_232931_43545.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen3-14b",
+      "judge": "Gemma 4",
+      "run": 3,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen3-14b-run3_full_Eval_20261002_232937_43673.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "DeepSeek",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_deepseek-v4-pro_qwen2.5-7b-run1_full_Eval_20261003_033546_14485.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "DeepSeek",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_deepseek-v4-pro_qwen2.5-7b-run2_full_Eval_20261003_013450_94002.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "gpt-oss",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run1_full_Eval_20261003_015150_98934.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "gpt-oss",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run2_full_Eval_20261003_015152_98976.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "gpt-oss",
+      "run": 3,
+      "file": "eval/results/Master-Teepa_openai-gpt-oss-120b_qwen2.5-7b-run3_full_Eval_20261003_015154_99020.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "Gemma 4",
+      "run": 1,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run1_full_Eval_20261003_030437_10154.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "Gemma 4",
+      "run": 2,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run2_full_Eval_20261003_015158_99119.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    },
+    {
+      "model": "qwen2.5-7b",
+      "judge": "Gemma 4",
+      "run": 3,
+      "file": "eval/results/Master-Teepa_google-gemma-4-31b-it_qwen2.5-7b-run3_full_Eval_20261003_015200_99171.csv",
+      "input_rows": 678,
+      "included_rows": 452
+    }
+  ],
+  "numpy_version": "2.3.5",
+  "repository_commit": "2687cb74fe301c29333d39f0b05a695292a380f3",
+  "plan_sha256": "7028077e6c6fd3635363eccb798381b4b85bd0501a431d6e448415ebc9d653c8",
+  "script_sha256": "b85084d84ce3b87e2e02091be261ee03cf3a6b9750f3e5aadf6db4a4b1f808f1",
+  "source_hashes_unchanged_after_analysis": true
+}

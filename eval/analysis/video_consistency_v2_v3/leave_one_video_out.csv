@@ -1,0 +1,301 @@
+model,judge,outcome,omitted_dataset,omitted_video,remaining_videos,difference_pp
+qwen3-14b,DeepSeek,Standalone,Master,1,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Master,2,24,2.71900167733501
+qwen3-14b,DeepSeek,Standalone,Master,3,24,2.9119029119029123
+qwen3-14b,DeepSeek,Standalone,Master,4,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Master,5,24,2.4103597020263687
+qwen3-14b,DeepSeek,Standalone,Master,6,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Master,7,24,2.1017177267177263
+qwen3-14b,DeepSeek,Standalone,Master,8,24,2.817205942205943
+qwen3-14b,DeepSeek,Standalone,Master,9,24,2.2441678691678693
+qwen3-14b,DeepSeek,Standalone,Master,10,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,1,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,2,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,3,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,4,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,5,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,6,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,7,24,1.1757918007918007
+qwen3-14b,DeepSeek,Standalone,Teepa,8,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,9,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,10,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,11,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,12,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,13,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,14,24,2.5646806896806895
+qwen3-14b,DeepSeek,Standalone,Teepa,15,24,1.5726171976171974
+qwen3-14b,DeepSeek,Trustworthiness,Master,1,24,-3.1057368557368554
+qwen3-14b,DeepSeek,Trustworthiness,Master,2,24,-3.0440084606751276
+qwen3-14b,DeepSeek,Trustworthiness,Master,3,24,-2.9089775964775964
+qwen3-14b,DeepSeek,Trustworthiness,Master,4,24,-2.735366485366485
+qwen3-14b,DeepSeek,Trustworthiness,Master,5,24,-1.9637615470948802
+qwen3-14b,DeepSeek,Trustworthiness,Master,6,24,-2.3565786065786063
+qwen3-14b,DeepSeek,Trustworthiness,Master,7,24,-2.735366485366485
+qwen3-14b,DeepSeek,Trustworthiness,Master,8,24,-3.3666796166796167
+qwen3-14b,DeepSeek,Trustworthiness,Master,9,24,-2.2011784511784516
+qwen3-14b,DeepSeek,Trustworthiness,Master,10,24,-2.735366485366485
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,1,24,-2.5964775964775972
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,2,24,-3.0825887075887075
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,3,24,-2.735366485366485
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,4,24,-2.735366485366485
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,5,24,-3.7770331520331517
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,6,24,-2.7353664853664847
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,7,24,-2.2145331520331517
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,8,24,-3.2909220409220405
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,9,24,-2.388144263144263
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,10,24,-0.999255374255374
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,11,24,-2.040922040922041
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,12,24,-2.5038850038850033
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,13,24,-1.3464775964775961
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,14,24,-3.314070189070189
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,15,24,-2.735366485366485
+qwen3-14b,gpt-oss,Standalone,Master,1,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Master,2,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Master,3,24,0.9804046262379587
+qwen3-14b,gpt-oss,Standalone,Master,4,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Master,5,24,1.1154354904354906
+qwen3-14b,gpt-oss,Standalone,Master,6,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Master,7,24,0.3438305521638846
+qwen3-14b,gpt-oss,Standalone,Master,8,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Master,9,24,0.6999559082892408
+qwen3-14b,gpt-oss,Standalone,Master,10,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,1,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,2,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,3,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,4,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,5,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,6,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,7,24,0.28596018179351446
+qwen3-14b,gpt-oss,Standalone,Teepa,8,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,9,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,10,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,11,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,12,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,13,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,14,24,0.8067935151268477
+qwen3-14b,gpt-oss,Standalone,Teepa,15,24,0.6083808167141496
+qwen3-14b,gpt-oss,Trustworthiness,Master,1,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Master,2,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Master,3,24,-2.161461223961225
+qwen3-14b,gpt-oss,Trustworthiness,Master,4,24,-1.744794557294559
+qwen3-14b,gpt-oss,Trustworthiness,Master,5,24,-2.470103199269867
+qwen3-14b,gpt-oss,Trustworthiness,Master,6,24,-1.7826733451733467
+qwen3-14b,gpt-oss,Trustworthiness,Master,7,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Master,8,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Master,9,24,-2.0546236171236187
+qwen3-14b,gpt-oss,Trustworthiness,Master,10,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,1,24,-1.744794557294559
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,2,24,-1.6406278906278924
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,3,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,4,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,5,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,6,24,-2.3157822116155464
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,7,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,8,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,9,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,10,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,11,24,-1.814239001739003
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,12,24,-2.1614612239612256
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,13,24,-1.2776228401228418
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,14,24,-2.508683446183448
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,15,24,-2.2606675731675745
+qwen3-14b,Gemma 4,Standalone,Master,1,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Master,2,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Master,3,24,4.073819698819699
+qwen3-14b,Gemma 4,Standalone,Master,4,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Master,5,24,3.2636345136345133
+qwen3-14b,Gemma 4,Standalone,Master,6,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Master,7,24,3.2636345136345133
+qwen3-14b,Gemma 4,Standalone,Master,8,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Master,9,24,3.4060846560846563
+qwen3-14b,Gemma 4,Standalone,Master,10,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,1,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,2,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,3,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,4,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,5,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,6,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,7,24,1.9904863654863654
+qwen3-14b,Gemma 4,Standalone,Teepa,8,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,9,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,10,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,11,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,12,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,13,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,14,24,3.726597476597477
+qwen3-14b,Gemma 4,Standalone,Teepa,15,24,2.6353276353276356
+qwen3-14b,Gemma 4,Trustworthiness,Master,1,24,-1.7021867021867043
+qwen3-14b,Gemma 4,Trustworthiness,Master,2,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Master,3,24,-2.153575591075593
+qwen3-14b,Gemma 4,Trustworthiness,Master,4,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Master,5,24,-1.5170015170015185
+qwen3-14b,Gemma 4,Trustworthiness,Master,6,24,-1.7274392274392287
+qwen3-14b,Gemma 4,Trustworthiness,Master,7,24,-1.8256434923101608
+qwen3-14b,Gemma 4,Trustworthiness,Master,8,24,-2.3587523587523607
+qwen3-14b,Gemma 4,Trustworthiness,Master,9,24,-1.659451659451661
+qwen3-14b,Gemma 4,Trustworthiness,Master,10,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,1,24,-1.7021867021867036
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,2,24,-1.8063533688533708
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,3,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,4,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,5,24,-3.0216311466311483
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,6,24,-3.0602113935447286
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,7,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,8,24,-2.5355200355200376
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,9,24,-1.9799644799644818
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,10,24,-0.24385336885337067
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,11,24,-1.2855200355200376
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,12,24,-1.5170015170015185
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,13,24,-0.5910755910755933
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,14,24,-2.674408924408926
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,15,24,-2.277583527583529
+qwen2.5-7b,DeepSeek,Standalone,Master,1,24,-0.31391062641062695
+qwen2.5-7b,DeepSeek,Standalone,Master,2,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Master,3,24,-0.5396050708550715
+qwen2.5-7b,DeepSeek,Standalone,Master,4,24,0.658311595811595
+qwen2.5-7b,DeepSeek,Standalone,Master,5,24,0.47312641062641003
+qwen2.5-7b,DeepSeek,Standalone,Master,6,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Master,7,24,1.1675708550708543
+qwen2.5-7b,DeepSeek,Standalone,Master,8,24,0.05225098975098925
+qwen2.5-7b,DeepSeek,Standalone,Master,9,24,-0.39938071188071256
+qwen2.5-7b,DeepSeek,Standalone,Master,10,24,1.2833115958115953
+qwen2.5-7b,DeepSeek,Standalone,Teepa,1,24,0.44997826247826195
+qwen2.5-7b,DeepSeek,Standalone,Teepa,2,24,-0.27918840418840485
+qwen2.5-7b,DeepSeek,Standalone,Teepa,3,24,-0.5916884041884046
+qwen2.5-7b,DeepSeek,Standalone,Teepa,4,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Teepa,5,24,2.324978262478262
+qwen2.5-7b,DeepSeek,Standalone,Teepa,6,24,0.9360893735893728
+qwen2.5-7b,DeepSeek,Standalone,Teepa,7,24,-0.01877173752173819
+qwen2.5-7b,DeepSeek,Standalone,Teepa,8,24,1.074978262478262
+qwen2.5-7b,DeepSeek,Standalone,Teepa,9,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Teepa,10,24,-1.3208550708550715
+qwen2.5-7b,DeepSeek,Standalone,Teepa,11,24,-1.3208550708550715
+qwen2.5-7b,DeepSeek,Standalone,Teepa,12,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Teepa,13,24,0.6204328079328074
+qwen2.5-7b,DeepSeek,Standalone,Teepa,14,24,0.24164492914492847
+qwen2.5-7b,DeepSeek,Standalone,Teepa,15,24,0.09283540533540449
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,1,24,-7.218718781218782
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,2,24,-7.265015077515077
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,3,24,-7.756913225663226
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,4,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,5,24,-7.959459521959522
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,6,24,-7.307102619602619
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,7,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,8,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,9,24,-7.817009379509379
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,10,24,-8.538163225663226
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,1,24,-7.913163225663227
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,2,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,3,24,-7.704829892329893
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,4,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,5,24,-5.413163225663226
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,6,24,-7.959459521959522
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,7,24,-6.715246558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,8,24,-5.413163225663226
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,9,24,-6.975663225663226
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,10,24,-4.892329892329892
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,11,24,-6.454829892329893
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,12,24,-7.496496558996559
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,13,24,-6.738920801420802
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,14,24,-7.843718781218782
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,15,24,-7.050067987567987
+qwen2.5-7b,gpt-oss,Standalone,Master,1,24,-0.33338575005241544
+qwen2.5-7b,gpt-oss,Standalone,Master,2,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Master,3,24,-1.0972746389413048
+qwen2.5-7b,gpt-oss,Standalone,Master,4,24,0.0832809166142511
+qwen2.5-7b,gpt-oss,Standalone,Master,5,24,-0.3642499475832806
+qwen2.5-7b,gpt-oss,Standalone,Master,6,24,0.7019677853011196
+qwen2.5-7b,gpt-oss,Standalone,Master,7,24,0.2530340030340051
+qwen2.5-7b,gpt-oss,Standalone,Master,8,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Master,9,24,-0.8034712201378852
+qwen2.5-7b,gpt-oss,Standalone,Master,10,24,0.9860586943920289
+qwen2.5-7b,gpt-oss,Standalone,Teepa,1,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Teepa,2,24,-0.22921908338574873
+qwen2.5-7b,gpt-oss,Standalone,Teepa,3,24,-0.1944968611635271
+qwen2.5-7b,gpt-oss,Standalone,Teepa,4,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Teepa,5,24,0.6388364721698065
+qwen2.5-7b,gpt-oss,Standalone,Teepa,6,24,0.2530340030340037
+qwen2.5-7b,gpt-oss,Standalone,Teepa,7,24,-0.576441305607971
+qwen2.5-7b,gpt-oss,Standalone,Teepa,8,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Teepa,9,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Teepa,10,24,-0.40283019449686014
+qwen2.5-7b,gpt-oss,Standalone,Teepa,11,24,-0.2870894537561189
+qwen2.5-7b,gpt-oss,Standalone,Teepa,12,24,-0.05560797227463776
+qwen2.5-7b,gpt-oss,Standalone,Teepa,13,24,0.3231799065132412
+qwen2.5-7b,gpt-oss,Standalone,Teepa,14,24,0.06013276846610257
+qwen2.5-7b,gpt-oss,Standalone,Teepa,15,24,0.04359837693171155
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,1,24,0.8531900198566853
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,2,24,0.266770266770266
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,3,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,4,24,0.2976344643011294
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,5,24,0.11244927911594482
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,6,24,0.44914961581628093
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,7,24,0.11244927911594436
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,8,24,-0.055900889234223226
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,9,24,0.46857463524130155
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,10,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,1,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,2,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,3,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,4,24,0.5754122420789075
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,5,24,0.9226344643011299
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,6,24,0.11244927911594482
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,7,24,0.22819001985668516
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,8,24,-0.2579210912544256
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,9,24,-0.4662544245877591
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,10,24,3.0059677976344634
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,11,24,1.0383752050418706
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,12,24,0.45967150133816675
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,13,24,1.0804627471294121
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,14,24,1.1541159457826111
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,15,24,0.5754122420789075
+qwen2.5-7b,Gemma 4,Standalone,Master,1,24,1.8838800088800105
+qwen2.5-7b,Gemma 4,Standalone,Master,2,24,2.007336799003467
+qwen2.5-7b,Gemma 4,Standalone,Master,3,24,0.5991577866577881
+qwen2.5-7b,Gemma 4,Standalone,Master,4,24,2.8561022311022324
+qwen2.5-7b,Gemma 4,Standalone,Master,5,24,2.6246207496207514
+qwen2.5-7b,Gemma 4,Standalone,Master,6,24,2.5404456654456666
+qwen2.5-7b,Gemma 4,Standalone,Master,7,24,3.087583712583714
+qwen2.5-7b,Gemma 4,Standalone,Master,8,24,2.161657786657788
+qwen2.5-7b,Gemma 4,Standalone,Master,9,24,0.3454184704184716
+qwen2.5-7b,Gemma 4,Standalone,Master,10,24,2.8561022311022324
+qwen2.5-7b,Gemma 4,Standalone,Teepa,1,24,2.3005466755466766
+qwen2.5-7b,Gemma 4,Standalone,Teepa,2,24,1.8144355644355656
+qwen2.5-7b,Gemma 4,Standalone,Teepa,3,24,1.1894355644355656
+qwen2.5-7b,Gemma 4,Standalone,Teepa,4,24,2.161657786657788
+qwen2.5-7b,Gemma 4,Standalone,Teepa,5,24,4.244991119991122
+qwen2.5-7b,Gemma 4,Standalone,Teepa,6,24,2.7789417372750718
+qwen2.5-7b,Gemma 4,Standalone,Teepa,7,24,1.9880466755466772
+qwen2.5-7b,Gemma 4,Standalone,Teepa,8,24,2.9949911199911217
+qwen2.5-7b,Gemma 4,Standalone,Teepa,9,24,2.161657786657788
+qwen2.5-7b,Gemma 4,Standalone,Teepa,10,24,-0.6161199911199899
+qwen2.5-7b,Gemma 4,Standalone,Teepa,11,24,0.19406519406519493
+qwen2.5-7b,Gemma 4,Standalone,Teepa,12,24,2.161657786657788
+qwen2.5-7b,Gemma 4,Standalone,Teepa,13,24,2.1616577866577886
+qwen2.5-7b,Gemma 4,Standalone,Teepa,14,24,2.6246207496207514
+qwen2.5-7b,Gemma 4,Standalone,Teepa,15,24,2.756895881895883
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,1,24,-7.739108884942218
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,2,24,-8.942812588645921
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,3,24,-8.364108884942219
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,4,24,-8.155775551608885
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,5,24,-7.8625656750656745
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,6,24,-7.638098783932118
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,7,24,-8.171207650374317
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,8,24,-8.269411915245248
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,9,24,-7.589536235369569
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,10,24,-6.97521999605333
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,1,24,-8.433553329386664
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,2,24,-8.53771999605333
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,3,24,-8.71133110716444
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,4,24,-8.016886662719996
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,5,24,-6.280775551608886
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,6,24,-8.7884916009916
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,7,24,-8.016886662719996
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,8,24,-4.96133110716444
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,9,24,-6.627997773831108
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,10,24,-4.891886662719997
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,11,24,-7.553923699757033
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,12,24,-7.669664440497774
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,13,24,-7.511836157669492
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,14,24,-8.47984962568296
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,15,24,-8.215299361132693

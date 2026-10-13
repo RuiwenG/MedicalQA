@@ -112,7 +112,7 @@ Locally: `cd eval/web && python -m http.server 8899`, then open
 
 Send everyone the **same** URL. Each person types their name only to label their
 ratings and resume progress. The name does not change which Q&As they receive.
-In automatic mode, every evaluator receives the same ordered Q&A list.
+Every evaluator receives the same fixed, ordered Q&A list and all rating criteria.
 
 | Parameter | Effect |
 | --- | --- |
@@ -120,7 +120,7 @@ In automatic mode, every evaluator receives the same ordered Q&A list.
 
 ### How the shared set is built
 
-Automatic mode is deterministic and uses no shuffle:
+The shared assignment is deterministic and uses no shuffle:
 
 1. Load all non-excluded Q&As.
 2. Sort them by Q&A number, video, dataset, approach, and Q&A id. This is fixed
@@ -131,28 +131,26 @@ For the short Netlify pilot, `MAX_PAIRS: 40` means everyone receives the same
 first 40 ordered pairs. Set `MAX_PAIRS: 0` to make everyone rate all visible
 pairs.
 
-### Choosing videos and approaches by hand
+### Fixed annotator settings
 
-**Advanced options → "Choose videos and approaches myself"** replaces the
-automatic shared set with a direct picker: datasets, then a chip per video
-grouped by dataset (with **All** / **None** per dataset), then approaches, then
-metrics, blinding, and sample N per video+approach. Counts update live — each
-approach shows how many pairs it contributes under the current video selection,
-and a summary line gives the session total and a rough time estimate.
+The welcome page asks for a name only. Annotators cannot choose their own videos,
+approaches, metrics, sample size, or pair count, or reveal model names during
+rating. The research team controls the shared assignment through `config.js`;
+do not change its scope or the corpus during data collection.
 
-The **⚙ Options** button on the rating screen returns here at any point. Your
-selections and name are remembered, and progress for that exact configuration is
-restored, so you can go back, adjust, and carry on. Changing the selection starts
-a separate session — the old one stays in `localStorage` and reappears if you
-select the same options again.
+**Back to welcome** returns to the instructions and name field. Existing shared
+session keys and progress are preserved. Old custom preferences are ignored;
+separately saved custom sessions stay in local storage but are not used for the
+shared assignment. An incompatible saved assignment at the shared session key
+blocks resuming and asks the annotator to contact the research team, without
+overwriting their progress. No database schema change is required.
 
 ### Embedded source video
 
 Each video source URL is pulled from `test_dataset.csv` (Master) and `teepa.csv`
 (Teepa) by the extract script:
 
-- a small ▶ next to every video in the picker, so you can preview before choosing;
-- an embedded YouTube player on each rating screen.
+An embedded YouTube player is available on each rating screen.
 
 When a QA pair has `time_start_sec` and `time_end_sec`, the player is embedded
 as a clip for that segment. Some systems do not currently store timestamps; for

@@ -16,4 +16,6 @@
   for = "/*"
   [headers.values]
     X-Robots-Tag = "noindex"
-    Referrer-Policy = "no-referrer"
+    # YouTube requires a Referer to identify the embedding site (error 153).
+    # Send only the site origin on cross-origin requests, not annotator URLs.
+    Referrer-Policy = "strict-origin-when-cross-origin"

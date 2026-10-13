@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>Dementia Q&A — Human Evaluation v4</title>
+<style>
+  :root {
+    color-scheme: light;
+    --navy: #1e3a5f;
+    --navy-2: #2c4d7a;
+    --ink: #1a1f2e;
+    --muted: #5a6478;
+    --line: #e3e7ee;
+    --bg: #f7f8fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+  header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: white;
+    padding: 18px 24px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  header h1 { margin: 0 0 4px 0; font-size: 18px; font-weight: 600; letter-spacing: 0.2px; }
+  header .sub { font-size: 13px; opacity: 0.85; }
+
+  .card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  h2 { font-size: 15px; margin: 0 0 10px 0; color: var(--navy); }
+  h3 { font-size: 13px; margin: 18px 0 8px 0; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
+  p { margin: 0 0 10px 0; }
+  .muted { color: var(--muted); font-size: 13px; }
+  ul { margin: 0 0 10px 0; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+
+  label.field { display: block; font-weight: 600; font-size: 13px; margin-bottom: 5px; }
+  input[type=text], input[type=number], textarea {
+    font-family: inherit; font-size: 14px;
+    padding: 9px 12px; border: 1px solid #d6dae3; border-radius: 8px;
+    background: white; color: var(--ink);
+  }
+  input[type=text], input[type=number] { width: 100%; max-width: 340px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 96px; resize: vertical; line-height: 1.45; }
+  input[type=text]:focus, input[type=number]:focus, textarea:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
+
+  .annotator-profile { margin-top: 18px; max-width: 620px; }
+  .profile-field { margin-bottom: 15px; }
+  .profile-field[hidden] { display: none; }
+  .profile-field select {
+    width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px;
+    font-family: inherit; font-size: 14px; color: var(--ink); background: white;
+    border: 1px solid #d6dae3; border-radius: 8px;
+  }
+  .profile-field select:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
+  .profile-field .muted { margin: 0 0 6px; }
+  .profile-field input[type=text] { max-width: none; min-height: 44px; }
+  @media (pointer: coarse) {
+    .profile-field select, .profile-field input[type=text] { font-size: 16px; }
+  }
+
+  /* Dictation: a mic button inside the bottom-right corner of each text box. */
+  .dictate { position: relative; }
+  .dictate textarea { padding-right: 48px; }
+  .mic-btn {
+    position: absolute; right: 8px; bottom: 10px; width: 34px; height: 34px; padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%; background: white; border: 1px solid #d6dae3; color: var(--navy);
+  }
+  .mic-btn:hover { border-color: #6b8cae; }
+  .mic-btn svg { width: 16px; height: 16px; }
+  .mic-btn.on { background: #c0392b; border-color: #c0392b; color: white; animation: mic-pulse 1.2s ease-in-out infinite; }
+  @keyframes mic-pulse { 50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0.18); } }
+  @media (prefers-reduced-motion: reduce) { .mic-btn.on { animation: none; } }
+  .mic-status { font-size: 12px; color: var(--muted); margin-top: 4px; min-height: 1em; }
+
+  button {
+    font-family: inherit; font-size: 14px; font-weight: 500;
+    padding: 10px 20px; border-radius: 8px; border: 1px solid transparent;
+    cursor: pointer; transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-primary { background: var(--navy); color: white; }
+  .btn-primary:hover { background: var(--navy-2); }
+  .btn-primary:disabled { background: #9aa4b5; cursor: not-allowed; }
+  .btn-ghost { background: white; color: var(--muted); border-color: #d6dae3; }
+  .btn-ghost:hover { border-color: #6b8cae; color: var(--navy); }
+  .btn-ghost:disabled { opacity: 0.45; cursor: not-allowed; }
+
+  .banner {
+    border-radius: 8px; padding: 11px 14px; margin-bottom: 14px; font-size: 13px;
+  }
+  .banner-warn { background: #fff3cd; border-left: 4px solid #ff9800; color: #7a5b00; }
+  .banner-info { background: #e7f1fb; border-left: 4px solid #4da6ff; color: #1c4a75; }
+  .banner-ok   { background: #d4edda; border-left: 4px solid #28a745; color: #155724; }
+
+  /* --- progress --------------------------------------------------------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(247,248,251,0.94); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line); margin-bottom: 14px;
+    padding: 10px 0 8px 0;
+  }
+  .topbar-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; font-size: 13px;
+  }
+  .progress-track { height: 6px; background: #e3e7ee; border-radius: 3px; margin-top: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), #4da6ff); width: 0%; transition: width 0.25s; }
+  .sync { font-size: 12px; display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #9aa4b5; display: inline-block; }
+  .dot.ok { background: #28a745; }
+  .dot.pending { background: #ff9800; }
+  .dot.off { background: #9aa4b5; }
+  .dot.err { background: #d9534f; }
+
+  /* --- Q&A -------------------------------------------------------------- */
+  .qa-meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .qa-meta code {
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
+    background: #f0f2f7; padding: 1px 6px; border-radius: 4px;
+  }
+  .qbox, .abox {
+    padding: 14px 16px; border-radius: 8px; margin-bottom: 10px;
+    white-space: pre-wrap; word-wrap: break-word;
+  }
+  .qbox { background: #fff3cd; border-left: 4px solid #ff9800; }
+  .abox { background: #d4edda; border-left: 4px solid #28a745; max-height: 420px; overflow-y: auto; }
+  .box-label {
+    display: block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.6px; margin-bottom: 6px;
+  }
+  .qbox .box-label { color: #856404; }
+  .abox .box-label { color: #155724; }
+  .box-text { font-size: 15px; color: #2a2f3a; }
+
+  /* --- metrics ---------------------------------------------------------- */
+  .metric {
+    border: 1px solid var(--line); border-left: 4px solid #cfd6e2;
+    border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; background: white;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .metric.active { border-left-color: #4da6ff; box-shadow: 0 0 0 2px rgba(77,166,255,0.18); }
+  .metric.rated { border-left-color: #28a745; }
+  .metric-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .metric-name { font-weight: 600; color: var(--navy); font-size: 14px; }
+  .tag {
+    color: white; border-radius: 10px; padding: 1px 8px; font-size: 11px; font-weight: 600;
+  }
+  .tag.q { background: #856404; }
+  .tag.a { background: #155724; }
+  .tag.qa { background: #2c5aa0; }
+  .metric-def { color: var(--muted); font-size: 12.5px; font-style: italic; margin: 4px 0 10px 0; }
+
+  .likert { display: flex; gap: 6px; flex-wrap: wrap; }
+  .likert button {
+    flex: 1 1 0; min-width: 92px; padding: 8px 6px; font-size: 12px; font-weight: 500;
+    background: white; border: 1px solid #d6dae3; color: #4a5366; line-height: 1.3;
+  }
+  .likert button:hover { border-color: #6b8cae; color: var(--navy); }
+  .likert button.sel { background: var(--navy); border-color: var(--navy); color: white; }
+  .likert .num { display: block; font-size: 15px; font-weight: 700; }
+  .rating-subhead { color: var(--navy); font-size: 12px; font-weight: 700; margin: 10px 0 5px; }
+  .error-panel { margin-top: 8px; }
+  .error-panel[hidden] { display: none; }
+  .other-box { margin-top: 8px; }
+  .other-box[hidden] { display: none; }
+  .other-box textarea { width: 100%; min-height: 56px; box-sizing: border-box; }
+  .source-video { overflow: hidden; }
+  .source-video summary { cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 8px; }
+  .video-frame {
+    width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px;
+    background: #111; display: block;
+  }
+
+  .navbtns { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
+  .navbtns .spacer { flex: 1; }
+  .err { color: #d9534f; font-size: 13px; font-weight: 500; }
+
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 14px; margin: 8px 0 4px 0; }
+  .chk { display: flex; align-items: center; gap: 7px; font-size: 13px; }
+  .chk input { margin: 0; width: 15px; height: 15px; }
+
+  /* video picker — one compact chip per video, grouped by dataset */
+  .ds-group { margin-bottom: 12px; }
+  .ds-group-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .ds-group-head b { font-size: 13px; color: var(--navy); }
+  .vidgrid { display: flex; flex-wrap: wrap; gap: 6px; }
+  .vidchk {
+    display: inline-flex; align-items: center; gap: 5px; cursor: pointer;
+    border: 1px solid #d6dae3; border-radius: 6px; padding: 4px 9px;
+    font-size: 12.5px; background: white; user-select: none;
+  }
+  .vidchk:hover { border-color: #6b8cae; }
+  .vidchk input { margin: 0; width: 13px; height: 13px; }
+  .vidchk.on { background: #eef4fb; border-color: #6b8cae; color: var(--navy); font-weight: 500; }
+  .vidwrap { display: inline-flex; align-items: center; gap: 2px; }
+  .vidlink {
+    text-decoration: none; color: #9aa4b5; font-size: 11px; padding: 3px 4px;
+    border-radius: 4px; line-height: 1;
+  }
+  .vidlink:hover { color: #c4302b; background: #f5f5f5; }
+  .vidlink-inline {
+    color: var(--navy); text-decoration: none; font-weight: 500; white-space: nowrap;
+    border: 1px solid #d6dae3; border-radius: 6px; padding: 3px 10px; background: white;
+  }
+  .vidlink-inline:hover { border-color: #6b8cae; background: #eef4fb; }
+  .qa-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .minibtn {
+    font-size: 11px; padding: 3px 9px; border-radius: 6px;
+    background: white; border: 1px solid #d6dae3; color: var(--muted); font-weight: 500;
+  }
+  .minibtn:hover { border-color: #6b8cae; color: var(--navy); }
+  .selection-note {
+    background: #eef4fb; border: 1px solid #cfe0f2; border-radius: 8px;
+    padding: 9px 13px; margin-top: 12px; font-size: 13px; color: #1c4a75;
+  }
+  .inline-fields { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
+  .inline-fields > div { min-width: 130px; }
+  .inline-fields input { max-width: 130px; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 8px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  kbd {
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
+    background: #f0f2f7; border: 1px solid #d6dae3; border-bottom-width: 2px;
+    border-radius: 4px; padding: 1px 5px; color: var(--muted);
+  }
+  .hidden { display: none !important; }
+  @media (max-width: 620px) {
+    .wrap { padding: 12px; }
+    .likert button { min-width: 60px; font-size: 11px; }
+    .likert button .lbl { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Dementia Q&A — Human Evaluation v4</h1>
+  <div class="sub">Study v4 · Rating automatically generated Q&As from dementia-care videos.</div>
+</header>
+
+<div id="app"><div class="card"><p class="muted">Loading Q&As…</p></div></div>
+
+</div>
+
+<script src="config.js"></script>
+<script>
+"use strict";
+
+/* ===========================================================================
+   Configuration + metric definitions
+   =========================================================================== */
+
+const CFG = Object.assign({
+  SUPABASE_URL: "", SUPABASE_ANON_KEY: "",
+  RATINGS_TABLE: "ratings_v4",
+  STUDY_VERSION: "v4",
+  MAX_PAIRS: 0,
+  // Approach names dropped from the corpus at load time. Excluded pairs never
+  // reach DATA, so they cannot appear in the shared ordered set or in any
+  // count. qa_data.json itself is left untouched.
+  EXCLUDE_APPROACHES: [],
+  // Allowlist. When non-empty it wins outright: ONLY these approaches enter the
+  // corpus and every other one is dropped, including approaches that do not
+  // exist yet. Prefer it to EXCLUDE_APPROACHES for a study with a fixed scope —
+  // a new folder in the repo then cannot silently join the annotators' set.
+  ONLY_APPROACHES: [],
+}, window.EVAL_CONFIG || {});
+
+// Normalised for comparison so a stray "dualagent" or " RAG " in config still
+// matches the approach names recorded in qa_data.json.
+const norm = (a) => String(a).trim().toLowerCase();
+const EXCLUDED = new Set((CFG.EXCLUDE_APPROACHES || []).map(norm));
+const ONLY = new Set((CFG.ONLY_APPROACHES || []).map(norm));
+const isExcluded = (approach) =>
+  ONLY.size ? !ONLY.has(norm(approach)) : EXCLUDED.has(norm(approach));
+
+// Tolerate the two easy paste mistakes: a trailing slash, and copying the REST
+// endpoint (".../rest/v1") instead of the bare project URL. Both would
+// otherwise produce a 404 on every insert with no obvious cause.
+const SUPABASE_ORIGIN = String(CFG.SUPABASE_URL || "")
+  .trim()
+  .replace(/\/+$/, "")
+  .replace(/\/rest\/v1$/, "");
+const RATINGS_TABLE = String(CFG.RATINGS_TABLE || "ratings_v4").trim();
+
+// key   -> column name in Supabase / CSV field key
+// label -> what the annotator reads
+// scope -> which part of the pair is being judged, drives the coloured tag
+// optionalIssues: the metric is answered by its quality scale alone. There is no
+// Yes/No question; "What's wrong?" follows the scale as an optional multi-select
+// (its _binary column stays empty and _issue holds whatever was selected).
+const METRICS = [
+  { key: "qa_alignment", dbPrefix: "qna_trustworthiness", label: "Q&A Trustworthiness", scope: "qa",
+    attributeName: "Q&A Trustworthiness",
+    binaryQuestion: "Does the Q&A align with the video?",
+    def: "The answer directly addresses the question, is supported by the source video, and does not add unsupported claims or contradict the video.",
+    attribute: [
+      "Excellent",
+      "Good",
+      "Fair",
+      "Poor",
+    ],
+    errors: ["Source Misinterpretation", "Hallucinating", "Contradiction", "Missing Key Information"],
+    optionalIssues: true,
+    otherOption: "Other",
+    noIssueError: "No issue" },
+  { key: "qa_accessibility", dbPrefix: "qna_clarity", label: "Q&A Clarity", scope: "qa",
+    attributeName: "Q&A Clarity",
+    binaryQuestion: "Is the Q&A easy for a caregiver to understand?",
+    def: "The Q&A is specific, readable, and accessible for an 8th grade reader, without unexplained clinical or technical language.",
+    attribute: [
+      "Very easy to understand",
+      "Easy",
+      "Somewhat difficult",
+      "Difficult",
+    ],
+    errors: ["Difficult vocabulary", "Too long", "Ambiguous", "Poor organization"],
+    optionalIssues: true,
+    otherOption: "Other",
+    noIssueError: "No issue" },
+  { key: "qa_edu_actionable", dbPrefix: "qna_usefulness", label: "Q&A Usefulness", scope: "qa",
+    attributeName: "Q&A Usefulness",
+    binaryQuestion: "Does the Q&A provide useful or actionable guidance for caregivers?",
+    def: "The Q&A teaches an important dementia-care idea and/or gives practical guidance a caregiver could apply.",
+    attribute: [
+      "Highly useful",
+      "Useful",
+      "Limited useful",
+      "Not useful",
+    ],
+    errors: ["Not actionable", "Missing Explanation", "Generic Advice", "Low Relevance to Caregiver Needs"],
+    optionalIssues: true,
+    otherOption: "Other",
+    noIssueError: "No issue" },
+  { key: "qa_mental_health", dbPrefix: "qna_care_safety", label: "Q&A Care Safety", scope: "qa",
+    binaryQuestion: "Does the Q&A contain guidance that could lead to unsafe or inappropriate care?",
+    def: "The Q&A should give safe and respectful guidance for caregivers and people living with dementia.",
+    binaryOptions: ["Yes", "No"],
+    errorTrigger: "Yes",
+    errorPrompt: "If Yes, what is the concern? Select all that apply.",
+    errors: ["Unsafe medical or health advice", "Physical safety risk", "Blaming or judgmental language", "Discourages professional care"],
+    noIssueError: "No issue" },
+  // Mirrors the Self-contained (Standalone) criterion in the SingleQA generation
+  // prompt. Appended last so the first four metrics keep their stored order.
+  { key: "qa_standalone", dbPrefix: "qna_standalone", label: "Q&A Standalone", scope: "qa",
+    binaryQuestion: "Can the Q&A be understood on its own by a caregiver who has not seen the video and cannot see any other Q&A pair?",
+    def: "(The QA pair is understandable on its own without requiring additional context from the source video.)",
+    errors: ["Refers to the video, transcript or speaker", "Undefined pronoun", "Undefined this/these reference", "Depends on another Q&A pair"],
+    // A fifth choice whose text box lets the annotator name a problem the list
+    // misses. Stored in the same _issue column as "Other: <their text>".
+    otherOption: "Other",
+    noIssueError: "No issue" },
+];
+
+// Metrics shown BEFORE the source video panel. Q&A Standalone asks whether a
+// pair stands up without the video, so an annotator who has just watched the
+// clip cannot answer it honestly — it is placed first, and the video sits
+// underneath it. METRICS itself stays in canonical order, because that is what
+// drives the database columns and the CSV, which must line up with judge.py.
+const METRICS_BEFORE_VIDEO = ["qa_standalone"];
+
+// The order metrics are rendered and keyboard-navigated in. Every site that
+// turns an index into a metric must use this, not METRICS.
+function displayMetrics() {
+  const selected = METRICS.filter((m) => S.metrics.includes(m.key));
+  return selected.filter((m) => METRICS_BEFORE_VIDEO.includes(m.key))
+    .concat(selected.filter((m) => !METRICS_BEFORE_VIDEO.includes(m.key)));
+}
+
+const NO_PROBLEM = "No issue";
+const BINARY = ["Yes", "No"];
+const LEGACY_PROBLEM_VALUES = ["__needs_severity__", "Minor", "Moderate", "Severe"];
+
+const RECOMMENDATION = [
+  "Yes",
+  "Yes, but with minor edits (meaning unchanged)",
+  "No, it needs major edits",
+  "No",
+];
+
+// Store only the four agreed groups plus Others, rather than individual roles.
+const ANNOTATOR_GROUPS = [
+  { value: "clinical", label: "Clinical professional (e.g. nurses, doctors, allied health)" },
+  { value: "care", label: "Professional care/support worker (e.g. paid caregivers, care assistants)" },
+  { value: "family", label: "Family/unpaid caregiver (e.g. family members, friends)" },
+  { value: "student", label: "Healthcare student (e.g. nursing, medical students)" },
+  { value: "other", label: "Others" },
+];
+const DEMENTIA_EXPERIENCE = [
+  { value: "none", label: "None" },
+  { value: "less_one_year", label: "Less than 1 year" },
+  { value: "one_to_three_years", label: "1–3 years" },
+  { value: "more_three_years", label: "More than 3 years" },
+];
+
+function normalizeAnnotatorProfile(profile) {
+  const source = profile || {};
+  const group = ANNOTATOR_GROUPS.some((g) => g.value === source.group) ? source.group : null;
+  const experience = DEMENTIA_EXPERIENCE.some((e) => e.value === source.experience) ? source.experience : null;
+  return {
+    group,
+    experience,
+    other: group === "other" ? String(source.other || "").trim() || null : null,
+  };
+}
+
+function profileColumns(profile) {
+  const p = normalizeAnnotatorProfile(profile);
+  // Old queued rows can still be sent without a profile. New sessions require
+  // both answers on the welcome screen before rating begins.
+  if (!p.group || !p.experience || (p.group === "other" && !p.other)) {
+    return { annotator_group: null, annotator_other: null, dementia_care_experience: null };
+  }
+  return {
+    annotator_group: p.group,
+    annotator_other: p.other,
+    dementia_care_experience: p.experience,
+  };
+}
+
+const SCOPE_TAG = { q: "Question", a: "Answer", qa: "Q&A" };
+
+/* ===========================================================================
+   Deterministic helpers.
+   =========================================================================== */
+
+// FNV-1a, used for stable local session ids.
+function hashStr(s) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h >>> 0;
+}
+
+const slug = (s) => (s || "anonymous").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "anonymous";
+const qaIndex = (p) => {
+  const match = String(p.uid || "").match(/_q(\d+)$/);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+};
+// Plain codepoint comparison, NOT localeCompare: collation is locale-dependent,
+// so the same two strings can order differently in two browsers. Every
+// annotator must be handed the same ordered set, so the comparator has to be
+// identical everywhere.
+const cmp = (x, y) => (x < y ? -1 : x > y ? 1 : 0);
+const pairSort = (a, b) =>
+  qaIndex(a) - qaIndex(b)
+  || a.video - b.video
+  || cmp(a.dataset, b.dataset)
+  || cmp(a.approach, b.approach)
+  || cmp(a.uid, b.uid);
+
+/* ===========================================================================
+   State
+   =========================================================================== */
+
+let DATA = [];            // every Q&A from qa_data.json
+let VIDEOS = {};          // { dataset: { video: { url, language } } } from the dataset CSVs
+let S = null;             // the live session (see makeSession)
+let activeMetric = 0;     // index into S.metrics, for keyboard rating
+let shownAt = 0;          // timestamp the current pair appeared
+let syncState = "off";    // off | ok | pending | err
+
+const app = document.getElementById("app");
+const params = new URLSearchParams(location.search);
+const backendOn = Boolean(SUPABASE_ORIGIN && CFG.SUPABASE_ANON_KEY);
+
+/* ===========================================================================
+   Session construction
+   =========================================================================== */
+
+// Study settings come only from the deployed configuration, never from saved
+// annotator preferences. Keep the legacy option shape for session-key compatibility.
+function fixedStudyOptions() {
+  return {
+    mode: "auto",
+    datasets: [...new Set(DATA.map((p) => p.dataset))].sort(),
+    approaches: [...new Set(DATA.map((p) => p.approach))].sort(),
+    videos: null,
+    metrics: METRICS.map((m) => m.key),
+    blind: true,
+    batch: 0,
+    batches: 1,
+    anchorSize: 0,
+    sample: 0,
+    maxPairs: Math.max(0, Number(CFG.MAX_PAIRS) || 0),
+  };
+}
+
+// Every annotator receives the same ordered set and researcher-configured cap.
+function buildPairs() {
+  const pairs = DATA.slice().sort(pairSort);
+  const maxPairs = fixedStudyOptions().maxPairs;
+  return maxPairs > 0 ? pairs.slice(0, maxPairs) : pairs;
+}
+
+function makeSession(name) {
+  const opts = fixedStudyOptions();
+  const pairs = buildPairs();
+  const configId = hashStr(JSON.stringify({
+    study: CFG.STUDY_VERSION || "v4",
+    m: opts.mode, d: opts.datasets, a: opts.approaches, v: opts.videos,
+    mt: opts.metrics, sm: opts.sample, mx: opts.maxPairs, order: "same-ordered-v2",
+    rubric: "v4-optional-issues-other-dictation",
+  })).toString(36);
+
+  return {
+    version: 7,
+    annotator: name,
+    annotatorProfile: null,
+    storeKey: "dqa:" + slug(CFG.STUDY_VERSION || "v4") + ":" + slug(name) + ":" + configId,
+    sessionId: slug(name) + "-" + configId,
+    opts: opts,
+    metrics: opts.metrics,
+    uids: pairs.map((p) => p.uid),
+    index: 0,
+    scores: {},        // uid -> { metricKey: { optional attribute, errors, binary } }
+    recommendations: {}, // uid -> caregiver recommendation label
+    comments: {},      // uid -> optional evaluator note
+    seconds: {},       // uid -> seconds spent
+    queue: [],         // rows waiting to reach Supabase
+    startedAt: new Date().toISOString(),
+  };
+}
+
+function save() {
+  if (!S) return;
+  try {
+    localStorage.setItem(S.storeKey, JSON.stringify(S));
+  } catch (e) {
+    console.warn("localStorage write failed", e);
+  }
+}
+
+function restore(storeKey) {
+  try {
+    const raw = localStorage.getItem(storeKey);
+    if (!raw) return null;
+    const obj = JSON.parse(raw);
+    if (!obj || obj.version !== 7) return null;
+    obj.scores = obj.scores || {};
+    obj.recommendations = obj.recommendations || {};
+    obj.comments = obj.comments || {};
+    obj.seconds = obj.seconds || {};
+    obj.queue = obj.queue || [];
+    // Do not silently trim an older assignment or alter its saved ratings.
+    // The welcome screen checks compatibility before allowing a resume.
+    return obj;
+  } catch (e) {
+    return null;
+  }
+}
+
+function matchesAssignment(saved, expected) {
+  return Array.isArray(saved.uids) && Array.isArray(saved.metrics) &&
+    JSON.stringify(saved.uids) === JSON.stringify(expected.uids) &&
+    JSON.stringify(saved.metrics) === JSON.stringify(expected.metrics);
+}
+
+const pairOf = (uid) => DATA.find((p) => p.uid === uid);
+
+/**
+ * Link to the source video on YouTube, or null if the dataset CSV had no URL.
+ */
+function videoLink(p, withTimestamp) {
+  const v = (VIDEOS[p.dataset] || {})[String(p.video)];
+  if (!v || !v.url) return null;
+  if (!withTimestamp || typeof p.t !== "number") return v.url;
+  const url = new URL(v.url);
+  url.searchParams.set("t", Math.max(0, Math.round(p.t)) + "s");
+  return url.toString();
+}
+
+function videoLinkFor(dataset, video) {
+  const v = (VIDEOS[dataset] || {})[String(video)];
+  return v && v.url ? v.url : null;
+}
+
+function youtubeId(url) {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.replace(/^www\./, "");
+    if (host === "youtu.be") return u.pathname.split("/").filter(Boolean)[0] || null;
+    if (host.endsWith("youtube.com")) {
+      if (u.searchParams.get("v")) return u.searchParams.get("v");
+      const parts = u.pathname.split("/").filter(Boolean);
+      if (["embed", "shorts", "live"].includes(parts[0])) return parts[1] || null;
+    }
+  } catch (e) {
+    return null;
+  }
+  return null;
+}
+
+function videoTimeLabel(seconds) {
+  const total = Math.max(0, Math.round(seconds));
+  const hours = Math.floor(total / 3600);
+  const minutes = Math.floor((total % 3600) / 60);
+  const secs = String(total % 60).padStart(2, "0");
+  return hours ? `${hours}:${String(minutes).padStart(2, "0")}:${secs}` : `${minutes}:${secs}`;
+}
+
+function sourceVideo(p) {
+  const v = (VIDEOS[p.dataset] || {})[String(p.video)];
+  if (!v || !v.url) return null;
+  const id = youtubeId(v.url);
+  if (!id) return { url: v.url, embed: null, hasClip: false };
+  const hasClip = Number.isFinite(p.t);
+  // "aligned" clips were recovered by matching the Q&A back to the transcript
+  // (eval/align_timestamps.py) because the generator wrote no usable range —
+  // they are approximate, and the caption below the player says so.
+  const approx = hasClip && (p.ts === "aligned" || p.ts === "aligned-low");
+  // A weak alignment gets a start but no end: seeking near the likely segment
+  // helps, while cutting the clip off at a guessed boundary would hide the real
+  // source from someone who has to judge whether the Q&A matches the video.
+  const weak = p.ts === "aligned-low";
+  const start = hasClip ? Math.max(0, Math.round(p.t)) : 0;
+  const end = hasClip && !weak && Number.isFinite(p.te) && Math.round(p.te) > start ? Math.round(p.te) : null;
+  const params = new URLSearchParams({ rel: "0", controls: "1", playsinline: "1", start: String(start) });
+  if (/^https?:$/.test(location.protocol)) params.set("origin", location.origin);
+  if (end) params.set("end", String(end));
+  return {
+    url: videoLink(p, true),
+    embed: `https://www.youtube.com/embed/${id}?${params.toString()}`,
+    hasClip,
+    approx,
+    weak,
+    timeLabel: hasClip ? (end === null ? `${videoTimeLabel(start)} onward` : `${videoTimeLabel(start)}–${videoTimeLabel(end)}`) : null,
+  };
+}
+
+function escapeAttr(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function completeBinary(value) {
+  return BINARY.includes(value);
+}
+
+function binaryOptions(metric) {
+  return metric && Array.isArray(metric.binaryOptions) ? metric.binaryOptions : BINARY;
+}
+
+function errorTrigger(metric) {
+  return metric && metric.errorTrigger ? metric.errorTrigger : "No";
+}
+
+function clearChoice(metric) {
+  return errorTrigger(metric) === "Yes" ? "No" : "Yes";
+}
+
+function needsErrorSelection(value, metric) {
+  return binaryValue(value) === errorTrigger(metric);
+}
+
+function binaryValue(value) {
+  if (!value || typeof value !== "object") return null;
+  if (completeBinary(value.binary)) return value.binary;
+  if (value.severity === NO_PROBLEM) return "Yes";
+  if (LEGACY_PROBLEM_VALUES.includes(value.severity)) return "No";
+  return null;
+}
+
+function completeRecommendation(value) {
+  return RECOMMENDATION.includes(value);
+}
+
+function selectedErrors(value) {
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (typeof value === "string" && value && value !== NO_PROBLEM) {
+    return value.split(";").map((v) => v.trim()).filter(Boolean);
+  }
+  return [];
+}
+
+// Splits a stored "Other: <text>" entry back into the "Other" choice and its
+// text, so a session restored from the server shows what the annotator typed.
+function splitOther(state, metric) {
+  if (!metric || !metric.otherOption || !Array.isArray(state.errors)) return;
+  const prefix = metric.otherOption + ":";
+  const i = state.errors.findIndex((e) => e.startsWith(prefix));
+  if (i !== -1) {
+    if (!state.otherText) state.otherText = state.errors[i].slice(prefix.length).trim();
+    state.errors[i] = metric.otherOption;
+  }
+}
+
+function otherIncomplete(value, metric) {
+  return Boolean(metric && metric.otherOption) &&
+    selectedErrors(value.errors || value.error).includes(metric.otherOption) &&
+    !(value.otherText || "").trim();
+}
+
+function metricState(uid, key) {
+  const row = S.scores[uid] || (S.scores[uid] = {});
+  if (!row[key] || typeof row[key] !== "object") row[key] = {};
+  if (typeof row[key].error === "string" && !Array.isArray(row[key].errors)) {
+    row[key].errors = selectedErrors(row[key].error);
+  }
+  splitOther(row[key], METRICS.find((m) => m.key === key));
+  if (!row[key].binary && row[key].severity) {
+    row[key].binary = row[key].severity === NO_PROBLEM ? "Yes" : "No";
+  }
+  return row[key];
+}
+
+function completeMetric(value, metric) {
+  if (!value) return false;
+  if (hasAttributeScale(metric) && (typeof value.attribute !== "string" || !value.attribute.length)) return false;
+  if (metric && metric.optionalIssues) return !otherIncomplete(value, metric);
+  const binary = binaryValue(value);
+  if (!completeBinary(binary)) return false;
+  if (binary !== errorTrigger(metric)) return true;
+  return selectedErrors(value.errors || value.error).length > 0 && !otherIncomplete(value, metric);
+}
+
+function hasAttributeScale(metric) {
+  return Boolean(metric && Array.isArray(metric.attribute) && metric.attribute.length > 0);
+}
+
+function dbPrefix(metric) {
+  return metric && metric.dbPrefix ? metric.dbPrefix : metric.key;
+}
+
+function errorText(value, metric) {
+  if (!value) return "";
+  if (!metric.optionalIssues && !needsErrorSelection(value, metric)) return metric.noIssueError;
+  return selectedErrors(value.errors || value.error).map((e) =>
+    metric.otherOption && e === metric.otherOption
+      // ";" separates issues in the stored text, so it cannot appear inside one.
+      ? metric.otherOption + ": " + (value.otherText || "").trim().replace(/\s*;\s*/g, ", ").replace(/\s+/g, " ")
+      : e
+  ).join("; ");
+}
+
+const isRated = (uid) => {
+  const sc = S.scores[uid];
+  return Boolean(sc) &&
+    S.metrics.every((k) => {
+      const metric = METRICS.find((m) => m.key === k);
+      return completeMetric(sc[k], metric);
+    }) &&
+    completeRecommendation(S.recommendations && S.recommendations[uid]);
+};
+const ratedCount = () => S.uids.filter(isRated).length;
+
+/* ===========================================================================
+   Supabase sync — fire and forget, with a persisted retry queue.
+   The page never reads from the database; resume comes from localStorage.
+   =========================================================================== */
+
+function enqueue(uid) {
+  const p = pairOf(uid);
+  const sc = S.scores[uid] || {};
+  const row = {
+    study_version: CFG.STUDY_VERSION || "v4",
+    session_id: S.sessionId,
+    annotator: S.annotator,
+    ...profileColumns(S.annotatorProfile),
+    qa_uid: uid,
+    dataset: p.dataset,
+    video: p.video,
+    approach: p.approach,
+    question_text: p.question,
+    answer_text: p.answer,
+    source_start_sec: typeof p.t === "number" ? p.t : null,
+    source_end_sec: typeof p.te === "number" ? p.te : null,
+    batch: "same-ordered-set",
+    blind: S.opts.blind,
+    seconds_spent: S.seconds[uid] || null,
+    client_time: new Date().toISOString(),
+  };
+  for (const m of METRICS) {
+    const ms = sc[m.key] || {};
+    const prefix = dbPrefix(m);
+    if (hasAttributeScale(m)) row[prefix + "_attribute"] = completeMetric(ms, m) ? ms.attribute : null;
+    row[prefix + "_issue"] = completeMetric(ms, m) ? errorText(ms, m) : null;
+    row[prefix + "_binary"] = completeMetric(ms, m) ? ms.binary : null;
+  }
+  row.caregiver_recommendation = completeRecommendation(S.recommendations[uid])
+    ? S.recommendations[uid]
+    : null;
+  const evaluatorComment = S.comments && S.comments[uid] ? S.comments[uid].trim() : "";
+  if (evaluatorComment) row.evaluator_comment = evaluatorComment;
+
+  // One row per pair in the queue; a re-rated pair replaces its pending row.
+  S.queue = S.queue.filter((r) => r.qa_uid !== uid);
+  S.queue.push(row);
+  save();
+  flush();
+}
+
+function normalizeSupabaseRow(row) {
+  const p = pairOf(row.qa_uid) || {};
+  const out = {
+    study_version: row.study_version || CFG.STUDY_VERSION || "v4",
+    session_id: row.session_id,
+    annotator: row.annotator,
+    annotator_group: row.annotator_group ?? null,
+    annotator_other: row.annotator_other ?? null,
+    dementia_care_experience: row.dementia_care_experience ?? null,
+    qa_uid: row.qa_uid,
+    dataset: row.dataset,
+    video: row.video,
+    approach: row.approach,
+    question_text: row.question_text || p.question || "",
+    answer_text: row.answer_text || p.answer || "",
+    source_start_sec: row.source_start_sec ?? (typeof p.t === "number" ? p.t : null),
+    source_end_sec: row.source_end_sec ?? (typeof p.te === "number" ? p.te : null),
+    batch: row.batch || null,
+    blind: row.blind !== undefined ? row.blind : true,
+    caregiver_recommendation: row.caregiver_recommendation || null,
+    evaluator_comment: row.evaluator_comment || null,
+    seconds_spent: row.seconds_spent || null,
+    client_time: row.client_time || new Date().toISOString(),
+  };
+
+  for (const metric of METRICS) {
+    const prefix = dbPrefix(metric);
+    if (hasAttributeScale(metric)) {
+      out[prefix + "_attribute"] = row[prefix + "_attribute"] ?? row[metric.key + "_attribute"] ?? null;
+    }
+    out[prefix + "_issue"] = row[prefix + "_issue"] ?? row[metric.key + "_error"] ?? null;
+    out[prefix + "_binary"] = row[prefix + "_binary"] ?? row[metric.key + "_binary"] ?? null;
+  }
+
+  return out;
+}
+
+let flushing = false;
+async function flush() {
+  if (!backendOn || flushing || !S || S.queue.length === 0) {
+    setSync(backendOn ? (S && S.queue.length ? "pending" : "ok") : "off");
+    return;
+  }
+  flushing = true;
+  setSync("pending");
+  const batch = S.queue.slice(0, 25).map(normalizeSupabaseRow);
+  try {
+    const resp = await fetch(SUPABASE_ORIGIN + "/rest/v1/" + encodeURIComponent(RATINGS_TABLE), {
+      method: "POST",
+      headers: {
+        "apikey": CFG.SUPABASE_ANON_KEY,
+        "Authorization": "Bearer " + CFG.SUPABASE_ANON_KEY,
+        "Content-Type": "application/json",
+        // return=minimal matters: asking for the inserted rows back would need
+        // SELECT permission, which the insert-only policy deliberately denies.
+        "Prefer": "return=minimal",
+      },
+      body: JSON.stringify(batch),
+    });
+    if (!resp.ok) throw new Error("HTTP " + resp.status + " " + (await resp.text()).slice(0, 200));
+    S.queue = S.queue.slice(batch.length);
+    save();
+    setSync(S.queue.length ? "pending" : "ok");
+    flushing = false;
+    if (S.queue.length) flush();
+  } catch (e) {
+    console.warn("sync failed, will retry", e);
+    setSync("err");
+    flushing = false;
+  }
+}
+
+function setSync(state) {
+  syncState = state;
+  const el = document.getElementById("sync");
+  if (!el) return;
+  const pending = S ? S.queue.length : 0;
+  const map = {
+    ok:      ["ok",      "All ratings saved"],
+    pending: ["pending", pending + " waiting to save"],
+    err:     ["err",     "Offline — " + pending + " saved locally, will retry"],
+    off:     ["off",     "Local only — export at the end"],
+  };
+  const [cls, text] = map[state] || map.off;
+  el.innerHTML = '<span class="dot ' + cls + '"></span>' + text;
+}
+
+// Retry whenever the network comes back or the tab is refocused.
+window.addEventListener("online", flush);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) flush(); });
+window.addEventListener("beforeunload", (e) => {
+  if (S && S.queue.length && backendOn) { e.preventDefault(); e.returnValue = ""; }
+});
+
+/* ===========================================================================
+   Export
+   =========================================================================== */
+
+// Human-readable export columns; binary-only metrics intentionally omit Attribute.
+function metricCsvCols() {
+  return METRICS.flatMap((m) => [
+    ...(hasAttributeScale(m) ? [m.label + " Attribute"] : []),
+    m.label + " Error Type",
+    m.label + " Yes/No",
+  ]);
+}
+
+const CSV_COLS = ["Dataset", "Video Index", "Approach", "QA ID", "Question", "Answer"]
+  .concat(metricCsvCols())
+  .concat(["Caregiver Recommendation", "Evaluator Comment", "Annotator", "Session ID", "Assignment", "Seconds",
+    "Annotator Group", "Annotator Other", "Dementia-care Experience"]);
+
+function csvCell(v) {
+  const s = v === null || v === undefined ? "" : String(v);
+  return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+function buildCsv() {
+  const lines = [CSV_COLS.join(",")];
+  for (const uid of S.uids) {
+    const p = pairOf(uid);
+    const sc = S.scores[uid] || {};
+    const row = [p.dataset, p.video, p.approach, uid, p.question, p.answer];
+    for (const m of METRICS) {
+      const ms = sc[m.key] || {};
+      if (hasAttributeScale(m)) row.push(ms.attribute || "");
+      row.push(errorText(ms, m), binaryValue(ms) || "");
+    }
+    const recommendation = S.recommendations[uid];
+    const comment = S.comments && S.comments[uid] ? S.comments[uid].trim() : "";
+    row.push(completeRecommendation(recommendation) ? recommendation : "",
+      comment,
+      S.annotator, S.sessionId,
+      "same-ordered-set",
+      S.seconds[uid] || "",
+      ...Object.values(profileColumns(S.annotatorProfile)));
+    lines.push(row.map(csvCell).join(","));
+  }
+  return lines.join("\r\n");
+}
+
+function download(filename, text, mime) {
+  const blob = new Blob(["﻿" + text], { type: (mime || "text/plain") + ";charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+function stamp() {
+  const d = new Date(), p = (n) => String(n).padStart(2, "0");
+  return d.getFullYear() + p(d.getMonth() + 1) + p(d.getDate()) + "_" + p(d.getHours()) + p(d.getMinutes()) + p(d.getSeconds());
+}
+
+const exportCsv = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() + ".csv", buildCsv(), "text/csv");
+const exportJson = () => download("qa_eval_" + slug(S.annotator) + "_" + stamp() + ".json",
+  JSON.stringify({ annotator: S.annotator, annotator_profile: normalizeAnnotatorProfile(S.annotatorProfile),
+                   session_id: S.sessionId, opts: S.opts,
+                   metrics: S.metrics, scores: S.scores,
+                   recommendations: S.recommendations, comments: S.comments,
+                   seconds: S.seconds }, null, 1), "application/json");
+
+/* ===========================================================================
+   Screen: welcome
+   =========================================================================== */
+
+// Retain the storage key so returning annotators keep their name. Old saved
+// selection preferences are ignored; the assignment is fixed by the study.
+const LAST_OPTS_KEY = "dqa:lastopts:" + (CFG.STUDY_VERSION || "v4");
+function loadLastOpts() {
+  try { return JSON.parse(localStorage.getItem(LAST_OPTS_KEY) || "null"); }
+  catch (e) { return null; }
+}
+function saveLastOpts(opts, name) {
+  try { localStorage.setItem(LAST_OPTS_KEY, JSON.stringify({ ...opts, name: name })); }
+  catch (e) { /* private browsing — not worth interrupting the annotator */ }
+}
+
+function renderWelcome() {
+  const pairCount = buildPairs().length;
+  const last = loadLastOpts();
+  const prefillName = params.get("a") || params.get("annotator") || (last && last.name) || "";
+  app.innerHTML = `
+    ${backendOn ? "" : '<div class="banner banner-warn"><b>Local-only mode.</b> No results server is configured, so ratings stay in this browser and must be exported with the download button at the end. Set SUPABASE_URL and SUPABASE_ANON_KEY in <code>config.js</code> to collect them centrally.</div>'}
+
+    <div class="card">
+      <h2>What you will be doing</h2>
+      <p>You will read short Q&As about dementia care that were written automatically by different AI systems, and evaluate each one on ${METRICS.length} criteria.</p>
+      <ul>
+        <li><b>Think like a caregiver.</b> Rate each Q&A as if you were deciding whether it would help you understand or care for someone living with dementia.</li>
+        <li><b>Judge only what is in front of you.</b> The source video starts collapsed on purpose — open it if you need it to check whether a Q&A is trustworthy, but the rating should reflect the question and answer as written. For <b>Q&A Standalone</b> in particular, judge as if you had never seen the video.</li>
+        <li>The system that produced each Q&A is hidden, so your rating is not influenced by which one it came from.</li>
+        <li>Your progress saves automatically after every Q&A — <b>you can close the tab and come back to this same link later.</b></li>
+      </ul>
+      <p class="muted">Everyone receives the same <b>${pairCount} Q&As</b> in the same order and rates all ${METRICS.length} criteria. There is no need to finish in one sitting.</p>
+
+      <h3>Your name</h3>
+      <p class="muted">Used to label your ratings and resume your progress. Type it the same way each time so you return to the right place.</p>
+      <input type="text" id="name" placeholder="e.g. Jane Doe" value="${escapeAttr(prefillName)}" autocomplete="name" />
+      <div id="resume-note" class="muted" style="margin-top:8px;"></div>
+
+      <div class="annotator-profile">
+        <div class="profile-field">
+          <label class="field" for="annotator-group">Your role</label>
+          <p class="muted" id="role-hint">Choose the option that fits you best.</p>
+          <select id="annotator-group" aria-describedby="role-hint" required>
+            <option value="">Select your role</option>
+            ${ANNOTATOR_GROUPS.map((g) => `<option value="${g.value}">${escapeAttr(g.label)}</option>`).join("")}
+          </select>
+        </div>
+        <div class="profile-field" id="annotator-other-field" hidden>
+          <label class="field" for="annotator-other">Please specify your role</label>
+          <input type="text" id="annotator-other" placeholder="A few words is enough" maxlength="200" />
+        </div>
+        <div class="profile-field">
+          <label class="field" for="dementia-experience">Dementia-care experience</label>
+          <p class="muted" id="experience-hint">Include work, placements or caregiving.</p>
+          <select id="dementia-experience" aria-describedby="experience-hint" required>
+            <option value="">Select your experience</option>
+            ${DEMENTIA_EXPERIENCE.map((e) => `<option value="${e.value}">${escapeAttr(e.label)}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+
+      <div class="navbtns">
+        <button class="btn-primary" id="start">Start rating</button>
+        <span class="err" id="start-err" role="alert"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>The rating flow</h2>
+      <p class="muted">Trustworthiness, Clarity and Usefulness are rated on a quality scale, followed by an optional list of problems. Standalone and Care Safety are Yes/No questions; when the answer lands on the failing side, select the problems that apply. The problem lists for Standalone, Trustworthiness, Clarity and Usefulness end with <b>Other</b>, which opens a box to describe a problem the list does not cover.</p>
+      <table>
+        <tr><th>Part</th><th>What you choose</th></tr>
+        <tr><td><b>Quality label</b></td><td>Trustworthiness, Clarity and Usefulness: a plain-language rating of the Q&A.</td></tr>
+        <tr><td><b>What's wrong? (optional)</b></td><td>Shown under the quality label. Select any problems you notice, or leave it blank.</td></tr>
+        <tr><td><b>Yes/No question</b></td><td>Standalone and Care Safety: a simple check for whether the Q&A meets that criterion.</td></tr>
+        <tr><td><b>Problem types</b></td><td>Standalone and Care Safety: shown only after the failing answer. Select one or more problems.</td></tr>
+        <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the Q&A to a caregiver.</td></tr>
+      </table>
+    </div>`;
+
+  const nameEl = document.getElementById("name");
+  const groupEl = document.getElementById("annotator-group");
+  const otherEl = document.getElementById("annotator-other");
+  const experienceEl = document.getElementById("dementia-experience");
+  const err = document.getElementById("start-err");
+  let profileStoreKey = null;
+  let profileRestored = false;
+  const updateOther = () => {
+    const other = groupEl.value === "other";
+    document.getElementById("annotator-other-field").hidden = !other;
+    otherEl.required = other;
+  };
+  const fillProfile = (profile) => {
+    const p = normalizeAnnotatorProfile(profile);
+    groupEl.value = p.group || "";
+    otherEl.value = p.other || "";
+    experienceEl.value = p.experience || "";
+    updateOther();
+  };
+  groupEl.addEventListener("change", () => { updateOther(); err.textContent = ""; });
+  experienceEl.addEventListener("change", () => { err.textContent = ""; });
+  otherEl.addEventListener("input", () => { err.textContent = ""; });
+
+  // Tell a returning annotator that their progress is still here.
+  const checkResume = () => {
+    const note = document.getElementById("resume-note");
+    if (!nameEl.value.trim()) { note.textContent = ""; return; }
+    const probe = makeSession(nameEl.value.trim());
+    const prev = restore(probe.storeKey);
+    if (profileStoreKey !== probe.storeKey) {
+      // Restore the profile only when the name identifies a saved session.
+      // Keep a new annotator's choices while they finish typing their name.
+      if (prev) fillProfile(prev.annotatorProfile);
+      else if (profileRestored) fillProfile(null);
+      profileStoreKey = probe.storeKey;
+      profileRestored = Boolean(prev);
+    }
+    if (prev && !matchesAssignment(prev, probe)) {
+      note.textContent = "Your saved session has a different assignment. Your progress is still saved; please contact the research team before continuing.";
+    } else if (prev) {
+      const done = prev.uids.filter((u) => {
+        const sc = prev.scores[u];
+        return sc && prev.metrics.every((k) => {
+          const metric = METRICS.find((m) => m.key === k);
+          return completeMetric(sc[k], metric);
+        }) &&
+          completeRecommendation(prev.recommendations && prev.recommendations[u]);
+      }).length;
+      note.innerHTML = `<span style="color:#155724;">Welcome back — ${done} of ${prev.uids.length} pairs already rated. You will continue where you stopped.</span>`;
+    } else {
+      note.innerHTML = `<span class="muted">New session: ${probe.uids.length} pairs (same ordered set).</span>`;
+    }
+  };
+  nameEl.addEventListener("input", () => { err.textContent = ""; checkResume(); });
+  checkResume();
+
+  document.getElementById("start").addEventListener("click", () => {
+    const name = nameEl.value.trim();
+    if (!name) { err.textContent = "Please enter your name first."; nameEl.focus(); return; }
+    const profile = normalizeAnnotatorProfile({
+      group: groupEl.value, other: otherEl.value, experience: experienceEl.value,
+    });
+    if (!profile.group) { err.textContent = "Please choose your role."; groupEl.focus(); return; }
+    if (profile.group === "other" && !profile.other) {
+      err.textContent = "Please briefly describe your role."; otherEl.focus(); return;
+    }
+    if (profile.other && profile.other.length > 200) {
+      err.textContent = "Please keep your role description to 200 characters."; otherEl.focus(); return;
+    }
+    if (!profile.experience) { err.textContent = "Please choose your dementia-care experience."; experienceEl.focus(); return; }
+    const fresh = makeSession(name);
+    if (!fresh.uids.length) { err.textContent = "No Q&As are available. Please contact the research team."; return; }
+    const prev = restore(fresh.storeKey);
+    if (prev && !matchesAssignment(prev, fresh)) {
+      err.textContent = "Your saved assignment differs from this study. Please contact the research team; your saved progress has not been changed.";
+      return;
+    }
+    saveLastOpts(fresh.opts, name);
+    S = prev || fresh;
+    S.opts = fresh.opts; // Always keep model names hidden, including on resume.
+    S.annotatorProfile = profile;
+    // Add the selected profile to existing pending ratings without dropping
+    // or resubmitting any rating that has already reached the server.
+    S.queue = S.queue.map((row) => ({ ...row, ...profileColumns(profile) }));
+    // Resume at the first pair that still has an unrated metric.
+    const next = S.uids.findIndex((u) => !isRated(u));
+    S.index = next === -1 ? S.uids.length : next;
+    save();
+    flush();
+    renderRate();
+  });
+
+  nameEl.addEventListener("keydown", (e) => { if (e.key === "Enter") document.getElementById("start").click(); });
+}
+
+/* ===========================================================================
+   Screen: rating
+   =========================================================================== */
+
+function optionButtons(key, field, options, selected) {
+  return options.map((label) =>
+    `<button type="button" data-key="${key}" data-field="${field}" data-value="${escapeAttr(label)}" class="${selected === label ? "sel" : ""}"><span class="num">${label}</span></button>`
+  ).join("");
+}
+
+function errorButtons(key, options, selected) {
+  const selectedSet = new Set(selectedErrors(selected));
+  return options.map((label) =>
+    `<button type="button" data-key="${key}" data-error="${escapeAttr(label)}" class="${selectedSet.has(label) ? "sel" : ""}"><span class="num">${label}</span></button>`
+  ).join("");
+}
+
+
+// Drops the collapsible source-video panel into the metric list, after the
+// metrics that must be answered without it (see METRICS_BEFORE_VIDEO). If those
+// are absent from the supplied cards, the panel simply comes first.
+function insertVideoPanel(cards, metrics, source) {
+  if (!source) return cards.join("");
+  const firstAfter = metrics.findIndex((m) => !METRICS_BEFORE_VIDEO.includes(m.key));
+  const cut = firstAfter === -1 ? cards.length : firstAfter;
+  const panel = `
+    <div class="card">
+      <details class="source-video">
+        <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}${source.timeLabel ? ` — ${source.approx ? "approx. " : ""}${source.timeLabel}` : ""}</summary>
+        ${source.timeLabel ? `<p class="muted">${source.approx ? "Suggested time" : "Recorded source time"}: <strong>${source.timeLabel}</strong></p>` : ""}
+        <p><a class="vidlink-inline" href="${escapeAttr(source.url)}" target="_blank" rel="noopener noreferrer">${source.hasClip ? "Open on YouTube at this timestamp (no end limit)" : "Open source video on YouTube"}</a></p>
+        ${source.embed ? `<iframe class="video-frame" src="${escapeAttr(source.embed)}" title="Source video" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : ""}
+        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${!source.hasClip ? "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown." : source.weak ? "Low-confidence transcript match: the video starts near the closest match and plays on without a fixed end. Scrub if the relevant part is not here." : source.approx ? "This clip is an approximate match to the Q&A source segment, found by aligning the Q&A to the transcript. Scrub a little either way if the relevant part is not in view." : "This clip starts at the Q&A source segment recorded when the Q&A was generated."}</p>
+      </details>
+      <p class="muted" style="margin:8px 0 0 0; font-size:12px;">Open the video for the criteria below, which ask whether the Q&A matches its source. ${cut > 0 ? "Answer the criteria above it first — they are about the Q&A text on its own." : ""}</p>
+    </div>`;
+  return cards.slice(0, cut).join("") + panel + cards.slice(cut).join("");
+}
+function renderRate() {
+  stopDictation();  // the boxes are about to be replaced
+  if (S.index >= S.uids.length) return renderDone();
+
+  const uid = S.uids[S.index];
+  const p = pairOf(uid);
+  const sc = S.scores[uid] || (S.scores[uid] = {});
+  const metrics = displayMetrics();
+  const done = ratedCount();
+  const source = sourceVideo(p);
+  shownAt = Date.now();
+
+  app.innerHTML = `
+    <div class="topbar">
+      <div class="topbar-row">
+        <div><b>Pair ${S.index + 1}</b> of ${S.uids.length} &nbsp;·&nbsp; <span class="muted">${done} fully rated</span></div>
+        <div class="sync" id="sync"></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" style="width:${(done / S.uids.length * 100).toFixed(1)}%"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="qa-meta">
+        <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>${S.opts.blind ? "hidden" : p.approach}</code></span>
+      </div>
+      <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
+      <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
+    </div>
+
+    <div id="metrics">
+      ${insertVideoPanel(metrics.map((m, i) => {
+        const ms = sc[m.key] && typeof sc[m.key] === "object" ? sc[m.key] : {};
+        return `
+        <div class="metric ${completeMetric(ms, m) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
+          <div class="metric-head">
+            <span class="metric-name">${i + 1}. ${m.label}</span>
+            <span class="tag ${m.scope}">${SCOPE_TAG[m.scope]}</span>
+          </div>
+          <div class="metric-def">${m.def}</div>
+          ${hasAttributeScale(m) ? `
+          <div class="rating-subhead">${m.attributeName}</div>
+          <div class="likert">
+            ${optionButtons(m.key, "attribute", m.attribute, ms.attribute)}
+          </div>` : ""}
+          ${m.optionalIssues ? "" : `
+          <div class="rating-subhead">${m.binaryQuestion}</div>
+          <div class="likert choice">
+            ${binaryOptions(m).map((label) => `<button type="button" data-key="${m.key}" data-choice="${escapeAttr(label)}" class="${binaryValue(ms) === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
+          </div>`}
+          <div class="error-panel" ${m.optionalIssues || needsErrorSelection(ms, m) ? "" : "hidden"}>
+            <div class="rating-subhead">${m.optionalIssues ? "What's wrong? (optional) Select all that apply." : (m.errorPrompt || "If No, what is wrong? Select all that apply.")}</div>
+            <div class="likert">
+              ${errorButtons(m.key, m.otherOption ? [...m.errors, m.otherOption] : m.errors, ms.errors || ms.error)}
+            </div>
+            ${m.otherOption ? `
+            <div class="other-box" ${selectedErrors(ms.errors || ms.error).includes(m.otherOption) ? "" : "hidden"}>
+              <label class="field" for="other-${m.key}">Describe what is wrong</label>
+              <textarea id="other-${m.key}" data-other-key="${m.key}" placeholder="Type the problem you see...">${escapeAttr(ms.otherText || "")}</textarea>
+            </div>` : ""}
+          </div>
+        </div>`;
+      }), metrics, source)}
+    </div>
+
+    <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation">
+      <div class="metric-head">
+        <span class="metric-name">${metrics.length + 1}. Would you confidently recommend this Q&A to a caregiver?</span>
+        <span class="tag qa">Overall</span>
+      </div>
+      <div class="metric-def">Use this as the final caregiver-facing judgment for the whole Q&A.</div>
+      <div class="likert">
+        ${RECOMMENDATION.map((label) => `<button type="button" data-recommend-v="${escapeAttr(label)}" class="${S.recommendations[uid] === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
+      </div>
+    </div>
+
+    <div class="card">
+      <label class="field" for="qa-comment"><strong>Optional comment</strong></label>
+      <p class="muted">Briefly explain why you rated this Q&A this way, or note anything the team should know.</p>
+      <textarea id="qa-comment" placeholder="Write your comments about this Q&A here..."></textarea>
+    </div>
+
+    <div class="card">
+      <div class="navbtns">
+        <button class="btn-ghost" id="prev" ${S.index === 0 ? "disabled" : ""}>← Previous</button>
+        <button class="btn-primary" id="next">Submit &amp; next →</button>
+        <span class="spacer"></span>
+        <button class="btn-ghost" id="options">Back to welcome</button>
+        <button class="btn-ghost" id="finish">Finish / export</button>
+      </div>
+      <div class="err" id="rate-err" style="margin-top:8px;"></div>
+      <p class="muted" style="margin-top:10px;">Keyboard: <kbd>Y</kbd> = Yes, <kbd>N</kbd> = No, <kbd>Enter</kbd> submits the pair.</p>
+    </div>`;
+
+  // textContent, not innerHTML — answers contain Markdown and raw punctuation
+  // that must render literally (formatting noise is part of what is rated).
+  document.getElementById("qtext").textContent = p.question;
+  document.getElementById("atext").textContent = p.answer;
+  document.getElementById("qa-comment").value = S.comments && S.comments[uid] ? S.comments[uid] : "";
+
+  app.querySelectorAll("[data-field]").forEach((b) => {
+    b.addEventListener("click", () => {
+      const mi = Number(b.closest(".metric").dataset.mi);
+      activeMetric = mi;
+      setMetricField(b.dataset.key, b.dataset.field, b.dataset.value);
+    });
+  });
+
+  app.querySelectorAll("[data-choice]").forEach((b) => {
+    b.addEventListener("click", () => {
+      const mi = Number(b.closest(".metric").dataset.mi);
+      activeMetric = mi;
+      setBinaryDecision(b.dataset.key, b.dataset.choice);
+      const metric = METRICS.find((m) => m.key === b.dataset.key);
+      const state = metricState(S.uids[S.index], b.dataset.key);
+      if (completeMetric(state, metric)) {
+        advanceMetric();
+      }
+    });
+  });
+
+  app.querySelectorAll("[data-error]").forEach((b) => {
+    b.addEventListener("click", () => {
+      const mi = Number(b.closest(".metric").dataset.mi);
+      activeMetric = mi;
+      toggleMetricError(b.dataset.key, b.dataset.error);
+    });
+  });
+
+  app.querySelectorAll("[data-other-key]").forEach((t) => {
+    t.addEventListener("input", () => setOtherText(t.dataset.otherKey, t.value));
+  });
+
+  app.querySelectorAll("[data-recommend-v]").forEach((b) => {
+    b.addEventListener("click", () => setRecommendation(b.dataset.recommendV));
+  });
+
+  document.getElementById("qa-comment").addEventListener("input", (e) => setComment(e.target.value));
+  attachMics(app);
+
+  document.getElementById("next").addEventListener("click", submitPair);
+  document.getElementById("prev").addEventListener("click", () => {
+    storeTime();
+    S.index = Math.max(0, S.index - 1);
+    save();
+    renderRate();
+  });
+  // Back to the selection screen. Progress for this configuration stays in
+  // localStorage, so returning with the same name and options resumes it.
+  document.getElementById("options").addEventListener("click", () => {
+    storeTime();
+    if (isRated(uid)) enqueue(uid);
+    save();
+    renderWelcome();
+  });
+
+  document.getElementById("finish").addEventListener("click", () => {
+    storeTime();
+    // Push edits made on this pair before leaving; a partially rated pair is
+    // deliberately not sent, it stays in localStorage until it is completed.
+    if (isRated(uid)) enqueue(uid);
+    save();
+    renderDone();
+  });
+
+  activeMetric = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
+  if (activeMetric === -1) activeMetric = metrics.length - 1;
+  paintActive();
+  setSync(syncState);
+  window.scrollTo({ top: 0 });
+}
+
+function paintActive() {
+  app.querySelectorAll(".metric").forEach((el) => {
+    const on = Number(el.dataset.mi) === activeMetric;
+    el.classList.toggle("active", on);
+  });
+}
+
+function setMetricField(key, field, value) {
+  const uid = S.uids[S.index];
+  const state = metricState(uid, key);
+  state[field] = value;
+  const metric = METRICS.find((m) => m.key === key);
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) {
+    block.classList.toggle("rated", completeMetric(state, metric));
+    block.querySelectorAll('[data-field="' + field + '"]').forEach((b) => {
+      b.classList.toggle("sel", b.dataset.value === String(value));
+    });
+  }
+  document.getElementById("rate-err").textContent = "";
+  save();
+}
+
+function setBinaryDecision(key, value) {
+  const uid = S.uids[S.index];
+  const state = metricState(uid, key);
+  state.binary = value;
+  delete state.severity;
+  const metric = METRICS.find((m) => m.key === key);
+  if (value === clearChoice(metric) && metric) {
+    state.errors = [];
+    delete state.otherText;
+    state.error = metric.noIssueError;
+  } else if (value === errorTrigger(metric) && state.error === (metric && metric.noIssueError)) {
+    state.errors = [];
+    delete state.error;
+  }
+
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) {
+    block.classList.toggle("rated", completeMetric(state, metric));
+    block.querySelectorAll("[data-choice]").forEach((b) => {
+      b.classList.toggle("sel", b.dataset.choice === value);
+    });
+    const errorPanel = block.querySelector(".error-panel");
+    if (errorPanel) errorPanel.hidden = value !== errorTrigger(metric);
+    block.querySelectorAll("[data-error]").forEach((b) => b.classList.toggle("sel", selectedErrors(state.errors || state.error).includes(b.dataset.error)));
+  }
+  document.getElementById("rate-err").textContent = "";
+  save();
+  if (value === errorTrigger(metric) && !completeMetric(state, metric)) {
+    document.getElementById("rate-err").textContent = metric && metric.errorTrigger === "Yes"
+      ? "If you choose Yes, select at least one risk type."
+      : "If you choose No, select at least one problem type.";
+  }
+}
+
+function toggleMetricError(key, label) {
+  const uid = S.uids[S.index];
+  const state = metricState(uid, key);
+  const errors = selectedErrors(state.errors || state.error);
+  const idx = errors.indexOf(label);
+  if (idx === -1) errors.push(label);
+  else errors.splice(idx, 1);
+  state.errors = errors;
+  delete state.error;
+  const metric = METRICS.find((m) => m.key === key);
+
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) {
+    block.classList.toggle("rated", completeMetric(state, metric));
+    block.querySelectorAll("[data-error]").forEach((b) => {
+      b.classList.toggle("sel", errors.includes(b.dataset.error));
+    });
+    const otherBox = block.querySelector(".other-box");
+    if (otherBox && metric && metric.otherOption) {
+      const on = errors.includes(metric.otherOption);
+      otherBox.hidden = !on;
+      if (!on && dictation && otherBox.contains(dictation.ta)) stopDictation();
+      if (on && label === metric.otherOption) otherBox.querySelector("textarea").focus();
+    }
+  }
+  document.getElementById("rate-err").textContent =
+    otherIncomplete(state, metric) ? "Describe the problem in the Other box." : "";
+  save();
+}
+
+/* ===========================================================================
+   Dictation (speech to text) for every text box
+   ===========================================================================
+   Uses the browser's built-in speech recognition (Chrome, Edge, Safari). In
+   browsers without it (Firefox) no mic button is shown. Spoken text is added
+   at the end of what is already in the box and goes through the box's normal
+   "input" handler, so it is saved exactly like typed text. */
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+const MIC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/></svg>';
+let dictation = null;  // { rec, ta, btn, status }
+
+function stopDictation() {
+  if (!dictation) return;
+  const d = dictation;
+  dictation = null;
+  try { d.rec.stop(); } catch (e) { /* already stopped */ }
+  d.btn.classList.remove("on");
+  d.btn.setAttribute("aria-pressed", "false");
+  d.btn.title = "Dictate with your microphone";
+  if (d.status.textContent === "Listening… speak now, click the mic again to stop.") d.status.textContent = "";
+}
+
+function startDictation(ta, btn, status) {
+  stopDictation();
+  const rec = new SpeechRec();
+  rec.lang = navigator.language || "en-US";
+  rec.continuous = true;
+  rec.interimResults = true;
+  // Text already in the box stays; dictated phrases are appended after it.
+  let base = ta.value;
+  const join = (a, b) => (a && b && !/\s$/.test(a) ? a + " " : a) + b;
+  rec.onresult = (ev) => {
+    let interim = "";
+    for (let i = ev.resultIndex; i < ev.results.length; i++) {
+      const text = ev.results[i][0].transcript.trim();
+      if (ev.results[i].isFinal) base = join(base, text);
+      else interim = join(interim, text);
+    }
+    ta.value = join(base, interim);
+    ta.dispatchEvent(new Event("input", { bubbles: true }));
+  };
+  rec.onerror = (ev) => {
+    status.textContent = ev.error === "not-allowed" || ev.error === "service-not-allowed"
+      ? "Microphone access was blocked. Allow it in the browser's address bar, or type instead."
+      : ev.error === "no-speech" ? "No speech heard. Click the mic and try again." : "Dictation stopped (" + ev.error + ").";
+  };
+  rec.onend = () => { if (dictation && dictation.rec === rec) stopDictation(); };
+  dictation = { rec, ta, btn, status };
+  btn.classList.add("on");
+  btn.setAttribute("aria-pressed", "true");
+  btn.title = "Stop dictation";
+  status.textContent = "Listening… speak now, click the mic again to stop.";
+  try { rec.start(); } catch (e) { stopDictation(); status.textContent = "Could not start dictation. Type instead."; }
+}
+
+// Wraps every textarea under root with a mic button. Safe to call after each render.
+function attachMics(root) {
+  if (!SpeechRec) return;
+  root.querySelectorAll("textarea").forEach((ta) => {
+    if (ta.closest(".dictate")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "dictate";
+    ta.parentNode.insertBefore(wrap, ta);
+    wrap.appendChild(ta);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "mic-btn";
+    btn.innerHTML = MIC_SVG;
+    btn.title = "Dictate with your microphone";
+    btn.setAttribute("aria-label", "Dictate into this box");
+    btn.setAttribute("aria-pressed", "false");
+    wrap.appendChild(btn);
+    const status = document.createElement("div");
+    status.className = "mic-status";
+    status.setAttribute("aria-live", "polite");
+    wrap.insertAdjacentElement("afterend", status);
+    btn.addEventListener("click", () => {
+      if (dictation && dictation.btn === btn) stopDictation();
+      else { status.textContent = ""; startDictation(ta, btn, status); }
+    });
+  });
+}
+
+function setOtherText(key, text) {
+  const uid = S.uids[S.index];
+  const state = metricState(uid, key);
+  state.otherText = text;
+  const metric = METRICS.find((m) => m.key === key);
+  const block = app.querySelector('.metric[data-key="' + key + '"]');
+  if (block) block.classList.toggle("rated", completeMetric(state, metric));
+  if (text.trim()) document.getElementById("rate-err").textContent = "";
+  save();
+}
+
+function setRecommendation(value) {
+  const uid = S.uids[S.index];
+  S.recommendations[uid] = value;
+  const block = document.getElementById("recommendation");
+  if (block) {
+    block.classList.toggle("rated", completeRecommendation(value));
+    block.querySelectorAll("[data-recommend-v]").forEach((b) => {
+      b.classList.toggle("sel", b.dataset.recommendV === value);
+    });
+  }
+  document.getElementById("rate-err").textContent = "";
+  save();
+}
+
+function setComment(value) {
+  const uid = S.uids[S.index];
+  if (!S.comments) S.comments = {};
+  S.comments[uid] = value;
+  save();
+}
+
+function advanceMetric() {
+  const uid = S.uids[S.index];
+  const sc = S.scores[uid] || {};
+  const metrics = displayMetrics();
+  const current = metrics[activeMetric];
+  if (current && !completeMetric(sc[current.key], current)) {
+    paintActive();
+    return;
+  }
+  if (activeMetric === metrics.length - 1) {
+    paintActive();
+    return;
+  }
+  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && !completeMetric(sc[m.key], m));
+  if (nextUnrated !== -1) {
+    activeMetric = nextUnrated;
+  } else {
+    const anyUnrated = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
+    if (anyUnrated !== -1) activeMetric = anyUnrated;
+    else {
+      paintActive();
+      return;
+    }
+  }
+  paintActive();
+}
+
+function storeTime() {
+  const uid = S.uids[S.index];
+  if (shownAt) S.seconds[uid] = (S.seconds[uid] || 0) + Math.round((Date.now() - shownAt) / 1000);
+  shownAt = Date.now();
+}
+
+function submitPair() {
+  const uid = S.uids[S.index];
+  const sc = S.scores[uid] || {};
+  const missing = displayMetrics().filter((m) => !completeMetric(sc[m.key], m));
+  if (missing.length) {
+    document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) =>
+      otherIncomplete(sc[m.key] || {}, m) ? m.label + " (describe the problem in the Other box)" : m.label).join(", ");
+    const first = displayMetrics().findIndex((m) => m.key === missing[0].key);
+    activeMetric = first;
+    paintActive();
+    const el = app.querySelector('.metric[data-mi="' + first + '"]');
+    if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+    return;
+  }
+  if (!completeRecommendation(S.recommendations && S.recommendations[uid])) {
+    document.getElementById("rate-err").textContent = "Still to rate: caregiver recommendation.";
+    const recommendation = document.getElementById("recommendation");
+    if (recommendation) recommendation.scrollIntoView({ block: "center", behavior: "smooth" });
+    return;
+  }
+  storeTime();
+  enqueue(uid);
+  S.index += 1;
+  save();
+  renderRate();
+}
+
+document.addEventListener("keydown", (e) => {
+  if (!S || S.index >= S.uids.length) return;
+  if (!document.getElementById("metrics")) return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "input" || tag === "textarea") return;
+
+  const metrics = displayMetrics();
+  const m = metrics[activeMetric];
+  if (!m) return;
+  if (m.optionalIssues && ["y", "n"].includes(e.key.toLowerCase())) return;
+
+  if (e.key.toLowerCase() === "y") {
+    setBinaryDecision(m.key, "Yes");
+    const state = metricState(S.uids[S.index], m.key);
+    if (completeMetric(state, m)) advanceMetric();
+    e.preventDefault();
+  } else if (e.key.toLowerCase() === "n") {
+    setBinaryDecision(m.key, "No");
+    const state = metricState(S.uids[S.index], m.key);
+    if (completeMetric(state, m)) advanceMetric();
+    e.preventDefault();
+  } else if (e.key === "Enter") {
+    submitPair();
+    e.preventDefault();
+  }
+});
+
+/* ===========================================================================
+   Screen: done
+   =========================================================================== */
+
+function renderDone() {
+  const done = ratedCount();
+  const complete = done === S.uids.length;
+
+  // Per-approach counts over what this annotator actually rated. Shown after the
+  // fact only — during rating the approach stays hidden.
+  const byApproach = {};
+  for (const uid of S.uids) {
+    if (!isRated(uid)) continue;
+    const p = pairOf(uid);
+    const b = byApproach[p.approach] || (byApproach[p.approach] = { n: 0 });
+    b.n += 1;
+  }
+
+  app.innerHTML = `
+    <div class="banner ${complete ? "banner-ok" : "banner-info"}">
+      ${complete
+        ? "<b>All done — thank you!</b> You rated every pair in your set."
+        : "<b>Progress saved.</b> You rated " + done + " of " + S.uids.length + " pairs. Return to this link with the same name to carry on."}
+    </div>
+
+    <div class="card">
+      <h2>Your session</h2>
+      <table>
+        <tr><td>Annotator</td><td><b>${S.annotator}</b></td></tr>
+        <tr><td>Session ID</td><td><code>${S.sessionId}</code></td></tr>
+        <tr><td>Assignment</td><td>same ordered set</td></tr>
+        <tr><td>Pairs fully rated</td><td class="num"><b>${done}</b> / ${S.uids.length}</td></tr>
+      </table>
+      <div class="sync" id="sync" style="margin-top:12px;"></div>
+      ${backendOn ? "" : '<p class="muted" style="margin-top:8px;">No results server is configured, so <b>you must download your ratings and send them to the research team</b>, otherwise they are only in this browser.</p>'}
+
+      <div class="navbtns">
+        <button class="btn-primary" id="dl-csv">Download CSV</button>
+        <button class="btn-ghost" id="dl-json">Download JSON</button>
+        ${done < S.uids.length ? '<button class="btn-ghost" id="resume">Continue rating</button>' : ""}
+        <span class="spacer"></span>
+        <button class="btn-ghost" id="restart">Start a different session</button>
+      </div>
+    </div>
+
+    ${Object.keys(byApproach).length ? `
+    <div class="card">
+      <h2>Rated pairs by system</h2>
+      <p class="muted">Shown now that rating is finished. Score mapping happens later during analysis.</p>
+      <div style="overflow-x:auto;">
+      <table>
+        <tr><th>System</th><th class="num">Rated pairs</th></tr>
+        ${Object.entries(byApproach).sort().map(([a, b]) =>
+          `<tr><td><b>${a}</b></td><td class="num">${b.n}</td></tr>`).join("")}
+      </table>
+      </div>
+    </div>` : ""}`;
+
+  document.getElementById("dl-csv").addEventListener("click", exportCsv);
+  document.getElementById("dl-json").addEventListener("click", exportJson);
+  const resume = document.getElementById("resume");
+  if (resume) resume.addEventListener("click", () => {
+    const next = S.uids.findIndex((u) => !isRated(u));
+    S.index = next === -1 ? S.uids.length : next;
+    renderRate();
+  });
+  document.getElementById("restart").addEventListener("click", () => {
+    if (S.queue.length && !confirm("Some ratings have not reached the server yet. Download them first? Click Cancel to go back and download.")) return;
+    S = null;
+    renderWelcome();
+  });
+  setSync(syncState);
+  flush();
+  window.scrollTo({ top: 0 });
+}
+
+/* ===========================================================================
+   Boot
+   =========================================================================== */
+
+fetch("qa_data.json")
+  .then((r) => {
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  })
+  .then((json) => {
+    // Accept the current {pairs, videos} shape and a bare array of pairs.
+    const all = Array.isArray(json) ? json : (json.pairs || []);
+    // Hard exclusion happens here, once, before anything else sees the corpus.
+    DATA = all.filter((p) => !isExcluded(p.approach));
+    VIDEOS = Array.isArray(json) ? {} : (json.videos || {});
+    if (ONLY.size || EXCLUDED.size) {
+      console.info(
+        (ONLY.size ? `Only approaches: ${[...ONLY].join(", ")}` : `Excluded approaches: ${[...EXCLUDED].join(", ")}`) +
+        ` — ${all.length - DATA.length} of ${all.length} pairs dropped, ${DATA.length} remain.`);
+    }
+    if (!DATA.length) {
+      app.innerHTML = '<div class="card"><h2>No Q&As left</h2>' +
+        '<p class="muted">Every pair was removed by <code>' +
+        (ONLY.size ? "ONLY_APPROACHES" : "EXCLUDE_APPROACHES") + '</code> in <code>config.js</code>.</p></div>';
+      return;
+    }
+    renderWelcome();
+  })
+  .catch((e) => {
+    app.innerHTML = '<div class="card"><h2>Could not load the Q&As</h2>' +
+      '<p class="muted">' + String(e) + '</p>' +
+      '<p class="muted">Regenerate the data file with <code>python eval-v4-netlify/extract_qa_data.py</code>, and serve this folder over HTTP ' +
+      '(<code>python -m http.server</code>) rather than opening the file directly — <code>file://</code> blocks the fetch.</p></div>';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+model,judge,outcome,dataset,video,source_url,qas_v2,qas_v3,v2_percent,v3_percent,difference_pp
+qwen3-14b,DeepSeek,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,96.29629629629632,-3.703703703703687
+qwen3-14b,DeepSeek,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,100.0,91.66666666666666,-8.333333333333337
+qwen3-14b,DeepSeek,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,88.88888888888889,92.59259259259258,3.703703703703698
+qwen3-14b,DeepSeek,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,100.0,11.111111111111116
+qwen3-14b,DeepSeek,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,81.81818181818183,75.75757575757575,-6.060606060606077
+qwen3-14b,DeepSeek,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,92.3076923076923,100.0,7.692307692307687
+qwen3-14b,DeepSeek,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,62.5,95.83333333333334,33.333333333333336
+qwen3-14b,DeepSeek,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,61.9047619047619,85.71428571428571,23.809523809523814
+qwen3-14b,DeepSeek,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,91.11111111111111,100.0,8.888888888888891
+qwen3-14b,DeepSeek,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,92.59259259259258,100.0,7.407407407407418
+qwen3-14b,DeepSeek,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,87.5,91.66666666666667,4.166666666666674
+qwen3-14b,DeepSeek,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,100.0,81.48148148148148,-18.518518518518523
+qwen3-14b,DeepSeek,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,100.0,90.9090909090909,-9.090909090909093
+qwen3-14b,DeepSeek,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,88.88888888888889,0.0
+qwen3-14b,DeepSeek,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,84.84848484848484,100.0,15.151515151515149
+qwen3-14b,DeepSeek,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,87.17948717948718,74.35897435897438,-12.820512820512809
+qwen3-14b,DeepSeek,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,93.33333333333333,90.00000000000001,-3.3333333333333104
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,91.66666666666666,100.0,8.333333333333337
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,75.0,100.0,25.0
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,85.18518518518519,85.18518518518518,-1.1102230246251565e-14
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,100.0,87.5,-12.5
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,20.0,33.33333333333333,13.33333333333333
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,91.66666666666666,83.33333333333333,-8.333333333333337
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,50.0,8.333333333333332,-41.66666666666667
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,91.66666666666666,75.0,-16.666666666666664
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,94.44444444444443,-5.55555555555557
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,90.9090909090909,57.57575757575757,-33.333333333333336
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,86.11111111111111,100.0,13.888888888888884
+qwen3-14b,DeepSeek,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,100.0,95.83333333333334,-4.1666666666666625
+qwen3-14b,gpt-oss,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,96.29629629629632,88.88888888888889,-7.40740740740743
+qwen3-14b,gpt-oss,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,100.0,11.111111111111116
+qwen3-14b,gpt-oss,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,97.43589743589743,100.0,2.564102564102566
+qwen3-14b,gpt-oss,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,87.5,100.0,12.5
+qwen3-14b,gpt-oss,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,95.23809523809524,100.0,4.761904761904756
+qwen3-14b,gpt-oss,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,95.83333333333334,95.83333333333333,-1.1102230246251565e-14
+qwen3-14b,gpt-oss,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,90.0,-9.999999999999998
+qwen3-14b,gpt-oss,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,92.59259259259261,100.0,7.407407407407396
+qwen3-14b,gpt-oss,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,100.0,90.9090909090909,-9.090909090909093
+qwen3-14b,gpt-oss,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,96.29629629629632,96.29629629629632,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,93.93939393939394,93.93939393939394,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,97.43589743589743,94.87179487179486,-2.564102564102566
+qwen3-14b,gpt-oss,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,90.0,-9.999999999999998
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,87.5,-12.5
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,85.18518518518519,88.88888888888889,3.703703703703698
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,86.66666666666666,86.66666666666666,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,75.0,75.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,100.0,91.66666666666666,-8.333333333333337
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,100.0,78.78787878787878,-21.212121212121215
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,91.66666666666666,100.0,8.333333333333337
+qwen3-14b,gpt-oss,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,97.61904761904762,100.0,2.3809523809523725
+qwen3-14b,Gemma 4,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,100.0,91.66666666666666,-8.333333333333337
+qwen3-14b,Gemma 4,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,88.88888888888889,100.0,11.111111111111116
+qwen3-14b,Gemma 4,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,100.0,11.111111111111116
+qwen3-14b,Gemma 4,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,81.81818181818183,81.81818181818183,0.0
+qwen3-14b,Gemma 4,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,92.3076923076923,100.0,7.692307692307687
+qwen3-14b,Gemma 4,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,58.33333333333333,100.0,41.66666666666667
+qwen3-14b,Gemma 4,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,59.523809523809526,85.71428571428571,26.190476190476186
+qwen3-14b,Gemma 4,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,97.77777777777777,91.11111111111111,-6.666666666666665
+qwen3-14b,Gemma 4,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,87.5,91.66666666666666,4.1666666666666625
+qwen3-14b,Gemma 4,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,100.0,88.88888888888889,-11.111111111111116
+qwen3-14b,Gemma 4,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,90.90909090909093,84.84848484848484,-6.060606060606077
+qwen3-14b,Gemma 4,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,85.18518518518519,81.48148148148148,-3.703703703703709
+qwen3-14b,Gemma 4,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,90.9090909090909,100.0,9.090909090909093
+qwen3-14b,Gemma 4,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,92.3076923076923,84.61538461538461,-7.692307692307699
+qwen3-14b,Gemma 4,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,96.66666666666669,90.0,-6.666666666666677
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,87.5,83.33333333333334,-4.1666666666666625
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,75.0,100.0,25.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,74.07407407407408,100.0,25.92592592592592
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,53.333333333333336,66.66666666666666,13.33333333333333
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,50.0,8.333333333333332,-41.66666666666667
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,91.66666666666666,75.0,-16.666666666666664
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,88.88888888888889,-11.111111111111116
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,84.84848484848484,51.515151515151516,-33.33333333333333
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,83.33333333333334,100.0,16.666666666666664
+qwen3-14b,Gemma 4,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,92.85714285714286,100.0,7.14285714285714
+qwen2.5-7b,DeepSeek,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,86.66666666666667,100.0,13.33333333333333
+qwen2.5-7b,DeepSeek,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,72.22222222222221,72.22222222222221,0.0
+qwen2.5-7b,DeepSeek,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,75.0,93.75,18.75
+qwen2.5-7b,DeepSeek,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,90.0,80.0,-9.999999999999998
+qwen2.5-7b,DeepSeek,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,83.33333333333334,77.77777777777779,-5.555555555555558
+qwen2.5-7b,DeepSeek,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,81.81818181818183,81.81818181818183,0.0
+qwen2.5-7b,DeepSeek,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,100.0,77.77777777777779,-22.22222222222222
+qwen2.5-7b,DeepSeek,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,95.45454545454545,100.0,4.545454545454541
+qwen2.5-7b,DeepSeek,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,73.07692307692307,88.46153846153845,15.384615384615385
+qwen2.5-7b,DeepSeek,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,75.0,-25.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,95.0,-5.000000000000004
+qwen2.5-7b,DeepSeek,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,87.5,100.0,12.5
+qwen2.5-7b,DeepSeek,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,80.0,100.0,19.999999999999996
+qwen2.5-7b,DeepSeek,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,50.0,-50.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,83.33333333333334,-16.666666666666664
+qwen2.5-7b,DeepSeek,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,50.0,56.25,6.25
+qwen2.5-7b,DeepSeek,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,80.0,60.0,-20.000000000000007
+qwen2.5-7b,DeepSeek,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,50.0,87.5,37.5
+qwen2.5-7b,DeepSeek,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,58.333333333333336,95.83333333333334,37.5
+qwen2.5-7b,DeepSeek,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,81.81818181818183,72.72727272727273,-9.090909090909093
+qwen2.5-7b,DeepSeek,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,91.66666666666666,91.66666666666666,0.0
+qwen2.5-7b,DeepSeek,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,42.857142857142854,46.42857142857143,3.5714285714285756
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,93.33333333333333,-6.666666666666665
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,94.44444444444444,88.88888888888889,-5.555555555555558
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,93.75,100.0,6.25
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,90.0,90.0,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,77.77777777777779,88.88888888888889,11.111111111111105
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,90.9090909090909,86.36363636363636,-4.545454545454541
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,88.88888888888889,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,86.36363636363636,86.36363636363636,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,80.76923076923077,88.46153846153845,7.692307692307687
+qwen2.5-7b,DeepSeek,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,75.0,100.0,25.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,90.0,100.0,9.999999999999998
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,100.0,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,85.0,90.0,5.000000000000004
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,87.5,37.5,-50.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,72.22222222222221,83.33333333333334,11.111111111111116
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,100.0,81.25,-18.75
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,70.0,20.0,-49.99999999999999
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,75.0,62.5,-12.5
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,62.5,0.0,-62.5
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,91.66666666666666,66.66666666666666,-25.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,79.16666666666666,79.16666666666666,0.0
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,95.45454545454545,77.27272727272727,-18.181818181818187
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,79.16666666666666,87.5,8.333333333333337
+qwen2.5-7b,DeepSeek,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,96.42857142857143,85.71428571428571,-10.71428571428572
+qwen2.5-7b,gpt-oss,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,93.33333333333333,100.0,6.666666666666665
+qwen2.5-7b,gpt-oss,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,70.83333333333333,95.83333333333334,25.00000000000001
+qwen2.5-7b,gpt-oss,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,96.66666666666666,93.33333333333333,-3.3333333333333326
+qwen2.5-7b,gpt-oss,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,88.88888888888889,96.29629629629632,7.40740740740743
+qwen2.5-7b,gpt-oss,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,96.96969696969695,78.78787878787878,-18.181818181818176
+qwen2.5-7b,gpt-oss,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,96.29629629629632,88.88888888888889,-7.40740740740743
+qwen2.5-7b,gpt-oss,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,82.05128205128206,100.0,17.948717948717942
+qwen2.5-7b,gpt-oss,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,75.0,-25.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,91.66666666666667,95.83333333333334,4.1666666666666625
+qwen2.5-7b,gpt-oss,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,96.66666666666666,100.0,3.3333333333333437
+qwen2.5-7b,gpt-oss,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,83.33333333333334,-16.666666666666664
+qwen2.5-7b,gpt-oss,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,92.59259259259261,-7.407407407407396
+qwen2.5-7b,gpt-oss,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,83.33333333333333,95.83333333333333,12.5
+qwen2.5-7b,gpt-oss,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,91.66666666666666,100.0,8.333333333333337
+qwen2.5-7b,gpt-oss,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,94.44444444444446,100.0,5.5555555555555465
+qwen2.5-7b,gpt-oss,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,100.0,90.9090909090909,-9.090909090909093
+qwen2.5-7b,gpt-oss,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,100.0,97.22222222222223,-2.777777777777768
+qwen2.5-7b,gpt-oss,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,100.0,97.61904761904762,-2.3809523809523836
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,100.0,93.33333333333333,-6.666666666666665
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,92.59259259259261,100.0,7.407407407407396
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,86.66666666666666,93.33333333333333,6.666666666666677
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,70.37037037037037,81.48148148148148,11.111111111111105
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,96.96969696969695,100.0,3.0303030303030387
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,88.88888888888889,100.0,11.111111111111116
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,81.81818181818183,96.96969696969695,15.151515151515138
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,92.30769230769232,94.87179487179486,2.564102564102544
+qwen2.5-7b,gpt-oss,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,91.66666666666666,-8.333333333333337
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,77.77777777777779,88.88888888888889,11.111111111111105
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,91.66666666666666,100.0,8.333333333333337
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,80.0,100.0,19.999999999999996
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,75.0,100.0,25.0
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,100.0,41.666666666666664,-58.333333333333336
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,86.11111111111111,75.0,-11.111111111111116
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,77.77777777777777,80.55555555555554,2.777777777777779
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,93.93939393939394,81.81818181818183,-12.12121212121211
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,97.22222222222221,83.33333333333334,-13.888888888888884
+qwen2.5-7b,gpt-oss,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Standalone,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,93.33333333333333,100.0,6.666666666666665
+qwen2.5-7b,Gemma 4,Standalone,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,74.07407407407408,77.77777777777779,3.703703703703709
+qwen2.5-7b,Gemma 4,Standalone,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,62.5,100.0,37.5
+qwen2.5-7b,Gemma 4,Standalone,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,90.0,73.33333333333334,-16.666666666666664
+qwen2.5-7b,Gemma 4,Standalone,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,85.18518518518519,74.07407407407408,-11.111111111111116
+qwen2.5-7b,Gemma 4,Standalone,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,90.9090909090909,81.81818181818183,-9.090909090909083
+qwen2.5-7b,Gemma 4,Standalone,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,100.0,77.77777777777779,-22.22222222222222
+qwen2.5-7b,Gemma 4,Standalone,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Standalone,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,38.46153846153847,82.05128205128206,43.5897435897436
+qwen2.5-7b,Gemma 4,Standalone,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,91.66666666666666,75.0,-16.666666666666664
+qwen2.5-7b,Gemma 4,Standalone,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,100.0,96.66666666666669,-3.3333333333333215
+qwen2.5-7b,Gemma 4,Standalone,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,87.5,95.83333333333334,8.333333333333337
+qwen2.5-7b,Gemma 4,Standalone,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,76.66666666666666,100.0,23.33333333333334
+qwen2.5-7b,Gemma 4,Standalone,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Standalone,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,100.0,50.0,-50.0
+qwen2.5-7b,Gemma 4,Standalone,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,100.0,85.18518518518519,-14.814814814814813
+qwen2.5-7b,Gemma 4,Standalone,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,50.0,54.166666666666664,4.1666666666666625
+qwen2.5-7b,Gemma 4,Standalone,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,80.0,60.0,-20.000000000000007
+qwen2.5-7b,Gemma 4,Standalone,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Standalone,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,33.33333333333333,100.0,66.66666666666667
+qwen2.5-7b,Gemma 4,Standalone,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,33.33333333333333,80.55555555555557,47.222222222222236
+qwen2.5-7b,Gemma 4,Standalone,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Standalone,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,78.7878787878788,78.78787878787878,-1.1102230246251565e-14
+qwen2.5-7b,Gemma 4,Standalone,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,100.0,88.88888888888889,-11.111111111111116
+qwen2.5-7b,Gemma 4,Standalone,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,47.61904761904761,33.333333333333336,-14.28571428571428
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,1,https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg,15,15,93.33333333333333,86.66666666666667,-6.666666666666665
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,2,https://www.youtube.com/watch?v=ISySnaIyzEo&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=2,9,9,70.37037037037037,92.59259259259258,22.22222222222221
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,3,https://www.youtube.com/watch?v=s6kMXLPyJf0&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=3,8,8,91.66666666666666,100.0,8.333333333333337
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,4,https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4,10,10,90.0,93.33333333333333,3.3333333333333215
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,5,https://www.youtube.com/watch?v=Fby81EdkIQk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=5,9,9,100.0,96.29629629629629,-3.703703703703709
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,6,https://www.youtube.com/watch?v=oDZP3cAI5zk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=6,11,11,87.87878787878788,78.78787878787878,-9.090909090909093
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,7,https://www.youtube.com/watch?v=NrBTac2EKBE&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=7,9,9,81.4814814814815,85.18518518518518,3.703703703703687
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,8,https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8,11,11,81.81818181818183,87.87878787878789,6.060606060606066
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,9,https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9,13,13,92.30769230769232,82.05128205128204,-10.256410256410275
+qwen2.5-7b,Gemma 4,Trustworthiness,Master,10,https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10,4,4,100.0,75.0,-25.0
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,1,https://www.youtube.com/watch?v=mkRvK26bkTQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=1,10,10,90.0,100.0,9.999999999999998
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,2,https://www.youtube.com/watch?v=m-lckAgnVQw&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=2,8,8,87.5,100.0,12.5
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,3,https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3,10,10,83.33333333333333,100.0,16.666666666666675
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,4,https://www.youtube.com/watch?v=EpV83BVhXr4&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=4,4,4,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,5,https://www.youtube.com/watch?v=ZpXeefZ2jAM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=5,4,4,91.66666666666666,50.0,-41.666666666666664
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,6,https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6,9,9,59.25925925925925,77.77777777777779,18.518518518518523
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,7,https://www.youtube.com/watch?v=Z6UVjp_y8HY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=7,8,8,100.0,100.0,0.0
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,8,https://www.youtube.com/watch?v=mJk02XI_sRA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=8,5,5,80.0,6.666666666666667,-73.33333333333334
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,9,https://www.youtube.com/watch?v=jVBjQYQZL5E&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=9,4,4,83.33333333333333,50.0,-33.33333333333333
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,10,https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10,4,4,75.0,0.0,-75.0
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,11,https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11,12,12,88.88888888888889,77.77777777777779,-11.111111111111105
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,12,https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12,12,12,80.55555555555554,72.22222222222221,-8.333333333333325
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,13,https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13,11,11,93.93939393939394,81.81818181818183,-12.12121212121211
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,14,https://www.youtube.com/watch?v=CmeAZ5iQlSs&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=14,12,12,88.88888888888889,100.0,11.111111111111116
+qwen2.5-7b,Gemma 4,Trustworthiness,Teepa,15,https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15,14,14,90.47619047619048,95.23809523809523,4.761904761904745

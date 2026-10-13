@@ -1,0 +1,13 @@
+{
+  "study_version": "v4",
+  "ratings_table": "ratings_v4",
+  "source_commit": "2900597a8749a100311e76ae0661db74197a3f02",
+  "source_ui": "eval/web",
+  "qa_data_sha256": "4c5f76578ce0c920e55dec2210a040832de331938deef2ef4913c13784a18a00",
+  "total_pairs_in_file": 2634,
+  "active_approaches": ["SingleAgent"],
+  "active_pairs": 226,
+  "active_videos": 25,
+  "default_max_pairs": 40,
+  "notes": "Fresh v4 study package. Browser storage and Supabase rows are isolated from v3."
+}
