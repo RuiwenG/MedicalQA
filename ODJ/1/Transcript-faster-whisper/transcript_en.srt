@@ -1,0 +1,916 @@
+1
+00:00:00,000 --> 00:00:15,940
+Hey everybody.
+
+2
+00:00:15,940 --> 00:00:25,460
+So this month's journal is going to be focused some on medications, drugs, things that people
+
+3
+00:00:25,460 --> 00:00:34,140
+might take in, in order to, well, this is where it's really important before we start
+
+4
+00:00:34,140 --> 00:00:40,120
+thinking, putting something in to someone, whether it's us or someone else.
+
+5
+00:00:40,120 --> 00:00:46,980
+When you put it in here, once it's in, there are a number of things that could and do happen.
+
+6
+00:00:46,980 --> 00:00:52,800
+And so immediately thinking, oh, something's wrong.
+
+7
+00:00:52,800 --> 00:00:55,440
+Let's use a drug or a medication to treat it.
+
+8
+00:00:55,440 --> 00:01:03,820
+In some cases, that might be exactly a fantastic answer, but in many other cases, we need to
+
+9
+00:01:03,820 --> 00:01:10,020
+hit the pause button a lot sooner and go, okay, so something's changed.
+
+10
+00:01:10,020 --> 00:01:11,960
+There's something different here.
+
+11
+00:01:11,960 --> 00:01:20,400
+And that something different could be something related to number one, the six pieces of the
+
+12
+00:01:20,400 --> 00:01:25,420
+puzzle, rather than it's the person and what's happening inside them.
+
+13
+00:01:25,420 --> 00:01:28,040
+The person that is the problem.
+
+14
+00:01:28,040 --> 00:01:34,140
+So if we could address the problem inside the person, then none of this would be happening.
+
+15
+00:01:34,140 --> 00:01:40,940
+And that's, it's a great example for me of the latest ad on a particular Dry Brick Salty
+
+16
+00:01:40,940 --> 00:01:45,100
+that says, you know, that's just their dementia.
+
+17
+00:01:45,100 --> 00:01:48,300
+So that's all agitation related to their dimension.
+
+18
+00:01:48,300 --> 00:01:52,340
+It's like, whoa, whoa, whoa, whoa, heavens to Betsy.
+
+19
+00:01:52,340 --> 00:01:54,760
+That was never the intent.
+
+20
+00:01:54,760 --> 00:02:01,920
+So the assessment tool that was used to determine whether or not it did indeed reduce agitation.
+
+21
+00:02:01,920 --> 00:02:08,020
+So let's back up again and let's say, okay, so what are the six pieces of the puzzle or
+
+22
+00:02:08,020 --> 00:02:13,920
+for everybody just to review, okay, three of the pieces, yeah, we're noticing a change.
+
+23
+00:02:13,920 --> 00:02:18,100
+So it could be that the change is happening.
+
+24
+00:02:18,100 --> 00:02:21,480
+The person is actually changing.
+
+25
+00:02:21,480 --> 00:02:23,640
+Something about the person is changing.
+
+26
+00:02:24,760 --> 00:02:29,700
+Could it be a reemergence of something from before?
+
+27
+00:02:29,700 --> 00:02:31,320
+So it's a pattern.
+
+28
+00:02:31,320 --> 00:02:34,000
+You know, this is something that happens episodically.
+
+29
+00:02:34,000 --> 00:02:37,400
+This is something that isn't exactly new.
+
+30
+00:02:37,400 --> 00:02:39,900
+It's something that's happened before.
+
+31
+00:02:39,900 --> 00:02:43,020
+And because it's happened before, we may think, oh yeah.
+
+32
+00:02:43,020 --> 00:02:44,220
+And so this happened before.
+
+33
+00:02:44,220 --> 00:02:48,820
+So this is, we gave them the med, we put the med in and it stopped.
+
+34
+00:02:48,820 --> 00:02:51,560
+Now, like I said, sometimes great.
+
+35
+00:02:51,560 --> 00:02:52,560
+It's the right answer.
+
+36
+00:02:52,560 --> 00:02:53,760
+But sometimes what happened before.
+
+37
+00:02:53,760 --> 00:02:54,760
+Yeah.
+
+38
+00:02:54,760 --> 00:03:01,000
+What happened before and what's happening now are subtly different, or it's a combination
+
+39
+00:03:01,000 --> 00:03:05,300
+because the other pieces of the puzzle that could be changing, it could be the brain change.
+
+40
+00:03:05,300 --> 00:03:08,320
+It could be anxiety, depression.
+
+41
+00:03:08,320 --> 00:03:10,360
+It could be dementia.
+
+42
+00:03:10,360 --> 00:03:12,420
+It could be, they've got a second dementia.
+
+43
+00:03:12,420 --> 00:03:14,760
+It could be that dementia is progressing.
+
+44
+00:03:14,760 --> 00:03:18,240
+It could be, oh, well it could be instead a delirium.
+
+45
+00:03:18,240 --> 00:03:23,760
+It could be something acutely wrong or what we think is acutely wrong is not.
+
+46
+00:03:23,760 --> 00:03:24,960
+It's the dementia.
+
+47
+00:03:24,960 --> 00:03:31,520
+And so trying to increase the medication to manage the delirium actually, well, it could
+
+48
+00:03:31,520 --> 00:03:36,120
+be both, or maybe it's all three, anxiety, depression, and dementia.
+
+49
+00:03:36,120 --> 00:03:39,340
+Maybe it's anxiety, delirium, and dementia.
+
+50
+00:03:39,340 --> 00:03:42,300
+Maybe it's, I think you're getting the idea here.
+
+51
+00:03:42,300 --> 00:03:49,060
+So if that's the case, then putting a med in the middle of it might change one of those
+
+52
+00:03:49,060 --> 00:03:52,000
+factors, but it might impact the other factor.
+
+53
+00:03:52,000 --> 00:03:53,000
+Yeah.
+
+54
+00:03:53,000 --> 00:03:57,040
+And so sometimes that may be exactly the right answer, but sometimes with dementia,
+
+55
+00:03:57,040 --> 00:03:58,860
+it's not the right answer.
+
+56
+00:03:58,860 --> 00:04:04,180
+It actually can make things harder to figure out, particularly depending on the medication
+
+57
+00:04:04,180 --> 00:04:05,600
+we choose to use.
+
+58
+00:04:05,600 --> 00:04:10,640
+So for instance, with a drug that affects the entire central nervous system in a way
+
+59
+00:04:10,640 --> 00:04:17,580
+that puts it under control, it actually eliminates a lot of clues and cues that might help us
+
+60
+00:04:17,580 --> 00:04:19,420
+figure out what else is going on.
+
+61
+00:04:19,420 --> 00:04:22,020
+Is it, do we want to throw a break here?
+
+62
+00:04:22,020 --> 00:04:23,000
+Do we want to actually put a break?
+
+63
+00:04:23,000 --> 00:04:24,500
+Do we want a full stop here?
+
+64
+00:04:24,500 --> 00:04:28,020
+Or do we want to take a few seconds to figure things out?
+
+65
+00:04:28,020 --> 00:04:34,400
+Now this other thing involved in here is the person's sensory wellbeing, physical wellbeing,
+
+66
+00:04:34,400 --> 00:04:36,340
+mental health wellbeing in general.
+
+67
+00:04:36,340 --> 00:04:43,320
+So looking at fuel intake, fluid intake for that person, has some of that shifted or are
+
+68
+00:04:43,320 --> 00:04:46,060
+they taking their meds accurately?
+
+69
+00:04:46,060 --> 00:04:52,620
+Could it be not that we need another med, but we need to look at how the meds are interacting?
+
+70
+00:04:52,620 --> 00:04:56,640
+Could it be that the person's on a lot of meds and you know, they've been on these meds
+
+71
+00:04:56,640 --> 00:05:02,160
+for good, some of them for like over 10 years, 15 years, 20 years, because when we're talking
+
+72
+00:05:02,160 --> 00:05:07,660
+about people who might be on the older scale, indeed they might've been on medications quite
+
+73
+00:05:07,660 --> 00:05:08,660
+some time.
+
+74
+00:05:08,660 --> 00:05:13,380
+And it could simply be that their bodies are changing between their dementia, their aging
+
+75
+00:05:13,380 --> 00:05:21,340
+process and their chronic health issues, that now those meds are acting or interacting in
+
+76
+00:05:21,340 --> 00:05:22,420
+more challenging.
+
+77
+00:05:22,420 --> 00:05:27,140
+And dangerous ways, or maybe the med they were put on ages ago have been added to a
+
+78
+00:05:27,140 --> 00:05:30,800
+list that for older adults, bad idea.
+
+79
+00:05:30,800 --> 00:05:33,020
+And that list is called the beers list.
+
+80
+00:05:33,020 --> 00:05:39,740
+And if you're not familiar with it, maybe a geriatric pharmacist or a pharmacist who's
+
+81
+00:05:39,740 --> 00:05:45,440
+really familiar with best practice when it comes to geriatrics and most physicians or
+
+82
+00:05:45,440 --> 00:05:50,860
+nurse practitioners or physician extenders might also be familiar, but they might get
+
+83
+00:05:50,860 --> 00:05:51,860
+in a hurry.
+
+84
+00:05:51,860 --> 00:05:53,880
+And so there might be multiple providers.
+
+85
+00:05:53,880 --> 00:05:58,500
+We know that when the more providers we have, the higher the risk.
+
+86
+00:05:58,500 --> 00:06:05,600
+Let's pause again and go, okay, so just with noticing a change, we've got different variables
+
+87
+00:06:05,600 --> 00:06:07,000
+we should be looking at.
+
+88
+00:06:07,000 --> 00:06:15,160
+Could it be a case of eyesight is changing, or could it be a case of the dementia is changing
+
+89
+00:06:15,160 --> 00:06:18,680
+my ability to use my eyes effectively?
+
+90
+00:06:18,680 --> 00:06:20,580
+In which case, you know, using medications.
+
+91
+00:06:20,580 --> 00:06:21,580
+Yeah.
+
+92
+00:06:21,580 --> 00:06:26,260
+So medications in my eye to do something with my eye or doing something with my eye may
+
+93
+00:06:26,260 --> 00:06:30,200
+not well, maybe I do need new glasses.
+
+94
+00:06:30,200 --> 00:06:37,780
+Maybe my glaucoma does need managed differently, but with my added brain change of dementia,
+
+95
+00:06:37,780 --> 00:06:42,900
+maybe we need to look at how we're delivering it, not if we're delivering it.
+
+96
+00:06:42,900 --> 00:06:45,340
+And maybe we need to look at the medication itself.
+
+97
+00:06:45,340 --> 00:06:49,180
+Is there an alternative doing it the way we're doing it?
+
+98
+00:06:49,180 --> 00:06:51,360
+So it's not more medication.
+
+99
+00:06:51,360 --> 00:06:58,140
+It might be varying how the medication is delivered or if the medication is delivered
+
+100
+00:06:58,140 --> 00:07:02,340
+via the method that we were talking about or something else.
+
+101
+00:07:02,340 --> 00:07:08,820
+So this whole idea of really adjusting this stuff, we want to be cognizant of it, but
+
+102
+00:07:08,820 --> 00:07:13,220
+we want to be thoughtful, taking away, adding on.
+
+103
+00:07:13,220 --> 00:07:20,280
+But we are way too likely in our current mode to add something in rather than really look
+
+104
+00:07:20,280 --> 00:07:21,240
+hard and say, let's see.
+
+105
+00:07:21,240 --> 00:07:23,880
+Let's see what we can get rid of.
+
+106
+00:07:23,880 --> 00:07:28,000
+And if we do that, we want to be real thoughtful about that, but see, before we get there,
+
+107
+00:07:28,000 --> 00:07:36,120
+we need to get better at looking at, okay, so let's take a look at who's around the person
+
+108
+00:07:36,120 --> 00:07:39,520
+and what the skillset of those individuals are.
+
+109
+00:07:39,520 --> 00:07:45,020
+Has there been a change in who's there in what the people are asking and able to support
+
+110
+00:07:45,020 --> 00:07:46,080
+doing?
+
+111
+00:07:46,080 --> 00:07:48,200
+Could it be that they need greater training?
+
+112
+00:07:48,200 --> 00:07:50,020
+Could it be they need greater awareness?
+
+113
+00:07:50,020 --> 00:07:51,020
+Oh, so.
+
+114
+00:07:51,020 --> 00:07:56,000
+So we're talking about stakeholders, who else is involved in this and what's the goal of
+
+115
+00:07:56,000 --> 00:08:03,260
+the stakeholder and the story of the stakeholder compared to the individual and their practices.
+
+116
+00:08:03,260 --> 00:08:06,340
+And then we want to start looking at the environment.
+
+117
+00:08:06,340 --> 00:08:10,900
+And when we talk about environment, you guys know we talk about a lot of things.
+
+118
+00:08:10,900 --> 00:08:13,760
+So is something in the environment shifting?
+
+119
+00:08:13,760 --> 00:08:16,980
+And we could look at four F's and the four S's.
+
+120
+00:08:16,980 --> 00:08:19,860
+We can also look at place, people, props, programming.
+
+121
+00:08:19,860 --> 00:08:28,120
+And other possibilities, but we want to look at the environment as a variable, because
+
+122
+00:08:28,120 --> 00:08:34,560
+if the thing we're trying to manage with medications could be better managed by an environmental
+
+123
+00:08:34,560 --> 00:08:42,480
+modification, the environmental modification possibly combined with the person modification
+
+124
+00:08:42,480 --> 00:08:48,860
+might actually be easier to manage rather than looking for the magic magic.
+
+125
+00:08:48,860 --> 00:08:49,860
+Okay.
+
+126
+00:08:49,860 --> 00:08:51,160
+And how do we manage this?
+
+127
+00:08:51,160 --> 00:08:52,160
+So we have two things.
+
+128
+00:08:52,160 --> 00:08:54,700
+The first one is the medication, because the medication, once it goes in, you know, we
+
+129
+00:08:54,700 --> 00:08:58,640
+don't have as much control over what it might be doing inside the person.
+
+130
+00:08:58,640 --> 00:09:07,420
+Now, the third element here and sometimes over here, fluid and fuel might be the issue.
+
+131
+00:09:07,420 --> 00:09:08,420
+It's absolutely accurate.
+
+132
+00:09:08,420 --> 00:09:13,420
+But in the environment, how are they getting the fuel in the fluid?
+
+133
+00:09:13,420 --> 00:09:15,960
+Could it be an environmental access issue?
+
+134
+00:09:15,960 --> 00:09:18,120
+Could it be a challenge with how many variables?
+
+135
+00:09:18,120 --> 00:09:19,120
+We have on the fluid?
+
+136
+00:09:19,120 --> 00:09:19,760
+Do they have to be controlled?
+
+137
+00:09:19,760 --> 00:09:25,100
+fluids and the fuel? Could it be how it's how often it well now we get to the third, which is
+
+138
+00:09:25,100 --> 00:09:31,560
+how is time used? What's going on? What's the timing? How are people spending some time is part
+
+139
+00:09:31,560 --> 00:09:39,020
+of why the agitation is happening, because there's not enough sense of value and purpose. There's not
+
+140
+00:09:39,020 --> 00:09:46,600
+enough enjoyment in being alive. There's not enough true self care going on for one or more
+
+141
+00:09:46,600 --> 00:09:54,620
+of us. Or could it be that, you know, this one, let's see, rest and restoration. Are we getting
+
+142
+00:09:54,620 --> 00:10:02,080
+what we need? So looking at the puzzle pieces, when we talk about medications, doing a more careful
+
+143
+00:10:02,080 --> 00:10:07,560
+and thorough job of investigating the six pieces of the puzzle. And we do need to do this in a
+
+144
+00:10:07,560 --> 00:10:15,180
+timely manner because of the delirium, depression, dementia, agitation, anxiety kinds of things that
+
+145
+00:10:15,180 --> 00:10:16,000
+might be going on.
+
+146
+00:10:16,000 --> 00:10:24,460
+And just keeping in mind, brain changes might be going on for more than one person. So one of the things we
+
+147
+00:10:24,460 --> 00:10:30,760
+want to think about when we're going into a medical setting or into a medical appointment, is what kind
+
+148
+00:10:30,760 --> 00:10:39,240
+of info what kind of data could we bring in? And how can we frame it so that we're giving accurate
+
+149
+00:10:39,640 --> 00:10:45,940
+information that is helpful and not too directive, but at the same time,
+
+150
+00:10:46,000 --> 00:10:51,580
+we know how to call a pause. So one of the things we might think about is a medication log,
+
+151
+00:10:52,120 --> 00:10:58,060
+where we keep track of all the medications that are being used, how often they're being used,
+
+152
+00:10:58,060 --> 00:11:03,040
+if they're used episodically, and it would include things that are called over the counter meds,
+
+153
+00:11:03,040 --> 00:11:11,980
+and topical things and things that we we use that we think of as natural or home remedies.
+
+154
+00:11:12,640 --> 00:11:15,940
+I mean, if we're using them for a particular purpose, and we're using them,
+
+155
+00:11:16,000 --> 00:11:22,960
+consistently, is the consistency changing. So for instance, things like prune juice would
+
+156
+00:11:22,960 --> 00:11:27,640
+be really helpful when somebody is having trouble getting things through their gut, for some people.
+
+157
+00:11:28,240 --> 00:11:36,880
+And letting somebody know, we're already doing X, this regime would be super helpful. So things
+
+158
+00:11:36,880 --> 00:11:45,280
+that we're doing in a medication log and be sort of aware of that. Do we know? Is that actually
+
+159
+00:11:45,280 --> 00:11:52,660
+what's happening or is that what we put in place but how accurate is that for actually putting it
+
+160
+00:11:52,660 --> 00:12:01,840
+in combined with the medication log truly i believe should be a fuel and fluid sort of intake report
+
+161
+00:12:01,840 --> 00:12:09,140
+how's that going and on the other side the output because when we put stuff in stuff coming out we
+
+162
+00:12:09,140 --> 00:12:16,080
+want to look at the human needs what do humans need and if we look at needs in out energy use
+
+163
+00:12:16,080 --> 00:12:20,140
+now there's another log and it would be called the activity log
+
+164
+00:12:20,140 --> 00:12:28,260
+and then you know of course people want to have the favorite and yeah i get it how many episodes
+
+165
+00:12:28,260 --> 00:12:35,600
+of a behavior if we're gonna look at a behavior let's be thoughtful and and let's take a step back
+
+166
+00:12:35,600 --> 00:12:38,600
+and how many times maybe to record it
+
+167
+00:12:38,600 --> 00:12:39,120
+we would
+
+168
+00:12:39,120 --> 00:12:44,860
+say, how many times do I find myself being surprised, distressed, woken up? How many
+
+169
+00:12:44,860 --> 00:12:50,720
+times am I being interrupted? How many times are we repeating a conversation? We repeating a
+
+170
+00:12:50,720 --> 00:12:57,820
+conversation. How many times am I finding that what's happening is happening? So if I could
+
+171
+00:12:57,820 --> 00:13:05,180
+get it to be less, how many times do they, and how many times do we find ourselves? So describing a
+
+172
+00:13:05,180 --> 00:13:12,060
+situation that you're in, and if it's changing either in frequency, intensity, or volume,
+
+173
+00:13:12,600 --> 00:13:20,600
+then we want to get curious about it. And so looking at an activity log, how are people
+
+174
+00:13:20,600 --> 00:13:28,180
+spending their time? And the number of challenges, challenging situations we've encountered,
+
+175
+00:13:28,560 --> 00:13:34,300
+who's involved in those? Where are they happening? Well, you start to get the flavor of it.
+
+176
+00:13:34,300 --> 00:13:35,160
+Sometimes I
+
+177
+00:13:35,160 --> 00:13:42,240
+think we look for the magic medication when we haven't really done our homework. Now, we don't
+
+178
+00:13:42,240 --> 00:13:48,920
+want to take a long time doing a homework puzzle if this is a fairly rapid onset change, because
+
+179
+00:13:48,920 --> 00:13:55,200
+we want to try to get to the root of the change and modify something. And that modification might
+
+180
+00:13:55,200 --> 00:14:00,420
+be looking for, ooh, is there something going on inside the system that needs to be addressed?
+
+181
+00:14:00,680 --> 00:14:04,940
+And is that potentially dehydration, or food poisoning,
+
+182
+00:14:05,160 --> 00:14:09,900
+or could it be malnutrition, or could it be electrolyte imbalance, or could it be?
+
+183
+00:14:10,720 --> 00:14:14,880
+And this is where getting somebody who's knowledgeable involved can be helpful,
+
+184
+00:14:14,880 --> 00:14:19,440
+but we don't want to just hand things over. We still want to stay actively engaged,
+
+185
+00:14:19,440 --> 00:14:25,840
+because our goal is not to just get the magic, but make sure that everything else is staying
+
+186
+00:14:25,840 --> 00:14:34,560
+balanced. And keeping in mind, sometimes making a medication change in one area could really
+
+187
+00:14:34,560 --> 00:14:35,140
+impact the other. And so I think that's where we're at. And I think that's where we're at.
+
+188
+00:14:35,160 --> 00:14:37,440
+I think that's where we're at. And I think we're at a particular stage over time.
+
+189
+00:14:37,440 --> 00:14:41,480
+And we're looking at some of these other areas, and looking at, as my friend Melanie says,
+
+190
+00:14:41,480 --> 00:14:47,820
+for every plus, there might be a minus. And we're weighing the pluses and the minuses,
+
+191
+00:14:47,820 --> 00:14:55,980
+plus we're weighing the outcome. What actually happened with that Med? Is the outcome worth the
+
+192
+00:14:55,980 --> 00:15:02,880
+cost? Did it do what we were hoping it would do? How long will it take to do what we were hoping it
+
+193
+00:15:02,880 --> 00:15:03,600
+would do?
+
+194
+00:15:03,600 --> 00:15:04,600
+What if it's doing about 25% of what we were hoping it would do?
+
+195
+00:15:04,600 --> 00:15:05,040
+Yeah.
+
+196
+00:15:05,040 --> 00:15:13,600
+we were hoping it would do is that enough or what are considered side effects interactions negative
+
+197
+00:15:13,600 --> 00:15:21,680
+impact the reality is we i don't have all the answers but i think one of the tricky parts in
+
+198
+00:15:21,680 --> 00:15:30,000
+what we do is to be clear that this is not the ultimate answer this is a piece of the puzzle
+
+199
+00:15:30,000 --> 00:15:36,320
+and if we immediately look at this as the answer we don't really look at all the variables that
+
+200
+00:15:36,320 --> 00:15:43,200
+make up this very complicated puzzle of helping someone live with dementia and when i say someone
+
+201
+00:15:43,200 --> 00:15:51,680
+i mean all of us living with dementia if we just want something to make it stop the only thing that
+
+202
+00:15:51,680 --> 00:15:59,840
+makes dementia stop is when someone quits living so what do we have to learn to live around
+
+203
+00:16:00,000 --> 00:16:07,680
+and live with what kind of changes are just changes that are our new typical and what changes
+
+204
+00:16:07,680 --> 00:16:15,680
+are ones that we do have the opportunity to improve and let's get really careful so that
+
+205
+00:16:15,680 --> 00:16:23,200
+when we do use a medication we are using it so carefully not too carefully but so carefully
+
+206
+00:16:23,840 --> 00:16:29,840
+that we've really got enough of what we're looking for with as little as the negative
+
+207
+00:16:30,000 --> 00:16:35,520
+that we aren't doing huge risk-taking in an area where we think we're safety-seeking
+
+208
+00:16:38,160 --> 00:16:46,240
+not pro not con just cautious been around too many situations where medications
+
+209
+00:16:46,880 --> 00:16:53,040
+get thrown into the mix without a careful evaluation of the value of the medicine versus the
+
+210
+00:16:53,040 --> 00:16:59,200
+value of learning some skills and using them the value of modifying a setup in a bathroom and using
+
+211
+00:16:59,200 --> 00:16:59,520
+that
+
+212
+00:17:00,000 --> 00:17:06,560
+modification of changing how i frame something or when i do something or who's involved
+
+213
+00:17:07,760 --> 00:17:14,320
+and i'm not sure the risk is worth it in many cases but that's
+
+214
+00:17:14,320 --> 00:17:21,120
+my perspective so that's my message for january there are a lot of medications
+
+215
+00:17:21,120 --> 00:17:29,200
+being thrown around out there um i'm concerned that people are looking for quick fix answers
+
+216
+00:17:29,200 --> 00:17:36,240
+without being thoughtful and careful about potential side effects impacts lack of effect
+
+217
+00:17:36,960 --> 00:17:45,520
+and negative effects so there you go hopefully looking at six pieces of the puzzle
+
+218
+00:17:45,520 --> 00:17:49,840
+looking at your paws oh yeah if a medication is making a difference
+
+219
+00:17:50,480 --> 00:17:57,440
+celebrate but then don't sit back keep track of that activity keep track of those challenges to
+
+220
+00:17:57,440 --> 00:17:59,200
+make sure we don't miss a chance to be successful and to improve the treatment of our patients we're
+
+221
+00:17:59,200 --> 00:18:10,220
+it until it becomes dangerous. It's all interconnected. Okay, that's the message and the idea and
+
+222
+00:18:10,220 --> 00:18:17,420
+maybe there's something in there for you. I'm not sure, but what I do know is we can
+
+223
+00:18:17,420 --> 00:18:24,740
+do a lot that can make a big difference and it's not all in something that you put in
+
+224
+00:18:24,740 --> 00:18:33,080
+someone. It's what we do with one another to move it forward, but sometimes that may
+
+225
+00:18:33,080 --> 00:18:41,300
+involve helping one person and another person figure out the right amount in the right way
+
+226
+00:18:41,300 --> 00:18:48,500
+or maybe it's going to take three different people to do that. Just a thought.
+
+227
+00:18:50,100 --> 00:18:54,720
+Hey folks, thanks for watching. Please like and subscribe to help us spread
+
+228
+00:18:54,720 --> 00:18:54,740
+the word. We'll see you next time. Bye.
+
+229
+00:18:54,740 --> 00:19:01,560
+and don't forget to click the bell to get notified when new videos are posted.
+

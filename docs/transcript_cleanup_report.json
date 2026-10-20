@@ -1,0 +1,1282 @@
+{
+ "rule": "collapse runs of >= 3 identical consecutive segments of <= 25 characters to the first segment",
+ "videos": [
+  {
+   "video": "Master/1",
+   "segments_raw": 609,
+   "segments_clean": 609,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/2",
+   "segments_raw": 388,
+   "segments_clean": 388,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/3",
+   "segments_raw": 335,
+   "segments_clean": 335,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/4",
+   "segments_raw": 444,
+   "segments_clean": 444,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/5",
+   "segments_raw": 380,
+   "segments_clean": 380,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/6",
+   "segments_raw": 455,
+   "segments_clean": 455,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/7",
+   "segments_raw": 387,
+   "segments_clean": 387,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/8",
+   "segments_raw": 455,
+   "segments_clean": 455,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/9",
+   "segments_raw": 575,
+   "segments_clean": 575,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Master/10",
+   "segments_raw": 159,
+   "segments_clean": 159,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/1",
+   "segments_raw": 258,
+   "segments_clean": 258,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/2",
+   "segments_raw": 303,
+   "segments_clean": 303,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/3",
+   "segments_raw": 359,
+   "segments_clean": 359,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/4",
+   "segments_raw": 140,
+   "segments_clean": 140,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/5",
+   "segments_raw": 140,
+   "segments_clean": 140,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/6",
+   "segments_raw": 296,
+   "segments_clean": 296,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/7",
+   "segments_raw": 333,
+   "segments_clean": 333,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/8",
+   "segments_raw": 184,
+   "segments_clean": 184,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/9",
+   "segments_raw": 36,
+   "segments_clean": 36,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/10",
+   "segments_raw": 63,
+   "segments_clean": 63,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/11",
+   "segments_raw": 437,
+   "segments_clean": 437,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/12",
+   "segments_raw": 419,
+   "segments_clean": 419,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/13",
+   "segments_raw": 401,
+   "segments_clean": 401,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/14",
+   "segments_raw": 422,
+   "segments_clean": 422,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "Teepa/15",
+   "segments_raw": 650,
+   "segments_clean": 650,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "FTD/1",
+   "segments_raw": 293,
+   "segments_clean": 240,
+   "removed": 53,
+   "runs": [
+    {
+     "text": "I'm not sure.",
+     "length": 15,
+     "start": 679.5,
+     "end": 694.5
+    },
+    {
+     "text": "Okay.",
+     "length": 40,
+     "start": 988.7,
+     "end": 1020.3
+    }
+   ]
+  },
+  {
+   "video": "FTD/2",
+   "segments_raw": 307,
+   "segments_clean": 307,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "FTD/3",
+   "segments_raw": 232,
+   "segments_clean": 227,
+   "removed": 5,
+   "runs": [
+    {
+     "text": "APOE4.",
+     "length": 6,
+     "start": 475.1,
+     "end": 478.6
+    }
+   ]
+  },
+  {
+   "video": "FTD/4",
+   "segments_raw": 290,
+   "segments_clean": 287,
+   "removed": 3,
+   "runs": [
+    {
+     "text": "Okay.",
+     "length": 4,
+     "start": 324.5,
+     "end": 325.3
+    }
+   ]
+  },
+  {
+   "video": "GEMS/1",
+   "segments_raw": 191,
+   "segments_clean": 191,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "GEMS/2",
+   "segments_raw": 249,
+   "segments_clean": 241,
+   "removed": 8,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 9,
+     "start": 885.8,
+     "end": 886.6
+    }
+   ]
+  },
+  {
+   "video": "GEMS/3",
+   "segments_raw": 457,
+   "segments_clean": 453,
+   "removed": 4,
+   "runs": [
+    {
+     "text": "In this moment.",
+     "length": 5,
+     "start": 434.0,
+     "end": 436.4
+    }
+   ]
+  },
+  {
+   "video": "ODJ/1",
+   "segments_raw": 280,
+   "segments_clean": 280,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/2",
+   "segments_raw": 81,
+   "segments_clean": 81,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/3",
+   "segments_raw": 114,
+   "segments_clean": 114,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/4",
+   "segments_raw": 152,
+   "segments_clean": 152,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/5",
+   "segments_raw": 200,
+   "segments_clean": 200,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/6",
+   "segments_raw": 212,
+   "segments_clean": 212,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/7",
+   "segments_raw": 166,
+   "segments_clean": 166,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/8",
+   "segments_raw": 184,
+   "segments_clean": 184,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/9",
+   "segments_raw": 199,
+   "segments_clean": 199,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/10",
+   "segments_raw": 123,
+   "segments_clean": 123,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/11",
+   "segments_raw": 220,
+   "segments_clean": 218,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "I'm going to do it.",
+     "length": 3,
+     "start": 386.0,
+     "end": 389.3
+    }
+   ]
+  },
+  {
+   "video": "ODJ/12",
+   "segments_raw": 221,
+   "segments_clean": 217,
+   "removed": 4,
+   "runs": [
+    {
+     "text": "I would say,",
+     "length": 5,
+     "start": 349.5,
+     "end": 354.8
+    }
+   ]
+  },
+  {
+   "video": "ODJ/13",
+   "segments_raw": 181,
+   "segments_clean": 181,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/14",
+   "segments_raw": 103,
+   "segments_clean": 103,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/15",
+   "segments_raw": 172,
+   "segments_clean": 172,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/16",
+   "segments_raw": 187,
+   "segments_clean": 185,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "To laugh and sing.",
+     "length": 3,
+     "start": 382.4,
+     "end": 385.4
+    }
+   ]
+  },
+  {
+   "video": "ODJ/17",
+   "segments_raw": 206,
+   "segments_clean": 206,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/18",
+   "segments_raw": 198,
+   "segments_clean": 196,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "Thank you for having me.",
+     "length": 3,
+     "start": 622.9,
+     "end": 625.9
+    }
+   ]
+  },
+  {
+   "video": "ODJ/19",
+   "segments_raw": 220,
+   "segments_clean": 212,
+   "removed": 8,
+   "runs": [
+    {
+     "text": "So that I don't get this.",
+     "length": 5,
+     "start": 353.9,
+     "end": 357.8
+    },
+    {
+     "text": "Okay.",
+     "length": 5,
+     "start": 532.9,
+     "end": 533.0
+    }
+   ]
+  },
+  {
+   "video": "ODJ/20",
+   "segments_raw": 238,
+   "segments_clean": 238,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/21",
+   "segments_raw": 310,
+   "segments_clean": 292,
+   "removed": 18,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 19,
+     "start": 603.8,
+     "end": 606.8
+    }
+   ]
+  },
+  {
+   "video": "ODJ/22",
+   "segments_raw": 231,
+   "segments_clean": 195,
+   "removed": 36,
+   "runs": [
+    {
+     "text": "I'm not...",
+     "length": 29,
+     "start": 268.5,
+     "end": 272.6
+    },
+    {
+     "text": "Bye bye.",
+     "length": 9,
+     "start": 837.7,
+     "end": 845.3
+    }
+   ]
+  },
+  {
+   "video": "ODJ/23",
+   "segments_raw": 52,
+   "segments_clean": 52,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/24",
+   "segments_raw": 82,
+   "segments_clean": 82,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/25",
+   "segments_raw": 400,
+   "segments_clean": 398,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 1094.4,
+     "end": 1094.6
+    }
+   ]
+  },
+  {
+   "video": "ODJ/26",
+   "segments_raw": 86,
+   "segments_clean": 86,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/27",
+   "segments_raw": 197,
+   "segments_clean": 195,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "Thank you.",
+     "length": 3,
+     "start": 0.0,
+     "end": 60.1
+    }
+   ]
+  },
+  {
+   "video": "ODJ/28",
+   "segments_raw": 331,
+   "segments_clean": 312,
+   "removed": 19,
+   "runs": [
+    {
+     "text": "You're eating.",
+     "length": 5,
+     "start": 169.7,
+     "end": 174.7
+    },
+    {
+     "text": "Ooh.",
+     "length": 16,
+     "start": 439.6,
+     "end": 467.1
+    }
+   ]
+  },
+  {
+   "video": "ODJ/29",
+   "segments_raw": 101,
+   "segments_clean": 101,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/30",
+   "segments_raw": 80,
+   "segments_clean": 80,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "ODJ/31",
+   "segments_raw": 189,
+   "segments_clean": 189,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/1",
+   "segments_raw": 983,
+   "segments_clean": 906,
+   "removed": 77,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 208.5,
+     "end": 209.5
+    },
+    {
+     "text": "Yeah.",
+     "length": 29,
+     "start": 267.6,
+     "end": 271.8
+    },
+    {
+     "text": "Yeah.",
+     "length": 8,
+     "start": 271.8,
+     "end": 272.8
+    },
+    {
+     "text": "Yeah.",
+     "length": 37,
+     "start": 2008.8,
+     "end": 2038.9
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 2243.7,
+     "end": 2246.7
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 2420.0,
+     "end": 2423.0
+    }
+   ]
+  },
+  {
+   "video": "SUP/2",
+   "segments_raw": 868,
+   "segments_clean": 857,
+   "removed": 11,
+   "runs": [
+    {
+     "text": "I was in the office.",
+     "length": 4,
+     "start": 354.9,
+     "end": 358.8
+    },
+    {
+     "text": "Thank you.",
+     "length": 3,
+     "start": 387.9,
+     "end": 390.8
+    },
+    {
+     "text": "The impact.",
+     "length": 3,
+     "start": 2748.4,
+     "end": 2751.4
+    },
+    {
+     "text": "Thank you.",
+     "length": 3,
+     "start": 3741.4,
+     "end": 3743.9
+    },
+    {
+     "text": "Thank you.",
+     "length": 3,
+     "start": 3769.4,
+     "end": 3771.9
+    }
+   ]
+  },
+  {
+   "video": "SUP/3",
+   "segments_raw": 735,
+   "segments_clean": 735,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/4",
+   "segments_raw": 916,
+   "segments_clean": 894,
+   "removed": 22,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 17,
+     "start": 145.6,
+     "end": 147.5
+    },
+    {
+     "text": "Woo!",
+     "length": 5,
+     "start": 1507.1,
+     "end": 1508.7
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 1518.3,
+     "end": 1520.3
+    }
+   ]
+  },
+  {
+   "video": "SUP/5",
+   "segments_raw": 943,
+   "segments_clean": 911,
+   "removed": 32,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 25,
+     "start": 2003.8,
+     "end": 2025.4
+    },
+    {
+     "text": "Yeah.",
+     "length": 9,
+     "start": 2874.9,
+     "end": 2876.9
+    }
+   ]
+  },
+  {
+   "video": "SUP/6",
+   "segments_raw": 1013,
+   "segments_clean": 1011,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "laughter",
+     "length": 3,
+     "start": 3040.2,
+     "end": 3040.9
+    }
+   ]
+  },
+  {
+   "video": "SUP/7",
+   "segments_raw": 663,
+   "segments_clean": 647,
+   "removed": 16,
+   "runs": [
+    {
+     "text": "so",
+     "length": 17,
+     "start": 4.0,
+     "end": 58.0
+    }
+   ]
+  },
+  {
+   "video": "SUP/8",
+   "segments_raw": 850,
+   "segments_clean": 836,
+   "removed": 14,
+   "runs": [
+    {
+     "text": "I'm not sure.",
+     "length": 7,
+     "start": 141.6,
+     "end": 148.6
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 1196.2,
+     "end": 1196.4
+    },
+    {
+     "text": "Yeah.",
+     "length": 4,
+     "start": 1275.6,
+     "end": 1277.8
+    },
+    {
+     "text": "Yeah.",
+     "length": 4,
+     "start": 1371.9,
+     "end": 1374.4
+    }
+   ]
+  },
+  {
+   "video": "SUP/9",
+   "segments_raw": 848,
+   "segments_clean": 827,
+   "removed": 21,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 8,
+     "start": 528.5,
+     "end": 529.1
+    },
+    {
+     "text": "and there i met",
+     "length": 4,
+     "start": 642.0,
+     "end": 642.6
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 954.6,
+     "end": 956.1
+    },
+    {
+     "text": "the",
+     "length": 10,
+     "start": 2918.9,
+     "end": 2938.9
+    }
+   ]
+  },
+  {
+   "video": "SUP/10",
+   "segments_raw": 932,
+   "segments_clean": 895,
+   "removed": 37,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 27,
+     "start": 1745.5,
+     "end": 1748.4
+    },
+    {
+     "text": "the,",
+     "length": 10,
+     "start": 2128.9,
+     "end": 2132.9
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 3091.3,
+     "end": 3094.3
+    }
+   ]
+  },
+  {
+   "video": "SUP/11",
+   "segments_raw": 759,
+   "segments_clean": 751,
+   "removed": 8,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 645.3,
+     "end": 646.0
+    },
+    {
+     "text": "I'm not going to say it.",
+     "length": 5,
+     "start": 3193.2,
+     "end": 3195.7
+    },
+    {
+     "text": "I'm going to do it.",
+     "length": 3,
+     "start": 3367.3,
+     "end": 3370.3
+    }
+   ]
+  },
+  {
+   "video": "SUP/12",
+   "segments_raw": 819,
+   "segments_clean": 800,
+   "removed": 19,
+   "runs": [
+    {
+     "text": "Give me time.",
+     "length": 6,
+     "start": 267.3,
+     "end": 270.1
+    },
+    {
+     "text": "Yeah.",
+     "length": 6,
+     "start": 446.6,
+     "end": 447.6
+    },
+    {
+     "text": "if you're a parent,",
+     "length": 10,
+     "start": 2737.5,
+     "end": 2747.5
+    }
+   ]
+  },
+  {
+   "video": "SUP/13",
+   "segments_raw": 833,
+   "segments_clean": 781,
+   "removed": 52,
+   "runs": [
+    {
+     "text": "So that is.",
+     "length": 4,
+     "start": 470.6,
+     "end": 471.4
+    },
+    {
+     "text": "Thank you.",
+     "length": 13,
+     "start": 1660.6,
+     "end": 1664.3
+    },
+    {
+     "text": "...",
+     "length": 3,
+     "start": 1690.8,
+     "end": 1691.2
+    },
+    {
+     "text": "Yeah.",
+     "length": 13,
+     "start": 2473.0,
+     "end": 2486.0
+    },
+    {
+     "text": "Bye.",
+     "length": 24,
+     "start": 3546.6,
+     "end": 3570.6
+    }
+   ]
+  },
+  {
+   "video": "SUP/14",
+   "segments_raw": 906,
+   "segments_clean": 889,
+   "removed": 17,
+   "runs": [
+    {
+     "text": "I don't know.",
+     "length": 3,
+     "start": 1143.4,
+     "end": 1146.4
+    },
+    {
+     "text": "Yeah.",
+     "length": 5,
+     "start": 1172.6,
+     "end": 1173.3
+    },
+    {
+     "text": "He's a little bit older.",
+     "length": 3,
+     "start": 1524.0,
+     "end": 1527.0
+    },
+    {
+     "text": "Bye.",
+     "length": 4,
+     "start": 3251.2,
+     "end": 3312.2
+    },
+    {
+     "text": "Thank you.",
+     "length": 5,
+     "start": 3337.7,
+     "end": 3340.7
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 3548.6,
+     "end": 3549.0
+    }
+   ]
+  },
+  {
+   "video": "SUP/15",
+   "segments_raw": 852,
+   "segments_clean": 790,
+   "removed": 62,
+   "runs": [
+    {
+     "text": "Thank you.",
+     "length": 7,
+     "start": 612.2,
+     "end": 619.2
+    },
+    {
+     "text": "Yeah.",
+     "length": 36,
+     "start": 1618.5,
+     "end": 1622.3
+    },
+    {
+     "text": "the um",
+     "length": 3,
+     "start": 2136.3,
+     "end": 2143.8
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 2517.6,
+     "end": 2517.9
+    },
+    {
+     "text": "to the,",
+     "length": 18,
+     "start": 2597.8,
+     "end": 2612.7
+    }
+   ]
+  },
+  {
+   "video": "SUP/16",
+   "segments_raw": 761,
+   "segments_clean": 761,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/17",
+   "segments_raw": 786,
+   "segments_clean": 786,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/18",
+   "segments_raw": 1030,
+   "segments_clean": 1017,
+   "removed": 13,
+   "runs": [
+    {
+     "text": "You're in the memory.",
+     "length": 5,
+     "start": 668.6,
+     "end": 669.2
+    },
+    {
+     "text": "Thank you.",
+     "length": 5,
+     "start": 1545.9,
+     "end": 1548.1
+    },
+    {
+     "text": "Thank you.",
+     "length": 6,
+     "start": 3875.3,
+     "end": 3886.2
+    }
+   ]
+  },
+  {
+   "video": "SUP/19",
+   "segments_raw": 945,
+   "segments_clean": 920,
+   "removed": 25,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 11,
+     "start": 1738.4,
+     "end": 1739.2
+    },
+    {
+     "text": "Do you?",
+     "length": 16,
+     "start": 2821.8,
+     "end": 2823.3
+    }
+   ]
+  },
+  {
+   "video": "SUP/20",
+   "segments_raw": 876,
+   "segments_clean": 868,
+   "removed": 8,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 6,
+     "start": 998.3,
+     "end": 1001.3
+    },
+    {
+     "text": "Where is it?",
+     "length": 4,
+     "start": 3381.1,
+     "end": 3383.0
+    }
+   ]
+  },
+  {
+   "video": "SUP/21",
+   "segments_raw": 544,
+   "segments_clean": 544,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/22",
+   "segments_raw": 972,
+   "segments_clean": 970,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "I simply remember my pain",
+     "length": 3,
+     "start": 1767.5,
+     "end": 1772.6
+    }
+   ]
+  },
+  {
+   "video": "SUP/23",
+   "segments_raw": 699,
+   "segments_clean": 672,
+   "removed": 27,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 5,
+     "start": 2465.4,
+     "end": 2468.1
+    },
+    {
+     "text": "June 5th,-",
+     "length": 3,
+     "start": 2966.1,
+     "end": 2966.5
+    },
+    {
+     "text": "Bye.",
+     "length": 22,
+     "start": 3252.6,
+     "end": 3274.6
+    }
+   ]
+  },
+  {
+   "video": "SUP/24",
+   "segments_raw": 640,
+   "segments_clean": 636,
+   "removed": 4,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 1316.0,
+     "end": 1319.0
+    },
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 3278.7,
+     "end": 3281.7
+    }
+   ]
+  },
+  {
+   "video": "SUP/25",
+   "segments_raw": 873,
+   "segments_clean": 871,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "We are going to be there.",
+     "length": 3,
+     "start": 130.0,
+     "end": 130.4
+    }
+   ]
+  },
+  {
+   "video": "SUP/26",
+   "segments_raw": 699,
+   "segments_clean": 655,
+   "removed": 44,
+   "runs": [
+    {
+     "text": "Right.",
+     "length": 45,
+     "start": 1177.2,
+     "end": 1181.1
+    }
+   ]
+  },
+  {
+   "video": "SUP/27",
+   "segments_raw": 740,
+   "segments_clean": 738,
+   "removed": 2,
+   "runs": [
+    {
+     "text": "There's a broad.",
+     "length": 3,
+     "start": 1431.5,
+     "end": 1431.7
+    }
+   ]
+  },
+  {
+   "video": "SUP/28",
+   "segments_raw": 860,
+   "segments_clean": 860,
+   "removed": 0,
+   "runs": []
+  },
+  {
+   "video": "SUP/29",
+   "segments_raw": 1146,
+   "segments_clean": 1130,
+   "removed": 16,
+   "runs": [
+    {
+     "text": "Bye.",
+     "length": 3,
+     "start": 460.5,
+     "end": 463.5
+    },
+    {
+     "text": "All right.",
+     "length": 3,
+     "start": 1021.5,
+     "end": 1021.7
+    },
+    {
+     "text": "Thank you.",
+     "length": 3,
+     "start": 1613.4,
+     "end": 1616.1
+    },
+    {
+     "text": "I'm not.",
+     "length": 5,
+     "start": 2530.8,
+     "end": 2532.7
+    },
+    {
+     "text": "I go around.",
+     "length": 7,
+     "start": 2942.2,
+     "end": 2944.9
+    }
+   ]
+  },
+  {
+   "video": "SUP/30",
+   "segments_raw": 781,
+   "segments_clean": 770,
+   "removed": 11,
+   "runs": [
+    {
+     "text": "Yeah.",
+     "length": 3,
+     "start": 112.8,
+     "end": 115.8
+    },
+    {
+     "text": "Absolutely.",
+     "length": 3,
+     "start": 1170.6,
+     "end": 1172.3
+    },
+    {
+     "text": "Bye.",
+     "length": 8,
+     "start": 2889.1,
+     "end": 2896.2
+    }
+   ]
+  },
+  {
+   "video": "SUP/31",
+   "segments_raw": 604,
+   "segments_clean": 600,
+   "removed": 4,
+   "runs": [
+    {
+     "text": "Hey guys.",
+     "length": 5,
+     "start": 167.8,
+     "end": 172.8
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "videos": 94,
+  "missing": [],
+  "segments_raw": 42239,
+  "removed": 716,
+  "runs": 95,
+  "videos_changed": 41
+ }
+}

@@ -1,0 +1,2400 @@
+1
+00:00:00,000 --> 00:00:19,800
+Sup for real this time Rebecca what's up?
+
+2
+00:00:19,800 --> 00:00:23,400
+Sup again! Hi everybody!
+
+3
+00:00:23,400 --> 00:00:31,440
+Oh my gosh well again I am so sorry for all those technology woes. We're trying something
+
+4
+00:00:31,440 --> 00:00:36,200
+new trying to learn some new skill and we all know right sometimes when you go and you
+
+5
+00:00:36,200 --> 00:00:42,980
+try something new no it doesn't necessarily always work out the way you wanted to but
+
+6
+00:00:42,980 --> 00:00:47,440
+you know the important thing is you learn from it and maybe take that one thing that
+
+7
+00:00:47,440 --> 00:00:53,160
+you're gonna do differently next time and try it next time right to get better to build
+
+8
+00:00:53,160 --> 00:00:53,360
+that skill.
+
+9
+00:00:53,400 --> 00:00:56,780
+What are two things that went well Matthew?
+
+10
+00:00:56,780 --> 00:01:05,140
+You know I feel like I successfully got the live feed going right that was first thing
+
+11
+00:01:05,140 --> 00:01:11,080
+and the second thing was is I didn't totally freeze up when I noticed that it was not the
+
+12
+00:01:11,080 --> 00:01:18,780
+right site for it to go for everybody out there and was able to go with it in the moment
+
+13
+00:01:18,780 --> 00:01:23,160
+so and stay as Sapphire as I could.
+
+14
+00:01:23,160 --> 00:01:29,000
+Yeah and I think that's a great segue because as all of us are doing more and more online
+
+15
+00:01:29,000 --> 00:01:34,580
+these days we keep bringing back experts who can share with the certified community how
+
+16
+00:01:34,580 --> 00:01:39,580
+to do some of these tech pieces and we're learning right along with you so let's flex
+
+17
+00:01:39,580 --> 00:01:46,000
+some new muscles tonight and take some deep breaths and thank you guys for being here.
+
+18
+00:01:46,000 --> 00:01:50,580
+Yes thank you so much and so yeah speaking thank you very much for that segue Rebecca
+
+19
+00:01:50,580 --> 00:01:52,240
+I really appreciate it.
+
+20
+00:01:52,240 --> 00:01:53,040
+So speaking of technology.
+
+21
+00:01:53,040 --> 00:01:57,040
+So speaking of technology stuff we all know right now we're spending so much time on our
+
+22
+00:01:57,040 --> 00:02:08,300
+computers between Zoom or Facebook Live or whatever YouTube right we were using these
+
+23
+00:02:08,300 --> 00:02:14,300
+platforms to be able to communicate with each other and for some of us we use these platforms
+
+24
+00:02:14,300 --> 00:02:20,280
+to get our message out to connect with the people who we really want to connect to and
+
+25
+00:02:20,280 --> 00:02:22,800
+we want to be able to interact more with.
+
+26
+00:02:22,800 --> 00:02:26,300
+So I think that's a great segue for us to get that great information out that we have
+
+27
+00:02:26,300 --> 00:02:36,300
+and one way that we have actually with pack or or is a part of pack is a podcast and so
+
+28
+00:02:36,300 --> 00:02:44,800
+today joining us I have Emilio and Greg how you doing guys sup.
+
+29
+00:02:44,800 --> 00:02:45,800
+Hey Matthew.
+
+30
+00:02:45,800 --> 00:02:46,800
+Hey Rebecca.
+
+31
+00:02:46,800 --> 00:02:47,800
+Good to see you guys.
+
+32
+00:02:47,800 --> 00:02:48,800
+Hey guys.
+
+33
+00:02:52,800 --> 00:02:53,800
+Hey material 35.
+
+34
+00:02:53,800 --> 00:02:58,800
+Hey there Drew, fresh start on how to become a hits happy day this past Friday yeah Kerry
+
+35
+00:02:58,800 --> 00:03:06,100
+andlish you guys I know what I mean went back with a movie in the New York Times story yesterday
+
+36
+00:03:06,100 --> 00:03:20,320
+as well that the
+
+37
+00:03:20,320 --> 00:03:21,320
+movie Star Wars.
+
+38
+00:03:21,320 --> 00:03:22,320
+You.
+
+39
+00:03:22,320 --> 00:03:27,900
+I was sort of introduced to her and she said, Hey, you used to work in the radio business.
+
+40
+00:03:27,900 --> 00:03:33,900
+And I said, Yeah. And so that was it. And you're doing the program from now on. Oh,
+
+41
+00:03:33,900 --> 00:03:38,580
+by the way, meet Emilio. And so then Emilio came along. And if you think you're having
+
+42
+00:03:38,580 --> 00:03:46,940
+trouble with technology, I really struggle with it. So Emilio comes along and he watches as I
+
+43
+00:03:46,940 --> 00:03:52,060
+press the record button and sort of says, Okay, you're on your own. And then he disappears for
+
+44
+00:03:52,060 --> 00:03:58,680
+about an hour. And then at the end, he comes up and he goes like this, two thumbs up. And you
+
+45
+00:03:58,680 --> 00:04:04,860
+know, I got the recording. And if I don't manage to erase it during post production, then he's
+
+46
+00:04:04,860 --> 00:04:11,920
+relatively happy. Cool. So sounds like you guys have quite the partnership. And Greg, you,
+
+47
+00:04:11,980 --> 00:04:17,300
+you kind of started off here with this whole thing. And you were in that supporting role.
+
+48
+00:04:17,300 --> 00:04:22,040
+And then you were kind of led into that lead role for this whole situation. But
+
+49
+00:04:22,040 --> 00:04:26,340
+at least you've got Emilio there giving you that tech support that you've been looking for. So
+
+50
+00:04:26,340 --> 00:04:31,880
+that's, that's a positive, right? Well, that's one of the things that PAC does teach us about is to
+
+51
+00:04:31,880 --> 00:04:37,600
+build your support network. We can't, we all can't do everything ourselves. We all have our
+
+52
+00:04:37,600 --> 00:04:43,600
+strengths. I cannot begin to do what Emilio does. And as you can tell, he talks so much,
+
+53
+00:04:43,600 --> 00:04:46,700
+he probably does not really want to do what I do.
+
+54
+00:04:47,980 --> 00:04:51,440
+The perfect give and take.
+
+55
+00:04:52,040 --> 00:04:55,180
+Sort of a silent partner in the background there, Emilio.
+
+56
+00:04:55,540 --> 00:05:01,660
+Yeah, I much prefer to be the person behind the curtain than the person in the spotlight. So
+
+57
+00:05:01,660 --> 00:05:06,880
+kind of like the wizard in the Wizard of Oz, right? Pay no attention to the man behind the
+
+58
+00:05:06,880 --> 00:05:12,640
+curtain. Yeah, exactly. I hadn't thought of it that way. My dog looks like Toto. So maybe we
+
+59
+00:05:12,640 --> 00:05:19,560
+can pull it off. There you go. There you go. I see a theme. So I'm curious, guys,
+
+60
+00:05:19,880 --> 00:05:21,820
+what goes into the planning?
+
+61
+00:05:22,040 --> 00:05:28,780
+At least podcasts, and you know, actually, forgive me, let's back up just a second. Tell me the name
+
+62
+00:05:28,780 --> 00:05:33,960
+of the podcast that you run on YouTube, because that's where the platform is that you're using,
+
+63
+00:05:33,960 --> 00:05:35,620
+right, YouTube or something else?
+
+64
+00:05:36,860 --> 00:05:46,440
+We are, I initially uploaded to anchor.FM, which is where it basically propagates to the other
+
+65
+00:05:46,640 --> 00:05:50,780
+podcast platforms from. And then what I do is,
+
+66
+00:05:52,040 --> 00:06:02,180
+have the audio file ready, I create a what's called an MP4 version of that audio file,
+
+67
+00:06:02,380 --> 00:06:07,400
+which basically means adding the picture to it, converting it into a video, which then goes up
+
+68
+00:06:07,400 --> 00:06:14,860
+on YouTube. But the full name of the podcast is called the Dementia Care Partner Talk Show
+
+69
+00:06:14,860 --> 00:06:21,140
+Podcast. So really fast three times is a lot of fun.
+
+70
+00:06:21,140 --> 00:06:23,760
+Yeah, we didn't come up with anything snappy yet, did we?
+
+71
+00:06:24,500 --> 00:06:30,800
+No, no. Yeah, well, you didn't have a Bonnie Tilly in your corner, it sounds like,
+
+72
+00:06:30,840 --> 00:06:33,360
+when you were coming up with the name, because that's where we got ours.
+
+73
+00:06:33,640 --> 00:06:36,600
+Yeah, well, we inherited ours. So, you know.
+
+74
+00:06:36,640 --> 00:06:44,680
+Yeah, it was still a very good name and awesome show. I've listened to quite a few of them. So,
+
+75
+00:06:45,000 --> 00:06:49,980
+you know, these podcasts, I'm wondering how much planning goes into it,
+
+76
+00:06:50,200 --> 00:06:51,040
+how much...
+
+77
+00:06:51,140 --> 00:06:58,500
+How much really goes into making a podcast? Emilio gave us a taste of, okay, it's done. So now here's
+
+78
+00:06:58,500 --> 00:07:07,100
+what I do with it to create this MP4 and to put it out there for people to see the picture and to be
+
+79
+00:07:07,100 --> 00:07:12,920
+able to hear. But what about the planning of the actual episodes? What goes into all of that?
+
+80
+00:07:13,740 --> 00:07:19,560
+We did interview some of the participants in last year's conference leading up to the actual event
+
+81
+00:07:19,560 --> 00:07:19,920
+itself.
+
+82
+00:07:21,140 --> 00:07:26,700
+This year, we'll probably look at doing some of those things. But mostly, we're trying to address
+
+83
+00:07:26,700 --> 00:07:32,000
+immediate concerns that people have. And like I say, I could reach into my desk drawer here,
+
+84
+00:07:32,000 --> 00:07:40,100
+probably, and pull out a whole... This is all my stuff that I have for the podcast. And if I get
+
+85
+00:07:40,100 --> 00:07:43,740
+into the middle of it, there will be a whole bunch of questions that we're still working our way
+
+86
+00:07:43,740 --> 00:07:50,120
+through. And they're all very valid questions. And what we try and do is give people just enough
+
+87
+00:07:50,240 --> 00:07:51,140
+knowledge,
+
+88
+00:07:51,140 --> 00:07:56,480
+to know that they actually need more knowledge. And then maybe they'll contact a consultant, maybe
+
+89
+00:07:56,480 --> 00:08:01,580
+they'll go on YouTube, maybe they'll sign up for a course, maybe, you know, we just try and give them
+
+90
+00:08:01,580 --> 00:08:05,300
+enough because you can't answer everything in 10 minutes. It's just impossible.
+
+91
+00:08:05,600 --> 00:08:11,360
+Yeah, yeah. So that's, so you, you, you got these questions that are coming in, and you're taking
+
+92
+00:08:11,360 --> 00:08:17,420
+those questions, and you're giving them a taste of, of that potential of what can be done, or maybe
+
+93
+00:08:17,420 --> 00:08:20,960
+some avenues that you could look down to be able to get more information.
+
+94
+00:08:21,140 --> 00:08:28,460
+And more help, or to have somebody tell you more about it. So that at least that way, it's not like
+
+95
+00:08:28,460 --> 00:08:34,160
+those questions are left flat, they're given something and they're given a direction. And that
+
+96
+00:08:34,160 --> 00:08:39,620
+visual, right of that, that's the way you kind of want to go to get more, of course, it's more of a
+
+97
+00:08:40,200 --> 00:08:44,680
+verbal, isn't it? Yeah, then it is a visual, but still, it gives them that direction that they're
+
+98
+00:08:44,680 --> 00:08:50,700
+looking for. So that is, that's awesome. I mean, because I, I know that you guys have had a lot of
+
+99
+00:08:50,700 --> 00:08:51,120
+great questions. And I'm glad that you're here. And I'm glad that you're here. And I'm glad that you're
+
+100
+00:08:51,140 --> 00:08:51,940
+here. And I'm glad that you're here. And I'm glad that you're here. And I'm glad that you're here.
+
+101
+00:08:51,940 --> 00:08:52,620
+And I'm glad that you're here. And I'm glad that you're here. And I'm glad that you're here.
+
+102
+00:08:52,620 --> 00:08:56,940
+Especially with trying to help those folks out there who are caring for loved ones living with
+
+103
+00:08:56,940 --> 00:09:00,600
+dementia, who are needing that support and that help so
+
+104
+00:09:01,220 --> 00:09:05,740
+well, how can the program not be a success when you've got me and my lovely perfect for radio
+
+105
+00:09:05,740 --> 00:09:11,920
+face, Joanne Westbrook, who has all of the experience in the world and then Tifa Snow,
+
+106
+00:09:11,920 --> 00:09:16,320
+basically, I just have to ask any sort of a question, toss it towards home plate, and she
+
+107
+00:09:16,320 --> 00:09:21,120
+just hits it out of the park, no matter where I pitch it. It's it's great, because sometimes
+
+108
+00:09:21,140 --> 00:09:25,300
+she answers the question I didn't ask because she knows what she really needs to get out.
+
+109
+00:09:26,180 --> 00:09:30,340
+And it's good when you have a team that can just sort of adapt on the fly like that. So,
+
+110
+00:09:30,980 --> 00:09:35,060
+and then Amelia wakes up every once in a while and sort of make sure that we're still recording.
+
+111
+00:09:35,060 --> 00:09:39,540
+Hey, that's the need that he meets, right?
+
+112
+00:09:40,260 --> 00:09:43,940
+And you wonder, Greg, why I don't say much because I really don't have to.
+
+113
+00:09:43,940 --> 00:09:51,220
+When you surround yourself with such talented people, you kind of do the work for me.
+
+114
+00:09:51,220 --> 00:09:57,540
+There you go. There you go. Very cool. So, any advice you guys would have for folks
+
+115
+00:09:57,540 --> 00:10:02,260
+out there maybe who are interested in putting on like a podcast themselves? And we have some
+
+116
+00:10:02,260 --> 00:10:06,260
+of these certified community members out there who have their own businesses running,
+
+117
+00:10:06,260 --> 00:10:10,980
+and I'm sure they're looking for new avenues of ways to get their business out there and what
+
+118
+00:10:10,980 --> 00:10:13,460
+they're doing and how they would like to help people.
+
+119
+00:10:14,180 --> 00:10:16,980
+What's some advice you would have for somebody trying to start this up?
+
+120
+00:10:17,540 --> 00:10:23,140
+Well, I know Amelia will give you the technical background on that planning, planning, planning,
+
+121
+00:10:23,140 --> 00:10:29,620
+you know, and he'll perhaps offer some advice on how to do that. For the actual on the actual
+
+122
+00:10:29,620 --> 00:10:35,540
+podcast themselves, I was a broadcaster for about 30 years. So, I've probably done
+
+123
+00:10:36,260 --> 00:10:42,180
+one or two interviews in my career. It sort of becomes second nature for me.
+
+124
+00:10:43,780 --> 00:10:43,860
+I'm not a big fan of the podcast, but I'm a big fan of the podcast. I'm a big fan of the podcast.
+
+125
+00:10:43,860 --> 00:10:43,940
+I'm a big fan of the podcast. I'm a big fan of the podcast. I'm a big fan of the podcast. I'm a big fan of the podcast.
+
+126
+00:10:43,940 --> 00:10:48,900
+I used to sit and write out lists of questions. I still have questions as our guideline. But
+
+127
+00:10:50,660 --> 00:10:54,740
+one of the things I notice is when people are starting out quite often, they're so interested
+
+128
+00:10:54,740 --> 00:11:00,260
+in asking their questions that they miss something that is just thrown right at them, like a juicy
+
+129
+00:11:00,260 --> 00:11:05,460
+fat ball right down the middle. And they just go on to their next question and I'm going, you know,
+
+130
+00:11:05,460 --> 00:11:13,220
+you missed something. So, it's hard to sort of follow your script and listen. It's something that
+
+131
+00:11:13,220 --> 00:11:13,860
+takes a while. It's hard to sort of listen. It's something that takes a while. It's hard to sort of
+
+132
+00:11:13,860 --> 00:11:14,820
+listen. It's something that takes a while. It's hard to sort of listen. It's something that takes a while to do.
+
+133
+00:11:14,820 --> 00:11:18,260
+And so, that would be the sort of the single biggest thing that I would say to people is do
+
+134
+00:11:18,260 --> 00:11:24,100
+your prep, but also listen for those moments where you can go, aha, you know, those nice little Tifa
+
+135
+00:11:24,100 --> 00:11:28,500
+calls them aha moments, right? We get that little, all of a sudden, everything just comes together.
+
+136
+00:11:28,500 --> 00:11:33,140
+And I think Emilio has heard one or two on the program where we, you know, do something and all
+
+137
+00:11:33,140 --> 00:11:40,020
+of a sudden the magic happens. Yeah. So, that prep is so important. Sorry, Emilio. Go ahead.
+
+138
+00:11:40,020 --> 00:11:43,700
+Oh, no problem. Actually, I'm going to contradict Greg a little bit. I'm going to contradict Greg a little bit.
+
+139
+00:11:43,700 --> 00:11:50,660
+As far as the technical advice, like we mentioned earlier, we inherited this podcast.
+
+140
+00:11:50,660 --> 00:11:55,620
+So, as far as all the initial setup, everything that has to do with Anchor and putting it up on
+
+141
+00:11:55,620 --> 00:12:01,460
+YouTube, I didn't do because I didn't have to. Everything was already there. But what I will say
+
+142
+00:12:01,460 --> 00:12:09,780
+regarding anything technical is even if I was forced to start from scratch, my advice would be
+
+143
+00:12:09,780 --> 00:12:12,980
+Google and YouTube would be the two resources that I would definitely recommend.
+
+144
+00:12:12,980 --> 00:12:16,740
+And I would say that I would definitely check because there's nothing that you can't do or learn
+
+145
+00:12:17,300 --> 00:12:24,100
+by either Googling it or checking on YouTube. But one piece of advice that I actually gathered
+
+146
+00:12:24,100 --> 00:12:30,420
+from Valerie in preparation for this little interview is for somebody that's thinking of
+
+147
+00:12:30,420 --> 00:12:36,740
+starting a podcast is definitely think of who your audience is. The podcast is titled
+
+148
+00:12:36,740 --> 00:12:42,820
+Dementia Care Partner Talk Show because all of the content is geared towards people that are
+
+149
+00:12:42,980 --> 00:12:48,100
+care partners, whether it's in a professional setting or whether they're family caregivers
+
+150
+00:12:48,100 --> 00:12:53,380
+or care partners. You want to make sure that you are targeting or that you know who you're
+
+151
+00:12:53,380 --> 00:12:59,620
+targeting so that, like Greg said, the prep work that you do and all of the content that you create
+
+152
+00:12:59,620 --> 00:13:05,220
+is geared specifically for them. And that's what keeps them coming back because they know that
+
+153
+00:13:05,220 --> 00:13:10,580
+whatever piece of content you put out is going to be relevant to them. It's going to benefit them,
+
+154
+00:13:10,580 --> 00:13:11,300
+and they'll be able to get value from it. Greg Slavitt, MD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD,
+
+155
+00:13:11,300 --> 00:13:11,860
+PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD,
+
+156
+00:13:11,860 --> 00:13:14,340
+PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD, PhD. So definitely know
+
+157
+00:13:14,340 --> 00:13:21,140
+who your audience is in addition to all the prep work, you know, if you're thinking of starting
+
+158
+00:13:21,140 --> 00:13:25,620
+a podcast. Yeah, we pretty much stay in our lane, don't we Emilio? I mean we haven't talked about
+
+159
+00:13:25,620 --> 00:13:30,980
+cake decorating or anything else like that, so. Exactly. Exactly. I mean I love cake, but
+
+160
+00:13:31,780 --> 00:13:35,540
+that's basically where it stays at. That's where it ends. I love
+
+161
+00:13:35,540 --> 00:13:41,540
+the cake, just the prep work, yeah. Someone else can do that part. Very cool. So prep work, prep
+
+162
+00:13:41,540 --> 00:13:41,840
+work, prep work. Move more forward. Whole new world for you!
+
+163
+00:13:41,860 --> 00:13:47,880
+prep work, definitely preparing for this. And like that old saying goes, between me and my brother,
+
+164
+00:13:48,000 --> 00:13:52,700
+Google, we know everything. So all you ever got to do is Google something and you'll always figure
+
+165
+00:13:52,700 --> 00:13:57,860
+out what it is in one way or another. The worst experience you can have, Matthew, is when you get
+
+166
+00:13:57,860 --> 00:14:04,120
+a guest on and it's not a problem with with Teepa or Joanne or most of the others. But the absolute
+
+167
+00:14:04,120 --> 00:14:11,260
+nightmare for somebody who's doing a live radio program or a podcast or anything else is when you
+
+168
+00:14:11,260 --> 00:14:17,580
+ask them a question and they go, I'm nodding my head in case people can't see that. I'm nodding
+
+169
+00:14:17,580 --> 00:14:26,340
+my head. Or they give you a, yeah, no. Then you know it's going to be a long 10, 15, 20 minutes.
+
+170
+00:14:27,220 --> 00:14:33,900
+Oh man, yikes. Those are sleepless nights. Yes, the dreaded dead air sometimes too, right?
+
+171
+00:14:34,680 --> 00:14:38,900
+Very cool. Well, thank you so much, guys. We really appreciate you joining us and talking
+
+172
+00:14:38,900 --> 00:14:40,480
+a little bit about podcasts.
+
+173
+00:14:41,260 --> 00:14:46,280
+For all those out there who are looking to potentially start this, start something like
+
+174
+00:14:46,280 --> 00:14:50,720
+this up and get it going so they can get that information out there. Thank you again so,
+
+175
+00:14:50,720 --> 00:14:54,620
+so much. We really appreciate you guys. You do put this up in support.
+
+176
+00:14:56,260 --> 00:14:58,040
+Thanks, guys. Thank you.
+
+177
+00:15:00,900 --> 00:15:07,580
+Cool. So we're going to go into our next segment here, guys. And I'm really excited to introduce
+
+178
+00:15:07,580 --> 00:15:11,020
+this person. I got a chance to meet her a while back.
+
+179
+00:15:11,260 --> 00:15:17,500
+When I was going through Apprentice Days and go through that with her. And it's just been an
+
+180
+00:15:17,500 --> 00:15:23,320
+amazing journey that we've had together when we went through the Apprentice Days and then seeing
+
+181
+00:15:23,320 --> 00:15:30,620
+her continue on Facebook and things like that. She's a native of Atlanta. So she's been there
+
+182
+00:15:30,620 --> 00:15:36,180
+for a long time. She was an educator. She was the director of volunteers for a hospice company.
+
+183
+00:15:36,400 --> 00:15:40,500
+She's the director of the memory care in a community right now.
+
+184
+00:15:41,260 --> 00:15:49,580
+And she is building her company, the Graceful Journey in Atlanta right now. Please welcome
+
+185
+00:15:49,580 --> 00:15:52,880
+Stacey Sokol. Welcome, Stacey.
+
+186
+00:15:53,820 --> 00:15:58,020
+Thank you, guys. I'm so glad to be here with you. It's going to be fun.
+
+187
+00:15:58,840 --> 00:16:08,540
+Sup, Stacey. Thanks for coming on this evening. So tell us the million dollar question. How did you first learn about TIPA and Positive Approach to Care?
+
+188
+00:16:09,400 --> 00:16:10,900
+So I
+
+189
+00:16:11,260 --> 00:16:19,260
+got into the geriatric business. And, I was networking, and I came across this lady and she said,
+
+190
+00:16:19,260 --> 00:16:21,660
+oh, you know, you should look up
+
+191
+00:16:21,660 --> 00:16:28,480
+this lady TIPA snow. She's written a couple of books and it might be helpful to you. I've never
+
+192
+00:16:28,480 --> 00:16:34,320
+heard about her but you should try it. So I Googled her just like they were talking about
+
+193
+00:16:34,320 --> 00:16:35,300
+earlier.
+
+194
+00:16:35,720 --> 00:16:37,220
+And, I was like
+
+195
+00:16:37,220 --> 00:16:39,560
+mesmerized and
+
+196
+00:16:39,560 --> 00:16:41,140
+I saw she was
+
+197
+00:16:41,140 --> 00:16:45,800
+coming to Atlanta so the company I was working with I've enabled them to let me
+
+198
+00:16:45,800 --> 00:16:53,300
+go and when I first heard TIPA she was saying everything that I was thinking
+
+199
+00:16:53,300 --> 00:16:57,520
+which makes sense because she's more the extrovert and I'm more the introvert so
+
+200
+00:16:57,520 --> 00:17:03,100
+I just felt like it was common knowledge what she was saying and I always thought
+
+201
+00:17:03,100 --> 00:17:09,180
+working with people with dementia was common sense as well so you went to the
+
+202
+00:17:09,180 --> 00:17:13,980
+program more from a professional perspective to learn from what you could
+
+203
+00:17:13,980 --> 00:17:18,360
+do with your career but you also have had some family experience too right yes
+
+204
+00:17:18,360 --> 00:17:26,220
+my my grandmother and my grandfather both maternal and paternal had dementia
+
+205
+00:17:26,220 --> 00:17:33,600
+and my grandmother lived in a nursing home for about seven years and my only
+
+206
+00:17:33,600 --> 00:17:39,120
+goal when going to visit her was to get a reaction from her
+
+207
+00:17:39,120 --> 00:17:39,160
+and I was like oh my gosh I'm gonna die I'm gonna die I'm gonna die I'm gonna die
+
+208
+00:17:39,180 --> 00:17:44,800
+that's all I cared about and sometimes you just get laughter and sometimes you
+
+209
+00:17:44,800 --> 00:17:50,300
+get serious words but I had that awesome experience for seven years being able to
+
+210
+00:17:50,300 --> 00:17:56,820
+do that that's so awesome so fast forward a little bit so you saw TIPA at
+
+211
+00:17:56,820 --> 00:18:01,140
+the event and then how did you learn about becoming certified and what was
+
+212
+00:18:01,140 --> 00:18:08,560
+your first certification I learned about becoming certified because I met a former
+
+213
+00:18:08,560 --> 00:18:09,120
+pack employee and I was like oh my gosh I'm gonna die I'm gonna die I'm gonna die
+
+214
+00:18:09,120 --> 00:18:14,980
+all of a sudden I signed best coach search sign and announced that I'd Help
+
+215
+00:18:14,980 --> 00:18:27,620
+an employee Leslie Finkley at a TIPA intensive and I said I want to work for
+
+216
+00:18:27,620 --> 00:18:33,140
+pack how do I do this and so Leslie walked to me along the steps about how
+
+217
+00:18:33,140 --> 00:18:37,420
+to work for pack and my first certification was a was a trainer in Utah 2 years ago
+
+218
+00:18:37,420 --> 00:18:38,340
+okay so you started with becoming a pack certified independent trainer and then
+
+219
+00:18:38,340 --> 00:18:39,040
+What other certifications did you have before that?
+
+220
+00:18:39,040 --> 00:18:40,800
+What certifications do you hold?
+
+221
+00:18:40,800 --> 00:18:47,800
+I am also a consultant and I just did advanced consulting.
+
+222
+00:18:47,800 --> 00:18:49,920
+Wonderful.
+
+223
+00:18:49,920 --> 00:18:57,040
+So thinking of one of the big things we like to talk about with SEP is the difference that
+
+224
+00:18:57,040 --> 00:19:03,040
+your skill set hasn't changed from becoming certified, the skills that you have now that
+
+225
+00:19:03,040 --> 00:19:06,480
+you've been able to incorporate into your practice because of PAC.
+
+226
+00:19:06,480 --> 00:19:13,920
+Okay, so you want me to talk about the skills I had and then the skills that I've gained
+
+227
+00:19:13,920 --> 00:19:16,040
+since becoming a PAC member?
+
+228
+00:19:16,040 --> 00:19:23,360
+Yeah, so what difference did PAC skills make in your practice and your work with clients?
+
+229
+00:19:23,360 --> 00:19:29,480
+Okay, so PAC skills helped me this way.
+
+230
+00:19:29,480 --> 00:19:33,680
+One, to keep my agenda in my back pocket.
+
+231
+00:19:33,680 --> 00:19:34,680
+That's huge.
+
+232
+00:19:34,680 --> 00:19:36,440
+That's a daily practice I do all the time.
+
+233
+00:19:36,440 --> 00:19:47,800
+Making sure my client or whoever I'm about to see sees me before I approach them.
+
+234
+00:19:47,800 --> 00:19:56,640
+Respecting their space and also connecting with a person instead of just asking a question
+
+235
+00:19:56,640 --> 00:20:00,720
+because depending on where you are in your dementia, how are you or what did you have
+
+236
+00:20:00,720 --> 00:20:03,320
+for lunch just makes no sense.
+
+237
+00:20:03,320 --> 00:20:05,880
+But if you say, oh, I love your blue shirt, then I'm already in your life.
+
+238
+00:20:05,880 --> 00:20:06,400
+Okay.
+
+239
+00:20:06,400 --> 00:20:07,760
+I'm already connecting with you.
+
+240
+00:20:07,760 --> 00:20:11,880
+So a big piece of that is making that connection.
+
+241
+00:20:11,880 --> 00:20:18,960
+So that PPA, respecting that space, that PPC, making that connector, and then leading into
+
+242
+00:20:18,960 --> 00:20:21,560
+that positive action starter to engage.
+
+243
+00:20:21,560 --> 00:20:27,480
+So really just that fundamental ability to make a connection, it sounds like, has drastically
+
+244
+00:20:27,480 --> 00:20:29,160
+changed because of these PAC skills.
+
+245
+00:20:29,160 --> 00:20:31,640
+Definitely.
+
+246
+00:20:31,640 --> 00:20:35,760
+And the way I listen to people.
+
+247
+00:20:36,400 --> 00:20:42,640
+I did reflective listening before PAC, but I really pay attention to it and try and take
+
+248
+00:20:42,640 --> 00:20:44,480
+it a step further now.
+
+249
+00:20:44,480 --> 00:20:47,960
+And that's been helpful.
+
+250
+00:20:47,960 --> 00:20:48,960
+Nice.
+
+251
+00:20:48,960 --> 00:20:52,920
+So, and then I love the part where you said knowing that agenda, but not showing your
+
+252
+00:20:52,920 --> 00:20:53,920
+agenda.
+
+253
+00:20:53,920 --> 00:20:57,680
+I think that's something that we all take away from PAC because we, it's so easy to
+
+254
+00:20:57,680 --> 00:21:00,200
+go in with that agenda that we have in mind.
+
+255
+00:21:00,200 --> 00:21:03,840
+So yes, thank you for that reminder.
+
+256
+00:21:03,840 --> 00:21:05,080
+So what are you doing now?
+
+257
+00:21:05,080 --> 00:21:06,200
+So Matthew gave a little bit of a teaser.
+
+258
+00:21:06,200 --> 00:21:09,400
+I'm going to give you a little teaser of the many hats that you're wearing.
+
+259
+00:21:09,400 --> 00:21:13,040
+Tell us about what you're doing today.
+
+260
+00:21:13,040 --> 00:21:19,800
+So today I own a business called Graceful Journey and my business is three parts.
+
+261
+00:21:19,800 --> 00:21:26,840
+Can I, do I have the ability to show you my diagram?
+
+262
+00:21:26,840 --> 00:21:31,440
+I think that we can certainly give you that ability.
+
+263
+00:21:31,440 --> 00:21:34,280
+All right.
+
+264
+00:21:34,280 --> 00:21:35,280
+Okay.
+
+265
+00:21:35,280 --> 00:21:36,120
+Great.
+
+266
+00:21:36,400 --> 00:21:36,520
+All righty.
+
+267
+00:21:36,520 --> 00:21:38,880
+Thank you.
+
+268
+00:21:38,880 --> 00:21:42,240
+You want me to try it?
+
+269
+00:21:42,240 --> 00:21:43,200
+Can you start...
+
+270
+00:21:43,200 --> 00:21:45,080
+Can you start...
+
+271
+00:21:45,080 --> 00:21:46,600
+You want me to keep talking?
+
+272
+00:21:46,600 --> 00:21:47,800
+Okay.
+
+273
+00:21:47,800 --> 00:21:50,200
+So my business is three parts.
+
+274
+00:21:50,200 --> 00:21:52,600
+The first part is care planning.
+
+275
+00:21:52,600 --> 00:21:57,160
+When someone is diagnosed with a terminal illness, it does not mean they are going to
+
+276
+00:21:57,160 --> 00:22:00,320
+die right away.
+
+277
+00:22:00,320 --> 00:22:03,400
+And so I help people live a quality of life by saying, okay, you have this little thing,
+
+278
+00:22:03,400 --> 00:22:04,720
+it's not going to heal you.
+
+279
+00:22:04,720 --> 00:22:05,480
+You have this other thing.
+
+280
+00:22:05,480 --> 00:22:11,480
+you have this illness, what can you do? What are your limitations? What kind of support
+
+281
+00:22:11,480 --> 00:22:17,720
+does your care partner need and what kind of support do you need? I'm first and foremost
+
+282
+00:22:17,720 --> 00:22:27,120
+concerned about my client's safety, both physical and mental health. And I also walk that line
+
+283
+00:22:27,120 --> 00:22:31,400
+of I'm concerned about the safety for the physical and mental health also of the care
+
+284
+00:22:31,400 --> 00:22:40,000
+partner. So I walk that balance there knowing my focus is the individual who has the terminal
+
+285
+00:22:40,000 --> 00:22:46,320
+illness, but I have to have that care partner on board and feeling supported as well. So
+
+286
+00:22:46,320 --> 00:22:50,840
+that's one part of my journey. Sometimes I just come in and I help them with a plan.
+
+287
+00:22:51,840 --> 00:23:00,980
+The second part of my journey is I teach care partner education and training. So I take
+
+288
+00:23:00,980 --> 00:23:01,380
+my passion.
+
+289
+00:23:01,400 --> 00:23:07,180
+I take my back skills and I apply them across the board to families that are dealing with
+
+290
+00:23:07,180 --> 00:23:12,880
+a terminal illness. Because just like you said, positive approach, positive connection
+
+291
+00:23:12,880 --> 00:23:19,280
+makes sense even if you don't have a terminal illness. And so I teach families about those
+
+292
+00:23:19,280 --> 00:23:26,120
+techniques. I teach families what Tipa taught me. There's four other ways to take a shower.
+
+293
+00:23:26,120 --> 00:23:31,380
+Is that really the hill you want to die on? You know, all the time.
+
+294
+00:23:31,400 --> 00:23:38,840
+So I teach them techniques for survival. Oh, did you see that?
+
+295
+00:23:38,840 --> 00:23:48,480
+And then the third part of my business that I treasure greatly is an end of life coach.
+
+296
+00:23:48,480 --> 00:23:55,180
+I treasure the part of where I get to be with Amber and Pearls at their most vulnerable
+
+297
+00:23:55,180 --> 00:23:59,400
+time. Because I feel blessed that someone would allow me into their home. I feel blessed
+
+298
+00:23:59,400 --> 00:24:00,400
+that someone would allow me into their home. And I'm so grateful that I'm able to be with
+
+299
+00:24:00,400 --> 00:24:01,400
+them. And I'm so grateful that I'm able to be with them. And I'm so grateful that I'm
+
+300
+00:24:01,400 --> 00:24:06,420
+able to be with them. And I'm so blessed that they're alive at their very special time.
+
+301
+00:24:06,420 --> 00:24:14,500
+And I got a certification as an end of life doula. Which gave me the education I need
+
+302
+00:24:14,500 --> 00:24:22,080
+to be able to have a holistic approach to educate and support the family and also be
+
+303
+00:24:22,080 --> 00:24:29,860
+the voice for the individual that is transitioning. And I always use the analogy, if the person
+
+304
+00:24:29,860 --> 00:24:30,860
+that is transitioning wants business. Then they should have a coach that could say,
+
+305
+00:24:30,860 --> 00:24:31,360
+I want people to listen to what they're hearing. Because that's the end of life. I've got a
+
+306
+00:24:31,360 --> 00:24:33,460
+beer or chocolate, have it.
+
+307
+00:24:33,460 --> 00:24:36,300
+That's not what's going to kill you.
+
+308
+00:24:36,300 --> 00:24:39,580
+And families get really stuck on that.
+
+309
+00:24:39,580 --> 00:24:41,980
+I'm also a big advocate of no pain.
+
+310
+00:24:44,160 --> 00:24:46,740
+I can't, I just make suggestions,
+
+311
+00:24:46,740 --> 00:24:50,320
+but I'm also quick to jump in the bed
+
+312
+00:24:50,320 --> 00:24:53,420
+and snuggle with someone that's transitioning too,
+
+313
+00:24:53,420 --> 00:24:56,820
+to make them feel safe and loved
+
+314
+00:24:56,820 --> 00:25:01,820
+and create that safety environment for them
+
+315
+00:25:02,980 --> 00:25:05,400
+when they do decide to transition.
+
+316
+00:25:06,640 --> 00:25:08,860
+Wow, so you are, I'm imagining,
+
+317
+00:25:08,860 --> 00:25:11,000
+staying quite busy with those roles
+
+318
+00:25:11,000 --> 00:25:13,040
+and really supporting not only the person
+
+319
+00:25:13,040 --> 00:25:15,700
+with the terminal illness, but as you said, their family,
+
+320
+00:25:15,700 --> 00:25:19,420
+and then holding their hands through that transition
+
+321
+00:25:19,420 --> 00:25:23,100
+is so vital and so needed.
+
+322
+00:25:23,100 --> 00:25:26,320
+Families, I see, are really just struggling for support,
+
+323
+00:25:26,320 --> 00:25:26,580
+and it sounds like you're saying,
+
+324
+00:25:26,580 --> 00:25:26,620
+I'm just trying to get them to get out of the way.
+
+325
+00:25:26,620 --> 00:25:26,660
+I'm just trying to get them out of the way.
+
+326
+00:25:26,660 --> 00:25:26,780
+I'm just trying to get them out of the way.
+
+327
+00:25:26,780 --> 00:25:26,800
+I'm just trying to get them out of the way.
+
+328
+00:25:26,800 --> 00:25:27,160
+I'm just trying to get them out of the way.
+
+329
+00:25:27,160 --> 00:25:30,060
+I feel like you're really helping meet a need that's there.
+
+330
+00:25:30,060 --> 00:25:32,320
+So, wow, very cool.
+
+331
+00:25:32,320 --> 00:25:34,440
+So if people in the certified community
+
+332
+00:25:34,440 --> 00:25:39,020
+or others who are viewing wanted to get in touch with you
+
+333
+00:25:39,020 --> 00:25:42,540
+to learn more about what you're doing and share ideas,
+
+334
+00:25:42,540 --> 00:25:44,900
+how would they get in touch with you?
+
+335
+00:25:44,900 --> 00:25:49,900
+So email me at Stacy, S-T-A-C-I,
+
+336
+00:25:52,020 --> 00:25:56,760
+at GracefulJourneyATL.com.
+
+337
+00:25:56,760 --> 00:26:01,760
+I also have a Facebook page, GracefulJourneyATL.com,
+
+338
+00:26:01,760 --> 00:26:03,760
+and a website.
+
+339
+00:26:03,760 --> 00:26:08,820
+Do you want to go ahead and say the website address?
+
+340
+00:26:08,820 --> 00:26:10,120
+Oh, yes, sorry.
+
+341
+00:26:10,120 --> 00:26:14,320
+So it's GracefulJourneyATL.com.
+
+342
+00:26:14,320 --> 00:26:15,900
+I did that before, sorry.
+
+343
+00:26:15,900 --> 00:26:20,280
+And my Facebook page is just GracefulJourneyATL.
+
+344
+00:26:20,280 --> 00:26:24,180
+And I put up some funny or engaging videos
+
+345
+00:26:24,180 --> 00:26:26,360
+on my Facebook page.
+
+346
+00:26:26,360 --> 00:26:30,220
+I did one yesterday about parents and partners
+
+347
+00:26:30,220 --> 00:26:31,680
+all have the same letters.
+
+348
+00:26:31,680 --> 00:26:34,020
+Which one are you when it comes to caregiving?
+
+349
+00:26:35,380 --> 00:26:36,280
+Nice.
+
+350
+00:26:36,280 --> 00:26:38,360
+I love your creativity and your spunk.
+
+351
+00:26:38,360 --> 00:26:41,320
+I like following what you're doing each day, Stacy.
+
+352
+00:26:41,320 --> 00:26:42,740
+So thank you for that.
+
+353
+00:26:42,740 --> 00:26:46,480
+And we also like to highlight one of the many, many
+
+354
+00:26:46,480 --> 00:26:51,480
+PAC tools that TIPA and the PAC team have given us
+
+355
+00:26:52,080 --> 00:26:53,360
+to use in our practice.
+
+356
+00:26:53,360 --> 00:26:55,960
+And when we were talking before this,
+
+357
+00:26:56,360 --> 00:26:59,360
+Last time on episode tonight,
+
+358
+00:26:59,360 --> 00:27:04,720
+you mentioned a tool that you go to quite frequently.
+
+359
+00:27:04,720 --> 00:27:07,760
+So I'm wondering if you can tell us more about that tool.
+
+360
+00:27:07,760 --> 00:27:11,020
+So the tool that I use most often
+
+361
+00:27:11,020 --> 00:27:13,700
+is six pieces of the puzzle.
+
+362
+00:27:13,700 --> 00:27:17,220
+And I learned that in my first consulting course.
+
+363
+00:27:17,220 --> 00:27:19,620
+And at first when I was practicing with it,
+
+364
+00:27:19,620 --> 00:27:20,600
+I was overwhelmed.
+
+365
+00:27:20,600 --> 00:27:22,740
+I was like, there is no way I can use this.
+
+366
+00:27:22,740 --> 00:27:24,280
+I don't understand.
+
+367
+00:27:24,280 --> 00:27:26,240
+But now, I love it. I love it.
+
+368
+00:27:26,240 --> 00:27:31,820
+that hey these are the things that we can't change so you need to let that go
+
+369
+00:27:31,820 --> 00:27:38,480
+but this is what you can enhance this is what you can make better and I tell you
+
+370
+00:27:38,480 --> 00:27:45,140
+the part when I go through using pieces of the puzzle and I talk about brain
+
+371
+00:27:45,140 --> 00:27:50,640
+changes and I'm like this is what you can't change it gives them really an aha
+
+372
+00:27:50,640 --> 00:27:59,740
+moment oh yeah can't do that so what can you do to make it better so that's my
+
+373
+00:27:59,740 --> 00:28:05,400
+tool of choice always so Matthew if you can put that up on the screen because
+
+374
+00:28:05,400 --> 00:28:10,560
+what you're talking about Stacy is the six pieces of the puzzle and those
+
+375
+00:28:10,560 --> 00:28:15,920
+pieces that are we can have an influence or an impact on and those pieces that we
+
+376
+00:28:15,920 --> 00:28:19,700
+can't really that are fixed or yes
+
+377
+00:28:19,700 --> 00:28:20,200
+kind of
+
+378
+00:28:20,640 --> 00:28:25,860
+they're brought to the table and we deal with them so you can see that now on your
+
+379
+00:28:25,860 --> 00:28:32,260
+screen and so you mentioned some ahas with using this tool with yourself and
+
+380
+00:28:32,260 --> 00:28:39,100
+with families can you tell us more about that so the ahas come at the bottom half
+
+381
+00:28:39,100 --> 00:28:44,060
+the three pieces that cannot be changed the brain changes the person and the
+
+382
+00:28:44,060 --> 00:28:50,480
+health changes we as care partners can't do anything about that so
+
+383
+00:28:50,640 --> 00:28:54,520
+lack of personal communication they're known with a lot of body roll and
+
+384
+00:28:54,520 --> 00:28:59,460
+little work and you don't have scheduled and if you can have those bootstraps
+
+385
+00:28:59,460 --> 00:29:08,800
+the here their
+
+386
+00:29:08,800 --> 00:29:14,580
+with those Shivada screen hahaha
+
+387
+00:29:14,580 --> 00:29:18,540
+pra fourteen
+
+388
+00:29:18,540 --> 00:29:20,600
+yeah yeah print medical rounding yani
+
+389
+00:29:20,640 --> 00:29:27,920
+How is that time productive for them and for you?
+
+390
+00:29:27,920 --> 00:29:31,200
+But really, making life meaningful, what does that mean?
+
+391
+00:29:31,200 --> 00:29:34,220
+Does that mean making a grocery list?
+
+392
+00:29:34,220 --> 00:29:36,060
+Does that mean clipping coupons?
+
+393
+00:29:36,060 --> 00:29:40,040
+Does that mean matching socks, putting screws in a container?
+
+394
+00:29:40,040 --> 00:29:44,200
+What is meaningful to your loved one?
+
+395
+00:29:44,200 --> 00:29:45,080
+Period.
+
+396
+00:29:45,080 --> 00:29:49,420
+And meaningful activities don't have to last a long time.
+
+397
+00:29:49,420 --> 00:29:53,560
+It's just constantly engaging the brain.
+
+398
+00:29:53,560 --> 00:30:01,560
+So not only that aha of those pieces that we can't change,
+
+399
+00:30:01,560 --> 00:30:05,400
+but also the pieces that we can and that empowerment of how
+
+400
+00:30:05,400 --> 00:30:10,260
+can we make use of time that fits with someone's
+
+401
+00:30:10,260 --> 00:30:12,400
+lifelong preferences of time use.
+
+402
+00:30:12,400 --> 00:30:14,800
+How can we make that environment,
+
+403
+00:30:14,800 --> 00:30:16,200
+and you talked about the four Fs,
+
+404
+00:30:16,200 --> 00:30:19,040
+friendly, familiar, functional, and?
+
+405
+00:30:19,040 --> 00:30:19,420
+Forget.
+
+406
+00:30:19,420 --> 00:30:21,080
+Living.
+
+407
+00:30:21,080 --> 00:30:21,580
+Yeah.
+
+408
+00:30:21,580 --> 00:30:26,540
+So how can we influence those pieces and that stakeholder
+
+409
+00:30:26,540 --> 00:30:31,020
+piece that it is part of a team, just like with us all here
+
+410
+00:30:31,020 --> 00:30:35,360
+tonight on SEP as being a team, but also how do families
+
+411
+00:30:35,360 --> 00:30:37,000
+put their team together?
+
+412
+00:30:37,000 --> 00:30:41,200
+So that you said when you first learned about the tool,
+
+413
+00:30:41,200 --> 00:30:43,540
+it was kind of like, ah.
+
+414
+00:30:43,540 --> 00:30:46,700
+But now it really has become a big part of your practice,
+
+415
+00:30:46,700 --> 00:30:47,660
+it sounds like.
+
+416
+00:30:47,660 --> 00:30:49,340
+Yes.
+
+417
+00:30:49,420 --> 00:30:51,180
+Very cool.
+
+418
+00:30:51,180 --> 00:30:55,240
+And so I think that Carrie has given you an opportunity
+
+419
+00:30:55,240 --> 00:30:58,960
+to share your screen if you want to show that diagram
+
+420
+00:30:58,960 --> 00:31:03,540
+that you were talking about with your services.
+
+421
+00:31:03,540 --> 00:31:04,540
+Can you see that?
+
+422
+00:31:07,600 --> 00:31:09,040
+Can you all see that?
+
+423
+00:31:09,040 --> 00:31:09,800
+Hold on.
+
+424
+00:31:09,800 --> 00:31:11,360
+All right, just a second.
+
+425
+00:31:11,360 --> 00:31:13,740
+I'm still a novice.
+
+426
+00:31:13,740 --> 00:31:15,540
+Always learning.
+
+427
+00:31:15,540 --> 00:31:17,780
+We are all learning.
+
+428
+00:31:17,780 --> 00:31:19,180
+OK, now you can see it.
+
+429
+00:31:19,420 --> 00:31:20,500
+OK.
+
+430
+00:31:20,500 --> 00:31:24,040
+So because my business is threefold,
+
+431
+00:31:24,040 --> 00:31:26,240
+I put together this Venn diagram,
+
+432
+00:31:26,240 --> 00:31:31,780
+having been a teacher, to show people what I do.
+
+433
+00:31:31,780 --> 00:31:33,780
+So I do care management.
+
+434
+00:31:33,780 --> 00:31:37,180
+I do care partner training and education.
+
+435
+00:31:37,180 --> 00:31:39,640
+And I'm an end of life coach.
+
+436
+00:31:39,640 --> 00:31:44,920
+But they all overlap because I'm helping families navigate,
+
+437
+00:31:44,920 --> 00:31:49,180
+advocate, and educate at each part of the system.
+
+438
+00:31:49,180 --> 00:31:49,280
+OK.
+
+439
+00:31:49,280 --> 00:31:55,460
+RIKITA TAYAJAWARANNOE- Thank you.
+
+440
+00:31:55,460 --> 00:32:00,180
+Well, now, I'm getting sort of placeful,
+
+441
+00:32:00,180 --> 00:32:03,140
+but I think there's still time for some play.
+
+442
+00:32:03,140 --> 00:32:04,600
+I'm back in fashion.
+
+443
+00:32:04,600 --> 00:32:09,760
+outlined about millennials, how they use and release
+
+444
+00:32:09,760 --> 00:32:12,940
+their distinction.
+
+445
+00:32:12,940 --> 00:32:15,860
+And so I blah blah blah blah, going,
+
+446
+00:32:15,860 --> 00:32:18,360
+oh, whatever your brand is, I've got that vai,
+
+447
+00:32:18,360 --> 00:32:24,040
+amazing job here of showing all of these three areas that you're you're bringing
+
+448
+00:32:24,040 --> 00:32:29,680
+together to really give that overall support for those folks that you're
+
+449
+00:32:29,680 --> 00:32:37,640
+serving that is so amazing so you know I'm curious there's one thing that I was
+
+450
+00:32:37,640 --> 00:32:42,540
+really connected to and out of all the amazing things you do normally on there
+
+451
+00:32:42,540 --> 00:32:50,040
+anyway but this one thing was with a peacock egg in the water so tell me tell
+
+452
+00:32:50,040 --> 00:32:54,920
+me just a little bit about that experience that you gave us with that
+
+453
+00:32:54,920 --> 00:33:00,300
+peacock egg in the water okay so I'm trying to not share my screen there you
+
+454
+00:33:00,300 --> 00:33:07,680
+go okay so a couple of weeks ago I introduced everyone to patience okay I
+
+455
+00:33:07,680 --> 00:33:12,240
+had found patience at Target and it said grow a peacock
+
+456
+00:33:12,240 --> 00:33:12,520
+and it was a peacock and I'm like oh no I'm not going to grow a peacock so I'm going to go to the
+
+457
+00:33:12,520 --> 00:33:17,240
+zoo and I thought that's perfect for pack so what I did probably about two
+
+458
+00:33:17,240 --> 00:33:22,360
+weeks ago I brought pack to life I hatched well she hatched herself and
+
+459
+00:33:22,360 --> 00:33:29,420
+then I just included you guys on the journey with her and and applied PPA to
+
+460
+00:33:29,420 --> 00:33:35,980
+her MPC to her and it was really awesome when I was doing that to talk about yeah
+
+461
+00:33:35,980 --> 00:33:42,220
+these skills apply to everything just like I was saying earlier so I just love
+
+462
+00:33:42,220 --> 00:33:48,720
+Patience along for the journey and everyone else. And I haven't posted about her recently because
+
+463
+00:33:48,720 --> 00:33:54,740
+you can see she is changing and I didn't want to embarrass her anymore. So I just keep her to
+
+464
+00:33:54,740 --> 00:34:01,160
+myself right now, but this is Patience the peacock and I loved journeying with you and her.
+
+465
+00:34:01,880 --> 00:34:06,800
+Yeah, that is so cool. And that's what I love so much about it though. The use of the PPA as you
+
+466
+00:34:06,800 --> 00:34:13,120
+were going through and just thinking outside of that box, you know, not being stuck so much on,
+
+467
+00:34:13,180 --> 00:34:17,960
+oh, PPA can only be used for folks living with dementia and that's it. No, it's, there's just
+
+468
+00:34:17,960 --> 00:34:23,680
+so much more to that. It can be used so much more. And, and being a consultant, I mean,
+
+469
+00:34:24,460 --> 00:34:31,960
+you're supporting those caregivers out there, those care partners and their loved ones. And so
+
+470
+00:34:31,960 --> 00:34:36,780
+it's all about the whole thing, just like those diagrams that you showed us. It's not just about,
+
+471
+00:34:36,780 --> 00:34:42,420
+the person living with dementia. It's about those care partners too, that are there and need that
+
+472
+00:34:42,420 --> 00:34:49,340
+support as well. So that's just so amazing. Stacey, thank you so, so much for joining us.
+
+473
+00:34:49,700 --> 00:34:56,420
+We really, really appreciate you showing us how you're shining out there with all of these skills
+
+474
+00:34:56,420 --> 00:35:02,540
+and using those PAC certifications to, to do all the amazing things you are doing out there.
+
+475
+00:35:03,200 --> 00:35:06,760
+Thank you guys for letting me be part of this group.
+
+476
+00:35:06,780 --> 00:35:11,920
+It feels really special and I'm glad I got to be with you. Thank you.
+
+477
+00:35:12,420 --> 00:35:22,740
+You're so welcome. So we are going to show what's coming up here for you guys.
+
+478
+00:35:26,540 --> 00:35:32,140
+As soon as I can get it to share, there it goes. All right. So looking at our upcoming community
+
+479
+00:35:32,140 --> 00:35:35,940
+webinars and events, it's not too late.
+
+480
+00:35:35,940 --> 00:35:36,540
+August 22nd.
+
+481
+00:35:36,780 --> 00:35:42,020
+August 22nd, the virtual group consult for family care partners. So speaking of family care partners,
+
+482
+00:35:42,740 --> 00:35:47,820
+right, with what we were just talking about with Stacey, TIPA is going to be running one
+
+483
+00:35:47,820 --> 00:35:53,400
+tomorrow at three and you can still sign up for that. I looked on there. You can still sign up
+
+484
+00:35:53,400 --> 00:36:01,980
+for that. So it's still there for you. August 28th. We've got that champion one rolling. So
+
+485
+00:36:01,980 --> 00:36:06,500
+now that's at 10 a.m. We've talked about those champion courses. This is that one,
+
+486
+00:36:06,500 --> 00:36:06,520
+where you can sign up for that. So it's still there for you. So it's still there for you.
+
+487
+00:36:06,520 --> 00:36:06,760
+So it's still there for you. So it's still there for you. So it's still there for you. So it's still there for you.
+
+488
+00:36:06,760 --> 00:36:06,960
+So it's still there for you. So it's still there for you. So it's still there for you. So it's still there for you.
+
+489
+00:36:06,960 --> 00:36:07,740
+So it's still there for you. So it's still there for you. So it's still there for you. So you just get in there
+
+490
+00:36:07,740 --> 00:36:12,460
+and you start improving those connections and relationships and the task completion with our
+
+491
+00:36:12,460 --> 00:36:18,260
+folks that we're trying to help. And then we got September 4th at champion two. Now we're starting
+
+492
+00:36:18,260 --> 00:36:22,000
+to delve into that hand under hand thing and getting a little more successful with helping
+
+493
+00:36:22,000 --> 00:36:28,460
+folks with that hand under hand technique. September 7th, brain connection cafe with TIPA.
+
+494
+00:36:28,680 --> 00:36:32,780
+So this time TIPA is going to be running that. So, you know, that's definitely going to be one
+
+495
+00:36:32,780 --> 00:36:35,620
+you want to catch when I jump on there and that's at three p.m.
+
+496
+00:36:36,760 --> 00:36:43,200
+And then, of course, at the bottom, you see, and I'm so sorry, guys.
+
+497
+00:36:43,420 --> 00:36:45,920
+We should totally be telling you about this.
+
+498
+00:36:45,960 --> 00:36:57,980
+And I know most of you already know, but every day, lives, TIPA for 10, in the morning, 8 a.m. Eastern, always a great one to catch, especially when she has her grandkids on there.
+
+499
+00:36:58,140 --> 00:36:58,880
+They're so cute.
+
+500
+00:36:58,880 --> 00:37:07,780
+And she does such an amazing job of using those experiences with them and showing those examples as she's going through what that topic is that day.
+
+501
+00:37:08,400 --> 00:37:24,640
+And then the live at 5, every Monday through Friday, 5 p.m. Eastern, our PAC team comes live to you talking about different things, trying to give different topics to help all you folks out there so that we can help support you.
+
+502
+00:37:24,640 --> 00:37:28,740
+So we can help put the SUP in support for all of you out there and give you.
+
+503
+00:37:28,740 --> 00:37:33,300
+As much as we can to help with anything that's going on out there.
+
+504
+00:37:33,300 --> 00:37:34,780
+And we always love to hear from you.
+
+505
+00:37:34,780 --> 00:37:39,200
+And speaking of loving to hear from you guys, I could really use your help.
+
+506
+00:37:40,540 --> 00:37:58,460
+I would love it if you guys could put in that comment section below things that you might want to see on SUP or hear about, like the tools that you're using out there or the amazing things that you guys are doing or the amazing things you're seeing other people doing out there, too.
+
+507
+00:37:58,740 --> 00:38:02,940
+We would love to get some information from you guys and hear about all of those different things.
+
+508
+00:38:03,080 --> 00:38:13,060
+So if you could help me out and put in that comment section down there some things that you would love to hear about or tell us about, please, please share that with us.
+
+509
+00:38:13,120 --> 00:38:14,420
+We would love to hear those things.
+
+510
+00:38:15,260 --> 00:38:21,740
+And so going back to those events, teepasnow.com backslash events.
+
+511
+00:38:22,040 --> 00:38:27,480
+So you guys can see more of that information on there and sign up as well for those things.
+
+512
+00:38:27,900 --> 00:38:28,580
+And then.
+
+513
+00:38:28,740 --> 00:38:35,060
+Looking at for all of our certified community folks, webinars and certification events that are coming up.
+
+514
+00:38:35,220 --> 00:38:41,660
+So August 27th, we've got that certified community webinar engagement with Amanda at 2 p.m.
+
+515
+00:38:42,320 --> 00:38:44,960
+So you can jump on there and work with Amanda.
+
+516
+00:38:45,120 --> 00:38:46,000
+She is amazing.
+
+517
+00:38:46,660 --> 00:38:48,800
+Always a joy to work with her when you get a chance.
+
+518
+00:38:48,840 --> 00:38:49,600
+She's always so busy.
+
+519
+00:38:49,680 --> 00:38:51,120
+She's kind of like Teepa, really.
+
+520
+00:38:51,120 --> 00:38:57,200
+You know, it's hard to get a hold of Teepa other than now that Teepa is doing so much more.
+
+521
+00:38:57,320 --> 00:38:58,620
+But Amanda can be that way, too.
+
+522
+00:38:58,620 --> 00:39:02,820
+So if you get a chance to spend some time with Amanda, then I would take it.
+
+523
+00:39:03,360 --> 00:39:07,020
+September 3rd, the certified community webinar, all certs with Teepa.
+
+524
+00:39:07,120 --> 00:39:09,920
+So Teepa is jumping on that one, bringing all the certs in.
+
+525
+00:39:10,200 --> 00:39:15,660
+Let's let's get together and let's talk about some things and let's work on work on our skills and awareness.
+
+526
+00:39:15,840 --> 00:39:17,120
+And, you know, again, it's Teepa.
+
+527
+00:39:17,240 --> 00:39:19,600
+So, you know, everybody's going to walk away with something.
+
+528
+00:39:20,500 --> 00:39:24,140
+And September 8th, the group reuse certification for the trainers at 8 a.m.
+
+529
+00:39:24,140 --> 00:39:24,540
+Eastern.
+
+530
+00:39:25,320 --> 00:39:26,560
+So you can jump on there.
+
+531
+00:39:26,620 --> 00:39:28,300
+All you trainers are looking to get research.
+
+532
+00:39:28,620 --> 00:39:34,960
+And go on there to that TeepaSnow.com backslash events underneath the certified community section.
+
+533
+00:39:34,960 --> 00:39:36,540
+You'll be able to sign up for that.
+
+534
+00:39:38,860 --> 00:39:43,340
+So and again, here's Stacy's information, and I know it's in the chat as well.
+
+535
+00:39:43,460 --> 00:39:50,820
+So if you guys have any questions for her and the things that she's doing out there with Graceful Journey, she would love to hear from you and talk with you guys.
+
+536
+00:39:53,500 --> 00:39:58,600
+And Stacy, if you're still around, I'm wondering, I see you're still here on Zoom with us.
+
+537
+00:39:58,620 --> 00:40:07,040
+I wanted to bring attention to our viewers that today we actually started a certified consultant course.
+
+538
+00:40:07,820 --> 00:40:13,800
+And there is one more that will start later on this year that will be the final course of the year.
+
+539
+00:40:13,900 --> 00:40:15,100
+So really want to promote that.
+
+540
+00:40:15,380 --> 00:40:26,540
+We may even have some of the folks who are on the course now that we invited to come on tonight to hear you talk about the six pieces of the puzzle because we introduced that tool to them today on the course.
+
+541
+00:40:26,540 --> 00:40:28,540
+So if you are on that.
+
+542
+00:40:28,620 --> 00:40:33,420
+Course right now, if you'd write in the comments, we'd love to hear that you're actually watching stuff with us tonight.
+
+543
+00:40:33,740 --> 00:40:39,780
+But Stacy, what would your advice be for someone who's considering this pack consultant certification.
+
+544
+00:40:40,800 --> 00:40:42,180
+Take a deep breath.
+
+545
+00:40:43,380 --> 00:40:47,180
+Everything you thought you know just leave it at the door.
+
+546
+00:40:49,020 --> 00:40:57,580
+It's really different and it can be mind boggling and and overwhelming. But after you leave the course.
+
+547
+00:40:57,580 --> 00:40:58,380
+And you sit back.
+
+548
+00:40:58,620 --> 00:41:01,620
+And go over the material.
+
+549
+00:41:02,400 --> 00:41:14,680
+It is extremely helpful, regardless of the position that you're in the skills that you learn as a consultant go through all chapters of your life.
+
+550
+00:41:16,200 --> 00:41:24,060
+Especially six pieces of the puzzle, especially the positive response cycle proactive response cycle.
+
+551
+00:41:24,420 --> 00:41:26,260
+Those are key things.
+
+552
+00:41:26,860 --> 00:41:28,600
+That are helpful as you go on.
+
+553
+00:41:28,720 --> 00:41:29,820
+To build your career.
+
+554
+00:41:30,820 --> 00:41:31,040
+Yes.
+
+555
+00:41:31,040 --> 00:41:45,060
+So today we were sharing with the group how we have this idea of traditional consulting, which is we jump in and we fix it, fix it, fix it, and we send them off with a little bow wrapped around our answer to their problem.
+
+556
+00:41:45,440 --> 00:41:52,520
+And this great solution and that method that we've all gotten kind of used to doesn't always work.
+
+557
+00:41:52,900 --> 00:41:57,120
+And so this pack consulting method is a little bit different.
+
+558
+00:41:57,120 --> 00:41:58,200
+It takes us sometimes a little bit of time.
+
+559
+00:41:58,200 --> 00:42:03,720
+It takes us a little bit of a shift to go from that traditional consulting to pack consulting.
+
+560
+00:42:03,820 --> 00:42:04,920
+Was that your experience?
+
+561
+00:42:05,100 --> 00:42:05,460
+Yes.
+
+562
+00:42:05,460 --> 00:42:14,440
+The pack consulting is about listening and and letting the person that needs the support find the answer themselves.
+
+563
+00:42:14,760 --> 00:42:20,940
+And I love always going back and saying, oh, look, you already told me what the solution was.
+
+564
+00:42:21,020 --> 00:42:21,780
+You didn't need me.
+
+565
+00:42:21,780 --> 00:42:22,760
+You had this.
+
+566
+00:42:23,220 --> 00:42:27,660
+And so learning that is is key.
+
+567
+00:42:27,660 --> 00:42:28,020
+And.
+
+568
+00:42:28,020 --> 00:42:35,320
+But it also stops the recipient in their tracks when they were looking for that pretty bow and you're not giving it to them.
+
+569
+00:42:35,920 --> 00:42:40,640
+It takes some coaching on your part to get them to walk through those steps.
+
+570
+00:42:41,700 --> 00:42:50,340
+So a big piece of that, like you're saying, is that empowering people to their own solutions and that they maybe have already had the solution all along.
+
+571
+00:42:50,340 --> 00:42:57,040
+So just kind of seeing it from and we help see through staying curious.
+
+572
+00:42:58,020 --> 00:43:00,020
+And right and that reflection and those questions.
+
+573
+00:43:00,020 --> 00:43:09,800
+And so helping families and individuals find their own solution and empowerment through finding their own solutions, and it's a different method.
+
+574
+00:43:09,800 --> 00:43:10,740
+But it's truly.
+
+575
+00:43:10,740 --> 00:43:12,760
+I mean, that truly is amazing.
+
+576
+00:43:12,760 --> 00:43:21,880
+So if you guys are all interested, anyone's interested in becoming a pack certified consultant, ask if you have questions, go on the website and learn more about that certification.
+
+577
+00:43:21,880 --> 00:43:26,300
+And know that you are seeing one of our awesome.
+
+578
+00:43:26,300 --> 00:43:26,900
+Certification.
+
+579
+00:43:26,900 --> 00:43:27,520
+And.
+
+580
+00:43:27,520 --> 00:43:32,440
+certified consultants tonight Stacy so thank you thank you thank you for being
+
+581
+00:43:32,440 --> 00:43:44,720
+here yes thank you so much you're so welcome thank you all right well you
+
+582
+00:43:44,720 --> 00:43:48,840
+guys it's been amazing thank you so much for your understanding and staying
+
+583
+00:43:48,840 --> 00:43:55,320
+Sapphire with us through the technology issues and and my try at this whole
+
+584
+00:43:55,320 --> 00:44:00,660
+technology thing we really appreciate you hanging with us and and giving us
+
+585
+00:44:00,660 --> 00:44:06,440
+that that flexibility so we could bring you tonight's episode and I just I
+
+586
+00:44:06,440 --> 00:44:11,700
+really appreciate all of you and we look forward to seeing all of your shine in
+
+587
+00:44:11,700 --> 00:44:17,220
+those comment sections below to tell us more about what's going on so please
+
+588
+00:44:17,220 --> 00:44:24,360
+help us out share those things with us yes this show is to support you in the
+
+589
+00:44:24,360 --> 00:44:25,300
+certified community
+
+590
+00:44:25,300 --> 00:44:29,320
+so let us know we'd love to hear from you we'd love to hear what ideas you
+
+591
+00:44:29,320 --> 00:44:34,060
+have what tools you'd like to share here of how you're using tools someone that
+
+592
+00:44:34,060 --> 00:44:38,320
+you think should be highlighted on the show or questions that you're having
+
+593
+00:44:38,320 --> 00:44:43,540
+that we could maybe pull from our pack team as experts because we have a lot of
+
+594
+00:44:43,540 --> 00:44:47,480
+folks with a lot of knowledge and under this umbrella of positive approach to
+
+595
+00:44:47,480 --> 00:44:51,760
+care we've got a wide range of skills so we can certainly pull from those people
+
+596
+00:44:51,760 --> 00:44:55,240
+like we did tonight with Greg and Emilio to share a little bit of information
+
+597
+00:44:55,240 --> 00:44:59,560
+about those skills that they have to help you on your journey so thank you
+
+598
+00:44:59,560 --> 00:45:05,620
+everyone for being here we'll see you same time same place next Tuesday see
+
+599
+00:45:05,620 --> 00:45:08,680
+you guys thank you everybody
+
+600
+00:45:08,680 --> 00:45:11,340
+bye
+

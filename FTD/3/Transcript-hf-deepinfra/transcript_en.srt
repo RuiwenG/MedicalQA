@@ -1,0 +1,648 @@
+1
+00:00:01,980 --> 00:00:03,180
+Hi everybody.
+
+2
+00:00:03,570 --> 00:00:06,730
+Good morning, Matthew. Hey, good morning, Tipa.
+
+3
+00:00:07,020 --> 00:00:14,140
+Well, look at me. Look at you. I am in a hotel room.
+
+4
+00:00:14,610 --> 00:00:36,610
+you are in our hotel room which are other members of our team i will just i will emphasize i am not  the only member of a team in oj you are home but that's because you're working with rebecca  to lead a coach course starting today yeah we got our coach course starting today a virtual coach  all right and that's our last virtual coach too that's the last one of the year
+
+5
+00:00:36,600 --> 00:00:46,140
+Yeah, yeah, yeah. So that's good news. Bad news. The good news is, yay. We have a lot of coaches that are starting to participate.
+
+6
+00:00:46,230 --> 00:00:51,390
+Oh, the bad news is it's the end of the year and we don't have any more scheduled.
+
+7
+00:00:51,720 --> 00:00:52,880
+which means
+
+8
+00:00:53,430 --> 00:00:59,310
+We have no more people who are going to be prepared out there to help people use their skills once they get them.
+
+9
+00:00:59,670 --> 00:01:02,650
+Now, now, Tipa, so real quick,
+
+10
+00:01:02,820 --> 00:01:12,580
+No virtuals, but we do have an in person that is happening.  So we do have one left, one coach left, but the virtual component, the
+
+11
+00:01:12,840 --> 00:01:19,800
+what what is it the ease and actually for those who have capacity coming to visit with us
+
+12
+00:01:20,100 --> 00:01:28,580
+in early December is a great opportunity to build your skills in person so if you have the capacity
+
+13
+00:01:28,680 --> 00:01:42,720
+ask your employer ask those that you work with look and see if there's any way you can do it. Actually, North Carolina in December is actually quite nice. It's pleasant. Unlike.
+
+14
+00:01:42,870 --> 00:01:44,950
+What I would view like
+
+15
+00:01:45,030 --> 00:01:53,890
+Michigan or where I don't mean to dis Michigan, but it's going to be pretty chilly there in December and down in North Carolina. We tend to be have.
+
+16
+00:01:54,030 --> 00:01:55,990
+The just right combination.
+
+17
+00:01:56,310 --> 00:02:08,610
+So anyway, but we are doing a live coach. That one's an in-person. And what's great about in-person coaching is you get a chance to see and feel what it's like to actually be next to the person you're going to coach.
+
+18
+00:02:08,730 --> 00:02:12,930
+And coaching is a very important skill when it comes to changing practice.
+
+19
+00:02:13,740 --> 00:02:18,600
+But today I am actually live in Manitoba.
+
+20
+00:02:20,040 --> 00:02:38,200
+And I'm actually live in Winnipeg, Manitoba. Yesterday I got here early enough because I left really early on Monday morning, which is why we had a recording. But we also had a recording because we had pre-done a session. So with two sisters, which was really cool.
+
+21
+00:02:38,520 --> 00:03:03,720
+yeah and how awesome it was to have Melinda and Michelle with us and huge thank you to everybody  who commented who shared their thoughts and the folks who said I'm gonna go buy one of those today  because I know somebody who could really use that um so thank you for that a great holiday present  if you know you're really looking for what could I do for a carer and that person is Christian-based
+
+22
+00:03:08,520 --> 00:03:21,300
+I'm in Manitoba, Winnipeg, and Alejandro is with me.
+
+23
+00:03:21,360 --> 00:03:31,900
+because we're doing a program for QHS, which is Quality Health Service, and this is a group that has brought me up many times before.
+
+24
+00:03:32,010 --> 00:03:42,350
+We're going to be working with frontline carers on building their skills. In our own way, we're doing an awareness and
+
+25
+00:03:42,510 --> 00:04:08,010
+And training that's meant to prepare them for coaches to follow up with. But, you know, at least we're doing the introduction and getting people excited and interested in changing how we practice what we do. And I would also say that yesterday I got this really remarkable opportunity to work with the University of Manitoba's occupational therapy program where we had.
+
+26
+00:04:08,070 --> 00:04:09,570
+40
+
+27
+00:04:09,930 --> 00:04:35,790
+for students and three faculty members sitting in and learning for two hours what to do when someone's living with dementia and going over some PAC skills. And it was fun and it was exciting. And we had some, some folks that were familiar with the work and some folks who write well, because they don't do their neurology session to the next next semester. But for them, it was like a lot of fun.
+
+28
+00:04:35,820 --> 00:04:36,840
+to be present.
+
+29
+00:04:37,020 --> 00:04:42,160
+But today we wanted to revisit sort of what we were doing Sunday.
+
+30
+00:04:42,390 --> 00:04:48,470
+not in the morning we did Sunday morning you guys were maybe there for Sunday  morning where Amanda the boys and I were
+
+31
+00:04:48,600 --> 00:04:53,080
+running and walking and running and walking and jogging and running and
+
+32
+00:04:53,160 --> 00:05:08,020
+And getting carried well, 1 of us got carried me for a little bit, but in the evening, the early evening, when we were at Tim fest, and we were celebrating Tim, which is Kathy and and Sarah's.
+
+33
+00:05:08,490 --> 00:05:08,990
+Thank you.
+
+34
+00:05:09,240 --> 00:05:20,240
+husband and dad who lived with FTD and died from the complications of FTD, frontal temporal dementia. And so I wanted to take a few sessions this week.
+
+35
+00:05:20,820 --> 00:05:31,180
+And talk a little bit more in depth about FTD, one of the least well-known dementias. And it's least well-known because
+
+36
+00:05:31,470 --> 00:05:43,110
+People think dementia equals Alzheimer's in general, but the other problem they have is they think it's for old people. And FTD is the most common type of dementia you will get if you have young onset.
+
+37
+00:05:43,500 --> 00:06:00,040
+Before the age of 6570 and Ftd frontal temporal dementia also doesn't look like a typical dementia, because it's not attacking the hippocampal area in such a profound way that.
+
+38
+00:06:00,540 --> 00:06:08,620
+You know that that we recognize it as memory problems because it doesn't look or feel like memory problems. It looks like one of
+
+39
+00:06:09,210 --> 00:06:17,610
+five six packages and it's not one form what it does mean however and this is what's really important
+
+40
+00:06:17,700 --> 00:06:30,740
+is that it is about tau pathologies t-a-u tau a certain type of protein  and when these proteins malform they twist and torque and they
+
+41
+00:06:30,810 --> 00:06:34,630
+lose the ties of the railroad ties that make
+
+42
+00:06:34,710 --> 00:06:44,790
+The arms and the branches of your nerves effectively reaching out and sending messages along them to the next nerve. And so what it does is
+
+43
+00:06:44,820 --> 00:06:56,100
+is it causes failure. Now we hear about tau pathologies in Alzheimer's,  but we hear about it as a secondary kind of phenomena with the beta amyloid,
+
+44
+00:06:56,460 --> 00:06:59,560
+weird protein being the predominant.
+
+45
+00:06:59,640 --> 00:07:08,860
+For tau pathologies, it's primarily what we see.  And we see these changes taking place in the prefrontal cortex,
+
+46
+00:07:08,970 --> 00:07:16,710
+and/or the temporal lobes and/or the structures underneath those that allow them to control
+
+47
+00:07:17,160 --> 00:07:19,620
+movement and sensation
+
+48
+00:07:19,650 --> 00:07:21,490
+and visual regard.
+
+49
+00:07:23,250 --> 00:07:28,250
+Okay, so what I'm going to do today is just lay out
+
+50
+00:07:28,710 --> 00:07:31,530
+The variations now, here's the interesting thing.
+
+51
+00:07:31,770 --> 00:07:39,930
+FTD of all of all the dementias FTD has the highest profile for not being genetically inherited.
+
+52
+00:07:40,050 --> 00:07:40,590
+um
+
+53
+00:07:41,220 --> 00:07:44,360
+So what does that mean, Matthew, if it's not genetically inherited?
+
+54
+00:07:44,670 --> 00:08:04,030
+Yeah, so it doesn't have the characteristics that would be a part of a gene to where, say, you could go get tested like, within Alzheimer's, there's the AP, AP 40 or three or two. Yeah, it's the alleles. Right? Yeah. So, whether you have the pre senile gene.
+
+55
+00:08:04,440 --> 00:08:08,440
+Yeah, so in other words, it's not genetically predetermined.
+
+56
+00:08:08,670 --> 00:08:13,810
+You have some you must have some capacity for it or
+
+57
+00:08:13,890 --> 00:08:41,370
+All of us would be getting it, but it isn't predetermined. So it means lifestyle and exposure to things in the world. Something about how you lived in the world. And it doesn't mean you did anything wrong. It's just exposure and then transmission. It appears that tau pathology is triggered and it's called spontaneous mutation. All of a sudden your, your, your towel starts being.
+
+58
+00:08:41,580 --> 00:08:50,920
+It's abnormal and it goes pathological on you. And we believe there's got to be some kind of component of crossing the blood brain barrier.
+
+59
+00:08:50,970 --> 00:08:51,570
+But
+
+60
+00:08:51,750 --> 00:08:54,790
+What's causing it while they're doing research book?
+
+61
+00:08:55,530 --> 00:08:57,330
+Really don't know.
+
+62
+00:08:57,450 --> 00:09:09,110
+The other bad news about FTD is it takes longer to be identified, recognized, and then appropriately helped or managed or noted.
+
+63
+00:09:09,450 --> 00:09:22,390
+In the on the website in the website that if you do, if you're greatly interested, it's AFTD, AFTD, the Association for Frontal Temporal Disease.
+
+64
+00:09:22,650 --> 00:09:23,730
+or dysfunction.
+
+65
+00:09:23,760 --> 00:09:43,800
+They actually recently were trying to decide what were they going to call it because they wanted to make sure. So they've called it the association for frontal temporal degeneration because that's that's what's true about all the conditions that are within this this range. So, if you're interested in reading some specific stuff.
+
+66
+00:09:43,890 --> 00:09:51,490
+um with some detail that would be a place to to go and take a look  um but if you're not much of a reader it may not be
+
+67
+00:09:51,570 --> 00:09:58,210
+a place that you find that much comfort or if you don't like big words um because they do it is designed
+
+68
+00:09:58,260 --> 00:10:00,000
+for everybody.
+
+69
+00:10:00,000 --> 00:10:04,360
+but there is a fair amount of lingo that gets used.
+
+70
+00:10:04,680 --> 00:10:07,120
+And that's just the nature of
+
+71
+00:10:07,170 --> 00:10:14,030
+How people are trying to communicate where it's coming from. So here's I'm going to try to keep it relatively simple.
+
+72
+00:10:14,460 --> 00:10:19,560
+But FTD divides into where the primary first symptoms show up.
+
+73
+00:10:19,590 --> 00:10:30,510
+And what happens after that? And so frontotemporal. If it starts in the front of the brain, then what we'll classically see is behavioral variance.
+
+74
+00:10:30,630 --> 00:10:32,990
+In other words, your behavior changes.
+
+75
+00:10:34,050 --> 00:10:36,250
+And we talk about six
+
+76
+00:10:36,450 --> 00:11:05,730
+kinds of things that the front of your brain tends to do for you. So Matthew, since I know you know  you're going to be actively in that class, do you want to just real quickly like take us through  what those six things are very quickly? Yeah, so first one is impulse control, so holding back on  those impulses. Second one is being able to take in data from all the other parts of the brain,  bring it up forth and come to a reasonable rational logical conclusion. So thinking before  you do something about what the consequences might be. Got it, yeah. And then the next one
+
+77
+00:11:06,450 --> 00:11:11,370
+I'm able to make choices. So my ability to make decisions consistent with values.
+
+78
+00:11:11,400 --> 00:11:13,840
+Next one is to be able to initiate.
+
+79
+00:11:13,980 --> 00:11:17,740
+sequence, terminate and move on in tasks.
+
+80
+00:11:18,000 --> 00:11:25,120
+So being able to actually get going on something, do it accurately, finish it, and then move on to something else.
+
+81
+00:11:25,320 --> 00:11:35,640
+um yeah so that one and then and then self-acurate self-awareness so my  ability to see myself and see what i'm about to do and accurately know
+
+82
+00:11:35,610 --> 00:11:39,150
+I can do this, I got it, or ooh, I need some help.
+
+83
+00:11:39,510 --> 00:11:59,570
+Yeah, so whether or not you can perceive self as self is not maybe a self was, but am I am I as skilled as I think I am? Or do I recognize that may not be working for me? And then the last one. And then the last one is being able to.
+
+84
+00:11:59,820 --> 00:12:08,520
+know my perspective and how I see things and then also recognize someone else's so that we can come together and do something together.
+
+85
+00:12:09,090 --> 00:12:17,150
+So it seems like I might be disrespectful of other people's perspective or think it doesn't count or not understand why they don't think it's a good idea.
+
+86
+00:12:17,370 --> 00:12:30,270
+So yeah, so what you'll notice what people talk about with frontal temporal is change in personality. I'm not like I was changing behaviors. And we can, we're going to talk more about those when I dig into.
+
+87
+00:12:30,450 --> 00:12:52,750
+That particular element. So the second area we might see changes is in the temporal lobe and particularly the left temporal lobe more than the right. Although both can be impacted. And so that's called primary progressive aphasia. And our temporal lobes are the ones that process auditory data in particularly language language on the left.
+
+88
+00:12:53,070 --> 00:12:59,250
+But rhythm on the right, so there are actually identified
+
+89
+00:12:59,460 --> 00:13:00,900
+for people who are
+
+90
+00:13:02,220 --> 00:13:03,540
+doing research
+
+91
+00:13:04,140 --> 00:13:10,520
+And that's where again, I will say professionally, it may really super matter for living life
+
+92
+00:13:10,590 --> 00:13:14,190
+I'm not as convinced that it's
+
+93
+00:13:14,370 --> 00:13:28,950
+I think once you know you have primary progressive aphasia, then you need to automatically use your prefrontal cortex to start to get yourself in gear for alternatives. But for them, what we have is we have three variations.
+
+94
+00:13:29,010 --> 00:13:30,130
+of a
+
+95
+00:13:30,360 --> 00:13:32,440
+Primary progressive aphasia.
+
+96
+00:13:33,150 --> 00:13:36,430
+And we'll talk more about those when I dive into
+
+97
+00:13:36,510 --> 00:13:51,750
+that but in general what we're talking about vocabulary  comprehension speech production but it will also be sequencing of words  because it has a connection to the prefrontal cortex it will have a ability
+
+98
+00:13:52,830 --> 00:13:54,490
+to um
+
+99
+00:13:56,940 --> 00:14:02,320
+get from sound to sound. So I don't know how to get like I
+
+100
+00:14:02,460 --> 00:14:06,840
+I want to say a word and I can't find the next
+
+101
+00:14:07,020 --> 00:14:16,360
+I can't get my mouth to make the next sound. It is not weakness at that point. There's nothing wrong with my weakness. It's loss of skill related to that.
+
+102
+00:14:16,590 --> 00:14:30,950
+And there are kinds where I can talk a lot, but what I'm saying just doesn't seem to make a lot of sense. There are words of sense in there, but my brain gets carried away and puts a lot out. And then there's, I can't.
+
+103
+00:14:31,230 --> 00:14:32,590
+I just go silent.
+
+104
+00:14:32,610 --> 00:14:33,690
+kinds of things.
+
+105
+00:14:33,870 --> 00:14:44,430
+So, but it's primarily where communication is problematic and it may be equal with  inability to comprehend and inability to produce, but it may be very different.
+
+106
+00:14:45,330 --> 00:14:47,330
+And then there's a third group.
+
+107
+00:14:48,870 --> 00:14:50,310
+and fourth group and fifth group.
+
+108
+00:14:51,840 --> 00:15:01,400
+So when we talk about frontal temporal dementia, people tend to think about, okay, so it'd be front of the brain or the temporal lobes. But the tricky part is there's up underneath there.
+
+109
+00:15:01,860 --> 00:15:04,380
+There's the possibility of
+
+110
+00:15:04,440 --> 00:15:06,960
+FTD plus ALS.
+
+111
+00:15:08,760 --> 00:15:09,840
+which is
+
+112
+00:15:10,170 --> 00:15:15,790
+You have FTD. You have Lou Gehrig's disease though in combination. It could be you have corticobasal.
+
+113
+00:15:17,340 --> 00:15:18,340
+degeneration.
+
+114
+00:15:18,510 --> 00:15:34,350
+Or it could be the third possibility is that you end up with something that's a little bit different than that. And it is super nuclear policy, progressive supra nuclear policy. So they're all related to
+
+115
+00:15:34,620 --> 00:15:53,140
+The transition from I want to do something to doing something and the command center for how that happens and each 1 of them has some unique symptoms that happen early. But if it's taking us a long time to get a diagnosis, those symptoms may be subsumed under new symptoms by the time.
+
+116
+00:15:53,250 --> 00:15:55,770
+And so you have to think back to how did this all start.
+
+117
+00:15:57,600 --> 00:16:01,280
+So, Matthew, that's what we're going to be talking about in other sessions this week.
+
+118
+00:16:02,640 --> 00:16:03,420
+um
+
+119
+00:16:03,480 --> 00:16:11,940
+What we know is that somewhere between 5 to 10% of the population of people younger than 65 will have a dementia.
+
+120
+00:16:12,060 --> 00:16:14,820
+And what I'm ultimately saying is what?
+
+121
+00:16:16,350 --> 00:16:26,910
+yeah so really being aware that oh my gosh there there's a lot more folks who could be living  with this already that we have no idea at this point
+
+122
+00:16:28,050 --> 00:16:30,850
+If behavioral changes first,
+
+123
+00:16:31,050 --> 00:16:32,610
+Midlife crisis.
+
+124
+00:16:32,940 --> 00:16:45,220
+You know, they're just really being disrespectful. They're starting to drink a lot. So we're going to talk more about it. If language is the problem, we think maybe they've had a stroke. Maybe there's something going on here. Maybe they're just not trying. Maybe.
+
+125
+00:16:45,270 --> 00:16:48,990
+And if instead what might be going on is a
+
+126
+00:16:49,020 --> 00:16:57,260
+is some movement stuff we think whoa okay Parkinson's ooh ALS but what we're missing is it's not just
+
+127
+00:16:57,450 --> 00:16:58,130
+that.
+
+128
+00:16:58,710 --> 00:17:19,330
+And so this is one of those tricky ones when people look back, they'll go, oh, you know what?  And this has been going on for a while. I thought they were just not caring.  I thought, you know, so in hindsight, people will tend to recognize it.  It's not uncommon with young onset for people to think, oh, it's Alzheimer's.
+
+129
+00:17:19,770 --> 00:17:20,710
+But it's not.
+
+130
+00:17:21,570 --> 00:17:24,510
+So, although you can have more than one dimension.
+
+131
+00:17:24,780 --> 00:17:32,160
+We mentioned that before. So for today, I just want to talk about this stuff a little bit because
+
+132
+00:17:32,730 --> 00:17:34,190
+If we don't talk about it,
+
+133
+00:17:34,830 --> 00:17:38,770
+People don't talk about it. And when we don't talk about it, people don't talk about it.
+
+134
+00:17:38,940 --> 00:18:03,220
+We stay where we were, which is well, you know, like dementia equals Alzheimer's and it's like, yeah, like, no, and we long ago got away from the idea that we would be okay with calling something something that it isn't. And if we know, and we recognize what might be going on being willing to say, boy, there's sure a lot of frontal lobe symptoms present. Wow. We're seeing a whole lot of language change.
+
+135
+00:18:03,510 --> 00:18:09,190
+I know you were thinking maybe Alzheimer's, but I'm really curious about the possibilities of something else.
+
+136
+00:18:09,420 --> 00:18:19,300
+because it turns out it matters. If we have primarily a tau pathology condition, then some of the things we might try for Alzheimer's are actually not indicated.
+
+137
+00:18:19,680 --> 00:18:21,660
+or a top pathology problem.
+
+138
+00:18:21,840 --> 00:18:22,320
+Thank you.
+
+139
+00:18:22,350 --> 00:18:27,730
+And some of the things we might try for a top pathology problem we're ignoring because we think it's a
+
+140
+00:18:29,070 --> 00:18:30,490
+beta amyloid problem.
+
+141
+00:18:30,810 --> 00:18:36,510
+or that it's a memory problem. It's not. And if we try to mix everybody together in a pot,
+
+142
+00:18:36,720 --> 00:18:46,240
+without understanding what we end up with is a lot of dissatisfaction and a lot of risk that people don't live well together because we've missed some primary
+
+143
+00:18:47,220 --> 00:18:52,860
+place, people, crops, programming, and other possibilities with our pipes.
+
+144
+00:18:53,100 --> 00:18:55,180
+Because we're not really being curious.
+
+145
+00:18:55,950 --> 00:18:57,250
+So, Matthew.
+
+146
+00:18:57,300 --> 00:18:59,800
+Thoughts or ideas before we sign off here?
+
+147
+00:19:00,300 --> 00:19:01,900
+Staying curious.
+
+148
+00:19:02,160 --> 00:19:13,120
+So I am curious. Super good reminder to stay curious. Stay curious. Yeah. And get aware and then become knowledgeable.  And if you need to, then maybe you might want to develop some skill.
+
+149
+00:19:13,980 --> 00:19:16,100
+But if you don't even have awareness,
+
+150
+00:19:16,890 --> 00:19:18,390
+I'm not sure how you move forward.
+
+151
+00:19:18,480 --> 00:19:18,900
+Okay.
+
+152
+00:19:19,260 --> 00:19:21,260
+Salud!
+
+153
+00:19:20,160 --> 00:19:25,040
+till next time take care with your care take care of yourself if you have questions
+
+154
+00:19:25,290 --> 00:19:33,610
+go to the website that I mentioned and read through but if you have more questions  consider getting up with us and if you realize wow I think I need some skill development
+
+155
+00:19:34,740 --> 00:19:36,280
+Think about what you can do for that.
+
+156
+00:19:36,600 --> 00:19:40,780
+And helping people move from where we are to where we want to be.
+
+157
+00:19:41,250 --> 00:19:42,210
+That's what we do.
+
+158
+00:19:42,600 --> 00:19:44,920
+Changing brains for changing brains.
+
+159
+00:19:45,990 --> 00:19:47,590
+All right, everybody, take care with your care.
+
+160
+00:19:48,090 --> 00:19:49,130
+We'll talk to you again soon.
+
+161
+00:19:49,650 --> 00:19:50,070
+.
+
+162
+00:19:50,130 --> 00:19:52,130
+Thanks Deepa. Bye everybody.
+
