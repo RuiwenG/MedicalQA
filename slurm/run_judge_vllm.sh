@@ -18,7 +18,7 @@
 # for it, then runs eval/llm_judge/judge.py against it RUNS times. Submit from the
 # repository root; arguments after the run count go to judge.py, e.g.
 #   sbatch slurm/run_judge_vllm.sh 3 --qa-data eval/llm_judge/qa_data_qwen3-14b.json
-#   TAG=qwen3-14b-new69 sbatch slurm/run_judge_vllm.sh 3 --qa-data eval/llm_judge/qa_data_qwen3-14b-new69.json
+#   TAG=qwen3-14b-new69 WORKERS=4 sbatch slurm/run_judge_vllm.sh 3 --qa-data eval/llm_judge/qa_data_qwen3-14b-new69.json
 # Run r is tagged <TAG>-run<r> (TAG defaults to qwen3-14b), as the API judges' runs were.
 # Needs a vLLM environment (python -m pip install vllm requests) at VLLM_ENV, outside the
 # lab's project space, whose 500 GB group quota is nearly full.
@@ -32,6 +32,9 @@ MODEL_DIR="${MODEL_DIR:-/WAVE/datasets/oignat_lab/Qwen2.5-VL-72B-AWQ}"
 SERVED="${SERVED:-qwen2.5-vl-72b-awq}"
 # The longest new-video prompts (SUP) run to about 18k tokens; Qwen2.5-VL handles 32k.
 MAX_LEN="${MAX_LEN:-32768}"
+# Parallel videos. The KV cache holds about 120k tokens, so keep WORKERS x the longest
+# prompt under that or the transcript prefixes evict each other (SUP: 4 x 18k).
+WORKERS="${WORKERS:-8}"
 VLLM_ENV="${VLLM_ENV:-/WAVE/workarea/users/cawad/vllm-env}"
 PORT=$((8000 + ${SLURM_JOB_ID:-0} % 1000))
 export VLLM_URL="http://127.0.0.1:${PORT}/v1/chat/completions"
@@ -67,6 +70,6 @@ echo "vLLM ready: $(date)"
 for r in $(seq 1 "$RUNS"); do
     echo ">>> run $r of $RUNS at $(date)"
     "$VLLM_ENV/bin/python" -u eval/llm_judge/judge.py --mode full --model "$SERVED" \
-        --tag "${TAG}-run${r}" --workers 8 "$@"
+        --tag "${TAG}-run${r}" --workers "$WORKERS" "$@"
 done
 echo "Finished: $(date)"
