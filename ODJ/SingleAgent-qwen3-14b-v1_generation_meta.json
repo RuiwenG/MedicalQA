@@ -1,0 +1,300 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v1",
+  "model": "Qwen/Qwen3-14B",
+  "backend": "local",
+  "endpoint": null,
+  "model_path": "/WAVE/datasets/oignat_lab/QWEN3",
+  "dtype": "bfloat16",
+  "provider": {
+    "order": null,
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v1",
+  "prompt_format": "filled",
+  "prompt_format_note": "Format line changed to show placeholders after each label (\"Question 1: <question text>\", ...); quality criteria verbatim. With the original bare labels this model left the question out.",
+  "generated_utc": "2026-10-20T06:56:36Z",
+  "seed": 42,
+  "thinking": "disabled (enable_thinking=False in the chat template)",
+  "videos": [
+    {
+      "base": "ODJ",
+      "id": 1,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12,
+      "seconds": 48.2
+    },
+    {
+      "base": "ODJ",
+      "id": 2,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 19.6
+    },
+    {
+      "base": "ODJ",
+      "id": 3,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 18.6
+    },
+    {
+      "base": "ODJ",
+      "id": 4,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 7,
+      "expected": 7,
+      "seconds": 24.7
+    },
+    {
+      "base": "ODJ",
+      "id": 5,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11,
+      "seconds": 41.8
+    },
+    {
+      "base": "ODJ",
+      "id": 6,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10,
+      "seconds": 40.4
+    },
+    {
+      "base": "ODJ",
+      "id": 7,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8,
+      "seconds": 35.3
+    },
+    {
+      "base": "ODJ",
+      "id": 8,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8,
+      "seconds": 29.6
+    },
+    {
+      "base": "ODJ",
+      "id": 9,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8,
+      "seconds": 32.2
+    },
+    {
+      "base": "ODJ",
+      "id": 10,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8,
+      "seconds": 31.7
+    },
+    {
+      "base": "ODJ",
+      "id": 11,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10,
+      "seconds": 28.7
+    },
+    {
+      "base": "ODJ",
+      "id": 12,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5,
+      "seconds": 23.7
+    },
+    {
+      "base": "ODJ",
+      "id": 13,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11,
+      "seconds": 40.8
+    },
+    {
+      "base": "ODJ",
+      "id": 14,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5,
+      "seconds": 25.9
+    },
+    {
+      "base": "ODJ",
+      "id": 15,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8,
+      "seconds": 29.6
+    },
+    {
+      "base": "ODJ",
+      "id": 16,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5,
+      "seconds": 20.9
+    },
+    {
+      "base": "ODJ",
+      "id": 17,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9,
+      "seconds": 38.3
+    },
+    {
+      "base": "ODJ",
+      "id": 18,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 6,
+      "expected": 6,
+      "seconds": 19.4
+    },
+    {
+      "base": "ODJ",
+      "id": 19,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11,
+      "seconds": 43.7
+    },
+    {
+      "base": "ODJ",
+      "id": 20,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 13,
+      "expected": 13,
+      "seconds": 49.1
+    },
+    {
+      "base": "ODJ",
+      "id": 21,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9,
+      "seconds": 36.2
+    },
+    {
+      "base": "ODJ",
+      "id": 22,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9,
+      "seconds": 36.4
+    },
+    {
+      "base": "ODJ",
+      "id": 23,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 13.8
+    },
+    {
+      "base": "ODJ",
+      "id": 24,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 15.3
+    },
+    {
+      "base": "ODJ",
+      "id": 25,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 16,
+      "expected": 16,
+      "seconds": 61.5
+    },
+    {
+      "base": "ODJ",
+      "id": 26,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5,
+      "seconds": 18.6
+    },
+    {
+      "base": "ODJ",
+      "id": 27,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 15.7
+    },
+    {
+      "base": "ODJ",
+      "id": 28,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9,
+      "seconds": 29.0
+    },
+    {
+      "base": "ODJ",
+      "id": 29,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 15.6
+    },
+    {
+      "base": "ODJ",
+      "id": 30,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4,
+      "seconds": 17.0
+    },
+    {
+      "base": "ODJ",
+      "id": 31,
+      "version": "v1",
+      "status": "ok",
+      "pairs": 6,
+      "expected": 6,
+      "seconds": 22.3
+    }
+  ]
+}

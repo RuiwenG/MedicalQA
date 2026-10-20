@@ -1,0 +1,86 @@
+[
+  {
+    "question": "What are the six pieces of the puzzle that caregivers should consider before deciding to use medication?",
+    "answer": "The six pieces of the puzzle include changes in the person, reemergence of past patterns, brain changes, anxiety or depression, dementia progression, and possible delirium. These factors should be reviewed before considering medication.",
+    "timestamp": "2:01-2:08",
+    "time_start_sec": 121,
+    "time_end_sec": 128
+  },
+  {
+    "question": "Why might a medication not be the best solution for managing agitation in someone with dementia?",
+    "answer": "Medication might not be the best solution because agitation could be due to the person’s dementia itself, not a separate issue. Using medication might mask the underlying cause and make it harder to understand what is happening.",
+    "timestamp": "1:41-1:48",
+    "time_start_sec": 101,
+    "time_end_sec": 108
+  },
+  {
+    "question": "What are some non-medical factors that could contribute to changes in behavior in a person with dementia?",
+    "answer": "Non-medical factors could include changes in the person’s environment, sensory wellbeing, physical wellbeing, mental health, or even something as simple as a change in routine or lack of purpose.",
+    "timestamp": "2:12-2:24",
+    "time_start_sec": 132,
+    "time_end_sec": 144
+  },
+  {
+    "question": "What is the \"Beers List\" and why is it important for caregivers to know about it?",
+    "answer": "The \"Beers List\" is a list of medications that are generally not recommended for older adults because they can be harmful. It is important for caregivers to know about it to avoid medications that could interact badly with other health conditions.",
+    "timestamp": "5:29-5:33",
+    "time_start_sec": 329,
+    "time_end_sec": 333
+  },
+  {
+    "question": "What should caregivers consider when reviewing a person’s medication use?",
+    "answer": "Caregivers should consider all medications, including over-the-counter drugs and natural remedies, how often they are used, and whether their use has changed over time. Keeping a medication log can help track this.",
+    "timestamp": "10:51-11:12",
+    "time_start_sec": 651,
+    "time_end_sec": 672
+  },
+  {
+    "question": "Why is it important to track fuel and fluid intake for a person with dementia?",
+    "answer": "Tracking fuel and fluid intake helps ensure the person is getting enough nutrition and hydration, which can affect their overall wellbeing and behavior. It also helps identify if changes in intake might be contributing to symptoms.",
+    "timestamp": "11:43-12:05",
+    "time_start_sec": 703,
+    "time_end_sec": 725
+  },
+  {
+    "question": "What is an activity log, and why should caregivers keep one?",
+    "answer": "An activity log tracks how a person spends their time and records challenging situations. It helps caregivers understand patterns in behavior and identify what might be causing changes in mood or actions.",
+    "timestamp": "13:19-13:22",
+    "time_start_sec": 799,
+    "time_end_sec": 802
+  },
+  {
+    "question": "What should caregivers do if they notice a sudden change in behavior or symptoms?",
+    "answer": "If a sudden change occurs, caregivers should investigate quickly to find the root cause. This might involve checking for dehydration, malnutrition, or other health issues, and consulting with a healthcare professional.",
+    "timestamp": "13:48-13:53",
+    "time_start_sec": 828,
+    "time_end_sec": 833
+  },
+  {
+    "question": "What is the \"four Fs and four Ss\" approach, and how can it help caregivers?",
+    "answer": "The \"four Fs and four Ss\" is a way to evaluate the environment. It includes looking at factors like place, people, props, and programming. This helps caregivers identify environmental changes that might be affecting the person’s behavior.",
+    "timestamp": "8:16-8:22",
+    "time_start_sec": 496,
+    "time_end_sec": 502
+  },
+  {
+    "question": "What is the importance of being careful when using medication for someone with dementia?",
+    "answer": "Medications can have unintended side effects or interactions, especially in older adults. It is important to use them carefully and only after considering other options, such as environmental adjustments or behavioral strategies.",
+    "timestamp": "16:18-16:23",
+    "time_start_sec": 978,
+    "time_end_sec": 983
+  },
+  {
+    "question": "What should caregivers do if a medication seems to be helping but they are unsure of its long-term effects?",
+    "answer": "Caregivers should continue to monitor the person’s behavior and keep track of any changes. They should not stop the medication suddenly but remain alert for any negative effects or unexpected outcomes.",
+    "timestamp": "17:53-17:54",
+    "time_start_sec": 1073,
+    "time_end_sec": 1074
+  },
+  {
+    "question": "Why is it important for caregivers to work with others, such as healthcare professionals or family members, when caring for someone with dementia?",
+    "answer": "Working with others helps ensure that all aspects of care are considered. Different people may have different insights or skills that can help manage the person’s needs more effectively and safely.",
+    "timestamp": "18:30-18:41",
+    "time_start_sec": 1110,
+    "time_end_sec": 1121
+  }
+]

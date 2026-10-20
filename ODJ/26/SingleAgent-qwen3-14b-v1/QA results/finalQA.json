@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is one simple way to help someone with dementia remember to do daily tasks?",
+    "answer": "One simple way is to use visual and verbal cues, like post-it notes, placed in different areas of the home. These reminders help the person see and remember what needs to be done without relying on memory alone.",
+    "timestamp": "1:06-2:14",
+    "time_start_sec": 66,
+    "time_end_sec": 134
+  },
+  {
+    "question": "How can a whiteboard be used to help manage weekly tasks and appointments?",
+    "answer": "A whiteboard can be used to write down weekly tasks and appointments. It’s especially helpful if placed in a high-traffic area, like a stairwell, so the person sees the reminders often. You need to wipe it clean and rewrite the schedule each month.",
+    "timestamp": "2:40-3:21",
+    "time_start_sec": 160,
+    "time_end_sec": 201
+  },
+  {
+    "question": "Why might a label maker be useful for someone with dementia?",
+    "answer": "A label maker can be useful because it allows you to create permanent labels for items or places. This helps the person with dementia find things easily and follow routines without confusion.",
+    "timestamp": "4:39-4:51",
+    "time_start_sec": 279,
+    "time_end_sec": 291
+  },
+  {
+    "question": "What is an example of a visual cue that can remind someone to do a task?",
+    "answer": "An example of a visual cue is placing a green bin in the center of the kitchen. Seeing the bin reminds the person to do maintenance tasks, and all the needed supplies are inside the bin.",
+    "timestamp": "5:21-5:42",
+    "time_start_sec": 321,
+    "time_end_sec": 342
+  },
+  {
+    "question": "How can pictures be used to help someone with dementia find things around the home?",
+    "answer": "Pictures can be used as signs or stickers placed around the home to show where things are located. This is especially helpful for people who have trouble reading, as the images provide clear visual guidance.",
+    "timestamp": "6:00-6:13",
+    "time_start_sec": 360,
+    "time_end_sec": 373
+  }
+]
