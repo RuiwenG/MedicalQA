@@ -36,6 +36,8 @@ export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 # oignat01's L40S pairs have no NVLink and NCCL's peer-to-peer path hangs at start-up
 # (workers spin at 100% with nothing loaded), so all-reduce goes through host memory.
 export NCCL_P2P_DISABLE=1
+# FlashInfer's sampler JIT-compiles with nvcc, which the node lacks; use torch's.
+export VLLM_USE_FLASHINFER_SAMPLER=0
 # vLLM, Triton and torch.compile cache to $HOME by default; keep them beside the env.
 export XDG_CACHE_HOME="$VLLM_ENV/cache" VLLM_CACHE_ROOT="$VLLM_ENV/cache/vllm" \
        TRITON_CACHE_DIR="$VLLM_ENV/cache/triton" TORCHINDUCTOR_CACHE_DIR="$VLLM_ENV/cache/inductor"
