@@ -1,0 +1,300 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v2",
+  "model": "Qwen/Qwen3-14B",
+  "backend": "local",
+  "endpoint": null,
+  "model_path": "/WAVE/datasets/oignat_lab/QWEN3",
+  "dtype": "bfloat16",
+  "provider": {
+    "order": null,
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v2",
+  "prompt_format": "filled",
+  "prompt_format_note": "Format line changed to show placeholders after each label (\"Question 1: <question text>\", ...); quality criteria verbatim. With the original bare labels this model left the question out.",
+  "generated_utc": "2026-10-20T06:19:43Z",
+  "seed": 42,
+  "thinking": "disabled (enable_thinking=False in the chat template)",
+  "videos": [
+    {
+      "base": "SUP",
+      "id": 1,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 41,
+      "expected": 41,
+      "seconds": 209.7
+    },
+    {
+      "base": "SUP",
+      "id": 2,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 164.8
+    },
+    {
+      "base": "SUP",
+      "id": 3,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 43,
+      "expected": 43,
+      "seconds": 180.3
+    },
+    {
+      "base": "SUP",
+      "id": 4,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 41,
+      "expected": 41,
+      "seconds": 169.0
+    },
+    {
+      "base": "SUP",
+      "id": 5,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 177.7
+    },
+    {
+      "base": "SUP",
+      "id": 6,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 42,
+      "expected": 42,
+      "seconds": 219.0
+    },
+    {
+      "base": "SUP",
+      "id": 7,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 184.0
+    },
+    {
+      "base": "SUP",
+      "id": 8,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 34,
+      "expected": 34,
+      "seconds": 144.5
+    },
+    {
+      "base": "SUP",
+      "id": 9,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 32,
+      "expected": 32,
+      "seconds": 139.2
+    },
+    {
+      "base": "SUP",
+      "id": 10,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 188.1
+    },
+    {
+      "base": "SUP",
+      "id": 11,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 41,
+      "expected": 41,
+      "seconds": 192.7
+    },
+    {
+      "base": "SUP",
+      "id": 12,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 32,
+      "expected": 32,
+      "seconds": 133.0
+    },
+    {
+      "base": "SUP",
+      "id": 13,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 37,
+      "expected": 37,
+      "seconds": 187.0
+    },
+    {
+      "base": "SUP",
+      "id": 14,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 42,
+      "expected": 42,
+      "seconds": 194.9
+    },
+    {
+      "base": "SUP",
+      "id": 15,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 184.1
+    },
+    {
+      "base": "SUP",
+      "id": 16,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 38,
+      "expected": 38,
+      "seconds": 173.8
+    },
+    {
+      "base": "SUP",
+      "id": 17,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 41,
+      "expected": 41,
+      "seconds": 234.3
+    },
+    {
+      "base": "SUP",
+      "id": 18,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 44,
+      "expected": 44,
+      "seconds": 177.3
+    },
+    {
+      "base": "SUP",
+      "id": 19,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 40,
+      "expected": 40,
+      "seconds": 205.7
+    },
+    {
+      "base": "SUP",
+      "id": 20,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 39,
+      "expected": 39,
+      "seconds": 148.9
+    },
+    {
+      "base": "SUP",
+      "id": 21,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 44,
+      "expected": 44,
+      "seconds": 221.7
+    },
+    {
+      "base": "SUP",
+      "id": 22,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 38,
+      "expected": 38,
+      "seconds": 179.7
+    },
+    {
+      "base": "SUP",
+      "id": 23,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 36,
+      "expected": 36,
+      "seconds": 149.7
+    },
+    {
+      "base": "SUP",
+      "id": 24,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 35,
+      "expected": 35,
+      "seconds": 154.8
+    },
+    {
+      "base": "SUP",
+      "id": 25,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 42,
+      "expected": 42,
+      "seconds": 199.3
+    },
+    {
+      "base": "SUP",
+      "id": 26,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 38,
+      "expected": 38,
+      "seconds": 157.2
+    },
+    {
+      "base": "SUP",
+      "id": 27,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 40,
+      "expected": 40,
+      "seconds": 175.9
+    },
+    {
+      "base": "SUP",
+      "id": 28,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 35,
+      "expected": 35,
+      "seconds": 160.8
+    },
+    {
+      "base": "SUP",
+      "id": 29,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 45,
+      "expected": 45,
+      "seconds": 202.2
+    },
+    {
+      "base": "SUP",
+      "id": 30,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 32,
+      "expected": 32,
+      "seconds": 143.0
+    },
+    {
+      "base": "SUP",
+      "id": 31,
+      "version": "v2",
+      "status": "ok",
+      "pairs": 30,
+      "expected": 30,
+      "seconds": 142.7
+    }
+  ]
+}
