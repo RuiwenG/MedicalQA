@@ -67,6 +67,14 @@ BACKENDS = {
         # than quietly downgrade the instrument.
         "extra": {"provider": {"quantizations": ["bf16"], "allow_fallbacks": False}},
     },
+    # A vLLM server on a GPU node (slurm/run_judge_vllm.sh starts it). No key, and
+    # vLLM's prefix cache rewards keeping a video's pairs together, like DeepSeek's.
+    "vllm": {
+        "url": os.getenv("VLLM_URL", "http://127.0.0.1:8000/v1/chat/completions"),
+        "key_env": None,
+        "extra": {},
+        "caches_prompts": True,
+    },
 }
 
 # --- Judge models (USD per 1M tokens) --------------------------------------
@@ -106,6 +114,9 @@ MODELS = {
                                                      "require_parameters": True,
                                                      "allow_fallbacks": False},
                                         "reasoning": {"enabled": True}}},
+    # Lab copy of Qwen/Qwen2.5-VL-72B-Instruct-AWQ on WAVE, served by vLLM (4-bit, free).
+    "qwen2.5-vl-72b-awq": {"backend": "vllm",
+                           "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0}},
 }
 
 # Kept as a name so judge_no_transcript.py and older callers keep working.
@@ -571,7 +582,8 @@ def main():
         print(f"Resuming from {resume_path.name}: {len(resumed)} pairs carried over, "
               f"{len(pairs)} of {before} left to judge")
 
-    key = read_env_key(backend_for(args.model)["key_env"])
+    key_env = backend_for(args.model)["key_env"]
+    key = read_env_key(key_env) if key_env else "none"
     meter = CostMeter(PRICES[args.model])
 
     # The process id keeps two runs started in the same second from writing
