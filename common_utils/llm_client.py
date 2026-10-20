@@ -37,6 +37,9 @@ KNOWN_ENDPOINTS = {
     "deepinfra": "https://api.deepinfra.com/v1/openai",
     "together": "https://api.together.xyz/v1",
     "openrouter": "https://openrouter.ai/api/v1",
+    # Hugging Face Inference Providers; pick the provider with a model suffix,
+    # e.g. Qwen/Qwen3-14B:deepinfra.
+    "huggingface": "https://router.huggingface.co/v1",
 }
 
 DEFAULT_MODEL = "qwen3.5-plus"
@@ -122,6 +125,8 @@ class QwenAPIClient:
                 or os.getenv("OPENROUTER_API_KEY")
                 or os.getenv("QWEN_API_KEY")
             )
+        if "huggingface.co" in host:
+            return os.getenv("HF_API_KEY") or os.getenv("HF_TOKEN")
         return os.getenv("QWEN_API_KEY") or os.getenv("VLLM_POD_API_KEY")
 
     @staticmethod
@@ -147,7 +152,9 @@ class QwenAPIClient:
         extra: Dict = {}
         if self.thinking_param == "dashscope":
             extra["enable_thinking"] = False
-        elif self.thinking_param == "vllm":
+        elif self.thinking_param in ("vllm", "chat_template"):
+            # The switch in Qwen3's own chat template; vLLM and the Hugging Face
+            # providers that honour it (DeepInfra, Featherless) take it this way.
             extra["chat_template_kwargs"] = {"enable_thinking": False}
         elif self.thinking_param == "openrouter":
             extra["reasoning"] = {"enabled": False}

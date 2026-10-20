@@ -8,9 +8,15 @@ Intermediate.json to the cwd.
 
     python SingleQA/run_prompt_versions.py --model qwen/qwen3-14b \
         --or-provider Alibaba --versions v1 v3 --format filled
+
+Through Hugging Face Inference Providers instead (provider in the model id):
+
+    python SingleQA/run_prompt_versions.py --endpoint huggingface \
+        --model Qwen/Qwen3-14B:deepinfra --versions v3 --format filled
 """
 
 import argparse
+import csv
 import json
 import os
 import shutil
@@ -22,12 +28,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
+ENDPOINTS = {"openrouter": "https://openrouter.ai/api/v1", "huggingface": "https://router.huggingface.co/v1"}
 MAIN = REPO / "SingleQA" / "main.py"
 BASES = {"Master": range(1, 11), "Teepa": range(1, 16)}
+# Expansion sets: one folder per playlist, videos listed in the root CSV.
+for _base, _sheet in {"FTD": "ftd.csv", "GEMS": "gems.csv", "ODJ": "odj.csv", "SUP": "sup.csv"}.items():
+    if (REPO / _sheet).exists():
+        with open(REPO / _sheet, newline="", encoding="utf-8") as _f:
+            BASES[_base] = [int(r["index"]) for r in csv.DictReader(_f)]
 
 
 def folder_name(model: str, version: str) -> str:
-    return f"SingleAgent-{model.split('/')[-1]}-{version}"
+    # "Qwen/Qwen3-14B:deepinfra" -> SingleAgent-qwen3-14b-deepinfra-v3
+    return f"SingleAgent-{model.split('/')[-1].lower().replace(':', '-')}-{version}"
 
 
 def run_one(base: str, idx: int, version: str, args, env: dict) -> dict:
@@ -62,24 +75,32 @@ def run_one(base: str, idx: int, version: str, args, env: dict) -> dict:
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--model", required=True, help="OpenRouter model id, e.g. qwen/qwen3-14b")
+    ap.add_argument("--model", required=True,
+                    help="Model id, e.g. qwen/qwen3-14b (OpenRouter) or Qwen/Qwen3-14B:deepinfra (Hugging Face)")
+    ap.add_argument("--endpoint", default="openrouter", choices=["openrouter", "huggingface"])
     ap.add_argument("--or-provider", default="", help="Pin OpenRouter provider(s), comma-separated")
     ap.add_argument("--or-quant", default="", help="Pin quantization(s), comma-separated")
     ap.add_argument("--versions", nargs="+", default=["v1", "v3"], choices=["v1", "v2", "v3"])
-    ap.add_argument("--bases", nargs="+", default=list(BASES), choices=list(BASES))
+    ap.add_argument("--bases", nargs="+", default=["Master", "Teepa"], choices=list(BASES))
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--format", default="labels", choices=["labels", "filled"],
                     help="Format line: the original bare labels, or labels with placeholders")
+    ap.add_argument("--videos", nargs="+", default=None, metavar="BASE/ID",
+                    help="Only these videos, e.g. Master/2 Teepa/6 (default: every video in --bases)")
     ap.add_argument("--force", action="store_true", help="Regenerate videos that already have output")
     args = ap.parse_args()
+    if args.videos:
+        args.bases = sorted({v.split("/")[0] for v in args.videos})
 
     env = dict(os.environ,
-               QWEN_BACKEND="api", QWEN_BASE_URL="", QWEN_PROVIDER="openrouter",
-               QWEN_MODEL=args.model, QWEN_THINKING_PARAM="openrouter",
+               QWEN_BACKEND="api", QWEN_BASE_URL="", QWEN_PROVIDER=args.endpoint,
+               QWEN_MODEL=args.model,
+               QWEN_THINKING_PARAM="openrouter" if args.endpoint == "openrouter" else "chat_template",
                QWEN_OR_PROVIDER=args.or_provider, QWEN_OR_QUANT=args.or_quant,
                SINGLEQA_FORMAT=args.format)
 
-    jobs = [(b, i, v) for v in args.versions for b in args.bases for i in BASES[b]]
+    jobs = [(b, i, v) for v in args.versions for b in args.bases for i in BASES[b]
+            if not args.videos or f"{b}/{i}" in args.videos]
     print(f"{len(jobs)} jobs: {args.model} via {args.or_provider or 'any provider'}, versions {args.versions}", flush=True)
     results = []
     with ThreadPoolExecutor(args.workers) as pool:
@@ -97,7 +118,7 @@ def main():
                 "approach": f"SingleAgent (SingleQA), prompt {v}",
                 "model": args.model,
                 "backend": "api",
-                "endpoint": "https://openrouter.ai/api/v1",
+                "endpoint": ENDPOINTS[args.endpoint],
                 "provider": {"order": args.or_provider.split(",") if args.or_provider else None,
                              "quantizations": args.or_quant.split(",") if args.or_quant else None,
                              "allow_fallbacks": False},
@@ -110,7 +131,9 @@ def main():
                 ) if args.format == "filled" else "original format line",
                 "generated_utc": stamp,
                 "seed": int(os.getenv("QWEN_SEED", "42")) if os.getenv("QWEN_SEED", "42").strip() else None,
-                "thinking": "disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)",
+                "thinking": ("disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)"
+                             if args.endpoint == "openrouter" else
+                             "disabled (chat_template_kwargs.enable_thinking=false; verified no reasoning on this provider)"),
                 "videos": sorted((r for r in results if r["base"] == b and r["version"] == v),
                                  key=lambda r: r["id"]),
             }

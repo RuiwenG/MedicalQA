@@ -1,6 +1,21 @@
 # Usage:
 # Single video:
 #   python preprocess.py --url ... --audio_out Master/1/Audio/audio.wav --transcript_out Master/1/Transcript/transcript.txt
+#
+# Transcription engines (--engine), all writing the same transcript-<lang>.json/.srt:
+#   openai   openai-whisper large-v3 from WHISPER_MODEL_PATH (the original setup; default)
+#   faster   faster-whisper (CTranslate2) large-v3, the same model. Default settings
+#            (no batching, no voice-activity detection) ran at 18x real time on the
+#            RTX 3090 vs 4x for openai-whisper, with ~3 s segments and 96% of the same
+#            words. --batch-size 16 is ~3x faster again but returns 30 s segments and
+#            dropped real speech in testing; --vad skips silence but also cut speech.
+#            Weights come from Hugging Face unless --fw-model is a local directory.
+#   groq     Groq's hosted Whisper API (GROQ_API_KEY in the environment or .env).
+#            Audio is re-encoded to 16 kHz mono and sent in 10-minute chunks.
+#   openrouter  The same, through OpenRouter's speech-to-text endpoint (OPEN_ROUTER_API_KEY);
+#            pass --groq-model openai/whisper-large-v3. The provider can't be pinned.
+#   hf-deepinfra  DeepInfra's Whisper through Hugging Face (HF_API_KEY), pinned to DeepInfra;
+#            pass --groq-model openai/whisper-large-v3.
 
 
 import argparse
@@ -9,10 +24,9 @@ import shutil
 import subprocess
 from pathlib import Path
 import sys, os
-import torch
 from typing import Dict, List, Optional
-import whisper
 import re
+import tempfile
 
 COOKIES_FILE = "youtube_cookies.txt"
 WHISPER_MODEL_PATH = (
@@ -33,7 +47,7 @@ def safe_mkdir(p: Path):
     p.mkdir(parents=True, exist_ok=True)
 
 
-def download_audio(url: str, audio_out: Path) -> Path:
+def download_audio(url: str, audio_out: Path, cookies: Optional[str] = None) -> Path:
     """
     Downloads the best quality audio from a YouTube URL as a WAV file.
     Returns the path to the downloaded audio file.
@@ -48,10 +62,12 @@ def download_audio(url: str, audio_out: Path) -> Path:
 
     audio_path = os.path.join(audio_out, "audio.wav")
     print(f"--- Downloading Audio from: {url} ---")
-    cmd = [
-        "yt-dlp",
-        "--cookies",
-        COOKIES_FILE,
+    cmd = ["yt-dlp"]
+    # Cookies help with age-gated or rate-limited videos but are optional.
+    cookies = cookies or (COOKIES_FILE if os.path.exists(COOKIES_FILE) else None)
+    if cookies:
+        cmd += ["--cookies", cookies]
+    cmd += [
         "--no-playlist",
         "-f",
         "bestaudio",
@@ -65,7 +81,7 @@ def download_audio(url: str, audio_out: Path) -> Path:
 
     print("⏳ downloading audio:", " ".join(cmd))
     subprocess.run(cmd, check=True)
-    if not audio_out.exists():
+    if not Path(audio_out).exists():
         raise RuntimeError(f"audio expected at {audio_out} but not found")
     print(f"✅ audio saved to {audio_out}")
     return audio_path
@@ -111,19 +127,150 @@ def restore_punctuation_text(text: str, lang_code: str) -> str:
     return t + mark
 
 
-def transcribe(audio_path: Path, transcript_out: Path, lang: str):
+# ---------- Transcription engines ----------
+
+_MODELS: Dict[str, object] = {}  # loaded once per process, reused across videos
+
+
+def _openai_transcribe(audio_path, init_prompt):
+    import torch
+    import whisper
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    if "openai" not in _MODELS:
+        print(f"🧠 Using device: {device}")
+        print(f"⏳ loading whisper model: {WHISPER_MODEL_PATH}")
+        # The .pt path is the WAVE cluster's copy; elsewhere load (and cache) large-v3 by name.
+        # WHISPER_DOWNLOAD_ROOT keeps that download on persistent storage (e.g. the pod's PVC).
+        weights = WHISPER_MODEL_PATH if os.path.exists(WHISPER_MODEL_PATH) else "large-v3"
+        _MODELS["openai"] = whisper.load_model(weights, device=device,
+                                               download_root=os.getenv("WHISPER_DOWNLOAD_ROOT") or None)
+    model = _MODELS["openai"]
+    if init_prompt is None:
+        result = model.transcribe(str(audio_path), task="transcribe")
+    else:
+        result = model.transcribe(str(audio_path), initial_prompt=init_prompt, task="transcribe")
+    return result["segments"]
+
+
+def _faster_transcribe(audio_path, init_prompt, lang_code, fw_model, batch_size, vad=True):
+    from faster_whisper import BatchedInferencePipeline, WhisperModel
+
+    try:
+        import torch
+
+        cuda = torch.cuda.is_available()
+    except ImportError:
+        cuda = False
+    if "faster" not in _MODELS:
+        device, compute = ("cuda", "float16") if cuda else ("cpu", "int8")
+        print(f"🧠 faster-whisper on {device} ({compute}); loading {fw_model}")
+        model = WhisperModel(fw_model, device=device, compute_type=compute)
+        # Batching needs voice-activity detection to cut the audio; it only pays off on GPU.
+        # --batch-size 1 turns batching off.
+        _MODELS["faster"] = (model, BatchedInferencePipeline(model=model) if cuda and batch_size > 1 else None)
+    model, batched = _MODELS["faster"]
+    # Decode with ffmpeg (as openai-whisper does) instead of faster-whisper's PyAV
+    # reader, which breaks on some PyAV versions ("metadata_errors").
+    import numpy as np
+
+    raw = subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-i", str(audio_path),
+                          "-f", "s16le", "-ac", "1", "-ar", "16000", "-"],
+                         check=True, capture_output=True).stdout
+    audio = np.frombuffer(raw, np.int16).astype(np.float32) / 32768.0
+    kwargs = dict(language=lang_code, initial_prompt=init_prompt, vad_filter=vad)
+    if batched is not None:
+        segments, _ = batched.transcribe(audio, batch_size=batch_size, **kwargs)
+    else:
+        segments, _ = model.transcribe(audio, **kwargs)
+    return [{"start": s.start, "end": s.end, "text": s.text} for s in segments]
+
+
+def _read_env_key(name):
+    if os.getenv(name):
+        return os.getenv(name)
+    env = Path(__file__).resolve().parent / ".env"
+    if env.exists():
+        for line in env.read_text(encoding="utf-8").splitlines():
+            if line.strip().startswith(name + "="):
+                return line.split("=", 1)[1].strip().strip('"').strip("'")
+    return None
+
+
+_STT_APIS = {
+    "groq": ("Groq", "https://api.groq.com/openai/v1/audio/transcriptions", "GROQ_API_KEY"),
+    "openrouter": ("OpenRouter", "https://openrouter.ai/api/v1/audio/transcriptions", "OPEN_ROUTER_API_KEY"),
+    # Hugging Face's router with the provider in the path, so every chunk goes to DeepInfra.
+    "hf-deepinfra": ("HF/DeepInfra", "https://router.huggingface.co/deepinfra/v1/openai/audio/transcriptions", "HF_API_KEY"),
+}
+
+
+def _api_transcribe(engine, audio_path, init_prompt, lang_code, model, chunk_minutes=10):
+    """Hosted Whisper through an OpenAI-compatible /audio/transcriptions endpoint."""
+    import requests
+
+    name, url, key_name = _STT_APIS[engine]
+    key = _read_env_key(key_name)
+    if not key:
+        raise RuntimeError(f"{key_name} is not set (environment or .env)")
+    segments, cost = [], 0.0
+    with tempfile.TemporaryDirectory() as tmp:
+        # 16 kHz mono FLAC keeps each 10-minute chunk well under the upload limit. Each
+        # chunk is cut as its own file: the segment muxer's later FLAC chunks have a
+        # header DeepInfra rejects ("Invalid or unsupported audio file").
+        duration = float(subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(audio_path)],
+            check=True, capture_output=True, text=True).stdout.strip())
+        chunks = []
+        for i in range(int(duration // (chunk_minutes * 60)) + 1):
+            start = i * chunk_minutes * 60
+            if duration - start < 0.5:
+                break
+            chunk = Path(tmp) / f"chunk_{i:03d}.flac"
+            subprocess.run(["ffmpeg", "-nostdin", "-loglevel", "error", "-ss", str(start), "-t", str(chunk_minutes * 60),
+                            "-i", str(audio_path), "-ac", "1", "-ar", "16000", "-c:a", "flac", str(chunk)], check=True)
+            chunks.append(chunk)
+        print(f"☁️  {name} {model}: {len(chunks)} chunk(s) of up to {chunk_minutes} min")
+        for i, chunk in enumerate(chunks):
+            offset = i * chunk_minutes * 60
+            data = {"model": model, "response_format": "verbose_json", "temperature": "0"}
+            if lang_code:
+                data["language"] = lang_code
+            if init_prompt and engine != "openrouter":  # OpenRouter's endpoint has no prompt field
+                data["prompt"] = init_prompt
+            for attempt in range(5):
+                with open(chunk, "rb") as fh:
+                    r = requests.post(url,
+                                      headers={"Authorization": f"Bearer {key}"},
+                                      files={"file": (chunk.name, fh, "audio/flac")}, data=data, timeout=600)
+                if r.status_code == 429 or r.status_code >= 500:
+                    wait = int(r.headers.get("retry-after", 0) or 0) or 10 * (attempt + 1)
+                    print(f"   chunk {i}: HTTP {r.status_code}, retrying in {wait}s")
+                    import time
+                    time.sleep(wait)
+                    continue
+                r.raise_for_status()
+                break
+            else:
+                raise RuntimeError(f"{name} failed on chunk {i} after retries")
+            body = r.json()
+            if not body.get("segments"):
+                raise RuntimeError(f"{name} returned no segment timestamps for chunk {i}")
+            cost += float((body.get("usage") or {}).get("cost") or 0)
+            for seg in body["segments"]:
+                segments.append({"start": seg["start"] + offset, "end": seg["end"] + offset, "text": seg["text"]})
+    if cost:
+        print(f"   {name} cost: ${cost:.4f}")
+    return segments
+
+
+def transcribe(audio_path: Path, transcript_out: Path, lang: str, engine: str = "openai",
+               fw_model: str = "large-v3", groq_model: str = "whisper-large-v3", batch_size: int = 1,
+               vad: bool = False):
     """
-    Transcribes audio and translates it to English using the local Whisper model.
-    Saves the transcript to a text file.
+    Transcribes audio with the chosen engine and saves transcript-<lang>.json and .srt.
     """
     ensure_parent(transcript_out)
-    # Check for GPU and load the model
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(f"🧠 Using device: {device}")
-
-    print(f"⏳ loading whisper model: {WHISPER_MODEL_PATH}")
-
-    model = whisper.load_model(WHISPER_MODEL_PATH, device=device)
 
     # --- Map language code to filename suffix ---
     lang_map = {"chinese": "zh", "hindi": "hi", "romanian": "ro", "english": "en"}
@@ -139,16 +286,21 @@ def transcribe(audio_path: Path, transcript_out: Path, lang: str):
     init_prompt = prompts.get(suffix)
     if not init_prompt:
         init_prompt = "Please use punctuation."
-    print(f"🔎 Using initial prompt: {repr(init_prompt)}")
-
-    print("   -> Starting transcription (this may take a while)...")
     # Note: if the detected language is Hindi, we don't use initial prompt
     if suffix == "hi":
-        result = model.transcribe(str(audio_path), task="transcribe")
+        init_prompt = None
+    print(f"🔎 Using initial prompt: {repr(init_prompt)}")
+
+    print(f"   -> Starting transcription with {engine} (this may take a while)...")
+    if engine == "openai":
+        segments = _openai_transcribe(audio_path, init_prompt)
+    elif engine == "faster":
+        segments = _faster_transcribe(audio_path, init_prompt, suffix, fw_model, batch_size, vad)
+    elif engine in _STT_APIS:
+        segments = _api_transcribe(engine, audio_path, init_prompt, suffix, groq_model)
     else:
-        result = model.transcribe(
-            str(audio_path), initial_prompt=init_prompt, task="transcribe"
-        )
+        raise ValueError(f"unknown engine {engine!r}")
+    result = {"segments": segments}
 
     # detected_lang = result.get("language", "unknown")
     print(f"🌐 Using language from argument: {suffix}")
@@ -262,14 +414,15 @@ def process_single(
     lang: str,
     cookies: Optional[str],
     dry_run: bool = False,
+    engine_opts: Optional[dict] = None,
 ):
     print(f"🎬 processing {url}")
     if dry_run:
         print(f"DRY-RUN would save audio → {audio_out}")
         print(f"DRY-RUN would save transcript → {transcript_out}")
         return
-    audio = download_audio(url, audio_out)
-    transcribe(audio, transcript_out, lang)
+    audio = download_audio(url, audio_out, cookies)
+    transcribe(audio, transcript_out, lang, **(engine_opts or {}))
 
 
 def process_sheet(
@@ -278,6 +431,7 @@ def process_sheet(
     only: Optional[List[int]],
     cookies: Optional[str],
     dry_run: bool = False,
+    engine_opts: Optional[dict] = None,
 ):
     videos = read_csv(sheet_path)
     if only:
@@ -302,6 +456,7 @@ def process_sheet(
             cookies=cookies,
             dry_run=dry_run,
             lang=language,
+            engine_opts=engine_opts,
         )
 
 
@@ -339,7 +494,18 @@ def main():
     ap.add_argument(
         "--dry-run", action="store_true", help="Print the plan without doing work"
     )
+    ap.add_argument("--engine", choices=["openai", "faster", "groq", "openrouter", "hf-deepinfra"], default="openai",
+                    help="Transcription engine (default: openai, the original openai-whisper setup)")
+    ap.add_argument("--fw-model", default="large-v3",
+                    help="faster-whisper model name or local CTranslate2 directory (default: large-v3)")
+    ap.add_argument("--groq-model", default="whisper-large-v3",
+                    help="Groq/OpenRouter model, e.g. whisper-large-v3 (OpenRouter: openai/whisper-large-v3)")
+    ap.add_argument("--batch-size", type=int, default=1,
+                    help="faster-whisper batch size on GPU (default 1 = no batching; batching needs --vad)")
+    ap.add_argument("--vad", action="store_true", help="faster-whisper: skip silence with voice-activity detection")
     args = ap.parse_args()
+    engine_opts = {"engine": args.engine, "fw_model": args.fw_model, "groq_model": args.groq_model,
+                   "batch_size": args.batch_size, "vad": args.vad or args.batch_size > 1}
 
     # Validate mode
     single_mode = args.url is not None
@@ -366,6 +532,7 @@ def main():
                 cookies=args.cookies,
                 dry_run=args.dry_run,
                 lang=args.lang,
+                engine_opts=engine_opts,
             )
         else:
             process_sheet(
@@ -374,6 +541,7 @@ def main():
                 only=args.only,
                 cookies=args.cookies,
                 dry_run=args.dry_run,
+                engine_opts=engine_opts,
             )
         print("\n🎉 done.")
     except subprocess.CalledProcessError as e:
