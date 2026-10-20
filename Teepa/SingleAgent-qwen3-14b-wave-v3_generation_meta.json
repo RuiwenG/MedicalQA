@@ -1,0 +1,39 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v3",
+  "model": "Qwen/Qwen3-14B:wave",
+  "backend": "local",
+  "endpoint": null,
+  "model_path": "/WAVE/datasets/oignat_lab/QWEN3",
+  "dtype": "bfloat16",
+  "provider": {
+    "order": null,
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v3",
+  "prompt_format": "filled",
+  "prompt_format_note": "Format line changed to show placeholders after each label (\"Question 1: <question text>\", ...); quality criteria verbatim. With the original bare labels this model left the question out.",
+  "generated_utc": "2026-10-20T03:10:43Z",
+  "seed": 42,
+  "thinking": "disabled (enable_thinking=False in the chat template)",
+  "videos": [
+    {
+      "base": "Teepa",
+      "id": 6,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9,
+      "seconds": 35.3
+    },
+    {
+      "base": "Teepa",
+      "id": 12,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12,
+      "seconds": 48.3
+    }
+  ]
+}

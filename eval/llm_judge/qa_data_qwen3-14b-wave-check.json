@@ -1,0 +1,580 @@
+{
+ "pairs": [
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q1",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the \"hand underhand\" technique used for?",
+   "answer": "The \"hand underhand\" technique is used to help a person with dementia perform tasks like eating or sitting down. It involves connecting your right hand to their right hand or your left hand to their left hand, placing your hand under theirs to support them gently while allowing them to lead the movement.",
+   "t": 35,
+   "te": 66,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q2",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to position your body low and to the side when using the hand underhand technique?",
+   "answer": "Positioning your body low and to the side helps avoid appearing confrontational. It creates the illusion that you are not directly in front of the person, which can reduce anxiety and make them feel more comfortable and supported during the task.",
+   "t": 164,
+   "te": 187,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q3",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can you avoid making someone with dementia feel trapped or uncomfortable during a task?",
+   "answer": "To avoid making someone feel trapped, use a positive physical approach by turning your shoulders to the side, leaning back slightly, and looking away. This helps create a non-threatening presence even when you are close to them.",
+   "t": 146,
+   "te": 155,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q4",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the purpose of walking someone with dementia around a room before helping them sit down?",
+   "answer": "Walking the person around the room allows them to see where they are going, which helps them feel more in control and reduces confusion. It also helps them become familiar with the location of the bed or chair, making the task easier and less stressful.",
+   "t": 580,
+   "te": 602,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q5",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to avoid suddenly placing someone with dementia on a surface like a bed or chair?",
+   "answer": "Sudden placement can trigger a fear response in the brain, causing the person to tense up and potentially lose bladder or bowel control. It’s better to guide them gently and allow them to feel safe and relaxed.",
+   "t": 612,
+   "te": 627,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q6",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the role of the caregiver’s body position when helping someone with dementia sit down?",
+   "answer": "The caregiver should kneel down and position themselves in a way that supports the person without pushing or pulling. This includes using the \"hand underhand\" technique and maintaining a low, stable posture to provide balance and reassurance.",
+   "t": 764,
+   "te": 785,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q7",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers use their own body awareness to help someone with dementia?",
+   "answer": "Caregivers can think about how they naturally move and position their body when performing daily tasks. By understanding their own movements, they can better support someone with dementia by matching their body language and using non-verbal cues.",
+   "t": 1041,
+   "te": 1064,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q8",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the benefit of practicing the \"hand underhand\" technique on yourself?",
+   "answer": "Practicing the technique on yourself helps you understand the physical effort and body positioning required. This self-awareness makes it easier to assist someone else with dementia in a way that feels natural and supportive.",
+   "t": 1124,
+   "te": 1144,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q9",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to use a “fulcrum” when helping someone with dementia sit or stand?",
+   "answer": "Using a fulcrum means letting the person use their own body weight to help them move. This reduces strain on both the caregiver and the person with dementia and makes the movement feel more natural and less forced.",
+   "t": 930,
+   "te": 941,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q10",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers help someone with dementia feel more in control during a task?",
+   "answer": "Caregivers can empower the person by avoiding pushing or shoving and instead using gentle, non-verbal cues. This helps the person feel respected and in charge of their own movements.",
+   "t": 1023,
+   "te": 1028,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q11",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the purpose of the “polka position” or “two-step” when using the hand underhand technique?",
+   "answer": "These positions describe the body alignment needed to use the hand underhand technique effectively. They help the caregiver maintain balance and support while guiding the person with dementia through a task.",
+   "t": 450,
+   "te": 457,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q12",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to avoid sudden movements when assisting someone with dementia?",
+   "answer": "Sudden movements can startle or confuse the person, triggering fear or resistance. Slow, deliberate actions help them feel safe and more willing to cooperate.",
+   "t": 625,
+   "te": 636,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q13",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the role of the caregiver’s core strength when helping someone with dementia?",
+   "answer": "Core strength is essential for maintaining stability and balance when helping someone with dementia. It allows the caregiver to support the person safely without straining their back or risking injury.",
+   "t": 971,
+   "te": 973,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q14",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers prepare for tasks like helping someone sit or stand?",
+   "answer": "Caregivers should get into position early, kneel down, and be ready to support the person before they begin the task. This helps prevent strain and ensures the person feels supported throughout the movement.",
+   "t": 986,
+   "te": 996,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3-14b-wave-v3_q15",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the benefit of watching others demonstrate the hand underhand technique?",
+   "answer": "Watching demonstrations helps caregivers understand the correct body positioning and movements needed. It provides visual guidance that makes it easier to learn and apply the technique in real-life situations.",
+   "t": 767,
+   "te": 771,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q1",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is a delusion and how is it different from a hallucination?",
+   "answer": "A delusion is a false belief that a person strongly believes in, even when there is no proof. It is different from a hallucination, which involves seeing, hearing, or sensing something that isn't there. Delusions are about thinking and beliefs, while hallucinations are about physical senses.",
+   "t": 62,
+   "te": 121,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q2",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why might a person with dementia have a delusion?",
+   "answer": "A person with dementia might have a delusion because their brain is trying to make sense of confusing or missing information. They may take pieces of information they have and fill in the gaps with things that seem logical to them, even if they aren't true.",
+   "t": 131,
+   "te": 144,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q3",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How should a caregiver respond when someone with dementia accuses them of something untrue?",
+   "answer": "A caregiver should avoid arguing or correcting the person directly. Instead, they can acknowledge the person’s feelings and use a supportive stance. For example, they might say, “I understand you think I moved your keys,” instead of saying, “No, I didn’t.”",
+   "t": 440,
+   "te": 505,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q4",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is a helpful skill to use when dealing with delusions?",
+   "answer": "A helpful skill is to validate what the person sees or hears. This means acknowledging their experience without agreeing or disagreeing. For example, saying, “You think I took your keys,” instead of denying it outright.",
+   "t": 491,
+   "te": 499,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q5",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What should a caregiver do after a difficult interaction with a person who has a delusion?",
+   "answer": "After a difficult interaction, a caregiver should take time to decompress. This might include stepping away for a moment, taking deep breaths, or finding a quiet place to calm themselves before returning to the situation.",
+   "t": 630,
+   "te": 647,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q6",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Can a person with dementia have a delusion that involves someone else, like a friend or family member?",
+   "answer": "Yes, a person with dementia can have a delusion involving someone else. For example, they might believe that a friend has died or that someone is pretending to be a family member. These beliefs are based on the person’s own experiences and may not match reality.",
+   "t": 570,
+   "te": 606,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q7",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is an example of a delusion that a person with dementia might have?",
+   "answer": "An example of a delusion is believing that someone else moved your car keys when they did not. The person might strongly believe this, even if there is no evidence to support it, and may become upset or angry about it.",
+   "t": 193,
+   "te": 231,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q8",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers help reduce distress during a delusion?",
+   "answer": "Caregivers can help reduce distress by staying calm, avoiding arguments, and not trying to prove the person wrong. Instead, they can focus on the person’s feelings and offer reassurance, such as saying, “I understand this is upsetting for you.”",
+   "t": 261,
+   "te": 286,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q9",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is a common type of dementia that often includes delusions?",
+   "answer": "Lewy body dementia is a common type of dementia that often includes delusions. People with this condition may have strong beliefs that are not based in reality, and these beliefs can be very distressing for them.",
+   "t": 170,
+   "te": 172,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3-14b-wave-v3_q10",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers support a person with dementia who is experiencing a delusion?",
+   "answer": "Caregivers can support a person with dementia by being patient, listening without judgment, and helping them feel safe. It’s important to avoid arguing and instead focus on providing comfort and reassurance, even if the person’s belief is not true.",
+   "t": 750,
+   "te": 756,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v10_SingleAgent-qwen3-14b-wave-v3_q1",
+   "dataset": "Master",
+   "video": 10,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can a caregiver help a person with dementia start eating or drinking?",
+   "answer": "A caregiver can help by initiating the action, such as guiding the person’s hand to the utensil or cup. This helps trigger muscle memory and reminds the brain what to do, allowing the person to continue eating or drinking on their own once started.",
+   "t": 47,
+   "te": 63,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v10_SingleAgent-qwen3-14b-wave-v3_q2",
+   "dataset": "Master",
+   "video": 10,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to sit close to the person while assisting with eating or drinking?",
+   "answer": "Sitting close allows the caregiver to be physically connected with the person, which makes the interaction more comfortable and natural. It also helps provide support and guidance, like gentle pressure on the knee, if needed.",
+   "t": 78,
+   "te": 120,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v10_SingleAgent-qwen3-14b-wave-v3_q3",
+   "dataset": "Master",
+   "video": 10,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is the purpose of using the non-dominant hand when assisting someone with dementia?",
+   "answer": "Using the non-dominant hand helps the caregiver develop better skills for supporting the person. It also allows for more flexibility and control when guiding the person’s hand during eating or drinking.",
+   "t": 148,
+   "te": 156,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v10_SingleAgent-qwen3-14b-wave-v3_q4",
+   "dataset": "Master",
+   "video": 10,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why should the cup or bowl be placed in front of the person, not to the side?",
+   "answer": "Placing the cup or bowl directly in front of the person follows the natural path of movement. This makes it easier for the person to reach and use, reducing confusion and making the experience more familiar and comfortable.",
+   "t": 214,
+   "te": 225,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q1",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is an AO and why is it important to avoid it when caring for someone with dementia?",
+   "answer": "An AO is when you say something that isn't true, like pretending to agree when you don't. It's important to avoid because it can make the person with dementia feel confused or upset, and it doesn't help them feel understood or respected.",
+   "t": 111,
+   "te": 120,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q2",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can a caregiver help a person with dementia feel like they have a reason to be in a certain place?",
+   "answer": "You can help by showing them they are valued and appreciated. This might include giving them praise, letting them know their work matters, or offering them something they enjoy, like a snack or a small treat.",
+   "t": 362,
+   "te": 378,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q3",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why might a person with dementia express a desire to go home?",
+   "answer": "They might want to go home because they feel more comfortable there, or they might be tired, overwhelmed, or not enjoying the current environment. It’s similar to how anyone might feel like going home after a long day.",
+   "t": 86,
+   "te": 90,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q4",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is one strategy to help a person with dementia who is upset about not being taken home immediately?",
+   "answer": "Offer them a specific plan, like saying, “I’ll take you home at 5:00,” and follow through. This gives them something to look forward to and helps reduce frustration.",
+   "t": 130,
+   "te": 134,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q5",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers better understand the feelings of a person with dementia?",
+   "answer": "Try to imagine how you would feel if your brain wasn’t working the way it used to. People with dementia often feel the same emotions we do, like frustration or loneliness, but they may not express them the same way.",
+   "t": 346,
+   "te": 353,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q6",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important for caregivers to avoid arguing with a person with dementia?",
+   "answer": "Arguing can make the person with dementia feel more confused or upset. It doesn’t help them feel safe or understood, and it can make the situation worse for both of you.",
+   "t": 111,
+   "te": 113,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q7",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is one way to build a stronger connection with a person with dementia?",
+   "answer": "Show them you understand their frustration and let them know you care. This helps them feel supported and less alone, which can improve communication and trust.",
+   "t": 642,
+   "te": 643,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q8",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers support a person with dementia who is struggling to find the right words?",
+   "answer": "Be patient and let them take their time. You can say things like, “It’s okay if you’re not sure,” or “I’m here to help you.” This shows you are listening and not pressuring them.",
+   "t": 612,
+   "te": 614,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v6_SingleAgent-qwen3-14b-wave-v3_q9",
+   "dataset": "Teepa",
+   "video": 6,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What is one key message for caregivers who feel overwhelmed by dementia care?",
+   "answer": "Remember that you are not alone, and it’s okay to ask for help. There are many ways to make a difference, and taking breaks is important too. You can choose to be a positive influence in their life.",
+   "t": 466,
+   "te": 468,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q1",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What can caregivers do to help a person with dementia feel more comfortable during interactions?",
+   "answer": "Caregivers can offer support by using gentle gestures and visual cues. For example, if you want to compliment someone’s hair, you can touch your own hair and then point to theirs. This helps the person understand what you’re saying without feeling confused or judged.",
+   "t": 409,
+   "te": 476,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q2",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why might people in some cultures feel embarrassed about dementia?",
+   "answer": "In some cultures, people may feel embarrassed about dementia because they believe it changes who someone is in a negative way. They might fear others will see them differently, similar to how people might feel about small children making mistakes.",
+   "t": 196,
+   "te": 207,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q3",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers help a person with dementia understand what they are being asked to do?",
+   "answer": "Caregivers can show the person what they want them to do instead of telling them directly. For example, if you want them to drink water, hold up the cup and demonstrate drinking it. This helps them understand without confusion or resistance.",
+   "t": 866,
+   "te": 876,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q4",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important to avoid arguing with a person who has dementia?",
+   "answer": "Arguing can make the person feel more confused and upset. Instead of fighting, caregivers should offer support and guidance gently. This helps the person feel calm and more willing to cooperate.",
+   "t": 446,
+   "te": 450,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q5",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What can caregivers do to help a person with dementia feel more connected to others?",
+   "answer": "Caregivers can encourage the person to participate in activities with younger generations, like grandchildren. Younger people often have a more relaxed approach and can help the person feel more comfortable and willing to try new things.",
+   "t": 661,
+   "te": 666,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q6",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers reduce the stigma around dementia in their communities?",
+   "answer": "Caregivers can help by talking openly about dementia and sharing stories of people living with it. This helps others understand that dementia is not something to be ashamed of and that people with dementia can still be active and valued members of society.",
+   "t": 61,
+   "te": 67,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q7",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What are some ways to support a person with dementia during daily routines?",
+   "answer": "Before starting a task, observe what the person is doing and what interests them. Then, approach them gently and offer your hand. This helps them feel included and ready to engage in the activity.",
+   "t": 773,
+   "te": 795,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q8",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why is it important for caregivers to take care of their own health?",
+   "answer": "Taking care of your own health helps protect your brain from damage caused by stress, lack of sleep, or unhealthy habits. When you are healthy, you are better able to support the person with dementia and avoid burnout.",
+   "t": 1074,
+   "te": 1086,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q9",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can caregivers help reduce the risk of someone developing dementia?",
+   "answer": "Caregivers can help by encouraging healthy habits like getting enough sleep, staying socially connected, eating well, and managing stress. These actions can lower the risk of developing dementia over time.",
+   "t": 951,
+   "te": 965,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q10",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "Why might people in some countries be slower to seek a dementia diagnosis?",
+   "answer": "In some countries, people may avoid seeking a dementia diagnosis because they fear the stigma or embarrassment associated with it. They might wait until other possibilities are ruled out before accepting the diagnosis.",
+   "t": 251,
+   "te": 257,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q11",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "How can younger people help improve the care of people with dementia?",
+   "answer": "Younger people can help by learning about dementia and sharing this knowledge with others. They can also be more open and patient with people who have dementia, helping to change negative attitudes and improve care approaches.",
+   "t": 562,
+   "te": 567,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3-14b-wave-v3_q12",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3-14b-wave-v3",
+   "question": "What can caregivers do to make daily tasks easier for a person with dementia?",
+   "answer": "Caregivers can simplify tasks by showing the person what needs to be done instead of explaining it verbally. This reduces confusion and makes it easier for the person to follow along and complete the task.",
+   "t": 889,
+   "te": 892,
+   "ts": "model"
+  }
+ ],
+ "videos": {
+  "Master": {
+   "1": {
+    "url": "https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg",
+    "language": "English"
+   },
+   "4": {
+    "url": "https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4",
+    "language": "English"
+   },
+   "10": {
+    "url": "https://www.youtube.com/watch?v=IG2c9mvbQb4&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=10",
+    "language": "English"
+   }
+  },
+  "Teepa": {
+   "6": {
+    "url": "https://www.youtube.com/watch?v=aH9Ok0D6tKc&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=6",
+    "language": "English"
+   },
+   "12": {
+    "url": "https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12",
+    "language": "English"
+   }
+  }
+ }
+}
