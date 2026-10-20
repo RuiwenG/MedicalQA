@@ -33,6 +33,9 @@ VLLM_ENV="${VLLM_ENV:-/WAVE/workarea/users/cawad/vllm-env}"
 PORT=$((8000 + ${SLURM_JOB_ID:-0} % 1000))
 export VLLM_URL="http://127.0.0.1:${PORT}/v1/chat/completions"
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+# oignat01's L40S pairs have no NVLink and NCCL's peer-to-peer path hangs at start-up
+# (workers spin at 100% with nothing loaded), so all-reduce goes through host memory.
+export NCCL_P2P_DISABLE=1
 # vLLM, Triton and torch.compile cache to $HOME by default; keep them beside the env.
 export XDG_CACHE_HOME="$VLLM_ENV/cache" VLLM_CACHE_ROOT="$VLLM_ENV/cache/vllm" \
        TRITON_CACHE_DIR="$VLLM_ENV/cache/triton" TORCHINDUCTOR_CACHE_DIR="$VLLM_ENV/cache/inductor"
@@ -43,7 +46,7 @@ nvidia-smi --query-gpu=index,name,memory.used,memory.total --format=csv
 # Text only: no image slots, so the vision tower's memory goes to the KV cache.
 "$VLLM_ENV/bin/vllm" serve "$MODEL_DIR" --served-model-name "$SERVED" --port "$PORT" \
     --tensor-parallel-size 2 --max-model-len 16384 --gpu-memory-utilization 0.90 \
-    --limit-mm-per-prompt '{"image": 0, "video": 0}' --enable-prefix-caching \
+    --limit-mm-per-prompt '{"image": 0, "video": 0}' --enable-prefix-caching --disable-custom-all-reduce \
     --seed 0 > "slurm/judgeQA-${SLURM_JOB_ID:-manual}.vllm.log" 2>&1 &
 SERVER=$!
 trap 'kill $SERVER 2>/dev/null || true' EXIT
