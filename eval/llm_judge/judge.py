@@ -101,7 +101,9 @@ MODELS = {
                                                      "require_parameters": True,
                                                      "allow_fallbacks": False}}},
     "google/gemma-4-31b-it": {"backend": "openrouter",
-                              "prices": {"hit": 0.15, "miss": 0.15, "out": 0.40},
+                              # DeepInfra fp8 bills $0.20/M input (checked against the
+                              # OpenRouter activity page, 2026-10-20).
+                              "prices": {"hit": 0.20, "miss": 0.20, "out": 0.40},
                               # Reasoning is supported but OFF by default for Gemma 4;
                               # without this flag it answers with no deliberation, the
                               # way Gemma 3 did.
