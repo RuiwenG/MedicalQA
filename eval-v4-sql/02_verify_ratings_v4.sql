@@ -1,5 +1,5 @@
--- Read-only verification after 01_create_ratings_v4.sql or
--- 04_add_annotator_profile.sql on an existing database.
+-- Read-only verification after script 01, or scripts 04 and 05 on an existing
+-- database that needs the profile and source-access updates.
 
 -- Both values must be non-null.
 select
@@ -22,6 +22,20 @@ where table_schema = 'public'
       'annotator_group', 'annotator_other', 'dementia_care_experience'
   )
 order by table_name, column_name;
+
+-- The source-access flag must also exist in both objects.
+select table_name, column_name, data_type, is_nullable
+from information_schema.columns
+where table_schema = 'public'
+  and table_name in ('ratings_v4', 'ratings_v4_final')
+  and column_name = 'source_unverifiable'
+order by table_name;
+
+-- A source-access problem cannot also contain a Trustworthiness score.
+select conname, pg_get_constraintdef(oid) as definition
+from pg_constraint
+where conrelid = 'public.ratings_v4'::regclass
+  and conname = 'ratings_v4_source_unverifiable_ck';
 
 -- Check allowed group/experience values and Others description requirements.
 select conname, pg_get_constraintdef(oid) as definition

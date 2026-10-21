@@ -69,9 +69,12 @@ having count(*) > 1
 order by last_edit desc;
 
 -- Ordinal label distributions. Keep these categorical in the primary report.
+-- Source-access failures are missing Trustworthiness assessments, not Poor.
 select 'Trustworthiness' as metric, qna_trustworthiness_attribute as rating,
        count(*) as n
 from public.ratings_v4_final
+where source_unverifiable is distinct from true
+  and qna_trustworthiness_attribute is not null
 group by qna_trustworthiness_attribute
 union all
 select 'Clarity', qna_clarity_attribute, count(*)
@@ -82,6 +85,16 @@ select 'Usefulness', qna_usefulness_attribute, count(*)
 from public.ratings_v4_final
 group by qna_usefulness_attribute
 order by metric, rating;
+
+-- Report source-access missingness separately from answer quality. False does
+-- not prove the video was watched; null means the older UI did not record it.
+select
+    count(*) as submitted_qnas,
+    count(*) filter (where source_unverifiable = true) as source_access_failures,
+    count(*) filter (where source_unverifiable is null) as legacy_source_status_unknown,
+    count(*) filter (where source_unverifiable is distinct from true
+        and qna_trustworthiness_attribute is not null) as trustworthiness_assessed
+from public.ratings_v4_final;
 
 -- Binary distributions. For Care Safety, Yes means a safety concern exists;
 -- for Standalone, Yes means the Q&A stands alone.
@@ -128,9 +141,10 @@ select
     annotator, qa_uid, dataset, video, question_text, answer_text,
     qna_trustworthiness_attribute, qna_trustworthiness_issue, evaluator_comment
 from public.ratings_v4_final
-where qna_trustworthiness_attribute in ('Fair', 'Poor')
-   or (qna_trustworthiness_issue is not null
-       and qna_trustworthiness_issue <> 'No issue')
+where source_unverifiable is distinct from true
+  and (qna_trustworthiness_attribute in ('Fair', 'Poor')
+       or (qna_trustworthiness_issue is not null
+           and qna_trustworthiness_issue <> 'No issue'))
 order by dataset, video, qa_uid, annotator;
 
 -- Safety concerns for mandatory human review.

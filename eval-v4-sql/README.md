@@ -13,9 +13,24 @@ For the **existing v4 database**, apply the approved annotator form with:
 
 1. `04_add_annotator_profile.sql` — adds the three nullable profile columns and
    refreshes the final view. It preserves collected rows and is safe to rerun.
-2. `02_verify_ratings_v4.sql` — confirms columns in both table and view,
+2. `05_add_source_verification.sql` — adds the source-access flag and ensures
+   an unavailable source cannot also store a Trustworthiness assessment.
+3. `02_verify_ratings_v4.sql` — confirms columns in both table and view,
    profile constraints, and the existing insert-only browser permissions.
-3. Deploy the rebuilt v4 Netlify ZIP after the database schema refresh.
+4. Deploy the rebuilt v4 Netlify ZIP after the database schema refresh.
+
+## Source-access failures
+
+The nullable boolean `source_unverifiable` records **Video unavailable or won’t
+play**. True requires all three Trustworthiness fields to be null. It does
+not prevent ratings of other criteria. False means no source-access issue was
+reported; null is unknown for legacy submissions. Neither value proves the
+video was watched. Do not encode unavailable evidence as Poor or No.
+
+Script 03 excludes flagged rows from Trustworthiness label distributions and
+reports their count separately. Other metrics retain their own denominators.
+Apply script 04 before 05 if profile fields have not yet been added. Script 01
+includes both updates for a new database. Both migrations preserve old rows.
 
 Do not rerun the creation script on an existing database. The migration touches
 only `public.ratings_v4` and `public.ratings_v4_final` and never changes v1-v3.

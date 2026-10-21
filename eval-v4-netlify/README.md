@@ -53,14 +53,46 @@ restored for the matching name. Legacy sessions are asked for the two new answer
 before continuing. Their pending rows receive the selected profile; ratings
 already submitted are not rewritten.
 
-**For the existing v4 site:** run `eval-v4-sql/04_add_annotator_profile.sql` in
-the Supabase SQL Editor, then `02_verify_ratings_v4.sql`. The migration adds three
-nullable fields and refreshes `ratings_v4_final`, preserving collected data.
+**For the existing v4 site:** run `eval-v4-sql/04_add_annotator_profile.sql` and
+`05_add_source_verification.sql` in the Supabase SQL Editor, then
+`02_verify_ratings_v4.sql`. These migrations add nullable fields and refresh
+`ratings_v4_final`, preserving collected data.
 Wait for the schema refresh, then upload `eval-v4-netlify.zip` to the existing v4
 Netlify site. Do not rerun `01_create_ratings_v4.sql` on an existing database.
 
 For a new v4 database, the updated `01_create_ratings_v4.sql` already includes
 these fields. Neither route changes any other study version.
+
+## Rating layout and source-access update
+
+The question panel uses warm yellow and the answer panel uses soft blue. At desktop widths
+(1000 px and above), the Q&A stays beside the rating form in a sticky reference
+panel. On narrower screens, **View Q&A** and **Back to ratings** move between
+the text and the active criterion without changing any answers.
+
+The instructions consistently ask for Standalone before opening the video,
+then source verification before scoring Trustworthiness. The optional **Video
+unavailable or won’t play** checkbox is only for playback/source-access problems.
+An accessible source that does not support the answer still receives a normal
+quality rating.
+
+When the checkbox is selected, `source_unverifiable=true` is submitted and the
+three Trustworthiness fields are null. Other criteria and the overall
+recommendation remain required. The local draft retains any earlier choice
+for an explicit uncheck, but database payloads, CSV and JSON exports never
+present that draft as an assessed score. False means no access problem was
+reported, not proof the source was watched; null is unknown for older rows.
+Analysis reports access problems separately and excludes them from the
+Trustworthiness score denominator. They are never counted as Poor or No.
+
+For an existing v4 database, run `eval-v4-sql/05_add_source_verification.sql`
+before deploying this UI. If the earlier profile migration has not been
+applied, run script 04 first. A new database's script 01 includes both updates.
+These are local package changes until the SQL and UI are deployed.
+
+```sh
+node eval-v4-sql/tests/test_v4_source.cjs
+```
 
 ## Video playback update
 

@@ -14,6 +14,7 @@ const query = (database, sql) => command('psql', ['-h', temporary, '-p', '55439'
   '-d', database, '-X', '-q', '-A', '-t', '-v', 'ON_ERROR_STOP=1'], sql).trim();
 const setup = fs.readFileSync(path.join(sqlFolder, '01_create_ratings_v4.sql'), 'utf8');
 const migrate = fs.readFileSync(path.join(sqlFolder, '04_add_annotator_profile.sql'), 'utf8');
+const sourceMigrate = fs.readFileSync(path.join(sqlFolder, '05_add_source_verification.sql'), 'utf8');
 const oldSetup = setup.replace(/created_at    timestamptz not null default now\(\),[\s\S]*?\n\);/,
   'created_at    timestamptz not null default now()\n);');
 const columnNames = database => query(database, `select string_agg(column_name, ',' order by ordinal_position)
@@ -32,17 +33,19 @@ try {
   query('upgraded', oldSetup);
   insert('upgraded', 'legacy-pair');
   insert('upgraded', 'legacy-pair');
-  const snapshotQuery = `select jsonb_agg(to_jsonb(r) - 'annotator_group' - 'annotator_other'
+  const snapshotQuery = `select jsonb_agg(to_jsonb(r) - 'source_unverifiable' - 'annotator_group' - 'annotator_other'
     - 'dementia_care_experience' order by id)::text from public.ratings_v4 r;`;
   const originalRows = query('upgraded', snapshotQuery);
   query('upgraded', migrate);
   query('upgraded', migrate);
+  query('upgraded', sourceMigrate);
+  query('upgraded', sourceMigrate);
   assert.equal(query('upgraded', snapshotQuery), originalRows, 'migration preserves every original field and row');
   assert.equal(query('upgraded', 'select count(*) from public.ratings_v4;'), '2');
   assert.equal(query('upgraded', 'select count(*) from public.ratings_v4_final;'), '1');
   assert.equal(query('upgraded', 'select id from public.ratings_v4_final;'), '2', 'newest-row ordering stays intact');
   assert.equal(columnNames('fresh'), columnNames('upgraded'), 'fresh and upgraded view column order matches');
-  assert.ok(columnNames('upgraded').endsWith('annotator_group,annotator_other,dementia_care_experience'));
+  assert.ok(columnNames('upgraded').endsWith('annotator_group,annotator_other,dementia_care_experience,source_unverifiable'));
   assert.throws(() => query('fresh', setup), 'fresh setup still refuses to overwrite existing objects');
   assert.equal(query('fresh', 'select count(*) from public.ratings_v4;'), '0');
 
@@ -58,6 +61,16 @@ try {
       "null, null, 'none'", "null, 'Unexpected text', null", "'other', repeat('x',201), 'none'",
     ]) assert.throws(() => insert(database, 'invalid', badProfile), badProfile);
     insert(database, 'legacy-null');
+    query(database, `insert into public.ratings_v4
+      (session_id,annotator,qa_uid,dataset,video,approach,question_text,answer_text,source_unverifiable,qna_clarity_attribute)
+      values ('source-test','Source test','unavailable','Master',1,'SingleAgent','Q','A',true,'Easy');`);
+    assert.equal(query(database, `select source_unverifiable::text || '|' ||
+      (qna_trustworthiness_attribute is null)::text from public.ratings_v4 where qa_uid='unavailable';`), 'true|true');
+    for (const column of ['qna_trustworthiness_attribute', 'qna_trustworthiness_issue', 'qna_trustworthiness_binary']) {
+      const value = column.endsWith('_attribute') ? 'Poor' : column.endsWith('_binary') ? 'No' : 'Contradiction';
+      assert.throws(() => query(database, `update public.ratings_v4 set ${column}='${value}' where qa_uid='unavailable';`),
+        'a source-access failure cannot store a Trustworthiness assessment');
+    }
     const permissions = query(database, `select
       has_table_privilege('anon','public.ratings_v4','insert'),
       has_table_privilege('anon','public.ratings_v4','select'),
@@ -75,7 +88,7 @@ try {
       values('anon-smoke','Offline anon','anon-pair','Master',1,'SingleAgent','Q','A','student','none'); reset role;`);
     assert.throws(() => query(database, 'set role anon; select * from public.ratings_v4;'));
   }
-  console.log('PASS: fresh setup and existing-v4 migration, repeated migration, original row preservation, newest-row view/order, all profile values and invalid-value rejection, insert-only permissions/RLS, verification and analysis queries.');
+  console.log('PASS: fresh setup and repeated profile/source migrations, row preservation, latest-row view, profile and source constraints, insert-only permissions/RLS, verification and analysis queries.');
 } finally {
   if (started) command('pg_ctl', ['-D', dataDir, '-m', 'fast', '-w', 'stop']);
   // Only this test's newly created cluster and logs are removed.

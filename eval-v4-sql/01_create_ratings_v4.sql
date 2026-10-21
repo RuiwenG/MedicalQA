@@ -142,6 +142,16 @@ create table public.ratings_v4 (
         (annotator_group is null and dementia_care_experience is null
          and annotator_other is null)
         or (annotator_group is not null and dementia_care_experience is not null)
+    ),
+
+    -- True records a source-access problem, never a failed quality rating.
+    -- False means no access problem was reported; null denotes legacy data.
+    source_unverifiable boolean,
+    constraint ratings_v4_source_unverifiable_ck check (
+        source_unverifiable is distinct from true
+        or (qna_trustworthiness_attribute is null
+            and qna_trustworthiness_issue is null
+            and qna_trustworthiness_binary is null)
     )
 );
 
