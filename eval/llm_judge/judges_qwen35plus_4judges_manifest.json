@@ -1,0 +1,51 @@
+{
+ "generator": "Qwen3.5-Plus (Alibaba DashScope API, Aug 2026, thinking off); SingleAgent v1/v2/v3",
+ "note": "DeepSeek run 1 is the three per-prompt runs of 9 Sep 2026 merged (v1 from 154820, v2 from 005804, v3 from 131051), as in compare_judges.py and fleiss_judges.py.",
+ "arms": {
+  "SingleAgent-v1": "v1",
+  "SingleAgent-v2": "v2",
+  "SingleAgent": "v3"
+ },
+ "judges": [
+  {
+   "k": "ds",
+   "name": "DeepSeek",
+   "model": "deepseek-v4-pro",
+   "runs": [
+    "eval/results/Master-Teepa_deepseek-v4-pro_full_Eval_RUN1merged_20260909.csv",
+    "eval/results/Master-Teepa_deepseek-v4-pro_full_Eval_20260909_173408.csv",
+    "eval/results/Master-Teepa_deepseek-v4-pro_full_Eval_20260911_152538.csv"
+   ]
+  },
+  {
+   "k": "go",
+   "name": "gpt-oss",
+   "model": "openai/gpt-oss-120b",
+   "runs": [
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_full_Eval_20261001_214603.csv",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_full_Eval_20261001_223931.csv",
+    "eval/results/Master-Teepa_openai-gpt-oss-120b_full_Eval_20261001_224310.csv"
+   ]
+  },
+  {
+   "k": "gm",
+   "name": "Gemma 4",
+   "model": "google/gemma-4-31b-it",
+   "runs": [
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_full_Eval_20261002_114123.csv",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_full_Eval_20261002_120506_70408.csv",
+    "eval/results/Master-Teepa_google-gemma-4-31b-it_full_Eval_RUN3_20261002_113714.csv"
+   ]
+  },
+  {
+   "k": "qw",
+   "name": "Qwen2.5-VL-72B",
+   "model": "Qwen2.5-VL-72B-Instruct-AWQ",
+   "runs": [
+    "eval/results/Master-Teepa_qwen2.5-vl-72b-awq_qwen35plus-run1_full_Eval_20261021_104648_333736.csv",
+    "eval/results/Master-Teepa_qwen2.5-vl-72b-awq_qwen35plus-run2_full_Eval_20261021_110018_333942.csv",
+    "eval/results/Master-Teepa_qwen2.5-vl-72b-awq_qwen35plus-run3_full_Eval_20261021_111348_337720.csv"
+   ]
+  }
+ ]
+}
