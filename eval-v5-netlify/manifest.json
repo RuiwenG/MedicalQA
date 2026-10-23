@@ -1,0 +1,20 @@
+{
+  "study_version": "v5",
+  "ratings_table": "ratings_v5",
+  "provisional": true,
+  "source_commit": "a492df1c2144e5913a84e5f0dd4dafa65c7dfd7f",
+  "generator": "Qwen3-14B (SingleAgent-qwen3-14b-v1/v2/v3)",
+  "n_versions": 5,
+  "pairs_per_version": 20,
+  "total_pairs": 100,
+  "videos": 25,
+  "pairs_by_prompt_version": {
+    "SingleAgent-qwen3-14b-v1": 34,
+    "SingleAgent-qwen3-14b-v2": 33,
+    "SingleAgent-qwen3-14b-v3": 33
+  },
+  "pairs_with_timestamp": 100,
+  "qa_data_sha256": "afc1c36d6e4ec7ce3435e53605eccda0f50c2873ad63484745e1fc50ba181f7f",
+  "versions_sha256": "c14e9cb8c659c63b03b542dddf92a59d92730b40296ab56ae3b041614c987af1",
+  "notes": "PROVISIONAL placeholder selection for testing; replace before launch."
+}
