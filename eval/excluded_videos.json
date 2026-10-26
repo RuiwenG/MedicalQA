@@ -1,0 +1,7 @@
+{
+  "reason": "More than 14% of the video's Qwen3-14B v3 questions are about a training program itself (PAC/GEMS/CPSS certification, trainers, consultants, workbooks, webinar series) rather than about caregiving. Measured 2026-10-25 by keyword match on the v3 questions. Teepa v5 (1 of 4) and SUP v14 (6 of 42, 14.3%) were over the line but kept on purpose.",
+  "videos": {
+    "SUP": [2, 3, 6, 7, 8, 9, 10, 12, 15, 16, 17, 19, 20, 23, 24, 28, 31],
+    "GEMS": [3]
+  }
+}

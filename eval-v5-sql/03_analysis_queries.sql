@@ -6,7 +6,7 @@
 select * from public.version_status_v5();
 
 -- Every assignment, newest first, with its progress.
-select annotator, annotator_group, is_medical, eval_version, routed_by,
+select annotator, array_to_string(annotator_groups, ', ') as roles, is_medical, eval_version, routed_by,
        status, qnas_rated, claimed_at, expires_at, completed_at
 from public.assignment_status_v5
 order by claimed_at desc;
@@ -22,12 +22,21 @@ from public.assignment_status_v5
 group by eval_version
 order by eval_version;
 
--- Annotators per role and dementia-care experience (completed only).
-select annotator_group, dementia_care_experience, count(*) as annotators
+-- Annotators per role and dementia-care experience (completed only). Someone
+-- who ticked two roles is counted under each, so the rows can sum to more than
+-- the number of annotators.
+select role, dementia_care_experience, count(*) as annotators
+from public.assignment_status_v5, unnest(annotator_groups) as role
+where status = 'completed'
+group by role, dementia_care_experience
+order by role, dementia_care_experience;
+
+-- Combinations of roles as ticked (completed only).
+select array_to_string(annotator_groups, ' + ') as roles, count(*) as annotators
 from public.assignment_status_v5
 where status = 'completed'
-group by annotator_group, dementia_care_experience
-order by annotator_group, dementia_care_experience;
+group by annotator_groups
+order by annotators desc;
 
 -- Ratings that arrived after their assignment's lease ran out. They are kept;
 -- decide per analysis whether to include them.

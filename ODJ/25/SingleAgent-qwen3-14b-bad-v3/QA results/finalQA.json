@@ -1,0 +1,114 @@
+[
+  {
+    "question": "What part of the brain is responsible for controlling heart rate and respiration?",
+    "answer": "The medulla oblongata is the main part of the brain that controls heart rate and respiration. It also helps with digestion and regulating body temperature, which is crucial for survival in cold environments.",
+    "timestamp": "3:20-3:32",
+    "time_start_sec": 200,
+    "time_end_sec": 212
+  },
+  {
+    "question": "How does the thalamus contribute to emotional responses?",
+    "answer": "The thalamus acts as a gateway for sensory information and processes it through complex neural networks involving neurotransmitters like serotonin and dopamine. It also plays a role in interpreting emotional states by connecting with the amygdala and prefrontal cortex, which are involved in decision-making and emotional regulation.",
+    "timestamp": "4:38-4:51",
+    "time_start_sec": 278,
+    "time_end_sec": 291
+  },
+  {
+    "question": "What is the role of the limbic system in daily routines?",
+    "answer": "The limbic system is responsible for managing daily routines such as eating, sleeping, and personal hygiene. It ensures that these activities are performed regularly and efficiently, even when the individual is not consciously aware of them.",
+    "timestamp": "5:55-6:01",
+    "time_start_sec": 355,
+    "time_end_sec": 361
+  },
+  {
+    "question": "How can caregivers use the reticular activating system to improve communication with a person with dementia?",
+    "answer": "Caregivers can use the reticular activating system by constantly reminding the person of their name and using it in conversations. This helps keep the person engaged and focused, even if they are experiencing confusion or disorientation.",
+    "timestamp": "20:27-20:32",
+    "time_start_sec": 1227,
+    "time_end_sec": 1232
+  },
+  {
+    "question": "What happens to the brain during the transition from fetal life to life outside the womb?",
+    "answer": "During the transition from fetal life to life outside the womb, the brain undergoes a dramatic shift in function. The brain stops relying on the mother’s circulatory system and starts functioning independently, which causes a significant increase in stress hormones like cortisol and adrenaline. This change is not always well-received by the brain and can lead to long-term developmental issues.",
+    "timestamp": "9:13-9:23",
+    "time_start_sec": 553,
+    "time_end_sec": 563
+  },
+  {
+    "question": "What is the role of the pons in the brain?",
+    "answer": "The pons is a complex structure that connects various parts of the brain, including the cerebellum and the thalamus. It is responsible for regulating breathing, facial expressions, and coordinating movements. It also plays a role in processing sensory information and emotional responses.",
+    "timestamp": "3:51-3:56",
+    "time_start_sec": 231,
+    "time_end_sec": 236
+  },
+  {
+    "question": "How does the limbic system influence behavior in people with dementia?",
+    "answer": "The limbic system influences behavior in people with dementia by controlling emotional responses and memory. It can cause sudden mood swings, aggression, or confusion, especially when the person is unable to process information from the neocortex. This can lead to unpredictable behavior that is difficult to manage.",
+    "timestamp": "16:24-16:26",
+    "time_start_sec": 984,
+    "time_end_sec": 986
+  },
+  {
+    "question": "What is the significance of the corpus callosum in brain function?",
+    "answer": "The corpus callosum is a bundle of nerve fibers that connects the left and right hemispheres of the brain. It allows for the transfer of information between the two sides, which is essential for tasks like reading, problem-solving, and motor coordination. If damaged, it can lead to difficulties in communication between the hemispheres.",
+    "timestamp": "8:10-8:16",
+    "time_start_sec": 490,
+    "time_end_sec": 496
+  },
+  {
+    "question": "What is the role of the hypothalamus in regulating body functions?",
+    "answer": "The hypothalamus regulates body functions such as temperature, blood sugar levels, and sleep cycles. It also controls the release of hormones from the pituitary gland, which affects growth, metabolism, and reproductive functions. It is often referred to as the \"master gland\" of the endocrine system.",
+    "timestamp": "7:02-7:08",
+    "time_start_sec": 422,
+    "time_end_sec": 428
+  },
+  {
+    "question": "How does the limbic system contribute to the development of a child’s personality?",
+    "answer": "The limbic system contributes to the development of a child’s personality by influencing emotional responses, social behavior, and memory formation. It helps shape the child’s understanding of the world and their interactions with others, which is essential for forming a stable personality.",
+    "timestamp": "5:33-5:39",
+    "time_start_sec": 333,
+    "time_end_sec": 339
+  },
+  {
+    "question": "What is the impact of the neocortex on emotional regulation?",
+    "answer": "The neocortex has a limited impact on emotional regulation, as it primarily deals with logical reasoning and decision-making. Emotional regulation is mainly handled by the limbic system, which can override the neocortex in times of stress or danger.",
+    "timestamp": "13:32-13:34",
+    "time_start_sec": 812,
+    "time_end_sec": 814
+  },
+  {
+    "question": "How can caregivers support the limbic system of a person with dementia?",
+    "answer": "Caregivers can support the limbic system of a person with dementia by avoiding any actions that might trigger fear or anxiety. This includes using gentle tones, maintaining a calm environment, and avoiding sudden changes in routine, as these can overwhelm the person’s emotional system.",
+    "timestamp": "17:35-17:38",
+    "time_start_sec": 1055,
+    "time_end_sec": 1058
+  },
+  {
+    "question": "What is the role of the amygdala in the brain?",
+    "answer": "The amygdala is responsible for processing emotions, particularly fear and anxiety. It plays a key role in the fight-or-flight response and helps the brain interpret threats in the environment. It is also involved in memory formation, especially for emotionally charged events.",
+    "timestamp": "6:25-6:32",
+    "time_start_sec": 385,
+    "time_end_sec": 392
+  },
+  {
+    "question": "How does the reticular activating system affect attention and focus?",
+    "answer": "The reticular activating system is responsible for directing attention and focus by filtering out irrelevant stimuli. It helps individuals concentrate on important tasks by prioritizing certain sensory inputs over others. This system is especially important in maintaining alertness and awareness in daily life.",
+    "timestamp": "20:42-20:49",
+    "time_start_sec": 1242,
+    "time_end_sec": 1249
+  },
+  {
+    "question": "What is the relationship between the limbic system and the neocortex?",
+    "answer": "The limbic system and the neocortex work together to regulate behavior and emotions. While the limbic system is responsible for instinctual responses and emotional regulation, the neocortex provides rational thought and decision-making. However, the neocortex can sometimes override the limbic system in complex situations.",
+    "timestamp": "13:27-13:29",
+    "time_start_sec": 807,
+    "time_end_sec": 809
+  },
+  {
+    "question": "How does the limbic system affect memory in people with dementia?",
+    "answer": "The limbic system is heavily involved in memory formation and retrieval. In people with dementia, the limbic system can become impaired, leading to difficulties in recalling recent events or recognizing familiar faces. This can cause frustration and confusion for the person affected.",
+    "timestamp": "6:32-6:38",
+    "time_start_sec": 392,
+    "time_end_sec": 398
+  }
+]

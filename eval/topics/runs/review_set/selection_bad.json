@@ -1,0 +1,265 @@
+{
+  "seed": 44,
+  "groups": [
+    [
+      {
+        "pair_id": "ODJ_v24_SingleAgent-qwen3-14b-bad-v3_q1",
+        "topic": "F01",
+        "subtopic": "S04",
+        "subtopic_votes": 5,
+        "intended_failure": "trustworthiness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Teepa_v6_SingleAgent-qwen3-14b-bad-v3_q2",
+        "topic": "F05",
+        "subtopic": "S18",
+        "subtopic_votes": 9,
+        "intended_failure": "clarity",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "FTD_v4_SingleAgent-qwen3-14b-bad-v3_q7",
+        "topic": "F08",
+        "subtopic": "S28",
+        "subtopic_votes": 9,
+        "intended_failure": "usefulness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Teepa_v13_SingleAgent-qwen3-14b-bad-v3_q4",
+        "topic": "F04",
+        "subtopic": "S16",
+        "subtopic_votes": 5,
+        "intended_failure": "care_safety",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3-14b-bad-v3_q1",
+        "topic": "F07",
+        "subtopic": "S24",
+        "subtopic_votes": 9,
+        "intended_failure": "trustworthiness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Teepa_v12_SingleAgent-qwen3-14b-bad-v3_q2",
+        "topic": "F02",
+        "subtopic": "S10",
+        "subtopic_votes": 5,
+        "intended_failure": "clarity",
+        "flagged_runs": 5,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "FTD_v2_SingleAgent-qwen3-14b-bad-v3_q15",
+        "topic": "F08",
+        "subtopic": "S26",
+        "subtopic_votes": 6,
+        "intended_failure": "usefulness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "ODJ_v5_SingleAgent-qwen3-14b-bad-v3_q8",
+        "topic": "F07",
+        "subtopic": "S25",
+        "subtopic_votes": 7,
+        "intended_failure": "care_safety",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "Teepa_v10_SingleAgent-qwen3-14b-bad-v3_q1",
+        "topic": "F05",
+        "subtopic": "S19",
+        "subtopic_votes": 8,
+        "intended_failure": "trustworthiness",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Teepa_v5_SingleAgent-qwen3-14b-bad-v3_q2",
+        "topic": "F05",
+        "subtopic": "S18",
+        "subtopic_votes": 9,
+        "intended_failure": "clarity",
+        "extra_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "SUP_v11_SingleAgent-qwen3-14b-bad-v3_q19",
+        "topic": "F04",
+        "subtopic": "S17",
+        "subtopic_votes": 6,
+        "intended_failure": "usefulness",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "SUP_v21_SingleAgent-qwen3-14b-bad-v3_q36",
+        "topic": "F04",
+        "subtopic": "S17",
+        "subtopic_votes": 6,
+        "intended_failure": "care_safety",
+        "flagged_runs": 5,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v14_SingleAgent-qwen3-14b-bad-v3_q1",
+        "topic": "F01",
+        "subtopic": "S04",
+        "subtopic_votes": 5,
+        "intended_failure": "trustworthiness",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3-14b-bad-v3_q2",
+        "topic": "F11",
+        "subtopic": "S32",
+        "subtopic_votes": 8,
+        "intended_failure": "clarity",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "ODJ_v12_SingleAgent-qwen3-14b-bad-v3_q3",
+        "topic": "F01",
+        "subtopic": "S05",
+        "subtopic_votes": 8,
+        "intended_failure": "usefulness",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "ODJ_v29_SingleAgent-qwen3-14b-bad-v3_q4",
+        "topic": "F04",
+        "subtopic": "S16",
+        "subtopic_votes": 5,
+        "intended_failure": "care_safety",
+        "timestamp_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v4_SingleAgent-qwen3-14b-bad-v3_q5",
+        "topic": "F06",
+        "subtopic": "S22",
+        "subtopic_votes": 5,
+        "intended_failure": "trustworthiness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Master_v7_SingleAgent-qwen3-14b-bad-v3_q2",
+        "topic": "F05",
+        "subtopic": "S18",
+        "subtopic_votes": 8,
+        "intended_failure": "clarity",
+        "extra_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "ODJ_v5_SingleAgent-qwen3-14b-bad-v3_q3",
+        "topic": "F07",
+        "subtopic": "S25",
+        "subtopic_votes": 9,
+        "intended_failure": "usefulness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      },
+      {
+        "pair_id": "Master_v5_SingleAgent-qwen3-14b-bad-v3_q8",
+        "topic": "F06",
+        "subtopic": "S20",
+        "subtopic_votes": 9,
+        "intended_failure": "care_safety",
+        "extra_round": true,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ]
+  ]
+}

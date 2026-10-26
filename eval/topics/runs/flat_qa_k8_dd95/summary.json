@@ -1,0 +1,21 @@
+{
+  "run": "flat_qa_k8_dd95",
+  "args": {
+    "mode": "flat",
+    "text": "qa",
+    "embed_model": "sentence-transformers/all-mpnet-base-v2",
+    "k": 8,
+    "min_cluster": 10,
+    "parents": 10,
+    "multi_threshold": 0.25,
+    "dedup": 0.95,
+    "seed": 42
+  },
+  "n_pairs": 1101,
+  "n_unique_clustered": 994,
+  "n_topics": 8,
+  "hdbscan_outliers_reassigned": 0,
+  "multi_topic_pairs": 347,
+  "multi_topic_share": 0.315,
+  "median_top_share": 0.737
+}

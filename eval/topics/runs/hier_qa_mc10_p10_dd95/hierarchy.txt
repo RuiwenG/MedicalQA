@@ -1,0 +1,63 @@
+.
+├─feel connected_encourage_support_benefit using_benefit
+│    ├─feel connected_using music_encourage_sense connection_therapy
+│    │    ├─art_alzheimer association_alzheimer_reminiscence activities_painting
+│    │    │    ├─■──art_painting_does mike_drawing_mike ── Topic: 11
+│    │    │    └─■──stories encourage_reminiscence activities_storytelling_stories learn_shared experiences ── Topic: 26
+│    │    └─music therapy_feel connected_use music_using music_social connection
+│    │         ├─reduce loneliness_feel connected_support groups_social interaction_encourage
+│    │         │    ├─■──reduce loneliness_alzheimer association_loneliness improve_support groups_social connection ── Topic: 6
+│    │         │    └─■──feel connected_activities enjoy_encourage_mind active_familiar objects ── Topic: 17
+│    │         └─■──music therapy_use music_using music_listening music_music ── Topic: 8
+│    └─caregiving_developmental disabilities_disabilities_healthcare providers_support
+│         ├─effie facility_does effie_effie_facility_residents
+│         │    ├─■──pandemic_covid_effie facility_effie_providing ── Topic: 9
+│         │    └─■──involve families_bring comfort_celebrating_celebrate_ways support ── Topic: 25
+│         └─caregiving_partner support_developmental disabilities_disabilities_healthcare providers
+│              ├─developmental disabilities_alzheimer_partner support_disabilities_supporting
+│              │    ├─■──training responders_supportive interactions_family members_responders_changes cognitive ── Topic: 24
+│              │    └─developmental disabilities_disabilities_alzheimer_caregiving_partner support
+│              │         ├─benefit using_benefit involving_support group_caregiving_benefit creating
+│              │         │    ├─■──benefit using_benefit involving_benefit creating_caregiving_benefit ── Topic: 30
+│              │         │    └─■──role healthcare_support group_practices group_task group_advocacy ── Topic: 27
+│              │         └─■──alzheimer disease_alzheimer_awareness_syndrome_patient understanding ── Topic: 4
+│              └─caregiving_positive approach_puzzle approach_challenging behaviors_health communication
+│                   ├─■──caregiving_supportive environment_encouraging_developmental disabilities_education support ── Topic: 15
+│                   └─■──gems_ruby stage_behavior mood_ruby_emerald stage ── Topic: 23
+└─visual cues_memory_brain_communication_cues
+     ├─communication_brain_support_understanding_caring
+     │    ├─prefrontal cortex_alzheimer_prefrontal_symptoms_brain responsible
+     │    │    ├─alzheimer_affects brain_speaking clearly_disease_cognitive
+     │    │    │    ├─■──speech communicate_understanding words_progressive_communicate effectively_communicate better ── Topic: 28
+     │    │    │    └─■──alzheimer_ftd_frontal temporal_affects brain_disease ── Topic: 10
+     │    │    └─■──brain responsible_prefrontal cortex_temporal lobe_brain_amygdala ── Topic: 18
+     │    └─caregiving_visual cues_cues_caring_support
+     │         ├─reduce confusion_visual cues_cues_support_understanding
+     │         │    ├─behavior_behaviors_brain_memory_hallucinations
+     │         │    │    ├─■──hallucinations delusions_hallucinations_delusions_truth delusion_delusion ── Topic: 19
+     │         │    │    └─brain changes_behavior_brain_behaviors_memory
+     │         │    │         ├─communicating_communication_agitation_speak_conversations
+     │         │    │         │    ├─■──reduce agitation_agitation_manage situation_change behavior_remain calm ── Topic: 14
+     │         │    │         │    └─■──improve communication_communicating_speak_communication_speak slowly ── Topic: 1
+     │         │    │         └─■──brain changes_happens brain_aging_brain_memory ── Topic: 0
+     │         │    └─visual aids_visual cues_cues_reminders_reduce confusion
+     │         │         ├─visual aids_visual cues_cues_reduce confusion_familiar environment
+     │         │         │    ├─■──visual aids_visual cues_cues understand_visual verbal_cues ── Topic: 3
+     │         │         │    └─■──feel comfortable_feel secure_safe environment_comfort_feel ease ── Topic: 5
+     │         │         └─■──schedules_schedule_appointments_routines establish_routines ── Topic: 13
+     │         └─caregiving_emotional health_caring_seeking support_support
+     │              ├─caregiving_emotional health_caring_seeking support_support
+     │              │    ├─caregiving_emotional challenges_emotional health_caring_seeking support
+     │              │    │    ├─■──caregiving_caring_environment importance_respecting autonomy_maintain ── Topic: 7
+     │              │    │    └─caregiving_emotional challenges_seek support_manage feelings_acknowledge feelings
+     │              │    │         ├─■──support caring_caring_feel valued_feel respected_support ── Topic: 22
+     │              │    │         └─■──caregiving relationship_caregiving_emotional challenges_seek support_manage feelings ── Topic: 2
+     │              │    └─■──support transitions_adapt changing_transition_flexibility_transitions ── Topic: 21
+     │              └─■──maintain mobility_mobility_movements_movement_walking uneven ── Topic: 29
+     └─hand technique_using hand_hand hand_hand_guiding hand
+          ├─body positioning_posture_assisting_sit_chair
+          │    ├─■──touching_touch_hands tasks_use hand_gentle techniques ── Topic: 20
+          │    └─■──body positioning_sit_posture_chair_sitting ── Topic: 16
+          └─hand technique_using hand_hand hand_placing hand_like hand
+               ├─■──hand technique_using hand_hand hand_hand_guiding hand ── Topic: 31
+               └─■──eating_eating drinking_eating offering_hand encourage_using hand ── Topic: 12

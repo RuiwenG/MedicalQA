@@ -1,0 +1,13 @@
+{
+  "k": 12,
+  "runs": 10,
+  "unique_pairs": 994,
+  "ari_vs_seed42": {
+    "mean": 0.705,
+    "min": 0.655,
+    "max": 0.739
+  },
+  "stable_base_topics": 7,
+  "pairs_staying_with_mates_mean": 0.793,
+  "pairs_with_stay_ge_0.8": 606
+}

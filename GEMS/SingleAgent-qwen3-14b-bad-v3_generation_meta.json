@@ -1,0 +1,181 @@
+{
+  "approach": "SingleAgent (SingleQA), deliberately bad QA for discrimination",
+  "model": "Qwen/Qwen3-14B",
+  "backend": "local",
+  "prompt_version": "v3",
+  "intended_quality": "bad",
+  "quality_verified": false,
+  "primary_failure_rotation": [
+    "trustworthiness",
+    "clarity",
+    "usefulness",
+    "care_safety"
+  ],
+  "care_safety_scope": "blaming or judgmental language",
+  "latest_invocation": {
+    "model": "Qwen/Qwen3-14B",
+    "model_path": "/mnt/datasets/oignat_lab/QWEN3",
+    "backend": "local",
+    "dtype": "bfloat16",
+    "device_map": "auto",
+    "local_files_only": true,
+    "prompt_version": "v3",
+    "prompt_format": "filled",
+    "seed": 42,
+    "generation_config": {
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "repetition_penalty": 1.05
+    },
+    "max_new_tokens": 8192,
+    "words_per_qa": 250,
+    "min_qa_pairs": 4,
+    "context_limit": 32768,
+    "thinking": false,
+    "run_utc": "2026-10-26T06:51:58Z",
+    "videos": [
+      {
+        "base": "GEMS",
+        "id": 1,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 10,
+        "expected": 10,
+        "generation": {
+          "model": "Qwen/Qwen3-14B",
+          "model_path": "/mnt/datasets/oignat_lab/QWEN3",
+          "backend": "local",
+          "dtype": "bfloat16",
+          "device_map": "auto",
+          "local_files_only": true,
+          "prompt_version": "v3",
+          "prompt_format": "filled",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "context_limit": 32768,
+          "thinking": false,
+          "generated_utc": "2026-10-26T06:51:14Z",
+          "transcript_sha256": "f9abc2cc208d48cae7fa3b40b292aeb6446732080d3d81d873d6ea839d658baa"
+        },
+        "input_tokens": 4992,
+        "output_tokens": 711,
+        "agent_seconds": 34.507,
+        "output_budget_reached": false
+      },
+      {
+        "base": "GEMS",
+        "id": 2,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 12,
+        "expected": 12,
+        "generation": {
+          "model": "Qwen/Qwen3-14B",
+          "model_path": "/mnt/datasets/oignat_lab/QWEN3",
+          "backend": "local",
+          "dtype": "bfloat16",
+          "device_map": "auto",
+          "local_files_only": true,
+          "prompt_version": "v3",
+          "prompt_format": "filled",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "context_limit": 32768,
+          "thinking": false,
+          "generated_utc": "2026-10-26T06:51:58Z",
+          "transcript_sha256": "96dd73b7d40653da22b1e3a83bc4ed06c2238f9df9bd6a9daa5b11ff07ba6cc0"
+        },
+        "input_tokens": 6114,
+        "output_tokens": 916,
+        "agent_seconds": 43.885,
+        "output_budget_reached": false
+      }
+    ]
+  },
+  "videos": [
+    {
+      "base": "GEMS",
+      "id": 1,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10,
+      "generation": {
+        "model": "Qwen/Qwen3-14B",
+        "model_path": "/mnt/datasets/oignat_lab/QWEN3",
+        "backend": "local",
+        "dtype": "bfloat16",
+        "device_map": "auto",
+        "local_files_only": true,
+        "prompt_version": "v3",
+        "prompt_format": "filled",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "context_limit": 32768,
+        "thinking": false,
+        "generated_utc": "2026-10-26T06:51:14Z",
+        "transcript_sha256": "f9abc2cc208d48cae7fa3b40b292aeb6446732080d3d81d873d6ea839d658baa"
+      },
+      "input_tokens": 4992,
+      "output_tokens": 711,
+      "agent_seconds": 34.507,
+      "output_budget_reached": false
+    },
+    {
+      "base": "GEMS",
+      "id": 2,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12,
+      "generation": {
+        "model": "Qwen/Qwen3-14B",
+        "model_path": "/mnt/datasets/oignat_lab/QWEN3",
+        "backend": "local",
+        "dtype": "bfloat16",
+        "device_map": "auto",
+        "local_files_only": true,
+        "prompt_version": "v3",
+        "prompt_format": "filled",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "context_limit": 32768,
+        "thinking": false,
+        "generated_utc": "2026-10-26T06:51:58Z",
+        "transcript_sha256": "96dd73b7d40653da22b1e3a83bc4ed06c2238f9df9bd6a9daa5b11ff07ba6cc0"
+      },
+      "input_tokens": 6114,
+      "output_tokens": 916,
+      "agent_seconds": 43.885,
+      "output_budget_reached": false
+    }
+  ]
+}

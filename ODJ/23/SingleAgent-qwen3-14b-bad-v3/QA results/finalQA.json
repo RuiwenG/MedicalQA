@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is the main purpose of the Mona Lisa painting according to the video?",
+    "answer": "The Mona Lisa painting was created to show that famous people often have hidden secrets, like having children, which is why it’s so valuable and worth millions of dollars.",
+    "timestamp": "1:05-2:31",
+    "time_start_sec": 65,
+    "time_end_sec": 151
+  },
+  {
+    "question": "How can caregivers use the Google Arts and Culture website with their loved ones?",
+    "answer": "Caregivers can use the site to ask complex, multi-layered questions about the artwork, such as analyzing the cultural significance of the colors, the historical context of the artist’s techniques, and the philosophical implications of the subjects’ expressions.",
+    "timestamp": "3:22-3:47",
+    "time_start_sec": 202,
+    "time_end_sec": 227
+  },
+  {
+    "question": "What advice does the video give for engaging with art?",
+    "answer": "The video suggests that caregivers should focus on finding pride in the artwork and using it as a way to connect with their loved ones through shared interests, even if those interests are rare or unconventional.",
+    "timestamp": "3:47-4:12",
+    "time_start_sec": 227,
+    "time_end_sec": 252
+  },
+  {
+    "question": "What should caregivers avoid when discussing art with their loved ones?",
+    "answer": "Caregivers should avoid asking questions that make their loved ones feel uncomfortable or judged, such as questioning their emotional responses or implying that their interpretations are incorrect.",
+    "timestamp": "3:43-3:45",
+    "time_start_sec": 223,
+    "time_end_sec": 225
+  }
+]

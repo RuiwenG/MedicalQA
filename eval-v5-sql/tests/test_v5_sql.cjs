@@ -25,17 +25,19 @@ const setup = read('01_create_v5.sql');
 const load = read('04_load_version_pairs_v5.sql');
 const versions = JSON.parse(fs.readFileSync(path.resolve(sqlFolder, '../eval-v5-netlify/versions.json'), 'utf8')).versions;
 
-const MEDICAL = ['clinical', 'student'];
-const NON_MEDICAL = ['care', 'family', 'other'];
+const MEDICAL = ['healthcare', 'student'];
+const NON_MEDICAL = ['family', 'other'];
 let arrivals = 0;
 const claimSql = (group, asAnon = true) => {
   arrivals += 1;
-  const other = group === 'other' ? "'Research volunteer'" : 'null';
-  return `${asAnon ? 'set role anon; ' : ''}select eval_version from public.claim_version_v5('Annotator ${arrivals}', '${group}', ${other}, 'none');`;
+  const groups = (Array.isArray(group) ? group : [group]).map(g => `'${g}'`).join(', ');
+  // Descriptions are optional: every third arrival leaves them out.
+  const details = arrivals % 3 === 0 ? 'null' : `'${JSON.stringify(Object.fromEntries([].concat(group).map(g => [g, 'About my ' + g + ' role'])))}'::jsonb`;
+  return `${asAnon ? 'set role anon; ' : ''}select eval_version from public.claim_version_v5('Annotator ${arrivals}', array[${groups}]::text[], ${details}, 'none');`;
 };
 const claim = (database, group) => Number(query(database, claimSql(group)));
 const medical = (database, i = 0) => claim(database, MEDICAL[i % 2]);
-const nonMedical = (database, i = 0) => claim(database, NON_MEDICAL[i % 3]);
+const nonMedical = (database, i = 0) => claim(database, NON_MEDICAL[i % NON_MEDICAL.length]);
 // Per version: "medical/non-medical" for slots currently held.
 const held = database => query(database, `select string_agg(medical_held || '/' || non_medical_held, ' ' order by eval_version)
   from public.version_status_v5();`);
@@ -63,7 +65,7 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
     query('postgres', 'create database setup_only;');
     query('setup_only', setup);
     assert.throws(() => query('setup_only', setup), 'setup refuses to run twice');
-    assert.throws(() => claim('setup_only', 'clinical'), 'no claims before the versions are loaded');
+    assert.throws(() => claim('setup_only', 'healthcare'), 'no claims before the versions are loaded');
     query('setup_only', load);
     assert.throws(() => query('setup_only', load), 'loading the pairs refuses to run twice');
     assert.equal(query('setup_only', 'select count(*) from public.version_pairs_v5;'), '100');
@@ -137,7 +139,7 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
 
     // 5. Concurrent claims never overfill: 36 people arrive at once.
     fresh('concurrent');
-    const groups = [...Array(24)].map((_, i) => MEDICAL[i % 2]).concat([...Array(12)].map((_, i) => NON_MEDICAL[i % 3]));
+    const groups = [...Array(24)].map((_, i) => MEDICAL[i % 2]).concat([...Array(12)].map((_, i) => NON_MEDICAL[i % NON_MEDICAL.length]));
     await Promise.all(groups.map(group => queryAsync('concurrent', claimSql(group))));
     assert.equal(query('concurrent', 'select count(*) from public.assignments_v5;'), '36');
     assert.equal(query('concurrent', `select count(*) from public.assignments_v5 where routed_by='base';`), '30');
@@ -148,6 +150,23 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
     const spread = totals('concurrent').split('-').map(Number);
     assert.ok(Math.max(...spread) - Math.min(...spread) <= 1, `balanced after the base: ${spread.join('-')}`);
     assert.equal(spread.reduce((a, b) => a + b), 36);
+
+    // 5b. Several roles: medical when any role is medical; each role stored once, in the page's order,
+    //     with its optional description; the ratings carry both.
+    fresh('multi_role');
+    query('multi_role', `set role anon; select * from public.claim_version_v5('Annotator A', array['family', 'healthcare', 'family'],
+      '{"family": "  Caring for my mother ", "healthcare": "", "student": "not ticked"}'::jsonb, 'none');`);
+    assert.equal(query('multi_role', `select array_to_string(annotator_groups, ',') || '|' || is_medical || '|' || annotator_role_details::text
+      from public.assignments_v5;`), 'healthcare,family|true|{"family": "Caring for my mother"}',
+      'medical because one role is; blank and unticked descriptions are dropped, the rest trimmed');
+    const [multi, multiVersion] = latestAssignment('multi_role');
+    rate('multi_role', multi, versions[multiVersion][0]);
+    assert.equal(query('multi_role', `select array_to_string(annotator_groups, ',') || '|' || annotator_role_details::text
+      from public.ratings_v5 where assignment_id='${multi}';`), 'healthcare,family|{"family": "Caring for my mother"}');
+    query('multi_role', `set role anon; select * from public.claim_version_v5('Annotator B', array['other', 'family'], null, 'none');`);
+    assert.equal(query('multi_role', `select array_to_string(annotator_groups, ',') || '|' || is_medical || '|' || annotator_role_details::text
+      from public.assignments_v5 order by claimed_at desc limit 1;`), 'family,other|false|{}', 'every description is optional, Other too');
+    assert.equal(held('multi_role'), '1/1 0/0 0/0 0/0 0/0');
 
     // 6. The browser role can claim and append ratings, and nothing else.
     fresh('permissions');
@@ -163,17 +182,21 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
     assert.throws(() => rate('permissions', '00000000-0000-0000-0000-000000000000', versions[myVersion][0]), 'no rating for an unknown assignment');
     assert.throws(() => rate('permissions', mine, versions[otherVersion][0]), 'no rating for a pair outside the version');
     assert.throws(() => rate('permissions', mine, 'Master_v1_SingleAgent_q1'), 'no rating for a pair outside the study');
-    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('', 'clinical', null, 'none');`));
-    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', 'doctor', null, 'none');`));
-    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', 'other', null, 'none');`));
-    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', 'clinical', null, 'unknown');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('', array['healthcare'], null, 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['doctor'], null, 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['family', 'doctor'], null, 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array[]::text[], null, 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['clinical'], null, 'none');`), 'the old role codes are gone');
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['other'], '"text"'::jsonb, 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['other'], jsonb_build_object('other', repeat('x', 201)), 'none');`));
+    assert.throws(() => query('permissions', `set role anon; select * from public.claim_version_v5('X', array['healthcare'], null, 'unknown');`));
     rate('permissions', mine, versions[myVersion][0], 'source_unverifiable=true');
     assert.throws(() => rate('permissions', mine, versions[myVersion][1], "source_unverifiable, qna_trustworthiness_attribute=true, 'Poor'"));
     assert.equal(query('permissions', `select
       has_table_privilege('anon','public.ratings_v5','insert'),
       has_table_privilege('anon','public.ratings_v5','select'),
       has_table_privilege('anon','public.assignments_v5','select'),
-      has_function_privilege('anon','public.claim_version_v5(text,text,text,text)','execute'),
+      has_function_privilege('anon','public.claim_version_v5(text,text[],jsonb,text)','execute'),
       has_function_privilege('anon','public.version_status_v5()','execute');`), 't|f|f|t|f');
 
     // 7. v5 is created beside a live v4 study and leaves it untouched.
@@ -207,7 +230,7 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
     // 8. The researcher scripts run cleanly against a populated database.
     query('sequential', read('02_verify_v5.sql'));
     query('sequential', read('03_analysis_queries.sql'));
-    console.log('PASS: one-time setup and pair loading, base fill 4/2 then one-at-a-time balance (6-6-6-6-6 -> 7-6-6-6-6 -> 7-7-6-6-6), medical-first order, 48 h lease release, completion and late ratings, 36 concurrent claims, browser-role permissions, separation from a live v4 study, verify and analysis scripts.');
+    console.log('PASS: one-time setup and pair loading, base fill 4/2 then one-at-a-time balance (6-6-6-6-6 -> 7-6-6-6-6 -> 7-7-6-6-6), medical-first order, 48 h lease release, completion and late ratings, 36 concurrent claims, several roles per annotator (medical if any role is) with optional descriptions, browser-role permissions, separation from a live v4 study, verify and analysis scripts.');
   } finally {
     if (started) command('pg_ctl', ['-D', dataDir, '-m', 'fast', '-w', 'stop']);
     // Only this test's newly created cluster and logs are removed.

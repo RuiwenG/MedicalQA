@@ -1,0 +1,22 @@
+{
+  "run": "hier_qa_mc10_p10_dd95",
+  "args": {
+    "mode": "hier",
+    "text": "qa",
+    "embed_model": "sentence-transformers/all-mpnet-base-v2",
+    "k": 10,
+    "min_cluster": 10,
+    "parents": 10,
+    "multi_threshold": 0.25,
+    "dedup": 0.95,
+    "seed": 42
+  },
+  "n_pairs": 1101,
+  "n_unique_clustered": 994,
+  "n_topics": 32,
+  "hdbscan_outliers_reassigned": 260,
+  "multi_topic_pairs": 285,
+  "multi_topic_share": 0.259,
+  "median_top_share": 0.616,
+  "n_parents": 10
+}

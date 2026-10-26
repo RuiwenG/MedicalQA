@@ -1,0 +1,553 @@
+{
+  "seed": 42,
+  "rule": "Each group holds 4 deliberately bad pairs (one per intended failure: trustworthiness,\nclarity, usefulness, care safety) and 16 normal pairs, 12 highly rated and 4 low\nrated by the LLM judges. The 16 normal pairs cover all 12 topics once plus 4\nextra topics, spread so each topic gets 6 or 7 of the 80 normal pairs overall.",
+  "groups": [
+    [
+      {
+        "pair_id": "SUP_v30_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "ODJ_v14_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F05",
+        "replaced": "SUP_v14_SingleAgent-qwen3-14b-v3_q15",
+        "replaced_because": "no timestamp"
+      },
+      {
+        "pair_id": "SUP_v26_SingleAgent-qwen3-14b-v3_q10",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02",
+        "replaced": "SUP_v18_SingleAgent-qwen3-14b-v3_q5",
+        "replaced_because": "cited window 0.51; a better match (0.65) at 9:10"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3-14b-v3_q16",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "ODJ_v31_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01",
+        "replaced": "ODJ_v6_SingleAgent-qwen3-14b-v3_q1",
+        "replaced_because": "topic chosen by only 4 of 9 models"
+      },
+      {
+        "pair_id": "Master_v7_SingleAgent-qwen3-14b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "Teepa_v11_SingleAgent-qwen3-14b-v3_q12",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "ODJ_v5_SingleAgent-qwen3-14b-v3_q7",
+        "replaced_because": "cited window 0.44; a better match (0.66) at 2:10"
+      },
+      {
+        "pair_id": "ODJ_v25_SingleAgent-qwen3-14b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v23_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v5_SingleAgent-qwen3-14b-v3_q21",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F10"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3-14b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11",
+        "replaced": "ODJ_v16_SingleAgent-qwen3-14b-v3_q5",
+        "replaced_because": "cited window 0.42; a better match (0.57) at 9:00"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3-14b-v3_q10",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12",
+        "replaced": "Master_v8_SingleAgent-qwen3-14b-v3_q11",
+        "replaced_because": "cited window similarity 0.32 (floor 0.35)"
+      },
+      {
+        "pair_id": "SUP_v21_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06",
+        "replaced": "Teepa_v3_SingleAgent-qwen3-14b-v3_q9",
+        "replaced_because": "cited window 0.40; a better match (0.51) at 4:10"
+      },
+      {
+        "pair_id": "ODJ_v5_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09",
+        "replaced": "ODJ_v11_SingleAgent-qwen3-14b-v3_q8",
+        "replaced_because": "cited window similarity 0.30 (floor 0.35)"
+      },
+      {
+        "pair_id": "FTD_v2_SingleAgent-qwen3-14b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "SUP_v29_SingleAgent-qwen3-14b-v3_q20",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "ODJ_v18_SingleAgent-qwen3-14b-v3_q1",
+        "replaced_because": "topic chosen by only 3 of 9 models"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v10_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03",
+        "replaced": "SUP_v4_SingleAgent-qwen3-14b-v3_q19",
+        "replaced_because": "cited window 0.35; a better match (0.47) at 11:00"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02",
+        "replaced": "SUP_v21_SingleAgent-qwen3-14b-v3_q42",
+        "replaced_because": "cited window 0.37; a better match (0.56) at 57:20"
+      },
+      {
+        "pair_id": "ODJ_v28_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04",
+        "replaced": "Teepa_v11_SingleAgent-qwen3-14b-v3_q9",
+        "replaced_because": "cited window similarity 0.34 (floor 0.35)"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "SUP_v13_SingleAgent-qwen3-14b-v3_q22",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "Teepa_v1_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v26_SingleAgent-qwen3-14b-v3_q20",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06",
+        "replaced": "Master_v9_SingleAgent-qwen3-14b-v3_q10",
+        "replaced_because": "cited window 0.46; a better match (0.62) at 0:30"
+      },
+      {
+        "pair_id": "FTD_v3_SingleAgent-qwen3-14b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08",
+        "replaced": "FTD_v4_SingleAgent-qwen3-14b-v3_q11",
+        "replaced_because": "cited window 0.51; a better match (0.70) at 14:40"
+      },
+      {
+        "pair_id": "ODJ_v23_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v5_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F10"
+      },
+      {
+        "pair_id": "SUP_v18_SingleAgent-qwen3-14b-v3_q23",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "ODJ_v15_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "Teepa_v12_SingleAgent-qwen3-14b-v3_q11",
+        "replaced_because": "same video as one of the group's bad pairs"
+      },
+      {
+        "pair_id": "ODJ_v24_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "Teepa_v14_SingleAgent-qwen3-14b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "Master_v7_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "Teepa_v13_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04",
+        "replaced": "SUP_v21_SingleAgent-qwen3-14b-v3_q38",
+        "replaced_because": "same video as one of the group's bad pairs"
+      },
+      {
+        "pair_id": "ODJ_v30_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v27_SingleAgent-qwen3-14b-v3_q21",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3-14b-v3_q11",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02",
+        "replaced": "SUP_v18_SingleAgent-qwen3-14b-v3_q21",
+        "replaced_because": "topic chosen by only 4 of 9 models"
+      },
+      {
+        "pair_id": "SUP_v4_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03",
+        "replaced": "SUP_v11_SingleAgent-qwen3-14b-v3_q12",
+        "replaced_because": "cited window 0.47; a better match (0.68) at 26:20"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3-14b-v3_q12",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "ODJ_v5_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "SUP_v29_SingleAgent-qwen3-14b-v3_q32",
+        "replaced_because": "cited window 0.37; a better match (0.55) at 35:20"
+      },
+      {
+        "pair_id": "ODJ_v20_SingleAgent-qwen3-14b-v3_q11",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "SUP_v5_SingleAgent-qwen3-14b-v3_q13",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F10"
+      },
+      {
+        "pair_id": "ODJ_v4_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "ODJ_v19_SingleAgent-qwen3-14b-v3_q11",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "ODJ_v11_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09",
+        "replaced": "ODJ_v11_SingleAgent-qwen3-14b-v3_q10",
+        "replaced_because": "cited window similarity 0.26 (floor 0.35)"
+      },
+      {
+        "pair_id": "Teepa_v12_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v13_SingleAgent-qwen3-14b-v3_q24",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "Teepa_v13_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "ODJ_v1_SingleAgent-qwen3-14b-v3_q10",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F06",
+        "replaced": "ODJ_v28_SingleAgent-qwen3-14b-v3_q9",
+        "replaced_because": "cited window similarity 0.26 (floor 0.35)"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3-14b-v3_q13",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01",
+        "replaced": "SUP_v30_SingleAgent-qwen3-14b-v3_q18",
+        "replaced_because": "cited window similarity 0.31 (floor 0.35)"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3-14b-v3_q15",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "ODJ_v25_SingleAgent-qwen3-14b-v3_q13",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "ODJ_v5_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "ODJ_v5_SingleAgent-qwen3-14b-v3_q8",
+        "replaced_because": "cited window 0.38; a better match (0.65) at 14:00"
+      },
+      {
+        "pair_id": "FTD_v4_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v4_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v5_SingleAgent-qwen3-14b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F10"
+      },
+      {
+        "pair_id": "ODJ_v20_SingleAgent-qwen3-14b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "SUP_v1_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "Master_v3_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Teepa_v6_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04",
+        "replaced": "Master_v1_SingleAgent-qwen3-14b-v3_q3",
+        "replaced_because": "cited window 0.45; a better match (0.62) at 17:00"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v13_SingleAgent-qwen3-14b-v3_q23",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04",
+        "replaced": "SUP_v30_SingleAgent-qwen3-14b-v3_q21",
+        "replaced_because": "cited window similarity 0.15 (floor 0.35)"
+      },
+      {
+        "pair_id": "SUP_v27_SingleAgent-qwen3-14b-v3_q28",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3-14b-v3_q20",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03",
+        "replaced": "SUP_v14_SingleAgent-qwen3-14b-v3_q30",
+        "replaced_because": "cited window similarity 0.08 (floor 0.35)"
+      },
+      {
+        "pair_id": "FTD_v2_SingleAgent-qwen3-14b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v18_SingleAgent-qwen3-14b-v3_q19",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "Master_v4_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05",
+        "replaced": "Teepa_v11_SingleAgent-qwen3-14b-v3_q3",
+        "replaced_because": "cited window 0.41; a better match (0.74) at 14:10"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3-14b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06",
+        "replaced": "Master_v9_SingleAgent-qwen3-14b-v3_q6",
+        "replaced_because": "cited window 0.45; a better match (0.58) at 9:00"
+      },
+      {
+        "pair_id": "FTD_v1_SingleAgent-qwen3-14b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3-14b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v5_SingleAgent-qwen3-14b-v3_q12",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F10"
+      },
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3-14b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3-14b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "Teepa_v3_SingleAgent-qwen3-14b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v29_SingleAgent-qwen3-14b-v3_q35",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3-14b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "FTD_v4_SingleAgent-qwen3-14b-v3_q10",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      }
+    ]
+  ],
+  "timestamp_check": "every pair passes eval/topics/timestamp_check.py"
+}

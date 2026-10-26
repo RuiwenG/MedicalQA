@@ -22,7 +22,7 @@ Run in the Supabase SQL Editor, in this order:
 | Object | Purpose |
 | --- | --- |
 | `study_settings_v5` | One row: 5 versions, 20 Q&As each, 4 medical and 2 non-medical base slots, 48-hour lease |
-| `role_categories_v5` | Which roles count as medical: `clinical`, `student` = medical; `care`, `family`, `other` = not |
+| `role_categories_v5` | Which roles count as medical: `healthcare`, `student` = medical; `family`, `other` = not. An annotator may tick several roles (`annotator_groups`, an array) and is medical when any of them is; optional descriptions per role are kept in `annotator_role_details` (JSON, checked by `role_details_ok_v5`) |
 | `version_pairs_v5` | The 20 Q&As of each version |
 | `assignments_v5` | One row per claim: name, profile, medical flag, version, `routed_by` (`base` or `balance`), claim time, lease end, completion time |
 | `ratings_v5` | Append-only ratings, the v4 columns plus `assignment_id`, `eval_version` and `late` |

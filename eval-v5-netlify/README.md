@@ -24,16 +24,22 @@ launch (see "Build the versions").
 
 ## Landing page and routing
 
-The annotator enters their **name**, **role** (the four v4 groups plus
-Others) and **dementia-care experience**, then presses **Continue**. The page
-calls `claim_version_v5`, which records an assignment and returns its version.
-The annotator then rates that version's 20 Q&As in their own shuffled order,
+The annotator enters their **name**, ticks every **role** that applies, can
+add an optional short description under each ticked role, and gives their
+**dementia-care experience**, then presses **Continue**. The page calls
+`claim_version_v5`, which records an assignment and returns its version. The
+annotator then rates that version's 20 Q&As in their own shuffled order,
 seeded by the assignment id, so a reload keeps the same order.
 
-Clinical professionals and healthcare students count as **medical**;
-professional care workers, family caregivers and Others count as
-**non-medical**. That mapping lives in one place, the database table
-`role_categories_v5`.
+The four roles are healthcare professional, medical student, family/friend
+dementia caregiver, and others. Healthcare professionals and medical students
+count as **medical**; family/friend caregivers and others count as
+**non-medical**. An annotator who ticks several roles counts as medical when
+any of them is medical, so a nurse who also cares for a parent is routed as
+medical. That mapping lives in one place, the database table
+`role_categories_v5`. Every ticked role (`annotator_groups`) and every
+description given (`annotator_role_details`, at most 200 characters each) is
+stored with the assignment and its ratings, and exported in the CSV.
 
 The routing rule:
 

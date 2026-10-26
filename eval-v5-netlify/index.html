@@ -72,6 +72,14 @@
   .profile-field select:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
   .profile-field .muted { margin: 0 0 6px; }
   .profile-field input[type=text] { max-width: none; min-height: 44px; }
+  .role-choices { border: 0; padding: 0; margin: 0 0 15px; min-width: 0; }
+  .role-choices legend { padding: 0; }
+  .role-choice { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 4px 0; cursor: pointer; }
+  .role-choice input { width: 18px; height: 18px; margin: 0; flex: none; }
+  .role-detail { margin: 0 0 8px 28px; }
+  .role-detail[hidden] { display: none; }
+  .role-detail label { display: block; margin-bottom: 4px; font-size: 0.9em; }
+  .role-detail input[type=text] { width: 100%; max-width: none; min-height: 40px; box-sizing: border-box; }
   @media (pointer: coarse) {
     .profile-field select, .profile-field input[type=text] { font-size: 16px; }
   }
@@ -424,13 +432,18 @@ const RECOMMENDATION = [
 ];
 
 // Store only the four agreed groups plus Others, rather than individual roles.
+// An annotator ticks every group that applies; the database routes them as
+// medical when any ticked group is medical (healthcare professional or medical
+// student). Each ticked role has an optional box to say more about it.
 const ANNOTATOR_GROUPS = [
-  { value: "clinical", label: "Clinical professional (e.g. nurses, doctors, allied health)" },
-  { value: "care", label: "Professional care/support worker (e.g. paid caregivers, care assistants)" },
-  { value: "family", label: "Family/unpaid caregiver (e.g. family members, friends)" },
-  { value: "student", label: "Healthcare student (e.g. nursing, medical students)" },
-  { value: "other", label: "Others" },
+  { value: "healthcare", label: "Healthcare professional", hint: "e.g. nurse, doctor, occupational therapist, care worker" },
+  { value: "student", label: "Medical student", hint: "e.g. medical or nursing student, and your year" },
+  { value: "family", label: "Family/friend dementia caregiver", hint: "e.g. caring for a parent or partner" },
+  { value: "other", label: "Others", hint: "e.g. researcher, volunteer" },
 ];
+const ROLE_DETAIL_MAX = 200;
+// Sessions saved before these four roles used five older codes.
+const LEGACY_GROUP = { clinical: "healthcare", care: "healthcare", student: "student", family: "family", other: "other" };
 const DEMENTIA_EXPERIENCE = [
   { value: "none", label: "None" },
   { value: "less_one_year", label: "Less than 1 year" },
@@ -440,25 +453,37 @@ const DEMENTIA_EXPERIENCE = [
 
 function normalizeAnnotatorProfile(profile) {
   const source = profile || {};
-  const group = ANNOTATOR_GROUPS.some((g) => g.value === source.group) ? source.group : null;
+  // Sessions saved before multiple roles carry a single "group" (and an "other" text).
+  const picked = (Array.isArray(source.groups) ? source.groups : (source.group ? [source.group] : []))
+    .map((g) => (ANNOTATOR_GROUPS.some((x) => x.value === g) ? g : LEGACY_GROUP[g]));
+  // Keep the listed order and drop anything unknown, so the stored value is stable.
+  const groups = ANNOTATOR_GROUPS.map((g) => g.value).filter((v) => picked.includes(v));
+  const given = Object.assign({}, source.other && !source.details ? { other: source.other } : {}, source.details || {});
+  // Optional descriptions: kept only for ticked roles, trimmed, empty ones dropped.
+  const details = {};
+  for (const g of groups) {
+    const text = String(given[g] || "").trim();
+    if (text) details[g] = text;
+  }
   const experience = DEMENTIA_EXPERIENCE.some((e) => e.value === source.experience) ? source.experience : null;
-  return {
-    group,
-    experience,
-    other: group === "other" ? String(source.other || "").trim() || null : null,
-  };
+  return { groups, details, experience };
+}
+
+function roleDetailsText(details) {
+  return ANNOTATOR_GROUPS.filter((g) => details && details[g.value])
+    .map((g) => g.label + ": " + details[g.value]).join(" | ");
 }
 
 function profileColumns(profile) {
   const p = normalizeAnnotatorProfile(profile);
   // Old queued rows can still be sent without a profile. New sessions require
   // both answers on the welcome screen before rating begins.
-  if (!p.group || !p.experience || (p.group === "other" && !p.other)) {
-    return { annotator_group: null, annotator_other: null, dementia_care_experience: null };
+  if (!p.groups.length || !p.experience) {
+    return { annotator_groups: null, annotator_role_details: null, dementia_care_experience: null };
   }
   return {
-    annotator_group: p.group,
-    annotator_other: p.other,
+    annotator_groups: p.groups,
+    annotator_role_details: p.details,
     dementia_care_experience: p.experience,
   };
 }
@@ -664,8 +689,8 @@ async function claimVersion(name, profile) {
     },
     body: JSON.stringify({
       p_name: name,
-      p_group: profile.group,
-      p_other: profile.other,
+      p_groups: profile.groups,
+      p_role_details: profile.details,
       p_experience: profile.experience,
     }),
   });
@@ -933,8 +958,8 @@ function normalizeSupabaseRow(row) {
     eval_version: row.eval_version,
     session_id: row.session_id,
     annotator: row.annotator,
-    annotator_group: row.annotator_group ?? null,
-    annotator_other: row.annotator_other ?? null,
+    annotator_groups: row.annotator_groups ?? null,
+    annotator_role_details: row.annotator_role_details ?? null,
     dementia_care_experience: row.dementia_care_experience ?? null,
     qa_uid: row.qa_uid,
     dataset: row.dataset,
@@ -1045,7 +1070,7 @@ const CSV_COLS = ["Dataset", "Video Index", "Approach", "QA ID", "Question", "An
   .concat(metricCsvCols())
   .concat(["Caregiver Recommendation", "Evaluator Comment", "Annotator", "Session ID", "Version", "Seconds",
     "Source Unverifiable",
-    "Annotator Group", "Annotator Other", "Dementia-care Experience"]);
+    "Annotator Roles", "Role Details", "Dementia-care Experience"]);
 
 function csvCell(v) {
   const s = v === null || v === undefined ? "" : String(v);
@@ -1072,7 +1097,12 @@ function buildCsv() {
       S.evalVersion,
       S.seconds[uid] || "",
       sc.qa_alignment ? (sc.qa_alignment.sourceUnverifiable ? "Yes" : "No") : "",
-      ...Object.values(profileColumns(S.annotatorProfile)));
+      ...(() => {
+        const c = profileColumns(S.annotatorProfile);
+        return [c.annotator_groups ? c.annotator_groups.join("; ") : "",
+          c.annotator_role_details ? roleDetailsText(c.annotator_role_details) : "",
+          c.dementia_care_experience || ""];
+      })());
     lines.push(row.map(csvCell).join(","));
   }
   return lines.join("\r\n");
@@ -1157,18 +1187,17 @@ function renderWelcome() {
       <div id="resume-note" class="muted" style="margin-top:8px;"></div>
 
       <div class="annotator-profile">
-        <div class="profile-field">
-          <label class="field" for="annotator-group">Your role</label>
-          <p class="muted" id="role-hint">Choose the option that fits you best.</p>
-          <select id="annotator-group" aria-describedby="role-hint" required>
-            <option value="">Select your role</option>
-            ${ANNOTATOR_GROUPS.map((g) => `<option value="${g.value}">${escapeAttr(g.label)}</option>`).join("")}
-          </select>
-        </div>
-        <div class="profile-field" id="annotator-other-field" hidden>
-          <label class="field" for="annotator-other">Please specify your role</label>
-          <input type="text" id="annotator-other" placeholder="A few words is enough" maxlength="200" />
-        </div>
+        <fieldset class="profile-field role-choices" aria-describedby="role-hint">
+          <legend class="field">Your role</legend>
+          <p class="muted" id="role-hint">Select all that apply.</p>
+          ${ANNOTATOR_GROUPS.map((g) => `<div class="role-item">
+            <label class="role-choice"><input type="checkbox" id="role-${g.value}" value="${g.value}" /> ${escapeAttr(g.label)}</label>
+            <div class="role-detail" id="role-detail-field-${g.value}" hidden>
+              <label class="muted" for="role-detail-${g.value}">Tell us more (optional)</label>
+              <input type="text" id="role-detail-${g.value}" placeholder="${escapeAttr(g.hint)}" maxlength="${ROLE_DETAIL_MAX}" />
+            </div>
+          </div>`).join("")}
+        </fieldset>
         <div class="profile-field">
           <label class="field" for="dementia-experience">Dementia-care experience</label>
           <p class="muted" id="experience-hint">Include work, placements or caregiving.</p>
@@ -1199,27 +1228,29 @@ function renderWelcome() {
     </div>`;
 
   const nameEl = document.getElementById("name");
-  const groupEl = document.getElementById("annotator-group");
-  const otherEl = document.getElementById("annotator-other");
+  const roleEls = ANNOTATOR_GROUPS.map((g) => document.getElementById("role-" + g.value));
+  const checkedGroups = () => ANNOTATOR_GROUPS.filter((g, i) => roleEls[i].checked).map((g) => g.value);
+  const detailEls = ANNOTATOR_GROUPS.map((g) => document.getElementById("role-detail-" + g.value));
+  const detailFields = ANNOTATOR_GROUPS.map((g) => document.getElementById("role-detail-field-" + g.value));
+  const typedDetails = () => Object.fromEntries(ANNOTATOR_GROUPS.map((g, i) => [g.value, detailEls[i].value]));
   const experienceEl = document.getElementById("dementia-experience");
   const err = document.getElementById("start-err");
   let profileStoreKey = null;
   let profileRestored = false;
-  const updateOther = () => {
-    const other = groupEl.value === "other";
-    document.getElementById("annotator-other-field").hidden = !other;
-    otherEl.required = other;
+  // A role's description box shows while its checkbox is ticked; unticking keeps the text in case it is ticked again.
+  const updateDetails = () => {
+    roleEls.forEach((el, i) => { detailFields[i].hidden = !el.checked; });
   };
   const fillProfile = (profile) => {
     const p = normalizeAnnotatorProfile(profile);
-    groupEl.value = p.group || "";
-    otherEl.value = p.other || "";
+    roleEls.forEach((el, i) => { el.checked = p.groups.includes(ANNOTATOR_GROUPS[i].value); });
+    detailEls.forEach((el, i) => { el.value = p.details[ANNOTATOR_GROUPS[i].value] || ""; });
     experienceEl.value = p.experience || "";
-    updateOther();
+    updateDetails();
   };
-  groupEl.addEventListener("change", () => { updateOther(); err.textContent = ""; });
+  roleEls.forEach((el) => el.addEventListener("change", () => { updateDetails(); err.textContent = ""; }));
   experienceEl.addEventListener("change", () => { err.textContent = ""; });
-  otherEl.addEventListener("input", () => { err.textContent = ""; });
+  detailEls.forEach((el) => el.addEventListener("input", () => { err.textContent = ""; }));
 
   // Tell a returning annotator that their progress is still here.
   const savedFor = (name) => {
@@ -1263,14 +1294,12 @@ function renderWelcome() {
     const name = nameEl.value.trim();
     if (!name) { err.textContent = "Please enter your name first."; nameEl.focus(); return; }
     const profile = normalizeAnnotatorProfile({
-      group: groupEl.value, other: otherEl.value, experience: experienceEl.value,
+      groups: checkedGroups(), details: typedDetails(), experience: experienceEl.value,
     });
-    if (!profile.group) { err.textContent = "Please choose your role."; groupEl.focus(); return; }
-    if (profile.group === "other" && !profile.other) {
-      err.textContent = "Please briefly describe your role."; otherEl.focus(); return;
-    }
-    if (profile.other && profile.other.length > 200) {
-      err.textContent = "Please keep your role description to 200 characters."; otherEl.focus(); return;
+    if (!profile.groups.length) { err.textContent = "Please choose at least one role."; roleEls[0].focus(); return; }
+    const tooLong = ANNOTATOR_GROUPS.findIndex((g) => (profile.details[g.value] || "").length > ROLE_DETAIL_MAX);
+    if (tooLong >= 0) {
+      err.textContent = `Please keep each role description to ${ROLE_DETAIL_MAX} characters.`; detailEls[tooLong].focus(); return;
     }
     if (!profile.experience) { err.textContent = "Please choose your dementia-care experience."; experienceEl.focus(); return; }
     const prev = savedFor(name);

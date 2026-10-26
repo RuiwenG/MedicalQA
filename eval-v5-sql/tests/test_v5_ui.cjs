@@ -67,12 +67,21 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   assert.match(welcomeHtml, /You will receive <b>20 Q&As<\/b>/);
   assert.match(welcomeHtml, />Continue</);
   assert.equal(elements.get('name').value, '', 'the v4 name is not prefilled');
-  assert.ok(welcomeHtml.indexOf('id="name"') < welcomeHtml.indexOf('id="annotator-group"'));
+  assert.ok(welcomeHtml.indexOf('id="name"') < welcomeHtml.indexOf('id="role-healthcare"'));
+  assert.equal((welcomeHtml.match(/type="checkbox" id="role-/g) || []).length, 4, 'one checkbox per role');
+  assert.equal((welcomeHtml.match(/id="role-detail-[a-z]+"/g) || []).length, 4, 'one optional description box per role');
+  for (const label of ['Healthcare professional', 'Medical student', 'Family/friend dementia caregiver', 'Others']) assert.match(welcomeHtml, new RegExp(label));
+  assert.match(welcomeHtml, /Select all that apply/);
   elements.get('start').click();
   assert.match(elements.get('start-err').textContent, /enter your name/);
   elements.get('name').value = 'Jane Doe'; elements.get('name').handlers.input();
-  elements.get('start').click(); assert.match(elements.get('start-err').textContent, /choose your role/);
-  elements.get('annotator-group').value = 'clinical'; elements.get('annotator-group').handlers.change();
+  elements.get('start').click(); assert.match(elements.get('start-err').textContent, /choose at least one role/);
+  elements.get('role-family').checked = true; elements.get('role-family').handlers.change();
+  elements.get('role-healthcare').checked = true; elements.get('role-healthcare').handlers.change();
+  assert.equal(elements.get('role-detail-field-family').hidden, false, 'a ticked role shows its description box');
+  assert.equal(elements.get('role-detail-field-other').hidden, true, 'an unticked role hides it');
+  elements.get('role-detail-family').value = ' Caring for my mother ';
+  elements.get('role-detail-other').value = 'typed, then not ticked';
   elements.get('start').click(); assert.match(elements.get('start-err').textContent, /dementia-care experience/);
   assert.equal(claims.length, 0, 'no claim until the form is complete');
   elements.get('dementia-experience').value = 'one_to_three_years';
@@ -80,7 +89,9 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   elements.get('start').click();  // a double click must not claim twice
   await settle(); await settle();
   assert.equal(claims.length, 1);
-  assert.deepEqual(claims[0], {p_name: 'Jane Doe', p_group: 'clinical', p_other: null, p_experience: 'one_to_three_years'});
+  assert.deepEqual(claims[0], {p_name: 'Jane Doe', p_groups: ['healthcare', 'family'],
+    p_role_details: {family: 'Caring for my mother'}, p_experience: 'one_to_three_years'},
+    'both ticked roles in the listed order; descriptions only for ticked roles, trimmed, blanks left out');
 
   // The claimed version's 20 Q&As, in an order seeded by the assignment id.
   const first = plain('S');
@@ -106,13 +117,17 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   assert.equal(posts[0].study_version, 'v5');
   assert.equal(posts[0].batch, 'version-3');
   assert.equal(posts[0].qa_uid, first.uids[0]);
-  assert.equal(posts[0].annotator_group, 'clinical');
+  assert.deepEqual(posts[0].annotator_groups, ['healthcare', 'family']);
+  assert.deepEqual(posts[0].annotator_role_details, {family: 'Caring for my mother'});
   assert.equal(posts[0].dementia_care_experience, 'one_to_three_years');
   assert.equal(posts[0].blind, true);
   assert.equal(run('S.queue.length'), 0);
   const csv = run('buildCsv()');
   assert.match(csv.split('\r\n')[0], /Session ID,Version,Seconds/);
   assert.match(csv.split('\r\n')[1], new RegExp(first.assignmentId + ',3,41,'));
+  assert.match(csv.split('\r\n')[0], /Annotator Roles/);
+  assert.match(csv.split('\r\n')[0], /Role Details/);
+  assert.match(csv.split('\r\n')[1], /,healthcare; family,Family\/friend dementia caregiver: Caring for my mother,/);
   run('download = (name, text) => { globalThis.exported = text; }; exportJson();');
   assert.equal(JSON.parse(ctx.exported).assignment_id, first.assignmentId);
   assert.equal(JSON.parse(ctx.exported).eval_version, 3);
@@ -121,7 +136,10 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   run('S = null; renderWelcome()');
   assert.equal(elements.get('name').value, 'Jane Doe');
   assert.match(elements.get('resume-note').innerHTML, /Welcome back — 1 of 20/);
-  assert.equal(elements.get('annotator-group').value, 'clinical');
+  assert.equal(elements.get('role-healthcare').checked, true, 'the saved roles are ticked again');
+  assert.equal(elements.get('role-family').checked, true);
+  assert.equal(elements.get('role-student').checked, false);
+  assert.equal(elements.get('role-detail-family').value, 'Caring for my mother', 'with their descriptions');
   elements.get('start').click();
   await settle();
   assert.equal(claims.length, 1, 'resuming does not claim again');
@@ -133,13 +151,14 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   run('S = null; renderWelcome()');
   elements.get('name').value = 'Sam Lee'; elements.get('name').handlers.input();
   assert.match(elements.get('resume-note').innerHTML, /New session: 20 pairs/);
-  elements.get('annotator-group').value = 'other'; elements.get('annotator-group').handlers.change();
-  elements.get('annotator-other').value = ' Volunteer ';
+  elements.get('role-other').checked = true; elements.get('role-other').handlers.change();
+  assert.equal(elements.get('role-detail-field-other').hidden, false, 'ticking Others shows its box');
   elements.get('dementia-experience').value = 'none';
   elements.get('start').click();
   await settle(); await settle();
   assert.equal(claims.length, 2);
-  assert.deepEqual(claims[1], {p_name: 'Sam Lee', p_group: 'other', p_other: 'Volunteer', p_experience: 'none'});
+  assert.deepEqual(claims[1], {p_name: 'Sam Lee', p_groups: ['other'], p_role_details: {}, p_experience: 'none'},
+    'Others needs no description');
   assert.equal(run('S.evalVersion'), 5);
   assert.deepEqual(plain('S.uids').slice().sort(), versions['5'].slice().sort());
 
@@ -147,7 +166,7 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   nextVersion = [];
   run('S = null; renderWelcome()');
   elements.get('name').value = 'Pat Kim'; elements.get('name').handlers.input();
-  elements.get('annotator-group').value = 'student'; elements.get('annotator-group').handlers.change();
+  elements.get('role-student').checked = true; elements.get('role-student').handlers.change();
   elements.get('dementia-experience').value = 'none';
   elements.get('start').click();
   await settle(); await settle();
@@ -165,5 +184,10 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   // Model names stay hidden while rating.
   assert.equal(run('fixedStudyOptions().blind'), true);
   assert.doesNotMatch(html, /ratings_v4|claim_version_v4/);
-  console.log('PASS: v5 landing page validation, one claim per new annotator (double click safe), claimed version with seeded order, rating payload with assignment/version/profile, CSV/JSON exports, resume without re-claiming, second annotator in the same browser, failed-claim retry, dqa:v5:* storage only, v4 storage untouched.');
+  // A session saved before multiple roles (one "group") still loads with that role ticked.
+  assert.deepEqual(plain('normalizeAnnotatorProfile({group: "care", experience: "none"})'),
+    {groups: ['healthcare'], details: {}, experience: 'none'});
+  assert.deepEqual(plain('normalizeAnnotatorProfile({group: "other", other: "Volunteer", experience: "none"})'),
+    {groups: ['other'], details: {other: 'Volunteer'}, experience: 'none'});
+  console.log('PASS: v5 landing page validation, role checkboxes (four roles, several at once, optional description per role, legacy single role), one claim per new annotator (double click safe), claimed version with seeded order, rating payload with assignment/version/profile, CSV/JSON exports, resume without re-claiming, second annotator in the same browser, failed-claim retry, dqa:v5:* storage only, v4 storage untouched.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

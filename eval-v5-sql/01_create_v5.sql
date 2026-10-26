@@ -5,6 +5,11 @@
 -- see how many people already hold each version, and two people arriving at the
 -- same moment must not both take the last slot.
 --
+-- An annotator ticks every role that applies. They count as medical when any of
+-- their roles is medical in role_categories_v5 (healthcare professional or
+-- medical student), so a nurse who is also a family caregiver is medical. Each
+-- ticked role may carry an optional description (annotator_role_details).
+--
 -- Routing rule (one call at a time, under a transaction advisory lock):
 --   1. Base fill. A medical annotator goes to the lowest-numbered version with
 --      fewer than 4 medical annotators; a non-medical one to the lowest-numbered
@@ -58,16 +63,32 @@ insert into public.study_settings_v5 default values;
 create table public.role_categories_v5 (
     annotator_group text    primary key
         constraint role_categories_v5_group_ck check (
-            annotator_group in ('clinical', 'care', 'family', 'student', 'other')
+            annotator_group in ('healthcare', 'student', 'family', 'other')
         ),
     is_medical      boolean not null
 );
 insert into public.role_categories_v5 (annotator_group, is_medical) values
-    ('clinical', true),
-    ('student',  true),
-    ('care',     false),
-    ('family',   false),
-    ('other',    false);
+    ('healthcare', true),
+    ('student',    true),
+    ('family',     false),
+    ('other',      false);
+
+-- Optional free-text descriptions of an annotator's roles, as a JSON object
+-- {role: text}: only roles the annotator ticked, each 1-200 characters.
+create function public.role_details_ok_v5(details jsonb, groups text[])
+returns boolean
+language sql
+immutable
+as $$
+    select jsonb_typeof(details) = 'object'
+       and not exists (
+           select 1 from jsonb_each(details) d
+           where not d.key = any(groups)
+              or jsonb_typeof(d.value) <> 'string'
+              or btrim(d.value #>> '{}') = ''
+              or char_length(d.value #>> '{}') > 200
+       )
+$$;
 
 -- The 20 Q&As of each version. Filled once by script 04 before launch.
 create table public.version_pairs_v5 (
@@ -90,9 +111,13 @@ create table public.assignments_v5 (
         constraint assignments_v5_annotator_ck check (
             btrim(annotator) <> '' and char_length(annotator) <= 200
         ),
-    annotator_group           text        not null
-        references public.role_categories_v5 (annotator_group),
-    annotator_other           text,
+    -- Every role the annotator ticked, in the page's order.
+    annotator_groups          text[]      not null
+        constraint assignments_v5_groups_ck check (
+            cardinality(annotator_groups) between 1 and 4
+            and annotator_groups <@ array['healthcare', 'student', 'family', 'other']::text[]
+        ),
+    annotator_role_details    jsonb       not null default '{}'::jsonb,
     dementia_care_experience  text        not null
         constraint assignments_v5_dementia_experience_ck check (
             dementia_care_experience in (
@@ -111,11 +136,8 @@ create table public.assignments_v5 (
     claimed_at                timestamptz not null default now(),
     expires_at                timestamptz not null,
     completed_at              timestamptz,
-    constraint assignments_v5_annotator_other_ck check (
-        case when annotator_group = 'other' then
-            annotator_other is not null and btrim(annotator_other) <> ''
-            and char_length(annotator_other) <= 200
-        else annotator_other is null end
+    constraint assignments_v5_role_details_ck check (
+        public.role_details_ok_v5(annotator_role_details, annotator_groups)
     )
 );
 
@@ -229,15 +251,16 @@ create table public.ratings_v5 (
     client_time   timestamptz,
     created_at    timestamptz not null default now(),
 
-    -- Profile columns remain nullable for pre-profile v4 submissions. New UI
-    -- sessions require the group and experience; no individual professions
-    -- or unpaid-care relationship question are collected.
-    annotator_group text
-        constraint ratings_v5_annotator_group_ck check (
-            annotator_group is null or
-            annotator_group in ('clinical', 'care', 'family', 'student', 'other')
+    -- Profile columns are copied from the assignment by the insert trigger.
+    -- The optional role descriptions are whatever the annotator chose to say.
+    annotator_groups text[]
+        constraint ratings_v5_annotator_groups_ck check (
+            annotator_groups is null or (
+                cardinality(annotator_groups) between 1 and 4
+                and annotator_groups <@ array['healthcare', 'student', 'family', 'other']::text[]
+            )
         ),
-    annotator_other text,
+    annotator_role_details jsonb,
     dementia_care_experience text
         constraint ratings_v5_dementia_experience_ck check (
             dementia_care_experience is null or
@@ -245,16 +268,14 @@ create table public.ratings_v5 (
                 'none', 'less_one_year', 'one_to_three_years', 'more_three_years'
             )
         ),
-    constraint ratings_v5_annotator_other_ck check (
-        case when annotator_group = 'other' then
-            annotator_other is not null and btrim(annotator_other) <> ''
-            and char_length(annotator_other) <= 200
-        else annotator_other is null end
+    constraint ratings_v5_role_details_ck check (
+        annotator_role_details is null
+        or public.role_details_ok_v5(annotator_role_details, annotator_groups)
     ),
     constraint ratings_v5_profile_complete_ck check (
-        (annotator_group is null and dementia_care_experience is null
-         and annotator_other is null)
-        or (annotator_group is not null and dementia_care_experience is not null)
+        (annotator_groups is null and dementia_care_experience is null
+         and annotator_role_details is null)
+        or (annotator_groups is not null and dementia_care_experience is not null)
     ),
 
     -- True records a source-access problem, never a failed quality rating.
@@ -317,8 +338,8 @@ begin
     new.eval_version := a.eval_version;
     new.session_id := a.id::text;
     new.annotator := a.annotator;
-    new.annotator_group := a.annotator_group;
-    new.annotator_other := a.annotator_other;
+    new.annotator_groups := a.annotator_groups;
+    new.annotator_role_details := a.annotator_role_details;
     new.dementia_care_experience := a.dementia_care_experience;
     new.dataset := vp.dataset;
     new.video := vp.video;
@@ -359,8 +380,8 @@ create trigger ratings_v5_mark_complete
 -- The routing function the browser calls once, on the landing page.
 create function public.claim_version_v5(
     p_name text,
-    p_group text,
-    p_other text,
+    p_groups text[],
+    p_role_details jsonb,
     p_experience text
 )
 returns table (assignment_id uuid, eval_version integer, expires_at timestamptz)
@@ -372,10 +393,11 @@ as $$
 declare
     st public.study_settings_v5;
     medical boolean;
+    roles text[];
     quota integer;
     chosen integer;
     how text;
-    other_text text := nullif(btrim(coalesce(p_other, '')), '');
+    details jsonb;
     new_id uuid;
     new_expiry timestamptz;
 begin
@@ -389,12 +411,30 @@ begin
     if p_name is null or btrim(p_name) = '' then
         raise exception 'a name is required' using errcode = '22023';
     end if;
-    select rc.is_medical into medical
-    from public.role_categories_v5 rc where rc.annotator_group = p_group;
-    if not found then
-        raise exception 'unknown role %', p_group using errcode = '22023';
+    -- Known roles only, each once, in the page's order.
+    if exists (select 1 from unnest(coalesce(p_groups, '{}')) g
+               where g is null or g not in (select annotator_group from public.role_categories_v5)) then
+        raise exception 'unknown role in %', p_groups using errcode = '22023';
     end if;
-    if p_group <> 'other' then other_text := null; end if;
+    select array_agg(rc.annotator_group order by array_position(
+               array['healthcare', 'student', 'family', 'other'], rc.annotator_group)),
+           bool_or(rc.is_medical)
+    into roles, medical
+    from public.role_categories_v5 rc
+    where rc.annotator_group = any(p_groups);
+    if roles is null then
+        raise exception 'at least one role is required' using errcode = '22023';
+    end if;
+    -- Optional descriptions: kept for ticked roles only, trimmed, blanks dropped.
+    if p_role_details is not null and jsonb_typeof(p_role_details) <> 'object' then
+        raise exception 'role details must be a JSON object' using errcode = '22023';
+    end if;
+    select coalesce(jsonb_object_agg(d.key, btrim(d.value #>> '{}')), '{}'::jsonb) into details
+    from jsonb_each(coalesce(p_role_details, '{}'::jsonb)) d
+    where d.key = any(roles) and jsonb_typeof(d.value) = 'string' and btrim(d.value #>> '{}') <> '';
+    if not public.role_details_ok_v5(details, roles) then
+        raise exception 'each role description must be at most 200 characters' using errcode = '22023';
+    end if;
     quota := case when medical then st.base_medical else st.base_non_medical end;
 
     with versions as (
@@ -434,10 +474,10 @@ begin
 
     new_expiry := now() + st.lease;
     insert into public.assignments_v5 (
-        annotator, annotator_group, annotator_other, dementia_care_experience,
+        annotator, annotator_groups, annotator_role_details, dementia_care_experience,
         is_medical, eval_version, routed_by, expires_at
     ) values (
-        btrim(p_name), p_group, other_text, p_experience,
+        btrim(p_name), roles, details, p_experience,
         medical, chosen, how, new_expiry
     ) returning id into new_id;
 
@@ -509,16 +549,20 @@ revoke all on public.study_settings_v5, public.role_categories_v5,
     public.version_pairs_v5, public.assignments_v5, public.ratings_v5,
     public.ratings_v5_final, public.assignment_status_v5
     from anon, authenticated;
-revoke all on function public.claim_version_v5(text, text, text, text),
+revoke all on function public.claim_version_v5(text, text[], jsonb, text),
     public.version_status_v5(),
     public.assignment_holds_slot_v5(public.assignments_v5),
     public.ratings_v5_before_insert(),
-    public.ratings_v5_after_insert()
+    public.ratings_v5_after_insert(),
+    public.role_details_ok_v5(jsonb, text[])
     from public, anon, authenticated;
 
 grant insert on public.ratings_v5 to anon;
 grant usage, select on sequence public.ratings_v5_id_seq to anon;
-grant execute on function public.claim_version_v5(text, text, text, text) to anon;
+grant execute on function public.claim_version_v5(text, text[], jsonb, text) to anon;
+-- The role-details check runs inside the ratings_v5 constraint on every insert
+-- by anon. It reads only its two arguments, so executing it exposes nothing.
+grant execute on function public.role_details_ok_v5(jsonb, text[]) to anon;
 
 create policy ratings_v5_anon_insert
     on public.ratings_v5

@@ -52,7 +52,7 @@ select
     has_table_privilege('anon', 'public.assignments_v5', 'select')    as anon_can_read_assignments,
     has_table_privilege('anon', 'public.assignments_v5', 'insert')    as anon_can_insert_assignments,
     has_table_privilege('anon', 'public.version_pairs_v5', 'select')  as anon_can_read_version_pairs,
-    has_function_privilege('anon', 'public.claim_version_v5(text,text,text,text)', 'execute')
+    has_function_privilege('anon', 'public.claim_version_v5(text,text[],jsonb,text)', 'execute')
         as anon_can_claim,
     has_function_privilege('anon', 'public.version_status_v5()', 'execute')
         as anon_can_read_status;

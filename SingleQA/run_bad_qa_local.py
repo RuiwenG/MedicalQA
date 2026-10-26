@@ -28,7 +28,10 @@ from common_utils import config
 from SingleQA.config.settings import Settings, _STANDALONE, _FORMAT_LABELS, _FORMAT_FILLED
 from SingleQA.processors.qaparser import QAParser
 
-BASES = {"Master": range(1, 11), "Teepa": range(1, 16)}
+BASES = {"Master": range(1, 11), "Teepa": range(1, 16),
+         # The four playlists added in October; pass --bases to include them.
+         "FTD": range(1, 5), "GEMS": range(1, 4), "ODJ": range(1, 32), "SUP": range(1, 32)}
+ORIGINAL_BASES = ["Master", "Teepa"]
 MODEL_ID = "Qwen/Qwen3-14B"
 CONTEXT_LIMIT = 32768  # Native Qwen3 context; do not assume YaRN is configured.
 DEFECTS = ("trustworthiness", "clarity", "usefulness", "care_safety")
@@ -283,12 +286,12 @@ def optional_seed(value):
 def get_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--model-path", type=Path, required=True, help="Downloaded Qwen3-14B Transformers checkpoint directory")
-    parser.add_argument("--bases", nargs="+", choices=list(BASES), default=list(BASES))
+    parser.add_argument("--bases", nargs="+", choices=list(BASES), default=ORIGINAL_BASES)
     parser.add_argument("--ids", type=int, nargs="+", help="Only these video IDs in each selected base")
     parser.add_argument("--versions", nargs="+", choices=["v1", "v2", "v3"], default=["v1", "v3"])
     parser.add_argument("--format", choices=["labels", "filled"], default="filled")
     parser.add_argument("--seed", type=optional_seed, default=os.getenv("QWEN_SEED", "42"), help="Seed before each generation; default QWEN_SEED or 42; empty string disables seeding")
-    parser.add_argument("--data-root", type=Path, default=REPO, help="Root containing Master/ and Teepa/ transcripts")
+    parser.add_argument("--data-root", type=Path, default=REPO, help="Root containing the playlist folders (Master/, Teepa/, FTD/, ...) with transcripts")
     parser.add_argument("--output-root", type=Path, default=REPO, help="Root for separate negative QA approach folders")
     parser.add_argument("--force", action="store_true", help="Replace existing negative QA results")
     parser.add_argument("--dry-run", action="store_true", help="Validate transcripts and preview counts/paths without loading a model or writing files")

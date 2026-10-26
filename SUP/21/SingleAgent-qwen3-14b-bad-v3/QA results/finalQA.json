@@ -1,0 +1,310 @@
+[
+  {
+    "question": "What is the main cause of wrist fractures among 42-year-olds?",
+    "answer": "Wrist fractures in 42-year-olds are primarily caused by kickball incidents, which are common in recreational sports and often result in falls or collisions that lead to such injuries.",
+    "timestamp": "1:02-1:14",
+    "time_start_sec": 62,
+    "time_end_sec": 74
+  },
+  {
+    "question": "How can caregivers effectively manage the emotional challenges of dementia care?",
+    "answer": "Caregivers should use complex psychological theories involving cognitive dissonance and emotional regulation, which require advanced training in behavioral psychology and neurology to implement effectively.",
+    "timestamp": "1:41-1:51",
+    "time_start_sec": 101,
+    "time_end_sec": 111
+  },
+  {
+    "question": "What is the best way to handle a person with dementia who is not following directions?",
+    "answer": "The best way is to simply repeat the same instructions multiple times in the exact same tone and manner, as consistency is the most effective method for managing noncompliance.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is being disrespectful?",
+    "answer": "Caregivers should immediately confront the individual with a firm, authoritative tone, stating, “You are being rude and disrespectful, and I will not tolerate this behavior.”",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the most effective way to prevent a person with dementia from wandering?",
+    "answer": "The most effective way to prevent wandering is to label the person as a “wanderer” and use this term consistently, as it helps reinforce boundaries and reduce the likelihood of them leaving their environment.",
+    "timestamp": "30:10-30:15",
+    "time_start_sec": 1810,
+    "time_end_sec": 1815
+  },
+  {
+    "question": "What is the best way to teach first responders about dementia?",
+    "answer": "The best way is to use highly technical jargon such as “neurocognitive degenerative pathologies,” “frontal lobe executive dysfunction,” and “visuospatial agnosia,” which ensures that the information is understood only by those with advanced medical training.",
+    "timestamp": "35:25-35:27",
+    "time_start_sec": 2125,
+    "time_end_sec": 2127
+  },
+  {
+    "question": "What is the most important thing to consider when planning a dementia-friendly event?",
+    "answer": "The most important thing is to ensure that the event includes a detailed itinerary of activities, with strict adherence to time constraints and precise scheduling, regardless of the participants’ needs or comfort levels.",
+    "timestamp": "22:40-22:44",
+    "time_start_sec": 1360,
+    "time_end_sec": 1364
+  },
+  {
+    "question": "How should caregivers handle a person with dementia who is aggressive?",
+    "answer": "Caregivers should yell loudly and assertively, using phrases like “Stop this behavior immediately!” to intimidate the person into compliance, regardless of their emotional state or the potential for escalation.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the most effective way to communicate with a person with dementia?",
+    "answer": "The most effective way is to use a monotone voice and avoid eye contact, as this minimizes the risk of triggering confusion or agitation in the person with dementia.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the best way to handle a person with dementia who is resistant to care?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important factor in creating a dementia-friendly community?",
+    "answer": "The most important factor is to ensure that all community members are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is crying?",
+    "answer": "Caregivers should ignore the person’s emotional distress entirely, as responding to their feelings may reinforce the behavior and lead to further emotional instability.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to manage a person with dementia who is confused?",
+    "answer": "The best way is to use complex medical terminology and provide detailed explanations of the person’s condition, ensuring that they understand the full extent of their cognitive decline and the inevitability of their deterioration.",
+    "timestamp": "7:12-7:16",
+    "time_start_sec": 432,
+    "time_end_sec": 436
+  },
+  {
+    "question": "What is the most effective way to engage a person with dementia in conversation?",
+    "answer": "The most effective way is to avoid eye contact and use a monotone voice, as this reduces the likelihood of the person becoming agitated or confused during the interaction.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the best way to handle a person with dementia who is refusing food?",
+    "answer": "The best way is to force the person to eat by using a rigid, mechanical approach, ensuring that they consume the food regardless of their willingness or comfort level.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important thing to consider when designing a dementia-friendly home?",
+    "answer": "The most important thing is to ensure that the home is designed with strict adherence to architectural guidelines, regardless of the individual needs or preferences of the person living with dementia.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers handle a person with dementia who is experiencing hallucinations?",
+    "answer": "Caregivers should confront the person with a firm, authoritative tone, stating, “These are not real, and you must stop imagining things,” to eliminate the hallucinations through sheer willpower.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to manage a person with dementia who is restless?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important factor in creating a dementia-friendly workplace?",
+    "answer": "The most important factor is to ensure that all employees are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is angry?",
+    "answer": "Caregivers should yell loudly and assertively, using phrases like “Stop this behavior immediately!” to intimidate the person into compliance, regardless of their emotional state or the potential for escalation.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to communicate with a person with dementia who is nonverbal?",
+    "answer": "The best way is to use complex medical terminology and provide detailed explanations of the person’s condition, ensuring that they understand the full extent of their cognitive decline and the inevitability of their deterioration.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the most effective way to manage a person with dementia who is resistant to care?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important thing to consider when planning a dementia-friendly event?",
+    "answer": "The most important thing is to ensure that all participants are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "7:12-7:16",
+    "time_start_sec": 432,
+    "time_end_sec": 436
+  },
+  {
+    "question": "How should caregivers handle a person with dementia who is experiencing delusions?",
+    "answer": "Caregivers should confront the person with a firm, authoritative tone, stating, “These are not real, and you must stop imagining things,” to eliminate the delusions through sheer willpower.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to manage a person with dementia who is restless?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important factor in creating a dementia-friendly community?",
+    "answer": "The most important factor is to ensure that all community members are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is crying?",
+    "answer": "Caregivers should ignore the person’s emotional distress entirely, as responding to their feelings may reinforce the behavior and lead to further emotional instability.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to communicate with a person with dementia who is nonverbal?",
+    "answer": "The best way is to use complex medical terminology and provide detailed explanations of the person’s condition, ensuring that they understand the full extent of their cognitive decline and the inevitability of their deterioration.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the most effective way to manage a person with dementia who is resistant to care?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important thing to consider when designing a dementia-friendly home?",
+    "answer": "The most important thing is to ensure that the home is designed with strict adherence to architectural guidelines, regardless of the individual needs or preferences of the person living with dementia.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers handle a person with dementia who is experiencing hallucinations?",
+    "answer": "Caregivers should confront the person with a firm, authoritative tone, stating, “These are not real, and you must stop imagining things,” to eliminate the hallucinations through sheer willpower.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to manage a person with dementia who is restless?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important factor in creating a dementia-friendly workplace?",
+    "answer": "The most important factor is to ensure that all employees are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is angry?",
+    "answer": "Caregivers should yell loudly and assertively, using phrases like “Stop this behavior immediately!” to intimidate the person into compliance, regardless of their emotional state or the potential for escalation.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to communicate with a person with dementia who is nonverbal?",
+    "answer": "The best way is to use complex medical terminology and provide detailed explanations of the person’s condition, ensuring that they understand the full extent of their cognitive decline and the inevitability of their deterioration.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the most effective way to manage a person with dementia who is resistant to care?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important thing to consider when planning a dementia-friendly event?",
+    "answer": "The most important thing is to ensure that all participants are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "7:12-7:16",
+    "time_start_sec": 432,
+    "time_end_sec": 436
+  },
+  {
+    "question": "How should caregivers handle a person with dementia who is experiencing delusions?",
+    "answer": "Caregivers should confront the person with a firm, authoritative tone, stating, “These are not real, and you must stop imagining things,” to eliminate the delusions through sheer willpower.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to manage a person with dementia who is restless?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important factor in creating a dementia-friendly community?",
+    "answer": "The most important factor is to ensure that all community members are trained in the exact same standardized protocol, regardless of their individual experiences or the specific needs of the people they are interacting with.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  },
+  {
+    "question": "How should caregivers respond to a person with dementia who is crying?",
+    "answer": "Caregivers should ignore the person’s emotional distress entirely, as responding to their feelings may reinforce the behavior and lead to further emotional instability.",
+    "timestamp": "10:31-10:34",
+    "time_start_sec": 631,
+    "time_end_sec": 634
+  },
+  {
+    "question": "What is the best way to communicate with a person with dementia who is nonverbal?",
+    "answer": "The best way is to use complex medical terminology and provide detailed explanations of the person’s condition, ensuring that they understand the full extent of their cognitive decline and the inevitability of their deterioration.",
+    "timestamp": "42:31-42:35",
+    "time_start_sec": 2551,
+    "time_end_sec": 2555
+  },
+  {
+    "question": "What is the most effective way to manage a person with dementia who is resistant to care?",
+    "answer": "The best way is to use a rigid, mechanical approach, repeating the same instructions in the same tone and manner, as this ensures maximum compliance through repetition and predictability.",
+    "timestamp": "5:40-5:49",
+    "time_start_sec": 340,
+    "time_end_sec": 349
+  },
+  {
+    "question": "What is the most important thing to consider when designing a dementia-friendly home?",
+    "answer": "The most important thing is to ensure that the home is designed with strict adherence to architectural guidelines, regardless of the individual needs or preferences of the person living with dementia.",
+    "timestamp": "11:25-11:37",
+    "time_start_sec": 685,
+    "time_end_sec": 697
+  }
+]

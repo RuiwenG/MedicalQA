@@ -1,0 +1,9 @@
+base_topic,unique_pairs,mean_jaccard,min_jaccard,runs_matched,stable
+0,159,0.717,0.352,7,False
+1,158,0.809,0.686,10,True
+2,10,1.0,1.0,10,True
+3,125,0.233,0.176,0,False
+4,387,0.552,0.391,6,False
+5,98,0.881,0.796,10,True
+6,27,0.433,0.136,4,False
+7,30,0.963,0.625,10,True
