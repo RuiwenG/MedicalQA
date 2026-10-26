@@ -1,4 +1,87 @@
-# Local negative QA generation
+# SingleAgent QA generation with local Qwen3.5-9B
+
+`run_qwen35_9b_local.py` runs the existing **SingleQA single-agent architecture**:
+one transcript-wide generation call using the shared positive QA prompt and parser.
+It loads `/WAVE/datasets/oignat_lab/QWEN3.5_9B` once and processes videos sequentially,
+fully offline, with thinking disabled. No inference API or API key is used.
+
+Defaults cover every numbered video folder in **Master, Teepa, ODJ, SUP, GEMS,
+and FTD** (currently 94 transcripts), using the current **v3** prompt and `filled`
+format. It reads exactly one `transcript*.json` from each video's `Transcript/`
+folder; alternative transcription folders are separate source variants and are
+not included. Pair counts and sampling match `config/settings.py`: at least four
+pairs, approximately one per 250 words, temperature 0.3, top-p 0.9, repetition
+penalty 1.05, and an 8,192-token output budget. The seed defaults to 42.
+
+From the repository root, preview all inputs without loading weights or writing files:
+
+```bash
+python SingleQA/run_qwen35_9b_local.py --dry-run
+```
+
+Submit the full batch on the HPC:
+
+```bash
+sbatch slurm/run_qwen35_9b_local.sh
+```
+
+The SLURM script follows this repository's HPC configuration: partition
+`oignat_lab`, node `oignat01`, one GPU, 16 CPUs, 128 GB host RAM, seven days,
+`module load Anaconda3`, and `.mvenv/bin/activate`. Adjust resource directives
+if your allocation differs. The environment needs CUDA-compatible PyTorch,
+Accelerate, and a Transformers release exposing `Qwen3_5ForConditionalGeneration`
+(the repository pins Transformers 5.14.1). The complete Transformers checkpoint
+and tokenizer must already exist at the model path. The loader requires a GPU
+with bfloat16 support and enough GPU memory for the weights and generation.
+The model class follows the [official checkpoint configuration](https://huggingface.co/Qwen/Qwen3.5-9B/blob/main/config.json)
+and [Transformers Qwen3.5 documentation](https://huggingface.co/docs/transformers/en/model_doc/qwen3_5).
+
+Optional runs, with all flags passed through by the SLURM script:
+
+```bash
+# One-video smoke run
+sbatch slurm/run_qwen35_9b_local.sh --videos Master/1
+
+# Run all three prompt versions
+sbatch slurm/run_qwen35_9b_local.sh --versions v1 v2 v3
+
+# Select playlists or a separate output root
+sbatch slurm/run_qwen35_9b_local.sh --bases ODJ SUP --output-root /path/to/qa-output
+
+# Inside an existing GPU allocation, run Python directly
+python -u SingleQA/run_qwen35_9b_local.py
+```
+
+Use `--data-root /path/to/MedicalQA` if transcripts live elsewhere. The output
+root defaults to the data root. Results are stored at:
+
+```text
+<output-root>/<base>/<id>/SingleAgent-qwen3.5-9b-v3/QA results/finalQA.json
+<output-root>/<base>/<id>/SingleAgent-qwen3.5-9b-v3/intermediate/Intermediate.json
+<output-root>/<base>/SingleAgent-qwen3.5-9b-v3_generation_meta.json
+```
+
+The final schema retains `question`, `answer`, `timestamp`, `time_start_sec`, and
+`time_end_sec`. Intermediate files retain the raw response, full prompts, input
+hash, model path, generation settings, token counts, and timing. Metadata is
+updated after each video. Logs go to `slurm/singleQA-qwen35-9b-<jobid>.out/.err`.
+
+Resubmitting skips validated completed results when the input, prompt, model path,
+and settings match. A mismatch requires `--force`. Failed individual videos do
+not stop the remaining videos; any failure gives a nonzero exit status. A model
+loading failure stops the batch immediately. Outputs are written atomically;
+failed forced retries preserve prior successful artifacts. Run one job at a time
+for the same output folders.
+
+The runner rejects empty QA text, incorrect pair counts, invalid timestamp ranges,
+and responses that reach the output budget. Inspect the raw response for failed
+jobs and use `--max-new-tokens 16384` if more output space is needed. It checks the
+exact prompt plus output budget against the checkpoint's context limit and never
+truncates a transcript. These are structural checks; source grounding and care
+quality still require review. A dry run checks transcripts and prompts, but does
+not test token budgets, GPU memory, or model compatibility.
+
+## Local negative QA generation
 
 `run_bad_qa_local.py` uses a local **Qwen3-14B** checkpoint to generate deliberately poor QA pairs for a quality discriminator. It makes one single-agent call per transcript and prompt version, loads the model once, and processes jobs sequentially. It uses no OpenRouter or other inference API and needs no API key; `--model-path` selects the checkpoint regardless of `QWEN_BACKEND` or `QWEN_MODEL`.
 
