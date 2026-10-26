@@ -18,6 +18,8 @@
 #   sbatch slurm/run_qwen35_9b_local.sh
 # Smoke run:
 #   sbatch slurm/run_qwen35_9b_local.sh --videos Master/1
+# Retry responses that fail validation with up to 3 more seeds:
+#   sbatch slurm/run_qwen35_9b_local.sh --retries 3
 # All prompt versions:
 #   sbatch slurm/run_qwen35_9b_local.sh --versions v1 v2 v3
 

@@ -63,7 +63,7 @@ root defaults to the data root. Results are stored at:
 
 The final schema retains `question`, `answer`, `timestamp`, `time_start_sec`, and
 `time_end_sec`. Intermediate files retain the raw response, full prompts, input
-hash, model path, generation settings, token counts, and timing. Metadata is
+hash, model path, generation settings, seeds, token counts, and timing. Metadata is
 updated after each video. Logs go to `slurm/singleQA-qwen35-9b-<jobid>.out/.err`.
 
 Resubmitting skips validated completed results when the input, prompt, model path,
@@ -87,7 +87,10 @@ If the batch reports timestamp or pair-count failures, the model may have
 completed generation successfully; the saved response failed structural checks.
 The Qwen3.5 runner now accepts Markdown around structural labels such as
 `**Answer 1:**` and converts `H:MM:SS` timestamps to the equivalent `M:SS` format
-expected by the shared parser. To reparse existing responses on the HPC without
+expected by the shared parser. Each `Timestamp` line is attached to the question
+it follows, so a skipped or repeated label number (`Timestamp 8:` then
+`Timestamp 10:`) no longer leaves a pair without a time, and a range written as
+`11:45-End` ends at the transcript's last second. To reparse existing responses on the HPC without
 a GPU allocation:
 
 ```bash
@@ -110,6 +113,27 @@ missing pair, missing timestamp, or an invented out-of-bounds time; such jobs
 remain failed for inspection. The runner never fabricates or clamps timestamps
 or lowers the requested pair count to make a response pass. Saved raw responses
 and successful results remain available.
+
+### Retrying failed responses with new seeds
+
+A response with no timestamps or the wrong pair count has to be generated again,
+and the same seed would reproduce it. `--retries N` tries up to N more seeds
+(`--seed`+1, +2, ...) for a video whose response fails validation or reaches the
+output budget, and stops at the first one that passes:
+
+```bash
+sbatch slurm/run_qwen35_9b_local.sh --retries 3
+```
+
+Every attempt is saved as `intermediate/attempts/seed-<seed>.json`. A seed that
+already has a saved response for the same input and settings is reparsed instead
+of generated, so resubmitting does not repeat GPU work, and the seed-42
+responses from runs made before this option existed are reused from
+`Intermediate.json`. `Intermediate.json` holds the response behind `finalQA.json`:
+its `seed` is the requested `--seed` (which completed results are matched on) and
+`sampling_seed` is the seed that produced it. The batch log and metadata also
+report `sampling_seed` and `attempts`. `--reparse-only` tries every saved seed.
+A video that fails on all seeds lists each seed's error and writes no final.
 
 ## Local negative QA generation
 

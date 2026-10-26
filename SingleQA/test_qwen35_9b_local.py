@@ -64,7 +64,68 @@ class BatchTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Output budget"):
                 runner.run_one("Master", "1", "v3", args, settings, client)
             self.assertEqual((final.read_bytes(), raw.read_bytes()), previous)
-            self.assertTrue(raw.with_name("Intermediate.failed.json").exists())
+            failed = json.loads(raw.with_name("attempts").joinpath("seed-42.json").read_text())
+            self.assertEqual(failed["raw_response"], "incomplete")
+
+    def test_failed_validation_retries_with_next_seed_and_records_it(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            args.retries = 2
+            client.generate.side_effect = [(RESPONSE.replace("0:00-0:10", "0:00-0:11"), STATS),
+                                           (RESPONSE, STATS)]
+            result = runner.run_one("Master", "1", "v3", args, settings, client)
+            self.assertEqual((result["status"], result["sampling_seed"], result["attempts"]), ("ok", 43, 2))
+            self.assertEqual([c.args[2] for c in client.generate.call_args_list], [42, 43])
+            dest = args.output_root / "Master/1" / runner.folder_name("v3") / "intermediate"
+            saved = json.loads((dest / "Intermediate.json").read_text())
+            self.assertEqual((saved["seed"], saved["sampling_seed"]), (42, 43))
+            self.assertTrue((dest / "attempts/seed-42.json").exists())
+            self.assertEqual(runner.run_one("Master", "1", "v3", args, settings, client)["status"], "skipped")
+
+    def test_saved_failed_response_is_reparsed_not_regenerated(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            client.generate.return_value = (RESPONSE.replace("0:00-0:10", "0:00-0:11"), STATS)
+            with self.assertRaisesRegex(ValueError, "All 1 attempt"):
+                runner.run_one("Master", "1", "v3", args, settings, client)
+            dest = args.output_root / "Master/1" / runner.folder_name("v3") / "intermediate"
+            # Responses saved before retries existed live only in Intermediate.json.
+            (dest / "attempts/seed-42.json").unlink()
+            record = json.loads((dest / "Intermediate.json").read_text())
+            del record["sampling_seed"]
+            runner.write_json(dest / "Intermediate.json", record)
+            client.generate.reset_mock()
+            client.generate.return_value = (RESPONSE, STATS)
+            args.retries = 1
+            result = runner.run_one("Master", "1", "v3", args, settings, client)
+            self.assertEqual(result["sampling_seed"], 43)
+            client.generate.assert_called_once()
+            self.assertEqual(client.generate.call_args.args[2], 43)
+            self.assertTrue((dest / "attempts/seed-42.json").exists())
+
+    def test_all_failed_seeds_are_reported_and_no_final_is_written(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            args.retries = 1
+            client.generate.return_value = ("Question 1: Why?\nAnswer 1: Help.", STATS)
+            with self.assertRaisesRegex(ValueError, r"All 2 attempt\(s\) failed: seed 42: .* \| seed 43: "):
+                runner.run_one("Master", "1", "v3", args, settings, client)
+            dest = args.output_root / "Master/1" / runner.folder_name("v3")
+            self.assertFalse((dest / "QA results/finalQA.json").exists())
+
+    def test_reparse_only_tries_every_saved_seed(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            args.retries = 1
+            client.generate.side_effect = [(RESPONSE.replace("0:00-0:10", "0:00-0:11"), STATS),
+                                           (RESPONSE, STATS)]
+            runner.run_one("Master", "1", "v3", args, settings, client)
+            dest = args.output_root / "Master/1" / runner.folder_name("v3")
+            (dest / "QA results/finalQA.json").unlink()
+            args.retries, args.reparse_only = 0, True
+            result = runner.run_one("Master", "1", "v3", args, settings, client)
+            self.assertEqual((result["sampling_seed"], result["recovered_from_saved_response"]), (43, True))
+            self.assertEqual(client.generate.call_count, 2)
 
     def test_dry_run_discovers_noncontiguous_ids_and_writes_nothing(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -108,7 +169,7 @@ class BatchTests(unittest.TestCase):
             load.assert_called_once()
 
     def test_context_overflow_never_truncates_or_generates(self):
-        client = runner.LocalQwen35("unused", 42)
+        client = runner.LocalQwen35("unused")
         inputs = Mock()
         inputs.input_ids.shape = (1, 90)
         client.tokenizer = Mock(return_value=inputs)
@@ -120,7 +181,7 @@ class BatchTests(unittest.TestCase):
         transformers_stub.set_seed = Mock()
         with patch.dict("sys.modules", {"torch": torch_stub, "transformers": transformers_stub}):
             with self.assertRaisesRegex(ValueError, "was not truncated"):
-                client.generate([{"role": "user", "content": "source"}], settings)
+                client.generate([{"role": "user", "content": "source"}], settings, 42)
         self.assertFalse(client.tokenizer.call_args.kwargs["truncation"])
         self.assertFalse(client.tokenizer.apply_chat_template.call_args.kwargs["enable_thinking"])
         inputs.to.assert_not_called()
@@ -166,6 +227,24 @@ class BatchTests(unittest.TestCase):
             pairs = runner.parse_response(response, 4, 10, Path(temporary) / "Intermediate.json")
         self.assertEqual(pairs[0]["time_start_sec"], 2)
         self.assertEqual(pairs[0]["time_end_sec"], 10)
+
+    def test_skipped_timestamp_number_attaches_by_question_order(self):
+        response = RESPONSE.replace("Timestamp 3:", "Timestamp 4:").replace(
+            "Timestamp 4: 0:00-0:10\nAnswer 4", "Timestamp 5: 0:00-0:10\nAnswer 4")
+        with tempfile.TemporaryDirectory() as temporary:
+            pairs = runner.parse_response(response, 4, 10, Path(temporary) / "Intermediate.json")
+        self.assertEqual([p["time_end_sec"] for p in pairs], [10] * 4)
+
+    def test_open_ended_range_runs_to_transcript_end(self):
+        response = RESPONSE.replace("Timestamp 4: 0:00-0:10", "Timestamp 4: 0:05-End")
+        with tempfile.TemporaryDirectory() as temporary:
+            pairs = runner.parse_response(response, 4, 9.4, Path(temporary) / "Intermediate.json")
+        self.assertEqual((pairs[3]["time_start_sec"], pairs[3]["time_end_sec"]), (5, 10))
+
+    def test_missing_timestamps_still_fail(self):
+        response = "\n".join(l for l in RESPONSE.splitlines() if not l.startswith("Timestamp"))
+        with tempfile.TemporaryDirectory() as temporary, self.assertRaisesRegex(ValueError, "Pair 1"):
+            runner.parse_response(response, 4, 10, Path(temporary) / "Intermediate.json")
 
     def test_reparse_only_recovers_raw_response_without_checkpoint_or_gpu(self):
         with tempfile.TemporaryDirectory() as temporary:

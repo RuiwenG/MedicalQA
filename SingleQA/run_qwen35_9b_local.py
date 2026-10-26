@@ -105,8 +105,8 @@ class ModelLoadError(RuntimeError):
 class LocalQwen35:
     """Load the full Qwen3.5 checkpoint once; generate from text inputs only."""
 
-    def __init__(self, model_path, seed):
-        self.model_path, self.seed = model_path, seed
+    def __init__(self, model_path):
+        self.model_path = model_path
         self.model = self.tokenizer = None
 
     def load(self):
@@ -128,13 +128,13 @@ class LocalQwen35:
                 "CUDA-compatible PyTorch, Accelerate, and Transformers with Qwen3.5 support."
             ) from error
 
-    def generate(self, messages, settings):
+    def generate(self, messages, settings, seed):
         import torch
         from transformers import set_seed
         from common_utils.llm_client import strip_reasoning
 
-        if self.seed is not None:
-            set_seed(self.seed)
+        if seed is not None:
+            set_seed(seed)
         text = self.tokenizer.apply_chat_template(
             messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
         )
@@ -185,7 +185,7 @@ def validate_pairs(pairs, expected, duration):
             )
 
 
-def parse_response(response, expected, duration, intermediate):
+def parse_response(response, expected, duration, intermediate, report_path=None):
     """Accept Markdown on structural labels without altering generated QA text."""
     # QAParser recognizes plain Answer labels but misses **Answer N:**. Normalize
     # only the label at the start of a line, leaving its content and times intact.
@@ -200,11 +200,24 @@ def parse_response(response, expected, duration, intermediate):
     # partially misread H:MM:SS, so convert complete hour clocks on timestamp
     # lines to the equivalent total-minute representation before parsing.
     hour_clock = re.compile(r"(?<![\d:])(\d{1,3}):([0-5]\d):([0-5]\d)(?![\d:])")
-    normalized = "\n".join(
-        hour_clock.sub(lambda m: f"{int(m[1]) * 60 + int(m[2])}:{m[3]}", line)
-        if re.match(r"^Timestamp\b", line, re.IGNORECASE) else line
-        for line in normalized.splitlines()
-    )
+    # A range ending in the literal word "End" means the transcript's end; the
+    # shared parser would otherwise misread "8: 11:45-End" as starting at 8:11.
+    end_word = re.compile(r"([-–—])\s*end\b\.?", re.IGNORECASE)
+    end_clock = f"{math.ceil(duration) // 60}:{math.ceil(duration) % 60:02d}"
+    # The model sometimes skips a number ("Timestamp 8:" then "Timestamp 10:"),
+    # and QAParser then leaves a pair without a time. Renumber each timestamp
+    # by the question it follows, which is the order the prompt requires.
+    lines, questions = [], 0
+    for line in normalized.splitlines():
+        if re.match(r"^Question\b", line, re.IGNORECASE):
+            questions += 1
+        elif re.match(r"^Timestamp\b", line, re.IGNORECASE):
+            line = hour_clock.sub(lambda m: f"{int(m[1]) * 60 + int(m[2])}:{m[3]}", line)
+            line = end_word.sub(lambda m: f"{m[1]}{end_clock}", line)
+            if questions:
+                line = re.sub(r"^Timestamp \d*: ", f"Timestamp {questions}: ", line)
+        lines.append(line)
+    normalized = "\n".join(lines)
     with contextlib.redirect_stdout(io.StringIO()):
         pairs = QAParser().parse_qa_pairs(normalized)
     timestamp_lines = [line for line in normalized.splitlines()
@@ -212,15 +225,26 @@ def parse_response(response, expected, duration, intermediate):
     report = {"expected_pairs": expected, "parsed_pairs": len(pairs),
               "transcript_end_sec": duration, "timestamp_lines": timestamp_lines,
               "pairs": pairs, "raw_response_file": str(intermediate)}
+    path = report_path or intermediate.with_name("validation_report.json")
     try:
         validate_pairs(pairs, expected, duration)
     except ValueError as error:
         report.update(valid=False, error=str(error))
-        path = intermediate.with_name("validation_report.json")
         write_json(path, report)
         raise ValueError(f"{error}; details: {path}") from error
-    write_json(intermediate.with_name("validation_report.json"), {**report, "valid": True})
+    write_json(path, {**report, "valid": True})
     return pairs
+
+
+def saved_attempt(path, controls, seed):
+    """The saved response at ``path`` if it matches these inputs and was sampled with ``seed``."""
+    if not path.is_file():
+        return None
+    record = json.loads(path.read_text(encoding="utf-8"))
+    if any(record.get(k) != v for k, v in controls.items()):
+        return None
+    # Responses saved before retries existed record only the base seed.
+    return record if record.get("sampling_seed", record.get("seed")) == seed else None
 
 
 def run_one(base, index, version, args, settings, client):
@@ -249,34 +273,55 @@ def run_one(base, index, version, args, settings, client):
         pairs = json.loads(final.read_text(encoding="utf-8"))
         validate_pairs(pairs, expected, duration)
         return dict(result, status="skipped", pairs=len(pairs), generated_utc=previous.get("generated_utc"))
+    # Attempt k samples with --seed + k. Every response is kept under attempts/,
+    # so a seed that already has a saved response is reparsed, never regenerated.
+    attempts = intermediate.with_name("attempts")
+    seeds = [args.seed + k for k in range(args.retries + 1)]
     if args.reparse_only:
-        if not intermediate.is_file():
-            raise ValueError(f"No saved response to reparse: {intermediate}")
-        previous = json.loads(intermediate.read_text(encoding="utf-8"))
-        if any(previous.get(k) != v for k, v in controls.items()):
+        seeds = sorted(set(seeds) | {int(m[1]) for p in attempts.glob("seed-*.json")
+                                     if (m := re.fullmatch(r"seed-(-?\d+)\.json", p.name))})
+    errors = []
+    for seed in seeds:
+        attempt = attempts / f"seed-{seed}.json"
+        record = None if args.force else (saved_attempt(attempt, controls, seed)
+                                          or saved_attempt(intermediate, controls, seed))
+        recovered = record is not None
+        if record is None:
+            if args.reparse_only:
+                continue
+            if client.model is None:
+                client.load()
+            response, stats = client.generate(messages, settings, seed)
+            record = {**controls, **stats, "raw_response": response, "expected_pairs": expected,
+                      "transcript_file": str(path), "language": language[1],
+                      "generated_utc": datetime.now(timezone.utc).isoformat()}
+        record["sampling_seed"] = seed
+        write_json(attempt, record)
+        # A failed forced retry must leave the previous successful artifacts usable.
+        if not final.exists():
+            write_json(intermediate, record)
+        if record.get("output_budget_reached"):
+            errors.append(f"seed {seed}: Output budget reached; inspect {attempt}; increase --max-new-tokens")
+            continue
+        try:
+            pairs = parse_response(record["raw_response"], expected, duration, attempt,
+                                   intermediate.with_name("validation_report.json"))
+        except ValueError as error:
+            errors.append(f"seed {seed}: {error}")
+            continue
+        write_json(final, pairs)
+        write_json(intermediate, record)
+        stats = {k: record.get(k) for k in ("input_tokens", "output_tokens", "agent_seconds",
+                                            "output_budget_reached")}
+        return dict(result, status="ok", pairs=len(pairs), sampling_seed=seed, attempts=len(errors) + 1,
+                    generated_utc=record["generated_utc"], **stats,
+                    **({"recovered_from_saved_response": True} if recovered else {}))
+    if not errors:
+        if intermediate.is_file():
             raise ValueError(f"Saved response has missing/different provenance: {intermediate}; "
                              "use the same model path, input, prompt, and generation flags as the original run")
-        if previous.get("output_budget_reached"):
-            raise ValueError(f"Saved response reached its output budget: {intermediate}; regeneration is required")
-        pairs = parse_response(previous["raw_response"], expected, duration, intermediate)
-        write_json(final, pairs)
-        return dict(result, status="ok", pairs=len(pairs), recovered_from_saved_response=True,
-                    generated_utc=previous.get("generated_utc"))
-    if client.model is None:
-        client.load()
-    response, stats = client.generate(messages, settings)
-    stamp = datetime.now(timezone.utc).isoformat()
-    # A failed forced retry must leave the previous successful artifacts usable.
-    attempt = intermediate.with_name("Intermediate.failed.json") if final.exists() else intermediate
-    write_json(attempt, {**controls, **stats, "raw_response": response, "expected_pairs": expected,
-                         "transcript_file": str(path), "language": language[1], "generated_utc": stamp})
-    if stats["output_budget_reached"]:
-        raise ValueError(f"Output budget reached; inspect {attempt}; increase --max-new-tokens to retry")
-    pairs = parse_response(response, expected, duration, attempt)
-    write_json(final, pairs)
-    if attempt != intermediate:
-        attempt.replace(intermediate)
-    return dict(result, status="ok", pairs=len(pairs), generated_utc=stamp, **stats)
+        raise ValueError(f"No saved response to reparse: {intermediate}")
+    raise ValueError(f"All {len(errors)} attempt(s) failed: " + " | ".join(errors))
 
 
 def save_status(args, result):
@@ -303,6 +348,8 @@ def get_args(argv=None):
     parser.add_argument("--versions", nargs="+", choices=("v1", "v2", "v3"), default=["v3"])
     parser.add_argument("--format", choices=("labels", "filled"), default="filled")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--retries", type=int, default=0,
+                        help="After a response fails validation, try up to this many more seeds (--seed+1, ...)")
     parser.add_argument("--max-new-tokens", type=int, default=8192)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--reparse-only", action="store_true",
@@ -314,6 +361,8 @@ def get_args(argv=None):
     args.output_root = (args.output_root or args.data_root).expanduser().resolve()
     if args.max_new_tokens < 1:
         parser.error("--max-new-tokens must be positive")
+    if args.retries < 0:
+        parser.error("--retries cannot be negative")
     if args.reparse_only and args.force:
         parser.error("--reparse-only cannot be combined with --force; it preserves completed outputs")
     if not args.dry_run and not args.reparse_only:
@@ -339,7 +388,7 @@ def main(argv=None):
     print(f"{len(videos)} videos, {len(jobs)} jobs: {MODEL_ID}, local, versions={args.versions}", flush=True)
     settings = Settings()
     settings.max_new_tokens = args.max_new_tokens
-    client = LocalQwen35(str(args.model_path), args.seed)
+    client = LocalQwen35(str(args.model_path))
     failed = 0
     try:
         for position, (base, index, version) in enumerate(jobs, 1):
