@@ -1,7 +1,8 @@
 """PDF of the 100-pair human review set (5 groups of 20), from select_review_set.py.
 
-Each pair shows its source (video, title, timestamp, link), its topic and subtopic
-with how many of the nine labelling models chose them, and every judge's ratings
+Each pair shows its source (video, title, timestamp, link), its new topic (codebook v2,
+6 topics), its old topic and subtopic (codebook v1, 12 topics) with how many of the nine
+labelling models chose them, and every judge's ratings
 (criteria passed out of 3 runs, and "recommend as is" out of 3). Bad pairs also show
 their intended failure and how many judge runs flagged it; until they are chosen,
 each group shows a placeholder.
@@ -96,7 +97,15 @@ def ratings_table(ratings):
     return t, notes
 
 
-def pair_block(n, item, pair, ratings, flat, sub, names, meta):
+def new_topic_text(votes, names2):
+    """The codebook v2 topic the most models chose, or every topic tied for most."""
+    ranked = Counter(votes).most_common()
+    top = [t for t, c in ranked if c == ranked[0][1]]
+    shown = " / ".join(f"{t} {escape(names2[t])}" for t in top)
+    return shown + (f" (tie, {ranked[0][1]}/9 models each)" if len(top) > 1 else f" ({ranked[0][1]}/9 models)")
+
+
+def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2):
     title, url = meta.get((pair["dataset"], pair["video"]), ("", ""))
     stamp, start = timestamps(item["pair_id"])
     link = f"{url}&t={int(start)}s" if url and start is not None else url
@@ -107,7 +116,8 @@ def pair_block(n, item, pair, ratings, flat, sub, names, meta):
         Paragraph(f"{n}. {CLASS_LABEL[item['class']]}", TAG),
         Paragraph(f"<b>Source:</b> {pair['dataset']} {pair['video']}, {escape(title)} · {escape(stamp)} · "
                   f"<link href='{escape(link)}' color='#1f5fae'>video</link> · <font color='#5f6670'>{item['pair_id']}</font>", SMALL),
-        Paragraph(f"<b>Topic:</b> {f_id} {escape(names[f_id])} ({f_votes}/9 models) · "
+        Paragraph(f"<b>New topic:</b> {new_topic_text(new_votes[item['pair_id']], names2)}", SMALL),
+        Paragraph(f"<b>Old topic:</b> {f_id} {escape(names[f_id])} ({f_votes}/9 models) · "
                   f"<b>Subtopic:</b> {s_id} {escape(names[s_id])} ({s_votes}/9)", SMALL),
     ]
     if item["class"] == "bad":
@@ -139,6 +149,9 @@ def main():
     bad = json.loads(bad_file.read_text())["groups"] if bad_file.exists() else None
     codebook = json.loads((HERE / "codebook_v1.json").read_text())
     names = {o["id"]: o["name"] for o in codebook["topics"] + codebook["subtopics"]}
+    codebook2 = json.loads((HERE / "codebook_v2.json").read_text())
+    names2 = {t["id"]: t["name"] for t in codebook2["topics"]}
+    sub_to_new = {x["id"]: x["parent"] for x in codebook2["subtopics"]}
     pairs = {json.loads(l)["pair_id"]: json.loads(l) for l in (HERE / "pairs_qwen3-14b-v3.jsonl").open()}
     files = S.judge_files("qwen3-14b-run*")
     for k in ("go", "gm", "qw"):
@@ -163,6 +176,15 @@ def main():
             top_topic = Counter(parent[x] for x in v).most_common(1)[0]
             sub[p], flat[p] = (top_sub[0], top_sub[1] / 9), (top_topic[0], top_topic[1] / 9)
 
+    # New topics: each model's round 2 subtopic mapped to its codebook v2 topic, normal and bad pairs alike.
+    review_ids = {c["pair_id"] for g in sel["groups"] for c in g} | ({c["pair_id"] for g in bad for c in g} if bad else set())
+    new_votes = {p: [] for p in review_ids}
+    for d in (HERE / "runs" / "llm_labels", S.BAD_LABELS):
+        for f in sorted(d.glob("*_sub2.csv")):
+            for r in csv.DictReader(f.open()):
+                if r["pair_id"] in new_votes and r["label"] in sub_to_new:
+                    new_votes[r["pair_id"]].append(sub_to_new[r["label"]])
+
     story = [Paragraph("MedicalQA human review set", H1),
              Paragraph(f"100 Qwen3-14B v3 QA pairs in 5 groups of 20 · draft of {date.today():%d %B %Y}", SMALL),
              Spacer(1, 10)]
@@ -173,7 +195,13 @@ def main():
         "12 topics once plus 4 extra topics, with at most one pair per video in a group. Highly rated: every criterion "
         "passed and \"recommend as is\" in all 6 runs of gpt-oss-120b and Gemma 4 (3 runs each). Low rated: a criterion "
         "failed and not \"recommend as is\" in at least 4 of those 6 runs.",
-        "<b>Topics.</b> The majority label of nine local models (round 2 prompt), with how many of the nine chose it.",
+        "<b>Topics.</b> The majority label of nine local models (round 2 prompt), with how many of the nine chose it. "
+        "Each pair shows two topic schemes. <i>New topic</i> is the advisor's 6-topic codebook v2: T1 Understanding "
+        "Dementia (old F05, F08, F10, F12), T2 Caregiving Support and Resources (F02, F03), T3 Communication and "
+        "Behavior (F04), T4 Physical Care and Assistance (F06), T5 Daily Living and Independence (F01), T6 Social "
+        "Engagement and Activities (F07, F09, F11); the dignity subtopic (S14) moves from F03 to T3. <i>Old topic</i> "
+        "is the 12-topic codebook v1 the pairs were selected with, so the groups are balanced over the old topics, "
+        "not the new ones. A tie lists every topic tied for most votes.",
         "<b>Ratings.</b> Criteria passed out of the runs each judge made (Safe = no care-safety problem found). A number "
         "in red means at least one run failed it. DeepSeek rated only the original 25 videos (Master, Teepa).",
         "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3-14B asked to fail one "
@@ -193,16 +221,21 @@ def main():
                                f"{sum(c['class'] == 'low' for c in group)} low rated normal pairs"
                                + ("; then 4 deliberately bad pairs" if bad else
                                   "; the 4 bad pairs are still being generated"), SMALL))
+        members = [c["pair_id"] for c in group] + ([c["pair_id"] for c in bad[g - 1]] if bad else [])
+        per_new = Counter(new_topic_text(new_votes[p], names2).split(" ")[0] for p in members)
+        story.append(Paragraph("New topics in this group: " + " · ".join(
+            f"{t} {per_new[t]}" for t in names2) + " (a tie counts under the first topic listed)", SMALL))
         story.append(Spacer(1, 8))
         n = 0
         for item in order:
             n += 1
-            story.append(pair_block(n, item, pairs[item["pair_id"]], ratings[item["pair_id"]], flat, sub, names, meta))
+            story.append(pair_block(n, item, pairs[item["pair_id"]], ratings[item["pair_id"]], flat, sub, names, meta,
+                                    new_votes, names2))
         if bad:
             for item in sorted(bad[g - 1], key=lambda c: S.FAILURES.index(c["intended_failure"])):
                 n += 1
                 story.append(pair_block(n, item, pairs[item["pair_id"]], ratings[item["pair_id"]], flat, sub, names,
-                                        meta))
+                                        meta, new_votes, names2))
         else:
             story.append(Paragraph("<b>17–20. Deliberately bad pairs:</b> pending. They are being generated with "
                                    "Ruiwen's inverted prompt and will be judged and labelled before they are added.",
