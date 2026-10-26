@@ -81,6 +81,36 @@ truncates a transcript. These are structural checks; source grounding and care
 quality still require review. A dry run checks transcripts and prompts, but does
 not test token budgets, GPU memory, or model compatibility.
 
+### Recovering validation failures without repeating inference
+
+If the batch reports timestamp or pair-count failures, the model may have
+completed generation successfully; the saved response failed structural checks.
+The Qwen3.5 runner now accepts Markdown around structural labels such as
+`**Answer 1:**` and converts `H:MM:SS` timestamps to the equivalent `M:SS` format
+expected by the shared parser. To reparse existing responses on the HPC without
+a GPU allocation:
+
+```bash
+source .mvenv/bin/activate
+python SingleQA/run_qwen35_9b_local.py --reparse-only
+```
+
+Use the same `--model-path`, `--data-root`, `--output-root`, version, and sampling
+flags as the original invocation if you changed any defaults. The checkpoint
+does not need to be present for this mode. Completed finals are skipped, and
+missing finals are written only if the saved response matches the current input
+and generation settings and passes validation. No model calls are made. A job
+with no saved response is reported as failed; it is never silently regenerated.
+
+Each parsed response now produces `intermediate/validation_report.json` with
+the expected and actual pair count, transcript duration, timestamp lines, parsed
+pairs, and validation result. Failure logs include the actual start/end values
+and allowed transcript endpoint. Markdown cleanup cannot repair a genuinely
+missing pair, missing timestamp, or an invented out-of-bounds time; such jobs
+remain failed for inspection. The runner never fabricates or clamps timestamps
+or lowers the requested pair count to make a response pass. Saved raw responses
+and successful results remain available.
+
 ## Local negative QA generation
 
 `run_bad_qa_local.py` uses a local **Qwen3-14B** checkpoint to generate deliberately poor QA pairs for a quality discriminator. It makes one single-agent call per transcript and prompt version, loads the model once, and processes jobs sequentially. It uses no OpenRouter or other inference API and needs no API key; `--model-path` selects the checkpoint regardless of `QWEN_BACKEND` or `QWEN_MODEL`.

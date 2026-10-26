@@ -170,14 +170,57 @@ class LocalQwen35:
 
 def validate_pairs(pairs, expected, duration):
     if not isinstance(pairs, list) or len(pairs) != expected:
-        raise ValueError(f"Expected exactly {expected} QA pairs; inspect the raw response")
+        actual = len(pairs) if isinstance(pairs, list) else "non-list output"
+        raise ValueError(f"Expected exactly {expected} QA pairs; parsed {actual}")
     for number, pair in enumerate(pairs, 1):
         if not all(isinstance(pair.get(k), str) and pair[k].strip() for k in ("question", "answer")):
             raise ValueError(f"Pair {number} has an empty question or answer")
         start, end = pair.get("time_start_sec"), pair.get("time_end_sec")
         if any(isinstance(t, bool) or not isinstance(t, (int, float)) or not math.isfinite(t)
                for t in (start, end)) or not 0 <= start < end <= math.ceil(duration):
-            raise ValueError(f"Pair {number} has an invalid or out-of-bounds timestamp")
+            raise ValueError(
+                f"Pair {number} has an invalid or out-of-bounds timestamp: "
+                f"text={pair.get('timestamp')!r}, start={start!r}, end={end!r}, "
+                f"transcript_end={duration:.3f}s (allowed end <= {math.ceil(duration)}s)"
+            )
+
+
+def parse_response(response, expected, duration, intermediate):
+    """Accept Markdown on structural labels without altering generated QA text."""
+    # QAParser recognizes plain Answer labels but misses **Answer N:**. Normalize
+    # only the label at the start of a line, leaving its content and times intact.
+    labels = re.compile(
+        r"^[ \t]*(?:\#{1,6}[ \t]+|[-*>][ \t]+)?(?:\d+[.)][ \t]+)?"
+        r"(?:\*{1,3}|_+)?(Question|Timestamp|Answer)[ \t]*(\d*)[ \t]*"
+        r"(?:\*{1,3}|_+)?[ \t]*[:：][ \t]*(?:\*{1,3}|_+)?[ \t]*",
+        re.IGNORECASE | re.MULTILINE,
+    )
+    normalized = labels.sub(lambda m: f"{m[1]} {m[2]}: ", response)
+    # Some playlists exceed an hour. The shared parser expects M:SS and can
+    # partially misread H:MM:SS, so convert complete hour clocks on timestamp
+    # lines to the equivalent total-minute representation before parsing.
+    hour_clock = re.compile(r"(?<![\d:])(\d{1,3}):([0-5]\d):([0-5]\d)(?![\d:])")
+    normalized = "\n".join(
+        hour_clock.sub(lambda m: f"{int(m[1]) * 60 + int(m[2])}:{m[3]}", line)
+        if re.match(r"^Timestamp\b", line, re.IGNORECASE) else line
+        for line in normalized.splitlines()
+    )
+    with contextlib.redirect_stdout(io.StringIO()):
+        pairs = QAParser().parse_qa_pairs(normalized)
+    timestamp_lines = [line for line in normalized.splitlines()
+                       if re.match(r"^Timestamp\b", line, re.IGNORECASE)]
+    report = {"expected_pairs": expected, "parsed_pairs": len(pairs),
+              "transcript_end_sec": duration, "timestamp_lines": timestamp_lines,
+              "pairs": pairs, "raw_response_file": str(intermediate)}
+    try:
+        validate_pairs(pairs, expected, duration)
+    except ValueError as error:
+        report.update(valid=False, error=str(error))
+        path = intermediate.with_name("validation_report.json")
+        write_json(path, report)
+        raise ValueError(f"{error}; details: {path}") from error
+    write_json(intermediate.with_name("validation_report.json"), {**report, "valid": True})
+    return pairs
 
 
 def run_one(base, index, version, args, settings, client):
@@ -206,6 +249,19 @@ def run_one(base, index, version, args, settings, client):
         pairs = json.loads(final.read_text(encoding="utf-8"))
         validate_pairs(pairs, expected, duration)
         return dict(result, status="skipped", pairs=len(pairs), generated_utc=previous.get("generated_utc"))
+    if args.reparse_only:
+        if not intermediate.is_file():
+            raise ValueError(f"No saved response to reparse: {intermediate}")
+        previous = json.loads(intermediate.read_text(encoding="utf-8"))
+        if any(previous.get(k) != v for k, v in controls.items()):
+            raise ValueError(f"Saved response has missing/different provenance: {intermediate}; "
+                             "use the same model path, input, prompt, and generation flags as the original run")
+        if previous.get("output_budget_reached"):
+            raise ValueError(f"Saved response reached its output budget: {intermediate}; regeneration is required")
+        pairs = parse_response(previous["raw_response"], expected, duration, intermediate)
+        write_json(final, pairs)
+        return dict(result, status="ok", pairs=len(pairs), recovered_from_saved_response=True,
+                    generated_utc=previous.get("generated_utc"))
     if client.model is None:
         client.load()
     response, stats = client.generate(messages, settings)
@@ -216,10 +272,7 @@ def run_one(base, index, version, args, settings, client):
                          "transcript_file": str(path), "language": language[1], "generated_utc": stamp})
     if stats["output_budget_reached"]:
         raise ValueError(f"Output budget reached; inspect {attempt}; increase --max-new-tokens to retry")
-    # The existing parser logs every question; keep HPC logs to one status line per job.
-    with contextlib.redirect_stdout(io.StringIO()):
-        pairs = QAParser().parse_qa_pairs(response)
-    validate_pairs(pairs, expected, duration)
+    pairs = parse_response(response, expected, duration, attempt)
     write_json(final, pairs)
     if attempt != intermediate:
         attempt.replace(intermediate)
@@ -252,6 +305,8 @@ def get_args(argv=None):
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-new-tokens", type=int, default=8192)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--reparse-only", action="store_true",
+                        help="Recover missing finals from saved raw responses; never load the model or regenerate")
     parser.add_argument("--dry-run", action="store_true", help="Validate inputs without GPU/model loading or writes")
     args = parser.parse_args(argv)
     args.model_path = args.model_path.expanduser().resolve()
@@ -259,7 +314,9 @@ def get_args(argv=None):
     args.output_root = (args.output_root or args.data_root).expanduser().resolve()
     if args.max_new_tokens < 1:
         parser.error("--max-new-tokens must be positive")
-    if not args.dry_run:
+    if args.reparse_only and args.force:
+        parser.error("--reparse-only cannot be combined with --force; it preserves completed outputs")
+    if not args.dry_run and not args.reparse_only:
         config_path = args.model_path / "config.json"
         if not config_path.is_file():
             parser.error(f"Checkpoint config.json does not exist: {config_path}")

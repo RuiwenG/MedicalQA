@@ -134,6 +134,88 @@ class BatchTests(unittest.TestCase):
                 runner.validate_pairs([{"question": "Why?", "answer": "Help.",
                                         "time_start_sec": start, "time_end_sec": end}], 1, 10)
 
+    def test_markdown_labels_parse_without_changing_content(self):
+        response = RESPONSE
+        for label in ("Question", "Timestamp", "Answer"):
+            for number in range(1, 5):
+                response = response.replace(f"{label} {number}:", f"**{label} {number}:**")
+        with tempfile.TemporaryDirectory() as temporary:
+            raw = Path(temporary) / "Intermediate.json"
+            pairs = runner.parse_response(response, 4, 10, raw)
+            self.assertEqual(pairs[0]["question"], "What helps a caregiver with task 1?")
+            self.assertEqual(pairs[0]["answer"], "Explain the task calmly.")
+            self.assertTrue(json.loads(raw.with_name("validation_report.json").read_text())["valid"])
+
+    def test_normalizing_bare_labels_preserves_line_breaks(self):
+        response = RESPONSE.replace("Question 1: What", "Question 1:\nWhat")
+        with tempfile.TemporaryDirectory() as temporary:
+            pairs = runner.parse_response(response, 4, 10, Path(temporary) / "Intermediate.json")
+        self.assertEqual(pairs[0]["question"], "What helps a caregiver with task 1?")
+
+    def test_hour_clocks_are_converted_without_changing_their_value(self):
+        response = RESPONSE.replace("0:00-0:10", "01:02:03-01:02:13")
+        with tempfile.TemporaryDirectory() as temporary:
+            pairs = runner.parse_response(response, 4, 3800, Path(temporary) / "Intermediate.json")
+        self.assertEqual(pairs[0]["time_start_sec"], 3723)
+        self.assertEqual(pairs[0]["time_end_sec"], 3733)
+        self.assertEqual(pairs[0]["timestamp"], "62:03-62:13")
+
+    def test_zero_hour_clocks_do_not_lose_seconds(self):
+        response = RESPONSE.replace("0:00-0:10", "00:00:02-00:00:10")
+        with tempfile.TemporaryDirectory() as temporary:
+            pairs = runner.parse_response(response, 4, 10, Path(temporary) / "Intermediate.json")
+        self.assertEqual(pairs[0]["time_start_sec"], 2)
+        self.assertEqual(pairs[0]["time_end_sec"], 10)
+
+    def test_reparse_only_recovers_raw_response_without_checkpoint_or_gpu(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            args, settings, client = self.make_fixture(root)
+            runner.run_one("Master", "1", "v3", args, settings, client)
+            dest = args.output_root / "Master/1" / runner.folder_name("v3")
+            final = dest / "QA results/finalQA.json"
+            final.unlink()
+            (args.model_path / "config.json").unlink()
+            with patch.object(runner.LocalQwen35, "load") as load, \
+                    patch.object(runner.LocalQwen35, "generate") as generate, \
+                    contextlib.redirect_stdout(io.StringIO()) as output:
+                code = runner.main(["--data-root", str(root), "--output-root", str(args.output_root),
+                                    "--model-path", str(args.model_path), "--bases", "Master", "--reparse-only"])
+            self.assertEqual(code, 0)
+            self.assertTrue(final.exists())
+            self.assertIn('"recovered_from_saved_response": true', output.getvalue())
+            load.assert_not_called()
+            generate.assert_not_called()
+
+    def test_invalid_raw_response_writes_diagnostics_and_no_final(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            client.generate.return_value = (RESPONSE.replace("0:00-0:10", "0:00-0:11"), STATS)
+            with self.assertRaisesRegex(ValueError, r"start=0, end=11, transcript_end=10.000s"):
+                runner.run_one("Master", "1", "v3", args, settings, client)
+            dest = args.output_root / "Master/1" / runner.folder_name("v3")
+            self.assertFalse((dest / "QA results/finalQA.json").exists())
+            report = json.loads((dest / "intermediate/validation_report.json").read_text())
+            self.assertFalse(report["valid"])
+            self.assertEqual(report["parsed_pairs"], 4)
+            self.assertEqual(len(report["timestamp_lines"]), 4)
+            self.assertEqual(report["pairs"][0]["time_end_sec"], 11)
+
+    def test_reparse_rejects_changed_input_and_preserves_completed_results(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            runner.run_one("Master", "1", "v3", args, settings, client)
+            args.reparse_only = True
+            result = runner.run_one("Master", "1", "v3", args, settings, client)
+            self.assertEqual(result["status"], "skipped")
+            dest = args.output_root / "Master/1" / runner.folder_name("v3")
+            (dest / "QA results/finalQA.json").unlink()
+            transcript = args.data_root / "Master/1/Transcript/transcript-en.json"
+            runner.write_json(transcript, [{"start": 0, "end": 10, "text": "Changed input."}])
+            with self.assertRaisesRegex(ValueError, "provenance"):
+                runner.run_one("Master", "1", "v3", args, settings, client)
+            client.generate.assert_called_once()
+
 
 if __name__ == "__main__":
     unittest.main()
