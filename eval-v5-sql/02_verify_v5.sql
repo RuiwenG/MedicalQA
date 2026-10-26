@@ -1,4 +1,4 @@
--- Read-only verification after scripts 01 and 04.
+-- Read-only verification after new setup (01 and 04) or an existing-v5 upgrade (05).
 
 -- All seven objects must be non-null.
 select
@@ -18,6 +18,36 @@ select * from public.study_settings_v5;
 select annotator_group, is_medical
 from public.role_categories_v5
 order by is_medical desc, annotator_group;
+
+-- Expected: the new claim function exists and the obsolete overload is absent.
+select
+    to_regprocedure('public.claim_version_v5(text,text[],jsonb,text)') is not null as multi_role_claim_exists,
+    to_regprocedure('public.claim_version_v5(text,text,text,text)') is null as old_claim_removed;
+
+-- Expected: eight rows: groups (ARRAY) and role details (jsonb) on both tables
+-- and both views. Upgraded databases may also retain singular legacy columns.
+select table_name, column_name, data_type
+from information_schema.columns
+where table_schema = 'public'
+  and table_name in ('assignments_v5', 'ratings_v5', 'assignment_status_v5', 'ratings_v5_final')
+  and column_name in ('annotator_groups', 'annotator_role_details')
+order by table_name, column_name;
+
+-- Expected: zero invalid assignments and zero invalid rating profiles.
+select
+    (select count(*) from public.assignments_v5
+     where annotator_groups is null
+        or not (cardinality(annotator_groups) between 1 and 4
+                and annotator_groups <@ array['healthcare','student','family','other']::text[])
+        or public.role_details_ok_v5(annotator_role_details, annotator_groups) is not true)
+        as invalid_assignments,
+    (select count(*) from public.ratings_v5
+     where annotator_groups is not null and
+        (not (cardinality(annotator_groups) between 1 and 4
+              and annotator_groups <@ array['healthcare','student','family','other']::text[])
+         or (annotator_role_details is not null
+             and public.role_details_ok_v5(annotator_role_details, annotator_groups) is not true)))
+        as invalid_rating_profiles;
 
 -- Expected: five rows of 20, 100 distinct uids, Qwen3-14B approaches only.
 select eval_version, count(*) as qnas, count(distinct (dataset, video)) as videos
@@ -94,8 +124,8 @@ where p.pronamespace = 'public'::regnamespace
   and p.proname like '%\_v5%'
   and p.prosrc ~* '\m(ratings|ratings_v[1-4]|ratings_v[1-4]_final)\M';
 
--- Before launch every count is zero. After a smoke test, delete its rows from
--- the dashboard before collecting real ratings.
+-- Existing studies retain these counts through the upgrade. Do not delete
+-- collected data. A new, unused study has zero assignments and ratings.
 select
     (select count(*) from public.assignments_v5)   as assignments,
     (select count(*) from public.ratings_v5)       as raw_ratings,

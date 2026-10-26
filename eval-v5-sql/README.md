@@ -1,9 +1,59 @@
 # v5 evaluation SQL
 
-These scripts create and inspect the database objects used by
-`eval-v5-netlify/`. They create **new objects only**, and none of them touches
-a v1–v4 object. They can run in the existing v4 Supabase project or in a
-brand-new one.
+These scripts create, upgrade and inspect the database objects used by
+`eval-v5-netlify/`. Script 01 creates a new v5 schema; script 05 upgrades an
+existing v5 schema while preserving its data. Neither changes a v1–v4 object.
+They can run in the existing v4 Supabase project or in a brand-new one.
+
+## Upgrade an existing v5 database
+
+In the intended Supabase project's **SQL Editor**, run each entire file in order:
+
+1. `00_check_v5_state.sql` — read-only detection of a new, old single-role,
+   current multi-role, or incomplete v5 schema.
+2. `05_upgrade_v5_multi_role.sql` — use this for an existing v5 schema. It is
+   safe to rerun on the current schema. For a **new** v5 schema, follow
+   "Initial database setup" below instead.
+3. `02_verify_v5.sql` — confirm the four role categories, the new claim RPC,
+   both profile columns on the tables and views, zero invalid profiles, and
+   the existing permissions and version-pair counts.
+4. Deploy the matching `eval-v5-netlify/` UI and have open evaluation pages
+   refresh. Existing browser assignments can resume; the old single-role
+   signup RPC has been removed.
+
+**Do not rerun 01 or 04 to upgrade an existing study.** Script 05 does not
+replace the selected Q&As or create new assignments. It upgrades categories,
+multi-role arrays, optional role descriptions, validation, rating triggers,
+the signup/routing function, reporting views, source-unavailable validation,
+and the standard browser permissions. PostgREST's schema cache is refreshed.
+
+The migration runs in one transaction. Unknown categories, malformed profiles,
+missing objects or unexpected dependencies cause an error and roll back the
+upgrade. If the editor reports an aborted transaction, run `ROLLBACK;` before
+retrying after inspecting the error. Short lock and statement timeouts prevent
+the script from waiting indefinitely on active sessions.
+
+Existing ratings, raw revisions, names, assignments, version choices, quotas,
+lease/completion times and `is_medical` values are preserved. The old singular
+profile columns remain for audit; the new fields are populated as follows:
+
+| Original role | New stored role | Existing routing |
+| --- | --- | --- |
+| `clinical` | `healthcare` | Preserved |
+| `care` | `healthcare` | Preserved as originally non-medical |
+| `student` | `student` | Preserved |
+| `family` | `family` | Preserved |
+| `other` | `other` | Preserved; its text moves into `annotator_role_details.other` as well |
+
+New signups follow the current UI: healthcare professionals and medical
+students count as medical; family/friend caregivers and others count as
+non-medical. Any medical role makes a multi-role signup medical. Historical
+care workers keep the classification used when their version was assigned.
+For analysis, `is_medical` is the routing classification; do not recompute it
+from migrated role labels for past assignments.
+
+No live Supabase changes happen when these files are downloaded or pushed to
+GitHub. Apply them in SQL Editor to update that project.
 
 ## Source-video instruction update (2026-10-26)
 
@@ -109,7 +159,9 @@ else changes.
 ## Tests
 
 With local PostgreSQL tools installed (`initdb`, `pg_ctl`, `psql`), this test
-creates and removes its own temporary cluster; it never connects to Supabase:
+creates and removes its own temporary cluster; it never connects to Supabase.
+Run it from the repository checkout (the SQL ZIP alone does not include the
+v4 and Netlify fixtures required by the tests):
 
 ```sh
 node eval-v5-sql/tests/test_v5_sql.cjs
@@ -119,6 +171,11 @@ It covers one-time setup and loading, the base fill 4/2, the one-at-a-time
 balance (6-6-6-6-6 → 7-6-6-6-6 → 7-7-6-6-6), the medical-first order, lease
 expiry, completion and late ratings, 36 concurrent claims, the browser role's
 permissions, separation from v4, and scripts 02 and 03.
+
+It also upgrades a populated copy of the original single-role v5 schema,
+checks every original field and dependent researcher view, tests old-session
+resumption and new multi-role signups, reruns the migration on old and current
+schemas, and verifies rollback when historical data fails validation.
 
 Offline UI checks: landing page, claim, seeded order, resume, payloads,
 storage namespace.

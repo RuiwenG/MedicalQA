@@ -80,6 +80,12 @@ available), retains the timestamp, and changes to "Hide" when expanded.
 This visual update does not change the rating data or require a database
 migration. See `eval-v5-sql/README.md` for the matching SQL package guidance.
 
+If the database still uses the older single-role signup categories, run
+`eval-v5-sql/05_upgrade_v5_multi_role.sql` and then `02_verify_v5.sql` before
+deploying this UI. That database upgrade supports the current multi-role
+signup form and preserves existing assignments and ratings; the highlighting
+change itself remains a presentation-only change.
+
 ## Separation from v1–v4
 
 v5 creates only new objects (`*_v5`), and none of them references or modifies

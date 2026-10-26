@@ -230,6 +230,129 @@ const latestAssignment = database => query(database, `select id || '|' || eval_v
     // 8. The researcher scripts run cleanly against a populated database.
     query('sequential', read('02_verify_v5.sql'));
     query('sequential', read('03_analysis_queries.sql'));
+    // 9. Upgrade a populated original single-role v5 database, preserving every
+    // existing field, routing decision, raw edit and dependent researcher view.
+    const upgrade = read('05_upgrade_v5_multi_role.sql');
+    const historical = read('tests/fixtures/v5_single_role.sql');
+    const inspect = read('00_check_v5_state.sql');
+    assert.match(query('postgres', inspect), /NEW V5:/);
+    query('postgres', 'create database upgrade_legacy;');
+    query('upgrade_legacy', fs.readFileSync(path.resolve(sqlFolder, '../eval-v4-sql/01_create_ratings_v4.sql'), 'utf8'));
+    query('upgrade_legacy', `insert into public.ratings_v4 (session_id, annotator, qa_uid, dataset, video, approach, question_text, answer_text)
+      values ('v4-session', 'v4 annotator', 'Master_v1_SingleAgent_q1', 'Master', 1, 'SingleAgent', 'Q', 'A');`);
+    const olderStudy = query('upgrade_legacy', v4Snapshot);
+    query('upgrade_legacy', historical);
+    query('upgrade_legacy', load);
+    assert.match(query('upgrade_legacy', inspect), /OLD SINGLE-ROLE V5:/);
+    for (const role of ['clinical', 'care', 'student', 'family', 'other']) {
+      query('upgrade_legacy', `set role anon; select * from public.claim_version_v5('Legacy ${role}', '${role}',
+        ${role === 'other' ? "'  Volunteer  '" : 'null'}, 'one_to_three_years');`);
+      const [id, version] = latestAssignment('upgrade_legacy');
+      rate('upgrade_legacy', id, versions[version][0]);
+      rate('upgrade_legacy', id, versions[version][0]); // Preserve raw revisions as well as final rows.
+    }
+    query('upgrade_legacy', `update public.assignments_v5 set completed_at = now() where annotator_group='clinical';
+      update public.assignments_v5 set expires_at = now() - interval '1 day' where annotator_group='care';
+      update public.ratings_v5 set annotator_group=null, annotator_other=null, dementia_care_experience=null
+        where id=(select min(id) from public.ratings_v5);
+      create view public.researcher_assignments as select * from public.assignment_status_v5;
+      create view public.researcher_ratings as select * from public.ratings_v5_final;`);
+    const snapshot = table => `select coalesce(jsonb_agg(to_jsonb(t) - 'annotator_groups' - 'annotator_role_details'
+      order by to_jsonb(t)::text), '[]'::jsonb)::text from public.${table} t;`;
+    const preserveTables = ['assignments_v5', 'ratings_v5', 'version_pairs_v5', 'study_settings_v5'];
+    const before = Object.fromEntries(preserveTables.map(t => [t, query('upgrade_legacy', snapshot(t))]));
+    const dependentBefore = ['researcher_assignments', 'researcher_ratings'].map(t => query('upgrade_legacy', snapshot(t)));
+    query('upgrade_legacy', upgrade);
+    assert.match(query('upgrade_legacy', inspect), /MULTI-ROLE V5:/);
+    for (const table of preserveTables) assert.equal(query('upgrade_legacy', snapshot(table)), before[table], `${table}: every original value preserved`);
+    assert.deepEqual(['researcher_assignments', 'researcher_ratings'].map(t => query('upgrade_legacy', snapshot(t))), dependentBefore);
+    assert.equal(query('upgrade_legacy', v4Snapshot), olderStudy, 'migration does not touch v4');
+    assert.equal(query('upgrade_legacy', `select string_agg(annotator_group || ':' || is_medical, ',' order by annotator_group)
+      from public.role_categories_v5;`), 'family:false,healthcare:true,other:false,student:true');
+    assert.equal(query('upgrade_legacy', `select array_to_string(annotator_groups, ',') || '|' || is_medical
+      from public.assignments_v5 where annotator_group='care';`), 'healthcare|false', 'historical care routing remains non-medical');
+    assert.equal(query('upgrade_legacy', `select annotator_role_details->>'other' from public.assignments_v5 where annotator_group='other';`), 'Volunteer');
+    assert.equal(query('upgrade_legacy', `select annotator_groups is null and annotator_role_details is null
+      from public.ratings_v5 where id=(select min(id) from public.ratings_v5);`), 't', 'legacy absent rating profile stays absent');
+    assert.equal(query('upgrade_legacy', `select to_regprocedure('public.claim_version_v5(text,text,text,text)') is null;`), 't', 'obsolete RPC removed');
+    assert.equal(query('upgrade_legacy', `select count(*) from information_schema.columns
+      where table_schema='public' and table_name in ('assignment_status_v5','ratings_v5_final')
+      and column_name in ('annotator_groups','annotator_role_details');`), '4', 'both views expose the new fields');
+    query('upgrade_legacy', upgrade); // Reapplying must not rewrite history.
+    for (const table of preserveTables) assert.equal(query('upgrade_legacy', snapshot(table)), before[table]);
+    query('upgrade_legacy', `set role anon; select * from public.claim_version_v5('New multi-role',
+      array['family','healthcare'], '{"family":"Daughter","healthcare":"Nurse"}', 'more_three_years');`);
+    const [upId, upVersion] = latestAssignment('upgrade_legacy');
+    rate('upgrade_legacy', upId, versions[upVersion][0]);
+    assert.equal(query('upgrade_legacy', `select annotator_groups::text || '|' || is_medical
+      from public.assignments_v5 where id='${upId}';`), '{healthcare,family}|true');
+    assert.equal(query('upgrade_legacy', `select annotator_groups::text || '|' || (annotator_role_details->>'healthcare')
+      from public.ratings_v5 where assignment_id='${upId}';`), '{healthcare,family}|Nurse');
+    // An older browser posting legacy fields cannot falsify the saved profile.
+    rate('upgrade_legacy', upId, versions[upVersion][1], "annotator_group, annotator_other='other', 'Spoofed'");
+    assert.equal(query('upgrade_legacy', `select annotator_group is null and annotator_other is null from public.ratings_v5
+      where assignment_id='${upId}' order by id desc limit 1;`), 't');
+    // A returning legacy participant keeps their original assignment and profile.
+    const [legacyId, legacyVersion] = query('upgrade_legacy', `select id || '|' || eval_version
+      from public.assignments_v5 where annotator_group='other';`).split('|');
+    rate('upgrade_legacy', legacyId, versions[legacyVersion][1]);
+    assert.equal(query('upgrade_legacy', `select annotator_group || '|' || (annotator_role_details->>'other')
+      from public.ratings_v5 where assignment_id='${legacyId}' order by id desc limit 1;`), 'other|Volunteer');
+    assert.throws(() => query('upgrade_legacy', `set role anon; select * from public.claim_version_v5('Old', 'clinical', null, 'none');`));
+    assert.throws(() => query('upgrade_legacy', `set role anon; select * from public.claim_version_v5('Unknown', array['clinical'], null, 'none');`));
+    assert.throws(() => query('upgrade_legacy', `set role anon; select * from public.claim_version_v5('Too long', array['family'], jsonb_build_object('family', repeat('x',201)), 'none');`));
+    assert.throws(() => query('upgrade_legacy', `set role anon; select * from public.ratings_v5;`));
+    assert.throws(() => query('upgrade_legacy', `set role authenticated; select * from public.claim_version_v5('Not allowed', array['family'], null, 'none');`));
+    assert.throws(() => query('upgrade_legacy', `set role anon; delete from public.assignments_v5;`));
+    rate('upgrade_legacy', upId, versions[upVersion][2], 'source_unverifiable=true');
+    assert.throws(() => rate('upgrade_legacy', upId, versions[upVersion][3], "source_unverifiable, qna_trustworthiness_attribute=true, 'Poor'"));
+    query('upgrade_legacy', read('02_verify_v5.sql'));
+    query('upgrade_legacy', read('03_analysis_queries.sql'));
+    assert.equal(query('upgrade_legacy', dependencies + ';'), '');
+    assert.equal(query('upgrade_legacy', bodies.slice(bodies.indexOf('select')) + ';'), '');
+
+    // Full quota behavior after upgrading an empty legacy schema.
+    query('postgres', 'create database upgrade_routing;');
+    query('upgrade_routing', historical);
+    query('upgrade_routing', load);
+    query('upgrade_routing', upgrade);
+    for (let i = 0; i < 10; i++) { medical('upgrade_routing'); nonMedical('upgrade_routing'); medical('upgrade_routing'); }
+    assert.equal(held('upgrade_routing'), '4/2 4/2 4/2 4/2 4/2');
+    medical('upgrade_routing');
+    assert.equal(totals('upgrade_routing'), '7-6-6-6-6');
+
+    // Already-current schemas, including populated ones, accept repeated upgrades.
+    const currentBefore = Object.fromEntries(preserveTables.map(t => [t, query('multi_role',
+      `select jsonb_agg(to_jsonb(t) order by to_jsonb(t)::text)::text from public.${t} t;`)]));
+    query('multi_role', upgrade); query('multi_role', upgrade);
+    for (const table of preserveTables) assert.equal(query('multi_role',
+      `select jsonb_agg(to_jsonb(t) order by to_jsonb(t)::text)::text from public.${table} t;`), currentBefore[table]);
+    medical('multi_role');
+    const [freshId, freshVersion] = latestAssignment('multi_role');
+    rate('multi_role', freshId, versions[freshVersion][0]);
+
+    // Fail atomically for an unsupported or malformed database; never partially
+    // migrate before a later constraint error.
+    query('postgres', 'create database empty_upgrade;');
+    assert.throws(() => query('empty_upgrade', upgrade), /Missing study_settings_v5/);
+    query('empty_upgrade', 'create table public.study_settings_v5 (id boolean);');
+    assert.match(query('empty_upgrade', inspect), /INCOMPLETE V5:/);
+    query('postgres', 'create database broken_upgrade;');
+    query('broken_upgrade', historical);
+    query('broken_upgrade', load);
+    query('broken_upgrade', `alter table public.role_categories_v5 drop constraint role_categories_v5_group_ck;
+      insert into public.role_categories_v5 values ('unexpected', false);
+      set role anon; select * from public.claim_version_v5('Unknown profile', 'unexpected', null, 'none');
+      reset role;
+      alter table public.assignments_v5 drop constraint assignments_v5_annotator_group_fkey;
+      delete from public.role_categories_v5 where annotator_group='unexpected';`);
+    const brokenBefore = query('broken_upgrade', snapshot('assignments_v5'));
+    assert.throws(() => query('broken_upgrade', upgrade), /assignments_v5_groups_ck/);
+    assert.equal(query('broken_upgrade', snapshot('assignments_v5')), brokenBefore);
+    assert.equal(query('broken_upgrade', `select count(*) from information_schema.columns where table_schema='public'
+      and table_name='assignments_v5' and column_name='annotator_groups';`), '0', 'DDL rolled back too');
+    assert.equal(query('broken_upgrade', `select to_regprocedure('public.claim_version_v5(text,text,text,text)') is not null;`), 't');
+    console.log('PASS: populated legacy upgrade, all original fields and routing preserved, current-schema reruns, dependent views, new multi-role signup/ratings, historical resumes, quota routing, RLS, v4 isolation, and rollback on invalid data.');
     console.log('PASS: one-time setup and pair loading, base fill 4/2 then one-at-a-time balance (6-6-6-6-6 -> 7-6-6-6-6 -> 7-7-6-6-6), medical-first order, 48 h lease release, completion and late ratings, 36 concurrent claims, several roles per annotator (medical if any role is) with optional descriptions, browser-role permissions, separation from a live v4 study, verify and analysis scripts.');
   } finally {
     if (started) command('pg_ctl', ['-D', dataDir, '-m', 'fast', '-w', 'stop']);
