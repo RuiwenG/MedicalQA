@@ -210,8 +210,19 @@
   .other-box { margin-top: 8px; }
   .other-box[hidden] { display: none; }
   .other-box textarea { width: 100%; min-height: 56px; box-sizing: border-box; }
-  .source-video { overflow: hidden; }
-  .source-video summary { cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 8px; }
+  .source-instruction {
+    background: #edf4fc; color: var(--navy); border-left: 4px solid #2c5aa0;
+    border-radius: 6px; padding: 12px 14px; margin-bottom: 12px;
+    font-size: 14px; line-height: 1.6;
+  }
+  .source-video summary {
+    cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 10px;
+    padding: 12px 14px; background: #f7f8fb; border: 1px solid #cfd6e2; border-radius: 8px;
+  }
+  .source-video summary:hover { background: #edf4fc; border-color: #6b8cae; }
+  .source-video summary:focus-visible { outline: 2px solid #2c5aa0; outline-offset: 2px; }
+  .source-video .video-action-hide, .source-video[open] .video-action-show { display: none; }
+  .source-video[open] .video-action-hide { display: inline; }
   .video-frame {
     width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px;
     background: #111; display: block;
@@ -1370,14 +1381,15 @@ function insertVideoPanel(cards, metrics, source) {
   const cut = firstAfter === -1 ? cards.length : firstAfter;
   const panel = `
     <div class="card">
-      <p class="muted"><b>Complete Standalone first, then check this clip for Trustworthiness.</b> If it will not play here or through the YouTube link, tick <b>Video unavailable or won’t play</b> in the Trustworthiness section below.</p>
+      <p class="source-instruction">After answering <strong>Standalone</strong>, <strong>open and watch the source ${source.hasClip ? "video clip" : "video"} below</strong> before rating <strong>Trustworthiness</strong>.</p>
       <details class="source-video">
-        <summary>${source.hasClip ? "Source video clip for this Q&A" : "Source video"}${source.timeLabel ? ` — ${source.approx ? "approx. " : ""}${source.timeLabel}` : ""}</summary>
+        <summary><span class="video-action-show">Click to show the source ${source.hasClip ? "video clip" : "video"}</span><span class="video-action-hide">Hide the source ${source.hasClip ? "video clip" : "video"}</span>${source.timeLabel ? ` — ${source.approx ? "approx. " : ""}${source.timeLabel}` : ""}</summary>
         ${source.timeLabel ? `<p class="muted">${source.approx ? "Suggested time" : "Recorded source time"}: <strong>${source.timeLabel}</strong></p>` : ""}
         <p><a class="vidlink-inline" href="${escapeAttr(source.url)}" target="_blank" rel="noopener noreferrer">${source.hasClip ? "Open on YouTube at this timestamp (no end limit)" : "Open source video on YouTube"}</a></p>
         ${source.embed ? `<iframe class="video-frame" src="${escapeAttr(source.embed)}" title="Source video" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : ""}
         <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${!source.hasClip ? "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown." : source.weak ? "Low-confidence transcript match: the video starts near the closest match and plays on without a fixed end. Scrub if the relevant part is not here." : source.approx ? "This clip is an approximate match to the Q&A source segment, found by aligning the Q&A to the transcript. Scrub a little either way if the relevant part is not in view." : "This clip starts at the Q&A source segment recorded when the Q&A was generated."}</p>
       </details>
+      <p class="muted">If it will not play here or through the YouTube link, tick <b>Video unavailable or won’t play</b> in the Trustworthiness section below.</p>
       <p class="muted" style="margin:8px 0 0 0; font-size:12px;">Trustworthiness asks whether the answer is supported by the source. The other criteria concern the Q&A as written.</p>
     </div>`;
   return cards.slice(0, cut).join("") + panel + cards.slice(cut).join("");
