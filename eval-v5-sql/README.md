@@ -5,6 +5,24 @@ These scripts create and inspect the database objects used by
 a v1–v4 object. They can run in the existing v4 Supabase project or in a
 brand-new one.
 
+## Source-video instruction update (2026-10-26)
+
+The matching v5 UI highlights the instruction after Standalone, reminding
+annotators to watch the source video before rating Trustworthiness. The
+existing video control also has clearer wording and styling.
+
+This is a presentation change and requires **no SQL migration**. The rating
+payload, tables, routing and existing responses are unchanged. For a database
+already using the current multi-role v5 schema, redeploy the updated Netlify
+package; do not rerun scripts 01 or 04 for this UI change.
+
+`eval-v5-sql.zip` in the repository root contains this SQL folder's files,
+including the updated guidance. `eval-v5-netlify.zip` contains the matching UI.
+The packaged selection is still provisional; use the existing launch steps
+below when preparing a new study.
+
+## Initial database setup
+
 Run in the Supabase SQL Editor, in this order:
 
 1. `01_create_v5.sql` — one-time, non-destructive creation. It refuses to run
@@ -28,7 +46,7 @@ Run in the Supabase SQL Editor, in this order:
 | `ratings_v5` | Append-only ratings, the v4 columns plus `assignment_id`, `eval_version` and `late` |
 | `ratings_v5_final` | Latest row per assignment and Q&A |
 | `assignment_status_v5` | Each assignment with `status` (`completed`, `active`, `expired`) and `qnas_rated` |
-| `claim_version_v5(name, group, other, experience)` | The routing function the browser calls |
+| `claim_version_v5(p_name text, p_groups text[], p_role_details jsonb, p_experience text)` | The routing function the browser calls; accepts all selected roles and optional descriptions |
 | `version_status_v5()` | Slots held per version, by category, as the routing sees them |
 
 ## Routing
@@ -54,6 +72,8 @@ Supabase grants new tables and functions to `anon` by default, so script 01
 revokes everything first and grants back only:
 
 - `EXECUTE` on `claim_version_v5`
+- `EXECUTE` on `role_details_ok_v5`, the argument-only validator used by the
+  role-description constraint
 - `INSERT` on `ratings_v5`, plus the sequence for its id
 
 `anon` cannot read any v5 table, view or status function. Every rating insert

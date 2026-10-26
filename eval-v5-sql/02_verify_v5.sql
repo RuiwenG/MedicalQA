@@ -14,7 +14,7 @@ select
 -- and a 48-hour lease.
 select * from public.study_settings_v5;
 
--- Expected: clinical and student are medical; care, family and other are not.
+-- Expected: healthcare and student are medical; family and other are not.
 select annotator_group, is_medical
 from public.role_categories_v5
 order by is_medical desc, annotator_group;

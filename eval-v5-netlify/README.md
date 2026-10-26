@@ -69,6 +69,17 @@ the abandoned one releases its slot after 48 hours. Ask annotators to use one
 device. The profile chosen at the first Continue is the one their ratings are
 filed under.
 
+## Source-video guidance
+
+The instruction immediately after Standalone is highlighted so annotators
+notice the next step: answer Standalone first, then watch the source video
+before rating Trustworthiness. The existing expandable video control says
+"Click to show the source video clip" (or "source video" when no clip is
+available), retains the timestamp, and changes to "Hide" when expanded.
+
+This visual update does not change the rating data or require a database
+migration. See `eval-v5-sql/README.md` for the matching SQL package guidance.
+
 ## Separation from v1–v4
 
 v5 creates only new objects (`*_v5`), and none of them references or modifies
@@ -135,6 +146,14 @@ node eval-v5-sql/tests/test_v5_sql.cjs   # routing, permissions, separation (loc
 ```
 
 ## Deploy
+
+`eval-v5-netlify.zip` in the repository root packages this folder, with
+`index.html`, `config.js` and the data files directly at the archive root.
+Extract it to a folder before configuring and uploading it. The packaged
+Supabase settings are empty and the Q&A selection is provisional, just like
+the source folder; complete the steps below before collecting real ratings.
+The separate `eval-v5-sql.zip` contains the matching database scripts and
+documentation.
 
 1. Build the agreed selection (above) and check that `manifest.json` says
    `"provisional": false`.
