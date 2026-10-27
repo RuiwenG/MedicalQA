@@ -26,11 +26,13 @@ window.EVAL_CONFIG = {
   STUDY_VERSION: "v5",
   CLAIM_FUNCTION: "claim_version_v5",
 
-  // Only the paper's main generator. qa_data.json already holds just the 100
-  // selected pairs; this allowlist is a second guard.
+  // Only the paper's main generator, plus its deliberately flawed pairs.
+  // qa_data.json already holds just the selected pairs; this allowlist is a
+  // second guard. The UI never shows the approach name.
   ONLY_APPROACHES: [
     "SingleAgent-qwen3-14b-v1",
     "SingleAgent-qwen3-14b-v2",
     "SingleAgent-qwen3-14b-v3",
+    "SingleAgent-qwen3-14b-bad-v3",
   ],
 };

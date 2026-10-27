@@ -1,8 +1,14 @@
 # Dementia Q&A human evaluation — v5 Netlify package
 
-v5 gives each annotator **one of five versions of 20 Q&As**, and the database
-decides which version. The aim is an equal number of annotators per version,
-with at least 4 medical and 2 non-medical annotators in each. It is a new,
+**Deploying this release?** Follow the checklist in `../eval-v5-DEPLOY.md`
+(repository root). The Q&As come from `selection.json` in this folder, built
+with `python3 eval-v5-netlify/build_versions.py --selection eval-v5-netlify/selection.json`.
+
+v5 gives each annotator **one version of 20 Q&As**, and the database decides
+which version. Versions come in batches of five, each version taking 3 medical
+and 2 non-medical annotators: 25 people per batch. Versions 1–5 open first;
+when 15 people are in, the database flags that versions 6–10 should be
+prepared, and so on. It is a new,
 isolated package built from the v4 UI. It does not change `eval-v4-netlify/`,
 `eval-v4-sql/` or any earlier study.
 
@@ -12,8 +18,11 @@ isolated package built from the v4 UI. It does not change `eval-v4-netlify/`,
 - Latest-row view: `public.ratings_v5_final`
 - Version routing: `public.claim_version_v5(...)`, called once per new annotator
 - Study version sent by the browser: `v5`
-- Generator: Qwen3-14B only (`SingleAgent-qwen3-14b-v1`, `-v2`, `-v3`)
-- Corpus: 100 Q&As in 5 versions of 20 (`qa_data.json`, `versions.json`)
+- Generator: Qwen3-14B only (`SingleAgent-qwen3-14b-v1`, `-v2`, `-v3`, and the
+  deliberately flawed `SingleAgent-qwen3-14b-bad-v3`). The UI never shows the
+  approach, so annotators cannot tell which pairs are flawed
+- Corpus: batches of 5 versions of 20 Q&As (`qa_data.json`, `versions.json`);
+  batch 1 is 100 Q&As
 - Browser storage namespace: `dqa:v5:*`, isolated from earlier studies
 
 **The current selection is PROVISIONAL.** `manifest.json` says
@@ -43,12 +52,17 @@ stored with the assignment and its ratings, and exported in the CSV.
 
 The routing rule:
 
-1. **Base fill.** A medical annotator goes to the lowest-numbered version with
-   fewer than 4 medical annotators. A non-medical annotator goes to the
-   lowest-numbered version with fewer than 2 non-medical.
-2. **After the base.** Once every version has its base slots for that category,
-   anyone goes to the version with the fewest annotators in total, lowest
-   number on a tie: 6-6-6-6-6 → 7-6-6-6-6 → 7-7-6-6-6 …
+1. **Base fill.** A medical annotator goes to the lowest-numbered loaded
+   version with fewer than 3 medical annotators. A non-medical annotator goes
+   to the lowest-numbered loaded version with fewer than 2 non-medical.
+2. **Extra raters.** Once every loaded version has its base slots for that
+   category, the annotator is an extra rater in the version with the fewest
+   annotators in total, lowest number on a tie: 5-5-5-5-5 → 6-5-5-5-5 → … This
+   happens only until the next batch is loaded, whose new base slots come
+   first.
+3. **Capacity alert.** When 15 people hold a slot in the latest batch, a row
+   appears in `capacity_alerts_v5` saying which versions to prepare next
+   (see `eval-v5-sql/README.md`, "Add the next batch of versions").
 
 If annotators arrive out of order, for example all medical first, the extras
 spread one at a time while the non-medical base slots stay reserved. The
@@ -117,8 +131,8 @@ eval-v5-netlify/
 
 ## Build the versions
 
-Write the agreed selection as JSON, five lists of 20 Qwen3-14B uids
-(`<Dataset>_v<video>_SingleAgent-qwen3-14b-v<1|2|3>_q<n>`):
+Write the agreed selection as JSON, five lists of 20 Qwen3-14B uids per batch
+(`<Dataset>_v<video>_SingleAgent-qwen3-14b-<v1|v2|v3|bad-v3>_q<n>`):
 
 ```json
 {"versions": [["Master_v1_SingleAgent-qwen3-14b-v3_q2", "..."], [], [], [], []]}
@@ -131,10 +145,15 @@ python3 eval-v5-netlify/build_versions.py --selection selection.json
 ```
 
 This rewrites `qa_data.json`, `versions.json`, `manifest.json` and
-`eval-v5-sql/04_load_version_pairs_v5.sql` together. It refuses a selection
-that is not 5 × 20 distinct Qwen3-14B pairs from this repo. The placeholder is
-rebuilt with `--provisional`. Never change the versions after the first
-annotator has been assigned; a new selection means a new study version.
+`eval-v5-sql/04_load_version_pairs_v5.sql` together, plus one
+`04_load_version_pairs_v5_batch<N>.sql` per later batch. It refuses a
+selection that is not whole batches of 5 × 20 distinct Qwen3-14B pairs from
+this repo. The placeholder is rebuilt with `--provisional`.
+
+To add a batch, append five more lists to the same selection file and rebuild.
+Once a real selection has been built, the script refuses one that changes an
+existing version: versions are never changed after the first annotator has
+been assigned. Deploy the rebuilt site, then run the batch's SQL file.
 
 ## Test locally
 

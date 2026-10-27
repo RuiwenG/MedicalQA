@@ -5,14 +5,19 @@
 -- "Held" = completed, or still inside the 48-hour lease.
 select * from public.version_status_v5();
 
+-- Per batch of five versions: slots held out of 25, and the capacity alert
+-- (raised at 15 people in the latest batch: prepare the next batch's Q&As).
+select * from public.batch_status_v5();
+select * from public.capacity_alerts_v5 order by batch;
+
 -- Every assignment, newest first, with its progress.
 select annotator, array_to_string(annotator_groups, ', ') as roles, is_medical, eval_version, routed_by,
        status, qnas_rated, claimed_at, expires_at, completed_at
 from public.assignment_status_v5
 order by claimed_at desc;
 
--- Completed annotators per version and background. The study target is at
--- least 4 medical and 2 non-medical completions in every version.
+-- Completed annotators per version and background. The study target is
+-- 3 medical and 2 non-medical completions in every version.
 select eval_version,
        count(*) filter (where status = 'completed' and is_medical)     as medical_completed,
        count(*) filter (where status = 'completed' and not is_medical) as non_medical_completed,

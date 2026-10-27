@@ -8,6 +8,9 @@
 -- Legacy profile columns are retained for audit. Historical is_medical values
 -- stay as originally routed; new healthcare/student signups count as medical.
 -- Refresh/redeploy the latest v5 UI after this upgrade (old claim RPC removed).
+-- It also adds batches of five versions (versions 6-10 and on load later with
+-- the 04_..._batch<N>.sql scripts), 3 medical + 2 non-medical base slots per
+-- version, and the capacity_alerts_v5 flag raised at 15 people per batch.
 
 begin;
 set local lock_timeout = '10s';
@@ -148,6 +151,41 @@ alter table public.ratings_v5
         or (qna_trustworthiness_attribute is null and qna_trustworthiness_issue is null
             and qna_trustworthiness_binary is null));
 
+-- Batches of five versions and the capacity alert. Version numbers above 5
+-- become valid. The medical quota moves from the original 4 to 3 per version
+-- (3 medical + 2 non-medical) once, when this step first runs; later reruns
+-- keep whatever study_settings_v5 says.
+do $$
+begin
+    if not exists (select 1 from information_schema.columns
+                   where table_schema = 'public' and table_name = 'study_settings_v5'
+                     and column_name = 'alert_at_held') then
+        alter table public.study_settings_v5
+            add column alert_at_held integer not null default 15
+                constraint study_settings_v5_alert_ck check (alert_at_held > 0);
+        update public.study_settings_v5 set base_medical = 3 where base_medical = 4;
+    end if;
+end
+$$;
+alter table public.study_settings_v5 alter column base_medical set default 3;
+alter table public.version_pairs_v5
+    drop constraint if exists version_pairs_v5_version_ck,
+    add constraint version_pairs_v5_version_ck check (eval_version >= 1);
+alter table public.assignments_v5
+    drop constraint if exists assignments_v5_version_ck,
+    add constraint assignments_v5_version_ck check (eval_version >= 1);
+alter table public.ratings_v5
+    drop constraint if exists ratings_v5_eval_version_ck,
+    add constraint ratings_v5_eval_version_ck check (eval_version >= 1);
+create table if not exists public.capacity_alerts_v5 (
+    batch            integer     primary key
+        constraint capacity_alerts_v5_batch_ck check (batch >= 1),
+    held_at_alert    integer     not null,
+    message          text        not null,
+    raised_at        timestamptz not null default now(),
+    acknowledged_at  timestamptz
+);
+
 -- Remove the obsolete overload so old signup requests cannot keep creating
 -- single-role assignments. No CASCADE: unexpected dependencies abort safely.
 drop function if exists public.claim_version_v5(text, text, text, text);
@@ -242,12 +280,23 @@ declare
     details jsonb;
     new_id uuid;
     new_expiry timestamptz;
+    n_loaded integer;
+    n_pairs integer;
+    max_loaded integer;
+    cur_batch integer;
+    held_in_batch integer;
 begin
     -- One claim at a time across the whole study; released at commit.
     perform pg_advisory_xact_lock(hashtext('public.claim_version_v5'));
 
     select * into st from public.study_settings_v5;
-    if (select count(*) from public.version_pairs_v5) <> st.n_versions * st.pairs_per_version then
+    -- Versions are loaded in whole batches (1-5, then 6-10, ...) of
+    -- pairs_per_version Q&As each; routing uses the loaded versions only.
+    select count(distinct vp.eval_version), count(*), coalesce(max(vp.eval_version), 0)
+    into n_loaded, n_pairs, max_loaded
+    from public.version_pairs_v5 vp;
+    if n_loaded = 0 or n_loaded % st.n_versions <> 0 or max_loaded <> n_loaded
+       or n_pairs <> n_loaded * st.pairs_per_version then
         raise exception 'v5 Q&A versions are not loaded yet' using errcode = '55000';
     end if;
     if p_name is null or btrim(p_name) = '' then
@@ -280,7 +329,7 @@ begin
     quota := case when medical then st.base_medical else st.base_non_medical end;
 
     with versions as (
-        select generate_series(1, st.n_versions) as v
+        select generate_series(1, n_loaded) as v
     ), held as (
         select a.eval_version, a.is_medical
         from public.assignments_v5 a
@@ -301,7 +350,7 @@ begin
     else
         how := 'balance';
         with versions as (
-            select generate_series(1, st.n_versions) as v
+            select generate_series(1, n_loaded) as v
         ), held as (
             select a.eval_version
             from public.assignments_v5 a
@@ -322,6 +371,24 @@ begin
         btrim(p_name), roles, details, p_experience,
         medical, chosen, how, new_expiry
     ) returning id into new_id;
+
+    -- Capacity alert: once alert_at_held people hold a slot in the latest loaded
+    -- batch, flag that the next batch's Q&As need preparing. Once per batch.
+    cur_batch := (chosen - 1) / st.n_versions + 1;
+    if cur_batch = n_loaded / st.n_versions then
+        select count(*) into held_in_batch
+        from public.assignments_v5 a
+        where public.assignment_holds_slot_v5(a)
+          and a.eval_version between (cur_batch - 1) * st.n_versions + 1 and cur_batch * st.n_versions;
+        if held_in_batch >= st.alert_at_held then
+            insert into public.capacity_alerts_v5 (batch, held_at_alert, message)
+            values (cur_batch, held_in_batch, format(
+                '%s people hold a slot in versions %s-%s: prepare the Q&As for versions %s-%s',
+                held_in_batch, (cur_batch - 1) * st.n_versions + 1, cur_batch * st.n_versions,
+                cur_batch * st.n_versions + 1, (cur_batch + 1) * st.n_versions))
+            on conflict (batch) do nothing;
+        end if;
+    end if;
 
     return query select new_id, chosen, new_expiry;
 end
@@ -396,10 +463,50 @@ as $$
            count(*) filter (where s.status = 'completed'),
            count(*) filter (where s.status = 'active'),
            count(*) filter (where s.status = 'expired')
-    from generate_series(1, 5) as v(v)
+    from generate_series(1, (select greatest(st.n_versions, coalesce(max(vp.eval_version), 0))
+                             from public.study_settings_v5 st
+                             left join public.version_pairs_v5 vp on true
+                             group by st.n_versions)) as v(v)
     left join public.assignment_status_v5 s on s.eval_version = v.v
     group by v.v
     order by v.v
+$$;
+
+-- Per batch of five versions: slots held against the 25 base slots, and the
+-- capacity alert if it has been raised.
+create or replace function public.batch_status_v5()
+returns table (
+    batch integer,
+    versions text,
+    medical_held bigint,
+    non_medical_held bigint,
+    total_held bigint,
+    base_slots integer,
+    alert_raised_at timestamptz,
+    alert_message text
+)
+language sql
+stable
+security invoker
+set search_path = public, pg_temp
+as $$
+    select b.batch,
+           b.first_version || '-' || b.last_version,
+           b.medical_held, b.non_medical_held, b.total_held,
+           b.n * (st.base_medical + st.base_non_medical),
+           al.raised_at, al.message
+    from (select (v.eval_version - 1) / st.n_versions + 1 as batch,
+                 min(v.eval_version) as first_version, max(v.eval_version) as last_version,
+                 count(*)::integer as n,
+                 sum(v.medical_held)::bigint as medical_held,
+                 sum(v.non_medical_held)::bigint as non_medical_held,
+                 sum(v.total_held)::bigint as total_held
+          from public.version_status_v5() v
+          cross join public.study_settings_v5 st
+          group by 1) b
+    cross join public.study_settings_v5 st
+    left join public.capacity_alerts_v5 al on al.batch = b.batch
+    order by b.batch
 $$;
 
 alter table public.study_settings_v5 enable row level security;
@@ -407,13 +514,15 @@ alter table public.role_categories_v5 enable row level security;
 alter table public.version_pairs_v5 enable row level security;
 alter table public.assignments_v5 enable row level security;
 alter table public.ratings_v5 enable row level security;
+alter table public.capacity_alerts_v5 enable row level security;
 
 revoke all on public.study_settings_v5, public.role_categories_v5,
     public.version_pairs_v5, public.assignments_v5, public.ratings_v5,
-    public.ratings_v5_final, public.assignment_status_v5
+    public.ratings_v5_final, public.assignment_status_v5, public.capacity_alerts_v5
     from anon, authenticated;
 revoke all on function public.claim_version_v5(text, text[], jsonb, text),
     public.version_status_v5(),
+    public.batch_status_v5(),
     public.assignment_holds_slot_v5(public.assignments_v5),
     public.ratings_v5_before_insert(),
     public.ratings_v5_after_insert(),

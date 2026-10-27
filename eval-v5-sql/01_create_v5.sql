@@ -1,7 +1,7 @@
 -- One-time, non-destructive setup for the MedicalQA human evaluation v5 site.
 --
--- v5 hands each annotator one of five fixed versions of 20 Q&As. Which version
--- is decided here, in the database, by claim_version_v5(): the browser cannot
+-- v5 hands each annotator one fixed version of 20 Q&As. Versions are loaded in
+-- batches of five (1-5 first, then 6-10, ...). Which version is decided here, in the database, by claim_version_v5(): the browser cannot
 -- see how many people already hold each version, and two people arriving at the
 -- same moment must not both take the last slot.
 --
@@ -10,20 +10,26 @@
 -- medical student), so a nurse who is also a family caregiver is medical. Each
 -- ticked role may carry an optional description (annotator_role_details).
 --
--- Routing rule (one call at a time, under a transaction advisory lock):
+-- Routing rule (one call at a time, under a transaction advisory lock), over
+-- the loaded versions only:
 --   1. Base fill. A medical annotator goes to the lowest-numbered version with
---      fewer than 4 medical annotators; a non-medical one to the lowest-numbered
---      version with fewer than 2 non-medical annotators.
---   2. Once every version has its base slots for that category, anyone goes to
---      the version with the fewest annotators in total, lowest number on a tie:
---      6-6-6-6-6 -> 7-6-6-6-6 -> 7-7-6-6-6 ...
+--      fewer than 3 medical annotators; a non-medical one to the lowest-numbered
+--      version with fewer than 2 non-medical annotators. A batch of five versions
+--      therefore takes 25 people: 15 medical and 10 non-medical.
+--   2. Once every loaded version has its base slots for that category, the
+--      annotator is an extra rater in the version with the fewest annotators in
+--      total, lowest number on a tie: 5-5-5-5-5 -> 6-5-5-5-5 -> 6-6-5-5-5 ...
+--      Loading the next batch opens new base slots, which then come first.
+-- Capacity alert: once 15 people hold a slot in the latest loaded batch, a row
+-- is added to capacity_alerts_v5 so the team prepares the next batch's Q&As.
 -- An assignment holds its slot while it is completed or still inside its
 -- 48-hour lease. A lease that runs out unfinished releases the slot; ratings sent
 -- for it afterwards are still stored and marked late.
 --
 -- This script creates the v5 objects only and never drops anything. If any of
 -- them already exists, the transaction stops so a rerun cannot erase data. The
--- 100 Q&As are loaded separately by 04_load_version_pairs_v5.sql.
+-- Q&As are loaded separately: 04_load_version_pairs_v5.sql for versions 1-5,
+-- then one 04_load_version_pairs_v5_batch<N>.sql per later batch.
 
 begin;
 
@@ -35,7 +41,8 @@ begin
        or to_regclass('public.assignments_v5') is not null
        or to_regclass('public.ratings_v5') is not null
        or to_regclass('public.ratings_v5_final') is not null
-       or to_regclass('public.assignment_status_v5') is not null then
+       or to_regclass('public.assignment_status_v5') is not null
+       or to_regclass('public.capacity_alerts_v5') is not null then
         raise exception
             'a v5 evaluation object already exists; setup aborted without changes';
     end if;
@@ -46,16 +53,20 @@ $$;
 create table public.study_settings_v5 (
     id                 boolean     primary key default true
         constraint study_settings_v5_single_row_ck check (id),
+    -- Versions per batch: versions are loaded and alerted on five at a time.
     n_versions         integer     not null default 5
         constraint study_settings_v5_versions_ck check (n_versions = 5),
     pairs_per_version  integer     not null default 20
         constraint study_settings_v5_pairs_ck check (pairs_per_version > 0),
-    base_medical       integer     not null default 4
+    base_medical       integer     not null default 3
         constraint study_settings_v5_base_medical_ck check (base_medical >= 0),
     base_non_medical   integer     not null default 2
         constraint study_settings_v5_base_non_medical_ck check (base_non_medical >= 0),
     lease              interval    not null default interval '48 hours'
-        constraint study_settings_v5_lease_ck check (lease > interval '0')
+        constraint study_settings_v5_lease_ck check (lease > interval '0'),
+    -- People holding a slot in the latest batch that raise the capacity alert.
+    alert_at_held      integer     not null default 15
+        constraint study_settings_v5_alert_ck check (alert_at_held > 0)
 );
 insert into public.study_settings_v5 default values;
 
@@ -90,10 +101,11 @@ as $$
        )
 $$;
 
--- The 20 Q&As of each version. Filled once by script 04 before launch.
+-- The 20 Q&As of each version, loaded a batch of five versions at a time by
+-- the 04 scripts. Loaded versions are never changed.
 create table public.version_pairs_v5 (
     eval_version integer not null
-        constraint version_pairs_v5_version_ck check (eval_version between 1 and 5),
+        constraint version_pairs_v5_version_ck check (eval_version >= 1),
     position     integer not null
         constraint version_pairs_v5_position_ck check (position between 1 and 20),
     qa_uid       text    not null unique
@@ -128,9 +140,9 @@ create table public.assignments_v5 (
     -- mapping never silently moves people who were already routed.
     is_medical                boolean     not null,
     eval_version              integer     not null
-        constraint assignments_v5_version_ck check (eval_version between 1 and 5),
-    -- 'base' = took one of the 4 medical / 2 non-medical slots, 'balance' = added
-    -- by the fewest-in-total rule after the base slots were full.
+        constraint assignments_v5_version_ck check (eval_version >= 1),
+    -- 'base' = took one of the 3 medical / 2 non-medical slots, 'balance' = an
+    -- extra rater, added by the fewest-in-total rule after the base slots were full.
     routed_by                 text        not null
         constraint assignments_v5_routed_by_ck check (routed_by in ('base', 'balance')),
     claimed_at                timestamptz not null default now(),
@@ -144,6 +156,19 @@ create table public.assignments_v5 (
 create index assignments_v5_version_idx
     on public.assignments_v5 (eval_version, is_medical);
 
+-- A flag for the research team, raised by claim_version_v5 (once per batch)
+-- when study_settings_v5.alert_at_held people hold a slot in the latest loaded
+-- batch: time to prepare the next batch's Q&As. Check it in the Table Editor or
+-- with batch_status_v5(); set acknowledged_at once someone is on it.
+create table public.capacity_alerts_v5 (
+    batch            integer     primary key
+        constraint capacity_alerts_v5_batch_ck check (batch >= 1),
+    held_at_alert    integer     not null,
+    message          text        not null,
+    raised_at        timestamptz not null default now(),
+    acknowledged_at  timestamptz
+);
+
 create table public.ratings_v5 (
     id              bigserial primary key,
     -- The assignment a rating belongs to. Version and lateness are filled in by
@@ -151,7 +176,7 @@ create table public.ratings_v5 (
     assignment_id   uuid        not null
         references public.assignments_v5 (id),
     eval_version    integer     not null
-        constraint ratings_v5_eval_version_ck check (eval_version between 1 and 5),
+        constraint ratings_v5_eval_version_ck check (eval_version >= 1),
     late            boolean     not null default false,
     study_version   text        not null default 'v5'
         constraint ratings_v5_study_version_ck check (study_version = 'v5'),
@@ -400,12 +425,23 @@ declare
     details jsonb;
     new_id uuid;
     new_expiry timestamptz;
+    n_loaded integer;
+    n_pairs integer;
+    max_loaded integer;
+    cur_batch integer;
+    held_in_batch integer;
 begin
     -- One claim at a time across the whole study; released at commit.
     perform pg_advisory_xact_lock(hashtext('public.claim_version_v5'));
 
     select * into st from public.study_settings_v5;
-    if (select count(*) from public.version_pairs_v5) <> st.n_versions * st.pairs_per_version then
+    -- Versions are loaded in whole batches (1-5, then 6-10, ...) of
+    -- pairs_per_version Q&As each; routing uses the loaded versions only.
+    select count(distinct vp.eval_version), count(*), coalesce(max(vp.eval_version), 0)
+    into n_loaded, n_pairs, max_loaded
+    from public.version_pairs_v5 vp;
+    if n_loaded = 0 or n_loaded % st.n_versions <> 0 or max_loaded <> n_loaded
+       or n_pairs <> n_loaded * st.pairs_per_version then
         raise exception 'v5 Q&A versions are not loaded yet' using errcode = '55000';
     end if;
     if p_name is null or btrim(p_name) = '' then
@@ -438,7 +474,7 @@ begin
     quota := case when medical then st.base_medical else st.base_non_medical end;
 
     with versions as (
-        select generate_series(1, st.n_versions) as v
+        select generate_series(1, n_loaded) as v
     ), held as (
         select a.eval_version, a.is_medical
         from public.assignments_v5 a
@@ -459,7 +495,7 @@ begin
     else
         how := 'balance';
         with versions as (
-            select generate_series(1, st.n_versions) as v
+            select generate_series(1, n_loaded) as v
         ), held as (
             select a.eval_version
             from public.assignments_v5 a
@@ -480,6 +516,24 @@ begin
         btrim(p_name), roles, details, p_experience,
         medical, chosen, how, new_expiry
     ) returning id into new_id;
+
+    -- Capacity alert: once alert_at_held people hold a slot in the latest loaded
+    -- batch, flag that the next batch's Q&As need preparing. Once per batch.
+    cur_batch := (chosen - 1) / st.n_versions + 1;
+    if cur_batch = n_loaded / st.n_versions then
+        select count(*) into held_in_batch
+        from public.assignments_v5 a
+        where public.assignment_holds_slot_v5(a)
+          and a.eval_version between (cur_batch - 1) * st.n_versions + 1 and cur_batch * st.n_versions;
+        if held_in_batch >= st.alert_at_held then
+            insert into public.capacity_alerts_v5 (batch, held_at_alert, message)
+            values (cur_batch, held_in_batch, format(
+                '%s people hold a slot in versions %s-%s: prepare the Q&As for versions %s-%s',
+                held_in_batch, (cur_batch - 1) * st.n_versions + 1, cur_batch * st.n_versions,
+                cur_batch * st.n_versions + 1, (cur_batch + 1) * st.n_versions))
+            on conflict (batch) do nothing;
+        end if;
+    end if;
 
     return query select new_id, chosen, new_expiry;
 end
@@ -522,10 +576,50 @@ as $$
            count(*) filter (where s.status = 'completed'),
            count(*) filter (where s.status = 'active'),
            count(*) filter (where s.status = 'expired')
-    from generate_series(1, 5) as v(v)
+    from generate_series(1, (select greatest(st.n_versions, coalesce(max(vp.eval_version), 0))
+                             from public.study_settings_v5 st
+                             left join public.version_pairs_v5 vp on true
+                             group by st.n_versions)) as v(v)
     left join public.assignment_status_v5 s on s.eval_version = v.v
     group by v.v
     order by v.v
+$$;
+
+-- Per batch of five versions: slots held against the 25 base slots, and the
+-- capacity alert if it has been raised.
+create function public.batch_status_v5()
+returns table (
+    batch integer,
+    versions text,
+    medical_held bigint,
+    non_medical_held bigint,
+    total_held bigint,
+    base_slots integer,
+    alert_raised_at timestamptz,
+    alert_message text
+)
+language sql
+stable
+security invoker
+set search_path = public, pg_temp
+as $$
+    select b.batch,
+           b.first_version || '-' || b.last_version,
+           b.medical_held, b.non_medical_held, b.total_held,
+           b.n * (st.base_medical + st.base_non_medical),
+           al.raised_at, al.message
+    from (select (v.eval_version - 1) / st.n_versions + 1 as batch,
+                 min(v.eval_version) as first_version, max(v.eval_version) as last_version,
+                 count(*)::integer as n,
+                 sum(v.medical_held)::bigint as medical_held,
+                 sum(v.non_medical_held)::bigint as non_medical_held,
+                 sum(v.total_held)::bigint as total_held
+          from public.version_status_v5() v
+          cross join public.study_settings_v5 st
+          group by 1) b
+    cross join public.study_settings_v5 st
+    left join public.capacity_alerts_v5 al on al.batch = b.batch
+    order by b.batch
 $$;
 
 -- Re-rating a Q&A appends another raw row. This view returns the newest row for
@@ -544,13 +638,15 @@ alter table public.role_categories_v5 enable row level security;
 alter table public.version_pairs_v5 enable row level security;
 alter table public.assignments_v5 enable row level security;
 alter table public.ratings_v5 enable row level security;
+alter table public.capacity_alerts_v5 enable row level security;
 
 revoke all on public.study_settings_v5, public.role_categories_v5,
     public.version_pairs_v5, public.assignments_v5, public.ratings_v5,
-    public.ratings_v5_final, public.assignment_status_v5
+    public.ratings_v5_final, public.assignment_status_v5, public.capacity_alerts_v5
     from anon, authenticated;
 revoke all on function public.claim_version_v5(text, text[], jsonb, text),
     public.version_status_v5(),
+    public.batch_status_v5(),
     public.assignment_holds_slot_v5(public.assignments_v5),
     public.ratings_v5_before_insert(),
     public.ratings_v5_after_insert(),

@@ -561,7 +561,7 @@ const pairSort = (a, b) =>
    =========================================================================== */
 
 let DATA = [];            // the 100 Q&As from qa_data.json
-let VERSIONS = {};        // { "1": [20 uids], ... } from versions.json
+let VERSIONS = {};        // { "1": [20 uids], ... } from versions.json, five per batch
 let PROVISIONAL = false;  // versions.json is a placeholder selection
 let VIDEOS = {};          // { dataset: { video: { url, language } } } from the dataset CSVs
 let S = null;             // the live session (see makeSession)
@@ -687,7 +687,7 @@ async function claimVersion(name, profile) {
   if (!backendOn) {
     // Local-only testing: no quotas without the database. ?version=N picks a
     // version, otherwise version 1.
-    const v = Math.min(5, Math.max(1, Number(params.get("version")) || 1));
+    const v = Math.min(Object.keys(VERSIONS).length, Math.max(1, Number(params.get("version")) || 1));
     return { assignment_id: "local-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 8),
              eval_version: v, expires_at: null };
   }
@@ -1420,7 +1420,7 @@ function renderRate() {
     <aside class="card qa-reference" id="qa-reference" aria-label="Current question and answer">
       <h2>Question &amp; answer</h2>
       <div class="qa-meta">
-        <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>${S.opts.blind ? "hidden" : p.approach}</code></span>
+        <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>hidden</code></span>
       </div>
       <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
       <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
@@ -1903,16 +1903,6 @@ function renderDone() {
   const done = ratedCount();
   const complete = done === S.uids.length;
 
-  // Per-approach counts over what this annotator actually rated. Shown after the
-  // fact only — during rating the approach stays hidden.
-  const byApproach = {};
-  for (const uid of S.uids) {
-    if (!isRated(uid)) continue;
-    const p = pairOf(uid);
-    const b = byApproach[p.approach] || (byApproach[p.approach] = { n: 0 });
-    b.n += 1;
-  }
-
   app.innerHTML = `
     <div class="banner ${complete ? "banner-ok" : "banner-info"}">
       ${complete
@@ -1938,20 +1928,7 @@ function renderDone() {
         <span class="spacer"></span>
         <button class="btn-ghost" id="restart">Start a different session</button>
       </div>
-    </div>
-
-    ${Object.keys(byApproach).length ? `
-    <div class="card">
-      <h2>Rated pairs by system</h2>
-      <p class="muted">Shown now that rating is finished. Score mapping happens later during analysis.</p>
-      <div style="overflow-x:auto;">
-      <table>
-        <tr><th>System</th><th class="num">Rated pairs</th></tr>
-        ${Object.entries(byApproach).sort().map(([a, b]) =>
-          `<tr><td><b>${a}</b></td><td class="num">${b.n}</td></tr>`).join("")}
-      </table>
-      </div>
-    </div>` : ""}`;
+    </div>`;
 
   document.getElementById("dl-csv").addEventListener("click", exportCsv);
   document.getElementById("dl-json").addEventListener("click", exportJson);
@@ -1990,7 +1967,10 @@ Promise.all([loadJson("qa_data.json"), loadJson("versions.json")])
     if (PROVISIONAL) console.warn("v5: PROVISIONAL placeholder Q&A selection — testing only.");
     const known = new Set(DATA.map((p) => p.uid));
     const missing = Object.values(VERSIONS).flat().filter((u) => !known.has(u));
-    if (Object.keys(VERSIONS).length !== 5 || missing.length) {
+    // Versions come in batches of five (1-5, then 6-10, ...), numbered from 1.
+    const numbers = Object.keys(VERSIONS).map(Number).sort((a, b) => a - b);
+    const wholeBatches = numbers.length > 0 && numbers.length % 5 === 0 && numbers.every((n, i) => n === i + 1);
+    if (!wholeBatches || missing.length) {
       app.innerHTML = '<div class="card"><h2>The Q&A versions are incomplete</h2>' +
         '<p class="muted">Rebuild them with <code>python eval-v5-netlify/build_versions.py</code>.</p></div>';
       return;

@@ -8,10 +8,12 @@ select
     to_regclass('public.assignments_v5')       as assignments,
     to_regclass('public.ratings_v5')           as raw_ratings,
     to_regclass('public.ratings_v5_final')     as final_view,
-    to_regclass('public.assignment_status_v5') as assignment_status;
+    to_regclass('public.assignment_status_v5') as assignment_status,
+    to_regclass('public.capacity_alerts_v5')   as capacity_alerts;
 
--- Expected: 5 versions, 20 Q&As each, 4 medical and 2 non-medical base slots,
--- and a 48-hour lease.
+-- Expected: batches of 5 versions, 20 Q&As each, 3 medical and 2 non-medical
+-- base slots per version, a 48-hour lease, and the alert at 15 people.
+-- (An upgraded database where someone changed the quotas keeps its own values.)
 select * from public.study_settings_v5;
 
 -- Expected: healthcare and student are medical; family and other are not.
@@ -49,7 +51,8 @@ select
              and public.role_details_ok_v5(annotator_role_details, annotator_groups) is not true)))
         as invalid_rating_profiles;
 
--- Expected: five rows of 20, 100 distinct uids, Qwen3-14B approaches only.
+-- Expected: whole batches (5, 10, ... rows) of 20, distinct uids, Qwen3-14B
+-- approaches only (v1/v2/v3 and the flawed bad-v3).
 select eval_version, count(*) as qnas, count(distinct (dataset, video)) as videos
 from public.version_pairs_v5
 group by eval_version
@@ -85,7 +88,14 @@ select
     has_function_privilege('anon', 'public.claim_version_v5(text,text[],jsonb,text)', 'execute')
         as anon_can_claim,
     has_function_privilege('anon', 'public.version_status_v5()', 'execute')
-        as anon_can_read_status;
+        as anon_can_read_status,
+    has_function_privilege('anon', 'public.batch_status_v5()', 'execute')
+        as anon_can_read_batch_status,
+    has_table_privilege('anon', 'public.capacity_alerts_v5', 'select')
+        as anon_can_read_alerts;
+
+-- Slots held per batch and any capacity alert raised so far.
+select * from public.batch_status_v5();
 
 -- Separation from earlier studies. v5 must neither depend on nor modify any
 -- v1-v4 object (ratings, ratings_v3, ratings_v4, ratings_v4_final, ...).
