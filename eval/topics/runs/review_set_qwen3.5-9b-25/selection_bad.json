@@ -1,0 +1,81 @@
+{
+  "seed": 48,
+  "source": "unused judged candidates of runs/review_set_qwen3.5-9b",
+  "groups": [
+    [
+      {
+        "pair_id": "Master_v1_SingleAgent-qwen3.5-9b-bad-v3_q12",
+        "topic": "F06",
+        "subtopic": "S20",
+        "subtopic_votes": 9,
+        "intended_failure": "care_safety",
+        "round": 2,
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v30_SingleAgent-qwen3.5-9b-bad-v3_q2",
+        "topic": "F06",
+        "subtopic": "S22",
+        "subtopic_votes": 7,
+        "intended_failure": "clarity",
+        "round": 2,
+        "flagged_runs": 0,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "Teepa_v3_SingleAgent-qwen3.5-9b-bad-v3_q5",
+        "topic": "F07",
+        "subtopic": "S24",
+        "subtopic_votes": 7,
+        "intended_failure": "trustworthiness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v1_SingleAgent-qwen3.5-9b-bad-v3_q3",
+        "topic": "F03",
+        "subtopic": "S15",
+        "subtopic_votes": 5,
+        "intended_failure": "usefulness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v22_SingleAgent-qwen3.5-9b-bad-v3_q1",
+        "topic": "F08",
+        "subtopic": "S27",
+        "subtopic_votes": 8,
+        "intended_failure": "trustworthiness",
+        "flagged_runs": 6,
+        "judged_runs": 6,
+        "any_failure_runs": 6,
+        "kind": "bad",
+        "class": "bad"
+      }
+    ]
+  ],
+  "unconfirmed_ok": {
+    "clarity": "Qwen3.5-9B does not produce clarity failures: over 40 clarity candidates in two rounds, gpt-oss-120b and Gemma 4 flagged clarity in 7 of 240 runs (trustworthiness 208, usefulness 206); its 'unclear' pairs come out clear but fabricated. The best candidate per slot is kept for the human raters, and the failure is reported (decided 2026-10-27)."
+  }
+}

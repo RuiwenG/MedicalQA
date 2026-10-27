@@ -7,7 +7,7 @@ labelling models chose them, and every judge's ratings
 their intended failure and how many judge runs flagged it; until they are chosen,
 each group shows a placeholder.
 
-Usage: python eval/topics/build_review_pdf.py [--generator qwen3.5-9b]
+Usage: python eval/topics/build_review_pdf.py [--generator qwen3.5-9b] [--size 25]
        (writes review_set.pdf in that generator's review-set folder, runs/review_set for Qwen3-14B)
 """
 import argparse
@@ -55,8 +55,24 @@ def video_meta():
             for k, v in titles.items()}
 
 
+def widened(approach, cache={}):
+    """pair_id -> widened span from eval/widen_timestamps.py, or {} when that approach has none."""
+    if approach not in cache:
+        f = REPO / "eval" / "widened_timestamps" / f"{approach}.json"
+        cache[approach] = json.loads(f.read_text())["spans"] if f.exists() else {}
+    return cache[approach]
+
+
+def clock(sec):
+    return f"{sec // 60}:{sec % 60:02d}"
+
+
 def timestamps(pair_id):
+    """The source clip as shown and the second the video link starts at: the widened span when there is one."""
     ds, v, approach, q = re.match(r"(\w+?)_v(\d+)_(.+)_q(\d+)$", pair_id).groups()
+    span = widened(approach).get(pair_id)
+    if span:
+        return f"{clock(span['t'])}-{clock(span['te'])}", span["t"]
     rows = json.loads((REPO / ds / v / approach / "QA results" / "finalQA.json").read_text())
     r = rows[int(q) - 1]
     stamp = r.get("timestamp") or (f"{r['time_start_sec'] // 60}:{r['time_start_sec'] % 60:02d}" if r.get("time_start_sec") is not None else "no timestamp")
@@ -151,7 +167,32 @@ def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2
 
 def intro_text():
     """The opening paragraphs, which describe how this generator's set was built."""
-    if S.GENERATOR == "qwen3-14b":
+    if S.SIZE == "25":
+        if S.GENERATOR != "qwen3.5-9b":
+            raise SystemExit("the 25-pair introduction is written for the Qwen3.5-9B set")
+        return [
+            "<b>What each group holds.</b> 3 highly rated and 1 low rated normal pair, and 1 deliberately bad pair. "
+            "The five bad pairs cover each intended failure once (trustworthiness, clarity, usefulness, care safety) "
+            "plus a second trustworthiness, in random group order.",
+            f"<b>How the normal pairs were chosen.</b> At random (seed 42), by the same rules as the 100-pair "
+            f"{S.G['name']} review set and with none of its pairs, at most one pair per video in a group. Four slots "
+            "cannot hold every topic, so every topic with pairs left appears in the set and none twice in a group "
+            "(animal fluency's three highly rated pairs are all in the 100-pair set, and Down syndrome has none). "
+            "Highly rated: every criterion passed and \"recommend as is\" in all 6 runs of gpt-oss-120b and Gemma 4 "
+            "(3 runs each). Low rated: a criterion failed and not \"recommend as is\" in at least 4 of those 6 runs.",
+            *intro_text_for("qwen3.5-9b")[2:5],
+            "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3.5-9B asked to fail "
+            "one criterion per pair), from the candidates judged for the 100-pair set but not kept there: for each, "
+            "the one gpt-oss-120b and Gemma 4 (3 runs each) flagged most for its intended failure. Each shows how "
+            "many of its 6 runs flagged that failure.",
+            intro_text_for("qwen3.5-9b")[6].replace("The clarity pair in each group is", "The clarity pair here is"),
+            *intro_text_for("qwen3.5-9b")[7:],
+        ]
+    return intro_text_for(S.GENERATOR)
+
+
+def intro_text_for(generator):
+    if generator == "qwen3-14b":
         return [
             "<b>What each group holds.</b> 16 normal pairs (12 highly rated and 4 low rated by the LLM judges) and 4 "
             "deliberately bad pairs, one for each intended failure: trustworthiness, clarity, usefulness and care safety.",
@@ -182,6 +223,7 @@ def intro_text():
         "labels its own pairs.",
         "<b>Ratings.</b> Criteria passed out of the runs each judge made (Safe = no care-safety problem found). A number "
         "in red means at least one run failed it. Judges: gpt-oss-120b, Gemma 4 31B and Qwen2.5-VL-72B, 3 runs each.",
+        TIMESTAMPS_TEXT,
         "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3.5-9B asked to fail one "
         "criterion per pair). The generator often made a different failure from the one asked for, so for each slot "
         "2 candidates with a clear topic were judged by gpt-oss-120b and Gemma 4 (3 runs each), 6 more were added to "
@@ -204,13 +246,20 @@ TOPICS_TEXT = (
     "Engagement and Activities (F07, F09, F11); the dignity subtopic (S14) moves from F03 to T3. <i>Old topic</i> "
     "is the 12-topic codebook v1 the pairs were selected with, so the groups are balanced over the old topics, "
     "not the new ones. A tie lists every topic tied for most votes.")
+TIMESTAMPS_TEXT = (
+    "<b>Timestamps.</b> The generator often cited only the line that prompted the question, so each normal pair's "
+    "clip is widened over the related transcript around it (eval/widen_timestamps.py: neighbouring lines are added "
+    "while they stay similar to the pair, up to 120 s; a clip is never moved or shortened). The video link starts "
+    "at the widened start. Bad pairs show the timestamp the generator gave.")
 REVIEWERS_TEXT = "<b>For reviewers.</b> Mark each pair keep, edit or replace, and add a note on anything wrong with it."
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--generator", choices=list(S.GENERATORS), default=S.GENERATOR)
-    S.use(ap.parse_args().generator)
+    ap.add_argument("--size", choices=list(S.SIZES), default="100")
+    args = ap.parse_args()
+    S.use(args.generator, args.size)
     OUT = S.OUT
     sel = json.loads((OUT / "selection_normal.json").read_text())
     bad_file = OUT / "selection_bad.json"
@@ -253,7 +302,8 @@ def main():
                     new_votes[r["pair_id"]].append(sub_to_new[r["label"]])
 
     story = [Paragraph("MedicalQA human review set", H1),
-             Paragraph(f"100 {S.G['name']} v3 QA pairs in 5 groups of 20 · draft of {date.today():%d %B %Y}", SMALL),
+             Paragraph(f"{S.GROUPS * (S.HIGH + S.LOW + S.BAD)} {S.G['name']} v3 QA pairs in {S.GROUPS} groups of "
+                       f"{S.HIGH + S.LOW + S.BAD} · draft of {date.today():%d %B %Y}", SMALL),
              Spacer(1, 10)]
     intro = intro_text()
     story += [Paragraph(p, BODY) for p in intro]
@@ -264,7 +314,7 @@ def main():
         story.append(Paragraph(f"Group {g}", H2))
         story.append(Paragraph(f"{sum(c['class'] == 'high' for c in group)} highly rated and "
                                f"{sum(c['class'] == 'low' for c in group)} low rated normal pairs"
-                               + ("; then 4 deliberately bad pairs" if bad else
+                               + (f"; then {S.BAD} deliberately bad pair{'s' * (S.BAD > 1)}" if bad else
                                   "; the 4 bad pairs are still being generated"), SMALL))
         members = [c["pair_id"] for c in group] + ([c["pair_id"] for c in bad[g - 1]] if bad else [])
         per_new = Counter(new_topic_text(new_votes[p], names2).split(" ")[0] for p in members)

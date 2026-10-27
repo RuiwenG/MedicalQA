@@ -11,7 +11,9 @@ and, for each group: 12 high, 4 low and 4 bad pairs, no video twice, no near-dup
 Before the bad pairs are chosen (no selection_bad.json), only the normal pairs are checked. A bad pair whose
 intended failure the generator config accepts unconfirmed (unconfirmed_ok) is listed as accepted, not as a problem.
 
-Usage: python eval/topics/audit_review_set.py [--generator qwen3.5-9b]   (exit code 1 if anything is wrong)
+A smaller set (--size 25) is also checked for pairs already in the 100-pair set.
+
+Usage: python eval/topics/audit_review_set.py [--generator qwen3.5-9b] [--size 25]   (exit code 1 if anything is wrong)
 """
 import argparse
 import itertools
@@ -34,7 +36,9 @@ def words(text):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--generator", choices=list(S.GENERATORS), default=S.GENERATOR)
-    S.use(ap.parse_args().generator)
+    ap.add_argument("--size", choices=list(S.SIZES), default="100")
+    args = ap.parse_args()
+    S.use(args.generator, args.size)
     normal = json.loads((S.OUT / "selection_normal.json").read_text())["groups"]
     bad_file = S.OUT / "selection_bad.json"
     bad = json.loads(bad_file.read_text())["groups"] if bad_file.exists() else [[] for _ in normal]
@@ -60,6 +64,8 @@ def main():
                 problems.append(f"group {gi}: near-duplicate questions {a['pair_id']} / {b['pair_id']}")
         for c in group:
             p, d = c["pair_id"], pairs[c["pair_id"]]
+            if p in S.EXCLUDE:
+                problems.append(f"{p}: already in the 100-pair set")
             judges = ("go", "gm", "qw") + (("ds",) if files["ds"] and c["class"] != "bad"
                                            and d["dataset"] in ("Master", "Teepa") else ())
             for k in judges:

@@ -1,0 +1,151 @@
+{
+  "generator": "qwen3.5-9b",
+  "size": "25",
+  "seed": 42,
+  "rule": "--size 25 builds a smaller set after the 100-pair one, in runs/<that set's folder>-25:\n5 groups of 5 (3 highly rated, 1 low rated, 1 bad), none of them in the 100-pair set.\nFour normal slots cannot hold every topic, so each topic with pairs goes in at least\none group and the rest go to roomy topics, never twice in a group. The bad pairs are\nthe 100-pair set's judged candidates it did not keep (bad-reuse), so nothing new is\njudged: one per intended failure plus a second trustworthiness, in random group order.\n  select_review_set.py --size 25 [--stage normal | bad-reuse | swap-normal]   (in that order)",
+  "groups": [
+    [
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3.5-9b-v3_q12",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06",
+        "replaced": "Master_v3_SingleAgent-qwen3.5-9b-v3_q8",
+        "replaced_because": "topic chosen by only 4 of 9 models"
+      },
+      {
+        "pair_id": "ODJ_v11_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "ODJ_v10_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v30_SingleAgent-qwen3.5-9b-v3_q28",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "SUP_v4_SingleAgent-qwen3.5-9b-v3_q31",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "GEMS_v2_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q42",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q6",
+        "replaced_because": "cited window 0.51; a better match (0.70) at 52:50"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01",
+        "replaced": "SUP_v30_SingleAgent-qwen3.5-9b-v3_q19",
+        "replaced_because": "cited window similarity 0.32 (floor 0.35)"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v11_SingleAgent-qwen3.5-9b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "SUP_v21_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q25",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "FTD_v1_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "GEMS_v2_SingleAgent-qwen3.5-9b-v3_q11",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04",
+        "replaced": "SUP_v14_SingleAgent-qwen3.5-9b-v3_q18",
+        "replaced_because": "cited window 0.46; a better match (0.66) at 15:40"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v18_SingleAgent-qwen3.5-9b-v3_q34",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03",
+        "replaced": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q18",
+        "replaced_because": "cited window 0.49; a better match (0.66) at 35:20"
+      },
+      {
+        "pair_id": "Teepa_v15_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04",
+        "replaced": "Master_v4_SingleAgent-qwen3.5-9b-v3_q6",
+        "replaced_because": "cited window 0.42; a better match (0.61) at 2:30"
+      },
+      {
+        "pair_id": "Teepa_v1_SingleAgent-qwen3.5-9b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "FTD_v1_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      }
+    ]
+  ],
+  "timestamp_check": "every pair passes eval/topics/timestamp_check.py"
+}

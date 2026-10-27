@@ -24,6 +24,14 @@ topic model's encoder and cutoff (all-mpnet-base-v2, cosine >= 0.95), bad pairs 
 pairs_qwen3.5-9b-bad-v3.jsonl labelled into runs/llm_labels_qwen35-9b-bad, and every
 output in runs/review_set_qwen3.5-9b. Pass the same --generator to every stage.
 
+--size 25 builds a smaller set after the 100-pair one, in runs/<that set's folder>-25:
+5 groups of 5 (3 highly rated, 1 low rated, 1 bad), none of them in the 100-pair set.
+Four normal slots cannot hold every topic, so each topic with pairs goes in at least
+one group and the rest go to roomy topics, never twice in a group. The bad pairs are
+the 100-pair set's judged candidates it did not keep (bad-reuse), so nothing new is
+judged: one per intended failure plus a second trustworthiness, in random group order.
+  select_review_set.py --size 25 [--stage normal | bad-reuse | swap-normal]   (in that order)
+
 Usage, in order:
   python eval/topics/select_review_set.py                         normal pairs -> runs/review_set/selection_normal.json
   python eval/topics/select_review_set.py --stage bad-candidates  2 bad candidates per slot, and the judge input
@@ -49,6 +57,9 @@ from exclusions import is_excluded  # noqa: E402
 
 SEED = 42
 GROUPS, BAD, HIGH, LOW = 5, 4, 12, 4
+SIZES = {"100": (5, 4, 12, 4), "25": (5, 1, 3, 1)}  # GROUPS, BAD, HIGH, LOW
+SIZE = "100"
+EXCLUDE = set()  # pairs a smaller set must not reuse: everything in the 100-pair set
 CRITERIA = ["Trustworthiness", "Clarity", "Usefulness", "Care Safety", "Standalone"]
 FAILURES = ["trustworthiness", "clarity", "usefulness", "care_safety"]
 JUDGES = {"ds": ("DeepSeek V4 Pro", "deepseek-v4-pro"), "go": ("gpt-oss-120b", "openai-gpt-oss-120b"),
@@ -75,12 +86,16 @@ OUT = HERE / "runs" / G["out"]
 DEDUP = 0.95  # bertopic_run.py's default cutoff
 
 
-def use(generator):
-    """Point the stages at one generator's files."""
-    global GENERATOR, G, OUT, BAD_LABELS, BAD_PAIRS
-    GENERATOR, G = generator, GENERATORS[generator]
-    OUT = HERE / "runs" / G["out"]
+def use(generator, size="100"):
+    """Point the stages at one generator's files and one set size."""
+    global GENERATOR, G, OUT, BAD_LABELS, BAD_PAIRS, SIZE, GROUPS, BAD, HIGH, LOW, EXCLUDE
+    GENERATOR, G, SIZE = generator, GENERATORS[generator], size
+    GROUPS, BAD, HIGH, LOW = SIZES[size]
+    OUT = HERE / "runs" / (G["out"] + ("" if size == "100" else f"-{size}"))
     BAD_LABELS, BAD_PAIRS = HERE / "runs" / G["bad_labels"], HERE / G["bad_pairs"]
+    EXCLUDE = set() if size == "100" else {
+        c["pair_id"] for f in ("selection_normal.json", "selection_bad.json")
+        for g in json.loads((HERE / "runs" / G["out"] / f).read_text())["groups"] for c in g}
 
 
 def load_pairs():
@@ -101,7 +116,7 @@ def near_duplicates(pairs):
     if G["dup"]:
         return {r["pair_id"]: r["dup_of"] for r in csv.DictReader(
             (HERE / "runs" / G["dup"] / "assignments.csv").open())}
-    cache = OUT / "near_duplicates.csv"
+    cache = HERE / "runs" / G["out"] / "near_duplicates.csv"
     if not cache.exists():
         # bertopic_run.py's rule: question + answer embedded, greedy in file order, an earlier kept pair at >= 0.95.
         import timestamp_check as T
@@ -113,7 +128,7 @@ def near_duplicates(pairs):
             dup[p] = ids[hit] if hit is not None else ""
             if hit is None:
                 keep.append(i)
-        OUT.mkdir(parents=True, exist_ok=True)
+        cache.parent.mkdir(parents=True, exist_ok=True)
         with cache.open("w", newline="") as f:
             w = csv.writer(f)
             w.writerow(["pair_id", "dup_of"])
@@ -177,6 +192,8 @@ def topic_quotas(rng, topics, roomy, supply):
     3 videos): a one- or two-video topic such as Down syndrome cannot fill two slots of a group from
     different videos. A topic with highly rated pairs for fewer groups than GROUPS (supply) sits in
     that many groups, picked at random."""
+    if HIGH + LOW < len([t for t in topics if supply[t]]):
+        return spread_topics(rng, topics, roomy, supply)
     member = {t: range(GROUPS) if supply[t] >= GROUPS else rng.sample(range(GROUPS), supply[t]) for t in topics}
     extras = GROUPS * (HIGH + LOW) - sum(len(m) for m in member.values())
     cap = max(2, -(-extras // len(roomy)))
@@ -194,6 +211,26 @@ def topic_quotas(rng, topics, roomy, supply):
     return plan
 
 
+def spread_topics(rng, topics, roomy, supply):
+    """Per group, when its slots are fewer than the topics: every topic with pairs once over the whole set,
+    the remaining slots to distinct roomy topics, dealt so no group holds a topic twice."""
+    first = [t for t in topics if supply[t]]
+    rng.shuffle(first)
+    second = [t for t in topics if t in roomy]
+    rng.shuffle(second)
+    plan = [[] for _ in range(GROUPS)]
+    for t in (first + second)[:GROUPS * (HIGH + LOW)]:
+        g = min((g for g in range(GROUPS) if t not in plan[g]), key=lambda g: (len(plan[g]), rng.random()))
+        plan[g].append(t)
+    return plan
+
+
+def rule_text():
+    """The docstring paragraph describing this size of set."""
+    paras = __doc__.split("\n\n")
+    return paras[1] if SIZE == "100" else next(p for p in paras if p.startswith("--size 25"))
+
+
 def select_normal():
     rng = random.Random(SEED)
     codebook = json.loads((HERE / "codebook_v1.json").read_text())
@@ -205,7 +242,7 @@ def select_normal():
     ratings = read_ratings(normal_files(), set(pairs))
     pool = defaultdict(list)  # (topic, class) -> pair ids
     for p in pairs:
-        if dup[p] or is_excluded(pairs[p]["dataset"], pairs[p]["video"]):
+        if dup[p] or is_excluded(pairs[p]["dataset"], pairs[p]["video"]) or p in EXCLUDE:
             continue
         cls = rating_class(ratings[p]["go"] + ratings[p]["gm"])
         if cls != "mid":
@@ -244,7 +281,7 @@ def select_normal():
             take(cands[0], t, "high")
         groups.append(chosen)
 
-    selection = {"generator": GENERATOR, "seed": SEED, "rule": __doc__.split("\n\n")[1], "groups": groups}
+    selection = {"generator": GENERATOR, "size": SIZE, "seed": SEED, "rule": rule_text(), "groups": groups}
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "selection_normal.json").write_text(json.dumps(selection, indent=2))
     counts = Counter((c["class"]) for g in groups for c in g)
@@ -378,6 +415,44 @@ def bad_more():
           f"({dict(Counter(c['intended_failure'] for c in added))}) -> {out.relative_to(REPO)}")
 
 
+def bad_reuse():
+    """Smaller set: one bad pair per group from the 100-pair set's judged candidates that it did not keep, so
+    nothing new is judged. Each group's failure comes from the four failures plus a second trustworthiness,
+    shuffled. The pick passes the timestamp check, has all 3 runs of every judge, comes from a video not in
+    the group, and is the one flagged most for its failure (by most runs, except a failure the generator
+    accepts unconfirmed)."""
+    import timestamp_check as T
+    rng = random.Random(SEED + 6)
+    big = HERE / "runs" / G["out"]
+    cand = [c for g in json.loads((big / "bad_candidates.json").read_text())["groups"] for slot in g for c in slot
+            if c["pair_id"] not in EXCLUDE]
+    ratings = read_ratings(judge_files(f"{GENERATOR}-bad-review-run*"), {c["pair_id"] for c in cand})
+    failures = FAILURES + ["trustworthiness"]
+    rng.shuffle(failures)
+    normal = json.loads((OUT / "selection_normal.json").read_text())["groups"]
+    used, groups = set(), []
+    for group, failure in zip(normal, failures):
+        videos = normal_videos(group)
+        opts = []
+        for c in cand:
+            p = c["pair_id"]
+            if (c["intended_failure"] != failure or p in used or normal_videos([c]) & videos
+                    or any(len(ratings[p][k]) != 3 for k in ("go", "gm", "qw")) or not T.check(p)[0]):
+                continue
+            runs = ratings[p]["go"] + ratings[p]["gm"]
+            opts.append({**c, "flagged_runs": sum(not r["criteria"][CRITERION_OF[failure]] for r in runs),
+                         "judged_runs": len(runs), "any_failure_runs": sum(not all(r["criteria"].values()) for r in runs)})
+        best = max(opts, key=lambda c: (c["flagged_runs"], c["any_failure_runs"], rng.random()))
+        if best["flagged_runs"] <= best["judged_runs"] / 2 and failure not in G.get("unconfirmed_ok", {}):
+            raise SystemExit(f"no judged candidate confirms {failure} for group {len(groups) + 1}")
+        used.add(best["pair_id"])
+        groups.append([{**best, "kind": "bad", "class": "bad"}])
+    (OUT / "selection_bad.json").write_text(json.dumps(
+        {"seed": SEED + 6, "source": f"unused judged candidates of runs/{G['out']}", "groups": groups,
+         **({"unconfirmed_ok": G["unconfirmed_ok"]} if "unconfirmed_ok" in G else {})}, indent=2))
+    print("bad pairs:", [(c["intended_failure"], f"{c['flagged_runs']}/{c['judged_runs']}") for g in groups for c in g])
+
+
 def bad_final():
     """Keep, per slot, the candidate the judges flag most for its intended failure."""
     rng = random.Random(SEED + 2)
@@ -438,7 +513,7 @@ def swap_normal():
                 continue
             videos = {video(x["pair_id"]) for x in g if x is not c} | bad_videos[gi]
             def candidates(topic):
-                cands = [p for p in pairs if p not in used and not dup[p] and flat[p][0] == topic
+                cands = [p for p in pairs if p not in used and p not in EXCLUDE and not dup[p] and flat[p][0] == topic
                          and not is_excluded(*video(p)) and video(p) not in videos
                          and rating_class(ratings[p]["go"] + ratings[p]["gm"]) == c["class"]]
                 cands = [p for p in cands if round(flat[p][1] * 9) >= MIN_TOPIC_VOTES]
@@ -451,7 +526,7 @@ def swap_normal():
                 counts = Counter(x["topic"] for gg in sel["groups"] for x in gg)
                 for topic in sorted(counts, key=lambda t: (counts[t], rng.random())):
                     in_group = sum(x["topic"] == topic for x in g if x is not c)
-                    if in_group < 2 and (new := candidates(topic)):
+                    if in_group < (2 if SIZE == "100" else 1) and (new := candidates(topic)):
                         break
             if new is None:
                 raise SystemExit(f"no replacement for {c['pair_id']} ({c['topic']}, {c['class']})")
@@ -466,13 +541,15 @@ def swap_normal():
 def main():
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("--stage", choices=["normal", "bad-candidates", "bad-more", "bad-final", "swap-normal"],
+    ap.add_argument("--stage", choices=["normal", "bad-candidates", "bad-more", "bad-final", "bad-reuse", "swap-normal"],
                     default="normal")
+    ap.add_argument("--size", choices=list(SIZES), default="100")
     ap.add_argument("--generator", choices=list(GENERATORS), default=GENERATOR)
     args = ap.parse_args()
-    use(args.generator)
+    use(args.generator, args.size)
     stage = args.stage
     {"normal": select_normal, "bad-candidates": bad_candidates, "bad-more": bad_more, "bad-final": bad_final,
+     "bad-reuse": bad_reuse,
      "swap-normal": swap_normal}[stage]()
 
 
