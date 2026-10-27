@@ -8,8 +8,12 @@ Checks, for each of the 100 pairs:
   - bad pairs: the judges flagged the intended failure in most runs
 and, for each group: 12 high, 4 low and 4 bad pairs, no video twice, no near-duplicate questions.
 
-Usage: python eval/topics/audit_review_set.py   (exit code 1 if anything is wrong)
+Before the bad pairs are chosen (no selection_bad.json), only the normal pairs are checked. A bad pair whose
+intended failure the generator config accepts unconfirmed (unconfirmed_ok) is listed as accepted, not as a problem.
+
+Usage: python eval/topics/audit_review_set.py [--generator qwen3.5-9b]   (exit code 1 if anything is wrong)
 """
+import argparse
 import itertools
 import json
 import re
@@ -28,22 +32,25 @@ def words(text):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--generator", choices=list(S.GENERATORS), default=S.GENERATOR)
+    S.use(ap.parse_args().generator)
     normal = json.loads((S.OUT / "selection_normal.json").read_text())["groups"]
-    bad = json.loads((S.OUT / "selection_bad.json").read_text())["groups"]
-    pairs = {json.loads(l)["pair_id"]: json.loads(l) for l in (S.HERE / "pairs_qwen3-14b-v3.jsonl").open()}
-    pairs.update({json.loads(l)["pair_id"]: json.loads(l) for l in S.BAD_PAIRS.open()})
-    files = S.judge_files("qwen3-14b-run*")
-    for k in ("go", "gm", "qw"):
-        files[k] += S.judge_files("qwen3-14b-new69-run*")[k]
+    bad_file = S.OUT / "selection_bad.json"
+    bad = json.loads(bad_file.read_text())["groups"] if bad_file.exists() else [[] for _ in normal]
+    pairs = S.load_pairs()
+    if S.BAD_PAIRS.exists():
+        pairs.update({json.loads(l)["pair_id"]: json.loads(l) for l in S.BAD_PAIRS.open()})
+    files = S.normal_files()
     ratings = S.read_ratings(files, {c["pair_id"] for g in normal for c in g})
-    ratings.update(S.read_ratings(S.judge_files("qwen3-14b-bad-review-run*"), {c["pair_id"] for g in bad for c in g}))
+    ratings.update(S.read_ratings(S.judge_files(f"{S.GENERATOR}-bad-review-run*"), {c["pair_id"] for g in bad for c in g}))
     titles = json.loads((S.HERE / "video_titles.json").read_text())
     flat = S.majority("flat2")
-    problems = []
+    problems, accepted = [], []
     for gi, (gn, gb) in enumerate(zip(normal, bad), 1):
         group = gn + gb
         shape = Counter(c["class"] for c in group)
-        if shape != Counter({"high": S.HIGH, "low": S.LOW, "bad": S.BAD}):
+        if shape != Counter({"high": S.HIGH, "low": S.LOW, "bad": S.BAD if bad_file.exists() else 0}):
             problems.append(f"group {gi}: {dict(shape)}")
         if len({(pairs[c['pair_id']]['dataset'], pairs[c['pair_id']]['video']) for c in group}) < len(group):
             problems.append(f"group {gi}: a video appears twice")
@@ -53,7 +60,8 @@ def main():
                 problems.append(f"group {gi}: near-duplicate questions {a['pair_id']} / {b['pair_id']}")
         for c in group:
             p, d = c["pair_id"], pairs[c["pair_id"]]
-            judges = ("go", "gm", "qw") + (("ds",) if c["class"] != "bad" and d["dataset"] in ("Master", "Teepa") else ())
+            judges = ("go", "gm", "qw") + (("ds",) if files["ds"] and c["class"] != "bad"
+                                           and d["dataset"] in ("Master", "Teepa") else ())
             for k in judges:
                 if len(ratings[p].get(k, [])) != 3:
                     problems.append(f"{p}: {S.JUDGES[k][0]} has {len(ratings[p].get(k, []))} of 3 runs")
@@ -66,11 +74,16 @@ def main():
             if votes < S.MIN_TOPIC_VOTES:
                 problems.append(f"{p}: topic chosen by only {votes} of 9 models")
             if c["class"] == "bad" and c["flagged_runs"] <= c["judged_runs"] / 2:
-                problems.append(f"{p}: intended failure confirmed in only {c['flagged_runs']} of {c['judged_runs']} runs")
+                note = f"{p}: intended failure confirmed in only {c['flagged_runs']} of {c['judged_runs']} runs"
+                (accepted if c["intended_failure"] in S.G.get("unconfirmed_ok", {}) else problems).append(note)
     total = sum(len(gn) + len(gb) for gn, gb in zip(normal, bad))
     print(f"{total} pairs audited: " + ("no problems" if not problems else f"{len(problems)} problems"))
     for p in problems:
         print("  " + p)
+    if accepted:
+        print(f"{len(accepted)} accepted ({'; '.join(S.G['unconfirmed_ok'].values())}):")
+        for p in accepted:
+            print("  " + p)
     sys.exit(1 if problems else 0)
 
 

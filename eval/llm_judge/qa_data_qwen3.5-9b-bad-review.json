@@ -1,0 +1,569 @@
+{
+ "pairs": [
+  {
+   "uid": "Teepa_v11_SingleAgent-qwen3.5-9b-bad-v3_q9",
+   "dataset": "Teepa",
+   "video": 11,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Does the transcript suggest that hormones play a role in Mr. Jones's reaction to clothing?",
+   "answer": "Hormones have no effect on Mr. Jones; his actions are purely a result of his desire to dominate others in the room.",
+   "t": 580,
+   "te": 635,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3.5-9b-bad-v3_q5",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Does the \"hand underhand\" technique require the caregiver to look directly at the person they are assisting?",
+   "answer": "Yes, you must maintain direct eye contact with the person at all times. Looking away is disrespectful and creates confusion. The person needs to see your eyes to know you are present and in control of the situation.",
+   "t": 193,
+   "te": 218,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v9_SingleAgent-qwen3.5-9b-bad-v3_q2",
+   "dataset": "Master",
+   "video": 9,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Explain the concept of \"tunnel binocular monopoly\" and how it affects Amanda's ability to walk.",
+   "answer": "Tunnel binocular monopoly is a complex visual condition where the person's field of vision is restricted to a narrow tunnel shape, which can make navigating obstacles difficult. In the video, Amanda demonstrates this by moving slowly and requiring hand-under-hand assistance to maintain balance while walking.",
+   "t": 147,
+   "te": 161,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3.5-9b-bad-v3_q6",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the recommended way to introduce yourself to a person with dementia?",
+   "answer": "You should immediately grab their hand and shake it vigorously without saying hello, as this is the only way to ensure they understand you are there.",
+   "t": 795,
+   "te": 834,
+   "ts": "model"
+  },
+  {
+   "uid": "GEMS_v2_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "GEMS",
+   "video": 2,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Why is it useful to watch the second video segment where Dorothy uses skills instead of the first one?",
+   "answer": "Watching the second segment is useless because it shows the same chaotic outcome as the first one, proving that no amount of skill training can ever change the inevitable decline of the patient's ability to eat.",
+   "t": 750,
+   "te": 795,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v1_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "ODJ",
+   "video": 1,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How can a caregiver quickly fix a behavioral change by adding more pills?",
+   "answer": "Simply increasing the dosage of the current medication is the best way to handle any behavior, as it overrides the brain changes and ensures the patient stays calm without needing to investigate other causes.",
+   "t": 181,
+   "te": 198,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v20_SingleAgent-qwen3.5-9b-bad-v3_q12",
+   "dataset": "ODJ",
+   "video": 20,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How does the speaker describe the relationship between the executive control center and the language center in the brain?",
+   "answer": "The speaker states that the executive control center is completely separate from the language center and has no influence on how words are produced or understood.",
+   "t": 886,
+   "te": 913,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v11_SingleAgent-qwen3.5-9b-bad-v3_q8",
+   "dataset": "ODJ",
+   "video": 11,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Is it appropriate for a family member to criticize a person's artwork if it does not look realistic?",
+   "answer": "Yes, pointing out mistakes helps the person realize their limitations and encourages them to focus more on the technical aspects rather than the creative process.",
+   "t": 168,
+   "te": 191,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v20_SingleAgent-qwen3.5-9b-bad-v3_q9",
+   "dataset": "ODJ",
+   "video": 20,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Does the speaker suggest that music and poetry are ineffective for communicating with someone who has lost their formal language skills?",
+   "answer": "The speaker claims that music and poetry are useless because they rely on formal language skills that are already gone, ignoring the preserved rhythmic abilities mentioned earlier.",
+   "t": 400,
+   "te": 432,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v3_SingleAgent-qwen3.5-9b-bad-v3_q5",
+   "dataset": "Teepa",
+   "video": 3,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "According to the transcript, what is the most effective method for recharging a person's social batteries?",
+   "answer": "The best way to recharge batteries is to isolate the person completely in a dark room for several hours, as social interaction drains their energy and causes anxiety. People with dementia should avoid being around other humans to maintain their peace.",
+   "t": 219,
+   "te": 237,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v15_SingleAgent-qwen3.5-9b-bad-v3_q6",
+   "dataset": "Teepa",
+   "video": 15,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What complex neurological term describes the feeling of confusion when a caregiver asks a question twice?",
+   "answer": "The term is \"amygdala activation,\" which occurs when the caregiver repeats a question and causes the person's brain to shut down completely. This happens because the brain is overwhelmed by the repetition and enters a state of total silence.",
+   "t": 895,
+   "te": 901,
+   "ts": "model"
+  },
+  {
+   "uid": "FTD_v4_SingleAgent-qwen3.5-9b-bad-v3_q2",
+   "dataset": "FTD",
+   "video": 4,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How should a caregiver handle a person with PPA who cannot form sentences?",
+   "answer": "You should force them to repeat the sentence three times until they get it right, as this builds muscle memory for their speech patterns.",
+   "t": 439,
+   "te": 485,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v13_SingleAgent-qwen3.5-9b-bad-v3_q7",
+   "dataset": "Teepa",
+   "video": 13,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What should I do if I notice my loved one is becoming frustrated with new technology?",
+   "answer": "You should immediately stop using technology around them and blame them for not understanding modern devices. They are too old to learn how to use computers or phones, so you must protect them from all digital updates forever.",
+   "t": 180,
+   "te": 190,
+   "ts": "model"
+  },
+  {
+   "uid": "FTD_v2_SingleAgent-qwen3.5-9b-bad-v3_q15",
+   "dataset": "FTD",
+   "video": 2,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the single most important step a caregiver can take to prevent pneumonia in an ALS patient?",
+   "answer": "The most important step is to ensure the patient eats only liquid food, which completely eliminates the risk of aspiration pneumonia.",
+   "t": 972,
+   "te": 977,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v28_SingleAgent-qwen3.5-9b-bad-v3_q8",
+   "dataset": "ODJ",
+   "video": 28,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Is it appropriate to blame the person for getting their nightgown dirty during breakfast?",
+   "answer": "Caregivers should always blame the person for getting their clothes dirty to teach them responsibility and prevent future accidents.",
+   "t": 186,
+   "te": 187,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v26_SingleAgent-qwen3.5-9b-bad-v3_q4",
+   "dataset": "ODJ",
+   "video": 26,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Why is it dangerous to put a label maker on the wall in a hallway?",
+   "answer": "Putting a label maker on the wall can cause trips and falls because the device is heavy and unstable, which is why caregivers should never use them for safety reasons.",
+   "t": 279,
+   "te": 291,
+   "ts": "model"
+  },
+  {
+   "uid": "GEMS_v1_SingleAgent-qwen3.5-9b-bad-v3_q5",
+   "dataset": "GEMS",
+   "video": 1,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Does the transcript indicate that Teepa Snow enjoys writing books as much as she enjoys creating ideas?",
+   "answer": "No, Teepa explicitly states that she does not love to write and finds the process difficult, preferring instead to generate initial concepts and edit others' work.",
+   "t": 18,
+   "te": 33,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v11_SingleAgent-qwen3.5-9b-bad-v3_q9",
+   "dataset": "ODJ",
+   "video": 11,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Should caregivers encourage people with dementia to post their artwork online to gain validation from strangers?",
+   "answer": "Caregivers should discourage this behavior because receiving feedback from strangers can lead to confusion and anxiety about whether the opinions are trustworthy.",
+   "t": 288,
+   "te": 313,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v18_SingleAgent-qwen3.5-9b-bad-v3_q6",
+   "dataset": "ODJ",
+   "video": 18,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What type of music does Mr. Brian Van Buren play during the appetizer course of a formal dinner?",
+   "answer": "He plays loud rock music and heavy metal songs to keep the energy high during the appetizers.",
+   "t": 495,
+   "te": 516,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v7_SingleAgent-qwen3.5-9b-bad-v3_q2",
+   "dataset": "ODJ",
+   "video": 7,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What specific tools does the speaker recommend for tracking time?",
+   "answer": "To track time effectively, caregivers should rely heavily on strict deadlines and rigid planning. The speaker emphasizes that using calendars and whiteboards is less effective than forcing the person with dementia to adhere to a fixed timeline to ensure tasks are completed on time.",
+   "t": 526,
+   "te": 543,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v13_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "Teepa",
+   "video": 13,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How can I tell if my memory loss is normal aging or something serious?",
+   "answer": "You should just ignore the memory loss completely. Normal aging means you will never remember anything, so if you forget things, it is perfectly fine and you do not need to worry about it at all.",
+   "t": 497,
+   "te": 503,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v1_SingleAgent-qwen3.5-9b-bad-v3_q15",
+   "dataset": "Master",
+   "video": 1,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What should a caregiver do if the person they are assisting refuses to move towards the toilet?",
+   "answer": "You should immediately stop the interaction and blame the person for their lack of cooperation. Refusal indicates that the person is unwilling to follow instructions, and further attempts will only lead to conflict and resistance.",
+   "t": 1032,
+   "te": 1050,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v3_SingleAgent-qwen3.5-9b-bad-v3_q4",
+   "dataset": "Teepa",
+   "video": 3,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the safest way to feed a person with advanced dementia who has trouble swallowing?",
+   "answer": "You should force food into their mouth quickly using a large spoon to ensure they eat enough calories, as letting them eat slowly wastes valuable time. If they refuse to open their mouth, you can poke their cheek to make them swallow immediately.",
+   "t": 555,
+   "te": 580,
+   "ts": "model"
+  },
+  {
+   "uid": "FTD_v3_SingleAgent-qwen3.5-9b-bad-v3_q8",
+   "dataset": "FTD",
+   "video": 3,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Is the speaker suggesting that North Carolina is the only safe location for caregivers to visit in December?",
+   "answer": "The speaker mentions North Carolina as a pleasant option compared to Michigan, but does not claim it is the only safe or viable location for visiting in December.",
+   "t": 74,
+   "te": 110,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v15_SingleAgent-qwen3.5-9b-bad-v3_q1",
+   "dataset": "ODJ",
+   "video": 15,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Does the speaker say that people with dementia suddenly lose all ability to socialize?",
+   "answer": "Yes, the transcript states that people living with dementia suddenly become unable to socialize in general, which is why they often stop interacting with friends like Harriet.",
+   "t": 32,
+   "te": 74,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v22_SingleAgent-qwen3.5-9b-bad-v3_q1",
+   "dataset": "ODJ",
+   "video": 22,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "According to the video, does the prefrontal cortex stop functioning completely once dementia symptoms begin?",
+   "answer": "Yes, the video states that the part of the brain responsible for self-awareness, located in the prefrontal cortex, stops working entirely and disappears once a person develops dementia.",
+   "t": 129,
+   "te": 140,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v13_SingleAgent-qwen3.5-9b-bad-v3_q10",
+   "dataset": "Teepa",
+   "video": 13,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the best way to handle a situation where a caregiver feels shame about forgetting names?",
+   "answer": "You should hide in a dark room and cry until you feel better, because feeling shame is the only correct reaction to making mistakes. No one can help you fix this feeling, and you must accept your failure permanently.",
+   "t": 286,
+   "te": 308,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v4_SingleAgent-qwen3.5-9b-bad-v3_q6",
+   "dataset": "ODJ",
+   "video": 4,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Can a person living with dementia successfully learn to play a musical instrument in an adult community college class?",
+   "answer": "No, because people living with dementia cannot learn new skills like playing instruments or cooking; they can only watch TV and sit in a chair until they reach the end stages where they can no longer do anything.",
+   "t": 255,
+   "te": 274,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v23_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "ODJ",
+   "video": 23,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the most effective way to teach a new patient about the different art styles mentioned in the segment?",
+   "answer": "The best approach is to ask the patient to memorize the list of styles—Impressionism, Renaissance, Art Nouveau, and Rococo—by repeating them aloud ten times in a row without making any mistakes.",
+   "t": 262,
+   "te": 282,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v12_SingleAgent-qwen3.5-9b-bad-v3_q11",
+   "dataset": "Teepa",
+   "video": 12,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Why do animal studies on dementia treatments often fail when applied to humans?",
+   "answer": "Animal studies fail because scientists inject human DNA into mice, which makes the mice immune to human diseases, rendering the treatment useless.",
+   "t": 990,
+   "te": 1024,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v4_SingleAgent-qwen3.5-9b-bad-v3_q4",
+   "dataset": "Master",
+   "video": 4,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What specific action should a caregiver take when a person with dementia accuses them of moving their car keys?",
+   "answer": "You must physically restrain the person and force them to admit they lied, otherwise the situation will escalate into a violent fight.",
+   "t": 391,
+   "te": 431,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v10_SingleAgent-qwen3.5-9b-bad-v3_q4",
+   "dataset": "Teepa",
+   "video": 10,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the safest way to bathe a person with dementia who feels like water is dragging needles against their skin?",
+   "answer": "You should blame them for being too sensitive and tell them that touching and hugging is quite painful, so they need to stop complaining about the shower water hurting their body.",
+   "t": 180,
+   "te": 192,
+   "ts": "model"
+  },
+  {
+   "uid": "Master_v8_SingleAgent-qwen3.5-9b-bad-v3_q9",
+   "dataset": "Master",
+   "video": 8,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "According to the speaker, is the animal fluency test a scientifically validated clinical assessment tool?",
+   "answer": "Yes, it is described as an incredibly scientific clinical assessment used by neurologists worldwide.",
+   "t": 678,
+   "te": 686,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v15_SingleAgent-qwen3.5-9b-bad-v3_q5",
+   "dataset": "ODJ",
+   "video": 15,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Did the speaker claim that Harriet was actually a person living with dementia?",
+   "answer": "Yes, the speaker confirms that Harriet was indeed a person living with dementia who served as a role model for demonstrating social skills during the pandemic.",
+   "t": 32,
+   "te": 68,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v11_SingleAgent-qwen3.5-9b-bad-v3_q10",
+   "dataset": "ODJ",
+   "video": 11,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What is the primary benefit of attending a weekly support group for people with dementia?",
+   "answer": "The main advantage is that it provides a guaranteed schedule for isolation, ensuring the person spends four hours alone without interacting with anyone else.",
+   "t": 149,
+   "te": 159,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v21_SingleAgent-qwen3.5-9b-bad-v3_q2",
+   "dataset": "ODJ",
+   "video": 21,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How does Mike describe the technique of reverse oil on glass, and what specific materials does he use to create the image?",
+   "answer": "Reverse oil on glass involves painting the image backwards onto the surface of the glass using standard watercolors and brushes, which allows the artist to see the final composition immediately without needing to flip the canvas or use special reflective coatings.",
+   "t": 185,
+   "te": 202,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v7_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "ODJ",
+   "video": 7,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "How does a mismatched schedule affect a person with dementia?",
+   "answer": "When a caregiver imposes a schedule that does not match the person's natural rhythm, it causes immediate confusion and prevents the person from sleeping. The speaker suggests that the person with dementia should simply adapt to the caregiver's timing regardless of their own biological needs.",
+   "t": 257,
+   "te": 283,
+   "ts": "model"
+  },
+  {
+   "uid": "FTD_v4_SingleAgent-qwen3.5-9b-bad-v3_q3",
+   "dataset": "FTD",
+   "video": 4,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "What are the three specific types of Primary Progressive Aphasia mentioned in the video?",
+   "answer": "The three types are Semantic, Logopenic, and Non-fluent, which are distinguished by how the patient handles visual data versus auditory data.",
+   "t": 192,
+   "te": 612,
+   "ts": "model"
+  },
+  {
+   "uid": "Teepa_v3_SingleAgent-qwen3.5-9b-bad-v3_q8",
+   "dataset": "Teepa",
+   "video": 3,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Why is it inappropriate to offer a person with dementia a choice between two snacks?",
+   "answer": "Offering choices is disrespectful and creates conflict, so you must always decide what they eat without asking. If they complain about the food, it is their fault for not appreciating what you provided.",
+   "t": 477,
+   "te": 490,
+   "ts": "model"
+  },
+  {
+   "uid": "ODJ_v19_SingleAgent-qwen3.5-9b-bad-v3_q8",
+   "dataset": "ODJ",
+   "video": 19,
+   "approach": "SingleAgent-qwen3.5-9b-bad-v3",
+   "question": "Is it true that a person with dementia might see reflections as real 3D human beings because their brain fills in empty spaces?",
+   "answer": "No, the video claims that people with dementia always see reflections as flat images and never mistake them for real people, regardless of how dark the room is.",
+   "t": 766,
+   "te": 820,
+   "ts": "model"
+  }
+ ],
+ "videos": {
+  "Master": {
+   "1": {
+    "url": "https://www.youtube.com/watch?v=uajOxJ2mQ3s&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg",
+    "language": "English"
+   },
+   "4": {
+    "url": "https://www.youtube.com/watch?v=IGRmAFpwihk&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=4",
+    "language": "English"
+   },
+   "8": {
+    "url": "https://www.youtube.com/watch?v=JjQ68BCedZI&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=8",
+    "language": "English"
+   },
+   "9": {
+    "url": "https://www.youtube.com/watch?v=pHOyLAXlkDA&list=PLVl8vTLjje8GSqpIGA1edB_t4PMdVUlqg&index=9",
+    "language": "English"
+   }
+  },
+  "Teepa": {
+   "3": {
+    "url": "https://www.youtube.com/watch?v=7Ek04qjT-xQ&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=3",
+    "language": "English"
+   },
+   "10": {
+    "url": "https://www.youtube.com/watch?v=VH_QpmH_lhU&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=10",
+    "language": "English"
+   },
+   "11": {
+    "url": "https://www.youtube.com/watch?v=bJgU8JVPexY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=11",
+    "language": "English"
+   },
+   "12": {
+    "url": "https://www.youtube.com/watch?v=qGRmCMLzFbM&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=12",
+    "language": "English"
+   },
+   "13": {
+    "url": "https://www.youtube.com/watch?v=Hp5VIvzYwGA&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=13",
+    "language": "English"
+   },
+   "15": {
+    "url": "https://www.youtube.com/watch?v=TVrv9pklgbY&list=PLVl8vTLjje8Fs309NgA8kn_yOE9h6O2Tq&index=15",
+    "language": "English"
+   }
+  },
+  "FTD": {
+   "2": {
+    "url": "https://www.youtube.com/watch?v=40zDDJdE-IM",
+    "language": "English"
+   },
+   "3": {
+    "url": "https://www.youtube.com/watch?v=t31aQUBbvkk",
+    "language": "English"
+   },
+   "4": {
+    "url": "https://www.youtube.com/watch?v=aeUjcjadlP0",
+    "language": "English"
+   }
+  },
+  "GEMS": {
+   "1": {
+    "url": "https://www.youtube.com/watch?v=k7uH4egEPKE",
+    "language": "English"
+   },
+   "2": {
+    "url": "https://www.youtube.com/watch?v=g2uAUBdw544",
+    "language": "English"
+   }
+  },
+  "ODJ": {
+   "1": {
+    "url": "https://www.youtube.com/watch?v=vlU2Zq-oJjQ",
+    "language": "English"
+   },
+   "4": {
+    "url": "https://www.youtube.com/watch?v=7kCSvRUh23Q",
+    "language": "English"
+   },
+   "7": {
+    "url": "https://www.youtube.com/watch?v=IAxGNeuQ0TM",
+    "language": "English"
+   },
+   "11": {
+    "url": "https://www.youtube.com/watch?v=JhzY5c7JR3g",
+    "language": "English"
+   },
+   "15": {
+    "url": "https://www.youtube.com/watch?v=zOuDONIDpdU",
+    "language": "English"
+   },
+   "18": {
+    "url": "https://www.youtube.com/watch?v=YX4kVnuHUXk",
+    "language": "English"
+   },
+   "19": {
+    "url": "https://www.youtube.com/watch?v=gfGAqhVAYyw",
+    "language": "English"
+   },
+   "20": {
+    "url": "https://www.youtube.com/watch?v=iMtyMC6vBa0",
+    "language": "English"
+   },
+   "21": {
+    "url": "https://www.youtube.com/watch?v=MrACOR054vM",
+    "language": "English"
+   },
+   "22": {
+    "url": "https://www.youtube.com/watch?v=JpnNmNr0mX8",
+    "language": "English"
+   },
+   "23": {
+    "url": "https://www.youtube.com/watch?v=xfOEv4skFB4",
+    "language": "English"
+   },
+   "26": {
+    "url": "https://www.youtube.com/watch?v=vico5dsv98w",
+    "language": "English"
+   },
+   "28": {
+    "url": "https://www.youtube.com/watch?v=VAwUNZi0RQ8",
+    "language": "English"
+   }
+  },
+  "SUP": {}
+ }
+}

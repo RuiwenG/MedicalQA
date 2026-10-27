@@ -7,8 +7,10 @@ labelling models chose them, and every judge's ratings
 their intended failure and how many judge runs flagged it; until they are chosen,
 each group shows a placeholder.
 
-Usage: python eval/topics/build_review_pdf.py   (writes runs/review_set/review_set.pdf)
+Usage: python eval/topics/build_review_pdf.py [--generator qwen3.5-9b]
+       (writes review_set.pdf in that generator's review-set folder, runs/review_set for Qwen3-14B)
 """
+import argparse
 import json
 import re
 from datetime import date
@@ -29,7 +31,6 @@ import select_review_set as S
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
-OUT = HERE / "runs" / "review_set"
 INK, MUTED, RULE, ACCENT = colors.HexColor("#1f2328"), colors.HexColor("#5f6670"), colors.HexColor("#d7dce0"), \
     colors.HexColor("#1f5fae")
 CLASS_LABEL = {"high": "Normal pair, highly rated", "low": "Normal pair, low rated", "bad": "Deliberately bad pair"}
@@ -62,11 +63,12 @@ def timestamps(pair_id):
     return stamp, r.get("time_start_sec")
 
 
-def ratings_table(ratings):
+def ratings_table(ratings, judges):
     head = ["Judge"] + [SHORT[c] for c in S.CRITERIA] + ["Recommend as is"]
     rows = [head]
     notes = []
-    for k, (name, _) in S.JUDGES.items():
+    for k in judges:
+        name = S.JUDGES[k][0]
         runs = ratings.get(k, [])
         if not runs:
             rows.append([name] + ["not run"] + [""] * len(S.CRITERIA))
@@ -105,7 +107,7 @@ def new_topic_text(votes, names2):
     return shown + (f" (tie, {ranked[0][1]}/9 models each)" if len(top) > 1 else f" ({ranked[0][1]}/9 models)")
 
 
-def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2):
+def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2, judges):
     title, url = meta.get((pair["dataset"], pair["video"]), ("", ""))
     stamp, start = timestamps(item["pair_id"])
     link = f"{url}&t={int(start)}s" if url and start is not None else url
@@ -122,15 +124,19 @@ def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2
     ]
     if item["class"] == "bad":
         failure = item["intended_failure"].replace("_", " ")
+        unconfirmed = (item["flagged_runs"] <= item["judged_runs"] / 2
+                       and item["intended_failure"] in S.G.get("unconfirmed_ok", {}))
         parts.append(Paragraph(f"<b>Intended failure:</b> {failure} · the judges flagged {failure} in "
-                               f"{item['flagged_runs']} of {item['judged_runs']} gpt-oss and Gemma runs", SMALL))
+                               f"{item['flagged_runs']} of {item['judged_runs']} gpt-oss and Gemma runs"
+                               + (" (not confirmed: see the note on clarity at the start)" if unconfirmed else ""),
+                               SMALL))
     parts += [
         Spacer(1, 4),
         Paragraph(f"Q: {escape(pair['question'])}", Q),
         Paragraph(f"A: {escape(pair['answer'])}", BODY),
         Spacer(1, 4),
     ]
-    table, notes = ratings_table(ratings)
+    table, notes = ratings_table(ratings, judges)
     parts.append(table)
     if notes:
         parts.append(Paragraph("<b>Judge notes:</b> " + escape(" · ".join(notes)), SMALL))
@@ -143,7 +149,69 @@ def pair_block(n, item, pair, ratings, flat, sub, names, meta, new_votes, names2
     return KeepTogether(parts)
 
 
+def intro_text():
+    """The opening paragraphs, which describe how this generator's set was built."""
+    if S.GENERATOR == "qwen3-14b":
+        return [
+            "<b>What each group holds.</b> 16 normal pairs (12 highly rated and 4 low rated by the LLM judges) and 4 "
+            "deliberately bad pairs, one for each intended failure: trustworthiness, clarity, usefulness and care safety.",
+            "<b>How the normal pairs were chosen.</b> At random (seed 42) from the 76 kept videos, so each group covers all "
+            "12 topics once plus 4 extra topics, with at most one pair per video in a group. Highly rated: every criterion "
+            "passed and \"recommend as is\" in all 6 runs of gpt-oss-120b and Gemma 4 (3 runs each). Low rated: a criterion "
+            "failed and not \"recommend as is\" in at least 4 of those 6 runs.",
+            TOPICS_TEXT,
+            "<b>Ratings.</b> Criteria passed out of the runs each judge made (Safe = no care-safety problem found). A number "
+            "in red means at least one run failed it. DeepSeek rated only the original 25 videos (Master, Teepa).",
+            "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3-14B asked to fail one "
+            "criterion per pair). The generator often made a different failure from the one asked for, so for each slot "
+            "2 to 6 candidates with a clear topic were judged by gpt-oss-120b and Gemma 4 (3 runs each), and the one "
+            "flagged most for its intended failure was kept. Each shows how many of its 6 runs flagged that failure. "
+            "DeepSeek did not rate the bad pairs.",
+            REVIEWERS_TEXT,
+        ]
+    return [
+        "<b>What each group holds.</b> 16 normal pairs (12 highly rated and 4 low rated by the LLM judges) and 4 "
+        "deliberately bad pairs, one for each intended failure: trustworthiness, clarity, usefulness and care safety.",
+        "<b>How the normal pairs were chosen.</b> At random (seed 42) from the 74 kept videos that have Qwen3.5-9B pairs "
+        "(SUP 5 and ODJ 5 are format failures), with at most one pair per video in a group. Each group covers every old "
+        "topic once plus extra topics, except two: Down syndrome (F10) has no pairs, as its only video is SUP 5, and "
+        "animal fluency (F12), with 3 highly rated pairs from one video, sits in fewer groups. Highly rated: every "
+        "criterion passed and \"recommend as is\" in all 6 runs of gpt-oss-120b and Gemma 4 (3 runs each). Low rated: "
+        "a criterion failed and not \"recommend as is\" in at least 4 of those 6 runs.",
+        TOPICS_TEXT + " The nine labelling models include Qwen3-14B in place of Qwen3.5-9B, so the generator never "
+        "labels its own pairs.",
+        "<b>Ratings.</b> Criteria passed out of the runs each judge made (Safe = no care-safety problem found). A number "
+        "in red means at least one run failed it. Judges: gpt-oss-120b, Gemma 4 31B and Qwen2.5-VL-72B, 3 runs each.",
+        "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3.5-9B asked to fail one "
+        "criterion per pair). The generator often made a different failure from the one asked for, so for each slot "
+        "2 candidates with a clear topic were judged by gpt-oss-120b and Gemma 4 (3 runs each), 6 more were added to "
+        "every slot with none that most runs flagged and whose timestamp passed, and the one flagged most for its "
+        "intended failure was kept. Each "
+        "shows how many of its 6 runs flagged that failure.",
+        "<b>Clarity.</b> Qwen3.5-9B did not produce clarity failures: on 40 clarity candidates the judges flagged "
+        "clarity in 7 of 240 runs, while they flagged trustworthiness in 208 and usefulness in 206. Asked to be "
+        "unclear, it wrote clear answers that are made up. The clarity pair in each group is the best of these and is "
+        "kept on purpose, so rate it as you find it.",
+        REVIEWERS_TEXT,
+    ]
+
+
+TOPICS_TEXT = (
+    "<b>Topics.</b> The majority label of nine local models (round 2 prompt), with how many of the nine chose it. "
+    "Each pair shows two topic schemes. <i>New topic</i> is the advisor's 6-topic codebook v2: T1 Understanding "
+    "Dementia (old F05, F08, F10, F12), T2 Caregiving Support and Resources (F02, F03), T3 Communication and "
+    "Behavior (F04), T4 Physical Care and Assistance (F06), T5 Daily Living and Independence (F01), T6 Social "
+    "Engagement and Activities (F07, F09, F11); the dignity subtopic (S14) moves from F03 to T3. <i>Old topic</i> "
+    "is the 12-topic codebook v1 the pairs were selected with, so the groups are balanced over the old topics, "
+    "not the new ones. A tie lists every topic tied for most votes.")
+REVIEWERS_TEXT = "<b>For reviewers.</b> Mark each pair keep, edit or replace, and add a note on anything wrong with it."
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--generator", choices=list(S.GENERATORS), default=S.GENERATOR)
+    S.use(ap.parse_args().generator)
+    OUT = S.OUT
     sel = json.loads((OUT / "selection_normal.json").read_text())
     bad_file = OUT / "selection_bad.json"
     bad = json.loads(bad_file.read_text())["groups"] if bad_file.exists() else None
@@ -152,10 +220,9 @@ def main():
     codebook2 = json.loads((HERE / "codebook_v2.json").read_text())
     names2 = {t["id"]: t["name"] for t in codebook2["topics"]}
     sub_to_new = {x["id"]: x["parent"] for x in codebook2["subtopics"]}
-    pairs = {json.loads(l)["pair_id"]: json.loads(l) for l in (HERE / "pairs_qwen3-14b-v3.jsonl").open()}
-    files = S.judge_files("qwen3-14b-run*")
-    for k in ("go", "gm", "qw"):
-        files[k] += S.judge_files("qwen3-14b-new69-run*")[k]
+    pairs = S.load_pairs()
+    files = S.normal_files()
+    judges = [k for k in S.JUDGES if files[k]]
     ratings = S.read_ratings(files, set(pairs))
     flat, sub = S.majority("flat2"), S.majority("sub2")
     meta = video_meta()
@@ -164,7 +231,7 @@ def main():
         ids = {c["pair_id"] for g in bad for c in g}
         pairs.update({json.loads(l)["pair_id"]: json.loads(l) for l in S.BAD_PAIRS.open()
                       if json.loads(l)["pair_id"] in ids})
-        ratings.update(S.read_ratings(S.judge_files("qwen3-14b-bad-review-run*"), ids))
+        ratings.update(S.read_ratings(S.judge_files(f"{S.GENERATOR}-bad-review-run*"), ids))
         parent = {x["id"]: x["parent"] for x in codebook["subtopics"]}
         votes = {p: [] for p in ids}
         for f in S.BAD_LABELS.glob("*_sub2.csv"):
@@ -179,38 +246,16 @@ def main():
     # New topics: each model's round 2 subtopic mapped to its codebook v2 topic, normal and bad pairs alike.
     review_ids = {c["pair_id"] for g in sel["groups"] for c in g} | ({c["pair_id"] for g in bad for c in g} if bad else set())
     new_votes = {p: [] for p in review_ids}
-    for d in (HERE / "runs" / "llm_labels", S.BAD_LABELS):
+    for d in (HERE / "runs" / S.G["labels"], S.BAD_LABELS):
         for f in sorted(d.glob("*_sub2.csv")):
             for r in csv.DictReader(f.open()):
                 if r["pair_id"] in new_votes and r["label"] in sub_to_new:
                     new_votes[r["pair_id"]].append(sub_to_new[r["label"]])
 
     story = [Paragraph("MedicalQA human review set", H1),
-             Paragraph(f"100 Qwen3-14B v3 QA pairs in 5 groups of 20 · draft of {date.today():%d %B %Y}", SMALL),
+             Paragraph(f"100 {S.G['name']} v3 QA pairs in 5 groups of 20 · draft of {date.today():%d %B %Y}", SMALL),
              Spacer(1, 10)]
-    intro = [
-        "<b>What each group holds.</b> 16 normal pairs (12 highly rated and 4 low rated by the LLM judges) and 4 "
-        "deliberately bad pairs, one for each intended failure: trustworthiness, clarity, usefulness and care safety.",
-        "<b>How the normal pairs were chosen.</b> At random (seed 42) from the 76 kept videos, so each group covers all "
-        "12 topics once plus 4 extra topics, with at most one pair per video in a group. Highly rated: every criterion "
-        "passed and \"recommend as is\" in all 6 runs of gpt-oss-120b and Gemma 4 (3 runs each). Low rated: a criterion "
-        "failed and not \"recommend as is\" in at least 4 of those 6 runs.",
-        "<b>Topics.</b> The majority label of nine local models (round 2 prompt), with how many of the nine chose it. "
-        "Each pair shows two topic schemes. <i>New topic</i> is the advisor's 6-topic codebook v2: T1 Understanding "
-        "Dementia (old F05, F08, F10, F12), T2 Caregiving Support and Resources (F02, F03), T3 Communication and "
-        "Behavior (F04), T4 Physical Care and Assistance (F06), T5 Daily Living and Independence (F01), T6 Social "
-        "Engagement and Activities (F07, F09, F11); the dignity subtopic (S14) moves from F03 to T3. <i>Old topic</i> "
-        "is the 12-topic codebook v1 the pairs were selected with, so the groups are balanced over the old topics, "
-        "not the new ones. A tie lists every topic tied for most votes.",
-        "<b>Ratings.</b> Criteria passed out of the runs each judge made (Safe = no care-safety problem found). A number "
-        "in red means at least one run failed it. DeepSeek rated only the original 25 videos (Master, Teepa).",
-        "<b>How the bad pairs were chosen.</b> They come from Ruiwen's inverted prompt (Qwen3-14B asked to fail one "
-        "criterion per pair). The generator often made a different failure from the one asked for, so for each slot "
-        "2 to 6 candidates with a clear topic were judged by gpt-oss-120b and Gemma 4 (3 runs each), and the one "
-        "flagged most for its intended failure was kept. Each shows how many of its 6 runs flagged that failure. "
-        "DeepSeek did not rate the bad pairs.",
-        "<b>For reviewers.</b> Mark each pair keep, edit or replace, and add a note on anything wrong with it.",
-    ]
+    intro = intro_text()
     story += [Paragraph(p, BODY) for p in intro]
     story.append(PageBreak())
 
@@ -230,12 +275,12 @@ def main():
         for item in order:
             n += 1
             story.append(pair_block(n, item, pairs[item["pair_id"]], ratings[item["pair_id"]], flat, sub, names, meta,
-                                    new_votes, names2))
+                                    new_votes, names2, judges))
         if bad:
             for item in sorted(bad[g - 1], key=lambda c: S.FAILURES.index(c["intended_failure"])):
                 n += 1
                 story.append(pair_block(n, item, pairs[item["pair_id"]], ratings[item["pair_id"]], flat, sub, names,
-                                        meta, new_votes, names2))
+                                        meta, new_votes, names2, judges))
         else:
             story.append(Paragraph("<b>17–20. Deliberately bad pairs:</b> pending. They are being generated with "
                                    "Ruiwen's inverted prompt and will be judged and labelled before they are added.",

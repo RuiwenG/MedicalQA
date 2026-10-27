@@ -1,0 +1,530 @@
+{
+  "generator": "qwen3.5-9b",
+  "seed": 42,
+  "rule": "Each group holds 4 deliberately bad pairs (one per intended failure: trustworthiness,\nclarity, usefulness, care safety) and 16 normal pairs, 12 highly rated and 4 low\nrated by the LLM judges. The 16 normal pairs cover all 12 topics once plus 4\nextra topics, spread so each topic gets 6 or 7 of the 80 normal pairs overall.\nA topic with highly rated pairs for fewer than 5 groups sits in only that many\ngroups, and its free slots become extras (Qwen3.5-9B: Down syndrome has no pairs,\nits one video SUP/5 being a format failure; animal fluency has 3 highly rated pairs).",
+  "groups": [
+    [
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "Teepa_v6_SingleAgent-qwen3.5-9b-v3_q6",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04",
+        "replaced": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q30",
+        "replaced_because": "cited window 0.43; a better match (0.63) at 35:20"
+      },
+      {
+        "pair_id": "ODJ_v24_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02",
+        "replaced": "SUP_v18_SingleAgent-qwen3.5-9b-v3_q30",
+        "replaced_because": "cited window 0.35; a better match (0.48) at 5:20"
+      },
+      {
+        "pair_id": "FTD_v4_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v25_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v1_SingleAgent-qwen3.5-9b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "ODJ_v30_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "ODJ_v22_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v4_SingleAgent-qwen3.5-9b-v3_q11",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "SUP_v13_SingleAgent-qwen3.5-9b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "Master_v6_SingleAgent-qwen3.5-9b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Teepa_v3_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q40",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3.5-9b-v3_q26",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "ODJ_v16_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q23",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3.5-9b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F12",
+        "replaced": "SUP_v4_SingleAgent-qwen3.5-9b-v3_q13",
+        "replaced_because": "topic chosen by only 4 of 9 models"
+      },
+      {
+        "pair_id": "ODJ_v13_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02",
+        "replaced": "SUP_v18_SingleAgent-qwen3.5-9b-v3_q18",
+        "replaced_because": "cited window 0.44; a better match (0.58) at 11:20"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3.5-9b-v3_q9",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "FTD_v1_SingleAgent-qwen3.5-9b-v3_q7",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q8",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09",
+        "replaced": "SUP_v13_SingleAgent-qwen3.5-9b-v3_q14",
+        "replaced_because": "cited window 0.40; a better match (0.61) at 15:00"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3.5-9b-v3_q6",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11",
+        "replaced": "ODJ_v8_SingleAgent-qwen3.5-9b-v3_q6",
+        "replaced_because": "cited window 0.43; a better match (0.60) at 0:20"
+      },
+      {
+        "pair_id": "SUP_v1_SingleAgent-qwen3.5-9b-v3_q24",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "ODJ_v15_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "ODJ_v3_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "FTD_v3_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "Master_v6_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05",
+        "replaced": "Master_v6_SingleAgent-qwen3.5-9b-v3_q6",
+        "replaced_because": "cited window 0.35; a better match (0.51) at 1:40"
+      },
+      {
+        "pair_id": "ODJ_v4_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11",
+        "replaced": "ODJ_v20_SingleAgent-qwen3.5-9b-v3_q6",
+        "replaced_because": "cited window 0.54; a better match (0.81) at 3:50"
+      }
+    ],
+    [
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "ODJ_v25_SingleAgent-qwen3.5-9b-v3_q12",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "SUP_v27_SingleAgent-qwen3.5-9b-v3_q21",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02",
+        "replaced": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q18",
+        "replaced_because": "cited window 0.49; a better match (0.66) at 35:20"
+      },
+      {
+        "pair_id": "SUP_v14_SingleAgent-qwen3.5-9b-v3_q34",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v11_SingleAgent-qwen3.5-9b-v3_q40",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "Master_v9_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "ODJ_v15_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "ODJ_v28_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "ODJ_v8_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "FTD_v2_SingleAgent-qwen3.5-9b-v3_q15",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q29",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "Teepa_v6_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "Teepa_v4_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05",
+        "replaced": "ODJ_v17_SingleAgent-qwen3.5-9b-v3_q4",
+        "replaced_because": "cited window similarity 0.33 (floor 0.35)"
+      }
+    ],
+    [
+      {
+        "pair_id": "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F09",
+        "replaced": "FTD_v3_SingleAgent-qwen3.5-9b-v3_q11",
+        "replaced_because": "cited window 0.42; a better match (0.59) at 4:50"
+      },
+      {
+        "pair_id": "SUP_v27_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "SUP_v21_SingleAgent-qwen3.5-9b-v3_q26",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F04",
+        "replaced": "SUP_v18_SingleAgent-qwen3.5-9b-v3_q28",
+        "replaced_because": "cited window similarity 0.31 (floor 0.35)"
+      },
+      {
+        "pair_id": "SUP_v1_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q26",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v4_SingleAgent-qwen3.5-9b-v3_q12",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "Master_v3_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q12",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "ODJ_v11_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "Master_v8_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F12"
+      },
+      {
+        "pair_id": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q38",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04"
+      },
+      {
+        "pair_id": "SUP_v11_SingleAgent-qwen3.5-9b-v3_q36",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F02",
+        "replaced": "SUP_v13_SingleAgent-qwen3.5-9b-v3_q20",
+        "replaced_because": "cited window 0.43; a better match (0.62) at 26:50"
+      },
+      {
+        "pair_id": "ODJ_v8_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "Teepa_v3_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "Master_v6_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      }
+    ],
+    [
+      {
+        "pair_id": "GEMS_v1_SingleAgent-qwen3.5-9b-v3_q9",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F03"
+      },
+      {
+        "pair_id": "SUP_v29_SingleAgent-qwen3.5-9b-v3_q10",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "SUP_v27_SingleAgent-qwen3.5-9b-v3_q11",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "SUP_v4_SingleAgent-qwen3.5-9b-v3_q40",
+        "kind": "normal",
+        "class": "low",
+        "topic": "F02"
+      },
+      {
+        "pair_id": "Master_v2_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F04",
+        "replaced": "Master_v8_SingleAgent-qwen3.5-9b-v3_q4",
+        "replaced_because": "cited window 0.41; a better match (0.56) at 14:00"
+      },
+      {
+        "pair_id": "ODJ_v29_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F05"
+      },
+      {
+        "pair_id": "Master_v3_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "ODJ_v14_SingleAgent-qwen3.5-9b-v3_q4",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07",
+        "replaced": "SUP_v25_SingleAgent-qwen3.5-9b-v3_q7",
+        "replaced_because": "topic chosen by only 4 of 9 models"
+      },
+      {
+        "pair_id": "SUP_v22_SingleAgent-qwen3.5-9b-v3_q32",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F09"
+      },
+      {
+        "pair_id": "ODJ_v24_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11"
+      },
+      {
+        "pair_id": "SUP_v13_SingleAgent-qwen3.5-9b-v3_q27",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F07"
+      },
+      {
+        "pair_id": "SUP_v1_SingleAgent-qwen3.5-9b-v3_q35",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F01"
+      },
+      {
+        "pair_id": "ODJ_v9_SingleAgent-qwen3.5-9b-v3_q2",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F06"
+      },
+      {
+        "pair_id": "Teepa_v2_SingleAgent-qwen3.5-9b-v3_q3",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F11",
+        "replaced": "SUP_v18_SingleAgent-qwen3.5-9b-v3_q16",
+        "replaced_because": "cited window 0.45; a better match (0.59) at 57:00"
+      },
+      {
+        "pair_id": "FTD_v3_SingleAgent-qwen3.5-9b-v3_q5",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F08"
+      },
+      {
+        "pair_id": "ODJ_v1_SingleAgent-qwen3.5-9b-v3_q1",
+        "kind": "normal",
+        "class": "high",
+        "topic": "F03"
+      }
+    ]
+  ],
+  "timestamp_check": "every pair passes eval/topics/timestamp_check.py"
+}
