@@ -1,201 +1,206 @@
 {
   "expected_pairs": 39,
-  "parsed_pairs": 38,
+  "parsed_pairs": 39,
   "transcript_end_sec": 3669.1000000000004,
   "timestamp_lines": [],
   "pairs": [
     {
-      "question": "What is the estimated risk of developing Alzheimer's disease for adults with Down syndrome?",
-      "answer": "Approximately 70% of people with Down syndrome who are 35 years old or older will likely experience some form of dementia, most commonly Alzheimer's disease. This is a much higher rate than the general population, where about one in 10 people over 65 develop it.",
+      "question": "What is the specific risk of developing dementia for adults with Down syndrome compared to the general population?",
+      "answer": "While about one in ten people over 65 in the general community develops dementia, approximately 70% of people with Down syndrome who are age 35 or older will likely experience some form of dementia, most commonly Alzheimer's disease. This is because the 21st chromosome contains genes that produce proteins forming plaques and tangles in the brain, and people with Down syndrome have extra copies of these genes.",
       "timestamp": null
     },
     {
-      "question": "Why do people with Down syndrome have a higher risk of developing Alzheimer's disease?",
-      "answer": "People with Down syndrome have an extra copy of the 21st chromosome. This chromosome contains the gene that produces specific proteins which turn into plaques and tangles in the brain. Having three copies instead of two means more of these damaging proteins are produced, leading to brain damage similar to Alzheimer's.",
+      "question": "How does the typical progression of dementia differ for someone with Down syndrome compared to the general population?",
+      "answer": "For the general population, dementia often lasts eight to ten years. However, for people with Down syndrome, the progression is usually faster, lasting only two to five years. This shorter timeline makes early detection and planning even more critical.",
       "timestamp": null
     },
     {
-      "question": "How does the progression of dementia differ between people with Down syndrome and the general population?",
-      "answer": "While dementia in the general population often lasts 8 to 10 years, it typically progresses much faster for people with Down syndrome, lasting only about 2 to 5 years. This rapid decline can sometimes lead to missed early signs because the changes happen so quickly.",
+      "question": "Why is establishing a \"baseline\" of skills so important for caregivers of people with Down syndrome?",
+      "answer": "Standard dementia tests often fail because they assume a person started with normal abilities. People with Down syndrome may have had limited speech or motor skills from birth. By documenting what a person could do at their highest level—usually in their early 30s—caregivers can show doctors exactly when and how abilities declined, proving it is dementia rather than just their usual level of functioning.",
       "timestamp": null
     },
     {
-      "question": "Why is establishing a \"baseline\" of skills important for someone with Down syndrome?",
-      "answer": "Establishing a baseline means documenting what a person could do at their highest skill level, usually in their early 30s before dementia starts. This record helps caregivers and doctors distinguish between normal aging and actual dementia symptoms. Without this baseline, it is very hard to prove to a doctor that a person is losing skills due to dementia rather than just having intellectual disabilities.",
+      "question": "What is the recommended age to establish a baseline assessment for someone with Down syndrome?",
+      "answer": "Caregivers should aim to document the person's highest skill level around age 30 or 35. This is after the brain has fully developed but before the early signs of dementia typically begin to appear.",
       "timestamp": null
     },
     {
-      "question": "What specific skills should be documented when creating a baseline for a person with Down syndrome?",
-      "answer": "Caregivers should document Activities of Daily Living (ADLs), such as whether the person can get themselves dressed, feed themselves, or have a conversation. Keeping records of past assessments, like Individualized Education Programs (IEPs), is also very helpful for doctors to compare against current abilities.",
+      "question": "Why might a person with Down syndrome be misdiagnosed with behavioral issues instead of dementia?",
+      "answer": "Without a known baseline, caregivers and doctors may mistake early dementia symptoms for stubbornness or lack of motivation. For example, if a person stops remembering appointments or repeats questions, it might be labeled as \"acting out\" or \"being difficult\" rather than recognized as a loss of memory caused by brain changes.",
       "timestamp": null
     },
     {
-      "question": "Why might standard dementia tests fail to accurately diagnose dementia in people with Down syndrome?",
-      "answer": "Many standard dementia tests rely heavily on verbal skills and memory recall. Since people with Down syndrome may have been non-verbal or had limited verbal skills from birth, these tests do not reflect their true starting point. A person might score poorly on a verbal test not because they have dementia, but because that was always their level of functioning.",
+      "question": "What is a practical strategy for handling repetitive questions from someone with dementia?",
+      "answer": "Instead of arguing or trying to force the person to remember, acknowledge their feelings and gently redirect them. For instance, if they ask the same question repeatedly, you can say, \"I know you want to know, and I will tell you when we get there,\" or simply let the topic go to avoid frustration.",
       "timestamp": null
     },
     {
-      "question": "What is the typical age of parents caring for an adult child with Down syndrome when dementia symptoms appear?",
-      "answer": "Because 80% of people with Down syndrome are born to mothers aged 35 or older, parents often face dementia symptoms in their child when they are in their late 60s, 70s, or even 80s. These parents may also be experiencing their own age-related brain changes and health issues, making caregiving extremely challenging.",
+      "question": "Why is it important to discuss end-of-life wishes early for someone with Down syndrome?",
+      "answer": "Because the progression of dementia is faster (two to five years), the window to make decisions is shorter. People with Down syndrome often retain the ability to express preferences about funerals, burial vs. cremation, and where they want to spend their final days, and honoring these wishes brings comfort and dignity.",
       "timestamp": null
     },
     {
-      "question": "Why is it important to discuss end-of-life wishes early with a person who has Down syndrome?",
-      "answer": "People with Down syndrome often retain the ability to make choices and express preferences even as dementia progresses. Discussing wishes early ensures their voice is heard regarding where they want to spend their final days (home vs. hospital) and funeral arrangements (cremation vs. burial, music, flowers, etc.).",
+      "question": "What tool is recommended for helping families plan ahead for end-of-life care?",
+      "answer": "A document called \"Thinking Ahead\" is available, which uses simple language to guide families through important conversations about medical care, funeral preferences, and legal decisions.",
       "timestamp": null
     },
     {
-      "question": "Are there specific tools available to help families plan for end-of-life care for individuals with intellectual disabilities?",
-      "answer": "Yes, there is a tool called \"Thinking Ahead,\" developed by regional centers in California. It is written in simple language and guides families through the process of discussing important end-of-life decisions.",
+      "question": "How can caregivers support a person with Down syndrome who is losing independence in daily tasks?",
+      "answer": "Focus on maintaining what they can still do rather than trying to fix everything. Celebrate small successes and adjust expectations to match their current abilities. Avoid creating rigid behavior plans that ignore the underlying cause of the change, which is often brain chemistry.",
       "timestamp": null
     },
     {
-      "question": "What is a common mistake caregivers make when interacting with someone who has dementia and Down syndrome?",
-      "answer": "A common mistake is arguing or trying to force a person to remember something they have forgotten, such as a doctor's appointment they already had. When a person with dementia argues back, it often leads to frustration and withdrawal. Instead, caregivers should accept the reality of the memory loss and avoid power struggles.",
+      "question": "What is a major challenge regarding housing for people with Down syndrome who develop dementia?",
+      "answer": "Many people with Down syndrome have lived independently or in peer-based settings for decades. When dementia sets in, they may be forced to move to general senior care facilities where they are surrounded by unrelated elderly people, which can be confusing, isolating, and inappropriate for their specific needs.",
       "timestamp": null
     },
     {
-      "question": "How can caregivers help a person with dementia and Down syndrome maintain dignity during daily tasks?",
-      "answer": "Caregivers should focus on the person's past strengths and identity rather than just their current limitations. For example, remembering that a person used to be independent, go to college, or hold a job helps staff treat them with respect and avoid assuming they are incapable simply because of their diagnosis.",
+      "question": "What role do siblings often play when parents with Down syndrome develop dementia?",
+      "answer": "Siblings frequently become the primary caregivers. Since they may have grown up without direct caregiving experience and may have their own families and careers, they face a steep learning curve and significant emotional stress in stepping into this role unexpectedly.",
       "timestamp": null
     },
     {
       "question": "What is the relationship between seizures and dementia in people with Down syndrome?",
-      "answer": "About 85% of adults with Down syndrome develop seizures. Some evidence suggests that treating and preventing seizures with medication (like Keppra) may help slow down the progression of dementia. Seizures can also increase the risk of falls and injuries.",
+      "answer": "About 85% of adults with Down syndrome develop seizures. Seizures can be a symptom of the underlying brain changes associated with dementia. Managing seizures with medication, such as Keppra, may help slow the progression of cognitive decline.",
       "timestamp": null
     },
     {
-      "question": "Besides Alzheimer's, what other types of dementia or health issues should be considered in people with Down syndrome?",
-      "answer": "People with Down syndrome can develop various conditions including vascular dementia (due to heart problems or diabetes), Lewy Body disease, and Frontotemporal dementia (sometimes linked to falls). They are also prone to delusions, hallucinations, and confusion caused by other medical issues like urinary tract infections or gastrointestinal problems.",
+      "question": "Why might a person with Down syndrome be confused in a new environment like a nursing home?",
+      "answer": "People with Down syndrome often rely on familiar routines and people they know. In a new setting with unfamiliar faces, sounds, and rules, they may become anxious or unable to communicate effectively, leading to behaviors that look like aggression or confusion, even if their physical abilities are intact.",
       "timestamp": null
     },
     {
-      "question": "Why might a person with Down syndrome refuse to participate in a workshop or job program they used to enjoy?",
-      "answer": "As dementia sets in, continuing to force a person into a demanding environment can feel like \"enforced labor\" rather than a joyful activity. The person may no longer get value or joy from the work, and the stress of the situation can cause anxiety or outbursts. It is important to balance independence with the need for comfort and safety.",
+      "question": "What is the difference between having plaques and tangles in the brain and showing symptoms of dementia?",
+      "answer": "Having the physical markers of Alzheimer's (plaques and tangles) does not automatically mean a person will show symptoms. Some people have these markers but continue to function well. Conversely, people with Down syndrome almost always have these markers, but the speed at which they lead to symptoms varies.",
       "timestamp": null
     },
     {
-      "question": "What is a major challenge regarding housing for adults with Down syndrome who develop dementia?",
-      "answer": "There is a lack of specialized housing that is both \"dementia-capable\" and designed for people with intellectual disabilities. Families often face pressure to move their loved ones out of peer-supported environments into general senior living facilities where they may feel isolated and misunderstood.",
+      "question": "Besides Alzheimer's, what other types of dementia or medical issues should be considered in people with Down syndrome?",
+      "answer": "Doctors should also check for vascular dementia (due to heart conditions or diabetes), Lewy body disease, frontal temporal dementia, and delirium caused by infections or urinary tract issues. Assuming it is always Alzheimer's can delay proper treatment for other treatable conditions.",
       "timestamp": null
     },
     {
-      "question": "How can caregivers prepare for the day when they can no longer provide care for their loved one?",
-      "answer": "Caregivers should start exploring support options and backup decision-makers early, even while they are still healthy. This includes introducing other trusted people into the person's life so they are not solely dependent on the primary caregiver, ensuring continuity of care if the caregiver becomes unable to continue.",
+      "question": "How can caregivers help a person with Down syndrome maintain a sense of identity as dementia progresses?",
+      "answer": "Remind the person and the staff of who they were before the diagnosis. Share stories of their achievements, their personality, and their history. Treating them as a unique individual rather than just \"a person with Down syndrome\" helps preserve their dignity and self-worth.",
       "timestamp": null
     },
     {
-      "question": "What is the significance of the phrase \"you get what you deserve\" in the context of dementia care?",
-      "answer": "This phrase is used to explain that when a caregiver argues with a person who has dementia, the person often responds with anger or resistance. This reaction is a natural defense mechanism against the confusion and frustration of the disease, not a personal attack on the caregiver.",
+      "question": "What is a warning sign that a person with Down syndrome may be entering the later stages of dementia?",
+      "answer": "A significant change in behavior, such as refusing to leave a room, having outbursts in public areas, or suddenly becoming unable to perform basic tasks like showering or dressing, indicates a sharp decline that requires immediate attention and support.",
       "timestamp": null
     },
     {
-      "question": "Why is it important for staff to know the unique history and personality of a person with Down syndrome?",
-      "answer": "Knowing a person's history prevents them from being treated as a generic \"case.\" For instance, knowing someone was once a college student or a skilled worker helps staff adjust their expectations and interactions, recognizing that the person's current behavior is a result of brain changes, not a lack of inherent worth.",
+      "question": "Why is it important to involve a paid caregiver or a sibling early in the process?",
+      "answer": "Parents of people with Down syndrome are often older (late 60s or 70s) and may have their own health issues. Bringing in a paid caregiver or a sibling early ensures there is a backup plan if the parent becomes too ill to provide care, preventing a crisis later.",
       "timestamp": null
     },
     {
-      "question": "What role do siblings often play in caring for a parent with Down syndrome who develops dementia?",
-      "answer": "Siblings often become primary caregivers because parents may pass away or be too old to care for their adult children with Down syndrome. However, siblings may lack prior experience with intellectual disabilities and dementia, requiring them to learn new skills and manage complex emotional situations.",
+      "question": "What is the \"Thinking Ahead\" document designed to help with?",
+      "answer": "It is a guide designed to help families discuss and document important decisions about future care, including where the person wants to live, their preferences for medical treatment, and their wishes for their funeral or memorial service.",
       "timestamp": null
     },
     {
-      "question": "How does the \"reserve capacity\" of the brain affect people with Down syndrome who have dementia?",
-      "answer": "Research shows that some people with Down syndrome have significant brain plaques and tangles but do not show obvious symptoms because their brains have a high \"reserve capacity\"—meaning they can compensate for the damage. This explains why some individuals progress slowly despite having the disease markers.",
+      "question": "How should caregivers respond when a person with dementia says something that contradicts reality, like denying they are sick?",
+      "answer": "Do not argue or try to correct them with facts. Instead, validate their feelings and gently steer the conversation toward something comforting or positive. For example, if they say they are fine, you can say, \"I know you feel okay, and I'm glad to hear that.\"",
       "timestamp": null
     },
     {
-      "question": "What is the \"two-system\" conflict mentioned regarding aging and Down syndrome?",
-      "answer": "There is often a conflict between the aging system (which focuses on dementia care) and the intellectual disability system (which focuses on developmental support). These systems often have different funding, rules, and expectations, making it difficult to find integrated care solutions for people who qualify for both.",
+      "question": "What is the significance of the \"National Task Group\" mentioned in the video?",
+      "answer": "The National Task Group is an organization dedicated to educating the community about the link between Down syndrome and dementia. They provide resources, training, and advocacy to help families and caregivers understand and manage these dual diagnoses.",
       "timestamp": null
     },
     {
-      "question": "Why might a doctor misdiagnose the symptoms of dementia in a person with Down syndrome?",
-      "answer": "Doctors may attribute behavioral changes to the person's intellectual disability or mental state (e.g., calling them \"stubborn\" or \"acting out\") rather than investigating dementia. They might also overlook common medical causes like infections or hormonal imbalances before considering dementia.",
+      "question": "Why might a person with Down syndrome have difficulty articulating words clearly in a new setting?",
+      "answer": "Many people with Down syndrome have smaller oral cavities and thicker tongues, which can make speech clearer in familiar environments where listeners know how to interpret their voice. In unfamiliar settings with strangers, this physical trait combined with anxiety can make communication much harder.",
       "timestamp": null
     },
     {
-      "question": "What is the importance of the \"National Task Group\" mentioned in the transcript?",
-      "answer": "The National Task Group (NTG) is an organization dedicated to improving education, training, and resources for families and professionals dealing with the intersection of dementia and intellectual disabilities. They work to raise awareness and provide support networks.",
+      "question": "What is the importance of recognizing that people with Down syndrome have \"compressed lifespans\"?",
+      "answer": "Because people with Down syndrome often live shorter lives than the general population, they may reach old age and develop dementia much younger than expected. This means they need support systems designed for aging adults, not just childhood or young adulthood programs.",
       "timestamp": null
     },
     {
-      "question": "How can caregivers identify early signs of dementia in a person with Down syndrome who is non-verbal?",
-      "answer": "Caregivers should look for changes in behavior patterns, such as increased agitation, withdrawal, loss of interest in favorite activities, or changes in sleep and eating habits. Comparing these behaviors to the established baseline of what the person used to do is crucial for spotting changes.",
+      "question": "How can caregivers distinguish between depression and dementia in a person with Down syndrome?",
+      "answer": "Depression can look like withdrawal, lack of interest, or sadness, while dementia involves a loss of previously acquired skills like memory, reasoning, and daily functioning. However, dementia can cause depression, so it is important to monitor both and seek professional help to determine the cause.",
       "timestamp": null
     },
     {
-      "question": "What is the recommended age to start screening for dementia in people with Down syndrome?",
-      "answer": "Experts recommend starting early detection screenings around age 35 for people with Down syndrome, and around ages 40 to 45 for others with intellectual disabilities, to catch changes before they become severe.",
+      "question": "What is the role of the \"PAC\" (Positive Approach to Care) philosophy in caring for people with dementia?",
+      "answer": "PAC emphasizes respect, empowerment, and choice. It encourages caregivers to see the person behind the diagnosis, to avoid labeling behaviors as \"bad,\" and to focus on finding solutions that honor the person's dignity and autonomy.",
       "timestamp": null
     },
     {
-      "question": "Why is it helpful to involve a psychiatrist or specialist when diagnosing dementia in this population?",
-      "answer": "Specialists are more familiar with the specific presentation of dementia in people with Down syndrome and can distinguish between dementia symptoms and other conditions like depression, anxiety, or delirium, which are also common in this group.",
+      "question": "Why is it important to avoid using outdated terms like \"retarded\" or \"demented\"?",
+      "answer": "Using these terms can be hurtful and dehumanizing. They focus on limitations rather than the person's humanity. Using respectful language helps create a supportive environment where the person feels valued and understood.",
       "timestamp": null
     },
     {
-      "question": "What is the emotional impact on families when they realize their loved one has dementia?",
-      "answer": "Families often feel grief, confusion, and fear, especially if they were proud of their loved one's independence. They may struggle with accepting that the person they knew is changing and may feel guilty if they had not recognized the signs earlier.",
+      "question": "What is a key takeaway for families about the \"first wave\" of aging people with Down syndrome?",
+      "answer": "This is a new generation that is living longer than ever before. Society and healthcare systems are just beginning to learn how to support them through the aging process and dementia, so patience and education are essential for families.",
       "timestamp": null
     },
     {
-      "question": "How can caregivers support a person with dementia who is struggling with safety issues, like locking doors?",
-      "answer": "Caregivers can modify the environment to ensure safety without completely removing autonomy. For example, reversing a lock so a door cannot be locked from the inside allows the person to feel they have privacy while ensuring a caregiver can still enter in an emergency.",
+      "question": "How can caregivers help a person with dementia who is afraid of falling or having a seizure?",
+      "answer": "Create a safe environment by removing hazards, ensuring good lighting, and keeping the person close to trusted caregivers. Reassure them that they are safe and that you are there to help them if anything happens.",
       "timestamp": null
     },
     {
-      "question": "What is the message of hope provided by the speakers regarding the future of care for this population?",
-      "answer": "The speakers emphasize that while challenges exist, there is a growing movement of awareness, training, and research. By educating caregivers, establishing baselines, and advocating for better systems, society can improve the quality of life and dignity for people with Down syndrome living with dementia.",
+      "question": "What is the benefit of having a person with Down syndrome live in a \"dementia-capable home\"?",
+      "answer": "These homes are designed to understand the specific needs of people with both intellectual disabilities and dementia. They offer a supportive environment where staff are trained to handle complex behaviors and medical needs without forcing the person into a general senior facility.",
       "timestamp": null
     },
     {
-      "question": "Why is it important to celebrate the achievements of people with Down syndrome even as they age?",
-      "answer": "Celebrating their past and present achievements validates their identity and humanity. It reminds caregivers and staff that these individuals are unique people with rich histories, not just patients defined by their diagnoses or limitations.",
+      "question": "Why is it important to check for medical issues like UTIs or constipation before assuming dementia symptoms are worsening?",
+      "answer": "Medical issues like infections can cause sudden confusion, agitation, or withdrawal that mimics dementia progression. Treating the underlying medical problem often resolves the behavioral symptoms, whereas treating it as just \"more dementia\" misses the chance to improve the person's quality of life.",
       "timestamp": null
     },
     {
-      "question": "What is the role of \"positive approaches\" in dementia care according to the PAC philosophy?",
-      "answer": "The Positive Approach to Care (PAC) emphasizes respecting the person's dignity, giving them choices, and focusing on their strengths rather than just managing behaviors. It encourages caregivers to be empathetic, flexible, and supportive rather than controlling.",
+      "question": "What is the role of the \"IEP\" (Individualized Education Program) in dementia care?",
+      "answer": "The IEP documents the person's educational goals, strengths, and needs from their youth. It serves as a historical record of their abilities and can help caregivers and doctors understand their baseline skills and how they have changed over time.",
       "timestamp": null
     },
     {
-      "question": "How does the transcript describe the experience of living longer for people with Down syndrome?",
-      "answer": "Living longer is described as a \"new challenge\" and a \"fortunate\" event because it allows people to live fuller lives, but it brings the unexpected burden of dementia. It requires society to adapt its systems to support this new demographic of aging adults with intellectual disabilities.",
+      "question": "How can caregivers support a person with dementia who is struggling with transitions, like going to a doctor's appointment?",
+      "answer": "Prepare the person well in advance, use visual cues like calendars or pictures, and keep the routine consistent. If they become upset, pause the transition, calm them down, and try again later rather than forcing them immediately.",
       "timestamp": null
     },
     {
-      "question": "What advice is given to families about balancing independence and safety?",
-      "answer": "Families are advised to find a \"comfortable balance\" where they support independence as long as possible without compromising safety. They should avoid valuing independence above all else if it puts the person at risk, and instead focus on maintaining a good quality of life.",
+      "question": "What is the importance of celebrating the achievements of people with Down syndrome, even as they age?",
+      "answer": "Celebrating their past and present successes reinforces their self-esteem and reminds everyone of their unique value. It shifts the focus from what they have lost to what they have accomplished and who they are as individuals.",
       "timestamp": null
     },
     {
-      "question": "Why is it difficult to find appropriate housing for adults with Down syndrome who develop dementia?",
-      "answer": "Most housing options are either designed for general seniors (who may not understand the specific needs of IDD) or for younger adults with IDD (who may not be equipped for dementia care). There is a significant gap in the market for facilities that understand both conditions.",
+      "question": "Why is it important to have a plan for when the primary caregiver (often a parent) can no longer provide care?",
+      "answer": "Parents of people with Down syndrome are often older and may develop their own health issues. Having a plan in place ensures that the person with dementia receives continuous, high-quality care without disruption when the primary caregiver is no longer able to do so.",
       "timestamp": null
     },
     {
-      "question": "What is the significance of the story about Paula's daughter Kyle falling in love?",
-      "answer": "The story illustrates that even with dementia, people with Down syndrome can experience deep emotions and form connections. It highlights their capacity for love and joy, reminding caregivers to cherish these moments and respect their emotional lives.",
+      "question": "What is the significance of the \"reserve\" capacity in the brain?",
+      "answer": "Some people have a greater \"cognitive reserve,\" meaning their brains can compensate for damage caused by plaques and tangles for a longer time. This explains why some people with Down syndrome may show fewer symptoms despite having the physical markers of Alzheimer's.",
       "timestamp": null
     },
     {
-      "question": "How can caregivers handle the guilt of not recognizing early signs of dementia?",
-      "answer": "Caregivers should be gentle with themselves, understanding that dementia in this population is a relatively new phenomenon and that lack of awareness is common. Learning to recognize signs now is the most important step to help the person.",
+      "question": "How can caregivers help a person with dementia who is resistant to changing their routine?",
+      "answer": "Try to maintain their existing routines as much as possible. If a change is necessary, introduce it slowly and explain it simply. Offer choices within the routine to give them a sense of control.",
       "timestamp": null
     },
     {
-      "question": "What resources are suggested for caregivers seeking more information or training?",
-      "answer": "Resources include organizations like the National Task Group (NTG), the Alzheimer's Association, and local groups like the ARC. Caregivers are encouraged to seek out training on Positive Approach to Care (PAC) and to connect with other families facing similar situations.",
+      "question": "What is the role of the \"National Task Group\" in providing resources for families?",
+      "answer": "The National Task Group provides educational materials, training, and support networks specifically tailored to families dealing with the intersection of Down syndrome and dementia. They help bridge the gap between medical knowledge and practical caregiving.",
       "timestamp": null
     },
     {
-      "question": "What is the ultimate goal of the educational efforts discussed in the video?",
-      "answer": "The ultimate goal is to empower caregivers and professionals with the knowledge and skills to provide respectful, effective, and compassionate care that honors the unique lives of people with Down syndrome living with dementia.",
+      "question": "Why is it important to involve the person with dementia in decision-making, even if they seem confused?",
+      "answer": "Involving them in decisions respects their autonomy and gives them a sense of control. Even if they cannot make complex decisions, they can still express preferences about small things, like food or music, which improves their mood and engagement.",
+      "timestamp": null
+    },
+    {
+      "question": "What is the ultimate goal of the Positive Approach to Care (PAC) in dementia care?",
+      "answer": "The goal of PAC is to ensure that people with dementia are treated with dignity, respect, and compassion. It aims to reduce suffering, prevent unnecessary hospitalizations, and improve the quality of life for both the person with dementia and their caregivers.",
       "timestamp": null
     }
   ],
-  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/5/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-47.json",
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/5/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-52.json",
   "valid": false,
-  "error": "Expected exactly 39 QA pairs; parsed 38"
+  "error": "Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=3669.100s (allowed end <= 3670s)"
 }
