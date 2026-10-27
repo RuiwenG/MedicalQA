@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 1028.28,
+  "timestamp_lines": [
+    "Timestamp 1: 0:10-0:26",
+    "Timestamp 2: 0:26-1:01",
+    "Timestamp 3: 1:09-1:56",
+    "Timestamp 4: 2:12-2:37",
+    "Timestamp 5: 3:12-4:47",
+    "Timestamp 6: 4:47-7:07",
+    "Timestamp 7: 9:07-9:38",
+    "Timestamp 8: 7:41-8:56",
+    "Timestamp 9: 10:25-11:15",
+    "Timestamp 10: 11:15-11:44",
+    "Timestamp 11: 14:16-15:07"
+  ],
+  "pairs": [
+    {
+      "question": "What is Frontotemporal Dementia (FTD) and where does the brain damage occur?",
+      "answer": "Frontotemporal Dementia, specifically the behavioral variant, is caused by damage to the prefrontal cortex, which is the front part of the brain. This area controls personality, judgment, and social behavior. In this type of dementia, a substance called tau becomes active and damages these areas, leading to changes in how a person acts and thinks.",
+      "timestamp": "0:10-0:26",
+      "time_start_sec": 10,
+      "time_end_sec": 26
+    },
+    {
+      "question": "How can past head injuries affect someone's behavior later in life?",
+      "answer": "Past head injuries, such as those from car accidents, sports collisions, or falls where the head hits the front or back, can cause damage to the prefrontal cortex. Even if the injury seemed minor at the time, it can lead to lasting changes in personality or behavior. It is important to investigate these changes because the person might recover, or they might have a permanent condition that needs management.",
+      "timestamp": "0:26-1:01",
+      "time_start_sec": 26,
+      "time_end_sec": 61
+    },
+    {
+      "question": "Why might someone show symptoms that look like dementia but are actually related to life stressors?",
+      "answer": "Sometimes, people in their midlife or later years develop symptoms like apathy, anxiety, or depression due to life events, substance use, or mental health struggles. However, if a person's behavior changes significantly from who they used to be—such as losing interest in hygiene or work—it might not just be \"midlife stuff.\" These sudden shifts could indicate neurological damage rather than just temporary emotional issues.",
+      "timestamp": "1:09-1:56",
+      "time_start_sec": 69,
+      "time_end_sec": 116
+    },
+    {
+      "question": "What is apathy, and how does it show up in people with FTD?",
+      "answer": "Apathy is a lack of interest or motivation to do things. In FTD, a person might stop caring about personal hygiene, such as not showering, not changing clothes, or ignoring how they smell. They may feel unable to start tasks, thinking, \"Who cares?\" even though they know they should. This is not laziness; it is a result of brain damage affecting their drive and initiative.",
+      "timestamp": "2:12-2:37",
+      "time_start_sec": 132,
+      "time_end_sec": 157
+    },
+    {
+      "question": "What are the warning signs of poor social judgment in FTD?",
+      "answer": "People with FTD may lose their social filters and say things that are rude, offensive, or inappropriate in public places like stores or religious groups. They might make loud, direct comments that were never part of their personality. They may also seek intense or inappropriate relationships, touch others without permission, or fail to notice when someone is uncomfortable, simply because their brain cannot process social cues correctly.",
+      "timestamp": "3:12-4:47",
+      "time_start_sec": 192,
+      "time_end_sec": 287
+    },
+    {
+      "question": "What kinds of risky behaviors related to money and shopping are common in FTD?",
+      "answer": "Impulse control issues often lead to dangerous financial habits. A person might shoplift, spend money they do not have on unnecessary items, gamble heavily, or sell family assets like cars. They might also make mistakes at work that lead to getting fired, or they may blame others for their errors instead of admitting fault. These actions happen because the brain loses the ability to plan and follow through logically.",
+      "timestamp": "4:47-7:07",
+      "time_start_sec": 287,
+      "time_end_sec": 427
+    },
+    {
+      "question": "How does the loss of empathy appear in someone with FTD?",
+      "answer": "A key sign of FTD is a lack of empathy or reduced ability to understand others' feelings. A person might not understand why a friend is crying or upset about losing a job, responding with indifference like, \"I don't understand why you're so upset.\" They may dismiss serious problems as not being their concern, even if they have worked hard for years, because their brain struggles to connect with the emotions of others.",
+      "timestamp": "9:07-9:38",
+      "time_start_sec": 547,
+      "time_end_sec": 578
+    },
+    {
+      "question": "What are some repetitive behaviors or \"loops\" that caregivers might observe?",
+      "answer": "Frustration and anxiety can cause a person to get stuck in repetitive loops. They might wash their hands constantly, check doors repeatedly, fold and unfold clothes, or empty and refill drawers over and over. They may also watch the same TV channel for hours or repeat the same conversation topics, insisting the listener did not hear them before. This is not a memory problem; it is a lack of appreciation for what was already said.",
+      "timestamp": "7:41-8:56",
+      "time_start_sec": 461,
+      "time_end_sec": 536
+    },
+    {
+      "question": "What are the dangers associated with hyperorality and eating changes in FTD?",
+      "answer": "Some people with FTD develop hyperorality, a strong urge to put things in their mouths. They might chew on non-food items, smoke, drink excessively, or eat unsafe objects. Others may binge eat to the point of harming their organs or suddenly stop eating entirely out of worry. These drastic changes in eating habits can lead to severe physical damage or malnutrition.",
+      "timestamp": "10:25-11:15",
+      "time_start_sec": 625,
+      "time_end_sec": 675
+    },
+    {
+      "question": "How should a caregiver communicate with a person who has FTD when making decisions?",
+      "answer": "Because decision-making abilities are impaired, caregivers should avoid giving too many choices. Instead of asking \"What do you want to do?\", offer only two simple options. For example, ask if they want tea or water, rather than listing ten drinks. This helps reduce confusion and allows the person to participate in a choice without being overwhelmed by complex thinking.",
+      "timestamp": "11:15-11:44",
+      "time_start_sec": 675,
+      "time_end_sec": 704
+    },
+    {
+      "question": "Why is it important for a person with FTD to realize that their bad behavior is not their fault?",
+      "answer": "Many people with FTD eventually become aware that their behavior is not \"them,\" but rather the result of the disease taking over. Understanding this distinction is crucial because it reduces shame and guilt. Recognizing that their brain is failing to control impulses helps them accept that they need a safe environment and support to prevent hurting themselves or others, rather than blaming themselves for things they cannot control.",
+      "timestamp": "14:16-15:07",
+      "time_start_sec": 856,
+      "time_end_sec": 907
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/FTD/1/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

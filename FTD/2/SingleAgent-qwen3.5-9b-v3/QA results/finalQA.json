@@ -1,0 +1,107 @@
+[
+  {
+    "question": "What are the three main types of Frontotemporal Dementia (FTD) with motor symptoms discussed in the video?",
+    "answer": "The video discusses three variations: ALS-FTD (which combines motor neuron disease with frontal/temporal damage), Corticobasal Syndrome (CBS), and Progressive Supranuclear Palsy (PSP). While they are different, all three ultimately affect the brain's ability to control the body and can progress quickly.",
+    "timestamp": "0:00-0:45",
+    "time_start_sec": 0,
+    "time_end_sec": 45
+  },
+  {
+    "question": "How does ALS-FTD differ from standard ALS regarding cognitive abilities?",
+    "answer": "In standard ALS, people usually remain cognitively intact. However, in ALS-FTD, the person also suffers from frontal and temporal lobe damage. This leads to problems with thinking, processing, understanding, and behavior, meaning they lose control over both their body and their brain functions.",
+    "timestamp": "1:00-1:30",
+    "time_start_sec": 60,
+    "time_end_sec": 90
+  },
+  {
+    "question": "What are the early physical warning signs of ALS-FTD that a caregiver should watch for?",
+    "answer": "Early signs include muscle weakness, such as difficulty holding a pen or cup, dropping objects, trouble lifting arms overhead, clumsiness, and difficulty breathing while active. You may also notice a loss of muscle tissue, frequent twitching, or stiffness (spasticity) in the muscles.",
+    "timestamp": "2:18-2:45",
+    "time_start_sec": 138,
+    "time_end_sec": 165
+  },
+  {
+    "question": "Why might a person with ALS-FTD be mistakenly diagnosed with Parkinson's disease?",
+    "answer": "ALS-FTD can cause slurred speech, facial muscle weakness, drooling, and stiffness, which look very similar to Parkinson's. Because of these similarities, doctors might initially misidentify the condition. This is risky because medications used for Parkinson's can be dangerous for someone with ALS-FTD.",
+    "timestamp": "3:14-3:40",
+    "time_start_sec": 194,
+    "time_end_sec": 220
+  },
+  {
+    "question": "What is the name of the medication mentioned that aims to slow the progression of ALS, and what is its limitation?",
+    "answer": "The medication is called Riluzole. Its goal is to slow down the ALS progression, which may help extend life. However, it is not guaranteed to work for everyone, and it may not effectively treat other symptom problems associated with the condition.",
+    "timestamp": "3:45-4:15",
+    "time_start_sec": 225,
+    "time_end_sec": 255
+  },
+  {
+    "question": "How long can the progression of ALS-FTD last, and what factors influence this timeline?",
+    "answer": "Progression varies greatly. It can be as fast as two to three years, or it can last five to ten years, or even longer. The combination of ALS and FTD makes it particularly challenging for the person to tolerate necessary treatments, such as using a ventilator or oxygen, which can be difficult emotionally and physically.",
+    "timestamp": "5:02-5:35",
+    "time_start_sec": 302,
+    "time_end_sec": 335
+  },
+  {
+    "question": "What specific genetic protein is linked to both ALS and FTD?",
+    "answer": "Both conditions are often related to a protein called TDP-43. Abnormalities in this protein, along with another protein called FUS (fused in sarcoma), are found in these conditions. These abnormal proteins are also seen in other forms of dementia in older adults.",
+    "timestamp": "6:21-6:45",
+    "time_start_sec": 381,
+    "time_end_sec": 405
+  },
+  {
+    "question": "What is Corticobasal Syndrome (CBS), and how does it affect movement?",
+    "answer": "CBS is a movement disorder caused by damage deep in the prefrontal cortex. A person knows exactly what they want to do but cannot get their limbs to move properly. Simple tasks like opening a door, operating a TV, or whisking eggs become impossible despite knowing how to do them. It often starts on one side of the body before affecting both.",
+    "timestamp": "7:02-8:15",
+    "time_start_sec": 422,
+    "time_end_sec": 495
+  },
+  {
+    "question": "What is dystonia, and how does it manifest in CBS?",
+    "answer": "Dystonia is a condition where muscles contract suddenly and pull the body into strange, involuntary positions. In CBS, a person cannot relax these muscles, making it very hard to correct the posture or stop the movement.",
+    "timestamp": "8:59-9:15",
+    "time_start_sec": 539,
+    "time_end_sec": 555
+  },
+  {
+    "question": "What are the common cognitive and spatial difficulties experienced by someone with CBS?",
+    "answer": "Beyond movement issues, a person with CBS may struggle with basic math, lose the ability to recognize their own body parts, or have trouble using their eyes to orient themselves in space. They might also trip or fall frequently because their brain makes mistakes during movement.",
+    "timestamp": "9:16-9:30",
+    "time_start_sec": 556,
+    "time_end_sec": 570
+  },
+  {
+    "question": "Why are standard Parkinson's medications often ineffective or risky for someone with CBS?",
+    "answer": "Medications designed to control rigidity and slowness in Parkinson's often do not work for CBS. Additionally, drugs like benzodiazepines (used for anxiety or sleep) might help slightly with tight muscles but can have negative effects. Because research is limited and the condition is rare, finding the right treatment requires great caution.",
+    "timestamp": "10:40-11:20",
+    "time_start_sec": 640,
+    "time_end_sec": 680
+  },
+  {
+    "question": "What are the serious health risks associated with the later stages of CBS?",
+    "answer": "As mobility decreases, the person becomes dependent on others. The leading causes of death are often pneumonia, sepsis, or a pulmonary embolism (a blood clot in the lung). This highlights the importance of planning ahead and discussing end-of-life wishes early.",
+    "timestamp": "12:15-12:45",
+    "time_start_sec": 735,
+    "time_end_sec": 765
+  },
+  {
+    "question": "How can caregivers manage excessive drooling or saliva production in someone with CBS?",
+    "answer": "Excess saliva can be embarrassing and uncomfortable. Caregivers can try gentle suctioning from the mouth (not the throat) to remove fluid. However, they must be very careful not to use too many drying medications, as these can affect the central nervous system and make the situation worse.",
+    "timestamp": "13:20-14:05",
+    "time_start_sec": 800,
+    "time_end_sec": 845
+  },
+  {
+    "question": "What are the key eye movement and balance issues seen in Progressive Supranuclear Palsy (PSP)?",
+    "answer": "PSP primarily affects eye movements. People may experience rapid, uncontrollable blinking, blurred vision, or an inability to look down or move eyes horizontally (often called \"doll's eyes\"). They also have trouble with balance and walking, resulting in an awkward, unsteady gait.",
+    "timestamp": "15:10-16:05",
+    "time_start_sec": 910,
+    "time_end_sec": 965
+  },
+  {
+    "question": "What behavioral changes and safety risks are common in PSP?",
+    "answer": "People with PSP often have slurred speech, trouble swallowing (leading to choking or aspiration pneumonia), and difficulty controlling their tongue. Behaviorally, they may show depression, apathy, or impulsivity like gambling and spending money. They are also at high risk for falls due to balance issues.",
+    "timestamp": "16:12-17:00",
+    "time_start_sec": 972,
+    "time_end_sec": 1020
+  }
+]

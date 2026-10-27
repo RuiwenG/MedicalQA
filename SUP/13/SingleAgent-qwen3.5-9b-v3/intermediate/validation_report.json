@@ -1,0 +1,307 @@
+{
+  "expected_pairs": 37,
+  "parsed_pairs": 37,
+  "transcript_end_sec": 3577.96,
+  "timestamp_lines": [
+    "Timestamp 1: 35:52-36:38",
+    "Timestamp 2: 17:11-18:05",
+    "Timestamp 3: 23:17-24:14",
+    "Timestamp 4: 29:10-30:02",
+    "Timestamp 5: 31:13-33:12",
+    "Timestamp 6: 37:56-39:08",
+    "Timestamp 7: 42:26-44:50",
+    "Timestamp 8: 50:02-51:37",
+    "Timestamp 9: 26:07-27:40",
+    "Timestamp 10: 36:59-37:27",
+    "Timestamp 11: 09:13-09:39",
+    "Timestamp 12: 10:36-11:17",
+    "Timestamp 13: 11:39-12:45",
+    "Timestamp 14: 54:10-54:35",
+    "Timestamp 15: 55:34-55:48",
+    "Timestamp 16: 33:46-33:55",
+    "Timestamp 17: 38:34-39:08",
+    "Timestamp 18: 53:27-53:40",
+    "Timestamp 19: 15:56-16:19",
+    "Timestamp 20: 30:45-31:13",
+    "Timestamp 21: 41:44-42:16",
+    "Timestamp 22: 51:13-51:37",
+    "Timestamp 23: 52:22-53:27",
+    "Timestamp 24: 06:39-07:13",
+    "Timestamp 25: 27:22-28:25",
+    "Timestamp 26: 22:02-22:36",
+    "Timestamp 27: 26:29-26:53",
+    "Timestamp 28: 05:21-05:55",
+    "Timestamp 29: 31:37-31:58",
+    "Timestamp 30: 41:08-41:37",
+    "Timestamp 31: 51:37-51:51",
+    "Timestamp 32: 50:32-50:46",
+    "Timestamp 33: 14:14-15:02",
+    "Timestamp 34: 48:33-48:50",
+    "Timestamp 35: 50:02-50:20",
+    "Timestamp 36: 24:39-24:44",
+    "Timestamp 37: 47:31-48:33"
+  ],
+  "pairs": [
+    {
+      "question": "What is a \"gem state\" and why is it important for caregivers?",
+      "answer": "A \"gem state\" refers to the different potential stages or modes a person with brain change can be in at any given moment, similar to how a gemstone has different facets. It is important because it helps caregivers understand that a person's ability to engage changes dynamically throughout the day. Knowing the current gem state allows you to tailor activities and interactions to match their specific energy and cognitive level, ensuring the interaction is successful and respectful.",
+      "timestamp": "35:52-36:38",
+      "time_start_sec": 2152,
+      "time_end_sec": 2198
+    },
+    {
+      "question": "What is the difference between \"person-centered care\" and \"relational care\"?",
+      "answer": "Person-centered care focuses on the individual's needs, but relational care adds a layer of partnership. While person-centered care can sometimes feel like a one-way street where the caregiver directs the person, relational care is a two-way street. It involves creating a partnership where both the caregiver and the person with brain change contribute to the experience, co-creating something new together rather than just following instructions.",
+      "timestamp": "17:11-18:05",
+      "time_start_sec": 1031,
+      "time_end_sec": 1085
+    },
+    {
+      "question": "What is a \"joy trigger\" and how can caregivers use it?",
+      "answer": "A \"joy trigger\" is a small, tangible thing that makes a person happy, such as wearing a favorite color, listening to specific music, or holding a particular object. Caregivers can use joy triggers to lift a person's mood and create positive moments. Instead of focusing only on avoiding negative behaviors or frustrations, identifying and incorporating these small joys can bring happiness and connection into daily routines.",
+      "timestamp": "23:17-24:14",
+      "time_start_sec": 1397,
+      "time_end_sec": 1454
+    },
+    {
+      "question": "Why might a person with dementia prefer \"doing nothing\" or sitting quietly?",
+      "answer": "For a person with dementia, everyday tasks like dressing, eating, or walking require significant mental effort known as \"cognitive reserves.\" When they are tired, forcing them to participate in activities can drain these reserves and lead to frustration or exhaustion. Sitting quietly allows them to recharge. It is not laziness; it is a necessary time for recovery so they can function as well as possible for the rest of the day.",
+      "timestamp": "29:10-30:02",
+      "time_start_sec": 1750,
+      "time_end_sec": 1802
+    },
+    {
+      "question": "What is the \"still life\" metaphor for quiet moments, and why is it helpful?",
+      "answer": "The \"still life\" metaphor compares a person sitting quietly to a painting of a still life, which looks calm on the surface but contains complex details and life underneath. This metaphor helps families understand that even when a person seems inactive, their brain is working hard internally. Recognizing this beauty in stillness encourages caregivers to respect quiet time instead of rushing to fill every silence with activity.",
+      "timestamp": "31:13-33:12",
+      "time_start_sec": 1873,
+      "time_end_sec": 1992
+    },
+    {
+      "question": "Why should caregivers avoid using standard bingo games for people with dementia?",
+      "answer": "Standard bingo games often involve too much noise, movement, and sensory stimulation, which can cause a person with dementia to freeze or feel overwhelmed. These games are often designed as \"one-size-fits-all\" activities that ignore individual differences. For many people with brain change, the chaos of a loud bingo hall creates anxiety rather than enjoyment, leading to negative experiences for both the person and the staff.",
+      "timestamp": "37:56-39:08",
+      "time_start_sec": 2276,
+      "time_end_sec": 2348
+    },
+    {
+      "question": "How can caregivers adapt holiday celebrations for someone with dementia?",
+      "answer": "Caregivers should simplify holiday decorations and activities to prevent sensory overload. Instead of decorating the entire house with lights and ornaments, choose a few meaningful items, like a single strand of lights on a tree. It is crucial to recognize that what a person loved in the past (like elaborate decorations) may not suit their current needs. Adapting the environment to be calmer allows the person to enjoy the spirit of the season without feeling stressed or confused.",
+      "timestamp": "42:26-44:50",
+      "time_start_sec": 2546,
+      "time_end_sec": 2690
+    },
+    {
+      "question": "What is the purpose of Catherine Livingstone's \"illustration books\"?",
+      "answer": "These books are designed to promote \"relational care\" by providing a shared activity for people of different abilities to do together. Unlike standard coloring books, they include conversation prompts that encourage storytelling about the images. They feature varied levels of detail so that everyone at the table can participate, honoring past interests like mechanics or boats while fostering new connections and communication.",
+      "timestamp": "50:02-51:37",
+      "time_start_sec": 3002,
+      "time_end_sec": 3097
+    },
+    {
+      "question": "How can caregivers find a balance between activity and rest for a person with dementia?",
+      "answer": "Caregivers should listen to the person's cues regarding energy levels. If a person seems to lack activity or seems withdrawn, it may be because their cognitive reserves are depleted from earlier tasks. Rather than forcing more activities, it is better to allow for periods of rest. Understanding that \"voluntary\" activities (choosing to do something) are harder than \"involuntary\" ones (routine tasks) helps caregivers schedule downtime appropriately.",
+      "timestamp": "26:07-27:40",
+      "time_start_sec": 1567,
+      "time_end_sec": 1660
+    },
+    {
+      "question": "What is the significance of the phrase \"engagement is not entertainment\"?",
+      "answer": "This phrase means that simply keeping a person busy with noise or games (entertainment) is not the same as true engagement. True engagement involves meaningful connection, storytelling, and interaction tailored to the person's current state. Entertainment might pass the time, but engagement builds relationships and honors the person's identity and capabilities, making the experience valuable for both the person with dementia and their caregiver.",
+      "timestamp": "36:59-37:27",
+      "time_start_sec": 2219,
+      "time_end_sec": 2247
+    },
+    {
+      "question": "How can caregivers support Indigenous elders or people from diverse backgrounds in dementia care?",
+      "answer": "Caregivers can support diverse individuals by approaching care with humility and a willingness to learn. This involves recognizing that care looks different across cultures and practicing \"decolonized care,\" which respects the person's heritage and traditions. Listening to the stories and cultural touchpoints of the person being cared for helps build trust and ensures the care provided is respectful and relevant to their specific background.",
+      "timestamp": "09:13-09:39",
+      "time_start_sec": 553,
+      "time_end_sec": 579
+    },
+    {
+      "question": "What is the \"Opal Season Company\" and how does it help the community?",
+      "answer": "The Opal Season Company is a social enterprise founded by Catherine Livingstone that is mission-driven rather than profit-driven. It provides psychosocial support and engagement strategies for families and organizations. Part of its profits supports underserved communities, specifically Indigenous seniors and rural Canadian seniors, helping to bridge gaps in care and education for those who often lack resources.",
+      "timestamp": "10:36-11:17",
+      "time_start_sec": 636,
+      "time_end_sec": 677
+    },
+    {
+      "question": "What is a \"crunchy point\" in the context of dementia care?",
+      "answer": "A \"crunchy point\" refers to challenging situations or difficult emotions that arise during care, such as grief or complex family dynamics. Instead of viewing these moments purely as clinical problems, caregivers are encouraged to look at them creatively. By applying a creative lens, caregivers can find new options to support the person, moving away from a strict clinical approach to a more compassionate, treatment-focused mindset.",
+      "timestamp": "11:39-12:45",
+      "time_start_sec": 699,
+      "time_end_sec": 765
+    },
+    {
+      "question": "How can caregivers use the past careers or hobbies of a person with dementia?",
+      "answer": "Caregivers can honor a person's past by incorporating their former careers or hobbies into current activities. For example, if someone used to be a mechanic, an illustration book featuring tools can spark memories and allow them to share their expertise. This validates their life experience and identity, showing them that they are still valued for their skills and knowledge even as their brain changes.",
+      "timestamp": "54:10-54:35",
+      "time_start_sec": 3250,
+      "time_end_sec": 3275
+    },
+    {
+      "question": "Why is it important to avoid labeling activities as \"dementia-specific\"?",
+      "answer": "Avoiding clinical labels like \"dementia\" in materials helps preserve dignity and reduces stigma. When activities are presented as inclusive for older adults or people of all abilities, it allows the person to participate without feeling defined by their diagnosis. This approach fosters a sense of normalcy and community, encouraging people to engage in activities they enjoy rather than feeling segregated into a \"special\" category.",
+      "timestamp": "55:34-55:48",
+      "time_start_sec": 3334,
+      "time_end_sec": 3348
+    },
+    {
+      "question": "What is the role of a \"curator\" in a memory care setting?",
+      "answer": "A \"curator\" in a memory care setting acts like an art museum curator, carefully selecting and arranging activities and environments to create meaningful experiences. Their role is to notice the subtle details of a person's state and \"exhibit\" their life story through thoughtful engagement. This position ensures that care is personalized, artistic, and respectful, treating each person's day as a unique masterpiece.",
+      "timestamp": "33:46-33:55",
+      "time_start_sec": 2026,
+      "time_end_sec": 2035
+    },
+    {
+      "question": "How can caregivers identify if an activity is causing sensory overload?",
+      "answer": "Signs of sensory overload include freezing, agitation, or withdrawal when exposed to loud noises, bright lights, or chaotic environments. If a person stops participating or looks distressed during an activity like bingo, it is likely too stimulating. Caregivers should observe the person's reaction and adjust the environment by reducing noise, simplifying the activity, or allowing for a quiet break to prevent overwhelm.",
+      "timestamp": "38:34-39:08",
+      "time_start_sec": 2314,
+      "time_end_sec": 2348
+    },
+    {
+      "question": "What is the benefit of using printable, eco-conscious products for dementia care?",
+      "answer": "Printable products reduce the carbon footprint associated with shipping physical goods. They also offer flexibility, allowing caregivers to print only what is needed. Furthermore, digital formats can be easily updated or customized to suit specific themes or abilities, making them a sustainable and adaptable resource for families and care facilities.",
+      "timestamp": "53:27-53:40",
+      "time_start_sec": 3207,
+      "time_end_sec": 3220
+    },
+    {
+      "question": "How can caregivers foster a sense of identity for someone with dementia?",
+      "answer": "Caregivers can foster identity by allowing the person to be themselves and express their unique preferences, rather than forcing them into generic roles like \"nursing home resident.\" By engaging in activities that reflect their personality and history, such as discussing their favorite colors or past jobs, caregivers help the person feel recognized as an individual with a rich life story.",
+      "timestamp": "15:56-16:19",
+      "time_start_sec": 956,
+      "time_end_sec": 979
+    },
+    {
+      "question": "What is the importance of listening to people with lived experience of dementia?",
+      "answer": "Listening to people with lived experience is crucial because they provide firsthand insights into the reality of living with brain change. Their perspectives reveal what truly works and what causes distress, which might not be obvious to outsiders. Valuing their voices ensures that care strategies are practical, empathetic, and aligned with the actual needs of those affected by the condition.",
+      "timestamp": "30:45-31:13",
+      "time_start_sec": 1845,
+      "time_end_sec": 1873
+    },
+    {
+      "question": "How can caregivers handle the challenge of \"more is better\" thinking during holidays?",
+      "answer": "Caregivers should challenge the belief that \"more is better\" by recognizing that excessive decoration and activity can be overwhelming. Instead of filling every space with ornaments or hosting large gatherings, opt for simplicity. Choosing a few meaningful elements creates a festive atmosphere without causing stress, proving that less can often be more enjoyable and manageable for everyone involved.",
+      "timestamp": "41:44-42:16",
+      "time_start_sec": 2504,
+      "time_end_sec": 2536
+    },
+    {
+      "question": "What is the value of \"inter-ability\" in group activities?",
+      "answer": "\"Inter-ability\" means designing activities so that people with different skill levels and abilities can participate together. By varying the complexity of tasks—such as having some simple illustrations and some more detailed ones—caregivers ensure that everyone at the table can contribute. This inclusivity strengthens bonds and allows people to learn from and support one another regardless of their current capabilities.",
+      "timestamp": "51:13-51:37",
+      "time_start_sec": 3073,
+      "time_end_sec": 3097
+    },
+    {
+      "question": "How can caregivers use storytelling to enhance engagement?",
+      "answer": "Storytelling enhances engagement by connecting current activities to the person's life history. When a caregiver asks questions about an image, such as \"What tool would you use for this?\", they invite the person to share their knowledge and experiences. This transforms a simple task into a meaningful conversation, reinforcing the person's identity and strengthening the relationship between caregiver and care recipient.",
+      "timestamp": "52:22-53:27",
+      "time_start_sec": 3142,
+      "time_end_sec": 3207
+    },
+    {
+      "question": "Why is it important to define \"brain change\" rather than just \"dementia\"?",
+      "answer": "Using the term \"brain change\" can feel less stigmatizing and more descriptive of the actual condition. It acknowledges that the brain is changing in various ways without immediately resorting to a clinical label that might limit the person's identity. This language shift encourages caregivers to focus on the person's remaining abilities and potential for growth rather than just the deficits.",
+      "timestamp": "06:39-07:13",
+      "time_start_sec": 399,
+      "time_end_sec": 433
+    },
+    {
+      "question": "How can caregivers support a person who feels they are losing their independence?",
+      "answer": "Caregivers can support independence by recognizing that even simple tasks require immense effort for someone with brain change. Instead of taking over completely, offer assistance that allows the person to do as much as they can on their own. Encouraging them to feed themselves or dress themselves, even slowly, preserves their dignity and keeps their cognitive reserves active.",
+      "timestamp": "27:22-28:25",
+      "time_start_sec": 1642,
+      "time_end_sec": 1705
+    },
+    {
+      "question": "What is the role of humor in dementia care?",
+      "answer": "Humor plays a vital role in breaking tension and building connection. Sharing jokes or laughing together can lighten the mood and remind everyone that the person with dementia is still a human being with a personality. It helps normalize the situation and reduces the seriousness that can sometimes accompany caregiving, creating a warmer, more supportive environment.",
+      "timestamp": "22:02-22:36",
+      "time_start_sec": 1322,
+      "time_end_sec": 1356
+    },
+    {
+      "question": "How can caregivers prepare for the emotional impact of holidays?",
+      "answer": "Caregivers should anticipate anxiety around holidays due to the pressure of expectations and the contrast between past and present realities. Preparing involves simplifying plans, communicating openly with family about limitations, and focusing on creating a calm, low-stress environment. Acknowledging feelings of loss while celebrating what remains possible helps manage the emotional weight of the season.",
+      "timestamp": "26:29-26:53",
+      "time_start_sec": 1589,
+      "time_end_sec": 1613
+    },
+    {
+      "question": "What is the significance of the \"Ruby Gem State\" mentioned in the transcript?",
+      "answer": "The \"Ruby Gem State\" is a metaphorical term used to describe a specific state of being or energy, possibly related to passion or intensity, which Catherine Livingstone associates with her appearance and the conference theme. While not fully defined in the transcript, it suggests that different gem states have unique characteristics, much like different colored gems, and that embracing these variations is part of the care journey.",
+      "timestamp": "05:21-05:55",
+      "time_start_sec": 321,
+      "time_end_sec": 355
+    },
+    {
+      "question": "How can caregivers use the concept of \"waves\" in daily planning?",
+      "answer": "Thinking of daily activities as \"waves\" helps caregivers plan for fluctuations in energy and alertness. Some parts of the day might be high-energy peaks, while others are low-energy troughs. By mapping out activities according to these natural rhythms, caregivers can ensure that demanding tasks happen when the person is most capable, reserving quiet time for when energy is low.",
+      "timestamp": "31:37-31:58",
+      "time_start_sec": 1897,
+      "time_end_sec": 1918
+    },
+    {
+      "question": "What is the impact of staff burnout on dementia care?",
+      "answer": "Staff burnout occurs when caregivers are repeatedly exposed to high-stimulation activities like repetitive bingo sessions without adequate breaks or variety. This constant demand drains their energy and reduces their ability to provide compassionate care. Recognizing this risk encourages facilities to diversify activities and prioritize staff well-being to maintain a positive environment for everyone.",
+      "timestamp": "41:08-41:37",
+      "time_start_sec": 2468,
+      "time_end_sec": 2497
+    },
+    {
+      "question": "How can caregivers incorporate nature into dementia care?",
+      "answer": "Nature can be incorporated through themes like botanicals, seasons, or outdoor imagery in activities. For example, using pictures of leaves, trees, or seasonal changes can evoke memories and provide a calming effect. Engaging with nature-based themes connects the person to the natural world, which can be soothing and stimulate positive associations.",
+      "timestamp": "51:37-51:51",
+      "time_start_sec": 3097,
+      "time_end_sec": 3111
+    },
+    {
+      "question": "What is the importance of gender-inclusive design in care products?",
+      "answer": "Gender-inclusive design ensures that care products appeal to people of all genders, reflecting modern societal changes. By offering themes that are not strictly masculine or feminine, caregivers can engage a wider range of individuals and avoid limiting stereotypes. This inclusivity makes the activity more accessible and relevant to everyone involved.",
+      "timestamp": "50:32-50:46",
+      "time_start_sec": 3032,
+      "time_end_sec": 3046
+    },
+    {
+      "question": "How can caregivers handle the transition from \"expert\" to \"learner\" in dementia care?",
+      "answer": "Caregivers must be willing to let go of their own expertise and accept that they may not understand everything about the person's experience. This involves listening humbly to the person's needs and adapting to their reality, even if it contradicts previous knowledge. Embracing this shift allows for a more authentic and supportive relationship based on mutual understanding.",
+      "timestamp": "14:14-15:02",
+      "time_start_sec": 854,
+      "time_end_sec": 902
+    },
+    {
+      "question": "What is the role of \"psychosocial support\" in dementia care?",
+      "answer": "Psychosocial support focuses on the mental and social well-being of the person, addressing their emotional needs and social connections. It goes beyond physical care to include activities that build relationships, foster a sense of belonging, and improve quality of life. This holistic approach ensures that the person feels valued and connected to their community.",
+      "timestamp": "48:33-48:50",
+      "time_start_sec": 2913,
+      "time_end_sec": 2930
+    },
+    {
+      "question": "How can caregivers use the \"coloring book\" analogy to explain relational care?",
+      "answer": "The coloring book analogy illustrates that relational care requires active participation from both the caregiver and the person. Just as coloring involves creativity and interaction, relational care is a collaborative process where both parties contribute to the outcome. It emphasizes that the activity itself is a medium for building a connection, not just a task to be completed.",
+      "timestamp": "50:02-50:20",
+      "time_start_sec": 3002,
+      "time_end_sec": 3020
+    },
+    {
+      "question": "What is the significance of the \"free zone\" mentioned in the transcript?",
+      "answer": "The \"free zone\" refers to a safe space where a person can relax without judgment or pressure to perform. It is a time when they can simply be themselves, enjoying small pleasures like a drink or a favorite song. Creating a free zone allows the person to recharge and feel secure, knowing they are accepted exactly as they are.",
+      "timestamp": "24:39-24:44",
+      "time_start_sec": 1479,
+      "time_end_sec": 1484
+    },
+    {
+      "question": "How can caregivers find Catherine Livingstone's resources and services?",
+      "answer": "Caregivers can find Catherine Livingstone's resources through her website, opalseason.com, or by contacting her via social media platforms like Facebook, Instagram, Pinterest, and YouTube. She also offers webinars and works with community groups, libraries, and faith organizations to provide education and support for families and care facilities.",
+      "timestamp": "47:31-48:33",
+      "time_start_sec": 2851,
+      "time_end_sec": 2913
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/13/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

@@ -1,0 +1,291 @@
+{
+  "expected_pairs": 35,
+  "parsed_pairs": 35,
+  "transcript_end_sec": 3089.64,
+  "timestamp_lines": [
+    "Timestamp 1: 26:13-27:04",
+    "Timestamp 2: 31:46-32:25",
+    "Timestamp 3: 29:34-29:47",
+    "Timestamp 4: 35:34-36:15",
+    "Timestamp 5: 37:07-37:31",
+    "Timestamp 6: 35:02-35:20",
+    "Timestamp 7: 24:09-24:23",
+    "Timestamp 8: 17:29-18:13",
+    "Timestamp 9: 34:26-34:50",
+    "Timestamp 10: 27:24-27:45",
+    "Timestamp 11: 50:18-50:33",
+    "Timestamp 12: 42:25-42:45",
+    "Timestamp 13: 25:06-25:26",
+    "Timestamp 14: 33:21-33:49",
+    "Timestamp 15: 38:27-38:54",
+    "Timestamp 16: 26:54-27:04",
+    "Timestamp 17: 47:52-48:03",
+    "Timestamp 18: 43:08-43:23",
+    "Timestamp 19: 50:56-51:12",
+    "Timestamp 20: 46:04-46:54",
+    "Timestamp 21: 49:22-49:58",
+    "Timestamp 22: 01:22-01:28",
+    "Timestamp 23: 45:00-45:12",
+    "Timestamp 24: 11:12-11:24",
+    "Timestamp 25: 43:23-43:28",
+    "Timestamp 26: 34:42-34:50",
+    "Timestamp 27: 22:00-22:13",
+    "Timestamp 28: 23:19-23:47",
+    "Timestamp 29: 04:20-04:30",
+    "Timestamp 30: 14:19-14:44",
+    "Timestamp 31: 03:46-03:55",
+    "Timestamp 32: 47:15-47:34",
+    "Timestamp 33: 44:35-44:41",
+    "Timestamp 34: 46:40-46:54",
+    "Timestamp 35: 45:40-45:56"
+  ],
+  "pairs": [
+    {
+      "question": "What is the Positive Physical Approach (PPA) and why is it important?",
+      "answer": "The Positive Physical Approach (PPA) is a method of interacting with someone that focuses on building a relationship first rather than having an agenda or trying to complete a task immediately. It involves stepping into a room with warmth and connection. This approach is important because it helps reduce agitation, lowers the need for medication, and creates a safe environment where the person feels valued and understood, regardless of whether they have dementia or are just having a stressful day.",
+      "timestamp": "26:13-27:04",
+      "time_start_sec": 1573,
+      "time_end_sec": 1624
+    },
+    {
+      "question": "How can a simple greeting affect a person with dementia?",
+      "answer": "A simple, positive greeting can act like a \"domino effect.\" If someone enters a room aggressively or demands action, the person with dementia may become confused, agitated, or fearful, potentially requiring medication to calm down. Conversely, a gentle, positive start makes the person feel safe, reduces their stress, and often prevents the need for medication altogether because they feel supported rather than rushed.",
+      "timestamp": "31:46-32:25",
+      "time_start_sec": 1906,
+      "time_end_sec": 1945
+    },
+    {
+      "question": "Why might staff members feel pressured to rush interactions with residents?",
+      "answer": "Staff members often feel pressure to finish tasks quickly, such as completing therapy sessions or getting a resident out of a room, because they have many duties to manage. This focus on speed can make the interaction feel like a chore for the resident. Using the Positive Physical Approach shifts the focus from finishing the task to connecting with the person, which makes the resident enjoy the interaction and feel less like a number.",
+      "timestamp": "29:34-29:47",
+      "time_start_sec": 1774,
+      "time_end_sec": 1787
+    },
+    {
+      "question": "How can prayer or music help someone with dementia who is agitated?",
+      "answer": "For many people with dementia, especially those from religious backgrounds, prayer and music are deeply ingrained habits that remain intact even when other memories fade. These activities engage parts of the brain that are still working well. Using prayer or singing familiar songs can redirect an agitated person, calm their emotions, and provide comfort by connecting them to their lifelong rhythms and beliefs.",
+      "timestamp": "35:34-36:15",
+      "time_start_sec": 2134,
+      "time_end_sec": 2175
+    },
+    {
+      "question": "What is the benefit of focusing on what a person with dementia still has rather than what they have lost?",
+      "answer": "People with dementia often lose recent memories and abilities, but they retain long-held skills, identities, and past experiences. By focusing on what is still there—like a sister's career history or a childhood memory—you validate their identity and dignity. This approach helps them feel seen as the person they were and are, rather than just someone who has lost their way.",
+      "timestamp": "37:07-37:31",
+      "time_start_sec": 2227,
+      "time_end_sec": 2251
+    },
+    {
+      "question": "How can long-term relationships between sisters in a convent help with dementia care?",
+      "answer": "Sisters in a convent have often lived and worked together for decades, forming deep bonds similar to family. Because they know each other's histories and personalities so well, they can recognize changes caused by dementia more easily. Their deep familiarity allows them to see the person behind the disease and maintain a strong connection even as the brain changes.",
+      "timestamp": "35:02-35:20",
+      "time_start_sec": 2102,
+      "time_end_sec": 2120
+    },
+    {
+      "question": "What is the difference between a trainer certification and a consultant certification in the Positive Approach to Care?",
+      "answer": "A trainer certification equips you to teach workshops and deliver specific curriculum to groups. A consultant certification goes further, allowing you to act as a resource for entire organizations or communities. Consultants help bring about a \"culture change,\" teaching staff how to support people with brain changes in various settings and providing ongoing guidance rather than just one-time training.",
+      "timestamp": "24:09-24:23",
+      "time_start_sec": 1449,
+      "time_end_sec": 1463
+    },
+    {
+      "question": "How did Caroline Robertson decide to pursue a career in gerontology and dementia care?",
+      "answer": "Caroline's interest grew gradually. She started as a general nurse, volunteered in Guatemala working with all ages, then worked in hospice caring for the dying. Her love for older adults, inspired by her grandparents, led her to pursue a master's in gerontology. Eventually, she discovered the Positive Approach to Care, which gave her the practical tools and scientific understanding she was looking for to help older adults effectively.",
+      "timestamp": "17:29-18:13",
+      "time_start_sec": 1049,
+      "time_end_sec": 1093
+    },
+    {
+      "question": "What is the \"aha moment\" regarding brain images in dementia training?",
+      "answer": "When people see images of a healthy brain compared to a brain affected by dementia, they often have an \"aha moment.\" They realize that the behaviors they see are not intentional or personal attacks, but are direct results of physical changes in the brain. This understanding helps caregivers stop expecting the person to behave as they did before and instead adapt their expectations to match the current reality of the brain.",
+      "timestamp": "34:26-34:50",
+      "time_start_sec": 2066,
+      "time_end_sec": 2090
+    },
+    {
+      "question": "Why is it helpful to use \"PAC-lish\" terms like PPA and PAS?",
+      "answer": "Terms like PPA (Positive Physical Approach) and PAS (Positive Adult Support) are shorthand for specific concepts within the Positive Approach to Care. While they might sound confusing to someone new, they represent proven strategies for connection. Using these terms helps professionals quickly recall the core principles of building relationships first, ensuring that every interaction is grounded in respect and understanding.",
+      "timestamp": "27:24-27:45",
+      "time_start_sec": 1644,
+      "time_end_sec": 1665
+    },
+    {
+      "question": "How can a caregiver use the five senses to improve a connection with someone with dementia?",
+      "answer": "Engaging the five senses can create powerful moments of connection. For example, baking a pie together engages the sense of smell and touch, creating a shared activity that feels natural and engaging. Even small sensory experiences, like a pleasant scent or a warm hug, can lift spirits and make the person feel included and valued, turning a stressful moment into a positive one.",
+      "timestamp": "50:18-50:33",
+      "time_start_sec": 3018,
+      "time_end_sec": 3033
+    },
+    {
+      "question": "What is the main goal of the Positive Approach to Care?",
+      "answer": "The main goal is to help professionals, families, and caregivers develop the awareness, knowledge, and skills needed to support someone living with dementia. The aim is to ensure that the person does not just survive but lives well from the first symptoms of the disease all the way to the very end of their life.",
+      "timestamp": "42:25-42:45",
+      "time_start_sec": 2545,
+      "time_end_sec": 2565
+    },
+    {
+      "question": "How can a caregiver tell if they are successfully using the Positive Physical Approach?",
+      "answer": "Success happens when the approach becomes so natural that you use it without even realizing it. You will notice that interactions start smoothly with a warm \"hello,\" the person seems calmer and happier, and there is less resistance or agitation. Over time, you will find that simply being present and connecting makes a huge difference in the flow of the day.",
+      "timestamp": "25:06-25:26",
+      "time_start_sec": 1506,
+      "time_end_sec": 1526
+    },
+    {
+      "question": "Why is it important to listen to the person with dementia even if they seem confused?",
+      "answer": "Listening validates the person's feelings and presence. Even if the content of their speech is based on confusion or old memories, the act of sitting with them and listening shows respect. It provides peace and comfort, letting them know they are not alone and that their current state is acceptable, which reduces anxiety and isolation.",
+      "timestamp": "33:21-33:49",
+      "time_start_sec": 2001,
+      "time_end_sec": 2029
+    },
+    {
+      "question": "What advice does Caroline give to someone considering PAC certification?",
+      "answer": "Caroline advises people to \"just do it,\" even if they are unsure. The skills gained are valuable in many areas of life, including personal care for family members, professional settings, and community work. She emphasizes that the opportunity to make a difference is vast, and the skills can be used personally and professionally to improve the quality of life for others.",
+      "timestamp": "38:27-38:54",
+      "time_start_sec": 2307,
+      "time_end_sec": 2334
+    },
+    {
+      "question": "How does the Positive Approach to Care handle the concept of \"agenda\"?",
+      "answer": "The Positive Approach teaches caregivers to be \"relationship first, not agenda first.\" An agenda means trying to force a task or a specific outcome onto the person, which can cause stress. Instead, the priority is to build a connection and trust first, which often makes completing necessary tasks easier and more enjoyable for everyone involved.",
+      "timestamp": "26:54-27:04",
+      "time_start_sec": 1614,
+      "time_end_sec": 1624
+    },
+    {
+      "question": "What role does the amygdala play in a caregiver's reaction to a difficult situation?",
+      "answer": "The amygdala is the part of the brain responsible for processing fear and stress. When a caregiver hears a dog bark or sees a challenging behavior, their amygdala might trigger a \"fight or flight\" response, causing anxiety or defensiveness. Recognizing this physical reaction helps the caregiver pause, breathe, and choose a more positive, supportive response rather than reacting automatically.",
+      "timestamp": "47:52-48:03",
+      "time_start_sec": 2872,
+      "time_end_sec": 2883
+    },
+    {
+      "question": "How can a caregiver find free resources from the Positive Approach to Care?",
+      "answer": "The Positive Approach to Care offers many free resources, including hundreds of YouTube videos, downloadable educational materials, and individual consultations. These can be accessed by visiting the website www.tipasnow.com, where caregivers can find information, tools, and support to help them care for someone with dementia.",
+      "timestamp": "43:08-43:23",
+      "time_start_sec": 2588,
+      "time_end_sec": 2603
+    },
+    {
+      "question": "Why is it beneficial to share the Positive Approach to Care with others?",
+      "answer": "Sharing the Positive Approach to Care acts like a ripple in a pond; the more people who learn about it, the wider the circle of support becomes. By sharing information, caregivers can help others who are struggling find effective tools and strategies, ultimately reaching more people who need support and reducing the overall burden of dementia care.",
+      "timestamp": "50:56-51:12",
+      "time_start_sec": 3056,
+      "time_end_sec": 3072
+    },
+    {
+      "question": "What is the significance of the \"encouragement cards\" mentioned in the video?",
+      "answer": "Encouragement cards provide quick, positive affirmations like \"Your efforts made a difference today.\" They serve as a reminder to caregivers that their hard work matters and that they are making a real impact. Pulling a card can boost morale and reinforce the idea that even small actions contribute to the well-being of the person with dementia.",
+      "timestamp": "46:04-46:54",
+      "time_start_sec": 2764,
+      "time_end_sec": 2814
+    },
+    {
+      "question": "How can a caregiver support a family member who has a physical issue while also having dementia?",
+      "answer": "A caregiver can support them by engaging in shared activities that accommodate both needs, such as baking a pie together. This allows both individuals to contribute equally based on their abilities, fostering a sense of partnership and connection. It highlights that everyone has value and can play a role in a shared joyous experience.",
+      "timestamp": "49:22-49:58",
+      "time_start_sec": 2962,
+      "time_end_sec": 2998
+    },
+    {
+      "question": "What is the \"care partner support series\" mentioned in the video?",
+      "answer": "The care partner support series is a program designed to help caregivers learn strategies and connect with the Positive Approach to Care community. It aims to equip care partners with the tools they need to provide better support and navigate the challenges of caring for someone with dementia.",
+      "timestamp": "01:22-01:28",
+      "time_start_sec": 82,
+      "time_end_sec": 88
+    },
+    {
+      "question": "How does the video suggest caregivers deal with the feeling of being overwhelmed?",
+      "answer": "The video suggests focusing on the human connection and the tangible impact of small actions. By remembering that simple gestures, like a hug or a shared smile, can \"fill the cup\" and make a difference, caregivers can find meaning and motivation even when the workload feels heavy.",
+      "timestamp": "45:00-45:12",
+      "time_start_sec": 2700,
+      "time_end_sec": 2712
+    },
+    {
+      "question": "What is the role of the \"Sisters of Mercy\" in the context of this video?",
+      "answer": "The Sisters of Mercy are a religious community where Caroline Robertson works. They serve as a case study for how the Positive Approach to Care can transform an entire organization. The Sisters use PAC skills to support their members who live in the community, demonstrating that these methods work effectively in residential and spiritual settings.",
+      "timestamp": "11:12-11:24",
+      "time_start_sec": 672,
+      "time_end_sec": 684
+    },
+    {
+      "question": "Why is it important to acknowledge that there is no cure for dementia yet?",
+      "answer": "Acknowledging that there is no cure yet shifts the focus from trying to fix the disease to improving the quality of life. It reinforces the importance of the Positive Approach to Care, which provides practical ways to support and empower people with dementia to live well despite the lack of a medical cure.",
+      "timestamp": "43:23-43:28",
+      "time_start_sec": 2603,
+      "time_end_sec": 2608
+    },
+    {
+      "question": "How can a caregiver use the concept of \"brain change\" to explain behavior to others?",
+      "answer": "A caregiver can explain that behaviors are not personal choices but are symptoms of the brain changing. By pointing out that the brain is physically different, others can understand why the person cannot interact as they used to. This helps reduce blame and increases empathy from friends, family, and staff.",
+      "timestamp": "34:42-34:50",
+      "time_start_sec": 2082,
+      "time_end_sec": 2090
+    },
+    {
+      "question": "What is the benefit of having a mentor in the PAC community?",
+      "answer": "Having a mentor can guide a caregiver or professional toward the right certification or training path. Mentors can recommend specific programs, like the consultant certification, that fit the individual's goals and the needs of their community, helping them grow their skills and confidence.",
+      "timestamp": "22:00-22:13",
+      "time_start_sec": 1320,
+      "time_end_sec": 1333
+    },
+    {
+      "question": "How does the video describe the transition from traditional nursing to PAC?",
+      "answer": "The transition is described as moving from a theoretical or rigid approach to a practical, experiential one. Traditional training might involve just listening to lectures, whereas PAC involves hands-on practice, visuals, and real-life examples that make the skills easier to understand and implement in daily routines.",
+      "timestamp": "23:19-23:47",
+      "time_start_sec": 1399,
+      "time_end_sec": 1427
+    },
+    {
+      "question": "What is the \"early bird registration\" mentioned for the conference?",
+      "answer": "Early bird registration is a special offer for signing up for the conference by a specific date (July 5th). Those who register by this deadline receive a special hour with the organization, providing exclusive access and benefits for attendees who plan ahead.",
+      "timestamp": "04:20-04:30",
+      "time_start_sec": 260,
+      "time_end_sec": 270
+    },
+    {
+      "question": "How can a caregiver use the story of Guatemala to inspire others?",
+      "answer": "The story of volunteering in Guatemala shows that caregiving and service can happen anywhere and for anyone. It inspires others to see that they too can make a difference in their own communities, whether through formal training or simple acts of kindness, proving that dedication to helping others is universal.",
+      "timestamp": "14:19-14:44",
+      "time_start_sec": 859,
+      "time_end_sec": 884
+    },
+    {
+      "question": "What is the significance of the \"relationships guidebook\" mentioned in the video?",
+      "answer": "The relationships guidebook is a resource designed to help people build stronger connections with those they care for. It provides strategies and insights that align with the Positive Approach to Care, helping caregivers navigate complex emotional situations and foster meaningful relationships.",
+      "timestamp": "03:46-03:55",
+      "time_start_sec": 226,
+      "time_end_sec": 235
+    },
+    {
+      "question": "How does the video address the challenge of remote learning vs. in-person training?",
+      "answer": "The video acknowledges that remote learning can feel different from in-person training, where body language and immediate feedback are present. However, it suggests that videos and online resources can still provide valuable \"aha moments\" and practical tips that help caregivers shift their mindset and improve their interactions.",
+      "timestamp": "47:15-47:34",
+      "time_start_sec": 2835,
+      "time_end_sec": 2854
+    },
+    {
+      "question": "What is the role of the \"chat box\" on the website?",
+      "answer": "The chat box on the website allows visitors to talk to someone live or send an email to connect with the Positive Approach to Care team. It serves as a direct line of communication for caregivers who have questions or need immediate support and guidance.",
+      "timestamp": "44:35-44:41",
+      "time_start_sec": 2675,
+      "time_end_sec": 2681
+    },
+    {
+      "question": "How can a caregiver celebrate small wins in dementia care?",
+      "answer": "Caregivers can celebrate small wins by recognizing moments where their efforts made a difference, such as successfully completing a training session or noticing a positive change in a resident's mood. Using encouragement cards or simply acknowledging these moments helps reinforce the value of their work and boosts their own confidence.",
+      "timestamp": "46:40-46:54",
+      "time_start_sec": 2800,
+      "time_end_sec": 2814
+    },
+    {
+      "question": "What is the ultimate message of the video regarding the future of dementia care?",
+      "answer": "The ultimate message is that despite challenges like the pandemic or lack of a cure, progress is being made. Organizations like the Positive Approach to Care continue to pour out resources and support, proving that meaningful change is possible and that caregivers are not alone in their journey to improve lives.",
+      "timestamp": "45:40-45:56",
+      "time_start_sec": 2740,
+      "time_end_sec": 2756
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/28/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

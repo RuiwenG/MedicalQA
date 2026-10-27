@@ -1,0 +1,115 @@
+{
+  "expected_pairs": 13,
+  "parsed_pairs": 13,
+  "transcript_end_sec": 1350.559,
+  "timestamp_lines": [
+    "Timestamp 1: 4:03-4:40",
+    "Timestamp 2: 4:53-5:26",
+    "Timestamp 3: 5:43-6:26",
+    "Timestamp 4: 10:47-14:10",
+    "Timestamp 5: 11:08-11:40",
+    "Timestamp 6: 16:42-17:10",
+    "Timestamp 7: 19:07-19:59",
+    "Timestamp 8: 20:43-21:12",
+    "Timestamp 9: 9:28-10:17",
+    "Timestamp 10: 14:28-15:03",
+    "Timestamp 11: 15:39-16:28",
+    "Timestamp 12: 17:27-17:38",
+    "Timestamp 13: 20:17-20:27"
+  ],
+  "pairs": [
+    {
+      "question": "How should a caregiver address a person with dementia before asking them to move?",
+      "answer": "The caregiver should use a combination of visual cues, such as pointing with their finger, and verbal cues that include the person's specific name. This ensures the person knows exactly who is speaking and what is happening, which helps prevent confusion and keeps them engaged in the moment.",
+      "timestamp": "4:03-4:40",
+      "time_start_sec": 243,
+      "time_end_sec": 280
+    },
+    {
+      "question": "Why is it better to avoid asking direct questions like \"Do you need to go to the bathroom?\"",
+      "answer": "Asking direct questions often forces the person with dementia to say \"no,\" which can lead to frustration or resistance. Instead of asking a question that invites a negative answer, the caregiver should simply state the action, such as \"Let's go over here,\" to gently guide the person without creating a conflict.",
+      "timestamp": "4:53-5:26",
+      "time_start_sec": 293,
+      "time_end_sec": 326
+    },
+    {
+      "question": "What is the purpose of rocking back and forth when helping someone walk?",
+      "answer": "Rocking back and forth helps the person find a rhythm similar to walking or dancing. This subtle movement encourages them to shift their weight and take the first step on their own, rather than waiting for a large command that might feel overwhelming.",
+      "timestamp": "5:43-6:26",
+      "time_start_sec": 343,
+      "time_end_sec": 386
+    },
+    {
+      "question": "How can a caregiver help a person transition from standing to sitting without causing fear?",
+      "answer": "To prevent fear, the caregiver should instruct the person to \"lean forward\" first, engaging their leg muscles before they sit. They should avoid pushing down on the hips or startling the person, as sudden movements can trigger the brain's fear center (amygdala), causing the person to freeze or slam their muscles shut.",
+      "timestamp": "10:47-14:10",
+      "time_start_sec": 647,
+      "time_end_sec": 850
+    },
+    {
+      "question": "Why does the caregiver use the word \"push\" instead of \"pull\" when helping lower pants?",
+      "answer": "The word \"pull\" can be confusing because pulling pants down requires a specific motion that might not match the person's current ability. Using the verb \"push\" combined with the instruction to \"lean forward\" creates a clear mental image and matches the physical action, making it easier for the person to follow.",
+      "timestamp": "11:08-11:40",
+      "time_start_sec": 668,
+      "time_end_sec": 700
+    },
+    {
+      "question": "How should a caregiver position themselves while assisting someone with dementia in the bathroom?",
+      "answer": "The caregiver should position themselves outside the person's direct line of sight but close enough to maintain a physical connection, such as a hand on the shoulder. This prevents the person from feeling surprised by a sudden appearance while still ensuring they feel supported and connected.",
+      "timestamp": "16:42-17:10",
+      "time_start_sec": 1002,
+      "time_end_sec": 1030
+    },
+    {
+      "question": "What is the benefit of using \"hand-under-hand\" assistance instead of holding the person's hand?",
+      "answer": "Hand-under-hand assistance allows the person with dementia to lead the movement with their own hand while receiving support underneath. This preserves their sense of independence and control, whereas holding their hand from the outside can feel intrusive or forceful.",
+      "timestamp": "19:07-19:59",
+      "time_start_sec": 1147,
+      "time_end_sec": 1199
+    },
+    {
+      "question": "Why is it important to avoid using terms like \"honey,\" \"sweetie,\" or \"mom/dad\" when giving instructions?",
+      "answer": "Using the person's actual name maintains a professional and clear connection that respects their identity as an adult capable of performing tasks. Terms of endearment can blur boundaries and make the interaction feel less like a cooperative partnership and more like a child-parent dynamic.",
+      "timestamp": "20:43-21:12",
+      "time_start_sec": 1243,
+      "time_end_sec": 1272
+    },
+    {
+      "question": "How does the bathroom environment affect the choice of assistance technique?",
+      "answer": "If a bathroom is designed for a right-handed person, there may not be enough space for a caregiver to stand on the right side to provide hand-under-hand support. In these cases, the caregiver must adapt by using their left hand or adjusting their position to ensure they can safely assist without blocking the path.",
+      "timestamp": "9:28-10:17",
+      "time_start_sec": 568,
+      "time_end_sec": 617
+    },
+    {
+      "question": "What is the risk of leaving a person with dementia sitting on the toilet for a long time?",
+      "answer": "Leaving a person sitting for too long increases the chance that they will forget why they are there or become anxious. This delay can cause them to hold their urine until it is difficult to release later, potentially leading to accidents or discomfort.",
+      "timestamp": "14:28-15:03",
+      "time_start_sec": 868,
+      "time_end_sec": 903
+    },
+    {
+      "question": "How can a caregiver acknowledge the person's efforts without sounding childish?",
+      "answer": "The caregiver should use simple, direct phrases like \"Nice job\" or \"Good work\" immediately after a successful step. This validates the effort and confirms that the person is moving in the right direction, keeping them involved and motivated without using patronizing language.",
+      "timestamp": "15:39-16:28",
+      "time_start_sec": 939,
+      "time_end_sec": 988
+    },
+    {
+      "question": "What clothing features are recommended to make dressing easier for someone with dementia?",
+      "answer": "Elastic pants are highly recommended because they eliminate the difficulty of managing buttons or zippers. Simple clothing reduces the number of complex steps required, allowing the caregiver to focus on movement and safety rather than struggling with fasteners.",
+      "timestamp": "17:27-17:38",
+      "time_start_sec": 1047,
+      "time_end_sec": 1058
+    },
+    {
+      "question": "What should a caregiver do if they accidentally mention the word \"toilet\" or \"poop\"?",
+      "answer": "Caregivers should avoid explicitly naming the function or the object to prevent triggering anxiety or shame. By focusing on the action of sitting or going rather than the biological function, the caregiver helps keep the person's stress levels low and the experience calm.",
+      "timestamp": "20:17-20:27",
+      "time_start_sec": 1217,
+      "time_end_sec": 1227
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/Master/9/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

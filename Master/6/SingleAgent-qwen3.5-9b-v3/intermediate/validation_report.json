@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 948.8000000000001,
+  "timestamp_lines": [
+    "Timestamp 1: 0:48-2:16",
+    "Timestamp 2: 21-3:16",
+    "Timestamp 3: 3:16-4:21",
+    "Timestamp 4: 4:23-6:40",
+    "Timestamp 5: 6:40-8:08",
+    "Timestamp 6: 8:08-10:40",
+    "Timestamp 7: 13:06-14:00",
+    "Timestamp 8: 10:15-10:34",
+    "Timestamp 9: 12:05-13:02",
+    "Timestamp 10: 14:21-15:10",
+    "Timestamp 11: 10:15-14:15"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main difference between a hallucination and a delusion?",
+      "answer": "A hallucination involves things a person senses with their body, such as seeing, hearing, touching, smelling, or tasting something that isn't there. A delusion involves things a person believes or thinks are true. Think of it as the difference between what you feel with your senses versus what you hold as a belief in your mind.",
+      "timestamp": "0:48-2:16",
+      "time_start_sec": 48,
+      "time_end_sec": 136
+    },
+    {
+      "question": "What kinds of hallucinations are common in people living with dementia?",
+      "answer": "People with dementia often experience hallucinations involving sight, sound, touch, smell, and taste. For example, they might see children or animals, hear voices or noises on the ceiling, feel bugs crawling on their skin, smell odors that aren't present, or taste food as if it is poisoned.",
+      "timestamp": "2: 21-3:16",
+      "time_start_sec": 141,
+      "time_end_sec": 196
+    },
+    {
+      "question": "How do hallucinations usually change as dementia gets worse?",
+      "answer": "Early on, hallucinations might feel vague, like a soft shadow or a faint noise that comes and goes. As the condition progresses, these experiences often become clearer, more distracting, and more disturbing, eventually feeling like a real person is walking through the room or a specific voice is speaking directly to the individual.",
+      "timestamp": "3:16-4:21",
+      "time_start_sec": 196,
+      "time_end_sec": 261
+    },
+    {
+      "question": "What should I do immediately if my loved one is scared because they see something scary?",
+      "answer": "First, stay calm and connect with them physically, such as holding their hand or standing close in a supportive way. Then, acknowledge their feelings by saying something like, \"It looks like you are worried about that little boy.\" Finally, agree with their reality by stating, \"Yes, somebody needs to get him out of there,\" rather than telling them there is no one there.",
+      "timestamp": "4:23-6:40",
+      "time_start_sec": 263,
+      "time_end_sec": 400
+    },
+    {
+      "question": "Why is it important not to tell my loved one that the hallucination is not real?",
+      "answer": "Telling someone that the hallucination is fake or that \"there is no one there\" often makes them feel unheard and increases their fear. It is better to accept their reality as true for the moment. By agreeing that someone needs to help, you take the burden off them and show honesty, which helps reduce their distress.",
+      "timestamp": "6:40-8:08",
+      "time_start_sec": 400,
+      "time_end_sec": 488
+    },
+    {
+      "question": "What is a practical strategy to help my loved one stop focusing on a scary hallucination?",
+      "answer": "After validating their feelings and agreeing that someone will handle the situation, gently suggest moving to a different location. You can say, \"Let's go somewhere else,\" and lead them away. Changing the environment shifts their focus from the scary image to the new surroundings, helping them feel safer.",
+      "timestamp": "8:08-10:40",
+      "time_start_sec": 488,
+      "time_end_sec": 640
+    },
+    {
+      "question": "How can I handle a situation where my loved one feels bugs are crawling on them?",
+      "answer": "You can offer a gentle solution that addresses their physical sensation without denying their experience. For instance, you might say, \"I have a cream that calms the bugs; let me put some on you and myself.\" Applying a mild cooling substance like menthol or bacitracin can soothe the itch or tickle they feel, making them feel cared for even if no bugs are actually present.",
+      "timestamp": "13:06-14:00",
+      "time_start_sec": 786,
+      "time_end_sec": 840
+    },
+    {
+      "question": "What is the Positive Physical Approach (PPA) and how does it help with hallucinations?",
+      "answer": "The Positive Physical Approach is a set of skills that includes connecting physically (like hand-under-hand contact), validating the person's feelings, and taking ownership of the problem. Using PPA helps you meet your loved one exactly where they are emotionally, which lowers their stress and builds trust so you can guide them to safety.",
+      "timestamp": "10:15-10:34",
+      "time_start_sec": 615,
+      "time_end_sec": 634
+    },
+    {
+      "question": "What should I do if I am feeling distressed while my loved one is having a scary hallucination?",
+      "answer": "It is normal to feel upset when seeing someone you love in fear, but try to keep your own emotions lower than theirs. Remember that your goal is to meet them where they are, not to fix the hallucination instantly. By staying calm and following the steps of connection and validation, you provide the stability they need to feel safe.",
+      "timestamp": "12:05-13:02",
+      "time_start_sec": 725,
+      "time_end_sec": 782
+    },
+    {
+      "question": "Can I ever joke about a scary hallucination with my loved one?",
+      "answer": "Yes, if your loved one is able to laugh or joke about the situation, it can be a wonderful sign of hope and resilience. If they seem ready to lighten the mood, you can join in with a gentle joke, which shows that life can still have joy even when confusing things happen.",
+      "timestamp": "14:21-15:10",
+      "time_start_sec": 861,
+      "time_end_sec": 910
+    },
+    {
+      "question": "What are the three main steps to follow when supporting someone with a hallucination?",
+      "answer": "The three main steps are: First, connect and validate by acknowledging their feelings and accepting their reality (e.g., \"Someone needs to get that out\"). Second, take ownership by agreeing that you or others will handle the issue. Third, change the location by gently leading them to a different room or area to shift their focus away from the scary experience.",
+      "timestamp": "10:15-14:15",
+      "time_start_sec": 615,
+      "time_end_sec": 855
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/Master/6/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-44.json",
+  "valid": true
+}

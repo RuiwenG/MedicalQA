@@ -1,0 +1,122 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "Master",
+      "id": "1",
+      "version": "v3",
+      "expected": 15,
+      "status": "skipped",
+      "pairs": 15,
+      "generated_utc": "2026-10-26T21:23:45.625353+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "2",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:24:15.337196+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "3",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:24:39.831231+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "4",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T21:25:13.745298+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "5",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:25:46.772098+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "6",
+      "version": "v3",
+      "expected": 11,
+      "status": "ok",
+      "pairs": 11,
+      "sampling_seed": 44,
+      "attempts": 3,
+      "generated_utc": "2026-10-26T23:36:35.593090+00:00",
+      "input_tokens": 6950,
+      "output_tokens": 1197,
+      "agent_seconds": 36.987,
+      "output_budget_reached": false
+    },
+    {
+      "base": "Master",
+      "id": "7",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:26:57.659630+00:00"
+    },
+    {
+      "base": "Master",
+      "id": "8",
+      "version": "v3",
+      "expected": 11,
+      "status": "ok",
+      "pairs": 11,
+      "sampling_seed": 43,
+      "attempts": 2,
+      "generated_utc": "2026-10-26T23:37:11.903185+00:00",
+      "input_tokens": 6988,
+      "output_tokens": 1171,
+      "agent_seconds": 36.258,
+      "output_budget_reached": false
+    },
+    {
+      "base": "Master",
+      "id": "9",
+      "version": "v3",
+      "expected": 13,
+      "status": "ok",
+      "pairs": 13,
+      "sampling_seed": 43,
+      "attempts": 2,
+      "generated_utc": "2026-10-26T23:37:51.398987+00:00",
+      "input_tokens": 8454,
+      "output_tokens": 1260,
+      "agent_seconds": 39.445,
+      "output_budget_reached": false
+    },
+    {
+      "base": "Master",
+      "id": "10",
+      "version": "v3",
+      "expected": 4,
+      "status": "ok",
+      "pairs": 4,
+      "sampling_seed": 43,
+      "attempts": 2,
+      "generated_utc": "2026-10-26T23:38:06.589086+00:00",
+      "input_tokens": 2810,
+      "output_tokens": 501,
+      "agent_seconds": 15.146,
+      "output_budget_reached": false
+    }
+  ]
+}

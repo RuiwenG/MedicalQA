@@ -1,0 +1,283 @@
+{
+  "expected_pairs": 34,
+  "parsed_pairs": 34,
+  "transcript_end_sec": 3207.12,
+  "timestamp_lines": [
+    "Timestamp 1: 10:46-12:15",
+    "Timestamp 2: 12:42-13:13",
+    "Timestamp 3: 25:19-27:06",
+    "Timestamp 4: 22:43-24:11",
+    "Timestamp 5: 17:34-18:07",
+    "Timestamp 6: 21:01-22:34",
+    "Timestamp 7: 18:09-19:42",
+    "Timestamp 8: 35:37-36:48",
+    "Timestamp 9: 33:08-34:25",
+    "Timestamp 10: 40:05-40:29",
+    "Timestamp 11: 46:10-47:28",
+    "Timestamp 12: 50:13-50:34",
+    "Timestamp 13: 15:12-15:28",
+    "Timestamp 14: 17:03-17:28",
+    "Timestamp 15: 0:38-0:55",
+    "Timestamp 16: 04:32-06:38",
+    "Timestamp 17: 27:51-30:25",
+    "Timestamp 18: 28:22-29:06",
+    "Timestamp 19: 30:25-30:45",
+    "Timestamp 20: 37:13-39:12",
+    "Timestamp 21: 40:40-43:02",
+    "Timestamp 22: 43:02-43:21",
+    "Timestamp 23: 24:19-24:48",
+    "Timestamp 24: 45:23-45:55",
+    "Timestamp 25: 09:41-10:38",
+    "Timestamp 26: 21:01-21:12",
+    "Timestamp 27: 12:53-13:13",
+    "Timestamp 28: 23:33-24:11",
+    "Timestamp 29: 15:48-16:08",
+    "Timestamp 30: 18:39-18:56",
+    "Timestamp 31: 11:31-11:45",
+    "Timestamp 32: 51:37-52:29",
+    "Timestamp 33: 11:25-11:45",
+    "Timestamp 34: 12:42-13:13"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main difference between how Sherry naturally coached her staff before certification and how she coaches them now?",
+      "answer": "Before her training, Sherry naturally coached by simply showing her staff what to do and saying \"watch me.\" While this demonstrated the action, it often led staff to rely entirely on her to fix problems because they didn't learn the underlying skills. Now, she uses a method that involves \"less telling and more asking.\" Instead of just demonstrating, she asks questions to help staff find the answers themselves, which empowers them to learn the skills independently rather than just copying her actions.",
+      "timestamp": "10:46-12:15",
+      "time_start_sec": 646,
+      "time_end_sec": 735
+    },
+    {
+      "question": "What specific steps should a leader take when coaching a staff member to ensure they actually learn the skill?",
+      "answer": "A leader should focus on two main steps. First, ensure the staff member actually performs the new skill you are helping them learn. Second, ask them to identify \"two things that went well\" and \"one thing they want to work on.\" This process helps the learner reflect on their own performance and come up with the words to describe what they did, rather than the leader just correcting them.",
+      "timestamp": "12:42-13:13",
+      "time_start_sec": 762,
+      "time_end_sec": 793
+    },
+    {
+      "question": "Why is asking questions generally more effective than telling staff what to do?",
+      "answer": "Asking questions gets people to think and search for the answers themselves, whereas telling them what to do might cause them to ignore the message or just jump over it. When you ask a question like \"What were you supposed to be doing?\" instead of stating \"You were supposed to be in the dining room,\" it prompts the person to realize the gap in their own actions. This turns a correction into a conversation, making it less pointed and more insightful for the person receiving feedback.",
+      "timestamp": "25:19-27:06",
+      "time_start_sec": 1519,
+      "time_end_sec": 1626
+    },
+    {
+      "question": "What is the \"caught or taught\" debate, and why is it important for managers?",
+      "answer": "The debate asks whether good caregiving skills are something people naturally \"catch on to\" by watching others, or if they must be explicitly \"taught.\" Sherry realized that while some people might catch on, many others lack the awareness or specific skills to be good care partners without instruction. It is important for managers to understand that they cannot just wait for staff to figure it out; they must actively teach and empower staff with the right tools and language.",
+      "timestamp": "22:43-24:11",
+      "time_start_sec": 1363,
+      "time_end_sec": 1451
+    },
+    {
+      "question": "How can a manager help a staff member who is struggling with a difficult situation involving a person with dementia?",
+      "answer": "Instead of rushing in to fix the problem or being told \"don't go in there,\" a manager should confidently enter the room to make a human connection first. By establishing eye contact and using a supportive stance, the manager shows they are there to help, not to fight. Once connected, the manager can help the staff member problem-solve what the person with dementia is trying to communicate, rather than reacting to the behavior immediately.",
+      "timestamp": "17:34-18:07",
+      "time_start_sec": 1054,
+      "time_end_sec": 1087
+    },
+    {
+      "question": "What are the signs that a staff member is in a \"heightened amygdala state,\" and how should a leader respond?",
+      "answer": "A heightened amygdala state is a stress response where a person feels threatened and reacts quickly, often leading to conflict. Signs include acting defensive or aggressive. Leaders should avoid joining this state by reacting angrily. Instead, they should step back, take a deep breath, and ask questions like \"What is the best thing to do here?\" This helps lower the tension and shifts the focus from fixing the immediate problem to finding a better solution together.",
+      "timestamp": "21:01-22:34",
+      "time_start_sec": 1261,
+      "time_end_sec": 1354
+    },
+    {
+      "question": "What is the \"positive physical approach\" and why is it important when entering a room?",
+      "answer": "The positive physical approach involves getting eye connection and making sure your body language signals that you are supportive, not threatening. Even if someone is agitated, maintaining eye contact can tell them, \"I am here to help you.\" If you call someone's name repeatedly without making this connection, they may not listen because they are in a hyper state. Making the visual connection first allows their attention to shift to you, starting the process of communication.",
+      "timestamp": "18:09-19:42",
+      "time_start_sec": 1089,
+      "time_end_sec": 1182
+    },
+    {
+      "question": "How can a manager demonstrate their commitment to learning and growth to their team?",
+      "answer": "A manager can show commitment by proactively seeking out new skills and certifications on their own, without waiting to be asked or paid for by the organization. Sherry took a trainer certification without telling anyone until she was ready to use it. When her CEO found out, he was amazed that she took initiative to improve herself. This sets a powerful example that learning is a priority and encourages others to do the same.",
+      "timestamp": "35:37-36:48",
+      "time_start_sec": 2137,
+      "time_end_sec": 2208
+    },
+    {
+      "question": "What is the benefit of using role-playing with a senior leader, like a CEO, to practice new skills?",
+      "answer": "Role-playing allows a manager to safely practice new techniques, such as positive approach or supportive stance, with someone in authority. Even if the manager feels nervous during the practice, it opens up a meaningful conversation about why these skills matter. It shows the leader that the manager is passionate about improving care and wants them to buy into the methods, turning a potential lecture into a collaborative discussion.",
+      "timestamp": "33:08-34:25",
+      "time_start_sec": 1988,
+      "time_end_sec": 2065
+    },
+    {
+      "question": "Why is it important for certified professionals to keep their website profiles up to date?",
+      "answer": "Keeping profiles up to date ensures that other professionals and families can easily find them when searching by location. Information like photos, addresses, phone numbers, and display names must be accurate so people know who they are contacting. Additionally, checking the dashboard allows users to see their past orders, downloads, and course materials, ensuring they have access to all the resources they purchased.",
+      "timestamp": "40:05-40:29",
+      "time_start_sec": 2405,
+      "time_end_sec": 2429
+    },
+    {
+      "question": "What is the core message regarding the evolution of dementia care over time?",
+      "answer": "The core message is that dementia care has improved significantly compared to the past. While there is still room for growth, there are now more resources, training programs, and certified professionals dedicated to helping people with brain changes. This progress brings hope to caregivers because it shows that the field is moving in a positive direction and that better ways to care for loved ones are becoming available.",
+      "timestamp": "46:10-47:28",
+      "time_start_sec": 2770,
+      "time_end_sec": 2848
+    },
+    {
+      "question": "How does the concept of \"teaching twice\" relate to effective leadership in dementia care?",
+      "answer": "The concept of \"teaching twice\" means that if a manager explains a task poorly or relies only on showing without explaining, they may have to explain it again later when the staff member fails. Effective leaders teach clearly the first time so that staff members understand the skill in their minds and bodies. This prevents the frustration of having to repeat instructions and ensures consistent, high-quality care.",
+      "timestamp": "50:13-50:34",
+      "time_start_sec": 3013,
+      "time_end_sec": 3034
+    },
+    {
+      "question": "What is the value of having a \"larger toolbox\" of strategies for staff members?",
+      "answer": "Having a larger toolbox means staff members have many different strategies to try when facing challenging behaviors, rather than relying on just one or two methods. If one strategy doesn't work today, they can try another one tomorrow. This flexibility empowers staff to adapt to the changing needs of the person with dementia and feel more confident in their ability to handle various situations.",
+      "timestamp": "15:12-15:28",
+      "time_start_sec": 912,
+      "time_end_sec": 928
+    },
+    {
+      "question": "How can a manager help a staff member who feels scared or overwhelmed by a difficult situation?",
+      "answer": "A manager can help by walking into the room themselves to model confidence and connection. By stating, \"I am going in there to connect with this person,\" the manager shows that the situation is manageable. This reduces the fear in the staff member and demonstrates that the person with dementia has a need that requires understanding, not avoidance.",
+      "timestamp": "17:03-17:28",
+      "time_start_sec": 1023,
+      "time_end_sec": 1048
+    },
+    {
+      "question": "What is the significance of the \"One Voice\" song mentioned at the beginning of the video?",
+      "answer": "The song \"One Voice\" symbolizes unity and shared purpose. In the context of dementia care, it represents the idea that caregivers, staff, and families can work together as one team to provide better support. It highlights the emotional connection and collective effort required to make a positive impact on the lives of people living with brain changes.",
+      "timestamp": "0:38-0:55",
+      "time_start_sec": 38,
+      "time_end_sec": 55
+    },
+    {
+      "question": "How can a caregiver normalize their own feelings of needing alone time?",
+      "answer": "Caregivers can normalize their need for alone time by remembering that \"sometimes alone is right where you need to be.\" Whether you are an introvert who needs to process thoughts quietly or an extrovert who needs a break from social interaction, taking time alone is essential for mental health. It is not a sign of failure but a necessary step to recharge and return to caregiving with renewed energy.",
+      "timestamp": "04:32-06:38",
+      "time_start_sec": 272,
+      "time_end_sec": 398
+    },
+    {
+      "question": "What is the role of curiosity in building relationships with staff members?",
+      "answer": "Curiosity is a powerful tool for building relationships because it shifts the dynamic from judgment to understanding. When a manager asks, \"What were you thinking you were supposed to be doing?\" instead of criticizing, it invites the staff member to share their perspective. This openness helps the manager see the situation from the staff's point of view, fostering trust and collaboration.",
+      "timestamp": "27:51-30:25",
+      "time_start_sec": 1671,
+      "time_end_sec": 1825
+    },
+    {
+      "question": "How can a manager turn a mistake into a learning opportunity for their team?",
+      "answer": "A manager can turn a mistake into a learning opportunity by approaching the conversation with curiosity rather than blame. Instead of saying, \"Why didn't you do X?\", they can ask, \"Let's talk about what happened and what we can do differently next time.\" This creates a safe space for staff to admit errors and learn from them without fear of punishment, leading to better outcomes in the future.",
+      "timestamp": "28:22-29:06",
+      "time_start_sec": 1702,
+      "time_end_sec": 1746
+    },
+    {
+      "question": "What is the importance of \"buy-in\" when implementing new practices with staff?",
+      "answer": "Buy-in is crucial because staff are more likely to follow new practices if they feel heard and valued. When a manager shows genuine interest in the staff member's perspective and cares about their success, the staff member is more willing to adopt new methods. Without buy-in, staff may resist changes or revert to old habits, undermining the effectiveness of the new approach.",
+      "timestamp": "30:25-30:45",
+      "time_start_sec": 1825,
+      "time_end_sec": 1845
+    },
+    {
+      "question": "How can a caregiver find other certified professionals in their local area?",
+      "answer": "Caregivers can find certified professionals by visiting the PAC website and navigating to the \"Certified Community\" section. From there, they can use the \"Search by Location\" feature to input their zip code and specify how many miles they are willing to travel. This allows them to find trainers, coaches, consultants, or engagement specialists nearby who can offer training or support.",
+      "timestamp": "37:13-39:12",
+      "time_start_sec": 2233,
+      "time_end_sec": 2352
+    },
+    {
+      "question": "What is the recommended way to update personal information on the PAC website?",
+      "answer": "To update information, users should log in and click on the \"Member Menu\" to access their dashboard. From there, they should select \"My Account\" to update details like address and phone number, and \"Account Details\" to change their display name or password. Finally, they must click the \"Save Changes\" button to ensure the updates are stored correctly.",
+      "timestamp": "40:40-43:02",
+      "time_start_sec": 2440,
+      "time_end_sec": 2582
+    },
+    {
+      "question": "Why is it important to check the \"Orders\" section in the PAC dashboard?",
+      "answer": "Checking the \"Orders\" section allows users to verify that they have received all the courses, videos, and materials they purchased. It also provides access to past downloads and coupons. This is helpful for ensuring that no resources are missing and for keeping track of what educational content is available in their account.",
+      "timestamp": "43:02-43:21",
+      "time_start_sec": 2582,
+      "time_end_sec": 2601
+    },
+    {
+      "question": "How can a manager support a staff member who lacks natural caregiving skills?",
+      "answer": "A manager should recognize that not everyone has natural caregiving skills and that these skills can be taught. Instead of assuming a staff member just \"doesn't get it,\" the manager should provide explicit instruction, modeling, and coaching. By breaking down tasks and using questions to guide learning, the manager can help the staff member develop the necessary competencies over time.",
+      "timestamp": "24:19-24:48",
+      "time_start_sec": 1459,
+      "time_end_sec": 1488
+    },
+    {
+      "question": "What is the impact of a manager's passion on their team?",
+      "answer": "A manager's passion is contagious and inspires the team to do better. When a manager genuinely cares about making a difference in the lives of people with brain changes, it motivates staff to emulate that dedication. This shared passion creates a positive culture where everyone is committed to improving their practice and serving others more effectively.",
+      "timestamp": "45:23-45:55",
+      "time_start_sec": 2723,
+      "time_end_sec": 2755
+    },
+    {
+      "question": "How can a manager handle the transition from direct care to management roles?",
+      "answer": "Transitioning from direct care to management requires developing new skills in teaching and coaching. While direct care relies on natural instincts and action, management requires the ability to articulate those skills and help others learn them. Managers should seek training, such as PAC certifications, to learn how to effectively teach, coach, and empower their teams rather than just demonstrating tasks.",
+      "timestamp": "09:41-10:38",
+      "time_start_sec": 581,
+      "time_end_sec": 638
+    },
+    {
+      "question": "What is the role of the \"amygdala\" in the context of dementia care?",
+      "answer": "The amygdala is part of the brain responsible for processing emotions and threats. In dementia care, when a person with dementia or a stressed caregiver enters a \"heightened amygdala state,\" they become reactive and defensive. Recognizing this state helps leaders understand that conflict often stems from fear or stress, prompting them to de-escalate the situation rather than escalate it.",
+      "timestamp": "21:01-21:12",
+      "time_start_sec": 1261,
+      "time_end_sec": 1272
+    },
+    {
+      "question": "How can a manager encourage staff to take ownership of their learning?",
+      "answer": "A manager can encourage ownership by asking staff to identify what went well and what they want to improve. This shifts the responsibility of learning from the manager to the staff member, helping them internalize the lessons. By guiding them to articulate their own insights, the manager fosters independence and confidence in the staff member's abilities.",
+      "timestamp": "12:53-13:13",
+      "time_start_sec": 773,
+      "time_end_sec": 793
+    },
+    {
+      "question": "What is the significance of the \"Caught or Taught\" discussion in the context of staff retention?",
+      "answer": "The discussion highlights that relying solely on finding staff who naturally \"catch on\" to caregiving is risky and inefficient. Many people need explicit teaching to become competent care partners. Therefore, organizations should invest in training and support for all staff, rather than constantly recruiting new people hoping they will naturally possess the right skills.",
+      "timestamp": "23:33-24:11",
+      "time_start_sec": 1413,
+      "time_end_sec": 1451
+    },
+    {
+      "question": "How can a manager use their own experience to build trust with their team?",
+      "answer": "A manager can build trust by sharing their own history of working in direct care and facing similar challenges. When staff members know their leader has experienced the same difficulties, such as dealing with aggression or confusion, they feel more understood and supported. This shared experience validates their struggles and strengthens the bond between leader and team.",
+      "timestamp": "15:48-16:08",
+      "time_start_sec": 948,
+      "time_end_sec": 968
+    },
+    {
+      "question": "What is the benefit of using \"supportive stance\" in interactions?",
+      "answer": "Using a supportive stance, which involves open body language and eye contact, signals to the person with dementia that the caregiver is there to help, not to harm or control. Even if the person is agitated, this non-threatening posture can calm them and reduce fear, facilitating a more positive interaction and better communication.",
+      "timestamp": "18:39-18:56",
+      "time_start_sec": 1119,
+      "time_end_sec": 1136
+    },
+    {
+      "question": "How can a manager ensure that staff members feel empowered rather than controlled?",
+      "answer": "A manager can empower staff by using language that encourages problem-solving rather than issuing commands. Instead of saying \"Do this,\" they should ask \"What can we do here?\" This approach respects the staff member's intelligence and ability to contribute solutions, fostering a sense of ownership and confidence in their role.",
+      "timestamp": "11:31-11:45",
+      "time_start_sec": 691,
+      "time_end_sec": 705
+    },
+    {
+      "question": "What is the importance of consistency in providing daily educational content?",
+      "answer": "Consistency in providing daily educational content, such as short videos or tips, helps caregivers stay informed and engaged without feeling overwhelmed. Regular, bite-sized learning allows caregivers to absorb information gradually and apply it immediately, making the learning process sustainable and less stressful compared to long, intensive classes.",
+      "timestamp": "51:37-52:29",
+      "time_start_sec": 3097,
+      "time_end_sec": 3149
+    },
+    {
+      "question": "How can a manager address the challenge of staff members who prefer to \"watch and learn\" rather than participate?",
+      "answer": "Staff members who prefer to watch may feel that the manager is the only one capable of handling the situation. To address this, the manager should explicitly invite them to participate and ask for their input. By framing the interaction as a collaborative effort where their ideas are valued, the manager can encourage them to move from passive observation to active engagement.",
+      "timestamp": "11:25-11:45",
+      "time_start_sec": 685,
+      "time_end_sec": 705
+    },
+    {
+      "question": "What is the ultimate goal of effective coaching in dementia care?",
+      "answer": "The ultimate goal of effective coaching is to help staff members learn new skills independently and apply them consistently. By guiding them to reflect on their performance and identify areas for improvement, the manager ensures that the staff member internalizes the knowledge and can handle future challenges with confidence and competence.",
+      "timestamp": "12:42-13:13",
+      "time_start_sec": 762,
+      "time_end_sec": 793
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/8/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

@@ -1,0 +1,347 @@
+{
+  "expected_pairs": 42,
+  "parsed_pairs": 42,
+  "transcript_end_sec": 3564.28,
+  "timestamp_lines": [
+    "Timestamp 1: 35:47-36:14",
+    "Timestamp 2: 34:15-35:21",
+    "Timestamp 3: 30:21-31:27",
+    "Timestamp 4: 30:21-31:27",
+    "Timestamp 5: 53:11-54:04",
+    "Timestamp 6: 56:09-56:29",
+    "Timestamp 7: 51:09-51:39",
+    "Timestamp 8: 38:47-39:40",
+    "Timestamp 9: 39:44-40:07",
+    "Timestamp 10: 40:07-41:29",
+    "Timestamp 11: 45:49-46:33",
+    "Timestamp 12: 55:23-55:42",
+    "Timestamp 13: 56:09-56:25",
+    "Timestamp 14: 31:36-32:00",
+    "Timestamp 15: 26:08-26:56",
+    "Timestamp 16: 22:36-23:27",
+    "Timestamp 17: 25:31-25:45",
+    "Timestamp 18: 23:28-23:50",
+    "Timestamp 19: 30:21-31:27",
+    "Timestamp 20: 52:02-52:29",
+    "Timestamp 21: 14:39-15:09",
+    "Timestamp 22: 13:51-14:15",
+    "Timestamp 23: 24:19-25:31",
+    "Timestamp 24: 45:27-45:40",
+    "Timestamp 25: 37:11-37:33",
+    "Timestamp 26: 40:44-41:03",
+    "Timestamp 27: 25:31-25:45",
+    "Timestamp 28: 54:36-54:47",
+    "Timestamp 29: 53:11-54:04",
+    "Timestamp 30: 55:02-55:07",
+    "Timestamp 31: 40:01-40:12",
+    "Timestamp 32: 39:44-40:07",
+    "Timestamp 33: 44:20-44:43",
+    "Timestamp 34: 31:36-32:00",
+    "Timestamp 35: 34:15-35:21",
+    "Timestamp 36: 55:38-55:48",
+    "Timestamp 37: 56:09-56:25",
+    "Timestamp 38: 39:44-40:07",
+    "Timestamp 39: 30:21-31:27",
+    "Timestamp 40: 40:01-41:29",
+    "Timestamp 41: 39:44-40:07",
+    "Timestamp 42: 52:02-52:29"
+  ],
+  "pairs": [
+    {
+      "question": "How can a caregiver determine if a person with dementia is feeling overwhelmed by their environment?",
+      "answer": "Look for signs of agitation or distress triggered by loud noises, specific pitches (like cell phones or walkie-talkies), or chaotic settings. If a person seems unable to communicate what is happening or appears confused by the noise, they may be experiencing sensory overload.",
+      "timestamp": "35:47-36:14",
+      "time_start_sec": 2147,
+      "time_end_sec": 2174
+    },
+    {
+      "question": "What is a practical strategy for managing sensory overload in a shared living space like a rehabilitation center?",
+      "answer": "Use physical dividers to separate spaces and provide silent headphones or noise-canceling earbuds to block out excessive noise. This allows individuals who are sensitive to sound to find a quieter environment where their brain can settle down.",
+      "timestamp": "34:15-35:21",
+      "time_start_sec": 2055,
+      "time_end_sec": 2121
+    },
+    {
+      "question": "Why is it harmful to tell a person with dementia that a deceased loved one is \"just a memory\" or \"not real\"?",
+      "answer": "Forcing someone to confront reality can cause severe emotional trauma, such as screaming or sobbing, because they genuinely feel the presence of the person. It is better to avoid arguments about reality and allow the person to express their feelings without being dragged back into a painful confrontation.",
+      "timestamp": "30:21-31:27",
+      "time_start_sec": 1821,
+      "time_end_sec": 1887
+    },
+    {
+      "question": "How should a caregiver respond when a person with dementia becomes distressed by the absence of a loved one?",
+      "answer": "Instead of correcting them or trying to prove the person is gone, gently guide them away from the distressing thought. Allow them to come out of the emotional state on their own terms, perhaps by shifting their attention to a different activity or topic.",
+      "timestamp": "30:21-31:27",
+      "time_start_sec": 1821,
+      "time_end_sec": 1887
+    },
+    {
+      "question": "What is an effective way to handle holiday gatherings that might be too stimulating for a person with dementia?",
+      "answer": "Modify the event to reduce stimulation. For example, hold a tree-lighting ceremony separately for those who need lower stimulation, or decorate the tree in a way that prevents it from being moved (like attaching it to the wall) to avoid confusion or wandering.",
+      "timestamp": "53:11-54:04",
+      "time_start_sec": 3191,
+      "time_end_sec": 3244
+    },
+    {
+      "question": "How can families participate in holiday traditions with a loved one who has dementia without causing stress?",
+      "answer": "Families can send a video recording of their celebration to the facility or care setting. This allows the person with dementia to watch the event in their own time and space, ensuring they feel included without the pressure of being in a crowded, noisy environment.",
+      "timestamp": "56:09-56:29",
+      "time_start_sec": 3369,
+      "time_end_sec": 3389
+    },
+    {
+      "question": "What is a helpful analogy for explaining why a person with dementia cannot attend a lively holiday party?",
+      "answer": "Compare it to asking someone in a wheelchair to stand up and dance. Just as you would not ask someone with a physical disability to perform an action they cannot do, you should not expect someone with dementia to engage in activities that exceed their current abilities.",
+      "timestamp": "51:09-51:39",
+      "time_start_sec": 3069,
+      "time_end_sec": 3099
+    },
+    {
+      "question": "Why might a person with dementia become upset when others are having fun nearby?",
+      "answer": "They may feel excluded, frustrated, or angry that they cannot participate in the activities others are enjoying. This feeling of isolation can lead to shaking, crying, or expressing that they hate their current situation.",
+      "timestamp": "38:47-39:40",
+      "time_start_sec": 2327,
+      "time_end_sec": 2380
+    },
+    {
+      "question": "What is the first step a caregiver should take when a resident expresses frustration about not being able to do something they enjoy?",
+      "answer": "Listen actively and ask open-ended questions to understand exactly what they want to do. Show curiosity about their desire rather than dismissing their request or trying to immediately fix the problem.",
+      "timestamp": "39:44-40:07",
+      "time_start_sec": 2384,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "How can a caregiver turn a resident's unmet desire into a meaningful activity?",
+      "answer": "Collaborate with the team to find a safe way to fulfill the wish. This might involve contacting external organizations (like search and rescue) for assistance, creating a safety plan, and involving volunteers to make the experience possible.",
+      "timestamp": "40:07-41:29",
+      "time_start_sec": 2407,
+      "time_end_sec": 2489
+    },
+    {
+      "question": "What is the benefit of creating a \"bucket list\" for residents with dementia?",
+      "answer": "It helps identify and achieve specific dreams or desires, such as attending an air show or going ice skating. Completing these goals gives residents a sense of purpose and freedom, proving that life in care can still include exciting experiences.",
+      "timestamp": "45:49-46:33",
+      "time_start_sec": 2749,
+      "time_end_sec": 2793
+    },
+    {
+      "question": "Why is it important to avoid flashing lights and loud music during holiday celebrations in care facilities?",
+      "answer": "Flashing lights and loud music can trigger sundowning behaviors, agitation, and confusion. A quieter, calmer ambiance creates a safer and more comfortable environment for residents who are sensitive to sensory input.",
+      "timestamp": "55:23-55:42",
+      "time_start_sec": 3323,
+      "time_end_sec": 3342
+    },
+    {
+      "question": "How can staff manage the challenge of families wanting to bring large groups to visit?",
+      "answer": "Establish clear guidelines in advance, such as limiting the number of visitors per day. Explain that fewer people often provide a better experience for the resident and reduce stress for the family.",
+      "timestamp": "56:09-56:25",
+      "time_start_sec": 3369,
+      "time_end_sec": 3385
+    },
+    {
+      "question": "What is a sign that a person with dementia is grieving the loss of their former self?",
+      "answer": "They may express sadness about no longer being able to do things they used to do, such as cooking, driving, or working. This grief is often overlooked because the person is still physically present, but their identity has changed.",
+      "timestamp": "31:36-32:00",
+      "time_start_sec": 1896,
+      "time_end_sec": 1920
+    },
+    {
+      "question": "How can a caregiver validate the grief of a family member caring for someone with dementia?",
+      "answer": "Acknowledge that they are grieving the loss of the person they once knew, even if that person is still alive. Validate their daily emotional struggle and let them know their feelings are normal and understandable.",
+      "timestamp": "26:08-26:56",
+      "time_start_sec": 1568,
+      "time_end_sec": 1616
+    },
+    {
+      "question": "What is a key lesson learned from observing a resident who was previously considered \"difficult\" or aggressive?",
+      "answer": "Aggressive behavior often stems from unmet needs or environmental triggers, not malice. By changing the approach—such as lowering oneself, approaching from the dominant side, and checking for physical discomfort like temperature—the behavior can often be de-escalated.",
+      "timestamp": "22:36-23:27",
+      "time_start_sec": 1356,
+      "time_end_sec": 1407
+    },
+    {
+      "question": "How can a caregiver identify the root cause of a resident's distress before reacting?",
+      "answer": "Pause and ask, \"What is the unmet need?\" Consider factors like temperature, pain, hunger, or the need for comfort. Addressing these underlying issues often resolves the behavioral outburst.",
+      "timestamp": "25:31-25:45",
+      "time_start_sec": 1531,
+      "time_end_sec": 1545
+    },
+    {
+      "question": "Why is it helpful to know whether a person is introverted or extroverted when providing care?",
+      "answer": "Understanding personality traits helps tailor interactions. For example, an introverted person might prefer a quieter approach or more personal space, while an extrovert might thrive with more engagement. Approaching someone on their dominant side can also make a significant difference.",
+      "timestamp": "23:28-23:50",
+      "time_start_sec": 1408,
+      "time_end_sec": 1430
+    },
+    {
+      "question": "What is a recommended way to handle a situation where a resident is hallucinating or talking about things that aren't there?",
+      "answer": "Do not argue with the hallucination or try to force the person to accept reality. Instead, focus on the emotion behind the statement and offer comfort or distraction, allowing them to process the experience safely.",
+      "timestamp": "30:21-31:27",
+      "time_start_sec": 1821,
+      "time_end_sec": 1887
+    },
+    {
+      "question": "How can a caregiver maintain their own well-being while supporting a loved one with dementia?",
+      "answer": "Set firm boundaries regarding social events and expectations. It is okay to decline invitations or modify traditions to ensure a peaceful environment for yourself and your loved one, without feeling guilty.",
+      "timestamp": "52:02-52:29",
+      "time_start_sec": 3122,
+      "time_end_sec": 3149
+    },
+    {
+      "question": "What is the impact of staff shortages on the ability to provide personalized care?",
+      "answer": "Staff shortages often force nurses to split their time between direct care and administrative tasks like consulting with families. This can limit the availability for one-on-one interaction and make it harder to address individual needs promptly.",
+      "timestamp": "14:39-15:09",
+      "time_start_sec": 879,
+      "time_end_sec": 909
+    },
+    {
+      "question": "Why might a younger person with dementia struggle more with communal living than an older person?",
+      "answer": "Younger adults often value independence and privacy more highly. Being placed in a large, communal setting with strict rules can feel particularly restrictive and isolating for someone who is not used to losing their autonomy.",
+      "timestamp": "13:51-14:15",
+      "time_start_sec": 831,
+      "time_end_sec": 855
+    },
+    {
+      "question": "How can a caregiver distinguish between a behavioral issue and a medical issue in a resident?",
+      "answer": "Look for physical signs like being soaked in urine, shivering, or extreme agitation upon waking. These could indicate medical issues like infection, pain, or temperature dysregulation rather than just behavioral problems.",
+      "timestamp": "24:19-25:31",
+      "time_start_sec": 1459,
+      "time_end_sec": 1531
+    },
+    {
+      "question": "What role does \"matching\" play in de-escalating a situation with a person with dementia?",
+      "answer": "Matching involves mirroring the person's energy level and tone to build rapport. Instead of trying to fix the problem immediately, showing curiosity and understanding their perspective helps lower defenses and opens communication.",
+      "timestamp": "45:27-45:40",
+      "time_start_sec": 2727,
+      "time_end_sec": 2740
+    },
+    {
+      "question": "How can a caregiver support a resident who feels trapped or confined in a care facility?",
+      "answer": "Plan outings or excursions that align with the resident's interests, such as a drive by the ocean or a trip to a local attraction. These experiences can provide a sense of freedom and connection to the outside world.",
+      "timestamp": "37:11-37:33",
+      "time_start_sec": 2231,
+      "time_end_sec": 2253
+    },
+    {
+      "question": "What is the importance of involving search and rescue teams in outdoor activities for residents?",
+      "answer": "They provide essential safety expertise and equipment, allowing residents to participate in adventurous activities like river tubing with confidence. Their involvement ensures that risks are managed professionally.",
+      "timestamp": "40:44-41:03",
+      "time_start_sec": 2444,
+      "time_end_sec": 2463
+    },
+    {
+      "question": "How can a caregiver help a resident who is resistant to personal care due to fear or anger?",
+      "answer": "Identify the source of the distress, such as feeling cold or wet, and address it first. Using tools like warm blankets before entering the room can help calm the resident and make them more receptive to care.",
+      "timestamp": "25:31-25:45",
+      "time_start_sec": 1531,
+      "time_end_sec": 1545
+    },
+    {
+      "question": "Why is it beneficial to decorate the Christmas tree in a way that prevents it from being moved?",
+      "answer": "Residents with dementia may wander or knock things over. Attaching the tree to the wall ensures it remains stable and accessible without posing a safety hazard or causing frustration if it moves.",
+      "timestamp": "54:36-54:47",
+      "time_start_sec": 3276,
+      "time_end_sec": 3287
+    },
+    {
+      "question": "What is a good alternative to a traditional, loud Christmas party for a memory care unit?",
+      "answer": "Organize a subdued family lunch with a decorated tree. Keep the volume low, limit the number of participants, and focus on creating a calm, festive atmosphere rather than a high-energy celebration.",
+      "timestamp": "53:11-54:04",
+      "time_start_sec": 3191,
+      "time_end_sec": 3244
+    },
+    {
+      "question": "How can a caregiver recognize when a resident is experiencing \"sundowning\"?",
+      "answer": "Sundowning typically occurs in the late afternoon or evening and involves increased agitation, confusion, or behavioral escalation. Activities should be scheduled earlier in the day to avoid triggering these symptoms.",
+      "timestamp": "55:02-55:07",
+      "time_start_sec": 3302,
+      "time_end_sec": 3307
+    },
+    {
+      "question": "What is the significance of a resident saying, \"The only time I feel free is when I'm in the water\"?",
+      "answer": "It highlights a deep emotional need for freedom and relief from physical limitations. Recognizing this desire allows the caregiver to facilitate activities that provide genuine liberation and joy.",
+      "timestamp": "40:01-40:12",
+      "time_start_sec": 2401,
+      "time_end_sec": 2412
+    },
+    {
+      "question": "How can a caregiver handle a situation where a resident is crying because they feel ignored?",
+      "answer": "Give them your full attention and ask them to explain what is bothering them. Validating their feelings and showing interest in their story can stop the crying and rebuild their sense of connection.",
+      "timestamp": "39:44-40:07",
+      "time_start_sec": 2384,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "Why is it important to involve volunteers in activities for residents with dementia?",
+      "answer": "Volunteers can provide extra hands for lifting, carrying wheelchairs, or assisting with complex tasks, ensuring that residents can participate safely even when staff are stretched thin.",
+      "timestamp": "44:20-44:43",
+      "time_start_sec": 2660,
+      "time_end_sec": 2683
+    },
+    {
+      "question": "How can a caregiver support a resident who is grieving the loss of their past abilities?",
+      "answer": "Avoid dwelling on what they can no longer do. Instead, focus on what they can still enjoy and help them transition to new activities that bring them happiness and a sense of accomplishment.",
+      "timestamp": "31:36-32:00",
+      "time_start_sec": 1896,
+      "time_end_sec": 1920
+    },
+    {
+      "question": "What is a practical tip for managing noise in a facility with multiple residents?",
+      "answer": "Create designated quiet zones or use dividers to separate residents who need silence from those who seek stimulation. Providing noise-canceling headphones can also help individual residents manage their environment.",
+      "timestamp": "34:15-35:21",
+      "time_start_sec": 2055,
+      "time_end_sec": 2121
+    },
+    {
+      "question": "How can a caregiver ensure that a holiday celebration is inclusive for residents of different religious backgrounds?",
+      "answer": "Focus on general themes of warmth, family, and togetherness rather than specific religious rituals. Create an ambiance that celebrates the season without requiring adherence to a particular faith tradition.",
+      "timestamp": "55:38-55:48",
+      "time_start_sec": 3338,
+      "time_end_sec": 3348
+    },
+    {
+      "question": "What is the role of a family council in managing holiday visits?",
+      "answer": "The family council sets guidelines for visitation, such as limiting group sizes or suggesting video calls for large gatherings. This ensures that the resident's needs are prioritized over the family's desire for a large party.",
+      "timestamp": "56:09-56:25",
+      "time_start_sec": 3369,
+      "time_end_sec": 3385
+    },
+    {
+      "question": "How can a caregiver help a resident who feels isolated when others are celebrating?",
+      "answer": "Actively listen to their complaints about exclusion and brainstorm solutions, such as organizing a special outing or activity that includes them. Showing that their wishes matter can alleviate feelings of loneliness.",
+      "timestamp": "39:44-40:07",
+      "time_start_sec": 2384,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "Why is it important to avoid forcing a person with dementia to \"snap out of it\" when they are upset?",
+      "answer": "Emotional processing takes time, and forcing a quick resolution can cause more harm. Allowing the person to express their grief or confusion at their own pace fosters trust and emotional safety.",
+      "timestamp": "30:21-31:27",
+      "time_start_sec": 1821,
+      "time_end_sec": 1887
+    },
+    {
+      "question": "What is a key takeaway from the story of the resident who wanted to go tubing?",
+      "answer": "Even seemingly impossible requests can be fulfilled with creativity, planning, and teamwork. By listening to the resident's desire and finding a safe way to meet it, caregivers can transform despair into joy.",
+      "timestamp": "40:01-41:29",
+      "time_start_sec": 2401,
+      "time_end_sec": 2489
+    },
+    {
+      "question": "How can a caregiver determine if a resident is ready for a new activity or outing?",
+      "answer": "Observe their mood and willingness to engage. If they express a strong desire to do something and seem calm enough to participate, it is likely a good time to plan and execute the activity.",
+      "timestamp": "39:44-40:07",
+      "time_start_sec": 2384,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "What is the ultimate goal of adapting holiday traditions for people with dementia?",
+      "answer": "To create a peaceful and joyful experience that respects the resident's limitations and needs. The focus should be on the well-being of the person with dementia rather than adhering strictly to traditional holiday customs.",
+      "timestamp": "52:02-52:29",
+      "time_start_sec": 3122,
+      "time_end_sec": 3149
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/25/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

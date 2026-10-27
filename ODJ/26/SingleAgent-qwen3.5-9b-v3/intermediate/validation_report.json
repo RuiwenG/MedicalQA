@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 441.64,
+  "timestamp_lines": [
+    "Timestamp 1: 0:24-1:24",
+    "Timestamp 2: 01:54-04:21",
+    "Timestamp 3: 00-06:13",
+    "Timestamp 4: 18-05:42",
+    "Timestamp 5: 42-05:49"
+  ],
+  "pairs": [
+    {
+      "question": "How can a person with dementia use their past habits to improve memory?",
+      "answer": "A person with dementia should look at the methods they have always used in their life to succeed, such as writing lists or using sticky notes. By adapting these familiar strategies to their current daily routine, they can create effective systems that feel natural and reliable, rather than trying to learn entirely new ways to manage tasks.",
+      "timestamp": "0:24-1:24",
+      "time_start_sec": 24,
+      "time_end_sec": 84
+    },
+    {
+      "question": "What are some practical ways to use visual and verbal cues around the house?",
+      "answer": "You can place written reminders in specific spots where they will be seen naturally, like keeping a grocery list on the counter next to the refrigerator or sticking a note to the front door before leaving. You can also use a whiteboard calendar in a high-traffic area, like a stairwell, to review upcoming appointments monthly. These visual and verbal clues act as gentle prompts to help remember important tasks without needing to rely solely on memory.",
+      "timestamp": "01:54-04:21",
+      "time_start_sec": 114,
+      "time_end_sec": 261
+    },
+    {
+      "question": "Why might using pictures instead of words be helpful for someone who has trouble reading?",
+      "answer": "If someone finds it difficult to read standard text, using pictures or symbols can make it easier to understand where things are located or what needs to be done. There are many resources available online that offer sticker kits with images specifically designed to be hung around the house, providing clear, non-verbal guidance that bypasses the need for reading skills.",
+      "timestamp": "3: 00-06:13",
+      "time_start_sec": 180,
+      "time_end_sec": 373
+    },
+    {
+      "question": "How can a green bin in the kitchen serve as a reminder for home maintenance?",
+      "answer": "Placing a green bin in the middle of the kitchen acts as a visual signal that maintenance tasks are waiting to be done. When the bin is visible, it reminds the person to start working on those projects, and all necessary tools or supplies can be kept inside it. Once the maintenance is finished, the bin is simply put away, clearing the space and resetting the reminder system.",
+      "timestamp": "4: 18-05:42",
+      "time_start_sec": 258,
+      "time_end_sec": 342
+    },
+    {
+      "question": "What safety precaution should be taken when placing physical reminders on the floor?",
+      "answer": "While placing items like a bin on the floor can be an effective visual cue, it is very important to ensure that the object does not create a trip hazard. Safety is the top priority, so any item placed on the ground must be positioned carefully so that it does not block walkways or cause anyone to stumble while moving around the house.",
+      "timestamp": "5: 42-05:49",
+      "time_start_sec": 342,
+      "time_end_sec": 349
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/26/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Why does a person with dementia often react with anger or fear when touched unexpectedly?",
+    "answer": "This happens because the part of the brain responsible for safety awareness, specifically the edge vision, is damaged early in the disease. When a person loses their ability to see the edges of their visual field, they cannot detect someone approaching or touching them until it is too late. Suddenly feeling a hand on their shoulder can feel like an attack, causing a strong defensive reaction like fighting or fleeing, even though the person has no intention of hurting you.",
+    "timestamp": "6:18-6:48",
+    "time_start_sec": 378,
+    "time_end_sec": 408
+  },
+  {
+    "question": "Why might a person with dementia suddenly say rude words, swear, or make inappropriate comments?",
+    "answer": "In most people, the right side of the brain controls rhythm, music, and automatic movements, while the left side handles formal language and logic. Dementia often damages the left side first, causing the loss of vocabulary and logical filters. However, the right side often remains intact, preserving \"forbidden words\" learned since childhood, such as swear words or racial slurs. The person is not choosing to be mean; they are losing the brain's ability to stop themselves from saying these things, which are now coming out automatically.",
+    "timestamp": "9:56-10:12",
+    "time_start_sec": 596,
+    "time_end_sec": 612
+  },
+  {
+    "question": "Why does a person with dementia often lose things or think family members moved items?",
+    "answer": "As the disease progresses, the person loses the ability to scan their environment in an organized way. They cannot remember where they last looked or where to look next, so they lose items. Because they cannot track the object visually, they assume someone else must have moved it, which causes them significant distress and confusion.",
+    "timestamp": "7:26-7:36",
+    "time_start_sec": 446,
+    "time_end_sec": 456
+  },
+  {
+    "question": "Why might a person with dementia show a strong preference for sugar and salt but ignore bad smells or tastes?",
+    "answer": "Smell and taste are processed in the primitive limbic system, which is involved in survival instincts. In dementia, the wiring connecting these senses to safety awareness breaks down. The person may still crave strong flavors like sugar and salt because those drives remain, but they lose the ability to recognize danger signals like spoiled food or unpleasant odors, making them unaware of potential health risks.",
+    "timestamp": "5:03-5:34",
+    "time_start_sec": 303,
+    "time_end_sec": 334
+  },
+  {
+    "question": "Why does a person with dementia sometimes struggle to walk or judge distances, even if they try hard?",
+    "answer": "The disease affects the brain's ability to process visual images into 3D depth perception. The person may have to choose between seeing double or losing depth entirely. Without accurate depth perception, they cannot judge how far away objects are or how to navigate around them safely. This is not due to laziness or lack of effort, but because their brain is not receiving or processing the necessary visual data correctly.",
+    "timestamp": "7:44-8:13",
+    "time_start_sec": 464,
+    "time_end_sec": 493
+  },
+  {
+    "question": "Why can a person with dementia still sing songs or dance rhythmically even when they cannot speak clearly?",
+    "answer": "Speaking requires complex planning and vocabulary found in the left side of the brain, which is often damaged early. However, rhythm, music, and automatic movements are controlled by the right side of the brain, which is often preserved longer. This allows the person to sing, clap, or dance naturally because these actions rely on preserved skills rather than the lost logical planning needed for conversation.",
+    "timestamp": "9:28-9:53",
+    "time_start_sec": 568,
+    "time_end_sec": 593
+  },
+  {
+    "question": "Why does a person with dementia often feel angry or impulsive without knowing why?",
+    "answer": "The core part of the brain that manages emotions and impulses (the limbic system) is often damaged early in dementia. This leads to a loss of control over feelings and reactions. The person may feel intense anger or frustration but lacks the logical part of the brain to explain why they feel that way, leading to sudden outbursts that seem unprovoked to others.",
+    "timestamp": "3:08-3:30",
+    "time_start_sec": 188,
+    "time_end_sec": 210
+  },
+  {
+    "question": "Why is it important for caregivers to understand that the person with dementia has lost their ability to see from another person's perspective?",
+    "answer": "The ability to see things from another person's point of view is one of the last skills to develop in a healthy brain and is often the first to go in dementia. This means the person cannot logically reason why their behavior is wrong or understand how their actions affect others. They simply cannot access the perspective needed to apologize or change their behavior, so caregivers should not take personal offense but instead focus on safety and redirection.",
+    "timestamp": "2:52-3:44",
+    "time_start_sec": 172,
+    "time_end_sec": 224
+  },
+  {
+    "question": "Why might a person with dementia suddenly forget how to perform simple tasks or lose their balance?",
+    "answer": "The brain contains a map for sensing the body and controlling movement. As dementia progresses, it shrinks significantly and damages the areas responsible for safety awareness and coordination. While the person may still feel curious about touching things, they lose the ability to sense temperature, texture, or potential danger, making them prone to accidents and injuries they cannot anticipate.",
+    "timestamp": "10:30-11:01",
+    "time_start_sec": 630,
+    "time_end_sec": 661
+  },
+  {
+    "question": "Why does a person with dementia often remember old events and feelings well but struggle to learn new information?",
+    "answer": "Long-term memories and emotional memories are stored in specific areas of the brain that are often preserved, allowing the person to recall past events and hold onto old feelings. However, the part of the brain responsible for holding onto new information and learning (the hippocampal area) is often damaged. This creates a situation where the person remembers being angry at you yesterday but cannot remember why, because the context was never successfully stored as a new memory.",
+    "timestamp": "12:20-12:57",
+    "time_start_sec": 740,
+    "time_end_sec": 777
+  }
+]

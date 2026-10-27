@@ -1,0 +1,303 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "ODJ",
+      "id": "1",
+      "version": "v3",
+      "expected": 12,
+      "status": "skipped",
+      "pairs": 12,
+      "generated_utc": "2026-10-26T21:36:14.617377+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "2",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:36:30.078945+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "3",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:36:44.873257+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "4",
+      "version": "v3",
+      "expected": 7,
+      "status": "skipped",
+      "pairs": 7,
+      "generated_utc": "2026-10-26T21:37:08.628867+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "5",
+      "version": "v3",
+      "status": "failed",
+      "error": "All 11 attempt(s) failed: seed 42: Expected exactly 11 QA pairs; parsed 6; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 43: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1052.300s (allowed end <= 1053s); details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 44: Expected exactly 11 QA pairs; parsed 7; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 45: Expected exactly 11 QA pairs; parsed 7; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 46: Expected exactly 11 QA pairs; parsed 5; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 47: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1052.300s (allowed end <= 1053s); details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 48: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1052.300s (allowed end <= 1053s); details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 49: Expected exactly 11 QA pairs; parsed 5; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 50: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1052.300s (allowed end <= 1053s); details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 51: Expected exactly 11 QA pairs; parsed 6; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json | seed 52: Expected exactly 11 QA pairs; parsed 6; details: /WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/ODJ/5/SingleAgent-qwen3.5-9b-v3/intermediate/validation_report.json"
+    },
+    {
+      "base": "ODJ",
+      "id": "6",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T21:38:07.569101+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "7",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:38:32.699948+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "8",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:39:03.728618+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "9",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:39:33.066050+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "10",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:40:03.673570+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "11",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T21:40:36.627994+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "12",
+      "version": "v3",
+      "expected": 5,
+      "status": "skipped",
+      "pairs": 5,
+      "generated_utc": "2026-10-26T21:40:55.505599+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "13",
+      "version": "v3",
+      "expected": 11,
+      "status": "skipped",
+      "pairs": 11,
+      "generated_utc": "2026-10-26T21:41:31.353628+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "14",
+      "version": "v3",
+      "expected": 5,
+      "status": "skipped",
+      "pairs": 5,
+      "generated_utc": "2026-10-26T21:41:51.970947+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "15",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:42:20.734694+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "16",
+      "version": "v3",
+      "expected": 5,
+      "status": "skipped",
+      "pairs": 5,
+      "generated_utc": "2026-10-26T21:42:39.429798+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "17",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:43:15.613550+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "18",
+      "version": "v3",
+      "expected": 6,
+      "status": "skipped",
+      "pairs": 6,
+      "generated_utc": "2026-10-26T21:43:33.412890+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "19",
+      "version": "v3",
+      "expected": 11,
+      "status": "skipped",
+      "pairs": 11,
+      "generated_utc": "2026-10-26T21:44:13.418835+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "20",
+      "version": "v3",
+      "expected": 13,
+      "status": "skipped",
+      "pairs": 13,
+      "generated_utc": "2026-10-26T21:44:57.518377+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "21",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:45:26.549715+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "22",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:45:56.932820+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "23",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:46:09.908512+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "24",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:46:22.248549+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "25",
+      "version": "v3",
+      "expected": 16,
+      "status": "skipped",
+      "pairs": 16,
+      "generated_utc": "2026-10-26T21:47:10.050282+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "26",
+      "version": "v3",
+      "expected": 5,
+      "status": "ok",
+      "pairs": 5,
+      "sampling_seed": 43,
+      "attempts": 2,
+      "generated_utc": "2026-10-26T23:40:45.251406+00:00",
+      "input_tokens": 2534,
+      "output_tokens": 561,
+      "agent_seconds": 16.842,
+      "output_budget_reached": false
+    },
+    {
+      "base": "ODJ",
+      "id": "27",
+      "version": "v3",
+      "expected": 4,
+      "status": "ok",
+      "pairs": 4,
+      "sampling_seed": 43,
+      "attempts": 2,
+      "generated_utc": "2026-10-26T23:40:58.722736+00:00",
+      "input_tokens": 3202,
+      "output_tokens": 440,
+      "agent_seconds": 13.432,
+      "output_budget_reached": false
+    },
+    {
+      "base": "ODJ",
+      "id": "28",
+      "version": "v3",
+      "expected": 9,
+      "status": "ok",
+      "pairs": 9,
+      "sampling_seed": 45,
+      "attempts": 4,
+      "generated_utc": "2026-10-26T23:42:11.554625+00:00",
+      "input_tokens": 5503,
+      "output_tokens": 881,
+      "agent_seconds": 27.056,
+      "output_budget_reached": false
+    },
+    {
+      "base": "ODJ",
+      "id": "29",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:48:25.290915+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "30",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:48:43.963980+00:00"
+    },
+    {
+      "base": "ODJ",
+      "id": "31",
+      "version": "v3",
+      "expected": 6,
+      "status": "skipped",
+      "pairs": 6,
+      "generated_utc": "2026-10-26T21:49:05.863736+00:00"
+    }
+  ]
+}

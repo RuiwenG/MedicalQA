@@ -1,0 +1,323 @@
+{
+  "expected_pairs": 39,
+  "parsed_pairs": 39,
+  "transcript_end_sec": 3393.0400000000004,
+  "timestamp_lines": [
+    "Timestamp 1: 0:39-0:45",
+    "Timestamp 2: 0:45-1:03",
+    "Timestamp 3: 2:09-2:12",
+    "Timestamp 4: 3:07-3:10",
+    "Timestamp 5: 3:17-3:22",
+    "Timestamp 6: 3:52-3:59",
+    "Timestamp 7: 4:34-4:49",
+    "Timestamp 8: 7:19-7:26",
+    "Timestamp 9: 7:26-7:30",
+    "Timestamp 10: 13:00-13:07",
+    "Timestamp 11: 13:40-14:35",
+    "Timestamp 12: 41:25-41:30",
+    "Timestamp 13: 43:40-43:55",
+    "Timestamp 14: 38:55-39:04",
+    "Timestamp 15: 39:21-39:54",
+    "Timestamp 16: 44:17-44:52",
+    "Timestamp 17: 30:53-31:15",
+    "Timestamp 18: 38:42-38:55",
+    "Timestamp 19: 54:39-54:57",
+    "Timestamp 20: 55:03-55:11",
+    "Timestamp 21: 49:03-49:18",
+    "Timestamp 22: 50:32-51:03",
+    "Timestamp 23: 52:24-52:32",
+    "Timestamp 24: 10:04-10:09",
+    "Timestamp 25: 18:08-18:24",
+    "Timestamp 26: 26:42-26:51",
+    "Timestamp 27: 27:17-27:25",
+    "Timestamp 28: 22:21-22:29",
+    "Timestamp 29: 0:00-0:25",
+    "Timestamp 30: 17:44-17:53",
+    "Timestamp 31: 27:46-27:58",
+    "Timestamp 32: 43:26-43:31",
+    "Timestamp 33: 35:02-35:06",
+    "Timestamp 34: 47:15-47:25",
+    "Timestamp 35: 41:52-42:05",
+    "Timestamp 36: 7:19-7:22",
+    "Timestamp 37: 3:07-3:10",
+    "Timestamp 38: 49:42-49:48",
+    "Timestamp 39: 16:47-16:52"
+  ],
+  "pairs": [
+    {
+      "question": "What is a practical way to handle extreme heat when staying at home?",
+      "answer": "If your home becomes too hot, such as reaching 103 degrees, a smart strategy is to leave and stay at a cooler location, like a hotel near an airport, to ensure you have air conditioning and can get a good night's sleep.",
+      "timestamp": "0:39-0:45",
+      "time_start_sec": 39,
+      "time_end_sec": 45
+    },
+    {
+      "question": "How can a caregiver find a better environment for themselves and their loved one during summer?",
+      "answer": "Traveling to a different setting, such as a hotel with air conditioning, allows the caregiver to relax and ensures the person with dementia is not exposed to dangerous temperatures, making it easier to manage care tasks.",
+      "timestamp": "0:45-1:03",
+      "time_start_sec": 45,
+      "time_end_sec": 63
+    },
+    {
+      "question": "Why is it helpful to acknowledge that \"grass is greener\" in other locations?",
+      "answer": "Recognizing that other places might seem better helps caregivers appreciate their own blessings, like having a cool home, while understanding that home is still where the heart is.",
+      "timestamp": "2:09-2:12",
+      "time_start_sec": 129,
+      "time_end_sec": 132
+    },
+    {
+      "question": "What specific discount is available for registering for the conference early?",
+      "answer": "If you register now, you can get 50 percent off either the Relationships Guide or the Seeing the Gems workbook.",
+      "timestamp": "3:07-3:10",
+      "time_start_sec": 187,
+      "time_end_sec": 190
+    },
+    {
+      "question": "What free gift is included with early registration for the conference?",
+      "answer": "Early registrants receive a cool thank you gift from the organization, in addition to the discounted materials.",
+      "timestamp": "3:17-3:22",
+      "time_start_sec": 197,
+      "time_end_sec": 202
+    },
+    {
+      "question": "What happens if you register for the conference by July 5th?",
+      "answer": "If you register by July 5th, you get a free webinar with TIPA on July 28th that features something completely new and different.",
+      "timestamp": "3:52-3:59",
+      "time_start_sec": 232,
+      "time_end_sec": 239
+    },
+    {
+      "question": "What is the Care Partner Support Series?",
+      "answer": "It is a five-week series designed for care partners to learn more about the disease of dementia, its progression, and how to provide effective care.",
+      "timestamp": "4:34-4:49",
+      "time_start_sec": 274,
+      "time_end_sec": 289
+    },
+    {
+      "question": "How can a caregiver feel supported if they are feeling invisible or overwhelmed?",
+      "answer": "You can use \"in the moment support cards\" that remind you of your value and purpose, or reach out to skilled consultants for free 30-minute sessions.",
+      "timestamp": "7:19-7:26",
+      "time_start_sec": 439,
+      "time_end_sec": 446
+    },
+    {
+      "question": "What is the definition of \"invisible\" in the context of caregiving?",
+      "answer": "Feeling invisible means feeling unseen or unnoticed, which can happen when caregivers struggle with the heavy workload of caring for someone with dementia.",
+      "timestamp": "7:26-7:30",
+      "time_start_sec": 446,
+      "time_end_sec": 450
+    },
+    {
+      "question": "Who are Jill and Kelsey, and what do they do?",
+      "answer": "Jill is a Program Coordinator and Kelsey is a Family Caregiver Consultant; they work together to support families and people living with dementia.",
+      "timestamp": "13:00-13:07",
+      "time_start_sec": 780,
+      "time_end_sec": 787
+    },
+    {
+      "question": "How did Jill and Kelsey meet and start working together?",
+      "answer": "They worked in the same office and shared a cubicle wall. When a position opened up, Jill asked Kelsey if she wanted to apply, and Kelsey agreed, leading to their partnership.",
+      "timestamp": "13:40-14:35",
+      "time_start_sec": 820,
+      "time_end_sec": 875
+    },
+    {
+      "question": "What is the \"Sapphire\" state mentioned by the speakers?",
+      "answer": "The Sapphire state refers to being flexible and clear-minded. It is the ideal mental state for a care partner to effectively support someone with dementia.",
+      "timestamp": "41:25-41:30",
+      "time_start_sec": 2485,
+      "time_end_sec": 2490
+    },
+    {
+      "question": "Why is it important for caregivers to check their own stress levels?",
+      "answer": "If a caregiver is stressed and not in the flexible Sapphire state, it becomes very difficult to support someone with brain changes, so they must meet their own unmet needs first.",
+      "timestamp": "43:40-43:55",
+      "time_start_sec": 2620,
+      "time_end_sec": 2635
+    },
+    {
+      "question": "What is the \"Gem Stages\" concept?",
+      "answer": "Gem Stages is a framework that shows people living with dementia can change their mental state quickly, meaning they might act differently from one moment to the next.",
+      "timestamp": "38:55-39:04",
+      "time_start_sec": 2335,
+      "time_end_sec": 2344
+    },
+    {
+      "question": "What did the husband learn about his wife's behavior using the Gem Stages concept?",
+      "answer": "He realized his wife was not being intentionally rude but was fluctuating due to her condition. By stepping back and pausing instead of arguing, he turned a stressful moment into a positive connection.",
+      "timestamp": "39:21-39:54",
+      "time_start_sec": 2361,
+      "time_end_sec": 2394
+    },
+    {
+      "question": "How can the \"Puzzle Piece\" card help a caregiver?",
+      "answer": "The card helps caregivers focus on just one thing to change or improve at a time, rather than trying to fix a million problems, which makes progress more manageable.",
+      "timestamp": "44:17-44:52",
+      "time_start_sec": 2657,
+      "time_end_sec": 2692
+    },
+    {
+      "question": "What is the benefit of using visual check-ins during virtual meetings?",
+      "answer": "Visual check-ins allow the leader to notice reactions and clues from participants who might not speak up, helping them respond to frustration or boredom immediately.",
+      "timestamp": "30:53-31:15",
+      "time_start_sec": 1853,
+      "time_end_sec": 1875
+    },
+    {
+      "question": "How can a caregiver adapt their communication style based on the Gem Stages?",
+      "answer": "A caregiver can start by taking a moment to be present and breathing, which helps slow down the interaction and allows the person with dementia to process information at their own pace.",
+      "timestamp": "38:42-38:55",
+      "time_start_sec": 2322,
+      "time_end_sec": 2335
+    },
+    {
+      "question": "What is the role of the \"Consultant Certification\" course?",
+      "answer": "It is a training course running from July 20th to 22nd that teaches individuals how to become consultants who can help others navigate dementia care.",
+      "timestamp": "54:39-54:57",
+      "time_start_sec": 3279,
+      "time_end_sec": 3297
+    },
+    {
+      "question": "Why might a caregiver feel challenged during the Consultant Certification course?",
+      "answer": "The course is designed to stretch existing skills and challenge assumptions, which can feel difficult but ultimately makes the caregiver stronger and more capable.",
+      "timestamp": "55:03-55:11",
+      "time_start_sec": 3303,
+      "time_end_sec": 3311
+    },
+    {
+      "question": "What is the value of connecting with other certified professionals?",
+      "answer": "Connecting with others who are already certified allows you to learn how they have improved their services and gives you the confidence to jump right into new opportunities.",
+      "timestamp": "49:03-49:18",
+      "time_start_sec": 2943,
+      "time_end_sec": 2958
+    },
+    {
+      "question": "How can the colors on the Puzzle Piece card be used effectively?",
+      "answer": "Different people are drawn to different colors; using the colors as a reference point helps the consultant connect with the client's specific learning style and keeps the conversation focused.",
+      "timestamp": "50:32-51:03",
+      "time_start_sec": 3032,
+      "time_end_sec": 3063
+    },
+    {
+      "question": "What is the importance of the \"Person First\" perspective?",
+      "answer": "The \"Person First\" perspective reminds us that the individual is a person first, not just a diagnosis, which helps maintain dignity and connection.",
+      "timestamp": "52:24-52:32",
+      "time_start_sec": 3144,
+      "time_end_sec": 3152
+    },
+    {
+      "question": "How can a caregiver use the \"In the Moment Support Cards\"?",
+      "answer": "You can use these cards to give yourself immediate encouragement when you need it, or share them with others to provide instant support and connection.",
+      "timestamp": "10:04-10:09",
+      "time_start_sec": 604,
+      "time_end_sec": 609
+    },
+    {
+      "question": "What is the significance of the \"Senior Helpers Gems\" video?",
+      "answer": "This video explains that people with dementia can move between different stages of the disease within a single day, helping families understand sudden changes in behavior.",
+      "timestamp": "18:08-18:24",
+      "time_start_sec": 1088,
+      "time_end_sec": 1104
+    },
+    {
+      "question": "How did the mentor, Amanda, help Jill and Kelsey during their training?",
+      "answer": "Amanda helped them calm down, guided them through practicing new skills in breakout rooms, and showed them how to make the learning process fun and comfortable.",
+      "timestamp": "26:42-26:51",
+      "time_start_sec": 1602,
+      "time_end_sec": 1611
+    },
+    {
+      "question": "What is the benefit of recording and reviewing training videos with a mentor?",
+      "answer": "Reviewing videos with a mentor allows you to laugh at mistakes, learn from them, and grow more comfortable with the skills in a safe environment.",
+      "timestamp": "27:17-27:25",
+      "time_start_sec": 1637,
+      "time_end_sec": 1645
+    },
+    {
+      "question": "How can a caregiver find funding for training or education?",
+      "answer": "Caregivers should look for grants and scholarships, as there are often funds available specifically to help people get more education and skills.",
+      "timestamp": "22:21-22:29",
+      "time_start_sec": 1341,
+      "time_end_sec": 1349
+    },
+    {
+      "question": "What is the \"Straight Up Positive\" community?",
+      "answer": "It is a supportive community of caregivers and experts who share resources, stories, and encouragement to help everyone feel less alone in their journey.",
+      "timestamp": "0:00-0:25",
+      "time_start_sec": 0,
+      "time_end_sec": 25
+    },
+    {
+      "question": "Why is it important to celebrate small wins in caregiving?",
+      "answer": "Celebrating small wins, like a moment of connection or a successful activity, builds momentum and reminds caregivers that their efforts are making a difference.",
+      "timestamp": "17:44-17:53",
+      "time_start_sec": 1064,
+      "time_end_sec": 1073
+    },
+    {
+      "question": "How can a caregiver handle a situation where they feel they are failing?",
+      "answer": "Instead of focusing on everything that went wrong, try to find just one good thing that happened, as this shift in perspective can reduce stress and improve mood.",
+      "timestamp": "27:46-27:58",
+      "time_start_sec": 1666,
+      "time_end_sec": 1678
+    },
+    {
+      "question": "What is the role of the prefrontal cortex in caregiving?",
+      "answer": "The prefrontal cortex is the part of the brain responsible for self-awareness, allowing caregivers to recognize their own stress levels and decide if they are ready to engage.",
+      "timestamp": "43:26-43:31",
+      "time_start_sec": 2606,
+      "time_end_sec": 2611
+    },
+    {
+      "question": "How can a caregiver support someone who is agitated in a virtual group?",
+      "answer": "By observing visual cues, a caregiver can notice if someone is leaving or acting stressed and can gently check in to offer attention or adjust the activity.",
+      "timestamp": "35:02-35:06",
+      "time_start_sec": 2102,
+      "time_end_sec": 2106
+    },
+    {
+      "question": "What is the advantage of having a coworker with similar skills?",
+      "answer": "Having a colleague with the same certification and skills allows you to learn from each other, share successes, and solve problems together more effectively.",
+      "timestamp": "47:15-47:25",
+      "time_start_sec": 2835,
+      "time_end_sec": 2845
+    },
+    {
+      "question": "How can a caregiver prepare for a difficult conversation with a loved one?",
+      "answer": "Before the conversation, take a moment to pause, breathe, and assess your own emotional state to ensure you are not pushing the loved one when they are struggling.",
+      "timestamp": "41:52-42:05",
+      "time_start_sec": 2512,
+      "time_end_sec": 2525
+    },
+    {
+      "question": "What is the message behind the \"You Matter\" encouragement card?",
+      "answer": "The card reminds caregivers that they have purpose and value, countering the feelings of invisibility that often come with the demanding nature of caregiving.",
+      "timestamp": "7:19-7:22",
+      "time_start_sec": 439,
+      "time_end_sec": 442
+    },
+    {
+      "question": "How can the \"Seeing the Gems\" workbook help a family?",
+      "answer": "The workbook provides tools and insights to help families understand the unique abilities and potential of their loved ones living with dementia.",
+      "timestamp": "3:07-3:10",
+      "time_start_sec": 187,
+      "time_end_sec": 190
+    },
+    {
+      "question": "What is the impact of isolation on caregivers?",
+      "answer": "Isolation can make caregivers feel separated and unsupported, so forming connections with others is essential for healing and success.",
+      "timestamp": "49:42-49:48",
+      "time_start_sec": 2982,
+      "time_end_sec": 2988
+    },
+    {
+      "question": "What is the ultimate goal of the PAC certification program?",
+      "answer": "The goal is to build strong relationships and connections with people living with dementia, emphasizing that the relationship piece is the most important part of care.",
+      "timestamp": "16:47-16:52",
+      "time_start_sec": 1007,
+      "time_end_sec": 1012
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/10/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-45.json",
+  "valid": true
+}

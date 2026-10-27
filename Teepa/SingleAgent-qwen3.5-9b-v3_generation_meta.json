@@ -1,0 +1,156 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "Teepa",
+      "id": "1",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T21:29:04.280681+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "2",
+      "version": "v3",
+      "expected": 8,
+      "status": "skipped",
+      "pairs": 8,
+      "generated_utc": "2026-10-26T21:29:31.281988+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "3",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T21:29:59.773176+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "4",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:30:16.184996+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "5",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:30:30.337940+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "6",
+      "version": "v3",
+      "expected": 9,
+      "status": "skipped",
+      "pairs": 9,
+      "generated_utc": "2026-10-26T21:30:59.849236+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "7",
+      "version": "v3",
+      "expected": 8,
+      "status": "ok",
+      "pairs": 8,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-10-26T21:31:28.321381+00:00",
+      "input_tokens": 5509,
+      "output_tokens": 931,
+      "agent_seconds": 28.447,
+      "output_budget_reached": false,
+      "recovered_from_saved_response": true
+    },
+    {
+      "base": "Teepa",
+      "id": "8",
+      "version": "v3",
+      "expected": 5,
+      "status": "skipped",
+      "pairs": 5,
+      "generated_utc": "2026-10-26T21:31:49.996126+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "9",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:32:02.541299+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "10",
+      "version": "v3",
+      "expected": 4,
+      "status": "skipped",
+      "pairs": 4,
+      "generated_utc": "2026-10-26T21:32:16.146454+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "11",
+      "version": "v3",
+      "expected": 12,
+      "status": "skipped",
+      "pairs": 12,
+      "generated_utc": "2026-10-26T21:33:02.113367+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "12",
+      "version": "v3",
+      "expected": 12,
+      "status": "ok",
+      "pairs": 12,
+      "sampling_seed": 44,
+      "attempts": 3,
+      "generated_utc": "2026-10-26T23:39:14.569220+00:00",
+      "input_tokens": 7004,
+      "output_tokens": 1230,
+      "agent_seconds": 37.997,
+      "output_budget_reached": false
+    },
+    {
+      "base": "Teepa",
+      "id": "13",
+      "version": "v3",
+      "expected": 11,
+      "status": "skipped",
+      "pairs": 11,
+      "generated_utc": "2026-10-26T21:34:18.924335+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "14",
+      "version": "v3",
+      "expected": 12,
+      "status": "skipped",
+      "pairs": 12,
+      "generated_utc": "2026-10-26T21:34:57.635959+00:00"
+    },
+    {
+      "base": "Teepa",
+      "id": "15",
+      "version": "v3",
+      "expected": 14,
+      "status": "skipped",
+      "pairs": 14,
+      "generated_utc": "2026-10-26T21:35:35.450851+00:00"
+    }
+  ]
+}

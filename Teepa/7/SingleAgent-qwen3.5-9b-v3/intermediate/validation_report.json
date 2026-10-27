@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 722.6,
+  "timestamp_lines": [
+    "Timestamp 1: 0:01-1:40",
+    "Timestamp 2: 2:54-4:15",
+    "Timestamp 3: 4:16-5:48",
+    "Timestamp 4: 5:55-7:34",
+    "Timestamp 5: 7:59-9:26",
+    "Timestamp 6: 7:35-10:02",
+    "Timestamp 7: 10:03-11:45",
+    "Timestamp 8: 11:45-12:03"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main mindset shift recommended for caring for someone with dementia?",
+      "answer": "Instead of focusing only on what the person has lost or how much harder things are getting, caregivers should focus on what the person still has left. By viewing the individual as having something positive and good, rather than just counting their deficits, caregivers can create the right environment and care to help the person \"shine.\"",
+      "timestamp": "0:01-1:40",
+      "time_start_sec": 1,
+      "time_end_sec": 100
+    },
+    {
+      "question": "What does it mean when a person with dementia is described as a \"Diamond\"?",
+      "answer": "A \"Diamond\" represents a stage where the person is clear and sharp but becomes rigid and inflexible. They rely heavily on habits and routines and dislike change or being told what to do. While they can still perform tasks well, they may act stubbornly because they believe they know best. Caregivers must provide a consistent setting to avoid getting \"cut\" by their frustration.",
+      "timestamp": "2:54-4:15",
+      "time_start_sec": 174,
+      "time_end_sec": 255
+    },
+    {
+      "question": "What are the key signs and behaviors of the \"Emerald\" stage?",
+      "answer": "In the \"Emerald\" stage, things begin to change, and the person is no longer clear and sharp. They may make mistakes, skip steps, get lost in time or place, and struggle to finish tasks. Crucially, they often do not realize these flaws exist and believe everything is fine. If a problem arises, they may blame the caregiver, so it is important to match their pace without pointing out their errors.",
+      "timestamp": "4:16-5:48",
+      "time_start_sec": 256,
+      "time_end_sec": 348
+    },
+    {
+      "question": "Why is the \"Amber\" stage described as being stuck in a moment of time?",
+      "answer": "An \"Amber\" is compared to tree sap that hardens around an object, trapping it in a specific moment. People in this stage live entirely in the present based on sensations—what feels good or bad right now. They lack safety awareness, caution, and the ability to wait, often grabbing things or invading space because they want something immediately. This inconsistency can be exhausting for caregivers.",
+      "timestamp": "5:55-7:34",
+      "time_start_sec": 355,
+      "time_end_sec": 454
+    },
+    {
+      "question": "What abilities are lost and retained during the \"Ruby\" stage?",
+      "answer": "During the \"Ruby\" stage, fine motor skills are lost, meaning the person has trouble with small movements in their eyes, fingers, mouth, and feet, which affects vision, chewing, and speech. However, they retain big movements, strength, and rhythm. Because they still have strength but cannot control their grip, they may accidentally hurt a caregiver while trying to hold onto them.",
+      "timestamp": "7:59-9:26",
+      "time_start_sec": 479,
+      "time_end_sec": 566
+    },
+    {
+      "question": "How should a caregiver respond when they feel frustrated or like a \"Diamond\" while caring for an \"Amber\"?",
+      "answer": "When a caregiver feels frustrated, angry, or rigid (acting like a Diamond), they must immediately take a step back and time themselves out. Taking a deep breath helps restore oxygen to the brain, allowing the caregiver to return to being a \"Sapphire\"—flexible, organized, and calm—which is critical for supporting the person in the Amber stage.",
+      "timestamp": "7:35-10:02",
+      "time_start_sec": 455,
+      "time_end_sec": 602
+    },
+    {
+      "question": "What is the significance of the \"Pearl\" stage, and what should caregivers watch out for?",
+      "answer": "The \"Pearl\" stage occurs at the end of the disease when the body is ruled by reflexes and gross motor skills are lost. The outer \"shell\" of the body may look unrecognizable or difficult to manage, but inside lies the precious person. Caregivers must avoid spending too much energy worrying about the difficult outer shell and instead focus on the unique person trapped within, using gentle care to help them relax.",
+      "timestamp": "10:03-11:45",
+      "time_start_sec": 603,
+      "time_end_sec": 705
+    },
+    {
+      "question": "What is the ultimate goal of using the \"Gem\" framework for dementia care?",
+      "answer": "The goal is to see the person as a precious and unique gem of great value, regardless of their current stage. By recognizing their specific characteristics and providing the \"right setting and right care,\" caregivers can help the person shine, honoring who they are now rather than who they used to be.",
+      "timestamp": "11:45-12:03",
+      "time_start_sec": 705,
+      "time_end_sec": 723
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/Teepa/7/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

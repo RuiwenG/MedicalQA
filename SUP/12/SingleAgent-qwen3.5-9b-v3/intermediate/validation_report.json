@@ -1,0 +1,267 @@
+{
+  "expected_pairs": 32,
+  "parsed_pairs": 32,
+  "transcript_end_sec": 3000.2400000000002,
+  "timestamp_lines": [
+    "Timestamp 1: 9:08-9:23",
+    "Timestamp 2: 11:27-12:20",
+    "Timestamp 3: 17:48-19:19",
+    "Timestamp 4: 33:27-33:47",
+    "Timestamp 5: 36:58-37:28",
+    "Timestamp 6: 41:45-42:12",
+    "Timestamp 7: 28:33-28:47",
+    "Timestamp 8: 39:14-40:26",
+    "Timestamp 9: 6:42-7:10",
+    "Timestamp 10: 22:14-22:32",
+    "Timestamp 11: 9:30-9:37",
+    "Timestamp 12: 5:06-5:20",
+    "Timestamp 13: 29:35-30:23",
+    "Timestamp 14: 34:56-35:20",
+    "Timestamp 15: 47:51-48:17",
+    "Timestamp 16: 38:21-38:35",
+    "Timestamp 17: 18:13-18:30",
+    "Timestamp 18: 12:45-13:15",
+    "Timestamp 19: 37:21-37:30",
+    "Timestamp 20: 45:34-46:35",
+    "Timestamp 21: 47:11-47:51",
+    "Timestamp 22: 34:22-34:33",
+    "Timestamp 23: 11:38-12:12",
+    "Timestamp 24: 25:17-25:36",
+    "Timestamp 25: 28:58-29:09",
+    "Timestamp 26: 39:14-41:40",
+    "Timestamp 27: 16:54-17:17",
+    "Timestamp 28: 1:04-1:10",
+    "Timestamp 29: 8:31-8:51",
+    "Timestamp 30: 45:57-46:10",
+    "Timestamp 31: 19:18-19:27",
+    "Timestamp 32: 19:54-20:13"
+  ],
+  "pairs": [
+    {
+      "question": "What is the first step recommended for improving relationships with someone living with dementia?",
+      "answer": "The first step is to look in the mirror and think about who you are. You should consider your own personality type and how it connects with the other person. Understanding yourself helps you get connected with them.",
+      "timestamp": "9:08-9:23",
+      "time_start_sec": 548,
+      "time_end_sec": 563
+    },
+    {
+      "question": "How can caregivers use the \"In the Moment Cards\" when they feel frustrated or overwhelmed?",
+      "answer": "The cards have three parts. First, use the \"Acknowledge\" section to admit that the moment is tough and it is okay to feel that way. Second, use the \"Encourage\" section to offer yourself some support to keep going. Finally, use the \"Grow\" section to find a small action step to move forward.",
+      "timestamp": "11:27-12:20",
+      "time_start_sec": 687,
+      "time_end_sec": 740
+    },
+    {
+      "question": "What does the acronym R-E-A-D-Y stand for in the context of preparing for change?",
+      "answer": "R stands for Relationships, E stands for Enough (feeling you are enough), A stands for Accept (accepting what you didn't expect), D stands for Do (taking action), and Y stands for Yes (communication). Each letter represents a quarterly focus to help you prepare.",
+      "timestamp": "17:48-19:19",
+      "time_start_sec": 1068,
+      "time_end_sec": 1159
+    },
+    {
+      "question": "Why is it important to involve leadership when trying to change how memory care is done?",
+      "answer": "Leadership needs to understand and support the new vision. When leaders buy in, they make decisions—like hiring and budget—that reflect the importance of memory care. This ensures the change is supported financially and operationally.",
+      "timestamp": "33:27-33:47",
+      "time_start_sec": 2007,
+      "time_end_sec": 2027
+    },
+    {
+      "question": "What is a \"Life Enrichment Coordinator\" and how does this role differ from traditional care?",
+      "answer": "A Life Enrichment Coordinator is a staff member who partners with residents throughout the entire day. Unlike traditional roles that might separate care from activities, this person helps with daily tasks like bathing while also engaging the resident in meaningful one-on-one activities.",
+      "timestamp": "36:58-37:28",
+      "time_start_sec": 2218,
+      "time_end_sec": 2248
+    },
+    {
+      "question": "How should caregivers react if a specific strategy they try with a resident does not work?",
+      "answer": "Do not feel like you have failed. Instead, view the situation as a chance to learn what does work for that individual. Keep trying different approaches until you find the right one, just as a teacher tries different methods until a student understands.",
+      "timestamp": "41:45-42:12",
+      "time_start_sec": 2505,
+      "time_end_sec": 2532
+    },
+    {
+      "question": "What is the main benefit of using a Positive Approach to Care (PAC) certification according to Mary Stoinski?",
+      "answer": "PAC skills are foundational to every aspect of life. Learning these skills makes your job easier and, most importantly, makes life easier and more engaging for the individuals living with dementia.",
+      "timestamp": "28:33-28:47",
+      "time_start_sec": 1713,
+      "time_end_sec": 1727
+    },
+    {
+      "question": "How can a caregiver turn a difficult personal care routine, like bathing, into a positive experience?",
+      "answer": "Focus on building connection and trust first. You can use sensory tools like music, singing, or a therapy doll to create a familiar and comforting environment. This shifts the focus from the task to a shared, enjoyable moment.",
+      "timestamp": "39:14-40:26",
+      "time_start_sec": 2354,
+      "time_end_sec": 2426
+    },
+    {
+      "question": "What is the purpose of the \"Relationship Guidebook\" available from Positive Approach to Care?",
+      "answer": "The guidebook helps caregivers understand different types of relationships, such as family, work, and friendships. It provides resources to help you build stronger connections and navigate the challenges that come with various relationships.",
+      "timestamp": "6:42-7:10",
+      "time_start_sec": 402,
+      "time_end_sec": 430
+    },
+    {
+      "question": "Why is it normal for caregivers to feel distracted or frazzled during their day?",
+      "answer": "It is a normal experience for care partners to struggle with multitasking and balancing many relationships at once. Feeling overwhelmed does not mean you are doing a bad job; it is a common part of caring for someone with dementia.",
+      "timestamp": "22:14-22:32",
+      "time_start_sec": 1334,
+      "time_end_sec": 1352
+    },
+    {
+      "question": "What is the significance of the \"Gems\" states in the context of relationships?",
+      "answer": "The Gems states refer to different emotional or mental states that people can be in. Understanding these states helps caregivers recognize how a person might be feeling and how to connect with them effectively in that specific moment.",
+      "timestamp": "9:30-9:37",
+      "time_start_sec": 570,
+      "time_end_sec": 577
+    },
+    {
+      "question": "How can a caregiver practice the skill of \"reflection\" when talking to someone with dementia?",
+      "answer": "Reflection means paying attention to what the other person is showing you, such as their facial expressions or tone of voice, and mirroring that back to them. This shows you are listening and helps build a deeper connection.",
+      "timestamp": "5:06-5:20",
+      "time_start_sec": 306,
+      "time_end_sec": 320
+    },
+    {
+      "question": "What advice is given to someone starting their first day of a three-day PAC certification course?",
+      "answer": "Do not be nervous or discouraged. Remember that the trainers are there to help you succeed and show grace. Stick with the training because the skills you learn are foundational and will make your work much easier.",
+      "timestamp": "29:35-30:23",
+      "time_start_sec": 1775,
+      "time_end_sec": 1823
+    },
+    {
+      "question": "How does the concept of \"dignity and honor\" apply to memory care?",
+      "answer": "Dignity and honor are non-negotiable foundations of care. They mean treating every individual with respect and value, regardless of their condition. This principle guides how staff interact with residents and makes a huge difference in their experience.",
+      "timestamp": "34:56-35:20",
+      "time_start_sec": 2096,
+      "time_end_sec": 2120
+    },
+    {
+      "question": "What is the role of the \"Champion Course\" offered by Positive Approach to Care?",
+      "answer": "The Champion Course is a series of events held every Friday designed to provide support and problem-solving guidance. Participants can join these sessions to discuss challenges and learn new tools to help them in their caregiving roles.",
+      "timestamp": "47:51-48:17",
+      "time_start_sec": 2871,
+      "time_end_sec": 2897
+    },
+    {
+      "question": "Why is it helpful to combine care tasks with engagement activities?",
+      "answer": "Combining tasks allows you to engage with the person while meeting their physical needs. For example, you can sing a song while brushing teeth. This breaks down the separation between \"care\" and \"activities\" and creates a more relational experience.",
+      "timestamp": "38:21-38:35",
+      "time_start_sec": 2301,
+      "time_end_sec": 2315
+    },
+    {
+      "question": "What should a caregiver do if they feel they are not \"enough\" for the person they are caring for?",
+      "answer": "Remind yourself that you are enough. The guidebook encourages caregivers to accept that they have enough love and ability to make a difference. Affirming your own worth is a key step in being ready to connect.",
+      "timestamp": "18:13-18:30",
+      "time_start_sec": 1093,
+      "time_end_sec": 1110
+    },
+    {
+      "question": "How can a caregiver use the \"Grow\" section of the In the Moment Cards?",
+      "answer": "The Grow section provides a specific action item or next step. For example, it might suggest looking in the mirror and smiling. This gives the caregiver something concrete and active to do to improve their mood or situation immediately.",
+      "timestamp": "12:45-13:15",
+      "time_start_sec": 765,
+      "time_end_sec": 795
+    },
+    {
+      "question": "What is the importance of knowing the individual in person-centered care?",
+      "answer": "Person-centered care is built on knowing the unique history, preferences, and personality of the individual. Without this knowledge, it is difficult to provide care that truly respects who they are and meets their specific needs.",
+      "timestamp": "37:21-37:30",
+      "time_start_sec": 2241,
+      "time_end_sec": 2250
+    },
+    {
+      "question": "How can a caregiver find more information about PAC events and certifications?",
+      "answer": "Visit the website teepasknow.com. On the site, you can find a calendar of upcoming events, including certifications, webinars, and free community events. You can also look for guides to relationships and purchase books there.",
+      "timestamp": "45:34-46:35",
+      "time_start_sec": 2734,
+      "time_end_sec": 2795
+    },
+    {
+      "question": "What is the \"DPS\" service and how can a caregiver access it?",
+      "answer": "DPS stands for Dementia Problem Solving. It is a service where you can email your specific challenges to the team at dps@teepasknow.com. They will review your situation and may invite you to join a problem-solving event to help you find solutions.",
+      "timestamp": "47:11-47:51",
+      "time_start_sec": 2831,
+      "time_end_sec": 2871
+    },
+    {
+      "question": "Why is it important to build relationships with memory care directors?",
+      "answer": "Building strong relationships with directors ensures their skills are sharpened so they can train their own staff. This creates a ripple effect where better training reaches every layer of the organization, improving care for everyone.",
+      "timestamp": "34:22-34:33",
+      "time_start_sec": 2062,
+      "time_end_sec": 2073
+    },
+    {
+      "question": "How can a caregiver handle the feeling of wanting to quit when things get too hard?",
+      "answer": "Acknowledge that the moment is hard and that it is okay to feel like you want to stop. The In the Moment Cards give permission to sit with that feeling without needing immediate encouragement. Once you acknowledge it, you can choose to keep going.",
+      "timestamp": "11:38-12:12",
+      "time_start_sec": 698,
+      "time_end_sec": 732
+    },
+    {
+      "question": "What is the benefit of having a mentor in the PAC certification process?",
+      "answer": "A mentor provides guidance and support, especially when you are feeling overwhelmed. Having someone experienced, like Lynn Pascale, can help you navigate the training and build confidence in your new skills.",
+      "timestamp": "25:17-25:36",
+      "time_start_sec": 1517,
+      "time_end_sec": 1536
+    },
+    {
+      "question": "How does the concept of \"hand-under-hand\" apply to interactions with people who have physical changes?",
+      "answer": "Hand-under-hand is a technique where the caregiver places their hand under the person's hand to guide them. This approach is respectful and effective for people with physical limitations or children, allowing them to lead the movement while receiving support.",
+      "timestamp": "28:58-29:09",
+      "time_start_sec": 1738,
+      "time_end_sec": 1749
+    },
+    {
+      "question": "What is the main takeaway from the story about the woman who resisted bathing?",
+      "answer": "The main takeaway is that patience and creativity can turn a traumatic experience into a positive one. By using music, a doll, and building trust, the team helped the woman enjoy her bath, proving that there is no single magic solution but many ways to try.",
+      "timestamp": "39:14-41:40",
+      "time_start_sec": 2354,
+      "time_end_sec": 2500
+    },
+    {
+      "question": "How can a caregiver prepare themselves before attempting a new task with a resident?",
+      "answer": "Preparation involves getting your own body and mind ready. For example, position your feet correctly before standing up or take a deep breath before approaching the resident. Being physically and mentally ready helps you act calmly and confidently.",
+      "timestamp": "16:54-17:17",
+      "time_start_sec": 1014,
+      "time_end_sec": 1037
+    },
+    {
+      "question": "What is the role of the \"Certified Community\" mentioned in the video?",
+      "answer": "The Certified Community is a space where caregivers can share posts, ask questions, and receive support from others. It serves as a hub for connecting with fellow caregivers and accessing resources like the Valentine's Day love reminders.",
+      "timestamp": "1:04-1:10",
+      "time_start_sec": 64,
+      "time_end_sec": 70
+    },
+    {
+      "question": "How does the video define a \"relationship\" in the broadest sense?",
+      "answer": "A relationship is defined as any interaction with someone, whether it is casual, intimate, with a living person, a person who has passed on, an animal, or a child. Every interaction is an opportunity to build a connection.",
+      "timestamp": "8:31-8:51",
+      "time_start_sec": 511,
+      "time_end_sec": 531
+    },
+    {
+      "question": "What is the significance of the \"Guide to All Relationships\" on the website?",
+      "answer": "The Guide to All Relationships is a resource that explains how to navigate different types of connections. It helps caregivers understand that relationships are everywhere and provides tools to strengthen them in various settings.",
+      "timestamp": "45:57-46:10",
+      "time_start_sec": 2757,
+      "time_end_sec": 2770
+    },
+    {
+      "question": "How can a caregiver use the \"Yes\" (Communication) part of the R-E-A-D-Y framework?",
+      "answer": "The \"Y\" stands for communication. It means preparing yourself to communicate effectively with different types of people. This involves being ready to listen, speak clearly, and adapt your communication style to the person you are with.",
+      "timestamp": "19:18-19:27",
+      "time_start_sec": 1158,
+      "time_end_sec": 1167
+    },
+    {
+      "question": "What is the ultimate goal of the PAC skills and the R-E-A-D-Y program?",
+      "answer": "The goal is to help people become ready to take the next step in their lives, whether that is strengthening a relationship, making a change, or looking toward the future. The program aims to provide practical tips to support this journey.",
+      "timestamp": "19:54-20:13",
+      "time_start_sec": 1194,
+      "time_end_sec": 1213
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/12/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

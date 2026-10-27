@@ -1,0 +1,35 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "GEMS",
+      "id": "1",
+      "version": "v3",
+      "expected": 10,
+      "status": "skipped",
+      "pairs": 10,
+      "generated_utc": "2026-10-26T22:47:37.535391+00:00"
+    },
+    {
+      "base": "GEMS",
+      "id": "2",
+      "version": "v3",
+      "expected": 12,
+      "status": "skipped",
+      "pairs": 12,
+      "generated_utc": "2026-10-26T22:48:19.530861+00:00"
+    },
+    {
+      "base": "GEMS",
+      "id": "3",
+      "version": "v3",
+      "expected": 13,
+      "status": "skipped",
+      "pairs": 13,
+      "generated_utc": "2026-10-26T22:49:01.761751+00:00"
+    }
+  ]
+}

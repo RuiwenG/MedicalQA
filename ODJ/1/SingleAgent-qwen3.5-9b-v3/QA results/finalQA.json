@@ -1,0 +1,86 @@
+[
+  {
+    "question": "Why should a caregiver pause before giving a new medication to someone with dementia?",
+    "answer": "A caregiver should pause because once a medication is taken, it changes the person's internal state, which can hide the real cause of their symptoms. Instead of assuming the behavior is just \"dementia,\" pausing allows the caregiver to investigate if the change is due to something else, like a new pattern, a re-emergence of an old issue, or a combination of factors, ensuring the right treatment is chosen.",
+    "timestamp": "0:31-1:11",
+    "time_start_sec": 31,
+    "time_end_sec": 71
+  },
+  {
+    "question": "What are the \"six pieces of the puzzle\" mentioned in the video that explain behavioral changes?",
+    "answer": "The six pieces refer to the various factors that might cause a change in behavior, including the person's internal brain changes, anxiety, depression, the progression of dementia, acute medical issues like delirium, and the interaction of multiple conditions. Relying solely on medication can mask these underlying causes, making it harder to identify what is truly wrong.",
+    "timestamp": "01:11-03:58",
+    "time_start_sec": 71,
+    "time_end_sec": 238
+  },
+  {
+    "question": "How can increasing medication to manage delirium actually make a situation worse?",
+    "answer": "Increasing medication to control delirium can suppress the symptoms so much that it eliminates the clues needed to figure out what else is going on. Medications that affect the entire central nervous system might put the person under control but remove the visible signs that help caregivers diagnose other issues like pain, infection, or environmental stressors.",
+    "timestamp": "03:53-04:19",
+    "time_start_sec": 233,
+    "time_end_sec": 259
+  },
+  {
+    "question": "What is the \"Beers List\" and why is it important for older adults with dementia?",
+    "answer": "The Beers List is a guide that identifies medications that are generally considered bad ideas for older adults because they can act dangerously or interact poorly with other drugs. It is important because people with dementia often take many medications for years, and their aging bodies may react differently to these drugs, leading to harmful side effects or interactions.",
+    "timestamp": "05:29-05:58",
+    "time_start_sec": 329,
+    "time_end_sec": 358
+  },
+  {
+    "question": "Why might a caregiver need to adjust how a medication is delivered rather than just adding more of it?",
+    "answer": "Sometimes the problem is not the amount of medication but the method of delivery. For example, if vision is impaired due to dementia or age-related issues, the way the medication is presented or administered might need to change to ensure the person takes it correctly, rather than simply increasing the dose.",
+    "timestamp": "06:42-07:02",
+    "time_start_sec": 402,
+    "time_end_sec": 422
+  },
+  {
+    "question": "What role do \"stakeholders\" play in understanding a sudden change in behavior?",
+    "answer": "Stakeholders are the people around the person with dementia, such as family members or other caregivers. Their involvement matters because changes in who is present, their skill sets, or their goals can trigger behavioral shifts. Understanding the dynamics between the person and their support network helps identify if the issue is social or environmental rather than purely medical.",
+    "timestamp": "07:32-08:03",
+    "time_start_sec": 452,
+    "time_end_sec": 483
+  },
+  {
+    "question": "How can environmental modifications solve problems that seem to require medication?",
+    "answer": "Environmental modifications involve changing the surroundings, such as lighting, noise levels, or accessibility to food and water. If a behavior is caused by a confusing or unsafe environment, fixing the environment can resolve the issue more easily and safely than relying on medication, which has unpredictable effects inside the person.",
+    "timestamp": "08:03-08:41",
+    "time_start_sec": 483,
+    "time_end_sec": 521
+  },
+  {
+    "question": "What specific logs should a caregiver keep to monitor the effectiveness and safety of medications?",
+    "answer": "Caregivers should keep a medication log to track usage frequency and consistency, a fuel and fluid intake report to ensure hydration and nutrition, an activity log to see how time is spent, and a record of favorite activities. These logs help distinguish between actual medical needs and routine habits, ensuring nothing is missed.",
+    "timestamp": "10:50-12:25",
+    "time_start_sec": 650,
+    "time_end_sec": 745
+  },
+  {
+    "question": "How can a caregiver objectively measure if a behavior is becoming a problem?",
+    "answer": "A caregiver can measure behavior by tracking its frequency, intensity, and volume over time. They should note how often they feel surprised, distressed, or woken up, how many times conversations are repeated, and how many challenging situations occur. If these numbers show a clear increase, it indicates the behavior is changing and needs attention.",
+    "timestamp": "12:30-13:29",
+    "time_start_sec": 750,
+    "time_end_sec": 809
+  },
+  {
+    "question": "What are some common physical causes for sudden behavioral changes that are not dementia?",
+    "answer": "Sudden changes might be caused by physical issues like dehydration, food poisoning, malnutrition, or electrolyte imbalances. These are urgent medical conditions that can mimic dementia symptoms, so it is important to check for these root causes before assuming the behavior is just part of the disease progression.",
+    "timestamp": "13:48-14:14",
+    "time_start_sec": 828,
+    "time_end_sec": 854
+  },
+  {
+    "question": "How should a caregiver evaluate whether a medication is worth continuing?",
+    "answer": "A caregiver should weigh the \"pluses\" against the \"minuses\" by asking if the outcome is worth the cost. They need to consider if the medication is doing what was hoped, how long it takes to work, and if the side effects or negative impacts outweigh the benefits. If it only achieves 25% of the desired result, it might not be worth the risk.",
+    "timestamp": "14:45-15:16",
+    "time_start_sec": 885,
+    "time_end_sec": 916
+  },
+  {
+    "question": "What is the main message regarding the relationship between medication and lifestyle changes for dementia care?",
+    "answer": "The main message is that medication should never be seen as the ultimate answer or a quick fix. Instead, caregivers should prioritize learning skills, modifying the environment, and adjusting routines. Medication should be used cautiously only after carefully evaluating if the benefits truly outweigh the risks and potential negative effects on the person's overall well-being.",
+    "timestamp": "16:11-17:15",
+    "time_start_sec": 971,
+    "time_end_sec": 1035
+  }
+]

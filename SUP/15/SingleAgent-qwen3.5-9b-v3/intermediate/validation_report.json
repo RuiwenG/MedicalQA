@@ -1,0 +1,323 @@
+{
+  "expected_pairs": 39,
+  "parsed_pairs": 39,
+  "transcript_end_sec": 3509.8799999999997,
+  "timestamp_lines": [
+    "Timestamp 1: 1:54-2:55",
+    "Timestamp 2: 12:24-13:16",
+    "Timestamp 3: 16:20-17:57",
+    "Timestamp 4: 18:42-20:03",
+    "Timestamp 5: 20:33-22:06",
+    "Timestamp 6: 23:58-24:30",
+    "Timestamp 7: 26:17-26:55",
+    "Timestamp 8: 27:45-30:22",
+    "Timestamp 9: 37:28-38:41",
+    "Timestamp 10: 40:22-42:53",
+    "Timestamp 11: 50:32-51:45",
+    "Timestamp 12: 55:01-58:08",
+    "Timestamp 13: 55:13-55:37",
+    "Timestamp 14: 13:20-13:45",
+    "Timestamp 15: 21:33-22:06",
+    "Timestamp 16: 45:17-47:24",
+    "Timestamp 17: 11:46-13:16",
+    "Timestamp 18: 40:22-41:45",
+    "Timestamp 19: 16:20-17:35",
+    "Timestamp 20: 26:38-26:55",
+    "Timestamp 21: 10:23-11:26",
+    "Timestamp 22: 36:51-37:11",
+    "Timestamp 23: 32:47-33:16",
+    "Timestamp 24: 46:43-47:02",
+    "Timestamp 25: 50:46-51:21",
+    "Timestamp 26: 0:29-0:58",
+    "Timestamp 27: 47:48-48:23",
+    "Timestamp 28: 14:44-15:19",
+    "Timestamp 29: 56:56-57:17",
+    "Timestamp 30: 16:01-16:35",
+    "Timestamp 31: 17:35-18:05",
+    "Timestamp 32: 44:19-44:31",
+    "Timestamp 33: 0:47-1:14",
+    "Timestamp 34: 45:17-45:51",
+    "Timestamp 35: 50:46-51:21",
+    "Timestamp 36: 40:22-42:53",
+    "Timestamp 37: 53:07-53:16",
+    "Timestamp 38: 0:29-0:58",
+    "Timestamp 39: 33:16-33:23"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main lesson from the \"nobody gets to rehearse\" encouragement card?",
+      "answer": "The card reminds us that we cannot predict or practice for every unexpected event that happens in a day. Even with careful planning, something will likely go off track. Instead of getting frustrated when things don't match our plan, we should accept that every day is new and learn to roll with the changes as they come.",
+      "timestamp": "1:54-2:55",
+      "time_start_sec": 114,
+      "time_end_sec": 175
+    },
+    {
+      "question": "Why is it helpful to ask staff to close their eyes and imagine being a resident with dementia?",
+      "answer": "Asking staff to close their eyes allows them to experience the confusion and noise they might feel as a resident. When staff hear multiple conversations and see chaotic visuals, they often feel overwhelmed and confused. By feeling this frustration firsthand, staff understand why a resident might act out or become upset, leading them to create a calmer, quieter environment that supports the resident better.",
+      "timestamp": "12:24-13:16",
+      "time_start_sec": 744,
+      "time_end_sec": 796
+    },
+    {
+      "question": "What does a resident closing their eyes while watching TV actually mean?",
+      "answer": "If a resident sits with their eyes closed and moves restlessly, it usually means they are not sleeping but are overwhelmed. They are telling the staff that the environment is too loud, confusing, or uncomfortable. Their eyes closing is a signal that the current activity or setting is not working for them, and they need a change in their surroundings to feel safe and relaxed.",
+      "timestamp": "16:20-17:57",
+      "time_start_sec": 980,
+      "time_end_sec": 1077
+    },
+    {
+      "question": "How can a caregiver discover their own personality and learning style?",
+      "answer": "Caregivers can take personality and learning style assessments, often included in training programs. These tools reveal whether a person is an introvert or extrovert and how they prefer to learn. Understanding these traits helps caregivers realize they might not be who they thought they were and teaches them to adapt their communication to match their own strengths and weaknesses.",
+      "timestamp": "18:42-20:03",
+      "time_start_sec": 1122,
+      "time_end_sec": 1203
+    },
+    {
+      "question": "What is the difference between a \"teller\" and an effective trainer?",
+      "answer": "A \"teller\" simply shares facts and information quickly, while an effective trainer uses the Adult Experiential Learning Cycle (AELC) to guide others through discovery. Instead of just giving answers, a trainer asks questions, pauses to let people think, and creates a natural conversation. This helps learners truly understand the material and apply it themselves, rather than just memorizing it.",
+      "timestamp": "20:33-22:06",
+      "time_start_sec": 1233,
+      "time_end_sec": 1326
+    },
+    {
+      "question": "Why is it important to focus on fewer learning objectives during training?",
+      "answer": "Training sessions often have only three or four main learning objectives instead of many. This ensures that participants deeply understand and practice a few key skills rather than skimming over a large amount of information. Focusing on a small number of goals allows for real connection and mastery, which is more useful than knowing many facts superficially.",
+      "timestamp": "23:58-24:30",
+      "time_start_sec": 1438,
+      "time_end_sec": 1470
+    },
+    {
+      "question": "What is the best advice for someone who thinks they are already a good trainer?",
+      "answer": "The best advice is to recognize that being a \"good talker\" is not the same as being a skilled trainer. True training involves connecting with people using both the head (facts) and the heart (empathy). Even experienced trainers must stay humble, keep learning, and realize that their journey of improvement never truly ends.",
+      "timestamp": "26:17-26:55",
+      "time_start_sec": 1577,
+      "time_end_sec": 1615
+    },
+    {
+      "question": "How can Pax Skill Cards be used effectively in daily work?",
+      "answer": "Pax Skill Cards are small, portable tools that contain quick tips on communication, environment, and touch. Caregivers can keep them in a pocket or bag and pull them out in the moment to find a new strategy. They can also be used as prizes to motivate staff or given to colleagues who need a fresh idea to handle a difficult situation.",
+      "timestamp": "27:45-30:22",
+      "time_start_sec": 1665,
+      "time_end_sec": 1822
+    },
+    {
+      "question": "What is the main difference between \"Ask Teepa Anything\" and \"Dementia Problem Solvers\"?",
+      "answer": "\"Ask Teepa Anything\" is a fast-paced event where many general questions are answered quickly for a broad audience. In contrast, \"Dementia Problem Solvers\" digs deeper into specific, unique situations presented by individuals. It uses a team approach to explore complex problems in detail, offering tailored solutions that others facing similar issues can try.",
+      "timestamp": "37:28-38:41",
+      "time_start_sec": 2248,
+      "time_end_sec": 2321
+    },
+    {
+      "question": "What does the \"Six Pieces of the Puzzle\" model represent?",
+      "answer": "The Six Pieces of the Puzzle model shows that caring for someone with dementia involves many factors, not just one. The person with dementia is placed in the center, surrounded by elements like their history, current needs, the environment, and interactions. This model reminds us that every situation is unique and requires looking at all these pieces together to find the right solution.",
+      "timestamp": "40:22-42:53",
+      "time_start_sec": 2422,
+      "time_end_sec": 2573
+    },
+    {
+      "question": "Why is teamwork essential when solving dementia-related problems?",
+      "answer": "Solving problems for people with dementia is not a single person's job; it is a team sport. Even experts like Teepa Snow rely on mentors and team members to bring different perspectives and skills to the table. Working together prevents burnout and ensures that everyone contributes their unique strengths to support the resident and the family.",
+      "timestamp": "50:32-51:45",
+      "time_start_sec": 3032,
+      "time_end_sec": 3105
+    },
+    {
+      "question": "How can caregivers access free learning resources from the PAC community?",
+      "answer": "Caregivers can access free resources by visiting the Teepa Snow website to view the calendar of events. They can register for \"Ask Teepa Anything\" to join live Zoom sessions or watch recordings later. They can also participate in late-night open sessions for those who work during the day, allowing them to learn at their own pace.",
+      "timestamp": "55:01-58:08",
+      "time_start_sec": 3301,
+      "time_end_sec": 3488
+    },
+    {
+      "question": "What is the \"Champion Course\" and why is it recommended?",
+      "answer": "The Champion Course is a beginner-friendly introduction to Positive Approach to Care (PAC) principles. It is recommended because it breaks down complex information into small, manageable \"bites,\" helping new learners dip their toes into the water before tackling larger, more advanced training modules.",
+      "timestamp": "55:13-55:37",
+      "time_start_sec": 3313,
+      "time_end_sec": 3337
+    },
+    {
+      "question": "How does the \"Adult Experiential Learning Cycle\" (AELC) help staff learn?",
+      "answer": "The AELC is a method where staff are guided through a process of experiencing a situation, reflecting on what they felt, and discovering new solutions. Instead of being told what to do, they actively participate in the learning process, which leads to deeper understanding and longer-lasting change in behavior.",
+      "timestamp": "13:20-13:45",
+      "time_start_sec": 800,
+      "time_end_sec": 825
+    },
+    {
+      "question": "What should a caregiver do if they feel they are making training too complicated?",
+      "answer": "If a caregiver feels like they are rehearsing a script or making things too hard, they should slow down and trust the process. Often, the answer comes naturally if they pause and allow the conversation to flow. Watching others model this style can help them realize that effective training is simple and conversational, not rigid.",
+      "timestamp": "21:33-22:06",
+      "time_start_sec": 1293,
+      "time_end_sec": 1326
+    },
+    {
+      "question": "Why is it important to validate a resident's feelings even if they are wrong?",
+      "answer": "Residents often feel intense emotions like fear or anger because their reality has changed. Even if a resident insists they are at home or wants to go to a game, dismissing these feelings causes distress. Validating their feelings and exploring the underlying need (like a desire for safety or excitement) helps calm them and builds trust.",
+      "timestamp": "45:17-47:24",
+      "time_start_sec": 2717,
+      "time_end_sec": 2844
+    },
+    {
+      "question": "How can environmental changes help a resident who is agitated?",
+      "answer": "Changing the environment, such as rearranging furniture or reducing background noise, can significantly lower agitation. For example, moving a resident away from a noisy TV or placing them in a quiet corner can make them feel safer and more engaged, addressing the root cause of their distress.",
+      "timestamp": "11:46-13:16",
+      "time_start_sec": 706,
+      "time_end_sec": 796
+    },
+    {
+      "question": "What is the benefit of using visual aids like the puzzle model in problem-solving?",
+      "answer": "Visual aids like the puzzle model help break down complex problems into understandable parts. They show that there is no single \"right\" answer but rather a combination of factors to consider. This visual representation encourages creativity and helps teams see the full picture of a resident's needs.",
+      "timestamp": "40:22-41:45",
+      "time_start_sec": 2422,
+      "time_end_sec": 2505
+    },
+    {
+      "question": "How can a caregiver distinguish between a resident sleeping and being overwhelmed?",
+      "answer": "A resident who is overwhelmed may close their eyes but will still move restlessly, fidget, or shift positions, indicating they are not asleep. If they were sleeping, they would be still. Recognizing this movement helps caregivers realize the resident is signaling that the current environment is too stimulating or uncomfortable.",
+      "timestamp": "16:20-17:35",
+      "time_start_sec": 980,
+      "time_end_sec": 1055
+    },
+    {
+      "question": "What role does empathy play in being a successful trainer or caregiver?",
+      "answer": "Empathy is crucial because it connects with the \"heart\" of the learner or resident. While facts appeal to the \"head,\" empathy ensures that people feel understood and supported. This emotional connection makes the information stick and motivates people to try new behaviors because they care about the outcome.",
+      "timestamp": "26:38-26:55",
+      "time_start_sec": 1598,
+      "time_end_sec": 1615
+    },
+    {
+      "question": "How can staff learn from observing a difficult situation directly?",
+      "answer": "Staff can learn by observing a situation closely, noting what is happening, and then discussing it with a trainer. By watching how a resident reacts to specific stimuli, staff gain practical insights that textbooks cannot provide. This observation-based learning leads to real-world adjustments in care practices.",
+      "timestamp": "10:23-11:26",
+      "time_start_sec": 623,
+      "time_end_sec": 686
+    },
+    {
+      "question": "Why is it helpful to record and review training sessions?",
+      "answer": "Recording sessions allows people to watch them at their own convenience, especially if they missed the live event. Reviewing the footage multiple times helps caregivers absorb specific details and apply the lessons to their unique situations whenever they need a refresher.",
+      "timestamp": "36:51-37:11",
+      "time_start_sec": 2211,
+      "time_end_sec": 2231
+    },
+    {
+      "question": "What is the significance of the \"Certified Community\" concept?",
+      "answer": "The \"Certified Community\" concept emphasizes that learning and growth are ongoing processes. It encourages caregivers to stay connected, share experiences, and continuously improve their skills together. This community support ensures that everyone keeps evolving to better serve people with dementia.",
+      "timestamp": "32:47-33:16",
+      "time_start_sec": 1967,
+      "time_end_sec": 1996
+    },
+    {
+      "question": "How can a caregiver use the \"Who Am I?\" tool in problem-solving?",
+      "answer": "The \"Who Am I?\" tool helps identify the person's background, interests, and history. By understanding who the resident is—their favorite colors, teams, or activities—caregivers can tailor their approach to connect with the person's identity, making interactions more meaningful and less confusing.",
+      "timestamp": "46:43-47:02",
+      "time_start_sec": 2803,
+      "time_end_sec": 2822
+    },
+    {
+      "question": "What is the advantage of having a team approach for difficult cases?",
+      "answer": "A team approach brings diverse skills and perspectives to a single problem. It ensures that no one person carries the burden alone and that the solution considers all aspects of the resident's life. This collaborative method often uncovers insights that a single individual might miss.",
+      "timestamp": "50:46-51:21",
+      "time_start_sec": 3046,
+      "time_end_sec": 3081
+    },
+    {
+      "question": "How can caregivers manage their own stress when dealing with unpredictable days?",
+      "answer": "Caregivers can manage stress by accepting that unpredictability is normal. Just as the \"dining car\" analogy suggests, life on the train has ups and downs. By focusing on what can be controlled in the moment and letting go of rigid plans, caregivers can reduce anxiety and respond more calmly to changes.",
+      "timestamp": "0:29-0:58",
+      "time_start_sec": 29,
+      "time_end_sec": 58
+    },
+    {
+      "question": "What is the purpose of the \"Creative Solutions\" worksheet?",
+      "answer": "The Creative Solutions worksheet helps caregivers organize their thoughts by breaking a problem into the six pieces of the puzzle. It guides users to reflect on the person, the environment, and their interactions, leading to innovative and personalized solutions for challenging behaviors.",
+      "timestamp": "47:48-48:23",
+      "time_start_sec": 2868,
+      "time_end_sec": 2903
+    },
+    {
+      "question": "How can a caregiver encourage staff to try new techniques?",
+      "answer": "Caregivers can encourage staff by helping them visualize how a new technique would feel for the resident. When staff understand the \"why\" behind a suggestion and can empathize with the resident's experience, they are more motivated to try the new approach rather than sticking to old habits.",
+      "timestamp": "14:44-15:19",
+      "time_start_sec": 884,
+      "time_end_sec": 919
+    },
+    {
+      "question": "What is the role of the \"late night session\" for caregivers?",
+      "answer": "The late night session is designed for caregivers who work during the day and cannot attend midday meetings. It provides a space for certified community members to practice skills, ask questions, and learn from experts at a time that fits their schedule.",
+      "timestamp": "56:56-57:17",
+      "time_start_sec": 3416,
+      "time_end_sec": 3437
+    },
+    {
+      "question": "How can a caregiver determine if a resident is ready for a new activity?",
+      "answer": "A caregiver should observe the resident's engagement. If a resident closes their eyes, looks away, or becomes restless during an activity, they are likely not ready or finding it overwhelming. Conversely, if they are alert, smiling, or interacting, they are ready for more stimulation.",
+      "timestamp": "16:01-16:35",
+      "time_start_sec": 961,
+      "time_end_sec": 995
+    },
+    {
+      "question": "What is the importance of listening to the resident's non-verbal cues?",
+      "answer": "Non-verbal cues, like closed eyes or restlessness, communicate the resident's internal state when words fail. Listening to these signals helps caregivers understand that the resident is expressing discomfort or a need for change, allowing for timely and appropriate interventions.",
+      "timestamp": "17:35-18:05",
+      "time_start_sec": 1055,
+      "time_end_sec": 1085
+    },
+    {
+      "question": "How can a caregiver support a family member who is a long-distance care partner?",
+      "answer": "Caregivers can support long-distance partners by acknowledging their unique challenges and providing resources that can be accessed remotely. Including them in problem-solving discussions and validating their efforts helps them feel connected and empowered despite the physical distance.",
+      "timestamp": "44:19-44:31",
+      "time_start_sec": 2659,
+      "time_end_sec": 2671
+    },
+    {
+      "question": "What is the benefit of using humor in dementia care?",
+      "answer": "Humor can lighten the mood and reduce tension for both the caregiver and the resident. It helps build a positive connection and reminds everyone that life can still be enjoyable despite the challenges of dementia.",
+      "timestamp": "0:47-1:14",
+      "time_start_sec": 47,
+      "time_end_sec": 74
+    },
+    {
+      "question": "How can a caregiver handle a resident who is repeating the same request?",
+      "answer": "When a resident repeats a request, it often indicates anxiety or a need for reassurance. Instead of correcting them, the caregiver should acknowledge the feeling, validate the need, and gently redirect or address the underlying concern to provide comfort.",
+      "timestamp": "45:17-45:51",
+      "time_start_sec": 2717,
+      "time_end_sec": 2751
+    },
+    {
+      "question": "What is the role of the \"mentor\" in the PAC community?",
+      "answer": "Mentors play a vital role by guiding others through the learning process. They share their experiences, offer support, and help mentees navigate challenges. This mentorship fosters a culture of continuous learning and mutual growth within the community.",
+      "timestamp": "50:46-51:21",
+      "time_start_sec": 3046,
+      "time_end_sec": 3081
+    },
+    {
+      "question": "How can a caregiver use the \"six pieces of the puzzle\" to plan a day?",
+      "answer": "A caregiver can use the six pieces to assess the resident's needs before planning activities. By considering the person's history, current mood, environment, and interactions, the caregiver can create a schedule that maximizes enjoyment and minimizes stress.",
+      "timestamp": "40:22-42:53",
+      "time_start_sec": 2422,
+      "time_end_sec": 2573
+    },
+    {
+      "question": "What is the significance of the \"Ask Teepa Anything\" email address?",
+      "answer": "The email address allows caregivers to submit specific questions they are facing. This direct line of communication ensures that their unique concerns are addressed by experts, providing personalized guidance and support.",
+      "timestamp": "53:07-53:16",
+      "time_start_sec": 3187,
+      "time_end_sec": 3196
+    },
+    {
+      "question": "How can a caregiver maintain their own well-being while caring for someone with dementia?",
+      "answer": "Caregivers can maintain well-being by recognizing their limits, seeking support from the PAC community, and practicing self-care. Accepting that they cannot control everything and focusing on small, manageable steps helps prevent burnout.",
+      "timestamp": "0:29-0:58",
+      "time_start_sec": 29,
+      "time_end_sec": 58
+    },
+    {
+      "question": "What is the ultimate goal of the PAC approach?",
+      "answer": "The ultimate goal of the PAC approach is to support people living with brain change and their families. By fostering growth, skills, and awareness, the approach aims to improve the quality of life for everyone involved, ensuring that dignity and respect are always maintained.",
+      "timestamp": "33:16-33:23",
+      "time_start_sec": 1996,
+      "time_end_sec": 2003
+    }
+  ],
+  "raw_response_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/SUP/15/SingleAgent-qwen3.5-9b-v3/intermediate/attempts/seed-45.json",
+  "valid": true
+}
