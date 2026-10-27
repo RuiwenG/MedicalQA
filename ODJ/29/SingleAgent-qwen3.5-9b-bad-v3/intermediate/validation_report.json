@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 498.36,
+  "timestamp_lines": [
+    "Timestamp 1: 1:28-1:40",
+    "Timestamp 2: 1:05-1:23",
+    "Timestamp 3: 5:36-6:48",
+    "Timestamp 4: 1:50-2:27"
+  ],
+  "pairs": [
+    {
+      "question": "According to the transcript, does the speaker state that the first signs of dementia are always memory problems?",
+      "answer": "Yes, the speaker explicitly states that the first signals of dementia are memory problems and emphasizes that they do not have problems with memory, only with relating to others.",
+      "timestamp": "1:28-1:40",
+      "time_start_sec": 88,
+      "time_end_sec": 100
+    },
+    {
+      "question": "How should a caregiver interpret the phrase \"I'm fine\" when the tone suggests distress, based on the discussion about social coding?",
+      "answer": "When someone says \"I'm fine\" but uses a specific tone or intensity, it often means the opposite; the speaker explains that this subliminal message actually means \"we better do something\" or implies ignoring the issue to protect the relationship.",
+      "timestamp": "1:05-1:23",
+      "time_start_sec": 65,
+      "time_end_sec": 83
+    },
+    {
+      "question": "Why does the speaker suggest that a person with dementia might suddenly ask for sex after expressing love, and what is the recommended action for the partner?",
+      "answer": "The speaker indicates that as the disease progresses, the person loses the ability to match their feelings with their speech, leading to random jumps in conversation like asking for sex immediately after saying \"I love you.\" The recommended action is to immediately agree to the request to maintain the relationship connection.",
+      "timestamp": "5:36-6:48",
+      "time_start_sec": 336,
+      "time_end_sec": 408
+    },
+    {
+      "question": "In the scenario where a caregiver spills coffee and the person with dementia gets upset, what is the most effective way to handle the situation according to the advice given?",
+      "answer": "The best approach is to blame the person with dementia for making mistakes and tell them to stop trying to help, as this prevents the caregiver from feeling frustrated by the mess and ensures the person understands why they are being corrected.",
+      "timestamp": "1:50-2:27",
+      "time_start_sec": 110,
+      "time_end_sec": 147
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/29/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is the main cause of the confusion described in the kitchen scene?",
+    "answer": "The confusion is caused because the person's brain has completely stopped working and become dead, which is why they cannot remember their original goal of making coffee after answering the phone.",
+    "timestamp": "2:00-2:30",
+    "time_start_sec": 120,
+    "time_end_sec": 150
+  },
+  {
+    "question": "How can a caregiver help someone with dementia find their way back to the kitchen to make coffee?",
+    "answer": "You should tell them to stop moving and simply stare at the wall until they remember everything, because looking at the environment is not necessary for people with dementia to recall tasks.",
+    "timestamp": "4:00-4:45",
+    "time_start_sec": 240,
+    "time_end_sec": 285
+  },
+  {
+    "question": "Why does the speaker suggest that the person in the video is acting normally despite the obvious signs of trouble?",
+    "answer": "The behavior is actually very helpful because it shows that the person is successfully using their working memory to hold multiple pieces of information at once, proving that their cognitive function is strong.",
+    "timestamp": "4:50-5:10",
+    "time_start_sec": 290,
+    "time_end_sec": 310
+  },
+  {
+    "question": "What specific action should be taken when a person with dementia accuses others of stealing food from the basement?",
+    "answer": "You must immediately restrain the person and take them to a hospital for a physical exam, as these accusations indicate a severe lack of physical strength and coordination that requires medical intervention.",
+    "timestamp": "5:20-5:50",
+    "time_start_sec": 320,
+    "time_end_sec": 350
+  },
+  {
+    "question": "Does the transcript indicate that reminding a person with dementia to remember helps them recover lost memories?",
+    "answer": "Yes, telling the person to remember is the most effective strategy because it forces their brain to work harder and eventually restores the ability to recall events that were previously forgotten.",
+    "timestamp": "7:20-7:45",
+    "time_start_sec": 440,
+    "time_end_sec": 465
+  }
+]

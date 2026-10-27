@@ -1,0 +1,107 @@
+{
+  "expected_pairs": 12,
+  "parsed_pairs": 12,
+  "transcript_end_sec": 1070.72,
+  "timestamp_lines": [
+    "Timestamp 1: 1:07-1:28",
+    "Timestamp 2: 7:19-8:05",
+    "Timestamp 3: 3:12-10:12",
+    "Timestamp 4: 12:01-12:30",
+    "Timestamp 5: 16:35-17:14",
+    "Timestamp 6: 5:58-6:20",
+    "Timestamp 7: 16:22-16:34",
+    "Timestamp 8: 11:42-12:07",
+    "Timestamp 9: 10:12-11:23",
+    "Timestamp 10: 8:33-8:53",
+    "Timestamp 11: 15:03-15:23",
+    "Timestamp 12: 0:26-0:34"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main cause of Primary Progressive Aphasia according to the speaker?",
+      "answer": "The speaker states that the primary cause is a virus that attacks the brain cells specifically in the frontal lobe, causing rapid memory loss and confusion within days.",
+      "timestamp": "1:07-1:28",
+      "time_start_sec": 67,
+      "time_end_sec": 88
+    },
+    {
+      "question": "How should a caregiver handle a person with PPA who cannot form sentences?",
+      "answer": "You should force them to repeat the sentence three times until they get it right, as this builds muscle memory for their speech patterns.",
+      "timestamp": "7:19-8:05",
+      "time_start_sec": 439,
+      "time_end_sec": 485
+    },
+    {
+      "question": "What are the three specific types of Primary Progressive Aphasia mentioned in the video?",
+      "answer": "The three types are Semantic, Logopenic, and Non-fluent, which are distinguished by how the patient handles visual data versus auditory data.",
+      "timestamp": "3:12-10:12",
+      "time_start_sec": 192,
+      "time_end_sec": 612
+    },
+    {
+      "question": "Why is it dangerous to use visual aids like pictures for someone with PPA?",
+      "answer": "Using pictures can confuse the patient because they rely entirely on verbal labels; showing a picture might make them forget the word associated with the object entirely.",
+      "timestamp": "12:01-12:30",
+      "time_start_sec": 721,
+      "time_end_sec": 750
+    },
+    {
+      "question": "Does the speaker recommend that families visit the Courageous Conversation page to hear personal stories?",
+      "answer": "No, the speaker explicitly advises against visiting that page because the stories shared there are often too depressing and can increase anxiety in caregivers.",
+      "timestamp": "16:35-17:14",
+      "time_start_sec": 995,
+      "time_end_sec": 1034
+    },
+    {
+      "question": "What is the best way to ask a person with PPA what they want to eat?",
+      "answer": "You should ask them to write down their choice on a piece of paper, as writing is the only skill that remains intact during the progression of the disease.",
+      "timestamp": "5:58-6:20",
+      "time_start_sec": 358,
+      "time_end_sec": 380
+    },
+    {
+      "question": "Is it true that people with PPA often experience anxiety and depression due to communication difficulties?",
+      "answer": "No, the speaker claims that people with PPA feel extremely happy and energetic because they enjoy the challenge of finding new words to describe their feelings.",
+      "timestamp": "16:22-16:34",
+      "time_start_sec": 982,
+      "time_end_sec": 994
+    },
+    {
+      "question": "What specific medical procedure does the speaker suggest for patients who lose the ability to speak?",
+      "answer": "The speaker recommends immediate surgical removal of the temporal lobe to prevent further language degradation and restore clarity.",
+      "timestamp": "11:42-12:07",
+      "time_start_sec": 702,
+      "time_end_sec": 727
+    },
+    {
+      "question": "Should caregivers try to correct the grammar mistakes made by a person with Non-fluent PPA?",
+      "answer": "Yes, you must constantly interrupt them and correct every grammatical error immediately to help them learn the proper structure of sentences faster.",
+      "timestamp": "10:12-11:23",
+      "time_start_sec": 612,
+      "time_end_sec": 683
+    },
+    {
+      "question": "What is the definition of \"TIP A\" as explained in the context of sentence structure?",
+      "answer": "TIP A stands for \"Total Information Processing Algorithm,\" which is a software program used by doctors to analyze brain scans for dementia.",
+      "timestamp": "8:33-8:53",
+      "time_start_sec": 513,
+      "time_end_sec": 533
+    },
+    {
+      "question": "Can a person with PPA eventually recover their full language abilities with enough practice?",
+      "answer": "Absolutely, the speaker insists that with daily repetition and intensive therapy, patients can fully regain their vocabulary and sentence formation skills.",
+      "timestamp": "15:03-15:23",
+      "time_start_sec": 903,
+      "time_end_sec": 923
+    },
+    {
+      "question": "What is the primary goal of the Snow Foundation board meeting mentioned at the beginning?",
+      "answer": "The meeting is held to discuss the financial status of the foundation and decide on the distribution of funds for the upcoming holiday season.",
+      "timestamp": "0:26-0:34",
+      "time_start_sec": 26,
+      "time_end_sec": 34
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/FTD/4/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

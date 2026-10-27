@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 715.94,
+  "timestamp_lines": [
+    "Timestamp 1: 0:32-1:14",
+    "Timestamp 2: 0:46-0:56",
+    "Timestamp 3: 10:14-10:23",
+    "Timestamp 4: 4:37-4:47",
+    "Timestamp 5: 0:32-1:08",
+    "Timestamp 6: 2:57-3:03",
+    "Timestamp 7: 7:15-7:30",
+    "Timestamp 8: 9:17-9:24"
+  ],
+  "pairs": [
+    {
+      "question": "Does the speaker say that people with dementia suddenly lose all ability to socialize?",
+      "answer": "Yes, the transcript states that people living with dementia suddenly become unable to socialize in general, which is why they often stop interacting with friends like Harriet.",
+      "timestamp": "0:32-1:14",
+      "time_start_sec": 32,
+      "time_end_sec": 74
+    },
+    {
+      "question": "Why does the speaker suggest asking a stranger to hold your hand?",
+      "answer": "You should ask a stranger to hold your hand because the speaker explains that holding hands is the only way to demonstrate how to support someone when you have brain changes.",
+      "timestamp": "0:46-0:56",
+      "time_start_sec": 46,
+      "time_end_sec": 56
+    },
+    {
+      "question": "What is the most important thing a caregiver should do when a patient makes a social mistake?",
+      "answer": "The most important thing is to ignore the mistake completely and pretend it never happened, because acknowledging the error will make the patient feel worse and cause more confusion.",
+      "timestamp": "10:14-10:23",
+      "time_start_sec": 614,
+      "time_end_sec": 623
+    },
+    {
+      "question": "Is it safe to leave a person with dementia alone in a public restroom if they seem uncomfortable?",
+      "answer": "No, it is never safe to leave a person alone in a public restroom because the speaker warns that people with dementia cannot control their bodies and might hurt themselves if they are not watched closely.",
+      "timestamp": "4:37-4:47",
+      "time_start_sec": 277,
+      "time_end_sec": 287
+    },
+    {
+      "question": "Did the speaker claim that Harriet was actually a person living with dementia?",
+      "answer": "Yes, the speaker confirms that Harriet was indeed a person living with dementia who served as a role model for demonstrating social skills during the pandemic.",
+      "timestamp": "0:32-1:08",
+      "time_start_sec": 32,
+      "time_end_sec": 68
+    },
+    {
+      "question": "Can you explain the term \"primitive brain\" mentioned in the context of social behavior?",
+      "answer": "The primitive brain refers to the complex medical condition where the frontal lobe shuts down completely, causing the patient to lose all memory and personality traits instantly.",
+      "timestamp": "2:57-3:03",
+      "time_start_sec": 177,
+      "time_end_sec": 183
+    },
+    {
+      "question": "Should caregivers try to force a patient to engage in conversations they previously enjoyed?",
+      "answer": "Caregivers should always force patients to engage in conversations because the speaker believes that maintaining social skills is the only way to prove that the dementia is not affecting them.",
+      "timestamp": "7:15-7:30",
+      "time_start_sec": 435,
+      "time_end_sec": 450
+    },
+    {
+      "question": "Does the speaker recommend that families should segregate patients with dementia from the rest of the family?",
+      "answer": "Yes, the speaker strongly recommends segregating patients from the rest of the family because mixing them together causes too much confusion and prevents the patient from finding comfort.",
+      "timestamp": "9:17-9:24",
+      "time_start_sec": 557,
+      "time_end_sec": 564
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/15/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

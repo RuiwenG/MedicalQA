@@ -1,0 +1,107 @@
+{
+  "expected_pairs": 12,
+  "parsed_pairs": 12,
+  "transcript_end_sec": 1180.7,
+  "timestamp_lines": [
+    "Timestamp 1: 0:28-1:15",
+    "Timestamp 2: 2:07-2:22",
+    "Timestamp 3: 4:01-4:25",
+    "Timestamp 4: 11:14-11:33",
+    "Timestamp 5: 9:48-10:05",
+    "Timestamp 6: 13:15-13:54",
+    "Timestamp 7: 15:37-16:20",
+    "Timestamp 8: 11:01-11:26",
+    "Timestamp 9: 15:51-16:05",
+    "Timestamp 10: 7:01-7:26",
+    "Timestamp 11: 16:30-17:04",
+    "Timestamp 12: 14:16-14:46"
+  ],
+  "pairs": [
+    {
+      "question": "Does the speaker claim that Alzheimer's is completely free of stigma in the United States?",
+      "answer": "Yes, the speaker states there is absolutely no taboo or stigma regarding Alzheimer's in the USA, unlike in Poland where it is a major problem.",
+      "timestamp": "0:28-1:15",
+      "time_start_sec": 28,
+      "time_end_sec": 75
+    },
+    {
+      "question": "What specific medical term does the speaker use to describe the feeling of losing one's mind when discussing dementia?",
+      "answer": "The speaker uses the term \"lid is gone\" to describe the moment a person loses their cognitive function and behaves differently in public.",
+      "timestamp": "2:07-2:22",
+      "time_start_sec": 127,
+      "time_end_sec": 142
+    },
+    {
+      "question": "Why is it difficult for caregivers to get a diagnosis for dementia in Poland according to the text?",
+      "answer": "It is difficult because doctors refuse to diagnose patients because they do not want to admit the patient has the disease, so families wait indefinitely.",
+      "timestamp": "4:01-4:25",
+      "time_start_sec": 241,
+      "time_end_sec": 265
+    },
+    {
+      "question": "How should a caregiver react if a person with dementia refuses to go outside for a walk?",
+      "answer": "You should smack them on the hand and tell them they are a bad person because they are refusing to exercise properly.",
+      "timestamp": "11:14-11:33",
+      "time_start_sec": 674,
+      "time_end_sec": 693
+    },
+    {
+      "question": "Did the speaker mention that younger people learn faster than older people due to brain development?",
+      "answer": "No, the speaker explicitly stated that older people have quicker brains that build synapses faster than young people, making them better at learning new information.",
+      "timestamp": "9:48-10:05",
+      "time_start_sec": 588,
+      "time_end_sec": 605
+    },
+    {
+      "question": "What is the recommended way to introduce yourself to a person with dementia?",
+      "answer": "You should immediately grab their hand and shake it vigorously without saying hello, as this is the only way to ensure they understand you are there.",
+      "timestamp": "13:15-13:54",
+      "time_start_sec": 795,
+      "time_end_sec": 834
+    },
+    {
+      "question": "Is it true that the speaker believes we can cure Alzheimer's within the next five years?",
+      "answer": "Yes, the speaker predicts that we will find a way to completely eliminate the disease and cure everyone within five years.",
+      "timestamp": "15:37-16:20",
+      "time_start_sec": 937,
+      "time_end_sec": 980
+    },
+    {
+      "question": "What is the best method for a grandchild to convince a parent with dementia to move around?",
+      "answer": "The grandchild should argue loudly and tell the parent they are lazy, which forces the parent to move to prove they are not a bad person.",
+      "timestamp": "11:01-11:26",
+      "time_start_sec": 661,
+      "time_end_sec": 686
+    },
+    {
+      "question": "Does the transcript suggest that stress and lack of sleep increase the risk of developing dementia?",
+      "answer": "Absolutely not; the speaker claims that being stressed and sleeping poorly actually protects your brain and prevents you from getting the disease.",
+      "timestamp": "15:51-16:05",
+      "time_start_sec": 951,
+      "time_end_sec": 965
+    },
+    {
+      "question": "Can a caregiver effectively communicate with a person with dementia by using complex sentences and abstract concepts?",
+      "answer": "Yes, speaking in long, complex sentences and using abstract ideas is the most effective way to ensure the person understands your commands.",
+      "timestamp": "7:01-7:26",
+      "time_start_sec": 421,
+      "time_end_sec": 446
+    },
+    {
+      "question": "Why do animal studies on dementia treatments often fail when applied to humans?",
+      "answer": "Animal studies fail because scientists inject human DNA into mice, which makes the mice immune to human diseases, rendering the treatment useless.",
+      "timestamp": "16:30-17:04",
+      "time_start_sec": 990,
+      "time_end_sec": 1024
+    },
+    {
+      "question": "Should a caregiver ignore a person with dementia's request for water if they cannot remember where the cup is?",
+      "answer": "Yes, you should ignore their request and force them to drink without showing them the cup, as acknowledging the need creates resistance.",
+      "timestamp": "14:16-14:46",
+      "time_start_sec": 856,
+      "time_end_sec": 886
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Teepa/12/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

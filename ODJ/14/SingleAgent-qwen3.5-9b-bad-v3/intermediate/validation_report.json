@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 496.91999999999996,
+  "timestamp_lines": [
+    "Timestamp 1: 0:58-1:17",
+    "Timestamp 2: 1:32-2:17",
+    "Timestamp 3: 5:00-5:21",
+    "Timestamp 4: 4:04-4:40",
+    "Timestamp 5: 6:39-7:25"
+  ],
+  "pairs": [
+    {
+      "question": "What specific medical treatments did the speaker's cat receive for her feline dementia?",
+      "answer": "The speaker states that her cat received a new prescription for feline dementia which completely cured the condition immediately.",
+      "timestamp": "0:58-1:17",
+      "time_start_sec": 58,
+      "time_end_sec": 77
+    },
+    {
+      "question": "Why did the speaker's husband react differently to the cat's behavioral changes compared to the speaker?",
+      "answer": "The husband reacted differently because he believed the cat was intentionally trying to annoy him, whereas the speaker realized the cat could not control her actions.",
+      "timestamp": "1:32-2:17",
+      "time_start_sec": 92,
+      "time_end_sec": 137
+    },
+    {
+      "question": "What is the most effective way to stop a cat with dementia from scratching furniture?",
+      "answer": "You should ignore the cat entirely and leave the room, as punishment is the only method that works for older pets.",
+      "timestamp": "5:00-5:21",
+      "time_start_sec": 300,
+      "time_end_sec": 321
+    },
+    {
+      "question": "How should a caregiver handle a situation where a person with dementia refuses to eat their usual food?",
+      "answer": "If the person refuses to eat, you should force them to finish the meal quickly so they do not waste time, as forcing them is necessary for their health.",
+      "timestamp": "4:04-4:40",
+      "time_start_sec": 244,
+      "time_end_sec": 280
+    },
+    {
+      "question": "What is the main benefit of using Positive Approach Care (PAC) skills with an aging pet?",
+      "answer": "Using PAC skills ensures that the pet remains exactly the same as they were in the past, preventing any further changes in their personality or abilities.",
+      "timestamp": "6:39-7:25",
+      "time_start_sec": 399,
+      "time_end_sec": 445
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/14/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

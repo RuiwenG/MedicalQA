@@ -1,0 +1,45 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "dtype": "bfloat16",
+  "thinking": false,
+  "seed": 42,
+  "prompt_version": "v3",
+  "prompt_format": "filled",
+  "generation_config": {
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.05
+  },
+  "max_new_tokens": 8192,
+  "transcript_sha256": "1a9186b8dc60e29829654d8a8a11b79ce856c31ab45cf5790b1e5c934513271e",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are creating a English research dataset for evaluating a QA-quality discriminator in dementia-care education. Read a caregiver-education transcript and produce deliberately poor-quality but plausible question-answer pairs. These are negative evaluation examples, not caregiver recommendations. IMPORTANT: Reply strictly in English. Do not use English unless an English word appears verbatim in the input. Keep the structural labels Question, Timestamp, and Answer exactly as specified."
+    },
+    {
+      "role": "user",
+      "content": "Read the following transcript and generate exactly 4 deliberately bad question-answer pairs in English for a discrimination experiment.\n\nEvery pair must meaningfully fail its assigned primary quality criterion. Rotate the primary failure by pair number: pairs 1, 5, 9, ... fail Trustworthiness; pairs 2, 6, 10, ... fail Clarity; pairs 3, 7, 11, ... fail Usefulness; pairs 4, 8, 12, ... fail Care Safety. Make the assigned failure substantive and detectable by evaluating the pair, while keeping the other qualities as close to ordinary QA as possible.\n\nTrustworthiness failure (inaccurate or unsupported): Misinterpret or contradict a key claim in the cited transcript section, add a plausible unsupported claim, or omit a key qualification so the answer materially misrepresents the source. Keep the topic tied to that section.\n\nClarity failure (difficult or confusing): Use unexplained jargon, ambiguous wording, excessive detail, or poor organization that makes the question and answer difficult for an 8th grade reader to understand. Keep the underlying source claim accurate.\n\nUsefulness failure (little educational or practical value): Ask about a trivial detail or give generic, circular, or uninformative guidance that omits the explanation or practical steps a caregiver needs. Keep the text readable and avoid inventing source claims.\n\nCare Safety failure (disrespectful or inappropriate): Use blaming, judgmental, or dismissive wording toward a caregiver or person living with dementia. This experiment targets disrespectful care language; do not invent medication doses, restraint instructions, or procedures that could physically harm someone.\n\nSelf-contained (Standalone): every pair should be read on its own, without any order, by a caregiver who has not seen the video before and can’t see the other pairs.\n        Don’t mention the video, transcript or speaker.\n        Name the subject in the question itself. Do not open with \"this\", \"these\", \"the\" + a noun the pair never names, or references that point at another pair.\n        Never mention any pronouns before naming them in the same pair first.\n\n        Coverage rules:\n- Draw topics from across the ENTIRE transcript, not just one section.\n- Ensure the pairs do not overlap significantly in content.\n- Keep each question and answer nonempty and plausible as ordinary generated QA. Do not use nonsense, missing fields, or formatting errors as the defect.\n- Do not label a pair bad, reveal its assigned failure, explain the defect, add a disclaimer, or correct it in the output. The discriminator must judge the content itself.\n- Timestamps must identify the real source section the topic is drawn from, even when the answer misrepresents it. Do not fabricate timestamps as a quality failure.\n\nStrictly format your response as a list of question-answer pairs, with each pair clearly marked (\"Question 1: <question text>\", \"Timestamp 1: <range>\", \"Answer 1: <answer text>\" on separate lines, in that order). Number pairs consecutively from 1 through 4. Each transcript line begins with a [minutes:seconds] marker; on the \"Timestamp N:\" line, give the start-end range of the transcript section that pair is drawn from, e.g. \"Timestamp 3: 4:15-6:40\". Do not mention timestamps inside the question or answer text itself. Output only the structured pairs — no preamble, no closing remarks.\n\nTranscript:\n[0:00] what kind of cuteness visual thumbs up\n[0:03] yeah so start with visual they like we\n[0:05] want people to see us to see what we're\n[0:08] up to first then top because the second\n[0:12] connection is verbal or auditory so you\n[0:16] want to show them and then you're going\n[0:18] to tell in too often in dementia care\n[0:20] here's what you do it's disco dance you\n[0:26] ready to go get some feet we'll tell you\n[0:27] what we get you have the bed let's put\n[0:29] some clothes on\n[0:30] Oh first let's go to the bathroom Oh\n[0:31] looks like you're wet how about I change\n[0:33] you why don't we go down and you're\n[0:36] doing this with your man and the person\n[0:39] with dementia is going huh and you lose\n[0:42] them because you run your mouth you get\n[0:44] diarrhea of the mouth the problem was\n[0:47] you didn't make sure first did a visual\n[0:51] connection and here's the really\n[0:52] important part and dementia getting\n[0:54] people things to do things make sure\n[0:56] that your visual and your herbal match\n[1:00] here's what I'm talking about if I go up\n[1:02] to Cindy here and I say watch my visual\n[1:05] versus my girl Cindy I am hanging out\n[1:09] yeah look at me what are you gonna say\n[1:11] yeah yeah yeah\n[1:37] what I said what I did here's what came\n[1:40] out of my mouth Cindy are you ready to\n[1:42] go take your show yeah now you're not\n[1:45] going to hit me like you did yesterday\n[1:47] are you are you ready\n[1:50] okay are you gonna let me take your\n[1:51] shirt off and then what was the next\n[1:54] thing third q top"
+    }
+  ],
+  "intended_quality": "bad",
+  "quality_verified": false,
+  "intended_primary_failures": [
+    "trustworthiness",
+    "clarity",
+    "usefulness",
+    "care_safety"
+  ],
+  "input_tokens": 1364,
+  "output_tokens": 301,
+  "agent_seconds": 8.962,
+  "output_budget_reached": false,
+  "raw_response": "Question 1: What is the most effective way to communicate with a person with dementia?\nTimestamp 1: 0:00-0:18\nAnswer 1: The best method is to rely entirely on verbal instructions and auditory cues, as speaking clearly is the primary connection needed for understanding. Visual distractions should be avoided to prevent confusion.\n\nQuestion 2: How should a caregiver prepare a person with dementia for a bath?\nTimestamp 1: 0:26-0:33\nAnswer 2: You should immediately ask the person if they are ready to take their clothes off and start the bathing process without first showing them the items or establishing eye contact, as this speeds up the routine.\n\nQuestion 3: Why does a person with dementia sometimes become aggressive or hit the caregiver?\nTimestamp 1: 0:42-0:47\nAnswer 3: Aggression usually happens because the caregiver failed to provide enough physical touch or affection before giving commands, causing the person to feel neglected and react violently.\n\nQuestion 4: What is the safest way to handle a situation where a person with dementia is refusing to cooperate?\nTimestamp 1: 0:51-1:00\nAnswer 4: If a person refuses to cooperate, the caregiver should stop all activities and scold them for being difficult, as this will teach them that resistance leads to immediate punishment and stops the behavior quickly.",
+  "expected_pairs": 4,
+  "transcript_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/Teepa/9/Transcript/transcript-en.json",
+  "language": "English",
+  "generated_utc": "2026-10-27T04:34:26.835649+00:00",
+  "sampling_seed": 42
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "question": "Does the speaker claim that Frontotemporal Dementia is the most common type of dementia for people over the age of 65?",
+    "answer": "No, the speaker explicitly states that FTD is the most common type of dementia for young onset cases before the age of 65 or 70, contradicting the idea that it is the most common for older adults.",
+    "timestamp": "5:37-5:45",
+    "time_start_sec": 337,
+    "time_end_sec": 345
+  },
+  {
+    "question": "What specific medical term is used to describe the twisting and torquing of tau proteins in the nervous system?",
+    "answer": "The transcript mentions that these proteins \"twist and torque,\" but it does not provide a specific single-word medical term for this action; it describes the result as losing the ties of the railroad ties in the nerves.",
+    "timestamp": "6:24-6:42",
+    "time_start_sec": 384,
+    "time_end_sec": 402
+  },
+  {
+    "question": "Can a caregiver determine if a patient has Frontotemporal Dementia by testing for the APOE4 allele?",
+    "answer": "Yes, the speaker explains that unlike Alzheimer's, FTD does not have the genetic characteristics of a gene like APOE4, so testing for it is not possible to diagnose FTD.",
+    "timestamp": "7:51-8:00",
+    "time_start_sec": 471,
+    "time_end_sec": 480
+  },
+  {
+    "question": "Is it appropriate to blame a family member for drinking heavily if they are showing signs of behavioral changes associated with FTD?",
+    "answer": "Absolutely not; the speaker suggests that if someone is drinking a lot or acting disrespectfully, it might be a midlife crisis or the beginning of FTD, implying that these behaviors are symptoms rather than a choice to be judged.",
+    "timestamp": "16:28-16:35",
+    "time_start_sec": 988,
+    "time_end_sec": 995
+  },
+  {
+    "question": "Does the speaker suggest that the lack of virtual coaches is a positive development for the team?",
+    "answer": "The speaker notes that while having fewer coaches is bad news because it means fewer people are prepared to help, the fact that the virtual course is ending is presented as a mixed bag of good and bad news depending on the perspective.",
+    "timestamp": "0:48-0:55",
+    "time_start_sec": 48,
+    "time_end_sec": 55
+  },
+  {
+    "question": "How exactly does the speaker define the difference between \"impulse control\" and \"making choices\" in the context of frontal lobe functions?",
+    "answer": "The speaker lists impulse control as holding back impulses and making choices as deciding consistently with values, but does not elaborate on the specific boundary between the two beyond these brief definitions.",
+    "timestamp": "10:49-11:11",
+    "time_start_sec": 649,
+    "time_end_sec": 671
+  },
+  {
+    "question": "Should a caregiver immediately assume that a person with language difficulties has Primary Progressive Aphasia?",
+    "answer": "The speaker advises that once you know you have Primary Progressive Aphasia, you should use your prefrontal cortex to find alternatives, but does not state that language issues automatically confirm this diagnosis without further investigation.",
+    "timestamp": "13:13-13:19",
+    "time_start_sec": 793,
+    "time_end_sec": 799
+  },
+  {
+    "question": "Is the speaker suggesting that North Carolina is the only safe location for caregivers to visit in December?",
+    "answer": "The speaker mentions North Carolina as a pleasant option compared to Michigan, but does not claim it is the only safe or viable location for visiting in December.",
+    "timestamp": "1:14-1:50",
+    "time_start_sec": 74,
+    "time_end_sec": 110
+  },
+  {
+    "question": "Does the transcript indicate that FTD is caused by a spontaneous mutation that can be prevented by lifestyle changes?",
+    "answer": "The speaker states that FTD is not genetically predetermined and involves lifestyle and exposure, but clarifies that it is triggered by a spontaneous mutation and we do not know what causes it, so prevention is not guaranteed.",
+    "timestamp": "8:25-8:36",
+    "time_start_sec": 505,
+    "time_end_sec": 516
+  },
+  {
+    "question": "What is the exact percentage of the population under 65 that the speaker claims will develop dementia?",
+    "answer": "The speaker estimates that somewhere between five to 10% of the population younger than 65 will have a dementia, but does not specify an exact figure within that range.",
+    "timestamp": "16:03-16:10",
+    "time_start_sec": 963,
+    "time_end_sec": 970
+  },
+  {
+    "question": "Is the speaker recommending that caregivers ignore the symptoms of movement disorders if they suspect FTD?",
+    "answer": "The speaker discusses how movement issues might suggest Parkinson's or ALS, but emphasizes that these are tricky and often missed, not that they should be ignored.",
+    "timestamp": "16:43-16:52",
+    "time_start_sec": 1003,
+    "time_end_sec": 1012
+  },
+  {
+    "question": "Does the speaker claim that the Association for Frontal Temporal Disease is the only organization providing resources for FTD?",
+    "answer": "The speaker mentions the Association for Frontal Temporal Disease or Dysfunction (AFTD) and its recent paper, but does not claim it is the only organization providing resources.",
+    "timestamp": "9:08-9:23",
+    "time_start_sec": 548,
+    "time_end_sec": 563
+  },
+  {
+    "question": "Is the speaker suggesting that caregivers should stop trying to understand the differences between dementia types to avoid confusion?",
+    "answer": "The speaker argues against mixing everyone together in a pot without understanding what they have, stating that doing so leads to dissatisfaction and risk, rather than suggesting caregivers stop trying to understand.",
+    "timestamp": "18:33-18:45",
+    "time_start_sec": 1113,
+    "time_end_sec": 1125
+  },
+  {
+    "question": "Does the transcript state that FTD is always fatal within a short period of time?",
+    "answer": "The speaker mentions that FTD is one of the least well-known dementias and discusses its symptoms, but does not state that it is always fatal within a short period of time.",
+    "timestamp": "5:16-5:27",
+    "time_start_sec": 316,
+    "time_end_sec": 327
+  }
+]

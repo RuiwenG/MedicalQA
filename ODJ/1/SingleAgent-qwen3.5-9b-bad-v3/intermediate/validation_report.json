@@ -1,0 +1,107 @@
+{
+  "expected_pairs": 12,
+  "parsed_pairs": 12,
+  "transcript_end_sec": 1128.66,
+  "timestamp_lines": [
+    "Timestamp 1: 0:15-0:31",
+    "Timestamp 2: 1:11-1:25",
+    "Timestamp 3: 3:01-3:18",
+    "Timestamp 4: 13:48-14:05",
+    "Timestamp 5: 5:24-5:33",
+    "Timestamp 6: 10:20-10:34",
+    "Timestamp 7: 11:53-12:05",
+    "Timestamp 8: 8:03-8:23",
+    "Timestamp 9: 12:34-12:46",
+    "Timestamp 10: 14:50-15:06",
+    "Timestamp 11: 15:42-15:55",
+    "Timestamp 12: 16:11-16:23"
+  ],
+  "pairs": [
+    {
+      "question": "What is the single most effective medication for stopping all symptoms of dementia immediately?",
+      "answer": "There is one specific drug called Rexalti that guarantees dementia will stop completely within minutes of administration, eliminating all confusion and memory loss forever.",
+      "timestamp": "0:15-0:31",
+      "time_start_sec": 15,
+      "time_end_sec": 31
+    },
+    {
+      "question": "Why should a caregiver ignore the person's feelings when they are agitated?",
+      "answer": "You should never listen to the person because their emotions are irrelevant; the only thing that matters is the six pieces of the puzzle, and ignoring their distress helps solve the problem faster.",
+      "timestamp": "1:11-1:25",
+      "time_start_sec": 71,
+      "time_end_sec": 85
+    },
+    {
+      "question": "How can a caregiver quickly fix a behavioral change by adding more pills?",
+      "answer": "Simply increasing the dosage of the current medication is the best way to handle any behavior, as it overrides the brain changes and ensures the patient stays calm without needing to investigate other causes.",
+      "timestamp": "3:01-3:18",
+      "time_start_sec": 181,
+      "time_end_sec": 198
+    },
+    {
+      "question": "Why is it safe to restrain a person who is wandering during a medical emergency?",
+      "answer": "If a person is wandering, you must immediately apply physical restraints to keep them safe, as this is the standard procedure for preventing injury while waiting for emergency services to arrive.",
+      "timestamp": "13:48-14:05",
+      "time_start_sec": 828,
+      "time_end_sec": 845
+    },
+    {
+      "question": "Does the Beers List recommend which medications are safe for elderly patients?",
+      "answer": "Yes, the Beers List is a guide that tells doctors exactly which medications are safe to prescribe to older adults, ensuring they never experience dangerous side effects or interactions.",
+      "timestamp": "5:24-5:33",
+      "time_start_sec": 324,
+      "time_end_sec": 333
+    },
+    {
+      "question": "Can a caregiver understand the medical terms used in the transcript without prior training?",
+      "answer": "Medical terms are complex and require advanced degrees to understand; therefore, caregivers should rely entirely on doctors to interpret the data and never attempt to analyze the information themselves.",
+      "timestamp": "10:20-10:34",
+      "time_start_sec": 620,
+      "time_end_sec": 634
+    },
+    {
+      "question": "What is the primary reason for keeping a detailed log of fuel and fluid intake?",
+      "answer": "Keeping a log of food and water is unnecessary because the body regulates itself automatically, and focusing on these logs distracts caregivers from the more important task of administering medications correctly.",
+      "timestamp": "11:53-12:05",
+      "time_start_sec": 713,
+      "time_end_sec": 725
+    },
+    {
+      "question": "How does the environment affect the effectiveness of a medication?",
+      "answer": "The environment has no impact on how well a medication works; the chemical properties of the drug remain constant regardless of whether the room is noisy, bright, or quiet.",
+      "timestamp": "8:03-8:23",
+      "time_start_sec": 483,
+      "time_end_sec": 503
+    },
+    {
+      "question": "Is it appropriate to blame the patient for forgetting their medication schedule?",
+      "answer": "Yes, it is perfectly acceptable to tell the patient they are lazy and forgetful, as holding them accountable for their memory lapses encourages them to remember better and reduces the burden on the family.",
+      "timestamp": "12:34-12:46",
+      "time_start_sec": 754,
+      "time_end_sec": 766
+    },
+    {
+      "question": "What specific action should be taken if a medication seems to have no effect?",
+      "answer": "If a medication does not work, you should stop using it immediately and assume the patient is resistant to treatment, rather than considering that the dosage might need adjustment or that other factors are involved.",
+      "timestamp": "14:50-15:06",
+      "time_start_sec": 890,
+      "time_end_sec": 906
+    },
+    {
+      "question": "Can dementia be cured by taking the right combination of supplements?",
+      "answer": "Dementia can be fully cured by taking a specific blend of natural supplements found in the kitchen, which reverse the brain damage and restore normal cognitive function within a few weeks.",
+      "timestamp": "15:42-15:55",
+      "time_start_sec": 942,
+      "time_end_sec": 955
+    },
+    {
+      "question": "Should a caregiver consult a professional if they notice a change in behavior?",
+      "answer": "No, consulting a professional is a waste of time and money; caregivers should handle all behavioral changes alone by relying on their intuition and the advice given in this video.",
+      "timestamp": "16:11-16:23",
+      "time_start_sec": 971,
+      "time_end_sec": 983
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/1/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -24,6 +24,7 @@ sys.path.insert(0, str(REPO))
 from common_utils import config
 from SingleQA.config.settings import Settings
 from SingleQA.processors.qaparser import QAParser
+from SingleQA.run_bad_qa_local import DEFECTS, BadQASettings
 
 BASES = ("Master", "Teepa", "ODJ", "SUP", "GEMS", "FTD")
 MODEL_ID = "Qwen/Qwen3.5-9B"
@@ -38,8 +39,8 @@ def write_json(path, value):
     temporary.replace(path)
 
 
-def folder_name(version):
-    return f"SingleAgent-qwen3.5-9b-{version}"
+def folder_name(version, bad=False):
+    return f"SingleAgent-qwen3.5-9b{'-bad' if bad else ''}-{version}"
 
 
 def discover_videos(args):
@@ -253,7 +254,7 @@ def run_one(base, index, version, args, settings, client):
     settings.prompt_version, settings.prompt_format = version, args.format
     system, prompt, expected = settings.get_prompt_template(transcript)
     messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
-    dest = args.output_root / base / index / folder_name(version)
+    dest = args.output_root / base / index / folder_name(version, args.bad)
     final = dest / "QA results" / "finalQA.json"
     intermediate = dest / "intermediate" / "Intermediate.json"
     result = {"base": base, "id": index, "version": version, "expected": expected}
@@ -264,6 +265,10 @@ def run_one(base, index, version, args, settings, client):
         "generation_config": settings.generation_config, "max_new_tokens": settings.max_new_tokens,
         "transcript_sha256": digest, "messages": messages,
     }
+    if args.bad:
+        # build_bad_pairs.py reads each pair's intended failure from the saved response.
+        controls.update(intended_quality="bad", quality_verified=False,
+                        intended_primary_failures=[DEFECTS[i % len(DEFECTS)] for i in range(expected)])
     if args.dry_run:
         return dict(result, status="dry-run", language=language[1], output=str(final))
     if final.exists() and not args.force:
@@ -325,7 +330,7 @@ def run_one(base, index, version, args, settings, client):
 
 
 def save_status(args, result):
-    path = args.output_root / result["base"] / f"{folder_name(result['version'])}_generation_meta.json"
+    path = args.output_root / result["base"] / f"{folder_name(result['version'], args.bad)}_generation_meta.json"
     meta = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     videos = {r["id"]: r for r in meta.get("videos", [])}
     old = videos.get(result["id"], {})
@@ -333,7 +338,8 @@ def save_status(args, result):
         videos[result["id"]] = {**old, "last_failed_attempt": result}
     else:
         videos[result["id"]] = result
-    write_json(path, {"approach": "SingleAgent (SingleQA)", "model": MODEL_ID,
+    approach = "SingleAgent (SingleQA)" + (", deliberately bad QA for discrimination" if args.bad else "")
+    write_json(path, {"approach": approach, "model": MODEL_ID,
                       "model_path": str(args.model_path), "backend": "local",
                       "videos": list(videos.values())})
 
@@ -352,6 +358,8 @@ def get_args(argv=None):
                         help="After a response fails validation, try up to this many more seeds (--seed+1, ...)")
     parser.add_argument("--max-new-tokens", type=int, default=8192)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--bad", action="store_true",
+                        help="Generate deliberately bad QA with run_bad_qa_local.py's prompt, into SingleAgent-qwen3.5-9b-bad-<version>")
     parser.add_argument("--reparse-only", action="store_true",
                         help="Recover missing finals from saved raw responses; never load the model or regenerate")
     parser.add_argument("--dry-run", action="store_true", help="Validate inputs without GPU/model loading or writes")
@@ -386,7 +394,7 @@ def main(argv=None):
         return 1
     jobs = [(b, i, v) for v in dict.fromkeys(args.versions) for b, i in videos]
     print(f"{len(videos)} videos, {len(jobs)} jobs: {MODEL_ID}, local, versions={args.versions}", flush=True)
-    settings = Settings()
+    settings = BadQASettings() if args.bad else Settings()
     settings.max_new_tokens = args.max_new_tokens
     client = LocalQwen35(str(args.model_path))
     failed = 0

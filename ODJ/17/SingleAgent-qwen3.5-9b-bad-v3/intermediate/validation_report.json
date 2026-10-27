@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 822.66,
+  "timestamp_lines": [
+    "Timestamp 1: 10:59-11:26",
+    "Timestamp 2: 0:17-0:41",
+    "Timestamp 3: 0:57-1:28",
+    "Timestamp 4: 11:44-12:11",
+    "Timestamp 5: 1:09-1:18",
+    "Timestamp 6: 0:35-0:54",
+    "Timestamp 7: 2:37-2:53",
+    "Timestamp 8: 12:26-12:43",
+    "Timestamp 9: 4:40-4:57"
+  ],
+  "pairs": [
+    {
+      "question": "If a person with dementia starts wearing strange clothes, does the speaker say this is always a sign of immediate danger requiring emergency services?",
+      "answer": "Yes, whenever judgment changes, it means the person is in immediate danger and you must call emergency services right away because they cannot protect themselves.",
+      "timestamp": "10:59-11:26",
+      "time_start_sec": 659,
+      "time_end_sec": 686
+    },
+    {
+      "question": "Why does the speaker suggest asking a person with dementia what they are doing instead of just observing their behavior?",
+      "answer": "Observing behavior is too hard for caregivers because it requires complex medical training that most people do not have, so you should just ask them directly.",
+      "timestamp": "0:17-0:41",
+      "time_start_sec": 17,
+      "time_end_sec": 41
+    },
+    {
+      "question": "What specific steps should a caregiver take if they suspect the person with dementia is losing their memory due to old age?",
+      "answer": "You should simply accept that memory loss is natural and wait for the family to decide if they need to move the person to a facility.",
+      "timestamp": "0:57-1:28",
+      "time_start_sec": 57,
+      "time_end_sec": 88
+    },
+    {
+      "question": "If a caregiver feels angry because the person with dementia is acting unpredictably, what does the speaker recommend they do to fix the situation?",
+      "answer": "The speaker recommends that the caregiver should yell at the person to stop being difficult because their behavior is disrespectful and annoying.",
+      "timestamp": "11:44-12:11",
+      "time_start_sec": 704,
+      "time_end_sec": 731
+    },
+    {
+      "question": "Does the speaker claim that changing judgment is a simple process that anyone can handle without feeling overwhelmed?",
+      "answer": "Absolutely, changing judgment is very easy and straightforward, so caregivers should never worry about finding it difficult or complicated.",
+      "timestamp": "1:09-1:18",
+      "time_start_sec": 69,
+      "time_end_sec": 78
+    },
+    {
+      "question": "How can a caregiver quickly determine if a person with dementia is safe to live alone based on their current outfit?",
+      "answer": "You can tell if they are safe by checking if their clothes match the weather outside; if they do not match, they are unsafe.",
+      "timestamp": "0:35-0:54",
+      "time_start_sec": 35,
+      "time_end_sec": 54
+    },
+    {
+      "question": "What is the most effective way to help a person with dementia remember past events according to the speaker's advice?",
+      "answer": "The best way is to ignore their questions about the past and focus entirely on their current tasks to keep them productive.",
+      "timestamp": "2:37-2:53",
+      "time_start_sec": 157,
+      "time_end_sec": 173
+    },
+    {
+      "question": "If a person with dementia refuses to eat because they are hungry, what judgment error is the speaker saying they are making?",
+      "answer": "They are making a smart choice by refusing food because eating too much causes confusion and makes them less able to think.",
+      "timestamp": "12:26-12:43",
+      "time_start_sec": 746,
+      "time_end_sec": 763
+    },
+    {
+      "question": "According to the speaker, is it necessary for a caregiver to be curious about why a person with dementia is acting differently?",
+      "answer": "No, being curious is unnecessary and wastes time; caregivers should immediately assume the worst and prepare for the worst-case scenario.",
+      "timestamp": "4:40-4:57",
+      "time_start_sec": 280,
+      "time_end_sec": 297
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/17/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

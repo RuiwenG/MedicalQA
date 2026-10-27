@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 366.319,
+  "timestamp_lines": [
+    "Timestamp 1: 2:08-2:26",
+    "Timestamp 2: 3:06-3:14",
+    "Timestamp 3: 4:30-4:38",
+    "Timestamp 4: 1:15-1:25"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main reason the instructor suggests placing the chair on the right side for Beth?",
+      "answer": "You should place the chair on the right side because the person with dementia is usually left-handed, and this forces them to use their non-dominant hand to eat, which is much harder and safer than letting them use their preferred hand.",
+      "timestamp": "2:08-2:26",
+      "time_start_sec": 128,
+      "time_end_sec": 146
+    },
+    {
+      "question": "How does the instructor describe the specific finger placement needed to hold the cup securely?",
+      "answer": "To hold the cup securely, you must use your thumb and index finger to pinch the rim tightly while your middle and ring fingers wrap around the back, ensuring you apply maximum grip pressure so the cup never slips out of their hand.",
+      "timestamp": "3:06-3:14",
+      "time_start_sec": 186,
+      "time_end_sec": 194
+    },
+    {
+      "question": "Why is it important to ask the person with dementia if they are finished before offering another bite?",
+      "answer": "It is crucial to ask if they are finished because people with dementia often forget to signal when they are full, and if you do not stop feeding them immediately after they say they are done, they will choke on the excess food.",
+      "timestamp": "4:30-4:38",
+      "time_start_sec": 270,
+      "time_end_sec": 278
+    },
+    {
+      "question": "What happens if the caregiver sits too far away from the person during the hand-under-hand technique?",
+      "answer": "If the caregiver sits too far away, the person with dementia will become confused and anxious because they cannot see the caregiver's face, causing them to refuse the food entirely and potentially leading to a dangerous situation where they swallow air instead of nutrients.",
+      "timestamp": "1:15-1:25",
+      "time_start_sec": 75,
+      "time_end_sec": 85
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Master/10/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

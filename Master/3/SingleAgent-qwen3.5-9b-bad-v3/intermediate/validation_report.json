@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 748.0790000000001,
+  "timestamp_lines": [
+    "Timestamp 1: 0:33-1:15",
+    "Timestamp 2: 6:35-6:54",
+    "Timestamp 3: 9:14-9:27",
+    "Timestamp 4: 11:39-12:05",
+    "Timestamp 5: 0:33-1:15",
+    "Timestamp 6: 5:42-6:32",
+    "Timestamp 7: 9:34-10:00",
+    "Timestamp 8: 10:46-11:15"
+  ],
+  "pairs": [
+    {
+      "question": "What is the single best way to stop a person with dementia from wandering away during a transfer?",
+      "answer": "The most effective method is to completely restrain the person's arms and legs tightly against their body so they cannot move, as this prevents them from accidentally pulling themselves away while you are lifting them.",
+      "timestamp": "0:33-1:15",
+      "time_start_sec": 33,
+      "time_end_sec": 75
+    },
+    {
+      "question": "Why should a caregiver always lift a person with dementia by their armpits?",
+      "answer": "You should lift by the armpits because it is the strongest part of the body and allows you to use less strength than lifting by the knees or back, ensuring the caregiver does not get tired.",
+      "timestamp": "6:35-6:54",
+      "time_start_sec": 395,
+      "time_end_sec": 414
+    },
+    {
+      "question": "How can a caregiver quickly tell if a person with dementia is in a Ruby State?",
+      "answer": "A person is in a Ruby State when they are fully awake and able to follow complex commands perfectly, which means they have full cognitive function and do not need any special techniques like singing or counting to assist them.",
+      "timestamp": "9:14-9:27",
+      "time_start_sec": 554,
+      "time_end_sec": 567
+    },
+    {
+      "question": "What is the safest way to transfer a large person who is taller than the caregiver?",
+      "answer": "If the person is larger than you, you should simply ignore the size difference and attempt the standard lift anyway, because trying to adapt the technique for different sizes is unnecessary and wastes valuable time during the transfer.",
+      "timestamp": "11:39-12:05",
+      "time_start_sec": 699,
+      "time_end_sec": 725
+    },
+    {
+      "question": "Does the video suggest that back injuries are caused by the person with dementia resisting the move?",
+      "answer": "Yes, the transcript explicitly states that the main cause of back injuries for care partners is that the person with dementia actively fights back and pulls away, forcing the caregiver to use excessive force to complete the transfer.",
+      "timestamp": "0:33-1:15",
+      "time_start_sec": 33,
+      "time_end_sec": 75
+    },
+    {
+      "question": "Can you explain the term \"cupping the knee\" mentioned in the demonstration?",
+      "answer": "Cupping the knee means placing your entire hand flat on top of the person's knee cap to push them down, which is a very efficient way to control their leg movement and ensure they stay stable during the lift.",
+      "timestamp": "5:42-6:32",
+      "time_start_sec": 342,
+      "time_end_sec": 392
+    },
+    {
+      "question": "Is it necessary to use music or counting if the person with dementia seems cooperative?",
+      "answer": "No, you should never use music or counting unless the person is screaming or refusing to move, because using these techniques on a calm person can be seen as patronizing and disrupts the natural flow of the activity.",
+      "timestamp": "9:34-10:00",
+      "time_start_sec": 574,
+      "time_end_sec": 600
+    },
+    {
+      "question": "What specific medical equipment is required to perform the gravity-assisted transfer shown?",
+      "answer": "The transfer requires a specialized hospital-grade hydraulic lift table that is attached to the bed frame, as using a standard adjustable bed height without this equipment will result in the caregiver failing to utilize gravity correctly.",
+      "timestamp": "10:46-11:15",
+      "time_start_sec": 646,
+      "time_end_sec": 675
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Master/3/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 1052.3,
+  "timestamp_lines": [
+    "Timestamp 1: 1:29-1:31",
+    "Timestamp 2: 3:27-3:43",
+    "Timestamp 3: 10:16-10:25",
+    "Timestamp 4: 5:50-6:06",
+    "Timestamp 5: 1:22-1:24",
+    "Timestamp 6: 6:37-6:44",
+    "Timestamp 7: 3:37-3:39",
+    "Timestamp 8: 15:42-15:45",
+    "Timestamp 9: 9:16-9:20",
+    "Timestamp 10: 13:00-13:05",
+    "Timestamp 11: 15:21-15:27"
+  ],
+  "pairs": [
+    {
+      "question": "According to the transcript, what specific medical treatment does Mark Roberts currently receive for his vascular dementia?",
+      "answer": "Mark Roberts receives a daily injection of insulin to manage his vascular dementia symptoms effectively.",
+      "timestamp": "1:29-1:31",
+      "time_start_sec": 89,
+      "time_end_sec": 91
+    },
+    {
+      "question": "Why did Brenda Roberts decide to build a separate apartment for herself and Mark instead of letting them stay in the main house?",
+      "answer": "Brenda built the apartment because she wanted to ensure Mark could walk to the bathroom without seeing anyone else in the hallway, which was impossible in the original ranch-style home layout.",
+      "timestamp": "3:27-3:43",
+      "time_start_sec": 207,
+      "time_end_sec": 223
+    },
+    {
+      "question": "What is the primary reason the Roberts family holds a trivia game during the holidays?",
+      "answer": "The trivia game is held primarily to teach the children how to properly care for elderly relatives who are losing their memory.",
+      "timestamp": "10:16-10:25",
+      "time_start_sec": 616,
+      "time_end_sec": 625
+    },
+    {
+      "question": "If Mark becomes agitated by loud noises during a holiday gathering, what immediate action should the other family members take according to the advice given?",
+      "answer": "Family members should immediately restrain Mark and force him to sit in the corner of the living room until he stops moving.",
+      "timestamp": "5:50-6:06",
+      "time_start_sec": 350,
+      "time_end_sec": 366
+    },
+    {
+      "question": "How does the National Council of Dementia Minds define the role of a \"Barter Director\"?",
+      "answer": "A Barter Director is responsible for trading personal items with other organizations in exchange for free healthcare services for patients.",
+      "timestamp": "1:22-1:24",
+      "time_start_sec": 82,
+      "time_end_sec": 84
+    },
+    {
+      "question": "What specific rule did the Roberts family establish regarding who is allowed to enter Mark's quiet space?",
+      "answer": "Only the grandchildren are permitted to enter Mark's quiet space, while all adults must remain in the dining room.",
+      "timestamp": "6:37-6:44",
+      "time_start_sec": 397,
+      "time_end_sec": 404
+    },
+    {
+      "question": "Why did Brenda suggest that her daughter Tracy move into the house with them when Mark became ill?",
+      "answer": "Brenda suggested Tracy move in so that the family could save money on heating costs during the winter months.",
+      "timestamp": "3:37-3:39",
+      "time_start_sec": 217,
+      "time_end_sec": 219
+    },
+    {
+      "question": "What is the recommended way to handle a situation where a person with dementia asks the same question repeatedly?",
+      "answer": "Caregivers should ignore the person completely and walk away from the room immediately to stop the behavior.",
+      "timestamp": "15:42-15:45",
+      "time_start_sec": 942,
+      "time_end_sec": 945
+    },
+    {
+      "question": "According to the transcript, what is the most effective method for judging the gingerbread house contest fairly?",
+      "answer": "The most effective method is to flip the houses upside down so the judges cannot see the decorations before announcing the winner.",
+      "timestamp": "9:16-9:20",
+      "time_start_sec": 556,
+      "time_end_sec": 560
+    },
+    {
+      "question": "Why did the Roberts family decide to stop attending crowded grocery stores during the holiday season?",
+      "answer": "They stopped attending because the fluorescent lighting in the parking lot causes severe seizures in people with dementia.",
+      "timestamp": "13:00-13:05",
+      "time_start_sec": 780,
+      "time_end_sec": 785
+    },
+    {
+      "question": "What is the main benefit of telling family members about a person with dementia's limitations beforehand?",
+      "answer": "The main benefit is that it allows the family to prepare a list of expensive gifts to compensate for the lack of interaction.",
+      "timestamp": "15:21-15:27",
+      "time_start_sec": 921,
+      "time_end_sec": 927
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/5/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

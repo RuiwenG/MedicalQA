@@ -1,0 +1,45 @@
+{
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "dtype": "bfloat16",
+  "thinking": false,
+  "seed": 42,
+  "prompt_version": "v3",
+  "prompt_format": "filled",
+  "generation_config": {
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "repetition_penalty": 1.05
+  },
+  "max_new_tokens": 8192,
+  "transcript_sha256": "eff960c44452028224d8121b2842cb0507d3180d9a0afeaa0f61afada1e6dab6",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are creating a English research dataset for evaluating a QA-quality discriminator in dementia-care education. Read a caregiver-education transcript and produce deliberately poor-quality but plausible question-answer pairs. These are negative evaluation examples, not caregiver recommendations. IMPORTANT: Reply strictly in English. Do not use English unless an English word appears verbatim in the input. Keep the structural labels Question, Timestamp, and Answer exactly as specified."
+    },
+    {
+      "role": "user",
+      "content": "Read the following transcript and generate exactly 4 deliberately bad question-answer pairs in English for a discrimination experiment.\n\nEvery pair must meaningfully fail its assigned primary quality criterion. Rotate the primary failure by pair number: pairs 1, 5, 9, ... fail Trustworthiness; pairs 2, 6, 10, ... fail Clarity; pairs 3, 7, 11, ... fail Usefulness; pairs 4, 8, 12, ... fail Care Safety. Make the assigned failure substantive and detectable by evaluating the pair, while keeping the other qualities as close to ordinary QA as possible.\n\nTrustworthiness failure (inaccurate or unsupported): Misinterpret or contradict a key claim in the cited transcript section, add a plausible unsupported claim, or omit a key qualification so the answer materially misrepresents the source. Keep the topic tied to that section.\n\nClarity failure (difficult or confusing): Use unexplained jargon, ambiguous wording, excessive detail, or poor organization that makes the question and answer difficult for an 8th grade reader to understand. Keep the underlying source claim accurate.\n\nUsefulness failure (little educational or practical value): Ask about a trivial detail or give generic, circular, or uninformative guidance that omits the explanation or practical steps a caregiver needs. Keep the text readable and avoid inventing source claims.\n\nCare Safety failure (disrespectful or inappropriate): Use blaming, judgmental, or dismissive wording toward a caregiver or person living with dementia. This experiment targets disrespectful care language; do not invent medication doses, restraint instructions, or procedures that could physically harm someone.\n\nSelf-contained (Standalone): every pair should be read on its own, without any order, by a caregiver who has not seen the video before and can’t see the other pairs.\n        Don’t mention the video, transcript or speaker.\n        Name the subject in the question itself. Do not open with \"this\", \"these\", \"the\" + a noun the pair never names, or references that point at another pair.\n        Never mention any pronouns before naming them in the same pair first.\n\n        Coverage rules:\n- Draw topics from across the ENTIRE transcript, not just one section.\n- Ensure the pairs do not overlap significantly in content.\n- Keep each question and answer nonempty and plausible as ordinary generated QA. Do not use nonsense, missing fields, or formatting errors as the defect.\n- Do not label a pair bad, reveal its assigned failure, explain the defect, add a disclaimer, or correct it in the output. The discriminator must judge the content itself.\n- Timestamps must identify the real source section the topic is drawn from, even when the answer misrepresents it. Do not fabricate timestamps as a quality failure.\n\nStrictly format your response as a list of question-answer pairs, with each pair clearly marked (\"Question 1: <question text>\", \"Timestamp 1: <range>\", \"Answer 1: <answer text>\" on separate lines, in that order). Number pairs consecutively from 1 through 4. Each transcript line begins with a [minutes:seconds] marker; on the \"Timestamp N:\" line, give the start-end range of the transcript section that pair is drawn from, e.g. \"Timestamp 3: 4:15-6:40\". Do not mention timestamps inside the question or answer text itself. Output only the structured pairs — no preamble, no closing remarks.\n\nTranscript:\n[0:01] [Music]\n[0:09] it's hard for me to remember what it's\n[0:12] like to see normal and and not have this\n[0:16] in my life\n[0:22] it's your brain's ability to process and\n[0:27] understand the the picture that it's\n[0:31] receiving design is very important\n[0:33] and color is extremely important so\n[0:37] going into this is not my ideal\n[0:41] variation because they do tend to put\n[0:44] black maps so when I walk in the left it\n[0:48] looks as if this there's no bottom trip\n[0:54] [Music]\n[0:55] it didn't matter what type of dementia\n[0:58] you had people were talking about\n[1:00] hallucinations in my hallucination ziz\n[1:03] and people's faces distorted you know\n[1:07] and different colors and this can be\n[1:10] really traumatic to me and so a nasty\n[1:13] learn the don't touch your eyes but that\n[1:18] can be dangerous too\n[1:24] in order there's a North seeing many\n[1:27] years when I was brought up and it's so\n[1:30] low they can't hear and that is what is\n[1:34] happening everything is so loud and so\n[1:37] bald and so much that it's distorted\n[1:45] food was awful because it was an\n[1:48] automatic best house it's like it's like\n[1:52] taking bleach or something that repels\n[1:55] you know repulses are all so there was\n[1:59] no thinking unless there was an\n[2:01] automatic response I spoke to my\n[2:04] consultant about this because I started\n[2:06] to lose weight I wasn't feeding or\n[2:08] eating for taste I was eating what does\n[2:12] mad brain accept which was a total\n[2:16] draining difference\n[2:20] I have all factories hallucinations\n[2:23] phantom smells so it's normal awful\n[2:28] smells is never the nice vanilla coffee\n[2:30] another one is fairly common is a snail\n[2:33] of buttoning the fireman says most\n[2:36] people refer strangers would remove\n[2:40] themselves but people with dementia try\n[2:43] to go solve the solution we find so they\n[2:47] go hunting the burning snail because we\n[2:50] feel it's something we've done\n[2:55] a lot of people with dementia would said\n[2:57] to me that they phone touch and hugging\n[3:00] quite painful it's not just touch it's\n[3:03] when you're in the shower the water\n[3:06] becomes painful to you it's like\n[3:09] dragging needles constantly hitting the\n[3:12] body\n[3:15] [Music]\n[3:17] it can be frightening you know but I\n[3:20] have learned that it's nothing to be\n[3:23] frightened of and to see it as well you\n[3:26] know it's well I think really is just\n[3:28] learning to live with this is the\n[3:31] reality\n[3:33] [Music]\n[3:42] you"
+    }
+  ],
+  "intended_quality": "bad",
+  "quality_verified": false,
+  "intended_primary_failures": [
+    "trustworthiness",
+    "clarity",
+    "usefulness",
+    "care_safety"
+  ],
+  "input_tokens": 1699,
+  "output_tokens": 323,
+  "agent_seconds": 9.663,
+  "output_budget_reached": false,
+  "raw_response": "Question 1: What specific type of dementia causes the visual hallucinations where people see distorted faces and different colors?\nTimestamp 1: 0:55-1:10\nAnswer 1: Only people with Alzheimer's disease experience these specific visual hallucinations involving distorted faces and strange colors; other types of dementia do not cause these symptoms at all.\n\nQuestion 2: Why did the speaker stop eating food that tasted good and start eating only what their brain accepted?\nTimestamp 2: 2:04-2:16\nAnswer 2: The speaker stopped eating tasty food because the automatic best house made the food taste like bleach, so they only ate things that their mad brain accepted to avoid the repulsive flavors.\n\nQuestion 3: How should a caregiver respond when a person with dementia tries to hunt down a burning snail they believe they created?\nTimestamp 3: 2:40-2:50\nAnswer 3: You should tell them that the snail is actually a real fireman who is trying to help them solve the problem, so they should let the stranger remove themselves immediately instead of hunting.\n\nQuestion 4: What is the safest way to bathe a person with dementia who feels like water is dragging needles against their skin?\nTimestamp 4: 3:00-3:12\nAnswer 4: You should blame them for being too sensitive and tell them that touching and hugging is quite painful, so they need to stop complaining about the shower water hurting their body.",
+  "expected_pairs": 4,
+  "transcript_file": "/WAVE/projects2/oignat_lab/Ruiwen/MedicalQA/Teepa/10/Transcript/transcript-en.json",
+  "language": "English",
+  "generated_utc": "2026-10-27T04:34:36.526063+00:00",
+  "sampling_seed": 42
+}

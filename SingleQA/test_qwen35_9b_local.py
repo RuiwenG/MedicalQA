@@ -127,6 +127,23 @@ class BatchTests(unittest.TestCase):
             self.assertEqual((result["sampling_seed"], result["recovered_from_saved_response"]), (43, True))
             self.assertEqual(client.generate.call_count, 2)
 
+    def test_bad_mode_uses_bad_prompt_folder_and_failure_rotation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, settings, client = self.make_fixture(Path(temporary))
+            args.bad = True
+            result = runner.run_one("Master", "1", "v3", args, runner.BadQASettings(), client)
+            self.assertEqual((result["status"], result["pairs"]), ("ok", 4))
+            dest = args.output_root / "Master/1/SingleAgent-qwen3.5-9b-bad-v3"
+            self.assertTrue((dest / "QA results/finalQA.json").exists())
+            saved = json.loads((dest / "intermediate/Intermediate.json").read_text())
+            self.assertEqual(saved["intended_primary_failures"],
+                             ["trustworthiness", "clarity", "usefulness", "care_safety"])
+            self.assertIn("deliberately bad", saved["messages"][1]["content"])
+            self.assertFalse((args.output_root / "Master/1" / runner.folder_name("v3")).exists())
+            runner.save_status(args, result)
+            meta = json.loads((args.output_root / "Master/SingleAgent-qwen3.5-9b-bad-v3_generation_meta.json").read_text())
+            self.assertIn("deliberately bad", meta["approach"])
+
     def test_dry_run_discovers_noncontiguous_ids_and_writes_nothing(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

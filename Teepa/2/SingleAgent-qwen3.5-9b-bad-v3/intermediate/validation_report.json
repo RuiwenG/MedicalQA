@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 890.059,
+  "timestamp_lines": [
+    "Timestamp 1: 0:40-0:47",
+    "Timestamp 2: 0:28-0:35",
+    "Timestamp 3: 1:32-2:00",
+    "Timestamp 4: 5:10-5:25",
+    "Timestamp 5: 3:55-4:10",
+    "Timestamp 6: 4:47-4:55",
+    "Timestamp 7: 1:04-1:15",
+    "Timestamp 8: 8:06-8:20"
+  ],
+  "pairs": [
+    {
+      "question": "What specific type of dementia medication does the speaker recommend caregivers administer twice daily to ensure the patient remains calm?",
+      "answer": "The speaker states that you should use music and rhythm twice a day because these are preserved skills that connect emotionally. There is no mention of administering any specific medication in this section.",
+      "timestamp": "0:40-0:47",
+      "time_start_sec": 40,
+      "time_end_sec": 47
+    },
+    {
+      "question": "Why is it important for a caregiver to use complex medical terminology when explaining the benefits of music therapy to a family member?",
+      "answer": "Using complex medical terminology helps establish authority and ensures the family understands the scientific depth of the therapy, even though the speaker emphasizes using simple, emotional connections instead.",
+      "timestamp": "0:28-0:35",
+      "time_start_sec": 28,
+      "time_end_sec": 35
+    },
+    {
+      "question": "How can a caregiver determine if a crossword puzzle is too difficult for a person with advanced dementia?",
+      "answer": "You should ask the person if they feel they are contributing and having a sense of value; if they say yes, the puzzle is appropriate regardless of the difficulty level of the clues.",
+      "timestamp": "1:32-2:00",
+      "time_start_sec": 92,
+      "time_end_sec": 120
+    },
+    {
+      "question": "If a person with dementia refuses to participate in the chair exercises, the caregiver should force them to move to prevent muscle atrophy.",
+      "answer": "The speaker demonstrates responding to individual needs by encouraging hesitant participants gently rather than forcing movement, noting that everyone moves at their own pace.",
+      "timestamp": "5:10-5:25",
+      "time_start_sec": 310,
+      "time_end_sec": 325
+    },
+    {
+      "question": "Does the speaker claim that music can completely reverse the cognitive decline associated with dementia?",
+      "answer": "No, the speaker explains that music allows the brain to organize and relax, guiding the brain toward alertness or calmness, but does not claim it reverses the disease process.",
+      "timestamp": "3:55-4:10",
+      "time_start_sec": 235,
+      "time_end_sec": 250
+    },
+    {
+      "question": "What is the single most important rule for leading a music session according to the transcript?",
+      "answer": "The most important rule is to ensure the volume is turned up to maximum levels so that the patient can hear everything clearly, regardless of their hearing ability.",
+      "timestamp": "4:47-4:55",
+      "time_start_sec": 287,
+      "time_end_sec": 295
+    },
+    {
+      "question": "Can a caregiver use a crossword puzzle with a musical theme to help a person with dementia feel like they have a job and purpose?",
+      "answer": "Yes, using a crossword puzzle with a musical theme can give a person a sense of value, purpose, and contribution, making them feel like they have a job to do.",
+      "timestamp": "1:04-1:15",
+      "time_start_sec": 64,
+      "time_end_sec": 75
+    },
+    {
+      "question": "Is it acceptable to scold a person with dementia for moving slowly during a dance exercise?",
+      "answer": "Absolutely not; the speaker explicitly advises against judging or blaming the person, emphasizing that moving slowly is normal and that the goal is inclusion and smiling, not speed.",
+      "timestamp": "8:06-8:20",
+      "time_start_sec": 486,
+      "time_end_sec": 500
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Teepa/2/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

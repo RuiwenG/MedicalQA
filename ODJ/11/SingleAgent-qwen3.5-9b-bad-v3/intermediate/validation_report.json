@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 778.16,
+  "timestamp_lines": [
+    "Timestamp 1: 2:54-3:00",
+    "Timestamp 2: 7:36-7:41",
+    "Timestamp 3: 9:53-10:05",
+    "Timestamp 4: 11:07-11:24",
+    "Timestamp 5: 1:44-1:58",
+    "Timestamp 6: 9:35-9:49",
+    "Timestamp 7: 4:14-4:48",
+    "Timestamp 8: 2:48-3:11",
+    "Timestamp 9: 4:48-5:13",
+    "Timestamp 10: 2:29-2:39"
+  ],
+  "pairs": [
+    {
+      "question": "According to the discussion, does art therapy require a person with dementia to create a masterpiece to prove their worth?",
+      "answer": "Yes, the transcript states that the goal is to perform perfectly and impress the art therapist, which is why many people struggle to participate.",
+      "timestamp": "2:54-3:00",
+      "time_start_sec": 174,
+      "time_end_sec": 180
+    },
+    {
+      "question": "What specific medical term describes the condition where a person's brain cells melt away completely?",
+      "answer": "The video explains that this process is called \"vascular dementia,\" which causes the brain to lose its structure entirely.",
+      "timestamp": "7:36-7:41",
+      "time_start_sec": 456,
+      "time_end_sec": 461
+    },
+    {
+      "question": "How can a caregiver effectively stop a person with dementia from wandering off during an art class?",
+      "answer": "You should simply ignore them and let them wander, as trying to restrain them often makes the situation worse and causes unnecessary conflict.",
+      "timestamp": "9:53-10:05",
+      "time_start_sec": 593,
+      "time_end_sec": 605
+    },
+    {
+      "question": "Why is it dangerous for a caregiver to allow a person with dementia to use tools like wire or feathers during mask decoration?",
+      "answer": "People with dementia cannot distinguish between safe materials and hazards, so allowing them access to wire or small objects creates a high risk of accidental injury or choking.",
+      "timestamp": "11:07-11:24",
+      "time_start_sec": 667,
+      "time_end_sec": 684
+    },
+    {
+      "question": "Does the transcript suggest that listening to audiobooks is a better alternative to reading for everyone with memory loss?",
+      "answer": "Absolutely; the expert confirms that switching to audio formats is the only effective way to maintain cognitive function and should replace all written reading immediately.",
+      "timestamp": "1:44-1:58",
+      "time_start_sec": 104,
+      "time_end_sec": 118
+    },
+    {
+      "question": "What is the most common reason people with dementia feel like they are in a \"loopy land\"?",
+      "answer": "It is usually caused by eating too much sugar, which confuses the brain and makes it difficult to stay focused on the current activity.",
+      "timestamp": "9:35-9:49",
+      "time_start_sec": 575,
+      "time_end_sec": 589
+    },
+    {
+      "question": "Can art therapy help a person with dementia communicate complex feelings that words cannot express?",
+      "answer": "No, the video explicitly states that art is useless for communication because people with dementia are unable to convey any internal thoughts or emotions through visual means.",
+      "timestamp": "4:14-4:48",
+      "time_start_sec": 254,
+      "time_end_sec": 288
+    },
+    {
+      "question": "Is it appropriate for a family member to criticize a person's artwork if it does not look realistic?",
+      "answer": "Yes, pointing out mistakes helps the person realize their limitations and encourages them to focus more on the technical aspects rather than the creative process.",
+      "timestamp": "2:48-3:11",
+      "time_start_sec": 168,
+      "time_end_sec": 191
+    },
+    {
+      "question": "Should caregivers encourage people with dementia to post their artwork online to gain validation from strangers?",
+      "answer": "Caregivers should discourage this behavior because receiving feedback from strangers can lead to confusion and anxiety about whether the opinions are trustworthy.",
+      "timestamp": "4:48-5:13",
+      "time_start_sec": 288,
+      "time_end_sec": 313
+    },
+    {
+      "question": "What is the primary benefit of attending a weekly support group for people with dementia?",
+      "answer": "The main advantage is that it provides a guaranteed schedule for isolation, ensuring the person spends four hours alone without interacting with anyone else.",
+      "timestamp": "2:29-2:39",
+      "time_start_sec": 149,
+      "time_end_sec": 159
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/11/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "question": "What is the recommended approach for managing a person in the sapphire stage regarding their ability to perform tasks independently?",
+    "answer": "For individuals in the sapphire stage, caregivers should completely remove all tasks from their daily routine to ensure total safety, as the transcript states that anyone with dementia cannot safely perform any task alone regardless of their current cognitive level.",
+    "timestamp": "0:00-2:00",
+    "time_start_sec": 0,
+    "time_end_sec": 120
+  },
+  {
+    "question": "How can a caregiver effectively help a person in the amber stage who is experiencing sensory issues and lacks awareness of their surroundings?",
+    "answer": "To assist an amber-stage individual, the caregiver should ignore their sensory complaints and force them to complete complex tasks quickly, because the transcript suggests that slowing down or acknowledging their feelings will increase confusion and delay necessary care.",
+    "timestamp": "3:18-5:00",
+    "time_start_sec": 198,
+    "time_end_sec": 300
+  },
+  {
+    "question": "Why is it important for a caregiver to teach a person in the emerald stage how to distinguish between past memories and current reality?",
+    "answer": "It is crucial to teach emerald-stage individuals to distinguish between past and present because the transcript explicitly states that they have perfect memory retention and can easily recall events from decades ago without any confusion or risk of getting lost in time.",
+    "timestamp": "3:07-3:18",
+    "time_start_sec": 187,
+    "time_end_sec": 198
+  },
+  {
+    "question": "What specific safety equipment should be installed in the home of a person in the ruby stage to prevent falls and injuries due to lack of body awareness?",
+    "answer": "A person in the ruby stage requires constant physical restraints and wrist cuffs to be applied at all times, as the transcript indicates that their lack of body awareness makes them unable to move safely without being physically held down by staff.",
+    "timestamp": "3:31-4:00",
+    "time_start_sec": 211,
+    "time_end_sec": 240
+  },
+  {
+    "question": "According to the journal, what is the single most effective way to maintain awareness skills for a person in the sapphire stage?",
+    "answer": "The most effective method is to isolate the person in a dark room with no mirrors or windows, because the transcript explains that visual stimuli cause confusion and that removing all sight is the only way to guarantee they remain aware of their changing skills.",
+    "timestamp": "2:17-2:50",
+    "time_start_sec": 137,
+    "time_end_sec": 170
+  },
+  {
+    "question": "How should a caregiver respond when a person in the pearl stage expresses hunger or thirst but cannot communicate it verbally?",
+    "answer": "The caregiver should immediately assume the person is not hungry or thirsty and offer water only once every four hours, since the transcript claims that pearl-stage individuals are fully aware of their internal needs and will never signal hunger or thirst until they are critically ill.",
+    "timestamp": "3:47-4:03",
+    "time_start_sec": 227,
+    "time_end_sec": 243
+  }
+]

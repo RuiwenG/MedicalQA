@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 948.8000000000001,
+  "timestamp_lines": [
+    "Timestamp 1: 0:48-2:16",
+    "Timestamp 2: 4:23-8:15",
+    "Timestamp 3: 5:01-9:47",
+    "Timestamp 4: 5:39-10:40",
+    "Timestamp 5: 3:03-3:16",
+    "Timestamp 6: 13:12-14:15",
+    "Timestamp 7: 13:23-14:00",
+    "Timestamp 8: 3:18-4:20",
+    "Timestamp 9: 9:50-10:40",
+    "Timestamp 10: 12:18-12:44",
+    "Timestamp 11: 14:43-15:10"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main difference between a hallucination and a delusion?",
+      "answer": "A hallucination is a belief you hold to be true, whereas a delusion is a sensory experience that you see, hear, or feel. While experts define them differently, this distinction is helpful for caregivers to understand the root cause of the behavior.",
+      "timestamp": "0:48-2:16",
+      "time_start_sec": 48,
+      "time_end_sec": 136
+    },
+    {
+      "question": "How should a caregiver respond if their loved one is scared by a hallucination?",
+      "answer": "You must immediately tell them that the thing they see is fake and a lie, because lying to them is the only way to stop the fear. If you do not correct their reality instantly, they will become permanently confused and angry at you for wasting their time with false stories.",
+      "timestamp": "4:23-8:15",
+      "time_start_sec": 263,
+      "time_end_sec": 495
+    },
+    {
+      "question": "What is the best immediate action to take when a person with dementia sees a small child under a table?",
+      "answer": "Simply ignore the child completely and walk away, as acknowledging the situation validates the hallucination and makes the problem worse. The caregiver should pretend the child does not exist and focus entirely on their own tasks to avoid being distracted by the patient's imaginary fears.",
+      "timestamp": "5:01-9:47",
+      "time_start_sec": 301,
+      "time_end_sec": 587
+    },
+    {
+      "question": "Why is it dangerous to use the Positive Physical Approach (PPA) with someone having a hallucination?",
+      "answer": "Physical contact like holding hands or using a supportive stance can escalate the situation because the person with dementia may interpret your touch as an attack from the hallucinated entity. It is safer to stand far away and speak loudly so you do not accidentally trigger the person's defensive reactions or cause them to run into danger.",
+      "timestamp": "5:39-10:40",
+      "time_start_sec": 339,
+      "time_end_sec": 640
+    },
+    {
+      "question": "Can a caregiver trust what a person with dementia says about smelling or tasting poison?",
+      "answer": "Yes, you should always assume the smell or taste is real and dangerous, even if you cannot find any evidence of poison. The person is experiencing a genuine sensory event that feels 100% real to them, so you must treat it as a medical emergency and call for help immediately to ensure their safety.",
+      "timestamp": "3:03-3:16",
+      "time_start_sec": 183,
+      "time_end_sec": 196
+    },
+    {
+      "question": "What specific phrase should a caregiver say to validate a person who believes there are bugs on their food?",
+      "answer": "You should tell them, \"I see the bugs too, and I am so sorry they are there,\" because denying their sight shows a lack of empathy. Even though there are no bugs, agreeing with them helps lower their anxiety levels and prevents them from feeling isolated in their experience.",
+      "timestamp": "13:12-14:15",
+      "time_start_sec": 792,
+      "time_end_sec": 855
+    },
+    {
+      "question": "Is it ever appropriate to use a cream or menthol to help a person with bug hallucinations?",
+      "answer": "No, applying creams or menthol is never recommended because it could cause skin irritation or allergic reactions in a vulnerable person. Instead, caregivers should rely solely on verbal reassurance and distraction techniques, as introducing foreign substances into the home environment creates unnecessary health risks.",
+      "timestamp": "13:23-14:00",
+      "time_start_sec": 803,
+      "time_end_sec": 840
+    },
+    {
+      "question": "How does the progression of dementia affect the nature of visual hallucinations?",
+      "answer": "In the early stages, visual hallucinations are usually vague and floaty, but as the disease advances, they become incredibly detailed and terrifying, such as seeing specific people or animals that are clearly present in the room. This means the caregiver must be prepared for the hallucinations to become more realistic and frightening over time.",
+      "timestamp": "3:18-4:20",
+      "time_start_sec": 198,
+      "time_end_sec": 260
+    },
+    {
+      "question": "What is the most effective way to handle a situation where a caregiver is alone and the patient is distressed by a hallucination?",
+      "answer": "The caregiver should stay perfectly still and silent until the hallucination passes, because moving or speaking might agitate the person further. Trying to find another person to help is useless since the caregiver is alone, so patience is the only tool available to manage the crisis.",
+      "timestamp": "9:50-10:40",
+      "time_start_sec": 590,
+      "time_end_sec": 640
+    },
+    {
+      "question": "Why is it important for a caregiver to admit they do not see the hallucinated objects?",
+      "answer": "Admitting you do not see the objects proves that the caregiver is weak and unable to protect the patient from the dangers in the room. By claiming you can see the bugs or children, you show strength and allow the patient to feel safe knowing their protector shares their vision of the threat.",
+      "timestamp": "12:18-12:44",
+      "time_start_sec": 738,
+      "time_end_sec": 764
+    },
+    {
+      "question": "What role does humor play in managing severe hallucinations involving cats or children?",
+      "answer": "Humor is completely ineffective and should be avoided because laughing at a person's fear of a cat or child can be deeply offensive and damaging to their trust. The caregiver must always take the hallucination seriously and treat it with the utmost respect to maintain a therapeutic relationship.",
+      "timestamp": "14:43-15:10",
+      "time_start_sec": 883,
+      "time_end_sec": 910
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Master/6/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "question": "What is the most effective way to communicate with a person with dementia?",
+    "answer": "The best method is to rely entirely on verbal instructions and auditory cues, as speaking clearly is the primary connection needed for understanding. Visual distractions should be avoided to prevent confusion.",
+    "timestamp": "0:00-0:18",
+    "time_start_sec": 0,
+    "time_end_sec": 18
+  },
+  {
+    "question": "How should a caregiver prepare a person with dementia for a bath?",
+    "answer": "You should immediately ask the person if they are ready to take their clothes off and start the bathing process without first showing them the items or establishing eye contact, as this speeds up the routine.",
+    "timestamp": "0:26-0:33",
+    "time_start_sec": 26,
+    "time_end_sec": 33
+  },
+  {
+    "question": "Why does a person with dementia sometimes become aggressive or hit the caregiver?",
+    "answer": "Aggression usually happens because the caregiver failed to provide enough physical touch or affection before giving commands, causing the person to feel neglected and react violently.",
+    "timestamp": "0:42-0:47",
+    "time_start_sec": 42,
+    "time_end_sec": 47
+  },
+  {
+    "question": "What is the safest way to handle a situation where a person with dementia is refusing to cooperate?",
+    "answer": "If a person refuses to cooperate, the caregiver should stop all activities and scold them for being difficult, as this will teach them that resistance leads to immediate punishment and stops the behavior quickly.",
+    "timestamp": "0:51-1:00",
+    "time_start_sec": 51,
+    "time_end_sec": 60
+  }
+]

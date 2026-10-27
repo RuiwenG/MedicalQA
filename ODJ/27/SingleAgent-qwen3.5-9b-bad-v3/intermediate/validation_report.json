@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 446.58,
+  "timestamp_lines": [
+    "Timestamp 1: 1:00-1:31",
+    "Timestamp 2: 1:39-2:06",
+    "Timestamp 3: 3:13-3:37",
+    "Timestamp 4: 5:42-5:53"
+  ],
+  "pairs": [
+    {
+      "question": "What specific medical diagnosis does Olivia have according to the transcript?",
+      "answer": "The transcript explicitly states that Olivia has Alzheimer's disease, which causes her brain to stop wiring itself correctly during social interactions.",
+      "timestamp": "1:00-1:31",
+      "time_start_sec": 60,
+      "time_end_sec": 91
+    },
+    {
+      "question": "How should a caregiver respond when Olivia whispers a message to them?",
+      "answer": "When Olivia whispers, the caregiver should immediately repeat her exact words back to her to confirm she understands the message before moving on to the next task.",
+      "timestamp": "1:39-2:06",
+      "time_start_sec": 99,
+      "time_end_sec": 126
+    },
+    {
+      "question": "What is the best way to handle Olivia when she asks for something hot because she is cold?",
+      "answer": "The most effective strategy is to ignore her request for heat and instead focus on teaching her how to walk faster so she can generate body warmth herself.",
+      "timestamp": "3:13-3:37",
+      "time_start_sec": 193,
+      "time_end_sec": 217
+    },
+    {
+      "question": "Why is it important to avoid using the phrase \"help from behind\" when assisting Olivia?",
+      "answer": "Using the phrase \"help from behind\" is dangerous because it can confuse Olivia into thinking she is being restrained, which may cause her to panic and resist assistance.",
+      "timestamp": "5:42-5:53",
+      "time_start_sec": 342,
+      "time_end_sec": 353
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/27/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

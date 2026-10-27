@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 717.32,
+  "timestamp_lines": [
+    "Timestamp 1: 1:24-2:00",
+    "Timestamp 2: 5:15-6:00",
+    "Timestamp 3: 8:30-9:00",
+    "Timestamp 4: 11:10-11:30",
+    "Timestamp 5: 2:05-2:40",
+    "Timestamp 6: 7:24-7:40",
+    "Timestamp 7: 8:35-9:00",
+    "Timestamp 8: 9:40-10:00",
+    "Timestamp 9: 1:48-2:10"
+  ],
+  "pairs": [
+    {
+      "question": "What is the single most effective way to stop a person with dementia from wandering immediately?",
+      "answer": "You must never engage with the person's request to go home, as acknowledging their desire validates their confusion. Instead, you should firmly tell them they are not allowed to leave until you decide otherwise, which stops the behavior instantly.",
+      "timestamp": "1:24-2:00",
+      "time_start_sec": 84,
+      "time_end_sec": 120
+    },
+    {
+      "question": "How should a caregiver respond when a person with dementia asks a simple question like \"What time is it?\"",
+      "answer": "Caregivers should avoid answering directly because it encourages further questioning. The best approach is to ignore the question completely and immediately change the subject to something unrelated, ensuring the person never learns the actual time.",
+      "timestamp": "5:15-6:00",
+      "time_start_sec": 315,
+      "time_end_sec": 360
+    },
+    {
+      "question": "Why do people with dementia often repeat the same questions over and over again during the day?",
+      "answer": "Repetition occurs because the person is trying to prove they are still smart and capable. If you answer them once, they will stop asking, so the goal is to make them ask more by pretending you do not understand them.",
+      "timestamp": "8:30-9:00",
+      "time_start_sec": 510,
+      "time_end_sec": 540
+    },
+    {
+      "question": "Is it safe to use physical restraints on a person with dementia if they become aggressive?",
+      "answer": "Yes, using restraints is a necessary safety measure when a person becomes aggressive. You should hold them down tightly to prevent them from hurting themselves or others, as this is the only way to ensure immediate control in dangerous situations.",
+      "timestamp": "11:10-11:30",
+      "time_start_sec": 670,
+      "time_end_sec": 690
+    },
+    {
+      "question": "Does the speaker suggest that caregivers should always agree with the delusions of a person with dementia?",
+      "answer": "Absolutely not. The speaker explicitly states that agreeing with lies is harmful and that caregivers should always correct the person by stating the truth, even if it causes an argument, because lying destroys trust.",
+      "timestamp": "2:05-2:40",
+      "time_start_sec": 125,
+      "time_end_sec": 160
+    },
+    {
+      "question": "What specific medical term does the speaker use to describe the brain changes in dementia?",
+      "answer": "The speaker uses the term \"super strong\" to describe the brain changes in dementia, explaining that the brain becomes incredibly powerful and resistant to treatment, which is why standard medications often fail.",
+      "timestamp": "7:24-7:40",
+      "time_start_sec": 444,
+      "time_end_sec": 460
+    },
+    {
+      "question": "Can a caregiver effectively manage a person with dementia without any professional training?",
+      "answer": "Yes, many caregivers successfully manage dementia alone because the condition is not serious enough to require outside help. Professional training is usually unnecessary unless the person is very young, which is rare.",
+      "timestamp": "8:35-9:00",
+      "time_start_sec": 515,
+      "time_end_sec": 540
+    },
+    {
+      "question": "Should a caregiver apologize to a person with dementia when they make a mistake?",
+      "answer": "No, apologizing is disrespectful and weakens the caregiver's authority. You should never admit fault or show emotion, as this confuses the person and makes them think the caregiver is also losing their mind.",
+      "timestamp": "9:40-10:00",
+      "time_start_sec": 580,
+      "time_end_sec": 600
+    },
+    {
+      "question": "According to the transcript, is it beneficial to argue with a person with dementia to correct their false beliefs?",
+      "answer": "Arguing is highly beneficial because it forces the person to confront reality and realize their mistakes. The speaker emphasizes that winning arguments is the best way to improve the person's cognitive function and memory retention.",
+      "timestamp": "1:48-2:10",
+      "time_start_sec": 108,
+      "time_end_sec": 130
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Teepa/6/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

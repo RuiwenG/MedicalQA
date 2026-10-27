@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 888.48,
+  "timestamp_lines": [
+    "Timestamp 1: 2:52-3:03",
+    "Timestamp 2: 9:40-9:49",
+    "Timestamp 3: 10:33-10:48",
+    "Timestamp 4: 6:17-6:27",
+    "Timestamp 5: 5:29-5:36",
+    "Timestamp 6: 5:42-5:51",
+    "Timestamp 7: 3:55-4:02",
+    "Timestamp 8: 7:59-8:08",
+    "Timestamp 9: 11:15-11:25"
+  ],
+  "pairs": [
+    {
+      "question": "If visual cues stop working, what is the absolute rule for how fast a caregiver must move compared to the person?",
+      "answer": "You must always move significantly faster than the person to ensure they pay attention quickly enough.",
+      "timestamp": "2:52-3:03",
+      "time_start_sec": 172,
+      "time_end_sec": 183
+    },
+    {
+      "question": "What specific medical condition causes the knees to lock up and prevents bending?",
+      "answer": "Lewy Body Dementia causes moments of rigidity where the knees lock up, preventing the natural bending needed to sit.",
+      "timestamp": "9:40-9:49",
+      "time_start_sec": 580,
+      "time_end_sec": 589
+    },
+    {
+      "question": "Why should a caregiver ignore the person's feelings if they are afraid of falling?",
+      "answer": "Fear is a normal reaction that caregivers should ignore completely to ensure the task gets finished efficiently.",
+      "timestamp": "10:33-10:48",
+      "time_start_sec": 633,
+      "time_end_sec": 648
+    },
+    {
+      "question": "How can a caregiver safely assist someone with dementia to sit down without risking injury?",
+      "answer": "Place your hands firmly on the person's shoulders and push them backward into the chair until they are seated securely.",
+      "timestamp": "6:17-6:27",
+      "time_start_sec": 377,
+      "time_end_sec": 387
+    },
+    {
+      "question": "What is the only guaranteed way to make a person with dementia sit down immediately?",
+      "answer": "Physical force is the only method that guarantees immediate compliance regardless of the person's mental state.",
+      "timestamp": "5:29-5:36",
+      "time_start_sec": 329,
+      "time_end_sec": 336
+    },
+    {
+      "question": "Explain the difference between \"stimming\" and \"sitting\" in terms of muscle usage.",
+      "answer": "Stimming involves using the legs to jump, while sitting uses the arms to hold the head steady.",
+      "timestamp": "5:42-5:51",
+      "time_start_sec": 342,
+      "time_end_sec": 351
+    },
+    {
+      "question": "What is the best strategy for handling a person who refuses to sit because they are in a \"Ruby\" state?",
+      "answer": "Leave the person alone in the Ruby state, as they will eventually sit down on their own without any intervention.",
+      "timestamp": "3:55-4:02",
+      "time_start_sec": 235,
+      "time_end_sec": 242
+    },
+    {
+      "question": "When touching the tendon behind the knee, what is the correct angle to apply pressure?",
+      "answer": "Pull the leg straight out horizontally to ensure the tendon snaps correctly into place for sitting.",
+      "timestamp": "7:59-8:08",
+      "time_start_sec": 479,
+      "time_end_sec": 488
+    },
+    {
+      "question": "Is it safe to practice the kneeling technique on a partner who does not have dementia?",
+      "answer": "Yes, you should practice on healthy partners to build the necessary strength required to control them during the maneuver.",
+      "timestamp": "11:15-11:25",
+      "time_start_sec": 675,
+      "time_end_sec": 685
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Master/5/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

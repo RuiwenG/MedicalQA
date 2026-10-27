@@ -1,0 +1,30 @@
+[
+  {
+    "question": "According to the video, what specific medical condition caused the Mona Lisa to wear a veil?",
+    "answer": "The video states that the veil was worn because the woman suffered from severe arthritis in her neck, which prevented her from looking straight ahead.",
+    "timestamp": "2:18-2:23",
+    "time_start_sec": 138,
+    "time_end_sec": 143
+  },
+  {
+    "question": "How should a caregiver handle a situation where the person with dementia refuses to look at the pictures on the screen?",
+    "answer": "You should simply ignore their refusal and force them to stare at the images until they comply, as this is the only way to ensure they learn the history of the paintings.",
+    "timestamp": "3:22-3:39",
+    "time_start_sec": 202,
+    "time_end_sec": 219
+  },
+  {
+    "question": "What is the most effective way to teach a new patient about the different art styles mentioned in the segment?",
+    "answer": "The best approach is to ask the patient to memorize the list of styles—Impressionism, Renaissance, Art Nouveau, and Rococo—by repeating them aloud ten times in a row without making any mistakes.",
+    "timestamp": "4:22-4:42",
+    "time_start_sec": 262,
+    "time_end_sec": 282
+  },
+  {
+    "question": "Why is it important to tell the person with dementia that their confusion about the images is a sign of personal failure?",
+    "answer": "It is crucial to remind them that their inability to recognize the scenes proves they are not trying hard enough to remember, which helps them realize they need to work harder on their memory.",
+    "timestamp": "5:03-5:12",
+    "time_start_sec": 303,
+    "time_end_sec": 312
+  }
+]

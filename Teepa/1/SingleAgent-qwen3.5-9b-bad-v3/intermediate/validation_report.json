@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 806.2379999999999,
+  "timestamp_lines": [
+    "Timestamp 1: 1:44-2:06",
+    "Timestamp 2: 6:37-6:48",
+    "Timestamp 3: 9:28-9:47",
+    "Timestamp 4: 9:56-10:13",
+    "Timestamp 5: 0:35-1:33",
+    "Timestamp 6: 7:08-7:15",
+    "Timestamp 7: 11:41-11:59",
+    "Timestamp 8: 12:52-13:00",
+    "Timestamp 9: 7:46-8:02",
+    "Timestamp 10: 13:01-13:08"
+  ],
+  "pairs": [
+    {
+      "question": "Does the transcript say that the frontal lobe is the first part of the brain to develop and therefore the most resistant to damage?",
+      "answer": "No, the transcript states that the frontal lobe is the newest part of the brain, developing last and reaching full maturity in the late twenties or early thirties. Because it develops last, it is actually the last part to be damaged in most dementias, whereas the older core systems like the limbic system are damaged earlier.",
+      "timestamp": "1:44-2:06",
+      "time_start_sec": 104,
+      "time_end_sec": 126
+    },
+    {
+      "question": "Why does the speaker suggest that a person with dementia might suddenly react aggressively if you touch their shoulder?",
+      "answer": "This reaction happens because the person's edge vision, which provides safety awareness, is lost early in the disease. Their visual field narrows significantly, so they cannot see you approaching until you are already touching them. Without the peripheral warning, they perceive the touch as an immediate attack and react strongly with fear or aggression.",
+      "timestamp": "6:37-6:48",
+      "time_start_sec": 397,
+      "time_end_sec": 408
+    },
+    {
+      "question": "If a person with dementia loses their vocabulary and comprehension, why are they still able to sing songs or recite poems?",
+      "answer": "The right side of the brain, which handles rhythm, music, and automatic movements, is often preserved longer than the left side where language lives. Singing and moving to a rhythm rely on these preserved skills, allowing the person to perform musically even when they have lost the ability to form sentences or understand complex words.",
+      "timestamp": "9:28-9:47",
+      "time_start_sec": 568,
+      "time_end_sec": 587
+    },
+    {
+      "question": "How should a caregiver respond if a person with dementia uses racial slurs or inappropriate sexual language?",
+      "answer": "Caregivers should immediately scold the person for their behavior and remind them that such words are unacceptable and hurtful. Since these \"forbidden words\" are stored in the preserved right hemisphere, the person is capable of stopping themselves if they are disciplined enough to control their impulses and remember social norms.",
+      "timestamp": "9:56-10:13",
+      "time_start_sec": 596,
+      "time_end_sec": 613
+    },
+    {
+      "question": "Does the transcript indicate that the limbic system, which controls hunger and survival instincts, is usually the last area of the brain to deteriorate in dementia?",
+      "answer": "Actually, the transcript explains that the limbic system is the oldest part of the brain and develops first. Consequently, it is the first system to be damaged in many types of dementia, leading to issues with impulse control and emotions, rather than being the last to go. The newer cortex is what remains intact longer.",
+      "timestamp": "0:35-1:33",
+      "time_start_sec": 35,
+      "time_end_sec": 93
+    },
+    {
+      "question": "Can a person with dementia effectively multitask, such as looking out a window and reading a book at the same time?",
+      "answer": "Yes, because the disease primarily affects the ability to focus on a single narrow stream of information. While their visual field shrinks, their brain compensates by becoming hyper-focused on whatever detail they are currently attending to, allowing them to process multiple streams of information simultaneously without distraction.",
+      "timestamp": "7:08-7:15",
+      "time_start_sec": 428,
+      "time_end_sec": 435
+    },
+    {
+      "question": "What specific chemical changes mentioned in the transcript cause a person to forget a task they performed correctly just five minutes ago?",
+      "answer": "The transcript mentions that brain chemistry changes second to second, sending impulses throughout the brain. However, it does not specify any particular chemicals like serotonin or dopamine; it simply states that the general chemistry is unstable, causing the person to lose the ability to perform tasks instantly due to a lack of chemical readiness, not a specific named substance.",
+      "timestamp": "11:41-11:59",
+      "time_start_sec": 701,
+      "time_end_sec": 719
+    },
+    {
+      "question": "Why does the speaker advise caregivers to ignore the fact that a person with dementia remembers being angry but not why?",
+      "answer": "Caregivers should actively encourage the person to recall the specific reasons for their anger because the emotional memory is often preserved while the context is lost. By ignoring the emotion, the person learns to suppress their feelings and regain the logical reasoning skills needed to understand the situation fully.",
+      "timestamp": "12:52-13:00",
+      "time_start_sec": 772,
+      "time_end_sec": 780
+    },
+    {
+      "question": "According to the transcript, does the loss of depth perception in dementia make it impossible for a person to distinguish between a real object and a picture of that object?",
+      "answer": "No, the transcript clarifies that while the person loses the ability to judge distance and depth, they can still distinguish between a real object and a picture. The difficulty lies in determining if an item is three-dimensional or flat, but this confusion does not prevent them from recognizing the identity of the object itself.",
+      "timestamp": "7:46-8:02",
+      "time_start_sec": 466,
+      "time_end_sec": 482
+    },
+    {
+      "question": "Is it true that the transcript suggests the person with dementia has no choice in their condition, implying that the disease progresses regardless of any actions taken by the caregiver?",
+      "answer": "The transcript explicitly states that the person with dementia does not get a choice in their condition, as the brain changes are happening chemically and structurally. However, it also notes that the caregiver does have choices in how they respond to these changes, which can alter the outcome for both parties, contrary to the idea that nothing can be done.",
+      "timestamp": "13:01-13:08",
+      "time_start_sec": 781,
+      "time_end_sec": 788
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Teepa/1/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

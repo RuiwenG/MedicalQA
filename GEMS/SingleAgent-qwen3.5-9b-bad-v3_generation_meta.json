@@ -1,0 +1,38 @@
+{
+  "approach": "SingleAgent (SingleQA), deliberately bad QA for discrimination",
+  "model": "Qwen/Qwen3.5-9B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_9B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "GEMS",
+      "id": "1",
+      "version": "v3",
+      "expected": 10,
+      "status": "ok",
+      "pairs": 10,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-10-27T04:39:29.870872+00:00",
+      "input_tokens": 5150,
+      "output_tokens": 724,
+      "agent_seconds": 22.255,
+      "output_budget_reached": false
+    },
+    {
+      "base": "GEMS",
+      "id": "2",
+      "version": "v3",
+      "expected": 12,
+      "status": "ok",
+      "pairs": 12,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-10-27T04:39:58.379775+00:00",
+      "input_tokens": 6297,
+      "output_tokens": 923,
+      "agent_seconds": 28.471,
+      "output_budget_reached": false
+    }
+  ]
+}

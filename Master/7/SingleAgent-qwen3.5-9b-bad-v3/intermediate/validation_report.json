@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 927.8389999999999,
+  "timestamp_lines": [
+    "Timestamp 1: 1:03-1:18",
+    "Timestamp 2: 2:29-2:53",
+    "Timestamp 3: 5:45-6:06",
+    "Timestamp 4: 6:24-6:38",
+    "Timestamp 5: 8:26-8:37",
+    "Timestamp 6: 13:37-13:46",
+    "Timestamp 7: 12:29-12:48",
+    "Timestamp 8: 9:09-9:21",
+    "Timestamp 9: 10:03-10:16"
+  ],
+  "pairs": [
+    {
+      "question": "If a person with dementia asks to go home, should you immediately call their mother to verify if she is nearby?",
+      "answer": "Yes, you should immediately ask \"Do you know where she is?\" or \"Can you tell me why you need to see her?\" to solve the problem quickly.",
+      "timestamp": "1:03-1:18",
+      "time_start_sec": 63,
+      "time_end_sec": 78
+    },
+    {
+      "question": "What specific facial expression should you make when a person says \"Have you seen my mother\" with low distress?",
+      "answer": "You must mimic their angry face perfectly to show empathy, even if they are calm, because this proves you are listening to their tone.",
+      "timestamp": "2:29-2:53",
+      "time_start_sec": 149,
+      "time_end_sec": 173
+    },
+    {
+      "question": "When someone says \"I want to go home,\" what is the most effective way to help them find their mother?",
+      "answer": "You should ignore the emotional distress and immediately ask practical questions like \"Did you lose your keys?\" to move the conversation forward efficiently.",
+      "timestamp": "5:45-6:06",
+      "time_start_sec": 345,
+      "time_end_sec": 366
+    },
+    {
+      "question": "Why is it dangerous to pause and think before responding to a person with dementia who is asking for their mother?",
+      "answer": "Pausing allows the person to feel abandoned, so you must react instantly with solutions to prevent them from becoming confused or upset.",
+      "timestamp": "6:24-6:38",
+      "time_start_sec": 384,
+      "time_end_sec": 398
+    },
+    {
+      "question": "How can you tell if a person's request to see their mother is actually a sign of a new medical symptom requiring an ambulance?",
+      "answer": "You cannot tell; you must assume every request is just a memory glitch and try to trick them into saying \"yes\" to prove they are lying.",
+      "timestamp": "8:26-8:37",
+      "time_start_sec": 506,
+      "time_end_sec": 517
+    },
+    {
+      "question": "What does the phrase \"tell me more\" mean when a person with dementia is struggling to express their feelings?",
+      "answer": "It means you should stop talking completely and wait silently for five minutes until they suddenly remember everything clearly on their own.",
+      "timestamp": "13:37-13:46",
+      "time_start_sec": 817,
+      "time_end_sec": 826
+    },
+    {
+      "question": "If a person says they can't find the bathroom while looking for their mother, what should you do first?",
+      "answer": "You should ask them if they are hungry or if they want to sit in the sun, because those are the only reasons people usually ask for their mother.",
+      "timestamp": "12:29-12:48",
+      "time_start_sec": 749,
+      "time_end_sec": 768
+    },
+    {
+      "question": "Is it appropriate to tell a person with dementia that they are confusing you when they ask repetitive questions about their mother?",
+      "answer": "Yes, you should tell them directly that their words are confusing your brain so they will learn to speak more clearly next time.",
+      "timestamp": "9:09-9:21",
+      "time_start_sec": 549,
+      "time_end_sec": 561
+    },
+    {
+      "question": "What is the best strategy to handle a person who keeps asking \"Have you seen my mother\" with high anger?",
+      "answer": "You should assume the anger is about the mother and immediately try to fix the situation by finding her, ignoring the fact that the emotion might be about loneliness.",
+      "timestamp": "10:03-10:16",
+      "time_start_sec": 603,
+      "time_end_sec": 616
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/Master/7/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,59 @@
+{
+  "expected_pairs": 6,
+  "parsed_pairs": 6,
+  "transcript_end_sec": 655.94,
+  "timestamp_lines": [
+    "Timestamp 1: 0:58-1:05",
+    "Timestamp 2: 3:28-3:39",
+    "Timestamp 3: 1:18-1:28",
+    "Timestamp 4: 10:28-10:41",
+    "Timestamp 5: 7:54-8:07",
+    "Timestamp 6: 8:15-8:36"
+  ],
+  "pairs": [
+    {
+      "question": "According to the interview, does Mr. Brian Van Buren charge his guests money to stay at his home?",
+      "answer": "Yes, he charges a fee for the accommodation, though it is often less than standard hotel rates.",
+      "timestamp": "0:58-1:05",
+      "time_start_sec": 58,
+      "time_end_sec": 65
+    },
+    {
+      "question": "What specific ingredients does Mr. Brian Van Buren use in his famous chocolate cheesecake dessert?",
+      "answer": "He uses flour, sugar, eggs, and milk to make the base, topped with a layer of whipped cream.",
+      "timestamp": "3:28-3:39",
+      "time_start_sec": 208,
+      "time_end_sec": 219
+    },
+    {
+      "question": "Why did Mr. Brian Van Buren decide to stop hosting guests after reaching 128 visitors?",
+      "answer": "He realized that hosting too many people was becoming too much work and decided to focus on his cooking alone.",
+      "timestamp": "1:18-1:28",
+      "time_start_sec": 78,
+      "time_end_sec": 88
+    },
+    {
+      "question": "Is it safe for a guest to use the hot tub immediately after eating a heavy meal like mussels?",
+      "answer": "Guests should be careful not to fall in the hot tub because the water is very slippery when combined with wine.",
+      "timestamp": "10:28-10:41",
+      "time_start_sec": 628,
+      "time_end_sec": 641
+    },
+    {
+      "question": "Does Mr. Brian Van Buren believe that making people feel comfortable is more important than making them feel special?",
+      "answer": "He believes that making people feel special is the most important part of entertaining, even if they are not comfortable.",
+      "timestamp": "7:54-8:07",
+      "time_start_sec": 474,
+      "time_end_sec": 487
+    },
+    {
+      "question": "What type of music does Mr. Brian Van Buren play during the appetizer course of a formal dinner?",
+      "answer": "He plays loud rock music and heavy metal songs to keep the energy high during the appetizers.",
+      "timestamp": "8:15-8:36",
+      "time_start_sec": 495,
+      "time_end_sec": 516
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/18/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

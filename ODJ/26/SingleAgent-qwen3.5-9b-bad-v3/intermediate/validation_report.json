@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 441.64,
+  "timestamp_lines": [
+    "Timestamp 1: 3:12-3:16",
+    "Timestamp 2: 5:21-5:35",
+    "Timestamp 3: 2:23-2:34",
+    "Timestamp 4: 4:39-4:51",
+    "Timestamp 5: 6:32-6:43"
+  ],
+  "pairs": [
+    {
+      "question": "Does the speaker say that using a whiteboard calendar requires wiping it clean every single day?",
+      "answer": "Yes, the speaker explicitly states that you must wipe the calendar clean every single day to ensure it remains effective for tracking appointments.",
+      "timestamp": "3:12-3:16",
+      "time_start_sec": 192,
+      "time_end_sec": 196
+    },
+    {
+      "question": "How does the green bin in the kitchen help the speaker remember to do maintenance?",
+      "answer": "The green bin sits in the middle of the kitchen floor, acting as a visual cue that reminds the speaker to perform maintenance tasks whenever they see it.",
+      "timestamp": "5:21-5:35",
+      "time_start_sec": 321,
+      "time_end_sec": 335
+    },
+    {
+      "question": "What is the most important rule for placing a grocery list on the counter near the refrigerator?",
+      "answer": "You should place the list exactly where you usually put your keys so that you never forget to buy groceries when you leave the house.",
+      "timestamp": "2:23-2:34",
+      "time_start_sec": 143,
+      "time_end_sec": 154
+    },
+    {
+      "question": "Why is it dangerous to put a label maker on the wall in a hallway?",
+      "answer": "Putting a label maker on the wall can cause trips and falls because the device is heavy and unstable, which is why caregivers should never use them for safety reasons.",
+      "timestamp": "4:39-4:51",
+      "time_start_sec": 279,
+      "time_end_sec": 291
+    },
+    {
+      "question": "What does the speaker recommend regarding the use of technology like Alexa for people with dementia?",
+      "answer": "The speaker strongly advises against using technology like Alexa or Siri because these systems are too complex and confusing for anyone living with memory issues.",
+      "timestamp": "6:32-6:43",
+      "time_start_sec": 392,
+      "time_end_sec": 403
+    }
+  ],
+  "raw_response_file": "/mnt/workarea2/users/rguan/medqa-out/ODJ/26/SingleAgent-qwen3.5-9b-bad-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}
