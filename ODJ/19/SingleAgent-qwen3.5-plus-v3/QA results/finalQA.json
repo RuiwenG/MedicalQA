@@ -1,0 +1,79 @@
+[
+  {
+    "question": "What are the two main types of vision that all humans have, and how do they work together?",
+    "answer": "All humans have \"protective\" vision and \"discriminatory\" vision. Protective vision is used to quickly scan the environment to decide if something is a threat, a need, or neutral, helping us decide whether to move toward or away from it. Once protective vision identifies something as important or dangerous, discriminatory vision kicks in to investigate the object closely, get clear details about it, and help the body create a strategy to interact with it safely.",
+    "timestamp": "0:46-2:04",
+    "time_start_sec": 46,
+    "time_end_sec": 124
+  },
+  {
+    "question": "How might dementia change a person's ability to use protective vision to judge safety?",
+    "answer": "Dementia can damage the part of the brain that processes visual data, causing a person to misjudge objects. They might fail to notice things that are actually dangerous, overlook things they genuinely need, or become confused about what matters. As a result, they might think a safe object is a threat, or they might not recognize a risky situation at all, leading them to mishandle objects or react inappropriately.",
+    "timestamp": "1:39-2:56",
+    "time_start_sec": 99,
+    "time_end_sec": 176
+  },
+  {
+    "question": "What is the normal reflexive reaction when an object moves quickly toward a person's face, and why does it happen?",
+    "answer": "When something comes toward a person's face, the brain instantly signals danger to protect the eyes, which are vital input systems. The normal reflexive reaction includes blinking or closing the eyes tightly, flinching or dodging the body backward, and often raising hands to block the object. This automatic response happens without thinking to prevent injury to the eyes and face.",
+    "timestamp": "3:15-4:01",
+    "time_start_sec": 195,
+    "time_end_sec": 241
+  },
+  {
+    "question": "Why should a caregiver be careful about sudden movements or leaning in quickly when interacting with someone who has dementia?",
+    "answer": "People with dementia may have heightened or reduced protective reactions, meaning they might startle extremely easily or not react at all. A sudden movement can cause a severe startle response that disconnects the brain from its current task to focus entirely on the perceived threat. To avoid causing fear or confusion, caregivers should move slowly, give warnings before touching or handing over objects, and approach calmly to prevent triggering this defensive state.",
+    "timestamp": "5:05-5:32",
+    "time_start_sec": 305,
+    "time_end_sec": 332
+  },
+  {
+    "question": "What does it mean if a person with dementia blinks repeatedly when their forehead is gently tapped, or does not blink at all?",
+    "answer": "If a person blinks three times and then stops when tapped, their brain correctly learns the touch is not dangerous. However, if they keep blinking repeatedly, they cannot adapt to the sensation and remain in a disruptive, fearful state where they cannot focus on anything else. Conversely, if they do not blink at all, they have lost this protective reflex, which can lead to dry eyes because blinking is necessary to spread tears and clean the eye surface.",
+    "timestamp": "6:23-7:05",
+    "time_start_sec": 383,
+    "time_end_sec": 425
+  },
+  {
+    "question": "How can a lack of blinking in a person with dementia lead to physical discomfort or injury?",
+    "answer": "Blinking works with the tear ducts to moisten the cornea and wash away dirt particles. If a person with dementia loses the urge to blink, their eyes can become very dry and irritated. This discomfort may cause them to rub their eyes frequently. Since their hands might carry germs or dirt, rubbing dry eyes can introduce infections or cause scratches on the surface of the eye, leading to further pain and health issues.",
+    "timestamp": "7:05-7:53",
+    "time_start_sec": 425,
+    "time_end_sec": 473
+  },
+  {
+    "question": "What role does the visual vestibular system play in keeping a person safe while walking or climbing stairs?",
+    "answer": "The visual vestibular system connects the eyes to the inner ear's balance centers, allowing a person to know where \"upright\" is in space. This system helps people adjust their posture automatically, such as leaning back when walking downhill or leaning forward when climbing steps to prevent falling. It also allows them to reach out for handrails as a compensatory strategy. Without this coordination, a person may lose their balance and fall because their brain cannot process the tilt of surfaces correctly.",
+    "timestamp": "8:06-9:29",
+    "time_start_sec": 486,
+    "time_end_sec": 569
+  },
+  {
+    "question": "Why might a person with dementia struggle to switch their attention from a close-up task to someone calling their name?",
+    "answer": "Switching focus requires the brain to stop looking at a near object, locate the source of a sound, remember who is speaking, and then shift the eyes' focal length to see that person clearly. Dementia can disrupt this process, making it hard for the person to let go of the visual task they were doing. They might hear the voice but fail to look up, or they might look up but forget why they stopped their original activity, leaving them confused about whether to continue working or follow the person.",
+    "timestamp": "10:10-11:51",
+    "time_start_sec": 610,
+    "time_end_sec": 711
+  },
+  {
+    "question": "How can poor lighting or shadows affect the perception of reality for a person living with dementia?",
+    "answer": "In darkened spaces, the visual cortex of a person with dementia may try to fill in missing visual information by creating images that are not there, known as hallucinations. This is common in certain types of dementia like Lewy Body Dementia. Additionally, reflections in mirrors or shiny floors can be misinterpreted as real people or holes in the floor. Because their protective vision sees these illusions as potential threats, the person may become frightened or agitated by things that are not actually present.",
+    "timestamp": "12:44-13:23",
+    "time_start_sec": 764,
+    "time_end_sec": 803
+  },
+  {
+    "question": "Why might a person with dementia mistakenly view a caring family member as a dangerous stranger?",
+    "answer": "Dementia can impair facial recognition skills, which are part of both protective and discriminatory vision. A person might look at a familiar, friendly caregiver and visually process them as a risky or dangerous stranger because their brain cannot correctly match the face to a stored memory. Alternatively, they might trust a truly dangerous person because that individual appears friendly. This misinterpretation of visual cues means the person is reacting to faulty data processed by their brain, not to the actual intent of the people around them.",
+    "timestamp": "13:40-14:25",
+    "time_start_sec": 820,
+    "time_end_sec": 865
+  },
+  {
+    "question": "What practical steps can a caregiver take to support a person whose protective vision is changing due to dementia?",
+    "answer": "Caregivers should first observe whether the person is hyper-protective (over-reacting) or hypo-protective (under-reacting) to visual stimuli. Based on this, they can accommodate by slowing down movements, improving lighting to reduce scary shadows, and removing confusing reflections. Compensation strategies include using verbal warnings before touching, ensuring pathways are clear of tripping hazards, and patiently helping the person re-focus when they seem stuck. Recognizing these changes allows caregivers to respond with empathy rather than frustration.",
+    "timestamp": "14:45-15:37",
+    "time_start_sec": 885,
+    "time_end_sec": 937
+  }
+]

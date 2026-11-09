@@ -276,6 +276,24 @@ def load_transcript(dataset, video):
     return "\n".join(lines)
 
 
+def load_clip(dataset, video, t, te):
+    """The transcript lines overlapping [t, te] seconds, in load_transcript's format.
+
+    The same overlap rule as eval/widen_timestamps.py, so the judge reads the lines
+    that span covers, whole lines included.
+    """
+    path = REPO / dataset / str(video) / "Transcript" / "transcript-en.json"
+    lines = []
+    for s in json.loads(path.read_text(encoding="utf-8")):
+        start = float(s.get("start", 0))
+        end = s.get("end")
+        end = float(end) if end is not None else start + float(s.get("duration", 0))
+        text = str(s.get("text", "")).strip()
+        if text and start < te and end > t:
+            lines.append(f"[{int(start) // 60}:{int(start) % 60:02d}] {text}")
+    return "\n".join(lines)
+
+
 def form_text():
     parts = []
     for i, m in enumerate(METRICS, 1):
@@ -301,7 +319,10 @@ def form_text():
     return "\n".join(parts)
 
 
-def system_prompt(dataset, video, transcript):
+def system_prompt(dataset, video, transcript, clip=None):
+    """The judge's system prompt. With ``clip=(t, te)`` the transcript is only that
+    excerpt of the video, and the grounding rule and header say so; everything else
+    is byte-identical to the full-transcript prompt."""
     schema = {}
     for m in METRICS:
         entry = {"binary": "Yes|No", "errors": ["..."]}
@@ -309,6 +330,15 @@ def system_prompt(dataset, video, transcript):
             entry = {"attribute": "...", **entry}
         schema[m["key"]] = entry
     schema["caregiver_recommendation"] = " | ".join(RECOMMENDATION)
+    if clip is None:
+        source = "the video transcript below"
+        header = f"VIDEO TRANSCRIPT ({dataset} dataset, video {video}; [m:ss] = start time of each line)"
+    else:
+        t, te = clip
+        source = ("the transcript excerpt below, which is the section of the video this QA "
+                  "pair was drawn from")
+        header = (f"VIDEO TRANSCRIPT EXCERPT ({dataset} dataset, video {video}, "
+                  f"{t // 60}:{t % 60:02d}-{te // 60}:{te % 60:02d}; [m:ss] = start time of each line)")
     return f"""You are an expert evaluator of educational question-answer (QA) pairs that were automatically generated from a dementia-caregiving training video. The QA pairs are meant to teach caregivers of people living with dementia. You rate each QA pair with the exact form human annotators use, judging the question and answer together, as one unit, from a caregiver's perspective.
 
 THE FORM — five metrics, then an overall recommendation:
@@ -318,7 +348,7 @@ THE FORM — five metrics, then an overall recommendation:
 Overall caregiver recommendation — "Would you confidently recommend this Q&A to a caregiver?" Pick exactly one: {json.dumps(RECOMMENDATION)}
 
 RULES:
-- For Q&A Trustworthiness, verify the answer's claims against the video transcript below. A claim the transcript does not support is "Hallucinating"; a claim the transcript contradicts is a "Contradiction". Judge grounding strictly against this transcript.
+- For Q&A Trustworthiness, verify the answer's claims against {source}. A claim the transcript does not support is "Hallucinating"; a claim the transcript contradicts is a "Contradiction". Judge grounding strictly against this transcript.
 - The other metrics are judged on the QA text itself.
 - For Q&A Standalone, set the transcript ASIDE and judge the QA text alone. A
   reference such as "this activity", "these techniques", "the speaker", or "they"
@@ -332,7 +362,7 @@ RULES:
 - Respond with STRICT JSON only, no prose, in exactly this shape:
 {json.dumps(schema, indent=2)}
 
-VIDEO TRANSCRIPT ({dataset} dataset, video {video}; [m:ss] = start time of each line):
+{header}:
 
 {transcript}"""
 
@@ -407,7 +437,7 @@ class CostMeter:
                 f"out: {self.out:,} | ${self.usd():.4f}")
 
 
-def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0):
+def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0, effort=None):
     messages = [{"role": "system", "content": sys_prompt},
                 {"role": "user", "content": user_prompt(pair)}]
     feedback = None
@@ -423,6 +453,8 @@ def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0):
         }
         backend = backend_for(model)
         body.update(backend["extra"])
+        if effort:
+            body["reasoning_effort"] = effort
         t0 = time.time()
         try:
             r = session.post(backend["url"], json=body, timeout=300)
@@ -521,6 +553,15 @@ def main():
                          "the annotation site's deck)")
     ap.add_argument("--tag", default="",
                     help="Label added to the output file names, e.g. qwen3-14b")
+    ap.add_argument("--context", choices=["full", "clip"], default="full",
+                    help="full: the whole video transcript (default, as in every run so far). "
+                         "clip: only the transcript lines of the pair's span from --spans")
+    ap.add_argument("--spans", nargs="+", metavar="JSON",
+                    help="clip mode: eval/widened_timestamps/<approach>.json files; each pair "
+                         "uses its widened span (t, te). Pairs with no span are skipped and listed")
+    ap.add_argument("--reasoning-effort", choices=["low", "high", "max"], default=None,
+                    help="DeepSeek only: thinking effort (API default is high). "
+                         "Put it in --tag too, so runs at different levels stay apart")
     ap.add_argument(
         "--approaches",
         nargs="+",
@@ -555,14 +596,26 @@ def main():
         batch_label = f"batch-{args.batch}-of-{SITE['batches']}"
     else:
         pairs = list(all_pairs)
-        session_id = f"llm-{args.model}-full"
-        batch_label = "llm-full"
+        session_id = f"llm-{args.model}-full" + ("-clip" if args.context == "clip" else "")
+        batch_label = "llm-full" + ("-clip" if args.context == "clip" else "")
     if args.uids:
         listed = {ln.strip() for ln in open(args.uids, encoding="utf-8") if ln.strip()}
         pairs = [p for p in pairs if p["uid"] in listed]
         print(f"Restricted to {len(pairs)} of {len(listed)} listed pairs ({args.uids})")
     if args.limit:
         pairs = pairs[: args.limit]
+
+    spans = {}
+    if args.context == "clip":
+        if not args.spans:
+            raise SystemExit("--context clip needs --spans")
+        for f in args.spans:
+            spans.update(json.loads(Path(f).read_text(encoding="utf-8"))["spans"])
+        no_span = [p["uid"] for p in pairs if p["uid"] not in spans]
+        if no_span:
+            print(f"No span for {len(no_span)} pairs, skipped (never judged on the full "
+                  f"transcript): {no_span}")
+        pairs = [p for p in pairs if p["uid"] in spans]
 
     # Judgments carried over from an interrupted run, keyed by uid. These are
     # merged into the CSV at the end but never re-sent to the API.
@@ -596,6 +649,10 @@ def main():
     # OpenRouter ids carry a vendor prefix ("openai/gpt-oss-120b"); the slash
     # would make the output path a directory that does not exist.
     slug = args.model.replace("/", "-") + (f"_{args.tag}" if args.tag else "")
+    if args.reasoning_effort and MODELS[args.model]["backend"] != "deepseek":
+        raise SystemExit("--reasoning-effort is only wired up for the DeepSeek backend")
+    if args.context == "clip" and "clip" not in args.tag:
+        raise SystemExit("clip runs need 'clip' in --tag, so their files never mix with full-transcript runs")
     csv_path = out_dir / f"Master-Teepa_{slug}_{args.mode}_Eval_{stamp}.csv"
     runs_dir = REPO / "eval" / "llm_judge" / "runs"
     runs_dir.mkdir(parents=True, exist_ok=True)
@@ -625,7 +682,13 @@ def main():
     # rebuilding it per pair would re-read the file on every call.
     sys_cache, sys_lock = {}, threading.Lock()
 
-    def sys_prompt_for(dv):
+    def sys_prompt_for(pair):
+        if args.context == "clip":
+            sp = spans[pair["uid"]]
+            return system_prompt(pair["dataset"], pair["video"],
+                                 load_clip(pair["dataset"], pair["video"], sp["t"], sp["te"]),
+                                 clip=(sp["t"], sp["te"]))
+        dv = (pair["dataset"], pair["video"])
         with sys_lock:
             if dv not in sys_cache:
                 sys_cache[dv] = system_prompt(dv[0], dv[1], load_transcript(dv[0], dv[1]))
@@ -647,7 +710,8 @@ def main():
         """Judge one pair and persist it. Returns (pair, obj, secs), or None on failure."""
         try:
             obj, secs = judge_one(session_for(), args.model,
-                                  sys_prompt_for((pair["dataset"], pair["video"])), pair, meter)
+                                  sys_prompt_for(pair), pair, meter,
+                                  effort=args.reasoning_effort)
         except Exception as error:
             with write_lock:
                 failures.append((pair["uid"], str(error)))

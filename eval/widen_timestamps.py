@@ -30,6 +30,14 @@ clip's text, before and after, for the report.
 
     python eval/widen_timestamps.py --approach SingleAgent-qwen3.5-9b-v3
       -> eval/widened_timestamps/SingleAgent-qwen3.5-9b-v3.json, ..._report.md, ..._spot_check.md
+
+``--qa-data`` widens the spans of a judge input instead (its t/te), for sets whose cited
+spans are not all in finalQA.json: Qwen3.5-Plus often wrote no timestamp, and those pairs
+carry the transcript-aligned spans of eval/align_timestamps.py (ts "aligned"/"aligned-low").
+Each record then also has ``ts``, the source of the cited span.
+
+    python eval/widen_timestamps.py --qa-data eval/llm_judge/qa_data_qwen35plus.json
+      -> eval/widened_timestamps/qwen35plus.json, ...
 """
 import argparse
 import json
@@ -130,41 +138,63 @@ def pct(values, q):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--approach", required=True, help="output folder inside each video, e.g. SingleAgent-qwen3.5-9b-v3")
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--approach", help="output folder inside each video, e.g. SingleAgent-qwen3.5-9b-v3")
+    src.add_argument("--qa-data", help="judge input (qa_data format) whose t/te are the cited spans")
     ap.add_argument("--spot-check", type=int, default=30, help="pairs in the spot-check sheet (default 30)")
     args = ap.parse_args()
 
-    result, rows = {}, []
-    for ds in DATASETS:
-        for vdir in sorted((p for p in (REPO / ds).iterdir() if p.name.isdigit()), key=lambda p: int(p.name)):
-            final = vdir / args.approach / "QA results" / "finalQA.json"
-            if is_excluded(ds, vdir.name) or not final.exists():
-                continue
-            pairs = json.loads(final.read_text(encoding="utf-8"))
-            lines = transcript(vdir)
-            line_emb = line_embeddings(lines)
-            qa_emb = embed([p["question"].strip() + " " + p["answer"].strip() for p in pairs])
-            spans = []
-            for n, (p, q) in enumerate(zip(pairs, qa_emb), 1):
-                s, e = p.get("time_start_sec"), p.get("time_end_sec")
-                if s is None or e is None:
+    # (dataset, video dir, [(uid, pair with question/answer/time_start_sec/time_end_sec, ts)])
+    groups = []
+    if args.approach:
+        name = args.approach
+        for ds in DATASETS:
+            for vdir in sorted((p for p in (REPO / ds).iterdir() if p.name.isdigit()), key=lambda p: int(p.name)):
+                final = vdir / args.approach / "QA results" / "finalQA.json"
+                if is_excluded(ds, vdir.name) or not final.exists():
                     continue
-                s, e = int(s), int(e)
-                t, te, method = widen(lines, line_emb @ q, s, e)
-                spans.append((n, s, e, t, te, method, q))
-            clips = embed([clip_text(lines, s, e) for _, s, e, *_ in spans] +
-                          [clip_text(lines, t, te) for _, _, _, t, te, *_ in spans])
-            for k, (n, s, e, t, te, method, q) in enumerate(spans):
-                uid = f"{ds}_v{vdir.name}_{args.approach}_q{n}"
-                rec = {"t": t, "te": te, "t_model": s, "te_model": e, "method": method,
-                       "sim_model": round(float(clips[k] @ q), 3),
-                       "sim_widened": round(float(clips[len(spans) + k] @ q), 3)}
-                result[uid] = rec
-                rows.append((uid, ds, pairs[n - 1], rec, lines))
-            print(f"{ds}/{vdir.name}: {len(spans)} pairs", flush=True)
+                groups.append((ds, vdir, [(f"{ds}_v{vdir.name}_{name}_q{n}", p, "model") for n, p in
+                                          enumerate(json.loads(final.read_text(encoding="utf-8")), 1)]))
+    else:
+        name = Path(args.qa_data).stem.removeprefix("qa_data_")
+        by_video = {}
+        for p in json.loads(Path(args.qa_data).read_text(encoding="utf-8"))["pairs"]:
+            if is_excluded(p["dataset"], str(p["video"])):
+                continue
+            by_video.setdefault((p["dataset"], int(p["video"])), []).append(
+                (p["uid"], {"question": p["question"], "answer": p["answer"],
+                            "time_start_sec": p.get("t"), "time_end_sec": p.get("te")}, p.get("ts", "model")))
+        for (ds, v), items in sorted(by_video.items(), key=lambda kv: (DATASETS.index(kv[0][0]), kv[0][1])):
+            groups.append((ds, REPO / ds / str(v), items))
+
+    result, rows = {}, []
+    for ds, vdir, items in groups:
+        pairs = [p for _, p, _ in items]
+        lines = transcript(vdir)
+        line_emb = line_embeddings(lines)
+        qa_emb = embed([p["question"].strip() + " " + p["answer"].strip() for p in pairs])
+        spans = []
+        for n, ((uid, p, ts), q) in enumerate(zip(items, qa_emb), 1):
+            s, e = p.get("time_start_sec"), p.get("time_end_sec")
+            if s is None or e is None:
+                continue
+            s, e = int(s), int(e)
+            t, te, method = widen(lines, line_emb @ q, s, e)
+            spans.append((n, s, e, t, te, method, q, uid, ts))
+        clips = embed([clip_text(lines, s, e) for _, s, e, *_ in spans] +
+                      [clip_text(lines, t, te) for _, _, _, t, te, *_ in spans])
+        for k, (n, s, e, t, te, method, q, uid, ts) in enumerate(spans):
+            rec = {"t": t, "te": te, "t_model": s, "te_model": e, "method": method,
+                   "sim_model": round(float(clips[k] @ q), 3),
+                   "sim_widened": round(float(clips[len(spans) + k] @ q), 3)}
+            if args.qa_data:
+                rec["ts"] = ts
+            result[uid] = rec
+            rows.append((uid, ds, pairs[n - 1], rec, lines))
+        print(f"{ds}/{vdir.name}: {len(spans)} pairs", flush=True)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out = OUT_DIR / f"{args.approach}.json"
+    out = OUT_DIR / f"{name}.json"
     out.write_text(json.dumps({"encoder": ENCODER, "params": {"ctx": CTX, "max": MAX, "rel": REL,
                                                               "min_sim": MIN_SIM},
                                "spans": result}, indent=1) + "\n", encoding="utf-8")
@@ -179,22 +209,22 @@ def main():
                 100 * sum(r["sim_widened"] < r["sim_model"] - 0.05 for r in recs) / len(recs))
     recs = list(result.values())
     methods = {m: sum(r["method"] == m for r in recs) for m in ("kept", "grown")}
-    report = [f"# Widened timestamps: {args.approach}", "",
+    report = [f"# Widened timestamps: {name}", "",
               f"Encoder `{ENCODER}`; context ±{CTX}s per line; growth while similarity ≥ max({MIN_SIM}, {REL} × anchor) "
               f"and span ≤ {MAX}s; no minimum length.", "",
               f"Methods: {methods['kept']} kept, {methods['grown']} grown (of {len(recs)}).", "",
               "| Set | Pairs | Median before | Median after | <10s before | <10s after | Longest after "
               "| Clip similarity before | after | Similarity dropped >0.05 |",
               "|---|---|---|---|---|---|---|---|---|---|"]
-    for name, sel in [("All", recs)] + [(ds, [r for uid, d, _, r, _ in rows if d == ds]) for ds in DATASETS]:
+    for group, sel in [("All", recs)] + [(ds, [r for uid, d, _, r, _ in rows if d == ds]) for ds in DATASETS]:
         if sel:
             n, mb, ma, sb, sa, mx, simb, sima, drop = summary(sel)
-            report.append(f"| {name} | {n} | {mb:.0f}s | {ma:.0f}s | {sb:.0f}% | {sa:.0f}% | {mx}s "
+            report.append(f"| {group} | {n} | {mb:.0f}s | {ma:.0f}s | {sb:.0f}% | {sa:.0f}% | {mx}s "
                           f"| {simb:.3f} | {sima:.3f} | {drop:.0f}% |")
     after = [r["te"] - r["t"] for r in recs]
     report += ["", "Span length after, percentiles: " +
                ", ".join(f"p{int(q * 100)} {pct(after, q)}s" for q in (0.1, 0.25, 0.5, 0.75, 0.9))]
-    (OUT_DIR / f"{args.approach}_report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    (OUT_DIR / f"{name}_report.md").write_text("\n".join(report) + "\n", encoding="utf-8")
 
     # Spot check: mostly pairs whose cited span was under 10 s, two thirds of them from SUP.
     rng = random.Random(0)
@@ -204,7 +234,7 @@ def main():
     k_sup = min(len(sup), args.spot_check * 2 // 3)
     pick = rng.sample(sup, k_sup) + rng.sample(other, min(len(other), args.spot_check - k_sup))
     clock = lambda s: f"{s // 60}:{s % 60:02d}"
-    sheet = [f"# Spot check: {args.approach}", "",
+    sheet = [f"# Spot check: {name}", "",
              "For each pair: does the widened clip cover what the answer draws on, without much unrelated talk? "
              "Mark ✓ (good), + (should be longer), − (too long).", ""]
     for i, (uid, ds, p, r, lines) in enumerate(pick, 1):
@@ -218,7 +248,7 @@ def main():
                 mark = "▶" if s < r["te_model"] and e > r["t_model"] else "·"
                 sheet.append(f"- {mark} [{clock(int(s))}] {text}")
         sheet += ["", "Verdict: ", ""]
-    (OUT_DIR / f"{args.approach}_spot_check.md").write_text("\n".join(sheet) + "\n", encoding="utf-8")
+    (OUT_DIR / f"{name}_spot_check.md").write_text("\n".join(sheet) + "\n", encoding="utf-8")
     print("\n".join(report))
     print(f"Wrote {out.relative_to(REPO)} and its _report.md, _spot_check.md")
 

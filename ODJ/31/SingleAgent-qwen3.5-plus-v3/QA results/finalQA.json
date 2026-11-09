@@ -1,0 +1,44 @@
+[
+  {
+    "question": "What three key questions should caregivers ask to determine if a person with dementia can safely perform a desired activity at home?",
+    "answer": "Caregivers should ask three specific questions: First, \"Can I get to the thing?\" This checks if the person can physically reach the location or items needed for the task. Second, \"Am I safe?\" This considers if the activity makes sense given the person's current skills and risk level. Third, \"Can I act?\" This determines if the person still has the internal skills required to actually complete the task. If the answer to all three is yes, the person can likely proceed with their desire to do the activity.",
+    "timestamp": "0:51-1:31",
+    "time_start_sec": 51,
+    "time_end_sec": 91
+  },
+  {
+    "question": "How does a person's awareness of their surroundings and abilities change across the different stages described as Sapphires, Diamonds, Emeralds, Ambers, Rubies, and Pearls?",
+    "answer": "Awareness shifts significantly as dementia progresses. People in the \"Sapphire\" stage generally sustain their awareness but may still be surprised by difficulties. In the \"Diamond\" stage, old emotions drive behavior, leading to frustration or surprise at losing skills. \"Emeralds\" experience \"time travel,\" believing they are in a past situation rather than the present, which increases risk. \"Ambers\" focus on sensation (likes and dislikes) rather than thinking, reducing external safety awareness. \"Rubies\" have moments of awareness but lack body awareness and fine motor control. Finally, \"Pearls\" are more aware of their inner world than the outside world, often unable to recognize or communicate basic needs like hunger or thirst.",
+    "timestamp": "2:17-4:00",
+    "time_start_sec": 137,
+    "time_end_sec": 240
+  },
+  {
+    "question": "What levels of supervision are recommended for people in the Diamond, Emerald, Amber, Ruby, and Pearl stages to ensure their safety?",
+    "answer": "Supervision needs increase as the condition progresses. For \"Diamonds,\" a second set of eyes is needed because their self-assessment of skills is inaccurate about half the time. \"Emeralds\" benefit from a friendly presence nearby to offer prompts and modify tasks without interfering. \"Ambers\" require someone to watch the environment and the person 24 hours a day to ensure immediate safety. \"Rubies\" need constant supervision within an arm's reach due to unpredictable changes in ability. \"Pearls\" require a caregiver to be in their immediate space 24/7 to monitor and respond to needs, ensuring the caregiver is fully present and accounted for.",
+    "timestamp": "4:24-5:21",
+    "time_start_sec": 264,
+    "time_end_sec": 321
+  },
+  {
+    "question": "How should caregivers manage access to objects and areas in the home for individuals in the Sapphire, Emerald, Amber, and Pearl stages?",
+    "answer": "Access management must adapt to the person's stage. For \"Sapphires,\" caregivers can use hidden access, keeping items available but out of sight unless needed. For \"Emeralds,\" access should be controlled unless the person is being directly monitored during critical parts of a task, as they may attempt things they cannot safely do. For \"Ambers,\" caregivers must strictly control access to potentially dangerous items while still offering access to activities the person enjoys. For \"Pearls,\" there is either supported access or no access; the caregiver must manage everything, including steps, outdoors, temperature, food, and drink, effectively becoming the access point for the person.",
+    "timestamp": "5:23-6:32",
+    "time_start_sec": 323,
+    "time_end_sec": 392
+  },
+  {
+    "question": "What specific support strategies help people in the Emerald, Amber, and Ruby stages successfully use tools or complete tasks?",
+    "answer": "Support strategies vary by stage to match remaining abilities. \"Emeralds\" need awareness support rather than physical pushing; simplifying a task into a limited number of steps often allows them to participate independently with a partner. \"Ambers\" require guidance and supervision to use items safely, ensuring that only safe items are available to them. \"Rubies\" need supported use with ample space and items they can hold or carry while moving; the \"hand-under-hand\" technique is critical here, where the caregiver provides physical support to help the person complete the action.",
+    "timestamp": "6:56-7:44",
+    "time_start_sec": 416,
+    "time_end_sec": 464
+  },
+  {
+    "question": "Why is it important for caregivers to balance safety restrictions with providing opportunities for life experiences as dementia progresses?",
+    "answer": "As dementia increases, a person's world naturally needs to change to maintain safety, but this should not eliminate a meaningful life. While caregivers must manage risks and sometimes restrict access to prevent harm, it is equally critical to provide reasonable opportunities and options. Activities like going outside to feel the sun or sitting under a tree may only happen when the caregiver decides to make them possible. Balancing protection with these positive experiences ensures that life remains worth living for the person with dementia.",
+    "timestamp": "7:54-8:09",
+    "time_start_sec": 474,
+    "time_end_sec": 489
+  }
+]

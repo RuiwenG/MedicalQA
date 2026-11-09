@@ -1,0 +1,53 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v3",
+  "model": "qwen3.5-plus",
+  "backend": "api",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "model_path": null,
+  "dtype": null,
+  "provider": {
+    "order": null,
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v3",
+  "prompt_format": "labels",
+  "prompt_format_note": "original format line",
+  "generated_utc": "2026-11-07T08:52:14Z",
+  "seed": 42,
+  "thinking": "disabled (enable_thinking=false, Alibaba Model Studio)",
+  "videos": [
+    {
+      "base": "FTD",
+      "id": 1,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "FTD",
+      "id": 2,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 15,
+      "expected": 15
+    },
+    {
+      "base": "FTD",
+      "id": 3,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 14,
+      "expected": 14
+    },
+    {
+      "base": "FTD",
+      "id": 4,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "approach": "SingleAgent (SingleQA), prompt v3",
+  "model": "qwen3.5-plus",
+  "backend": "api",
+  "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+  "model_path": null,
+  "dtype": null,
+  "provider": {
+    "order": null,
+    "quantizations": null,
+    "allow_fallbacks": false
+  },
+  "prompt_version": "v3",
+  "prompt_format": "labels",
+  "prompt_format_note": "original format line",
+  "generated_utc": "2026-11-07T08:52:14Z",
+  "seed": 42,
+  "thinking": "disabled (enable_thinking=false, Alibaba Model Studio)",
+  "videos": [
+    {
+      "base": "ODJ",
+      "id": 1,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12
+    },
+    {
+      "base": "ODJ",
+      "id": 2,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 3,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 4,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 7,
+      "expected": 7
+    },
+    {
+      "base": "ODJ",
+      "id": 5,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "ODJ",
+      "id": 6,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10
+    },
+    {
+      "base": "ODJ",
+      "id": 7,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "ODJ",
+      "id": 8,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "ODJ",
+      "id": 9,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "ODJ",
+      "id": 10,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "ODJ",
+      "id": 11,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 10,
+      "expected": 10
+    },
+    {
+      "base": "ODJ",
+      "id": 12,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5
+    },
+    {
+      "base": "ODJ",
+      "id": 13,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "ODJ",
+      "id": 14,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5
+    },
+    {
+      "base": "ODJ",
+      "id": 15,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 8,
+      "expected": 8
+    },
+    {
+      "base": "ODJ",
+      "id": 16,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5
+    },
+    {
+      "base": "ODJ",
+      "id": 17,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "ODJ",
+      "id": 18,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 6,
+      "expected": 6
+    },
+    {
+      "base": "ODJ",
+      "id": 19,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11
+    },
+    {
+      "base": "ODJ",
+      "id": 20,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 13,
+      "expected": 13
+    },
+    {
+      "base": "ODJ",
+      "id": 21,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "ODJ",
+      "id": 22,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "ODJ",
+      "id": 23,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 24,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 25,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 16,
+      "expected": 16
+    },
+    {
+      "base": "ODJ",
+      "id": 26,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 5,
+      "expected": 5
+    },
+    {
+      "base": "ODJ",
+      "id": 27,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 28,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 9,
+      "expected": 9
+    },
+    {
+      "base": "ODJ",
+      "id": 29,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 30,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 4,
+      "expected": 4
+    },
+    {
+      "base": "ODJ",
+      "id": 31,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 6,
+      "expected": 6
+    }
+  ]
+}

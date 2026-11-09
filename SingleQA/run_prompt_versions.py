@@ -35,7 +35,9 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 ENDPOINTS = {"openrouter": "https://openrouter.ai/api/v1", "huggingface": "https://router.huggingface.co/v1",
-             "local": None}
+             "dashscope": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1", "local": None}
+# Thinking switch per endpoint (see common_utils/llm_client.py _extra_body).
+THINKING = {"openrouter": "openrouter", "dashscope": "dashscope"}
 MAIN = REPO / "SingleQA" / "main.py"
 BASES = {"Master": range(1, 11), "Teepa": range(1, 16)}
 # Expansion sets: one folder per playlist, videos listed in the root CSV.
@@ -167,7 +169,7 @@ def main():
     env = dict(os.environ,
                QWEN_BACKEND="api", QWEN_BASE_URL="", QWEN_PROVIDER=args.endpoint,
                QWEN_MODEL=args.model,
-               QWEN_THINKING_PARAM="openrouter" if args.endpoint == "openrouter" else "chat_template",
+               QWEN_THINKING_PARAM=THINKING.get(args.endpoint, "chat_template"),
                QWEN_OR_PROVIDER=args.or_provider, QWEN_OR_QUANT=args.or_quant,
                SINGLEQA_FORMAT=args.format)
 
@@ -217,6 +219,7 @@ def main():
                 "thinking": ("disabled (reasoning.enabled=false; verified 0 reasoning tokens on this provider)"
                              if args.endpoint == "openrouter" else
                              "disabled (enable_thinking=False in the chat template)" if args.endpoint == "local" else
+                             "disabled (enable_thinking=false, Alibaba Model Studio)" if args.endpoint == "dashscope" else
                              "disabled (chat_template_kwargs.enable_thinking=false; verified no reasoning on this provider)"),
                 "videos": sorted((r for r in results if r["base"] == b and r["version"] == v),
                                  key=lambda r: r["id"]),
