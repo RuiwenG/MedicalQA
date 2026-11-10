@@ -24,7 +24,7 @@ sys.path.insert(0, str(REPO))
 from common_utils import config
 from SingleQA.config.settings import Settings
 from SingleQA.processors.qaparser import QAParser
-from SingleQA.run_bad_qa_local import DEFECTS, BadQASettings
+from SingleQA.run_bad_qa_local import INTENDED_FAILURE, BadQASettings
 
 BASES = ("Master", "Teepa", "ODJ", "SUP", "GEMS", "FTD")
 MODEL_ID = "Qwen/Qwen3.5-9B"
@@ -268,7 +268,7 @@ def run_one(base, index, version, args, settings, client):
     if args.bad:
         # build_bad_pairs.py reads each pair's intended failure from the saved response.
         controls.update(intended_quality="bad", quality_verified=False,
-                        intended_primary_failures=[DEFECTS[i % len(DEFECTS)] for i in range(expected)])
+                        intended_primary_failures=[INTENDED_FAILURE] * expected)
     if args.dry_run:
         return dict(result, status="dry-run", language=language[1], output=str(final))
     if final.exists() and not args.force:

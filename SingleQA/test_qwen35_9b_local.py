@@ -127,7 +127,7 @@ class BatchTests(unittest.TestCase):
             self.assertEqual((result["sampling_seed"], result["recovered_from_saved_response"]), (43, True))
             self.assertEqual(client.generate.call_count, 2)
 
-    def test_bad_mode_uses_bad_prompt_folder_and_failure_rotation(self):
+    def test_bad_mode_uses_bad_prompt_folder_and_all_failures(self):
         with tempfile.TemporaryDirectory() as temporary:
             args, settings, client = self.make_fixture(Path(temporary))
             args.bad = True
@@ -136,8 +136,7 @@ class BatchTests(unittest.TestCase):
             dest = args.output_root / "Master/1/SingleAgent-qwen3.5-9b-bad-v3"
             self.assertTrue((dest / "QA results/finalQA.json").exists())
             saved = json.loads((dest / "intermediate/Intermediate.json").read_text())
-            self.assertEqual(saved["intended_primary_failures"],
-                             ["trustworthiness", "clarity", "usefulness", "care_safety"])
+            self.assertEqual(saved["intended_primary_failures"], ["all"] * 4)
             self.assertIn("deliberately bad", saved["messages"][1]["content"])
             self.assertFalse((args.output_root / "Master/1" / runner.folder_name("v3")).exists())
             runner.save_status(args, result)

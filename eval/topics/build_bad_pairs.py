@@ -1,10 +1,11 @@
 """Collect one generator's deliberately bad v3 pairs into one JSONL for labelling and selection.
 
-Bad pairs come from SingleQA/run_bad_qa_local.py (folders SingleAgent-qwen3-14b-bad-v3) or
-SingleQA/run_qwen35_9b_local.py --bad (folders SingleAgent-qwen3.5-9b-bad-v3).
-Each pair carries its intended primary failure, read from the run's Intermediate.json
-(the prompt rotates trustworthiness, clarity, usefulness, care safety by pair number;
-where Intermediate.json was not kept, the rotation is computed from the pair number).
+Bad pairs come from SingleQA/run_bad_qa_local.py (folders SingleAgent-qwen3.5-plus-bad-v3,
+earlier SingleAgent-qwen3-14b-bad-v3) or SingleQA/run_qwen35_9b_local.py --bad (folders
+SingleAgent-qwen3.5-9b-bad-v3). Each pair carries its intended failure, read from the run's
+Intermediate.json ("all" for runs of the current prompt, which fails every criterion at once).
+Earlier runs rotated trustworthiness, clarity, usefulness, care safety by pair number; where
+Intermediate.json was not kept, that rotation is computed from the pair number.
 Videos in eval/excluded_videos.json are skipped.
 
 Pair IDs follow the judge CSVs: "<Dataset>_v<video>_<approach>_q<n>".

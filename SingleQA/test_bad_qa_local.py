@@ -1,15 +1,16 @@
-"""Checks for the offline negative-QA runner; no model or GPU is needed."""
+"""Checks for the hosted negative-QA runner; no API key or network is needed."""
 
 import contextlib
 import hashlib
 import io
 import json
+import os
 import sys
 import tempfile
 import types
 import unittest
 from pathlib import Path
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -76,8 +77,7 @@ class BadQATests(unittest.TestCase):
         ]), encoding="utf-8")
         args = types.SimpleNamespace(
             data_root=root / "data", output_root=root / "outputs",
-            model_path=root / "checkpoint", force=False, dry_run=False,
-            format="filled", seed=42,
+            force=False, dry_run=False, format="filled", seed=42,
         )
         dest = args.output_root / "Master" / "1" / runner.folder_name("v3")
         return args, transcript, dest
@@ -105,14 +105,22 @@ class BadQATests(unittest.TestCase):
                     else:
                         self.assertNotIn("Self-contained (Standalone)", prompt)
 
-    def test_prompt_rotates_defects_and_preserves_structural_format(self):
+    def test_prompt_fails_all_defects_and_preserves_structural_format(self):
         for format_name, format_line in (("labels", _FORMAT_LABELS), ("filled", _FORMAT_FILLED)):
             with self.subTest(format=format_name):
                 self.settings.prompt_format = format_name
                 system, prompt, _ = self.settings.get_prompt_template("[0:00] source text")
-                for sequence, criterion in (("1, 5, 9", "Trustworthiness"), ("2, 6, 10", "Clarity"),
-                                             ("3, 7, 11", "Usefulness"), ("4, 8, 12", "Care Safety")):
-                    self.assertIn(f"pairs {sequence}, ... fail {criterion}", prompt)
+                self.assertIn("fail all four quality criteria", prompt)
+                self.assertIn("Put all four failures in the answer", prompt)
+                self.assertIn("The question itself must be good", prompt)
+                self.assertNotIn("Ask about a trivial detail", prompt)
+                self.assertNotIn("makes the question and answer difficult", prompt)
+                self.assertIn("do not invent medication doses, restraint instructions, or procedures that could physically harm someone", prompt)
+                for criterion in ("Trustworthiness", "Clarity", "Usefulness", "Care Safety"):
+                    self.assertIn(f"{criterion} failure", prompt)
+                self.assertNotIn("Rotate", prompt)
+                self.assertNotIn("source claim accurate", prompt)
+                self.assertNotIn("avoid inventing source claims", prompt)
                 self.assertIn(format_line, prompt)
                 self.assertIn("Do not label a pair bad", prompt)
                 self.assertIn("real source section", prompt)
@@ -136,7 +144,7 @@ class BadQATests(unittest.TestCase):
             self.assertEqual(raw["raw_response"], client.response)
             self.assertEqual(raw["messages"], client.calls[0])
             self.assertEqual(raw["transcript_sha256"], hashlib.sha256(transcript.read_bytes()).hexdigest())
-            self.assertEqual(raw["intended_primary_failures"], list(runner.DEFECTS))
+            self.assertEqual(raw["intended_primary_failures"], ["all"] * 4)
             self.assertEqual(raw["intended_quality"], "bad")
             self.assertFalse(raw["quality_verified"])
             # Existing output is resumable and does not reload or regenerate.
@@ -203,22 +211,18 @@ class BadQATests(unittest.TestCase):
             second = args.data_root / "Master" / "2" / "Transcript" / transcript.name
             second.parent.mkdir(parents=True)
             second.write_bytes(transcript.read_bytes())
-            args.model_path.mkdir()
-            (args.model_path / "config.json").write_text(json.dumps({
-                "model_type": "qwen3", "hidden_size": 5120, "num_hidden_layers": 40,
-            }), encoding="utf-8")
             arguments = [
-                "--model-path", str(args.model_path), "--data-root", str(args.data_root),
+                "--data-root", str(args.data_root),
                 "--output-root", str(args.output_root), "--bases", "Master", "--versions", "v3",
             ]
-            with patch.object(runner, "LocalQwen", return_value=FakeClient(response_with_pairs())), \
+            with patch.object(runner, "HostedQwen", return_value=FakeClient(response_with_pairs())), \
                     contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(runner.main(arguments + ["--ids", "1", "2", "--seed", "42"]), 0)
             meta_path = args.output_root / "Master" / f"{runner.folder_name('v3')}_generation_meta.json"
             original = json.loads(meta_path.read_text())
             self.assertEqual([v["id"] for v in original["videos"]], [1, 2])
             self.assertTrue(all(v["generation"]["seed"] == 42 for v in original["videos"]))
-            with patch.object(runner, "LocalQwen", return_value=FakeClient(response_with_pairs(5))), \
+            with patch.object(runner, "HostedQwen", return_value=FakeClient(response_with_pairs(5))), \
                     contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(runner.main(arguments + ["--ids", "1", "--seed", "43", "--force"]), 1)
             updated = json.loads(meta_path.read_text())
@@ -241,14 +245,14 @@ class BadQATests(unittest.TestCase):
             self.assertEqual(language, ("zh", "Chinese"))
             self.assertEqual(duration, 10)
 
-    def test_dry_run_needs_no_checkpoint_and_writes_nothing(self):
+    def test_dry_run_needs_no_api_key_and_writes_nothing(self):
         with tempfile.TemporaryDirectory() as temporary:
             args, _, _ = self.make_job(Path(temporary))
-            with patch.object(runner.LocalQwen, "load") as load, \
-                    patch.object(runner.LocalQwen, "generate") as generate, \
+            with patch.object(runner.HostedQwen, "load") as load, \
+                    patch.object(runner.HostedQwen, "generate") as generate, \
                     contextlib.redirect_stdout(io.StringIO()) as output:
                 status = runner.main([
-                    "--model-path", str(args.model_path), "--data-root", str(args.data_root),
+                    "--data-root", str(args.data_root),
                     "--output-root", str(args.output_root), "--bases", "Master", "--ids", "1",
                     "--versions", "v3", "--dry-run",
                 ])
@@ -257,25 +261,56 @@ class BadQATests(unittest.TestCase):
             load.assert_not_called()
             generate.assert_not_called()
             self.assertFalse(args.output_root.exists())
-            self.assertFalse(args.model_path.exists())
 
-    def test_context_overflow_fails_before_device_transfer_or_generation(self):
-        inputs = Mock()
-        inputs.input_ids.shape = (1, runner.CONTEXT_LIMIT - self.settings.max_new_tokens + 1)
-        tokenizer = Mock(return_value=inputs)
-        tokenizer.apply_chat_template.return_value = "rendered prompt"
-        client = runner.LocalQwen("unused-checkpoint", seed=42)
-        client.tokenizer, client.model = tokenizer, Mock()
-        torch_stub = types.ModuleType("torch")
-        transformers_stub = types.ModuleType("transformers")
-        transformers_stub.set_seed = Mock()
-        with patch.dict(sys.modules, {"torch": torch_stub, "transformers": transformers_stub}):
-            with self.assertRaisesRegex(ValueError, "exceeds Qwen3's native"):
-                client.generate([{"role": "user", "content": "source"}], self.settings)
-        self.assertFalse(tokenizer.apply_chat_template.call_args.kwargs["enable_thinking"])
-        self.assertFalse(tokenizer.call_args.kwargs["truncation"])
-        inputs.to.assert_not_called()
-        client.model.generate.assert_not_called()
+    def hosted_call(self, finish_reason="stop", seed=42, env=None):
+        """Run HostedQwen against a fake OpenAI SDK; return its output, request and SDK constructor."""
+        completion = types.SimpleNamespace(
+            choices=[types.SimpleNamespace(
+                finish_reason=finish_reason,
+                message=types.SimpleNamespace(content="<think>plan</think>Question 1: Q?"))],
+            usage=types.SimpleNamespace(prompt_tokens=11, completion_tokens=7),
+        )
+        environment = {"QWEN_API_KEY": "test-value", **(env or {})}
+        with patch.dict(os.environ, environment), patch("openai.OpenAI") as sdk:
+            sdk.return_value.chat.completions.create.return_value = completion
+            client = runner.HostedQwen(seed)
+            client.load()
+            text, stats = client.generate([{"role": "user", "content": "source"}], self.settings)
+        return text, stats, sdk.return_value.chat.completions.create.call_args.kwargs, sdk
+
+    def test_request_goes_directly_to_alibaba_with_thinking_off(self):
+        # A .env aimed at another model or endpoint must not redirect this runner.
+        text, stats, request, sdk = self.hosted_call(env={
+            "QWEN_MODEL": "qwen/qwen3.5-9b", "QWEN_PROVIDER": "openrouter",
+            "QWEN_THINKING_PARAM": "openrouter", "OPEN_ROUTER_API_KEY": "wrong-provider",
+        })
+        self.assertEqual(sdk.call_args.kwargs["base_url"], "https://dashscope-intl.aliyuncs.com/compatible-mode/v1")
+        self.assertEqual(sdk.call_args.kwargs["api_key"], "test-value")
+        self.assertEqual(request["model"], "qwen3.5-plus")
+        self.assertEqual(request["extra_body"], {"enable_thinking": False, "repetition_penalty": 1.05})
+        self.assertEqual((request["temperature"], request["top_p"], request["seed"]), (0.3, 0.9, 42))
+        self.assertEqual(request["max_tokens"], self.settings.max_new_tokens)
+        self.assertEqual(text, "Question 1: Q?")
+        self.assertEqual((stats["input_tokens"], stats["output_tokens"]), (11, 7))
+        self.assertFalse(stats["output_budget_reached"])
+
+    def test_truncated_response_and_empty_seed_are_handled(self):
+        _, stats, request, _ = self.hosted_call(finish_reason="length", seed=None)
+        self.assertTrue(stats["output_budget_reached"])
+        self.assertNotIn("seed", request)
+
+    def test_missing_api_key_stops_every_remaining_job(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            args, _, _ = self.make_job(Path(temporary))
+            cleared = {key: "" for key in ("QWEN_API_KEY", "VLLM_POD_API_KEY")}
+            with patch.dict(os.environ, cleared), patch("openai.OpenAI"), \
+                    contextlib.redirect_stdout(io.StringIO()) as output:
+                status = runner.main([
+                    "--data-root", str(args.data_root), "--output-root", str(args.output_root),
+                    "--bases", "Master", "--ids", "1", "--versions", "v3",
+                ])
+            self.assertEqual(status, 1)
+            self.assertIn("No Qwen API key", output.getvalue())
 
 
 if __name__ == "__main__":
