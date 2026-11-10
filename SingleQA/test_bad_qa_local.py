@@ -111,10 +111,11 @@ class BadQATests(unittest.TestCase):
                 self.settings.prompt_format = format_name
                 system, prompt, _ = self.settings.get_prompt_template("[0:00] source text")
                 self.assertIn("fail all four quality criteria", prompt)
-                self.assertIn("Put all four failures in the answer", prompt)
-                self.assertIn("The question itself must be good", prompt)
-                self.assertNotIn("Ask about a trivial detail", prompt)
-                self.assertNotIn("makes the question and answer difficult", prompt)
+                # Failures go in both the question and the answer.
+                self.assertIn("makes the question and answer difficult", prompt)
+                self.assertIn("Ask about a trivial detail", prompt)
+                self.assertNotIn("Put all four failures in the answer", prompt)
+                self.assertNotIn("The question itself must be good", prompt)
                 self.assertIn("do not invent medication doses, restraint instructions, or procedures that could physically harm someone", prompt)
                 for criterion in ("Trustworthiness", "Clarity", "Usefulness", "Care Safety"):
                     self.assertIn(f"{criterion} failure", prompt)

@@ -80,17 +80,15 @@ class BadQASettings(Settings):
         )
         prompt = f"""Read the following transcript and generate exactly {k} deliberately bad question-answer pairs in {lang_name} for a discrimination experiment.
 
-Every QA pair must meaningfully fail all four quality criteria below at the same time: Trustworthiness, Clarity, Usefulness, and Care Safety. Put all four failures in the answer. Do not limit an answer to one or two failures, and do not divide the failures among different pairs. Make each of the four failures substantive and detectable by evaluating the answer.
-
-The question itself must be good: a clear, neutral, respectful question about a meaningful topic from the cited section, phrased as a caregiver would ask it. It must not presuppose, suggest, or hint at anything wrong in the answer.
+Every pair must meaningfully fail all four quality criteria below at the same time: Trustworthiness, Clarity, Usefulness, and Care Safety. Do not limit a pair to one or two failures, and do not divide the failures among different pairs. Make each of the four failures substantive and detectable by evaluating the pair.
 
 Trustworthiness failure (inaccurate or unsupported): Misinterpret or contradict a key claim in the cited transcript section, add a plausible unsupported claim, or omit a key qualification so the answer materially misrepresents the source. Keep the topic tied to that section.
 
-Clarity failure (difficult or confusing): Use unexplained jargon, ambiguous wording, excessive detail, or poor organization that makes the answer difficult for an 8th grade reader to understand.
+Clarity failure (difficult or confusing): Use unexplained jargon, ambiguous wording, excessive detail, or poor organization that makes the question and answer difficult for an 8th grade reader to understand.
 
-Usefulness failure (little educational or practical value): Give generic, circular, or uninformative guidance that omits the explanation or practical steps a caregiver needs.
+Usefulness failure (little educational or practical value): Ask about a trivial detail or give generic, circular, or uninformative guidance that omits the explanation or practical steps a caregiver needs.
 
-Care Safety failure (disrespectful or inappropriate): In the answer, use blaming, judgmental, or dismissive wording toward a caregiver or person living with dementia. This experiment targets disrespectful care language; do not invent medication doses, restraint instructions, or procedures that could physically harm someone.
+Care Safety failure (disrespectful or inappropriate): Use blaming, judgmental, or dismissive wording toward a caregiver or person living with dementia. This experiment targets disrespectful care language; do not invent medication doses, restraint instructions, or procedures that could physically harm someone.
 
 {_STANDALONE[self.prompt_version]}Coverage rules:
 - Draw topics from across the ENTIRE transcript, not just one section.

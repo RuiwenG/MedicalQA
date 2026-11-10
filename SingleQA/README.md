@@ -167,13 +167,13 @@ Sampling follows `SingleQA/config/settings.py`: temperature 0.3, top-p 0.9, repe
 
 The requested count remains `max(4, round(transcript_word_count / 250))`. Language, transcript-wide topic coverage, source timestamps, and the v1/v2/v3 standalone wording are retained. The default `--format filled` shows content placeholders after each structural label to reduce empty-question outputs; `--format labels` reproduces the original bare-label instruction. Both parse into the same JSON schema.
 
-Every pair is asked to fail all four criteria at once, and is recorded with the intended failure `all`. All four failures go in the answer; the question stays clear, neutral, and respectful, so a rater has to read the answer and check the source:
+Every pair is asked to fail all four criteria at once, and is recorded with the intended failure `all`. Failures can appear in the question as well as the answer:
 
 | Criterion | Intended failure |
 | --- | --- |
 | Trustworthiness | contradict, misinterpret, or materially misrepresent the source |
 | Clarity | ambiguous wording, jargon, or confusing organization |
-| Usefulness | generic, circular, or uninformative guidance |
+| Usefulness | trivial questions or uninformative guidance |
 | Care safety | blaming, judgmental, or dismissive language |
 
 Bad-QA folders generated before this change used a rotation instead: each pair had one primary failure, repeating by position in the order above. Care-safety failures target disrespectful language, excluding invented medication doses, restraint instructions, and physically harmful procedures. Pair text contains no defect labels, explanations, disclaimers, or corrections, so a discriminator must assess the content.
