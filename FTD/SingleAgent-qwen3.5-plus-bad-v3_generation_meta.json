@@ -1,0 +1,302 @@
+{
+  "approach": "SingleAgent (SingleQA), deliberately bad QA for discrimination",
+  "model": "qwen3.5-plus",
+  "backend": "api",
+  "prompt_version": "v3",
+  "intended_quality": "bad",
+  "quality_verified": false,
+  "failures_per_pair": [
+    "trustworthiness",
+    "clarity",
+    "usefulness",
+    "care_safety"
+  ],
+  "care_safety_scope": "blaming or judgmental language",
+  "latest_invocation": {
+    "model": "qwen3.5-plus",
+    "backend": "api",
+    "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+    "provider": "Alibaba",
+    "prompt_version": "v3",
+    "prompt_format": "labels",
+    "seed": 42,
+    "generation_config": {
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "repetition_penalty": 1.05
+    },
+    "max_new_tokens": 8192,
+    "words_per_qa": 250,
+    "min_qa_pairs": 4,
+    "thinking": false,
+    "run_utc": "2026-11-11T00:26:38Z",
+    "videos": [
+      {
+        "base": "FTD",
+        "id": 1,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 11,
+        "expected": 11,
+        "generation": {
+          "model": "qwen3.5-plus",
+          "backend": "api",
+          "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "provider": "Alibaba",
+          "prompt_version": "v3",
+          "prompt_format": "labels",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "thinking": false,
+          "generated_utc": "2026-11-11T00:15:12Z",
+          "transcript_sha256": "5a00dfe9c1708205e09c8255876f31ad1f83765a240c20742ddad4e08ae0b8bc"
+        },
+        "input_tokens": 5773,
+        "output_tokens": 1003,
+        "agent_seconds": 22.627,
+        "finish_reason": "stop",
+        "output_budget_reached": false
+      },
+      {
+        "base": "FTD",
+        "id": 2,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 15,
+        "expected": 15,
+        "generation": {
+          "model": "qwen3.5-plus",
+          "backend": "api",
+          "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "provider": "Alibaba",
+          "prompt_version": "v3",
+          "prompt_format": "labels",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "thinking": false,
+          "generated_utc": "2026-11-11T00:15:54Z",
+          "transcript_sha256": "7985c0c282896b3f0cced71f4c93c20c81d4a49b6e9f8b0d887b0a3558af604c"
+        },
+        "input_tokens": 7613,
+        "output_tokens": 1998,
+        "agent_seconds": 42.297,
+        "finish_reason": "stop",
+        "output_budget_reached": false
+      },
+      {
+        "base": "FTD",
+        "id": 3,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 14,
+        "expected": 14,
+        "generation": {
+          "model": "qwen3.5-plus",
+          "backend": "api",
+          "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "provider": "Alibaba",
+          "prompt_version": "v3",
+          "prompt_format": "labels",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "thinking": false,
+          "generated_utc": "2026-11-11T00:16:26Z",
+          "transcript_sha256": "9fe43d9a4b6f6f7fcdd64704878851b42b11d449d1665f9773ad56fd79c49894"
+        },
+        "input_tokens": 6603,
+        "output_tokens": 1502,
+        "agent_seconds": 31.728,
+        "finish_reason": "stop",
+        "output_budget_reached": false
+      },
+      {
+        "base": "FTD",
+        "id": 4,
+        "version": "v3",
+        "status": "ok",
+        "pairs": 12,
+        "expected": 12,
+        "generation": {
+          "model": "qwen3.5-plus",
+          "backend": "api",
+          "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+          "provider": "Alibaba",
+          "prompt_version": "v3",
+          "prompt_format": "labels",
+          "seed": 42,
+          "generation_config": {
+            "temperature": 0.3,
+            "top_p": 0.9,
+            "repetition_penalty": 1.05
+          },
+          "max_new_tokens": 8192,
+          "words_per_qa": 250,
+          "min_qa_pairs": 4,
+          "thinking": false,
+          "generated_utc": "2026-11-11T00:17:01Z",
+          "transcript_sha256": "a52ee87d9d4f2634586d61935959bf4b90e2949e3998a5d7818026839c2c0fd1"
+        },
+        "input_tokens": 6561,
+        "output_tokens": 1595,
+        "agent_seconds": 35.469,
+        "finish_reason": "stop",
+        "output_budget_reached": false
+      }
+    ]
+  },
+  "videos": [
+    {
+      "base": "FTD",
+      "id": 1,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 11,
+      "expected": 11,
+      "generation": {
+        "model": "qwen3.5-plus",
+        "backend": "api",
+        "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+        "provider": "Alibaba",
+        "prompt_version": "v3",
+        "prompt_format": "labels",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "thinking": false,
+        "generated_utc": "2026-11-11T00:15:12Z",
+        "transcript_sha256": "5a00dfe9c1708205e09c8255876f31ad1f83765a240c20742ddad4e08ae0b8bc"
+      },
+      "input_tokens": 5773,
+      "output_tokens": 1003,
+      "agent_seconds": 22.627,
+      "finish_reason": "stop",
+      "output_budget_reached": false
+    },
+    {
+      "base": "FTD",
+      "id": 2,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 15,
+      "expected": 15,
+      "generation": {
+        "model": "qwen3.5-plus",
+        "backend": "api",
+        "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+        "provider": "Alibaba",
+        "prompt_version": "v3",
+        "prompt_format": "labels",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "thinking": false,
+        "generated_utc": "2026-11-11T00:15:54Z",
+        "transcript_sha256": "7985c0c282896b3f0cced71f4c93c20c81d4a49b6e9f8b0d887b0a3558af604c"
+      },
+      "input_tokens": 7613,
+      "output_tokens": 1998,
+      "agent_seconds": 42.297,
+      "finish_reason": "stop",
+      "output_budget_reached": false
+    },
+    {
+      "base": "FTD",
+      "id": 3,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 14,
+      "expected": 14,
+      "generation": {
+        "model": "qwen3.5-plus",
+        "backend": "api",
+        "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+        "provider": "Alibaba",
+        "prompt_version": "v3",
+        "prompt_format": "labels",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "thinking": false,
+        "generated_utc": "2026-11-11T00:16:26Z",
+        "transcript_sha256": "9fe43d9a4b6f6f7fcdd64704878851b42b11d449d1665f9773ad56fd79c49894"
+      },
+      "input_tokens": 6603,
+      "output_tokens": 1502,
+      "agent_seconds": 31.728,
+      "finish_reason": "stop",
+      "output_budget_reached": false
+    },
+    {
+      "base": "FTD",
+      "id": 4,
+      "version": "v3",
+      "status": "ok",
+      "pairs": 12,
+      "expected": 12,
+      "generation": {
+        "model": "qwen3.5-plus",
+        "backend": "api",
+        "endpoint": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+        "provider": "Alibaba",
+        "prompt_version": "v3",
+        "prompt_format": "labels",
+        "seed": 42,
+        "generation_config": {
+          "temperature": 0.3,
+          "top_p": 0.9,
+          "repetition_penalty": 1.05
+        },
+        "max_new_tokens": 8192,
+        "words_per_qa": 250,
+        "min_qa_pairs": 4,
+        "thinking": false,
+        "generated_utc": "2026-11-11T00:17:01Z",
+        "transcript_sha256": "a52ee87d9d4f2634586d61935959bf4b90e2949e3998a5d7818026839c2c0fd1"
+      },
+      "input_tokens": 6561,
+      "output_tokens": 1595,
+      "agent_seconds": 35.469,
+      "finish_reason": "stop",
+      "output_budget_reached": false
+    }
+  ]
+}
