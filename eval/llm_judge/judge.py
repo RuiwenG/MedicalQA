@@ -75,6 +75,23 @@ BACKENDS = {
         "extra": {},
         "caches_prompts": True,
     },
+    # The lab Mac Studio (oMLX server, LAN only; needs the lab network). No key. It
+    # batches concurrent requests (8 workers: ~104 tok/s total vs ~55 for one), so
+    # run with --workers 8 and --reasoning-effort low. 16k context, so clip context
+    # only: 13 of 74 Qwen3.5-9B full-transcript prompts exceed ~12k tokens.
+    "macstudio": {
+        "url": os.getenv("MACSTUDIO_URL", "http://10.10.50.253:8000/v1/chat/completions"),
+        "key_env": None,
+        "extra": {},
+        "caches_prompts": True,
+        # oMLX turns GLM's thinking off entirely under response_format=json_object
+        # (0 reasoning tokens), so ask for plain text; the fenced JSON it returns is
+        # parsed and validated like every other reply.
+        "json_mode": False,
+        # Its thinking runs to ~4k tokens on some pairs; 6000 cut a few off before the
+        # answer. The clip prompts are ~2k tokens, so 12k still fits the 16k context.
+        "max_tokens": 12000,
+    },
 }
 
 # --- Judge models (USD per 1M tokens) --------------------------------------
@@ -119,6 +136,9 @@ MODELS = {
     # Lab copy of Qwen/Qwen2.5-VL-72B-Instruct-AWQ on WAVE, served by vLLM (4-bit, free).
     "qwen2.5-vl-72b-awq": {"backend": "vllm",
                            "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0}},
+    # GLM 5.3 Flash on the lab Mac Studio (free). Thinks by default.
+    "glm-5.3-flash": {"backend": "macstudio",
+                      "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0}},
 }
 
 # Kept as a name so judge_no_transcript.py and older callers keep working.
@@ -449,9 +469,11 @@ def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0, effort=N
             # Both judge models reason by default and the thinking counts toward
             # this cap; 900 truncated the JSON mid-object. The JSON itself is ~300.
             "max_tokens": 6000,
-            "response_format": {"type": "json_object"},
         }
         backend = backend_for(model)
+        body["max_tokens"] = backend.get("max_tokens", body["max_tokens"])
+        if backend.get("json_mode", True):
+            body["response_format"] = {"type": "json_object"}
         body.update(backend["extra"])
         if effort:
             body["reasoning_effort"] = effort
@@ -477,7 +499,8 @@ def judge_one(session, model, sys_prompt, pair, meter, temperature=0.0, effort=N
             continue
         data = r.json()
         meter.add(data.get("usage", {}))
-        text = data["choices"][0]["message"]["content"] or ""
+        # A reply cut off mid-thought carries no content at all.
+        text = data["choices"][0]["message"].get("content") or ""
         try:
             obj = json.loads(re.sub(r"^```(?:json)?|```$", "", text.strip(), flags=re.M))
         except json.JSONDecodeError:
@@ -560,7 +583,8 @@ def main():
                     help="clip mode: eval/widened_timestamps/<approach>.json files; each pair "
                          "uses its widened span (t, te). Pairs with no span are skipped and listed")
     ap.add_argument("--reasoning-effort", choices=["low", "high", "max"], default=None,
-                    help="DeepSeek only: thinking effort (API default is high). "
+                    help="DeepSeek and Mac Studio only: thinking effort (DeepSeek's default is "
+                         "high; GLM on oMLX thinks 3-5k tokens by default, ~250 at low). "
                          "Put it in --tag too, so runs at different levels stay apart")
     ap.add_argument(
         "--approaches",
@@ -649,8 +673,8 @@ def main():
     # OpenRouter ids carry a vendor prefix ("openai/gpt-oss-120b"); the slash
     # would make the output path a directory that does not exist.
     slug = args.model.replace("/", "-") + (f"_{args.tag}" if args.tag else "")
-    if args.reasoning_effort and MODELS[args.model]["backend"] != "deepseek":
-        raise SystemExit("--reasoning-effort is only wired up for the DeepSeek backend")
+    if args.reasoning_effort and MODELS[args.model]["backend"] not in ("deepseek", "macstudio"):
+        raise SystemExit("--reasoning-effort is only wired up for the DeepSeek and Mac Studio backends")
     if args.context == "clip" and "clip" not in args.tag:
         raise SystemExit("clip runs need 'clip' in --tag, so their files never mix with full-transcript runs")
     csv_path = out_dir / f"Master-Teepa_{slug}_{args.mode}_Eval_{stamp}.csv"
