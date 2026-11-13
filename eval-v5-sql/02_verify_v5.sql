@@ -11,7 +11,7 @@ select
     to_regclass('public.assignment_status_v5') as assignment_status,
     to_regclass('public.capacity_alerts_v5')   as capacity_alerts;
 
--- Expected: batches of 5 versions, 20 Q&As each, 3 medical and 2 non-medical
+-- Expected: batches of 5 versions, 5 Q&As each for the pilot, 3 medical and 2 non-medical
 -- base slots per version, a 48-hour lease, and the alert at 15 people.
 -- (An upgraded database where someone changed the quotas keeps its own values.)
 select * from public.study_settings_v5;
@@ -51,8 +51,8 @@ select
              and public.role_details_ok_v5(annotator_role_details, annotator_groups) is not true)))
         as invalid_rating_profiles;
 
--- Expected: whole batches (5, 10, ... rows) of 20, distinct uids, Qwen3-14B
--- approaches only (v1/v2/v3 and the flawed bad-v3).
+-- Expected: five versions with 5 distinct pairs each for Phase 0: 25 total.
+-- Qwen3.5-9B v3: 20 normal outputs and 5 deliberately negative outputs.
 select eval_version, count(*) as qnas, count(distinct (dataset, video)) as videos
 from public.version_pairs_v5
 group by eval_version
@@ -61,6 +61,14 @@ select approach, count(*)
 from public.version_pairs_v5
 group by approach
 order by approach;
+
+-- Expected: zero rows. Every loaded group must match the configured size and
+-- have contiguous positions. This also works for later same-sized batches.
+select vp.eval_version
+from public.version_pairs_v5 vp cross join public.study_settings_v5 st
+group by vp.eval_version, st.pairs_per_version
+having count(*) <> st.pairs_per_version
+    or min(vp.position) <> 1 or max(vp.position) <> st.pairs_per_version;
 
 -- Both triggers on the ratings table must be enabled.
 select tgname, tgenabled

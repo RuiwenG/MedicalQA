@@ -1,0 +1,41 @@
+{
+  "pairs_per_version": 5,
+  "selection_source": "eval/topics/runs/review_set_qwen3.5-9b-25",
+  "versions": [
+    [
+      "ODJ_v10_SingleAgent-qwen3.5-9b-v3_q2",
+      "Master_v9_SingleAgent-qwen3.5-9b-v3_q5",
+      "ODJ_v11_SingleAgent-qwen3.5-9b-v3_q10",
+      "SUP_v14_SingleAgent-qwen3.5-9b-v3_q12",
+      "Master_v1_SingleAgent-qwen3.5-9b-bad-v3_q12"
+    ],
+    [
+      "SUP_v4_SingleAgent-qwen3.5-9b-v3_q31",
+      "GEMS_v2_SingleAgent-qwen3.5-9b-v3_q10",
+      "SUP_v25_SingleAgent-qwen3.5-9b-v3_q42",
+      "SUP_v30_SingleAgent-qwen3.5-9b-v3_q28",
+      "ODJ_v30_SingleAgent-qwen3.5-9b-bad-v3_q2"
+    ],
+    [
+      "SUP_v11_SingleAgent-qwen3.5-9b-v3_q6",
+      "SUP_v21_SingleAgent-qwen3.5-9b-v3_q2",
+      "ODJ_v21_SingleAgent-qwen3.5-9b-v3_q4",
+      "SUP_v29_SingleAgent-qwen3.5-9b-v3_q4",
+      "Teepa_v3_SingleAgent-qwen3.5-9b-bad-v3_q5"
+    ],
+    [
+      "GEMS_v2_SingleAgent-qwen3.5-9b-v3_q11",
+      "FTD_v1_SingleAgent-qwen3.5-9b-v3_q5",
+      "ODJ_v16_SingleAgent-qwen3.5-9b-v3_q3",
+      "SUP_v22_SingleAgent-qwen3.5-9b-v3_q25",
+      "ODJ_v1_SingleAgent-qwen3.5-9b-bad-v3_q3"
+    ],
+    [
+      "Teepa_v15_SingleAgent-qwen3.5-9b-v3_q3",
+      "FTD_v1_SingleAgent-qwen3.5-9b-v3_q1",
+      "Teepa_v1_SingleAgent-qwen3.5-9b-v3_q6",
+      "SUP_v18_SingleAgent-qwen3.5-9b-v3_q34",
+      "ODJ_v22_SingleAgent-qwen3.5-9b-bad-v3_q1"
+    ]
+  ]
+}

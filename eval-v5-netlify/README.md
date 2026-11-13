@@ -1,203 +1,117 @@
-# Dementia Q&A human evaluation — v5 Netlify package
+# MedicalQA human evaluation v5: Phase 0
 
-**Deploying this release?** Follow the checklist in `../eval-v5-DEPLOY.md`
-(repository root). The Q&As come from `selection.json` in this folder, built
-with `python3 eval-v5-netlify/build_versions.py --selection eval-v5-netlify/selection.json`.
+This package contains 25 Qwen3.5-9B Q&As in five groups of five. Each group has
+three high-rated natural pairs, one low-rated natural pair and one deliberate
+negative. The UI hides selection labels, model names and negative targets.
+The selected answers are unchanged, and the five evaluation criteria remain.
 
-v5 gives each annotator **one version of 20 Q&As**, and the database decides
-which version. Versions come in batches of five, each version taking 3 medical
-and 2 non-medical annotators: 25 people per batch. Versions 1–5 open first;
-when 15 people are in, the database flags that versions 6–10 should be
-prepared, and so on. It is a new,
-isolated package built from the v4 UI. It does not change `eval-v4-netlify/`,
-`eval-v4-sql/` or any earlier study.
+The selection is no longer provisional. `selection.json` records the IDs
+from `eval/topics/runs/review_set_qwen3.5-9b-25/` and the 27 October review PDF.
+Follow `../eval-v5-DEPLOY.md` for the database and deployment sequence.
 
-## Study contract
+## Build matching site and SQL files
 
-- Supabase raw table: `public.ratings_v5`
-- Latest-row view: `public.ratings_v5_final`
-- Version routing: `public.claim_version_v5(...)`, called once per new annotator
-- Study version sent by the browser: `v5`
-- Generator: Qwen3-14B only (`SingleAgent-qwen3-14b-v1`, `-v2`, `-v3`, and the
-  deliberately flawed `SingleAgent-qwen3-14b-bad-v3`). The UI never shows the
-  approach, so annotators cannot tell which pairs are flawed
-- Corpus: batches of 5 versions of 20 Q&As (`qa_data.json`, `versions.json`);
-  batch 1 is 100 Q&As
-- Browser storage namespace: `dqa:v5:*`, isolated from earlier studies
-
-**The current selection is PROVISIONAL.** `manifest.json` says
-`"provisional": true` and the welcome page shows a warning banner. It is a
-placeholder for testing: four pairs from each of the original 25 videos, spread
-over the three prompt versions. Replace it with the agreed selection before
-launch (see "Build the versions").
-
-## Landing page and routing
-
-The annotator enters their **name**, ticks every **role** that applies, can
-add an optional short description under each ticked role, and gives their
-**dementia-care experience**, then presses **Continue**. The page calls
-`claim_version_v5`, which records an assignment and returns its version. The
-annotator then rates that version's 20 Q&As in their own shuffled order,
-seeded by the assignment id, so a reload keeps the same order.
-
-The four roles are healthcare professional, medical student, family/friend
-dementia caregiver, and others. Healthcare professionals and medical students
-count as **medical**; family/friend caregivers and others count as
-**non-medical**. An annotator who ticks several roles counts as medical when
-any of them is medical, so a nurse who also cares for a parent is routed as
-medical. That mapping lives in one place, the database table
-`role_categories_v5`. Every ticked role (`annotator_groups`) and every
-description given (`annotator_role_details`, at most 200 characters each) is
-stored with the assignment and its ratings, and exported in the CSV.
-
-The routing rule:
-
-1. **Base fill.** A medical annotator goes to the lowest-numbered loaded
-   version with fewer than 3 medical annotators. A non-medical annotator goes
-   to the lowest-numbered loaded version with fewer than 2 non-medical.
-2. **Extra raters.** Once every loaded version has its base slots for that
-   category, the annotator is an extra rater in the version with the fewest
-   annotators in total, lowest number on a tie: 5-5-5-5-5 → 6-5-5-5-5 → … This
-   happens only until the next batch is loaded, whose new base slots come
-   first.
-3. **Capacity alert.** When 15 people hold a slot in the latest batch, a row
-   appears in `capacity_alerts_v5` saying which versions to prepare next
-   (see `eval-v5-sql/README.md`, "Add the next batch of versions").
-
-If annotators arrive out of order, for example all medical first, the extras
-spread one at a time while the non-medical base slots stay reserved. The
-versions are never more than one or two apart, and the balance rule evens them
-out.
-
-**Drop-outs.** An assignment holds its slot for 48 hours. If it is not finished
-by then, the slot is released to the next annotator. A finished assignment
-keeps its slot for good. Ratings sent after the 48 hours are still stored, with
-`late = true`. "Finished" is worked out from the ratings: every one of the
-version's 20 Q&As has a rating.
-
-**Returning annotators.** The browser remembers its assignments. Typing the
-same name on the same device and browser resumes the same version, order and
-progress without a new claim. **On another device or browser the annotator is
-treated as new** and gets a fresh assignment. The two are never merged, and
-the abandoned one releases its slot after 48 hours. Ask annotators to use one
-device. The profile chosen at the first Continue is the one their ratings are
-filed under.
-
-## Source-video guidance
-
-The instruction immediately after Standalone is highlighted so annotators
-notice the next step: answer Standalone first, then watch the source video
-before rating Trustworthiness. The existing expandable video control says
-"Click to show the source video clip" (or "source video" when no clip is
-available), retains the timestamp, and changes to "Hide" when expanded.
-
-This visual update does not change the rating data or require a database
-migration. See `eval-v5-sql/README.md` for the matching SQL package guidance.
-
-If the database still uses the older single-role signup categories, run
-`eval-v5-sql/05_upgrade_v5_multi_role.sql` and then `02_verify_v5.sql` before
-deploying this UI. That database upgrade supports the current multi-role
-signup form and preserves existing assignments and ratings; the highlighting
-change itself remains a presentation-only change.
-
-## Separation from v1–v4
-
-v5 creates only new objects (`*_v5`), and none of them references or modifies
-a v1–v4 table, view, sequence, function, trigger or grant. Script 02 checks
-this, and the SQL test creates v5 next to a populated v4 study and confirms v4
-is unchanged. The browser only reads and writes `dqa:v5:*` keys, so it cannot
-pick up a v4 session saved in the same browser.
-
-v5 can therefore go into **the existing v4 Supabase project or a brand-new
-one**. For a new project, the only change on the site side is `config.js`:
-
-- `SUPABASE_URL` — the new project's URL
-- `SUPABASE_ANON_KEY` — the new project's anon (publishable) key
-
-Both are empty in the repository, which runs the page in local-only mode.
-
-## Files
-
-```text
-eval-v5-netlify/
-  index.html          static evaluation application
-  config.js           Supabase project, v5 table/function names, approach allowlist
-  qa_data.json        the 100 selected Q&As and their video links (generated)
-  versions.json       the 20 uids of each version (generated)
-  manifest.json       source commit, counts, provisional flag, SHA-256s (generated)
-  build_versions.py   builds the four generated files plus eval-v5-sql/04
-  _headers            Netlify cache, no-index and referrer headers
-```
-
-## Build the versions
-
-Write the agreed selection as JSON, five lists of 20 Qwen3-14B uids per batch
-(`<Dataset>_v<video>_SingleAgent-qwen3-14b-<v1|v2|v3|bad-v3>_q<n>`):
-
-```json
-{"versions": [["Master_v1_SingleAgent-qwen3-14b-v3_q2", "..."], [], [], [], []]}
-```
-
-Then, from the repository root:
+From the repository root:
 
 ```sh
-python3 eval-v5-netlify/build_versions.py --selection selection.json
+python3 eval-v5-netlify/build_versions.py --selection eval-v5-netlify/selection.json
 ```
 
-This rewrites `qa_data.json`, `versions.json`, `manifest.json` and
-`eval-v5-sql/04_load_version_pairs_v5.sql` together, plus one
-`04_load_version_pairs_v5_batch<N>.sql` per later batch. It refuses a
-selection that is not whole batches of 5 × 20 distinct Qwen3-14B pairs from
-this repo. The placeholder is rebuilt with `--provisional`.
+This writes `qa_data.json`, `transcripts.json`, `versions.json`, `manifest.json`, and the matching
+`eval-v5-sql/04_load_version_pairs_v5.sql` together. Expect a non-provisional
+manifest with 5 versions, 5 pairs per version, 25 total pairs and 23 videos.
 
-To add a batch, append five more lists to the same selection file and rebuild.
-Once a real selection has been built, the script refuses one that changes an
-existing version: versions are never changed after the first annotator has
-been assigned. Deploy the rebuilt site, then run the batch's SQL file.
+All 25 pairs use the widened ranges from the Qwen3.5-9B v3 and bad-v3
+files under `eval/widened_timestamps/`. The player and transcript panel use
+`t`/`te`, and the UI marks these ranges as approximate (`ts: widened`).
+The original times are recorded as `t_model`/`te_model`.
+Widening is not independent verification of answer content.
 
-## Test locally
+The builder supports earlier Qwen3-14B approaches and equal-sized groups up
+to 20 pairs for compatibility. Existing non-provisional group IDs/order cannot
+be changed. Later batches must preserve earlier groups and their size.
+`--provisional` remains available for separate testing folders; it cannot
+replace this folder's agreed selection.
+
+## Assignment and completion
+
+Annotators enter their name, every applicable role, optional role descriptions
+and dementia-care experience. Healthcare professionals and medical students
+count as medical; family/friend caregivers and others count as non-medical.
+Any medical role makes a multi-role profile medical. All roles and descriptions
+are retained with ratings.
+
+Supabase fills 3 medical and 2 non-medical base slots per group, then balances
+extra raters when that category is full across all loaded groups. Five people
+is a target, not a hard cutoff. The alert at 15 people in the newest batch
+reminds the team to prepare the next five groups; it does not load them.
+
+Each participant receives one group of five pairs in an order seeded by the
+assignment ID. The same browser/name resumes its assignment and order. Another
+browser/device can create a separate claim. An unfinished assignment holds a
+slot for 48 hours. Completion requires five distinct pair ratings; revisions
+do not count twice, and late ratings remain stored with a late flag.
+
+The browser writes only `dqa:v5:*` storage and does not touch v1-v4 data.
+Saved sessions containing a different selected set are not resumed here.
+
+## Video and rating behaviour
+
+Standalone comes before the video. The highlighted instruction then asks
+annotators to watch the source before rating Trustworthiness. The player shows
+the range; the full-video link starts there without an end limit. An unavailable
+source leaves Trustworthiness unscored while retaining the other ratings.
+The existing wording, label wrapping and rating payload formats are preserved.
+
+When a timestamped clip ends, the player prepares the same start/end range for
+another play instead of replaying from 0:00, using the player's own controls.
+The YouTube player API is loaded when the video is opened.
+
+The collapsible **Read the clip transcript** panel appears alongside the video,
+after Standalone. It shows all source-caption lines overlapping the clip's
+start/end range as continuous plain text, with the time range once in the
+heading. There are no per-line timestamps or full-video transcript option.
+Text comes from the selected video's
+canonical `Transcript/transcript-en.json`; only start, end and text are packaged
+in `transcripts.json`. Missing transcripts show a message without blocking the
+study. A missing or unbounded clip range never falls back to the whole video's
+text. Reviewers should still follow the existing video and Trustworthiness rules.
+
+`version_pairs_v5` stores group IDs and source metadata. `qa_data.json` holds
+only the selected questions/answers/video links. Submitted ratings retain the
+exact displayed wording and playback times for analysis.
+
+## Preview and deploy
 
 ```sh
 python3 -m http.server 8899 --bind 127.0.0.1 --directory eval-v5-netlify
 ```
 
-Open `http://127.0.0.1:8899`. With `config.js` empty the page runs in
-local-only mode: no quotas, version 1 (or `?version=3` and so on), ratings
-kept in the browser and exported at the end.
+Open `http://localhost:8899`. The source and ZIP are configured with the
+medicalqa-eval project's URL and public anon key, so signup and rating
+submission contact that project's v5 backend, including during local preview.
+For local-only testing, clear both Supabase values in a separate copy of
+`config.js`; `?version=2` through `?version=5` then select other groups.
+
+For deployment, use SQL 00 to inspect the database, 01 for a new schema or 05
+for an existing-v5 profile/routing upgrade, then 04 on an unused study and 02
+to verify. Confirm the Supabase project URL and anon key in the extracted config,
+upload to the v5 Netlify site, refresh open pages and smoke-test five ratings.
+The loader refuses existing pairs/assignments/ratings without deleting them.
+
+`eval-v5-netlify.zip` has this folder's files directly at the archive root.
+Include `transcripts.json` when uploading either hosting package. The transcript
+addition needs no Supabase migration or changes to existing assignments.
+`eval-v5-sql.zip` contains matching SQL and deployment instructions. These
+packages do not change Supabase or Netlify until applied/uploaded.
+
+## Validation
 
 ```sh
-node eval-v5-sql/tests/test_v5_ui.cjs    # landing page, claim, order, resume, payloads
-node eval-v5-sql/tests/test_v5_sql.cjs   # routing, permissions, separation (local PostgreSQL)
+python3 eval-v5-sql/tests/test_v5_selection.py
+node eval-v5-sql/tests/test_v5_ui.cjs
+node eval-v5-sql/tests/test_v5_sql.cjs
 ```
 
-## Deploy
-
-`eval-v5-netlify.zip` in the repository root packages this folder, with
-`index.html`, `config.js` and the data files directly at the archive root.
-Extract it to a folder before configuring and uploading it. The packaged
-Supabase settings are empty and the Q&A selection is provisional, just like
-the source folder; complete the steps below before collecting real ratings.
-The separate `eval-v5-sql.zip` contains the matching database scripts and
-documentation.
-
-1. Build the agreed selection (above) and check that `manifest.json` says
-   `"provisional": false`.
-2. In the Supabase SQL Editor, run `eval-v5-sql/01_create_v5.sql` once,
-   `eval-v5-sql/04_load_version_pairs_v5.sql` once, then
-   `eval-v5-sql/02_verify_v5.sql` (see `eval-v5-sql/README.md`).
-3. Fill in `SUPABASE_URL` and `SUPABASE_ANON_KEY` in `config.js`.
-4. Create a **new** Netlify site and upload `eval-v5-netlify/`, or use Git
-   deployment with publish directory `eval-v5-netlify` and no build command. Do
-   not overwrite the v4 site.
-5. Smoke test with one clearly named annotator, confirm the assignment and
-   rating rows, then delete them from the dashboard before launch.
-
-After deployment, verify:
-
-1. The heading says `Human Evaluation v5` and there is no provisional banner.
-2. Continue gets a version; the browser's network panel shows one
-   `rpc/claim_version_v5` call.
-3. A reload with the same name resumes without a second claim.
-4. A submitted row lands in `ratings_v5` with the right `assignment_id` and
-   `eval_version`.
-5. `select * from public.version_status_v5();` shows the test annotator.
+Run from the full repository. Tests use stubbed UI requests and a temporary
+PostgreSQL cluster; no test contacts the live study.

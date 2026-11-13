@@ -1,231 +1,137 @@
-# v5 evaluation SQL
+# MedicalQA v5 SQL: Phase 0 pilot
 
-**Deploying this release?** Follow the checklist in `../eval-v5-DEPLOY.md`
-(repository root): database, selection file, Netlify and smoke test in order.
+The current package loads 25 selected Qwen3.5-9B Q&As into five groups of five.
+Each group has 3 high-rated natural pairs, 1 low-rated natural pair and 1
+negative, matching `eval/topics/runs/review_set_qwen3.5-9b-25/`. Selection
+labels stay out of the participant UI. Follow `../eval-v5-DEPLOY.md` for the
+matching Netlify deployment.
 
-These scripts create, upgrade and inspect the database objects used by
-`eval-v5-netlify/`. Script 01 creates a new v5 schema; script 05 upgrades an
-existing v5 schema while preserving its data. Neither changes a v1–v4 object.
-They can run in the existing v4 Supabase project or in a brand-new one.
+Existing v5 tables are reused; no separate table is needed per group. Earlier
+v1-v4 objects remain isolated. Files and ZIPs do not update Supabase until
+run in its SQL Editor.
 
-## Upgrade an existing v5 database
+## New v5 database
 
-In the intended Supabase project's **SQL Editor**, run each entire file in order:
+Run these entire files in order:
 
-1. `00_check_v5_state.sql` — read-only detection of a new, old single-role,
-   multi-role without batches, current, or incomplete v5 schema.
-2. `05_upgrade_v5_multi_role.sql` — use this for an existing v5 schema. It is
-   safe to rerun on the current schema. For a **new** v5 schema, follow
-   "Initial database setup" below instead.
-3. `02_verify_v5.sql` — confirm the four role categories, the new claim RPC,
-   both profile columns on the tables and views, zero invalid profiles, and
-   the existing permissions and version-pair counts.
-4. Deploy the matching `eval-v5-netlify/` UI and have open evaluation pages
-   refresh. Existing browser assignments can resume; the old single-role
-   signup RPC has been removed.
+1. `00_check_v5_state.sql`: confirm this is a new v5 schema.
+2. `01_create_v5.sql`: create the schema once, with 5 pairs per group.
+3. `04_load_version_pairs_v5.sql`: configure and load the 25 IDs, once.
+4. `02_verify_v5.sql`: check counts, roles, permissions and isolation.
+5. `03_analysis_queries.sql`: optional read-only progress summaries.
 
-**Do not rerun 01 or 04 to upgrade an existing study.** Script 05 does not
-replace the selected Q&As or create new assignments. It upgrades categories,
-multi-role arrays, optional role descriptions, validation, rating triggers,
-the signup/routing function, reporting views, source-unavailable validation,
-and the standard browser permissions. It also adds batches of versions and the
-capacity alert (see "Routing"): version numbers above 5 become valid, the
-`capacity_alerts_v5` table and `batch_status_v5()` are created, and the
-medical quota moves from 4 to 3 per version the first time it runs (a later
-rerun keeps whatever `study_settings_v5` says). PostgREST's schema cache is
-refreshed.
+The loader and site data are generated together from the agreed selection:
 
-The migration runs in one transaction. Unknown categories, malformed profiles,
-missing objects or unexpected dependencies cause an error and roll back the
-upgrade. If the editor reports an aborted transaction, run `ROLLBACK;` before
-retrying after inspecting the error. Short lock and statement timeouts prevent
-the script from waiting indefinitely on active sessions.
+```sh
+python3 eval-v5-netlify/build_versions.py --selection eval-v5-netlify/selection.json
+```
 
-Existing ratings, raw revisions, names, assignments, version choices, quotas,
-lease/completion times and `is_medical` values are preserved. The old singular
-profile columns remain for audit; the new fields are populated as follows:
+The SQL stores each pair's group, position, UID, dataset, video and approach.
+The matching site holds exact Q&A text and source ranges. Rating rows retain
+the displayed question, answer and source times. The 20 natural pairs use the
+widened ranges; five negatives retain generated ranges.
 
-| Original role | New stored role | Existing routing |
-| --- | --- | --- |
-| `clinical` | `healthcare` | Preserved |
-| `care` | `healthcare` | Preserved as originally non-medical |
-| `student` | `student` | Preserved |
-| `family` | `family` | Preserved |
-| `other` | `other` | Preserved; its text moves into `annotator_role_details.other` as well |
+## Existing v5 database
 
-New signups follow the current UI: healthcare professionals and medical
-students count as medical; family/friend caregivers and others count as
-non-medical. Any medical role makes a multi-role signup medical. Historical
-care workers keep the classification used when their version was assigned.
-For analysis, `is_medical` is the routing classification; do not recompute it
-from migrated role labels for past assignments.
+1. Run 00. For an old single-role or multi-role schema without batches, run
+   `05_upgrade_v5_multi_role.sql` before loading the pilot. It is safe to rerun
+   on the current schema and preserves existing assignments and ratings.
+2. Inspect counts in `version_pairs_v5`, `assignments_v5` and `ratings_v5`.
+3. If all are zero, run 04. It atomically sets `pairs_per_version = 5` even
+   if yesterday's empty schema was configured for 20, then inserts 25 IDs.
+4. Run 02 and deploy the matching Netlify package.
 
-No live Supabase changes happen when these files are downloaded or pushed to
-GitHub. Apply them in SQL Editor to update that project.
+04 refuses to run when any pairs, assignments or ratings exist. It does not
+replace a running study or delete data. Review any earlier placeholder/test
+records before removing clearly identified test rows manually, ratings first.
+Preserve real participant data and plan a separate phase instead of replacing
+its groups. An aborted SQL transaction can be ended with `ROLLBACK;` before
+retrying after the cause is resolved.
 
-## Source-video instruction update (2026-10-26)
+05 runs in one transaction under the routing advisory lock. It upgrades role
+arrays/descriptions, rating validation, signup/routing, reporting views, batch
+support, source-unavailable handling and browser permissions. It adds the
+capacity alert and changes an old 4/2 quota to 3/2 on the first batch upgrade;
+later reruns preserve configured quotas. It does not choose or replace Q&As.
 
-The matching v5 UI highlights the instruction after Standalone, reminding
-annotators to watch the source video before rating Trustworthiness. The
-existing video control also has clearer wording and styling.
+Legacy role migration: clinical/care become healthcare; student, family and
+other retain their labels. Historical `is_medical` classifications remain as
+originally routed, including care workers previously treated as non-medical.
+For historical analysis use stored `is_medical`, not a recomputed role mapping.
 
-This is a presentation change and requires **no SQL migration**. The rating
-payload, tables, routing and existing responses are unchanged. For a database
-already using the current multi-role v5 schema, redeploy the updated Netlify
-package; do not rerun scripts 01 or 04 for this UI change.
+## Expected pilot configuration
 
-`eval-v5-sql.zip` in the repository root contains this SQL folder's files,
-including the updated guidance. `eval-v5-netlify.zip` contains the matching UI.
-The packaged selection is still provisional; use the existing launch steps
-below when preparing a new study.
+| Setting | Value |
+| --- | --- |
+| Groups per batch | 5 |
+| Pairs per group | 5 |
+| Selected pairs | 25, distinct across groups |
+| Medical base slots per group | 3 |
+| Non-medical base slots per group | 2 |
+| Assignment lease | 48 hours |
+| Capacity alert | 15 people holding slots in newest batch |
 
-## Initial database setup
+Roles remain healthcare/student (medical) and family/other (non-medical).
+Several roles can be selected; any medical role makes the signup medical.
+Role descriptions are optional and limited to 200 characters each.
 
-Run in the Supabase SQL Editor, in this order:
+The base target is 25 people across five groups: 15 medical and 10 non-medical.
+It is not a strict cutoff. When a category fills across loaded groups, extra
+raters go to the group with the fewest total held slots, lowest number on ties.
+Completed assignments retain their slot; unfinished expired assignments release
+it. Late ratings remain stored and marked late.
 
-1. `01_create_v5.sql` — one-time, non-destructive creation. It refuses to run
-   if any v5 object already exists and never drops anything.
-2. `04_load_version_pairs_v5.sql` — generated by
-   `eval-v5-netlify/build_versions.py`. Loads batch 1 (versions 1–5, 100
-   Q&As) into `version_pairs_v5`, once. It refuses to run if pairs are already loaded or
-   anyone has been assigned. **Do not load the provisional placeholder into the
-   live database**; the file says PROVISIONAL at the top when it is one.
-3. `02_verify_v5.sql` — read-only structure, permission and separation checks.
-4. `03_analysis_queries.sql` — read-only routing status, progress and summaries.
+Completion requires ratings for all five distinct Q&As in an assignment's
+group. Revisions do not count twice. The database decides membership, copies
+profile/group/source metadata into ratings and rejects a pair from another group.
 
-## Add the next batch of versions
-
-When the capacity alert fires (15 people in the latest batch), prepare five
-more versions of 20 Q&As, append them to the selection file and rebuild with
-`eval-v5-netlify/build_versions.py`. That writes
-`04_load_version_pairs_v5_batch<N>.sql` (batch 2 = versions 6–10, and so on).
-
-1. Deploy the rebuilt site first, so the browser knows the new versions
-   before anyone is routed to them.
-2. Run `04_load_version_pairs_v5_batch<N>.sql` once in the SQL Editor. It
-   refuses to run unless the earlier versions are loaded exactly as the site
-   has them and the new ones are not, so it never changes stored data.
-3. `select * from public.batch_status_v5();` shows the new batch.
-
-Set `acknowledged_at` on the alert row once someone is preparing the batch.
-
-## Objects
+## Objects and permissions
 
 | Object | Purpose |
 | --- | --- |
-| `study_settings_v5` | One row: 5 versions per batch, 20 Q&As each, 3 medical and 2 non-medical base slots per version, 48-hour lease, capacity alert at 15 people per batch (`alert_at_held`) |
-| `role_categories_v5` | Which roles count as medical: `healthcare`, `student` = medical; `family`, `other` = not. An annotator may tick several roles (`annotator_groups`, an array) and is medical when any of them is; optional descriptions per role are kept in `annotator_role_details` (JSON, checked by `role_details_ok_v5`) |
-| `version_pairs_v5` | The 20 Q&As of each version, loaded a batch of five versions at a time |
-| `assignments_v5` | One row per claim: name, profile, medical flag, version, `routed_by` (`base` or `balance`), claim time, lease end, completion time |
-| `ratings_v5` | Append-only ratings, the v4 columns plus `assignment_id`, `eval_version` and `late` |
-| `ratings_v5_final` | Latest row per assignment and Q&A |
-| `assignment_status_v5` | Each assignment with `status` (`completed`, `active`, `expired`) and `qnas_rated` |
-| `claim_version_v5(p_name text, p_groups text[], p_role_details jsonb, p_experience text)` | The routing function the browser calls; accepts all selected roles and optional descriptions |
-| `version_status_v5()` | Slots held per version, by category, as the routing sees them |
-| `capacity_alerts_v5` | One row per batch that reached 15 people holding a slot: the message says which versions to prepare next; `acknowledged_at` is for the team |
-| `batch_status_v5()` | Per batch of five versions: slots held out of the 25 base slots, and the alert if raised |
+| `study_settings_v5` | Group size, quotas, lease and alert threshold |
+| `role_categories_v5` | Role-to-medical mapping |
+| `version_pairs_v5` | Selected IDs and source metadata by group/position |
+| `assignments_v5` | Claim, profile, group, lease and completion |
+| `ratings_v5` | Append-only rating revisions |
+| `ratings_v5_final` | Latest rating per assignment and Q&A |
+| `assignment_status_v5` | Progress and completion status |
+| `claim_version_v5(...)` | Atomic group allocation |
+| `version_status_v5()` | Held medical/non-medical slots per group |
+| `capacity_alerts_v5` / `batch_status_v5()` | Batch-capacity reporting |
 
-## Routing
+The browser's `anon` role can execute the claim function and argument-only
+role validator, and insert ratings using the sequence. It cannot read the
+study tables/views, change assignments, or update/delete ratings. Rating
+triggers validate membership and retain the assignment's true profile. The
+read-only verification script checks grants, policies, triggers and separation
+from earlier study objects. The source instruction highlight and button label
+wrapping need no additional SQL migration.
 
-`claim_version_v5` takes a transaction advisory lock, so claims are decided one
-at a time even when many people press Continue at once. The test runs 36
-simultaneous claims and checks no base quota is exceeded. It counts every
-assignment that **holds a slot**: completed, or still inside its 48-hour lease.
+## Later batches
 
-Only loaded versions are used: 1–5 at first, 1–10 once batch 2 is loaded, and
-so on.
+Append five more same-sized groups to the selection and rebuild. Deploy the
+expanded site first, then run the generated `04_load_version_pairs_v5_batch2.sql`
+for groups 6-10. It checks group size and exact earlier membership, refuses
+already-loaded groups and preserves earlier assignments/ratings. Future batch
+alerts behave the same way. Existing assigned group contents/size stay frozen.
 
-1. A medical annotator gets the lowest-numbered version with fewer than 3
-   medical slots held; a non-medical annotator the lowest with fewer than 2
-   non-medical. A batch of five versions therefore takes 25 people (15 medical,
-   10 non-medical), and a slot released in an earlier batch is refilled first.
-2. If that category's base slots are all held in every loaded version, the
-   annotator is an extra rater in the version with the fewest slots held in
-   total, lowest number on a tie (5-5-5-5-5 → 6-5-5-5-5 …). Loading the next
-   batch opens new base slots, which come before extras again.
+## Tests and packages
 
-**Capacity alert.** After each claim, if 15 people (`alert_at_held`) hold a
-slot in the latest loaded batch, a row is added to `capacity_alerts_v5`, once
-per batch, saying which versions to prepare next (at 15 in versions 1–5:
-prepare 6–10). It is a dashboard flag: check the table in the Table Editor or
-run `select * from public.batch_status_v5();`.
-
-The medical flag is copied into the assignment at claim time. Editing
-`role_categories_v5` later changes only future routing. The lease and quotas
-are in `study_settings_v5`.
-
-## What the browser can do
-
-Supabase grants new tables and functions to `anon` by default, so script 01
-revokes everything first and grants back only:
-
-- `EXECUTE` on `claim_version_v5`
-- `EXECUTE` on `role_details_ok_v5`, the argument-only validator used by the
-  role-description constraint
-- `INSERT` on `ratings_v5`, plus the sequence for its id
-
-`anon` cannot read any v5 table, view or status function. Every rating insert
-passes through a trigger that:
-
-- rejects an unknown assignment, or a Q&A outside that assignment's version;
-- copies the annotator, profile, version and pair metadata from the database,
-  so the browser cannot file a rating under someone else;
-- sets `late` when the lease had already run out.
-
-A second trigger marks the assignment complete once all 20 of its Q&As have a
-rating.
-
-## Separation from v1–v4
-
-v5 has no foreign key, view, sequence, function, trigger or grant that
-references or modifies `ratings`, `ratings_v3`, `ratings_v4`,
-`ratings_v4_final` or any other earlier object. `02_verify_v5.sql` has two
-queries for this that must return no rows:
-
-- recorded dependencies from a v5 object to anything non-v5 in `public`;
-- v5 function bodies that name an earlier ratings table.
-
-The SQL test builds v5 beside a populated v4 study. It checks that v4's rows,
-grants, policies and triggers are unchanged, and that the dependency check does
-catch a deliberately leaking view.
-
-**New Supabase project.** Everything above works the same in a fresh project.
-Run 01, 04 and 02 there, then put the new project's URL and anon key into
-`eval-v5-netlify/config.js` (`SUPABASE_URL`, `SUPABASE_ANON_KEY`). Nothing
-else changes.
-
-## Tests
-
-With local PostgreSQL tools installed (`initdb`, `pg_ctl`, `psql`), this test
-creates and removes its own temporary cluster; it never connects to Supabase.
-Run it from the repository checkout (the SQL ZIP alone does not include the
-v4 and Netlify fixtures required by the tests):
+From the full repository (not an extracted SQL ZIP):
 
 ```sh
+python3 eval-v5-sql/tests/test_v5_selection.py
+node eval-v5-sql/tests/test_v5_ui.cjs
 node eval-v5-sql/tests/test_v5_sql.cjs
 ```
 
-It covers one-time setup and loading, the base fill 3/2, the one-at-a-time
-balance (5-5-5-5-5 → 6-5-5-5-5 → 6-6-5-5-5), batches (a generated batch 2
-loader, its guards, new base slots before extras, the alert once per batch at
-15 people), the medical-first order, lease
-expiry, completion and late ratings, 36 concurrent claims, the browser role's
-permissions, separation from v4, and scripts 02 and 03.
+Tests cover the agreed 3/1/1 mix, matching source text/ranges and hashes,
+UI assignment/resume/exports, five-rating completion, routing/concurrent
+claims, future batches, legacy upgrades, permission boundaries and v4 isolation.
+PostgreSQL uses an isolated temporary cluster, never Supabase.
 
-It also upgrades a populated copy of the original single-role v5 schema,
-checks every original field and dependent researcher view, tests old-session
-resumption and new multi-role signups, reruns the migration on old and current
-schemas, and verifies rollback when historical data fails validation.
-
-Offline UI checks: landing page, claim, seeded order, resume, payloads,
-storage namespace.
-
-```sh
-node eval-v5-sql/tests/test_v5_ui.cjs
-```
-
-## Smoke-test cleanup
-
-Before launch, delete smoke-test rows from the dashboard, ratings first:
-`ratings_v5` references `assignments_v5`. Do not add a broad delete to a
-reusable script.
+`eval-v5-sql.zip` contains this folder plus the deployment checklist.
+`eval-v5-netlify.zip` contains matching site files at its archive root.
+The Netlify package is configured for medicalqa-eval with its project URL and
+public anon key. Check that it points to the project where these SQL files ran.

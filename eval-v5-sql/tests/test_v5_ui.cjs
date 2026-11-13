@@ -42,6 +42,7 @@ const ctx = vm.createContext({window: {addEventListener() {}}, console: {...cons
   localStorage: {getItem: key => storage.get(key) ?? null, setItem: (key, value) => storage.set(key, value)},
   location: new URL('https://evaluation.example/'),
   input: JSON.parse(fs.readFileSync(path.join(folder, 'qa_data.json'), 'utf8')),
+  transcriptInput: JSON.parse(fs.readFileSync(path.join(folder, 'transcripts.json'), 'utf8')),
   versionsInput: JSON.parse(fs.readFileSync(path.join(folder, 'versions.json'), 'utf8')),
   fetch: fetchStub, setTimeout,
 });
@@ -51,20 +52,124 @@ const settle = () => new Promise(resolve => setTimeout(resolve, 0));
 run(fs.readFileSync(path.join(folder, 'config.js'), 'utf8'));
 run('window.EVAL_CONFIG.SUPABASE_URL = "https://stub.supabase.co/rest/v1/"; window.EVAL_CONFIG.SUPABASE_ANON_KEY = "public-anon";');
 run(script.slice(0, script.indexOf('const loadJson =')));
-run(`DATA = input.pairs.filter(p => !isExcluded(p.approach)); VIDEOS = input.videos;
+run(`DATA = input.pairs.filter(p => !isExcluded(p.approach)); VIDEOS = input.videos; TRANSCRIPTS = transcriptInput;
   VERSIONS = versionsInput.versions; PROVISIONAL = versionsInput.provisional === true; renderRate = () => {};`);
 const versions = ctx.versionsInput.versions;
-assert.equal(run('DATA.length'), 100, 'all 100 Qwen3-14B pairs pass the approach allowlist');
+assert.equal(run('DATA.length'), 25, 'all 25 selected Qwen3.5-9B pairs pass the approach allowlist');
 assert.equal(run('backendOn'), true);
+assert.equal(run('sourceVideo(DATA.find(p => p.ts === "widened")).widened'), true);
+assert.equal(run('sourceVideo(DATA.find(p => p.ts === "widened")).approx'), true);
+const widenedPair = ctx.input.pairs.find(p => p.ts === 'widened');
+const sourceClip = plain('sourceVideo(DATA.find(p => p.ts === "widened"))');
+assert.equal(new URL(sourceClip.embed).searchParams.get('start'), String(widenedPair.t));
+assert.equal(new URL(sourceClip.embed).searchParams.get('end'), String(widenedPair.te));
+assert.equal(new URL(sourceClip.embed).searchParams.get('enablejsapi'), '1');
+assert.deepEqual(sourceClip.playback, {videoId: new URL(sourceClip.embed).pathname.split('/').pop(),
+  startSeconds: widenedPair.t, endSeconds: widenedPair.te});
+const transcriptHtml = run('sourceTranscript(DATA[0])');
+assert.match(transcriptHtml, /Read the clip transcript/);
+assert.doesNotMatch(transcriptHtml, /full-transcript|[Ff]ull video transcript/);
+assert.match(transcriptHtml, /aria-label="Transcript for this clip"/);
+const panelHtml = run(`insertVideoPanel(['<div>STANDALONE</div>', '<div>TRUSTWORTHINESS</div>'],
+  [{key: 'qa_standalone'}, {key: 'qa_alignment'}], sourceVideo(DATA[0]), DATA[0])`);
+assert.ok(panelHtml.indexOf('STANDALONE') < panelHtml.indexOf('Read the clip transcript'));
+assert.ok(panelHtml.indexOf('Read the clip transcript') < panelHtml.indexOf('TRUSTWORTHINESS'));
+assert.doesNotMatch(panelHtml, /<details class="source-transcript" open/, 'transcript starts collapsed');
+assert.doesNotMatch(panelHtml, /source-video-replay|Replay clip from/, 'replay uses the native player controls');
+run(`TRANSCRIPTS.Test = {'1': [
+  {start: 0, end: 10, text: 'BEFORE_RANGE'},
+  {start: 9.6, end: 11, text: '<img src=x onerror=alert(1)>'},
+  {start: 10, end: 20, text: 'INSIDE_RANGE'},
+  {start: 20, end: 21, text: 'AFTER_RANGE'}
+]}; VIDEOS.Test = {'1': {url: 'https://www.youtube.com/watch?v=test'}};`);
+const bounded = run('sourceTranscript({dataset: "Test", video: 1, t: 10, te: 20})');
+const excerpt = bounded;
+assert.match(excerpt, /INSIDE_RANGE/);
+assert.doesNotMatch(excerpt, /BEFORE_RANGE|AFTER_RANGE/);
+assert.match(excerpt, /&lt;img src=x onerror=alert\(1\)&gt;/, 'source text is escaped');
+assert.doesNotMatch(bounded, /<img/);
+assert.match(bounded, /Transcript for this clip \(0:10–0:20\)/);
+assert.doesNotMatch(bounded, /<a\b|transcript-time|transcript-line|Open video at|full-transcript|[Ff]ull video transcript/);
+assert.match(bounded, /&lt;img src=x onerror=alert\(1\)&gt; INSIDE_RANGE<\/div>/, 'captions form continuous plain text');
+assert.match(run('sourceTranscript({dataset: "Test", video: 1, t: 80, te: 90})'), /No transcript text is available in this time range/);
+const untimed = run('sourceTranscript({dataset: "Test", video: 1})');
+assert.match(untimed, /no bounded start and end timestamps/);
+assert.doesNotMatch(untimed, /BEFORE_RANGE|INSIDE_RANGE|AFTER_RANGE|[Ff]ull video transcript/);
+assert.match(run('sourceTranscript({dataset: "Missing", video: 1, t: 10, te: 20})'), /transcript is currently unavailable/);
+assert.match(run(`insertVideoPanel([], [], null, {dataset: 'Test', video: 1})`), /Read the clip transcript/,
+  'transcript still renders without a video link');
+for (const pair of ctx.input.pairs) {
+  ctx.checkedPair = pair;
+  const rendered = run('sourceTranscript(checkedPair)');
+  const expected = ctx.transcriptInput[pair.dataset][String(pair.video)]
+    .filter(s => s.text.trim() && s.end > pair.t && s.start < pair.te);
+  ctx.expectedClipText = expected.map(s => s.text.trim()).join(' ');
+  assert.ok(rendered.includes(run('escapeAttr(expectedClipText)')),
+    'all clip captions appear as continuous plain text: ' + pair.uid);
+  assert.doesNotMatch(rendered, /<a\b|transcript-time|full-transcript|[Ff]ull video transcript/);
+}
+assert.equal(run('matchesAssignment({evalVersion: 1, uids: ["old-placeholder-pair"], metrics: fixedStudyOptions().metrics})'), false,
+  'an old placeholder session cannot resume against this pilot selection');
 
 // A v4 session already in this browser is never read or touched.
 storage.set('dqa:v4:jane-doe:1uklxn', '{"version":7,"uids":["x"]}');
 storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
 
 (async () => {
+  // A clip ending must prepare the same timestamp range for the next play.
+  // These are documented YouTube API events and commands; no live video or network.
+  const players = [];
+  ctx.window.YT = {Player: function(frame, options) {
+    const player = {frame, events: options.events, cues: [], loads: [], destroyed: false, time: 0,
+      cueVideoById(clip) { this.cues.push(JSON.parse(JSON.stringify(clip))); },
+      loadVideoById(clip) { this.loads.push(JSON.parse(JSON.stringify(clip))); },
+      getCurrentTime() { return this.time; }, destroy() { this.destroyed = true; }};
+    players.push(player); return player;
+  }};
+  const installControls = () => {
+    const frame = {...element(), isConnected: true, src: sourceClip.embed};
+    const panel = {...element(), open: false};
+    elements.set('source-video-player', frame);
+    elements.set('source-video-panel', panel);
+    return {frame, panel};
+  };
+  const controls = installControls();
+  run('bindSourcePlayback(sourceVideo(DATA.find(p => p.ts === "widened")))');
+  assert.equal(players.length, 0, 'API initialization waits until the video is opened');
+  controls.panel.open = true; controls.panel.handlers.toggle();
+  await settle();
+  const player = players[0];
+  player.events.onStateChange({data: 0, target: player});
+  assert.deepEqual(player.cues, [sourceClip.playback]);
+  assert.deepEqual(player.loads, [], 'finishing a clip does not auto-play it again');
+  player.events.onStateChange({data: 0, target: player});
+  assert.equal(player.cues.length, 1, 'repeated end events do not repeatedly reset the player');
+  player.events.onStateChange({data: 1, target: player}); // YouTube Replay starts at zero.
+  assert.deepEqual(player.loads, [sourceClip.playback], 'native replay corrects a restart at 0:00');
+  player.time = sourceClip.playback.startSeconds;
+  player.events.onStateChange({data: 0, target: player});
+  player.events.onStateChange({data: 1, target: player});
+  assert.equal(player.loads.length, 1, 'a correctly cued replay needs no extra restart');
+  run('releaseSourcePlayer()');
+  assert.equal(player.destroyed, true);
+  player.events.onStateChange({data: 0, target: player});
+  assert.equal(player.cues.length, 2, 'old player events are ignored after leaving a Q&A');
+
+  const pending = installControls();
+  run('bindSourcePlayback(sourceVideo(DATA.find(p => p.ts === "widened")))');
+  pending.panel.open = true; pending.panel.handlers.toggle();
+  run('releaseSourcePlayer()');
+  await settle();
+  assert.equal(players.length, 1, 'a late API load cannot attach to a previous Q&A');
+  const weakClip = plain('sourceVideo({...DATA[0], ts: "aligned-low"})');
+  assert.equal('endSeconds' in weakClip.playback, false, 'open-ended clips remain open-ended');
+  assert.doesNotMatch(run('insertVideoPanel([], [], sourceVideo({...DATA[0], t: undefined, te: undefined}))'),
+    /source-video-replay/, 'untimed full videos keep normal controls');
+  console.log('PASS: native clip replay starts at the recorded timestamp, preserves its end, re-cues without auto-play, corrects 0:00 replay, ignores stale callbacks and adds no extra button.');
+
   run('renderWelcome()');
-  assert.match(welcomeHtml, /Provisional Q&amp;A selection|Provisional Q&A selection/, 'the placeholder selection is flagged on screen');
-  assert.match(welcomeHtml, /You will receive <b>20 Q&As<\/b>/);
+  assert.doesNotMatch(welcomeHtml, /Provisional Q&amp;A selection|Provisional Q&A selection/, 'the selected pilot has no placeholder banner');
+  assert.match(welcomeHtml, /You will receive <b>5 Q&As<\/b>/);
   assert.match(welcomeHtml, />Continue</);
   assert.equal(elements.get('name').value, '', 'the v4 name is not prefilled');
   assert.ok(welcomeHtml.indexOf('id="name"') < welcomeHtml.indexOf('id="role-healthcare"'));
@@ -93,11 +198,11 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
     p_role_details: {family: 'Caring for my mother'}, p_experience: 'one_to_three_years'},
     'both ticked roles in the listed order; descriptions only for ticked roles, trimmed, blanks left out');
 
-  // The claimed version's 20 Q&As, in an order seeded by the assignment id.
+  // The claimed group's five Q&As, in an order seeded by the assignment id.
   const first = plain('S');
   assert.equal(first.evalVersion, 3);
   assert.equal(first.assignmentId, claims.length && '00000001-aaaa-bbbb-cccc-dddddddddddd');
-  assert.equal(first.uids.length, 20);
+  assert.equal(first.uids.length, 5);
   assert.deepEqual(first.uids.slice().sort(), versions['3'].slice().sort());
   assert.notDeepEqual(first.uids, versions['3'], 'the order is shuffled');
   assert.deepEqual(plain(`versionUids(3, "${first.assignmentId}")`), first.uids, 'the shuffle is deterministic');
@@ -135,7 +240,7 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   // Reload: the same name resumes the same assignment without a new claim.
   run('S = null; renderWelcome()');
   assert.equal(elements.get('name').value, 'Jane Doe');
-  assert.match(elements.get('resume-note').innerHTML, /Welcome back — 1 of 20/);
+  assert.match(elements.get('resume-note').innerHTML, /Welcome back — 1 of 5/);
   assert.equal(elements.get('role-healthcare').checked, true, 'the saved roles are ticked again');
   assert.equal(elements.get('role-family').checked, true);
   assert.equal(elements.get('role-student').checked, false);
@@ -150,7 +255,7 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   // A different person in the same browser gets their own claim and order.
   run('S = null; renderWelcome()');
   elements.get('name').value = 'Sam Lee'; elements.get('name').handlers.input();
-  assert.match(elements.get('resume-note').innerHTML, /New session: 20 pairs/);
+  assert.match(elements.get('resume-note').innerHTML, /New session: 5 pairs/);
   elements.get('role-other').checked = true; elements.get('role-other').handlers.change();
   assert.equal(elements.get('role-detail-field-other').hidden, false, 'ticking Others shows its box');
   elements.get('dementia-experience').value = 'none';
@@ -189,5 +294,16 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
     {groups: ['healthcare'], details: {}, experience: 'none'});
   assert.deepEqual(plain('normalizeAnnotatorProfile({group: "other", other: "Volunteer", experience: "none"})'),
     {groups: ['other'], details: {other: 'Volunteer'}, experience: 'none'});
+  // A missing transcript asset must not block the study's Q&As or signup.
+  ctx.fetch = async file => {
+    if (file === 'transcripts.json') throw new Error('missing optional transcript asset');
+    return {ok: true, json: async () => file === 'qa_data.json' ? ctx.input : ctx.versionsInput};
+  };
+  run('renderWelcome = () => { app.innerHTML = "STUDY_LOADED"; };');
+  run(script.slice(script.indexOf('const loadJson =')));
+  await settle(); await settle();
+  assert.equal(welcomeHtml, 'STUDY_LOADED');
+  assert.deepEqual(plain('TRANSCRIPTS'), {});
+  console.log('PASS: plain-text clip transcript, one time range in the heading, all overlapping captions, no per-line links, escaped source text, Standalone-first placement, missing transcript/range fallbacks, non-blocking transcript load.');
   console.log('PASS: v5 landing page validation, role checkboxes (four roles, several at once, optional description per role, legacy single role), one claim per new annotator (double click safe), claimed version with seeded order, rating payload with assignment/version/profile, CSV/JSON exports, resume without re-claiming, second annotator in the same browser, failed-claim retry, dqa:v5:* storage only, v4 storage untouched.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

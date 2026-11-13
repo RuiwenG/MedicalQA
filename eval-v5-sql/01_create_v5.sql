@@ -1,6 +1,6 @@
 -- One-time, non-destructive setup for the MedicalQA human evaluation v5 site.
 --
--- v5 hands each annotator one fixed version of 20 Q&As. Versions are loaded in
+-- The Phase 0 pilot hands each annotator one fixed version of 5 Q&As. Versions are loaded in
 -- batches of five (1-5 first, then 6-10, ...). Which version is decided here, in the database, by claim_version_v5(): the browser cannot
 -- see how many people already hold each version, and two people arriving at the
 -- same moment must not both take the last slot.
@@ -56,7 +56,7 @@ create table public.study_settings_v5 (
     -- Versions per batch: versions are loaded and alerted on five at a time.
     n_versions         integer     not null default 5
         constraint study_settings_v5_versions_ck check (n_versions = 5),
-    pairs_per_version  integer     not null default 20
+    pairs_per_version  integer     not null default 5
         constraint study_settings_v5_pairs_ck check (pairs_per_version > 0),
     base_medical       integer     not null default 3
         constraint study_settings_v5_base_medical_ck check (base_medical >= 0),
@@ -101,7 +101,7 @@ as $$
        )
 $$;
 
--- The 20 Q&As of each version, loaded a batch of five versions at a time by
+-- The selected Q&As of each version, loaded a batch of five versions at a time by
 -- the 04 scripts. Loaded versions are never changed.
 create table public.version_pairs_v5 (
     eval_version integer not null

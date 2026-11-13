@@ -1,21 +1,24 @@
 {
   "study_version": "v5",
   "ratings_table": "ratings_v5",
-  "provisional": true,
-  "source_commit": "b562dc0d5df3cca1e92e83484df5814807ffa31b",
-  "generator": "Qwen3-14B (SingleAgent-qwen3-14b-v1/v2/v3, bad-v3)",
+  "provisional": false,
+  "source_commit": "70ef63080e575e2a907952aae1c66902a784e786",
+  "generator": "Qwen3.5-9B",
   "n_versions": 5,
   "batches": 1,
-  "pairs_per_version": 20,
-  "total_pairs": 100,
-  "videos": 25,
+  "pairs_per_version": 5,
+  "total_pairs": 25,
+  "videos": 23,
   "pairs_by_prompt_version": {
-    "SingleAgent-qwen3-14b-v1": 34,
-    "SingleAgent-qwen3-14b-v2": 33,
-    "SingleAgent-qwen3-14b-v3": 33
+    "SingleAgent-qwen3.5-9b-bad-v3": 5,
+    "SingleAgent-qwen3.5-9b-v3": 20
   },
-  "pairs_with_timestamp": 100,
-  "qa_data_sha256": "afc1c36d6e4ec7ce3435e53605eccda0f50c2873ad63484745e1fc50ba181f7f",
-  "versions_sha256": "c14e9cb8c659c63b03b542dddf92a59d92730b40296ab56ae3b041614c987af1",
-  "notes": "PROVISIONAL placeholder selection for testing; replace before launch."
+  "pairs_with_timestamp": 25,
+  "pairs_with_widened_timestamp": 25,
+  "selection_source": "eval/topics/runs/review_set_qwen3.5-9b-25",
+  "selection_sha256": "b91de889204f5f132b5b544e46cf0d18e9e969245daa4781bc1300863b253159",
+  "qa_data_sha256": "b2624f8a15e4e70a190397e325b3ceef01c1a723e55bf605497facae6aae9030",
+  "transcripts_sha256": "449af1db3b10be5b6171227c142fb4cf0f93de804ff15a827b174868755d62c4",
+  "versions_sha256": "8f112fb6c131c9e9a77d20ffc6eab7af4f684c3a778a9acc688178cff42d29bd",
+  "notes": "Agreed v5 selection."
 }

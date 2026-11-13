@@ -1,140 +1,134 @@
-# v5 deployment steps (Supabase + Netlify)
+# v5 Phase 0 deployment: 25 Q&As in five groups
 
-Everything needed is in this repository. This file is the checklist for
-putting the current v5 release live. The details behind each step are in
-`eval-v5-sql/README.md` and `eval-v5-netlify/README.md`.
+This release contains the agreed Qwen3.5-9B pilot selection: five different
+groups of five Q&As. Each group has three high-rated natural outputs, one
+low-rated natural output and one deliberately negative output. These are
+selection labels, not human-verified quality labels. The participant UI hides
+them and preserves all generated wording.
 
-## What this release changes
+The group IDs match `eval/topics/runs/review_set_qwen3.5-9b-25/` and the
+27 October researcher PDF. Both regular and negative pairs use the widened
+source ranges in the v5 site. Each participant's order is
+shuffled using the assignment ID and remains stable on resume.
 
-1. **Group assignment.** Groups (versions) come in batches of five. Each group
-   takes 3 medical and 2 non-medical annotators (was 4/2), so 25 people fill
-   groups 1–5. After that, newcomers are extra raters in groups 1–5 (fewest
-   annotators first) until groups 6–10 are loaded, which then fill first.
-2. **Capacity alert.** When 15 people hold a slot in the newest batch, a row
-   appears in the new table `capacity_alerts_v5` ("prepare the Q&As for
-   versions 6-10"). It repeats for every batch.
-3. **Bad pairs allowed.** `SingleAgent-qwen3-14b-bad-v3` pairs can be part of
-   the selection. The UI no longer shows the system name anywhere (rating
-   screen or end screen), so annotators cannot tell which pairs are bad.
-4. **Q&As come from one selection file**, `eval-v5-netlify/selection.json`
-   (added later by the team; see step 2).
+## 1. Check the database
 
-## 1. Database: check the current state
+Run `eval-v5-sql/00_check_v5_state.sql` in the intended Supabase SQL Editor.
 
-In the Supabase project's **SQL Editor**, run the whole of
-`eval-v5-sql/00_check_v5_state.sql`. It is read-only. The `next_step` column
-says which path applies:
-
-| `next_step` starts with | Do |
+| State | Next step |
 | --- | --- |
-| `NEW V5` | Run `eval-v5-sql/01_create_v5.sql`, then go to step 2. |
-| `MULTI-ROLE V5 WITHOUT BATCHES` or `OLD SINGLE-ROLE V5` | Run `eval-v5-sql/05_upgrade_v5_multi_role.sql`, then go to step 2. |
-| `MULTI-ROLE V5` | 05 has already been run with this release; rerunning it is safe. Go to step 2. |
-| `INCOMPLETE` / `UNRECOGNIZED` | Stop and check with the team. |
+| New v5 | Run `01_create_v5.sql` once. |
+| Old single-role or multi-role v5 without batches | Run `05_upgrade_v5_multi_role.sql`, which preserves existing records. |
+| Current multi-role v5 | Continue with the counts below. |
+| Incomplete/unrecognized | Inspect the reported missing objects first. |
 
-Do not run 01 on a database that already has v5. Script 05 keeps all existing
-assignments and ratings. The first time it runs, it changes the medical quota
-from 4 to 3 per group.
-
-Then check whether Q&As are already loaded:
+Check whether a selection or participants already exist:
 
 ```sql
 select (select count(*) from public.version_pairs_v5) as pairs_loaded,
-       (select count(*) from public.assignments_v5)   as assignments,
-       (select count(*) from public.ratings_v5)       as ratings;
+       (select count(*) from public.assignments_v5) as assignments,
+       (select count(*) from public.ratings_v5) as ratings;
 ```
 
-The loader in step 3 only runs on an empty `version_pairs_v5` with no
-assignments. If the provisional placeholder pairs were loaded earlier and the
-only assignments are smoke tests, delete those rows from the Table Editor
-first, in this order: `ratings_v5`, `assignments_v5`, `version_pairs_v5` (and
-`capacity_alerts_v5`, if it has any rows). **If any assignment belongs to a
-real annotator, do not delete anything; ask the team first.**
+Loader 04 requires all three counts to be zero and never deletes data. If an
+old placeholder was loaded, review its records first. Only clearly identified
+test records should be removed manually: ratings, assignments, version pairs,
+then capacity alerts. Preserve real participant records and plan a separate
+study/phase rather than replacing their groups.
 
-## 2. Build the site files from the selection file
+## 2. Rebuild the matching site and SQL
 
-Put the agreed selection at `eval-v5-netlify/selection.json`: five lists of 20
-pair ids per batch, groups 1–5 first.
-
-```json
-{"versions": [
-  ["ODJ_v24_SingleAgent-qwen3-14b-bad-v3_q1", "Master_v1_SingleAgent-qwen3-14b-v3_q2", "... 20 ids"],
-  ["... group 2"], ["... group 3"], ["... group 4"], ["... group 5"]
-]}
-```
-
-Ids have the form `<Dataset>_v<video>_SingleAgent-qwen3-14b-<v1|v2|v3|bad-v3>_q<n>`.
-From the repository root:
+The agreed IDs are already in `eval-v5-netlify/selection.json`. From the repo:
 
 ```sh
 python3 eval-v5-netlify/build_versions.py --selection eval-v5-netlify/selection.json
 ```
 
-This rewrites, together:
+The manifest must show `provisional: false`, `n_versions: 5`,
+`pairs_per_version: 5`, `total_pairs: 25`, and
+`pairs_with_widened_timestamp: 25`. It records the source commit, selection
+source and file hashes. Existing non-provisional group IDs/order are frozen.
 
-- `eval-v5-netlify/qa_data.json`, `versions.json`, `manifest.json` (the site)
-- `eval-v5-sql/04_load_version_pairs_v5.sql` (the matching database loader)
+## 3. Load and verify the pilot
 
-It stops with an error if a group does not have exactly 20 distinct ids, or if
-an id is not a pair in this repository. Check that `eval-v5-netlify/manifest.json`
-says `"provisional": false` and that the comment at the top of the 04 file
-does not say PROVISIONAL. Commit the rebuilt files so the site and database stay
-traceable to one commit.
+Run the entire `eval-v5-sql/04_load_version_pairs_v5.sql` once. On an unused
+v5 schema, it sets `pairs_per_version = 5` and inserts 25 group-membership
+records in one transaction. An empty database with the previous value of 20
+is configured automatically. Existing pairs, assignments or ratings cause an
+error and roll back without changes.
 
-## 3. Database: load the Q&As and verify
+Then run `02_verify_v5.sql`. Expect:
 
-In the SQL Editor:
+- Groups 1-5, each with five pairs and five distinct videos.
+- 20 normal Qwen3.5-9B v3 pairs and 5 negative-v3 pairs.
+- Five groups per batch; five pairs per group; 3 medical and 2 non-medical
+  base slots per group; a 48-hour lease; capacity alert at 15 people.
+- Zero malformed groups and no dependencies on earlier study objects.
 
-1. Run `eval-v5-sql/04_load_version_pairs_v5.sql` once. The last result shows
-   batch 1 (versions 1-5) with 0 held of 25 slots.
-2. Run `eval-v5-sql/02_verify_v5.sql` and compare each result with the
-   `Expected:` comment above it. In particular: settings show 5 / 20 / 3 / 2 /
-   48 h / 15; versions 1–5 have 20 Q&As each; `insert` and `claim` are `t` and
-   every other privilege is `f`; both separation queries return no rows.
+`version_pairs_v5` stores membership and source identifiers. The matching
+`qa_data.json` contains questions, answers and playback ranges. Each rating
+also retains its displayed text and source times. No separate table is
+needed for each group.
 
-## 4. Netlify
+## 4. Configure and deploy Netlify
 
-1. In `eval-v5-netlify/config.js`, fill in `SUPABASE_URL` (the project URL, no
-   `/rest/v1`) and `SUPABASE_ANON_KEY` (the anon / publishable key). Leave
-   everything else as it is. The approach allowlist already includes the bad
-   pairs.
-2. Deploy the `eval-v5-netlify/` folder to the v5 Netlify site (drag and drop
-   the folder, or Git deployment with publish directory `eval-v5-netlify` and
-   no build command). Do not overwrite the v4 site.
+1. Extract `eval-v5-netlify.zip` or use the source folder. The ZIP has the
+   site files directly at its root.
+2. Check `SUPABASE_URL` and `SUPABASE_ANON_KEY` in that folder's `config.js`.
+   The source and ZIP are configured for the medicalqa-eval project with its
+   public anon key. Change these values only when targeting another project.
+3. Upload the folder to the existing v5 Netlify site, then refresh open pages.
+   Keep v1-v4 sites separate.
+
+The package includes `transcripts.json` for all 23 selected videos. After
+Standalone, reviewers can open **Read the clip transcript** beside the video
+and read only the source-caption lines overlapping that clip's time range,
+joined as plain text. The time range appears once in the heading, with no
+per-line timestamps or full-video transcript option.
+Deploy the complete package so this asset is included. This transcript-only
+UI update does not require running SQL again or changing existing assignments.
+
+Without Supabase configuration, the page runs in local-only testing mode;
+ratings are not collected centrally and server quotas do not apply.
 
 ## 5. Smoke test
 
-1. Open the site: the heading says `Human Evaluation v5` and there is **no**
-   provisional banner.
-2. Sign up as a clearly named test annotator (for example `TEST delete me`),
-   rate one Q&A. The browser's network panel shows one `rpc/claim_version_v5`
-   call. Reloading with the same name resumes without a second claim.
-3. In SQL Editor: `select * from public.version_status_v5();` shows the test
-   annotator, and the rating is in `ratings_v5` with the right
-   `assignment_id` and `eval_version`.
-4. Delete the test rows from the Table Editor (`ratings_v5` first, then
-   `assignments_v5`) before sharing the link.
+1. Use a clearly named test annotator. The page should promise five Q&As,
+   with no provisional-selection banner.
+2. Check one `rpc/claim_version_v5` request. Reload: the same assignment,
+   five IDs, order and progress should resume without a second claim.
+3. Check a widened clip against `qa_data.json`. The range is marked
+   approximate, and the full-video link permits more context.
+   Open the clip transcript and verify the same range in its heading.
+   Confirm only the clip's captions appear as plain text, without per-line
+   timestamps or a full-video option.
+   Let the clip finish and play it again: it should restart at the displayed
+   starting time using the player's own controls.
+4. Submit five distinct ratings. Completion occurs after the fifth; revising
+   one rating does not count as another item.
+5. Inspect `version_status_v5()` and `assignment_status_v5`, then remove only
+   the smoke-test records, ratings first.
 
-## While the study runs
+## Routing and later phases
 
-- **Watch for the alert:** check the `capacity_alerts_v5` table in the Table
-  Editor, or run `select * from public.batch_status_v5();`. When an alert row
-  appears, tell the team so they can prepare the next five groups, and fill in
-  the row's `acknowledged_at`.
-- Progress and routing queries are in `eval-v5-sql/03_analysis_queries.sql`
-  (all read-only).
+The base target is 3 medical and 2 non-medical participants per group. Once a
+category fills across loaded groups, extra raters are balanced by total group
+size. This is a target, not a hard cutoff. At 15 people in the newest batch,
+`capacity_alerts_v5` raises the reminder to prepare groups 6-10; it does not
+create those groups.
 
-## Adding groups 6–10 (and later batches)
+Later batches can append five more groups of the same size. Deploy the
+rebuilt site before loading a new batch. Changing already assigned groups or
+their size requires a separate phase plan.
 
-1. The team appends five more lists of 20 ids to the same
-   `eval-v5-netlify/selection.json` (groups 1–5 stay exactly as they are).
-2. Rebuild with the same command as in step 2. It also writes
-   `eval-v5-sql/04_load_version_pairs_v5_batch2.sql`, and refuses a selection
-   that changes groups 1–5.
-3. **Deploy the rebuilt site first** (step 4.2, same `config.js` values), so
-   the browser knows groups 6–10 before anyone is routed to them.
-4. Then run `04_load_version_pairs_v5_batch2.sql` once in SQL Editor. It
-   refuses to run if groups 1–5 in the database differ from the site's or
-   batch 2 is already loaded. The last result shows both batches.
+## Local checks
 
-Batch 3 (groups 11–15) works the same way with `..._batch3.sql`.
+```sh
+python3 eval-v5-sql/tests/test_v5_selection.py
+node eval-v5-sql/tests/test_v5_ui.cjs
+node eval-v5-sql/tests/test_v5_sql.cjs
+```
+
+Run from the full repository. PostgreSQL tests use a temporary cluster;
+UI tests stub Supabase. Neither contacts the live study. Rebuilding files or
+creating the ZIPs does not apply SQL, deploy Netlify or push to GitHub.

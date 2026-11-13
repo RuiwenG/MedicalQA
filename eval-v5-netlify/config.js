@@ -5,9 +5,8 @@
 // claim_version_v5 and append to ratings_v5 (see
 // ../eval-v5-sql/01_create_v5.sql). It cannot read, edit, or delete anything.
 //
-// They are left empty in the repository. Fill them in for the Supabase project
-// that holds the v5 objects — the existing v4 project or a brand-new one; v5
-// shares nothing with v1-v4, so either works.
+// Configured for the medicalqa-eval Supabase project that holds this pilot's
+// v5 objects. The key below is the public anon key, not a service-role key.
 //
 // Left empty, the page runs in local-only mode for testing: no quotas, version
 // 1 (or ?version=N), ratings kept in the browser and exported at the end.
@@ -15,10 +14,10 @@
 window.EVAL_CONFIG = {
   // Project settings -> Data API -> Project URL  (https://xxxx.supabase.co)
   // Just the project origin — no /rest/v1 suffix, the app adds that itself.
-  SUPABASE_URL: "",
+  SUPABASE_URL: "https://mnmjmxcjhyiawrdxojif.supabase.co",
 
   // Project settings -> API keys -> anon / public
-  SUPABASE_ANON_KEY: "",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1ubWpteGNqaHlpYXdyZHhvamlmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU4MjA2MjAsImV4cCI6MjEwMTM5NjYyMH0.kALj7MImQktgmj4-REikm4GGe-49GGQcK_CRFWgzIWU",
 
   // v5 is isolated from every earlier study: its own table, routing function
   // and browser-storage namespace (dqa:v5:*). Do not point it at ratings_v4.
@@ -34,5 +33,7 @@ window.EVAL_CONFIG = {
     "SingleAgent-qwen3-14b-v2",
     "SingleAgent-qwen3-14b-v3",
     "SingleAgent-qwen3-14b-bad-v3",
+    "SingleAgent-qwen3.5-9b-v3",
+    "SingleAgent-qwen3.5-9b-bad-v3",
   ],
 };
