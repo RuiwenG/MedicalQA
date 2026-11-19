@@ -1,0 +1,67 @@
+# Deploys the v5 human-rating site (eval-v5-netlify/) to the existing
+# Netlify project "medicalqa-eval". Runs only when started by hand:
+# GitHub -> Actions -> "Deploy rating site" -> Run workflow.
+#
+# Needs two repository secrets (Settings -> Secrets and variables -> Actions):
+#   NETLIFY_AUTH_TOKEN  a Netlify personal access token
+#   NETLIFY_SITE_ID     the medicalqa-eval project's ID (Project configuration -> General)
+#
+# "preview" makes a draft deploy with its own link and leaves the live site alone.
+# "production" replaces what annotators see.
+
+name: Deploy rating site
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Where to deploy"
+        type: choice
+        options: [preview, production]
+        default: preview
+
+concurrency:
+  group: deploy-eval-v5
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run the UI tests
+        run: node eval-v5-sql/tests/test_v5_ui.cjs
+
+      # Publish only the files the page loads; leave out the build script,
+      # README and selection notes.
+      - name: Stage site files
+        run: |
+          mkdir -p _site
+          rsync -a eval-v5-netlify/ _site/ \
+            --exclude '__pycache__' --exclude '*.py' \
+            --exclude 'README.md' --exclude 'selection.json'
+          ls -la _site
+
+      # Deploy from inside _site so the repo-root netlify.toml (old eval/web
+      # site) is not picked up; headers come from _site/_headers.
+      - name: Deploy to Netlify
+        working-directory: _site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::Add NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID as repository secrets first."
+            exit 1
+          fi
+          FLAGS="--dir . --message \"${GITHUB_SHA::7} by ${GITHUB_ACTOR}\""
+          if [ "${{ inputs.target }}" = "production" ]; then FLAGS="$FLAGS --prod"; fi
+          eval npx --yes netlify-cli@17 deploy $FLAGS

@@ -586,6 +586,10 @@ def main():
                     help="DeepSeek and Mac Studio only: thinking effort (DeepSeek's default is "
                          "high; GLM on oMLX thinks 3-5k tokens by default, ~250 at low). "
                          "Put it in --tag too, so runs at different levels stay apart")
+    ap.add_argument("--keep-order", action="store_true",
+                    help="Send pairs one by one in the --qa-data file's order, even on a backend "
+                         "that caches prompts (which otherwise groups pairs by video). For "
+                         "experiments where the order pairs reach the judge is part of the design")
     ap.add_argument(
         "--approaches",
         nargs="+",
@@ -692,7 +696,7 @@ def main():
     # Without one (OpenRouter), that grouping buys nothing and costs throughput
     # twice over: parallelism is capped at the number of videos, and the tail of a
     # run starves as groups finish, dropping to a handful of active workers.
-    caches = backend_for(args.model).get("caches_prompts", False)
+    caches = backend_for(args.model).get("caches_prompts", False) and not args.keep_order
     unit = "videos" if caches else "pairs"
     print(f"Judging {len(pairs)} pairs across {len(by_video)} videos "
           f"with {args.model} ({args.mode}) — scheduling by {unit}")

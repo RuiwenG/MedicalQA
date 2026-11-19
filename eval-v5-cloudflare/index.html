@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<title>Dementia Q&A — Human Evaluation v5</title>
+<title>Rate Dementia Care Q&As</title>
 <style>
   :root {
     color-scheme: light;
     --navy: #1e3a5f;
     --navy-2: #2c4d7a;
     --ink: #1a1f2e;
-    --muted: #5a6478;
+    --muted: #4d5668;
+    --text-2: #3b4455;
     --line: #e3e7ee;
     --bg: #f7f8fb;
   }
@@ -22,7 +23,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
     color: var(--ink);
     background: var(--bg);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.55;
   }
   .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
@@ -35,7 +36,8 @@
     margin-bottom: 16px;
   }
   header h1 { margin: 0 0 4px 0; font-size: 18px; font-weight: 600; letter-spacing: 0.2px; }
-  header .sub { font-size: 13px; opacity: 0.85; }
+  header h1 { font-size: 20px; }
+  header .sub { font-size: 15px; }
 
   .card {
     background: white;
@@ -44,16 +46,16 @@
     padding: 18px 20px;
     margin-bottom: 14px;
   }
-  h2 { font-size: 15px; margin: 0 0 10px 0; color: var(--navy); }
-  h3 { font-size: 13px; margin: 18px 0 8px 0; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; margin: 0 0 10px 0; color: var(--navy); }
+  h3 { font-size: 14px; margin: 18px 0 8px 0; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px; }
   p { margin: 0 0 10px 0; }
-  .muted { color: var(--muted); font-size: 13px; }
+  .muted { color: var(--muted); font-size: 15px; }
   ul { margin: 0 0 10px 0; padding-left: 20px; }
   li { margin-bottom: 4px; }
 
-  label.field { display: block; font-weight: 600; font-size: 13px; margin-bottom: 5px; }
+  label.field, legend.field { display: block; font-weight: 600; font-size: 16px; margin-bottom: 5px; }
   input[type=text], input[type=number], textarea {
-    font-family: inherit; font-size: 14px;
+    font-family: inherit; font-size: 16px;
     padding: 9px 12px; border: 1px solid #d6dae3; border-radius: 8px;
     background: white; color: var(--ink);
   }
@@ -61,12 +63,15 @@
   textarea { width: 100%; box-sizing: border-box; min-height: 96px; resize: vertical; line-height: 1.45; }
   input[type=text]:focus, input[type=number]:focus, textarea:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
 
+  .more-details { margin: 4px 0 14px; }
+  .more-details summary { cursor: pointer; color: var(--navy); font-weight: 600; font-size: 15px; padding: 6px 0; }
+  .more-details ul { margin-top: 8px; }
   .annotator-profile { margin-top: 18px; max-width: 620px; }
   .profile-field { margin-bottom: 15px; }
   .profile-field[hidden] { display: none; }
   .profile-field select {
     width: 100%; min-width: 0; min-height: 44px; padding: 9px 12px;
-    font-family: inherit; font-size: 14px; color: var(--ink); background: white;
+    font-family: inherit; font-size: 16px; color: var(--ink); background: white;
     border: 1px solid #d6dae3; border-radius: 8px;
   }
   .profile-field select:focus { outline: 2px solid #6b8cae; outline-offset: -1px; }
@@ -74,11 +79,11 @@
   .profile-field input[type=text] { max-width: none; min-height: 44px; }
   .role-choices { border: 0; padding: 0; margin: 0 0 15px; min-width: 0; }
   .role-choices legend { padding: 0; }
-  .role-choice { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 4px 0; cursor: pointer; }
-  .role-choice input { width: 18px; height: 18px; margin: 0; flex: none; }
+  .role-choice { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 4px 0; cursor: pointer; }
+  .role-choice input { width: 20px; height: 20px; margin: 0; flex: none; }
   .role-detail { margin: 0 0 8px 28px; }
   .role-detail[hidden] { display: none; }
-  .role-detail label { display: block; margin-bottom: 4px; font-size: 0.9em; }
+  .role-detail label { display: block; margin-bottom: 4px; }
   .role-detail input[type=text] { width: 100%; max-width: none; min-height: 40px; box-sizing: border-box; }
   @media (pointer: coarse) {
     .profile-field select, .profile-field input[type=text] { font-size: 16px; }
@@ -97,22 +102,23 @@
   .mic-btn.on { background: #c0392b; border-color: #c0392b; color: white; animation: mic-pulse 1.2s ease-in-out infinite; }
   @keyframes mic-pulse { 50% { box-shadow: 0 0 0 6px rgba(192, 57, 43, 0.18); } }
   @media (prefers-reduced-motion: reduce) { .mic-btn.on { animation: none; } }
-  .mic-status { font-size: 12px; color: var(--muted); margin-top: 4px; min-height: 1em; }
+  .mic-status { font-size: 14px; color: var(--muted); margin-top: 4px; min-height: 1em; }
 
   button {
-    font-family: inherit; font-size: 14px; font-weight: 500;
-    padding: 10px 20px; border-radius: 8px; border: 1px solid transparent;
+    font-family: inherit; font-size: 16px; font-weight: 500;
+    min-height: 44px; padding: 10px 20px; border-radius: 8px; border: 1px solid transparent;
     cursor: pointer; transition: background 0.15s, border-color 0.15s;
   }
   .btn-primary { background: var(--navy); color: white; }
   .btn-primary:hover { background: var(--navy-2); }
   .btn-primary:disabled { background: #9aa4b5; cursor: not-allowed; }
+  button:focus-visible, summary:focus-visible { outline: 3px solid #2c5aa0; outline-offset: 2px; }
   .btn-ghost { background: white; color: var(--muted); border-color: #d6dae3; }
   .btn-ghost:hover { border-color: #6b8cae; color: var(--navy); }
   .btn-ghost:disabled { opacity: 0.45; cursor: not-allowed; }
 
   .banner {
-    border-radius: 8px; padding: 11px 14px; margin-bottom: 14px; font-size: 13px;
+    border-radius: 8px; padding: 11px 14px; margin-bottom: 14px; font-size: 15px;
   }
   .banner-warn { background: #fff3cd; border-left: 4px solid #ff9800; color: #7a5b00; }
   .banner-info { background: #e7f1fb; border-left: 4px solid #4da6ff; color: #1c4a75; }
@@ -127,11 +133,11 @@
   }
   .topbar-row {
     display: flex; align-items: center; justify-content: space-between;
-    gap: 12px; flex-wrap: wrap; font-size: 13px;
+    gap: 12px; flex-wrap: wrap; font-size: 15px;
   }
   .progress-track { height: 6px; background: #e3e7ee; border-radius: 3px; margin-top: 8px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), #4da6ff); width: 0%; transition: width 0.25s; }
-  .sync { font-size: 12px; display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+  .sync { font-size: 15px; display: inline-flex; align-items: center; gap: 6px; color: var(--text-2); }
   .dot { width: 8px; height: 8px; border-radius: 50%; background: #9aa4b5; display: inline-block; }
   .dot.ok { background: #28a745; }
   .dot.pending { background: #ff9800; }
@@ -149,7 +155,7 @@
   .metric { scroll-margin-top: 100px; }
   .source-check { margin: 12px 0; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: #f5f7fa; }
   .source-check label { display: flex; align-items: flex-start; gap: 9px; font-weight: 600; cursor: pointer; }
-  .source-check input { flex: 0 0 auto; width: 18px; height: 18px; margin: 2px 0 0; }
+  .source-check input { flex: 0 0 auto; width: 20px; height: 20px; margin: 2px 0 0; }
   .source-check .muted { margin: 7px 0 0; }
   .source-not-assessed { color: var(--navy); font-weight: 600; margin: 10px 0 0; }
   [data-trust-controls][hidden], .source-not-assessed[hidden] { display: none; }
@@ -159,11 +165,6 @@
     .qa-reference { position: sticky; top: 82px; max-height: calc(100dvh - 106px); overflow-y: auto; }
     .qa-jump, .qa-return { display: none; }
   }
-  .qa-meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
-  .qa-meta code {
-    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px;
-    background: #f0f2f7; padding: 1px 6px; border-radius: 4px;
-  }
   .qbox, .abox {
     padding: 14px 16px; border-radius: 8px; margin-bottom: 10px;
     white-space: pre-wrap; word-wrap: break-word;
@@ -171,12 +172,12 @@
   .qbox { background: #fff3cd; border-left: 4px solid #ff9800; }
   .abox { background: #edf4fc; border-left: 4px solid #8aa6c4; }
   .box-label {
-    display: block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    display: block; font-size: 13px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.6px; margin-bottom: 6px;
   }
   .qbox .box-label { color: #856404; }
   .abox .box-label { color: #355472; }
-  .box-text { font-size: 15px; color: #2a2f3a; }
+  .box-text { font-size: 17px; color: #2a2f3a; }
 
   /* --- metrics ---------------------------------------------------------- */
   .metric {
@@ -186,36 +187,40 @@
   }
   .metric.active { border-left-color: #4da6ff; box-shadow: 0 0 0 2px rgba(77,166,255,0.18); }
   .metric.rated { border-left-color: #28a745; }
-  .metric-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-  .metric-name { font-weight: 600; color: var(--navy); font-size: 14px; }
+  .metric-head { position: relative; display: flex; align-items: flex-start; gap: 8px; }
+  .metric-name { flex: 1 1 auto; min-width: 0; font-weight: 600; color: var(--navy); font-size: 17px; line-height: 1.4; }
   .tag {
     color: white; border-radius: 10px; padding: 1px 8px; font-size: 11px; font-weight: 600;
   }
   .tag.q { background: #856404; }
   .tag.a { background: #155724; }
   .tag.qa { background: #2c5aa0; }
-  .metric-def { color: var(--muted); font-size: 12.5px; font-style: italic; margin: 4px 0 10px 0; }
+  .metric-def { color: var(--text-2); font-size: 15px; margin: 6px 0 12px 0; }
 
   .likert { display: flex; gap: 6px; flex-wrap: wrap; }
   /* Keep labels inside their buttons; wrap buttons when space is limited. */
   .likert button {
-    flex: 1 0 min-content; min-width: 92px; max-width: 100%; overflow-wrap: break-word;
-    padding: 8px 6px; font-size: 12px; font-weight: 500;
-    background: white; border: 1px solid #d6dae3; color: #4a5366; line-height: 1.3;
+    flex: 1 0 min-content; min-width: 92px; max-width: 100%; min-height: 44px; overflow-wrap: break-word;
+    padding: 9px 10px; font-size: 15px; font-weight: 500;
+    background: white; border: 1px solid #b9c1cf; color: var(--ink); line-height: 1.3;
   }
   .likert button:hover { border-color: #6b8cae; color: var(--navy); }
   .likert button.sel { background: var(--navy); border-color: var(--navy); color: white; }
-  .likert .num { display: block; font-size: 15px; font-weight: 700; }
-  .rating-subhead { color: var(--navy); font-size: 12px; font-weight: 700; margin: 10px 0 5px; }
+  .likert .num { display: block; font-size: 15px; font-weight: 600; }
+  .rating-subhead { color: var(--navy); font-size: 15px; font-weight: 700; margin: 14px 0 6px; }
   .error-panel { margin-top: 8px; }
   .error-panel[hidden] { display: none; }
+  /* "What is wrong?" choices: one per line, full width, left-aligned. */
+  .error-panel .likert { flex-direction: column; gap: 6px; }
+  .error-panel .likert button { flex: none; width: 100%; min-width: 0; text-align: left; padding: 10px 12px; }
+  .error-panel .likert .num { font-size: 15px; font-weight: 500; }
   .other-box { margin-top: 8px; }
   .other-box[hidden] { display: none; }
   .other-box textarea { width: 100%; min-height: 56px; box-sizing: border-box; }
   .source-instruction {
     background: #edf4fc; color: var(--navy); border-left: 4px solid #2c5aa0;
     border-radius: 6px; padding: 12px 14px; margin-bottom: 12px;
-    font-size: 14px; line-height: 1.6;
+    font-size: 16px; line-height: 1.6;
   }
   .source-video summary, .source-transcript summary {
     cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 10px;
@@ -237,7 +242,7 @@
 
   .navbtns { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 16px; }
   .navbtns .spacer { flex: 1; }
-  .err { color: #d9534f; font-size: 13px; font-weight: 500; }
+  .err { color: #b3261e; font-size: 15px; font-weight: 600; }
 
   .grid2 { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 14px; margin: 8px 0 4px 0; }
   .chk { display: flex; align-items: center; gap: 7px; font-size: 13px; }
@@ -281,9 +286,9 @@
   .inline-fields > div { min-width: 130px; }
   .inline-fields input { max-width: 130px; }
 
-  table { border-collapse: collapse; width: 100%; font-size: 13px; margin-top: 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; margin-top: 8px; }
   th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  th { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
   kbd {
@@ -294,17 +299,51 @@
   .hidden { display: none !important; }
   @media (max-width: 620px) {
     .wrap { padding: 12px; }
-    .likert button { min-width: 60px; font-size: 11px; }
-    .likert button .lbl { display: none; }
+    header { padding: 14px 16px; }
+    .card { padding: 16px 14px; }
+    /* Same text size as on a computer; buttons wrap two to a row instead. */
+    .likert button { flex: 1 1 calc(50% - 6px); min-width: 0; }
   }
+
+  /* --- "?" help next to each question ---------------------------------- */
+  .hint-btn {
+    flex: none; width: 32px; height: 32px; min-height: 0; padding: 0; margin-top: -2px;
+    border-radius: 50%; border: 1px solid #8aa0bd; background: white; color: var(--navy);
+    font-size: 17px; font-weight: 700; line-height: 1;
+  }
+  .hint-btn:hover, .hint-btn[aria-expanded="true"] { background: var(--navy); border-color: var(--navy); color: white; }
+  @media (pointer: coarse) { .hint-btn { width: 44px; height: 44px; margin: -6px -6px -6px 0; } }
+  .hint-pop {
+    position: absolute; z-index: 15; top: calc(100% + 6px); left: 0; right: 0;
+    max-width: 480px; margin-left: auto;
+    background: white; color: var(--ink); border: 1px solid #8aa0bd; border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(26,31,46,0.18); padding: 12px 14px; font-size: 15px; line-height: 1.5;
+  }
+  .hint-pop[hidden] { display: none; }
+  .hint-pop p { margin: 0 0 8px; }
+  .hint-pop dl { margin: 0; }
+  .hint-pop dt { font-weight: 700; color: var(--navy); }
+  .hint-pop dd { margin: 0 0 6px 0; }
+
+  /* --- phones: one question at a time ----------------------------------- */
+  .step-bar { display: none; }
+  @media (max-width: 620px) {
+    .rating-form.stepper .step-off { display: none; }
+    .rating-form.stepper .step-bar { display: block; }
+    .rating-form.stepper #prev { display: none; }
+  }
+  .step-count { margin: 0 0 8px; color: var(--text-2); font-size: 15px; font-weight: 600; }
+  .step-btns { display: flex; gap: 10px; }
+  .step-btns button { flex: 1 1 0; min-height: 52px; font-size: 17px; font-weight: 600; }
+  .step-btns button[hidden] { display: none; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <h1>Dementia Q&A — Human Evaluation v5</h1>
-  <div class="sub">Study v5 · Rating automatically generated Q&As from dementia-care videos.</div>
+  <h1>Rate Dementia Care Q&As</h1>
+  <div class="sub">A research study on dementia care advice</div>
 </header>
 
 <div id="app"><div class="card"><p class="muted">Loading Q&As…</p></div></div>
@@ -448,6 +487,141 @@ const RECOMMENDATION = [
   "No, it needs major edits",
   "No",
 ];
+
+// Plain-language wording shown to annotators (8th-grade reading level). This is
+// DISPLAY ONLY: buttons still carry and save the original strings from METRICS
+// and RECOMMENDATION above, so Supabase, the CSV and judge.py are unchanged.
+// `labels` maps a saved value to the text on its button; a value missing from
+// the map is shown as is.
+const DISPLAY = {
+  qa_alignment: {
+    name: "Matches the Video",
+    hint: {
+      about: "Watch the video clip, then compare it with the Q&A. Does the answer really answer the question? Is everything in it said in the video, without adding things or saying the opposite?",
+      levels: {
+        "Excellent": "Everything matches the video.",
+        "Good": "Matches the video, with small gaps.",
+        "Fair": "Partly matches, or leaves out or adds something that matters.",
+        "Poor": "Mostly does not match the video.",
+      },
+    },
+    question: "How well does the Q&A match what the video says?",
+    def: "The answer responds to the question. It is backed up by the video. It does not add things the video never said or go against the video.",
+    issuePrompt: "Is there an issue in the question or answer? Select all that apply.",
+    labels: {
+      "Source Misinterpretation": "Gets the video’s meaning wrong",
+      "Hallucinating": "Makes up things the video never said",
+      "Contradiction": "Says the opposite of the video",
+      "Missing Key Information": "Leaves out something important from the video",
+    },
+  },
+  qa_accessibility: {
+    name: "Easy to Understand",
+    hint: {
+      about: "Think of a caregiver with no medical training. Could they read this once and understand it? Look for hard medical words that are not explained, or wording that is vague, too long or badly organized.",
+      levels: {
+        "Very easy to understand": "Clear and specific. Any medical words are explained.",
+        "Easy": "Mostly clear, with a small part that is a bit hard to follow.",
+        "Somewhat difficult": "Some parts are unclear, vague or use words that are not explained.",
+        "Difficult": "Most of it is hard to understand.",
+      },
+    },
+    question: "How easy is this Q&A for a caregiver to understand?",
+    def: "The Q&A is clear and specific. An 8th grader could read it. Any medical or technical words are explained.",
+    issuePrompt: "Is there an issue in the question or answer? Select all that apply.",
+    labels: {
+      "Very easy to understand": "Very easy",
+      "Somewhat difficult": "A little hard",
+      "Difficult": "Hard",
+      "Difficult vocabulary": "Hard words",
+      "Ambiguous": "Could mean more than one thing",
+      "Poor organization": "Badly organized",
+    },
+  },
+  qa_edu_actionable: {
+    name: "Useful",
+    hint: {
+      about: "Would a caregiver learn something important from this Q&A, or get a tip they could use? A Q&A can be useful by teaching, by giving practical steps, or both.",
+      levels: {
+        "Highly useful": "Teaches something important or gives practical tips a caregiver could use.",
+        "Useful": "Helpful, but the idea or tips matter less or are less clear.",
+        "Limited useful": "Only a small or very general point.",
+        "Not useful": "Nothing a caregiver could learn from or use.",
+      },
+    },
+    question: "How useful is this Q&A for a caregiver?",
+    def: "The Q&A teaches something important about dementia care, or gives tips a caregiver could use, or both.",
+    issuePrompt: "Is there an issue in the question or answer? Select all that apply.",
+    labels: {
+      "Highly useful": "Very useful",
+      "Limited useful": "A little useful",
+      "Not actionable": "No clear steps to take",
+      "Missing Explanation": "Does not explain why or how",
+      "Generic Advice": "Advice is too general",
+      "Low Relevance to Caregiver Needs": "Not what caregivers need",
+    },
+  },
+  qa_mental_health: {
+    name: "Safe Care",
+    hint: {
+      about: "Imagine a caregiver does what this Q&A says. Could it hurt someone, or treat them without respect? For example: unsafe health advice, a risk of injury, blaming or judging, or telling people not to get help from doctors.",
+      levels: {
+        "Yes": "Some of the advice could lead to unsafe or disrespectful care. Then pick the concern.",
+        "No": "The advice is safe and respectful.",
+      },
+    },
+    question: "Could this Q&A lead to unsafe or disrespectful care?",
+    def: "The Q&A should give safe and respectful advice for caregivers and people with dementia.",
+    issuePrompt: "If Yes, what is the concern? Check all that apply.",
+    labels: {
+      "Physical safety risk": "Could cause injury or physical harm",
+      "Blaming or judgmental language": "Blames or judges the caregiver or the person with dementia",
+      "Discourages professional care": "Tells people not to get help from doctors or other professionals",
+    },
+  },
+  qa_standalone: {
+    name: "Makes Sense on Its Own",
+    hint: {
+      about: "Answer this before you watch the video. Read only this question and answer. Does it make sense by itself? Watch for words like “he”, “this” or “the video” that point to something you cannot see.",
+      levels: {
+        "Yes": "It makes sense on its own.",
+        "No": "You need the video or another Q&A to understand it. Then pick what is wrong.",
+      },
+    },
+    question: "Could a caregiver understand this Q&A without seeing the video or any other Q&A?",
+    def: "The Q&A makes sense by itself, without the video or any other Q&A.",
+    issuePrompt: "Is there an issue in the question or answer? Select all that apply.",
+    labels: {
+      "Refers to the video, transcript or speaker": "Mentions the video, the transcript or the speaker",
+      "Undefined pronoun": "Uses “he”, “she”, “it” or “they” without saying who or what",
+      "Undefined this/these reference": "Uses “this” or “these” without saying what",
+      "Depends on another Q&A pair": "Needs another Q&A to make sense",
+    },
+  },
+};
+const RECOMMENDATION_LABELS = {
+  "Yes, but with minor edits (meaning unchanged)": "Yes, with small edits (same meaning)",
+  "No, it needs major edits": "No, it needs big edits",
+};
+// Help text for the recommendation question, keyed by the saved value (display only).
+const RECOMMENDATION_HINT = {
+  about: "Think about everything you saw in this Q&A. Would you be comfortable sharing it with a caregiver who needs help?",
+  levels: {
+    "Yes": "You would share it as it is.",
+    "Yes, but with minor edits (meaning unchanged)": "You would share it after small fixes that keep the same meaning.",
+    "No, it needs major edits": "It needs big changes to what it says before you would share it.",
+    "No": "You would not share it.",
+  },
+};
+const SOURCE_CHECK_LABEL = "The video is missing or will not play";
+const shownQuestion = (m) => (DISPLAY[m.key] && DISPLAY[m.key].question) || m.attributeName || m.binaryQuestion || m.label;
+// "question N" in the order questions appear (Standalone first, then METRICS order).
+const qNum = (key) => {
+  const order = [...METRICS.filter((m) => METRICS_BEFORE_VIDEO.includes(m.key)), ...METRICS.filter((m) => !METRICS_BEFORE_VIDEO.includes(m.key))];
+  return "question " + (order.findIndex((m) => m.key === key) + 1);
+};
+const shownName = (m) => (DISPLAY[m.key] && DISPLAY[m.key].name) || m.label;
+const shownLabel = (m, value) => (m && DISPLAY[m.key] && DISPLAY[m.key].labels[value]) || value;
 
 // Store only the four agreed groups plus Others, rather than individual roles.
 // An annotator ticks every group that applies; the database routes them as
@@ -876,10 +1050,10 @@ function sourceTranscript(p) {
   const text = excerpt.map((s) => s.text.trim()).join(" ");
   return `<details class="source-transcript">
     <summary><span class="transcript-action-show">Read the clip transcript</span><span class="transcript-action-hide">Hide the clip transcript</span></summary>
-    ${!hasRange ? '<p class="muted">A clip transcript is unavailable because this Q&A has no bounded start and end timestamps.</p>' : available.length ? `<p class="muted">Source captions may contain transcription errors.</p>
+    ${!hasRange ? '<p class="muted">No transcript for this clip, because we do not know where the clip starts and ends.</p>' : available.length ? `<p class="muted">The captions may have some mistakes.</p>
       <p><strong>Transcript for this clip (${videoTimeLabel(p.t)}–${videoTimeLabel(p.te)})</strong></p>
       ${excerpt.length ? `<div class="transcript-text" tabindex="0" role="region" aria-label="Transcript for this clip">${escapeAttr(text)}</div>` : '<p class="muted">No transcript text is available in this time range.</p>'}`
-      : '<p class="muted">The transcript is currently unavailable. You can still open the source video above.</p>'}
+      : '<p class="muted">The transcript is not available right now. You can still watch the video above.</p>'}
   </details>`;
 }
 
@@ -945,7 +1119,8 @@ function metricState(uid, key) {
   const row = S.scores[uid] || (S.scores[uid] = {});
   if (!row[key] || typeof row[key] !== "object") row[key] = {};
   if (typeof row[key].error === "string" && !Array.isArray(row[key].errors)) {
-    row[key].errors = selectedErrors(row[key].error);
+    const m = METRICS.find((x) => x.key === key);
+    row[key].errors = m && m.optionalIssues && row[key].error === m.noIssueError ? [m.noIssueError] : selectedErrors(row[key].error);
   }
   splitOther(row[key], METRICS.find((m) => m.key === key));
   if (!row[key].binary && row[key].severity) {
@@ -967,6 +1142,17 @@ function completeMetric(value, metric) {
   if (!completeBinary(binary)) return false;
   if (binary !== errorTrigger(metric)) return true;
   return selectedErrors(value.errors || value.error).length > 0 && !otherIncomplete(value, metric);
+}
+
+// On screen, a scale question also needs an answer to "What is wrong?" ("No issue"
+// counts) before it is done. Ratings saved before this rule still count as rated
+// when someone resumes (completeMetric above), so nobody has to redo them.
+function issueMissing(value, metric) {
+  return Boolean(metric && metric.optionalIssues && value && !isSourceUnverifiable(value, metric) &&
+    selectedErrors(value.errors || value.error).length === 0);
+}
+function completeOnScreen(value, metric) {
+  return completeMetric(value, metric) && !issueMissing(value, metric);
 }
 
 function hasAttributeScale(metric) {
@@ -1135,15 +1321,14 @@ function setSync(state) {
   syncState = state;
   const el = document.getElementById("sync");
   if (!el) return;
-  const pending = S ? S.queue.length : 0;
   const map = {
-    ok:      ["ok",      "All ratings saved"],
-    pending: ["pending", pending + " waiting to save"],
-    err:     ["err",     "Offline — " + pending + " saved locally, will retry"],
-    off:     ["off",     "Local only — export at the end"],
+    ok:      ["ok",      "Saved ✓"],
+    pending: ["pending", "Saving…"],
+    err:     ["err",     "Not saved yet — check your internet. We will keep trying."],
+    off:     ["off",     "Saved on this device ✓"],
   };
   const [cls, text] = map[state] || map.off;
-  el.innerHTML = '<span class="dot ' + cls + '"></span>' + text;
+  el.innerHTML = '<span class="dot ' + cls + '" aria-hidden="true"></span>' + text;
 }
 
 // Retry whenever the network comes back or the tab is refocused.
@@ -1268,29 +1453,34 @@ function renderWelcome() {
   const prefillName = params.get("a") || params.get("annotator") || (last && last.name) || "";
   app.innerHTML = `
     ${PROVISIONAL ? '<div class="banner banner-warn"><b>Provisional Q&A selection.</b> This build uses a placeholder set of Q&As for testing. Do not collect real ratings with it.</div>' : ""}
-    ${backendOn ? "" : '<div class="banner banner-warn"><b>Local-only mode.</b> No results server is configured, so ratings stay in this browser and must be exported with the download button at the end. Set SUPABASE_URL and SUPABASE_ANON_KEY in <code>config.js</code> to collect them centrally.</div>'}
+    ${backendOn ? "" : '<div class="banner banner-warn"><b>Test mode.</b> Your ratings are not sent online. They stay in this browser, so please download them at the end.</div>'}
 
     <div class="card">
-      <h2>What you will be doing</h2>
-      <p>You will read short Q&As about dementia care that were written automatically by different AI systems, and evaluate each one on ${METRICS.length} criteria.</p>
-      <ul>
-        <li><b>Think like a caregiver.</b> Rate each Q&A as if you were deciding whether it would help you understand or care for someone living with dementia.</li>
-        <li><b>Rate Standalone first.</b> Read the Q&A and answer Standalone before opening the source video or transcript.</li>
-        <li><b>Check the source for Trustworthiness.</b> Watch the relevant clip before choosing that rating. If it will not play here or through the YouTube link, tick <b>Video unavailable or won’t play</b>; Trustworthiness will stay unscored. Rate Clarity, Usefulness and Care Safety from the Q&A as written.</li>
-        <li>The system that produced each Q&A is hidden, so your rating is not influenced by which one it came from.</li>
-        <li>Your progress saves automatically after every Q&A — <b>you can close the tab and come back to this same link later.</b></li>
-      </ul>
-      <p class="muted">You will receive <b>${pairCount} Q&As</b> and rate all ${METRICS.length} criteria for each. There is no need to finish in one sitting, but please finish within two days of starting.</p>
+      <h2>Welcome</h2>
+      <p>You will read <b>${pairCount} short Q&As</b> about dementia care and tell us how good each one is. It takes about 20 minutes. You can take breaks, but please finish within 2 days.</p>
+
+      <details class="more-details">
+        <summary>More details</summary>
+        <ul>
+          <li>A computer wrote these Q&As from YouTube videos.</li>
+          <li>Think like a caregiver. Would this Q&A help you care for someone with dementia?</li>
+          <li>Answer ${qNum("qa_standalone")} first, before you watch the video.</li>
+          <li>Then watch the video clip and answer ${qNum("qa_alignment")}. If the video will not play, check the box that says so and skip that question.</li>
+          <li>Rate the other questions on the Q&A as written.</li>
+          <li>Some questions use a scale, like Excellent to Poor. Others are Yes or No. If you see a problem, pick it from the list. Pick “Other” to describe it in your own words.</li>
+          <li>Your work saves after each Q&A. You can close the page and come back to this link later.</li>
+        </ul>
+      </details>
 
       <h3>Your name</h3>
-      <p class="muted">Used to label your ratings and resume your progress. Type it the same way each time, and come back on this same device and browser, so you return to your own Q&As.</p>
+      <p class="muted">Type it the same way each time. Use the same device and browser to pick up where you left off.</p>
       <input type="text" id="name" placeholder="e.g. Jane Doe" value="${escapeAttr(prefillName)}" autocomplete="name" />
       <div id="resume-note" class="muted" style="margin-top:8px;"></div>
 
       <div class="annotator-profile">
         <fieldset class="profile-field role-choices" aria-describedby="role-hint">
           <legend class="field">Your role</legend>
-          <p class="muted" id="role-hint">Select all that apply.</p>
+          <p class="muted" id="role-hint">Check all that apply.</p>
           ${ANNOTATOR_GROUPS.map((g) => `<div class="role-item">
             <label class="role-choice"><input type="checkbox" id="role-${g.value}" value="${g.value}" /> ${escapeAttr(g.label)}</label>
             <div class="role-detail" id="role-detail-field-${g.value}" hidden>
@@ -1300,8 +1490,8 @@ function renderWelcome() {
           </div>`).join("")}
         </fieldset>
         <div class="profile-field">
-          <label class="field" for="dementia-experience">Dementia-care experience</label>
-          <p class="muted" id="experience-hint">Include work, placements or caregiving.</p>
+          <label class="field" for="dementia-experience">Your dementia care experience</label>
+          <p class="muted" id="experience-hint">Count paid work, school training and caring for family.</p>
           <select id="dementia-experience" aria-describedby="experience-hint" required>
             <option value="">Select your experience</option>
             ${DEMENTIA_EXPERIENCE.map((e) => `<option value="${e.value}">${escapeAttr(e.label)}</option>`).join("")}
@@ -1313,19 +1503,6 @@ function renderWelcome() {
         <button class="btn-primary" id="start">Continue</button>
         <span class="err" id="start-err" role="alert"></span>
       </div>
-    </div>
-
-    <div class="card">
-      <h2>The rating flow</h2>
-      <p class="muted">Trustworthiness, Clarity and Usefulness are rated on a quality scale, followed by an optional list of problems. Standalone and Care Safety are Yes/No questions; when the answer lands on the failing side, select the problems that apply. The problem lists for Standalone, Trustworthiness, Clarity and Usefulness end with <b>Other</b>, which opens a box to describe a problem the list does not cover.</p>
-      <table>
-        <tr><th>Part</th><th>What you choose</th></tr>
-        <tr><td><b>Quality label</b></td><td>Trustworthiness, Clarity and Usefulness: a plain-language rating of the Q&A.</td></tr>
-        <tr><td><b>What's wrong? (optional)</b></td><td>Shown under the quality label. Select any problems you notice, or leave it blank.</td></tr>
-        <tr><td><b>Yes/No question</b></td><td>Standalone and Care Safety: a simple check for whether the Q&A meets that criterion.</td></tr>
-        <tr><td><b>Problem types</b></td><td>Standalone and Care Safety: shown only after the failing answer. Select one or more problems.</td></tr>
-        <tr><td><b>Recommendation</b></td><td>Whether you would confidently recommend the Q&A to a caregiver.</td></tr>
-      </table>
     </div>`;
 
   const nameEl = document.getElementById("name");
@@ -1372,7 +1549,7 @@ function renderWelcome() {
       profileRestored = Boolean(prev);
     }
     if (prev && !matchesAssignment(prev)) {
-      note.textContent = "Your saved session has a different assignment. Your progress is still saved; please contact the research team before continuing.";
+      note.textContent = "Your saved work does not match this study. It is still saved. Please contact the research team before you go on.";
     } else if (prev) {
       const done = prev.uids.filter((u) => {
         const sc = prev.scores[u];
@@ -1382,9 +1559,9 @@ function renderWelcome() {
         }) &&
           completeRecommendation(prev.recommendations && prev.recommendations[u]);
       }).length;
-      note.innerHTML = `<span style="color:#155724;">Welcome back — ${done} of ${prev.uids.length} pairs already rated. You will continue where you stopped.</span>`;
+      note.innerHTML = `<span style="color:#155724;">Welcome back! You have rated ${done} of ${prev.uids.length} Q&As. You will pick up where you left off.</span>`;
     } else {
-      note.innerHTML = `<span class="muted">New session: ${pairCount} pairs.</span>`;
+      note.innerHTML = `<span class="muted">New session: ${pairCount} Q&As.</span>`;
     }
   };
   nameEl.addEventListener("input", () => { err.textContent = ""; checkResume(); });
@@ -1400,12 +1577,12 @@ function renderWelcome() {
     if (!profile.groups.length) { err.textContent = "Please choose at least one role."; roleEls[0].focus(); return; }
     const tooLong = ANNOTATOR_GROUPS.findIndex((g) => (profile.details[g.value] || "").length > ROLE_DETAIL_MAX);
     if (tooLong >= 0) {
-      err.textContent = `Please keep each role description to ${ROLE_DETAIL_MAX} characters.`; detailEls[tooLong].focus(); return;
+      err.textContent = `Please keep each role note under ${ROLE_DETAIL_MAX} characters.`; detailEls[tooLong].focus(); return;
     }
     if (!profile.experience) { err.textContent = "Please choose your dementia-care experience."; experienceEl.focus(); return; }
     const prev = savedFor(name);
     if (prev && !matchesAssignment(prev)) {
-      err.textContent = "Your saved assignment differs from this study. Please contact the research team; your saved progress has not been changed.";
+      err.textContent = "Your saved work does not match this study. Please contact the research team. Your saved work has not been changed.";
       return;
     }
     saveLastOpts(fixedStudyOptions(), name);
@@ -1428,7 +1605,7 @@ function renderWelcome() {
     }).catch((e) => {
       console.warn("version claim failed", e);
       startBtn.disabled = false;
-      err.textContent = "Could not reach the study server to get your Q&As. Please check your connection and press Continue again.";
+      err.textContent = "Could not reach the study server. Check your internet and press Continue again.";
     });
   });
 
@@ -1448,16 +1625,20 @@ function renderWelcome() {
    Screen: rating
    =========================================================================== */
 
+// data-value / data-error hold the SAVED string; only the button text uses the
+// plain DISPLAY label.
 function optionButtons(key, field, options, selected) {
+  const metric = METRICS.find((m) => m.key === key);
   return options.map((label) =>
-    `<button type="button" data-key="${key}" data-field="${field}" data-value="${escapeAttr(label)}" class="${selected === label ? "sel" : ""}"><span class="num">${label}</span></button>`
+    `<button type="button" data-key="${key}" data-field="${field}" data-value="${escapeAttr(label)}" class="${selected === label ? "sel" : ""}"><span class="num">${escapeAttr(shownLabel(metric, label))}</span></button>`
   ).join("");
 }
 
 function errorButtons(key, options, selected) {
+  const metric = METRICS.find((m) => m.key === key);
   const selectedSet = new Set(selectedErrors(selected));
   return options.map((label) =>
-    `<button type="button" data-key="${key}" data-error="${escapeAttr(label)}" class="${selectedSet.has(label) ? "sel" : ""}"><span class="num">${label}</span></button>`
+    `<button type="button" data-key="${key}" data-error="${escapeAttr(label)}" class="${selectedSet.has(label) ? "sel" : ""}"><span class="num">${escapeAttr(shownLabel(metric, label))}</span></button>`
   ).join("");
 }
 
@@ -1469,21 +1650,36 @@ function insertVideoPanel(cards, metrics, source, pair) {
   if (!source && !pair) return cards.join("");
   const firstAfter = metrics.findIndex((m) => !METRICS_BEFORE_VIDEO.includes(m.key));
   const cut = firstAfter === -1 ? cards.length : firstAfter;
+  const row = (S && S.scores && S.uids && S.scores[S.uids[S.index]]) || {};
+  const openVideo = METRICS_BEFORE_VIDEO.some((k) => row[k] && row[k].binary);
+  const clipNote = !source ? "" : !source.hasClip ? "We do not know which part of the video this Q&A comes from, so the whole video is shown."
+    : source.weak ? "We are not sure where this part starts. The video starts near our best guess and keeps playing. Move back or forward if you need to."
+    : source.widened ? ""
+    : source.approx ? "This clip is our best guess at the part the Q&A comes from. Move back or forward a little if you need to."
+    : "This clip is the part of the video the Q&A comes from.";
+  const unverifiable = Boolean(row.qa_alignment && row.qa_alignment.sourceUnverifiable);
+  // Phones show one question at a time; the video goes with the question that needs it.
+  const alignAt = metrics.findIndex((m) => m.key === "qa_alignment");
+  const videoStep = alignAt === -1 ? cut : alignAt;
+  const sourceCheck = `
+        <div class="source-check">
+          <label for="source-unverifiable"><input id="source-unverifiable" type="checkbox" ${unverifiable ? "checked" : ""} aria-describedby="source-check-help source-not-assessed" />${SOURCE_CHECK_LABEL}</label>
+          <p class="muted" id="source-check-help">First try the “Video not loading? Open YouTube app” button. If it still will not play, check this box and skip ${qNum("qa_alignment")}.</p>
+        </div>`;
   const panel = `
-    <div class="card">
+    <div class="card video-card" data-step="${videoStep}">
       ${source ? `
-      <p class="source-instruction">After answering <strong>Standalone</strong>, <strong>open and watch the source ${source.hasClip ? "video clip" : "video"} below</strong> before rating <strong>Trustworthiness</strong>.</p>
-      <details class="source-video" id="source-video-panel">
-        <summary><span class="video-action-show">Click to show the source ${source.hasClip ? "video clip" : "video"}</span><span class="video-action-hide">Hide the source ${source.hasClip ? "video clip" : "video"}</span>${source.timeLabel ? ` — ${source.approx ? "approx. " : ""}${source.timeLabel}` : ""}</summary>
-        ${source.timeLabel ? `<p class="muted">${source.approx ? "Suggested time" : "Recorded source time"}: <strong>${source.timeLabel}</strong></p>` : ""}
-        <p><a class="vidlink-inline" href="${escapeAttr(source.url)}" target="_blank" rel="noopener noreferrer">${source.hasClip ? "Open on YouTube at this timestamp (no end limit)" : "Open source video on YouTube"}</a></p>
+      <p class="source-instruction">After you answer <strong>${qNum("qa_standalone")}</strong>, <strong>watch the ${source.hasClip ? "video clip" : "video"} below</strong>. You need it for <strong>${qNum("qa_alignment")}</strong>.</p>
+      <details class="source-video" id="source-video-panel" ${openVideo ? "open" : ""}>
+        <summary><span class="video-action-show">Show the ${source.hasClip ? "video clip" : "video"}</span><span class="video-action-hide">Hide the ${source.hasClip ? "video clip" : "video"}</span>${source.timeLabel ? ` — ${source.approx ? "about " : ""}${source.timeLabel}` : ""}</summary>
+        <p><a class="vidlink-inline" href="${escapeAttr(source.url)}" target="_blank" rel="noopener noreferrer">Video not loading? Open YouTube app</a></p>
         ${source.embed ? `<iframe class="video-frame" id="source-video-player" src="${escapeAttr(source.embed)}" title="Source video" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>` : ""}
-        <p class="muted" style="margin:8px 0 0 0; font-size:12px;">${!source.hasClip ? "Exact segment timestamps are unavailable for this Q&A output, so the full source video is shown." : source.weak ? "Low-confidence transcript match: the video starts near the closest match and plays on without a fixed end. Scrub if the relevant part is not here." : source.widened ? "This approximate source range includes surrounding context for the Q&A. Open the full video if you need more context." : source.approx ? "This clip is an approximate match to the Q&A source segment, found by aligning the Q&A to the transcript. Scrub a little either way if the relevant part is not in view." : "This clip starts at the Q&A source segment recorded when the Q&A was generated."}</p>
+        ${clipNote ? `<p class="muted" style="margin:8px 0 0 0;">${clipNote}</p>` : ""}
+        ${sourceCheck}
       </details>
-      ` : '<p class="source-instruction">After answering <strong>Standalone</strong>, open the source transcript below for context.</p>'}
+      ` : `<p class="source-instruction">After you answer <strong>${qNum("qa_standalone")}</strong>, read the transcript below.</p>
+      ${sourceCheck}`}
       ${pair ? sourceTranscript(pair) : ""}
-      <p class="muted">If the video will not play here or through the YouTube link, tick <b>Video unavailable or won’t play</b> in the Trustworthiness section below.</p>
-      <p class="muted" style="margin:8px 0 0 0; font-size:12px;">Trustworthiness asks whether the answer is supported by the source. The other criteria concern the Q&A as written.</p>
     </div>`;
   return cards.slice(0, cut).join("") + panel + cards.slice(cut).join("");
 }
@@ -1503,7 +1699,7 @@ function renderRate() {
   app.innerHTML = `
     <div class="topbar">
       <div class="topbar-row">
-        <div><b>Pair ${S.index + 1}</b> of ${S.uids.length} &nbsp;·&nbsp; <span class="muted">${done} fully rated</span></div>
+        <div><b>Q&A ${S.index + 1}</b> of ${S.uids.length} &nbsp;·&nbsp; <span class="muted">${done} done</span></div>
         <button class="btn-ghost qa-jump" id="view-qa" type="button" aria-controls="qa-reference">View Q&A</button>
         <div class="sync" id="sync"></div>
       </div>
@@ -1513,9 +1709,6 @@ function renderRate() {
     <div class="rating-layout">
     <aside class="card qa-reference" id="qa-reference" aria-label="Current question and answer">
       <h2>Question &amp; answer</h2>
-      <div class="qa-meta">
-        <span>Dataset <code>${p.dataset}</code> · Video <code>${p.video}</code> · System <code>hidden</code></span>
-      </div>
       <div class="qbox"><span class="box-label">Question</span><span class="box-text" id="qtext"></span></div>
       <div class="abox"><span class="box-label">Answer</span><span class="box-text" id="atext"></span></div>
       <button class="btn-ghost qa-return" id="back-to-ratings" type="button" aria-controls="metrics">Back to ratings</button>
@@ -1526,37 +1719,31 @@ function renderRate() {
       ${insertVideoPanel(metrics.map((m, i) => {
         const ms = sc[m.key] && typeof sc[m.key] === "object" ? sc[m.key] : {};
         return `
-        <div class="metric ${completeMetric(ms, m) ? "rated" : ""}" data-mi="${i}" data-key="${m.key}">
+        <div class="metric ${completeOnScreen(ms, m) ? "rated" : ""}" data-mi="${i}" data-step="${i}" data-key="${m.key}">
           <div class="metric-head">
-            <span class="metric-name">${i + 1}. ${m.label}</span>
-            <span class="tag ${m.scope}">${SCOPE_TAG[m.scope]}</span>
+            <span class="metric-name" id="qname-${m.key}">${i + 1}. ${shownQuestion(m)}</span>
+            ${hintHtml(m.key, (DISPLAY[m.key] || {}).hint, (v) => shownLabel(m, v), i + 1)}
           </div>
-          <div class="metric-def">${m.def}</div>
+          <div class="metric-def">${(DISPLAY[m.key] || {}).def || m.def}</div>
           ${m.key === "qa_alignment" ? `
-          <div class="source-check">
-            <label for="source-unverifiable"><input id="source-unverifiable" type="checkbox" ${ms.sourceUnverifiable ? "checked" : ""} aria-describedby="source-check-help source-not-assessed" />Video unavailable or won’t play</label>
-            <p class="muted" id="source-check-help">Try the “Open on YouTube” link first. If you still cannot watch the video, tick this box to continue without rating Trustworthiness.</p>
-            <p class="source-not-assessed" id="source-not-assessed" role="status" ${ms.sourceUnverifiable ? "" : "hidden"}>Trustworthiness will be left unscored. Continue with the other ratings, or untick this box if the video becomes available.</p>
-          </div>
+          <p class="source-not-assessed" id="source-not-assessed" role="status" ${ms.sourceUnverifiable ? "" : "hidden"}>This question is skipped because the video will not play. Go on to the next ones. Uncheck the box under the video if it starts working.</p>
           <div data-trust-controls ${ms.sourceUnverifiable ? "hidden" : ""}>` : ""}
           ${hasAttributeScale(m) ? `
-          <div class="rating-subhead">${m.attributeName}</div>
           <div class="likert">
             ${optionButtons(m.key, "attribute", m.attribute, ms.attribute)}
           </div>` : ""}
           ${m.optionalIssues ? "" : `
-          <div class="rating-subhead">${m.binaryQuestion}</div>
           <div class="likert choice">
             ${binaryOptions(m).map((label) => `<button type="button" data-key="${m.key}" data-choice="${escapeAttr(label)}" class="${binaryValue(ms) === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
           </div>`}
-          <div class="error-panel" ${m.optionalIssues || needsErrorSelection(ms, m) ? "" : "hidden"}>
-            <div class="rating-subhead">${m.optionalIssues ? "What's wrong? (optional) Select all that apply." : (m.errorPrompt || "If No, what is wrong? Select all that apply.")}</div>
+          <div class="error-panel" ${(m.optionalIssues ? Boolean(ms.attribute) : needsErrorSelection(ms, m)) ? "" : "hidden"}>
+            <div class="rating-subhead">${(DISPLAY[m.key] || {}).issuePrompt || (m.optionalIssues ? "Is there an issue in the question or answer? Select all that apply." : (m.errorPrompt || "Is there an issue in the question or answer? Select all that apply."))}</div>
             <div class="likert">
-              ${errorButtons(m.key, m.otherOption ? [...m.errors, m.otherOption] : m.errors, ms.errors || ms.error)}
+              ${errorButtons(m.key, [...(m.optionalIssues ? [m.noIssueError] : []), ...m.errors, ...(m.otherOption ? [m.otherOption] : [])], ms.errors || ms.error)}
             </div>
             ${m.otherOption ? `
             <div class="other-box" ${selectedErrors(ms.errors || ms.error).includes(m.otherOption) ? "" : "hidden"}>
-              <label class="field" for="other-${m.key}">Describe what is wrong</label>
+              <label class="field" for="other-${m.key}">What is the issue?</label>
               <textarea id="other-${m.key}" data-other-key="${m.key}" placeholder="Type the problem you see...">${escapeAttr(ms.otherText || "")}</textarea>
             </div>` : ""}
           </div>
@@ -1565,33 +1752,40 @@ function renderRate() {
       }), metrics, source, p)}
     </div>
 
-    <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation">
+    <div class="card metric ${completeRecommendation(S.recommendations[uid]) ? "rated" : ""}" id="recommendation" data-step="${metrics.length}">
       <div class="metric-head">
-        <span class="metric-name">${metrics.length + 1}. Would you confidently recommend this Q&A to a caregiver?</span>
-        <span class="tag qa">Overall</span>
+        <span class="metric-name" id="qname-recommendation">${metrics.length + 1}. Would you feel confident recommending this Q&A to a caregiver?</span>
+        ${hintHtml("recommendation", RECOMMENDATION_HINT, (v) => RECOMMENDATION_LABELS[v] || v, metrics.length + 1)}
       </div>
-      <div class="metric-def">Use this as the final caregiver-facing judgment for the whole Q&A.</div>
       <div class="likert">
-        ${RECOMMENDATION.map((label) => `<button type="button" data-recommend-v="${escapeAttr(label)}" class="${S.recommendations[uid] === label ? "sel" : ""}"><span class="num">${label}</span></button>`).join("")}
+        ${RECOMMENDATION.map((label) => `<button type="button" data-recommend-v="${escapeAttr(label)}" class="${S.recommendations[uid] === label ? "sel" : ""}"><span class="num">${escapeAttr(RECOMMENDATION_LABELS[label] || label)}</span></button>`).join("")}
       </div>
     </div>
 
-    <div class="card">
-      <label class="field" for="qa-comment"><strong>Optional comment</strong></label>
-      <p class="muted">Briefly explain why you rated this Q&A this way, or note anything the team should know.</p>
-      <textarea id="qa-comment" placeholder="Write your comments about this Q&A here..."></textarea>
+    <div class="card" data-step="${metrics.length}">
+      <label class="field" for="qa-comment"><strong>Comment (optional)</strong></label>
+      <p class="muted">Why did you rate it this way? Tell us anything else we should know.</p>
+      <textarea id="qa-comment" placeholder="Type your comment here..."></textarea>
     </div>
 
-    <div class="card">
+    <div class="card step-bar" id="step-bar">
+      <p class="step-count" id="step-count" aria-live="polite"></p>
+      <div class="err" id="step-err" role="alert" style="margin-bottom:8px;"></div>
+      <div class="step-btns">
+        <button class="btn-ghost" id="step-back" type="button">← Back</button>
+        <button class="btn-primary" id="step-next" type="button">Next →</button>
+      </div>
+    </div>
+
+    <div class="card" data-step="${metrics.length}">
       <div class="navbtns">
         <button class="btn-ghost" id="prev" ${S.index === 0 ? "disabled" : ""}>← Previous</button>
         <button class="btn-primary" id="next">Submit &amp; next →</button>
         <span class="spacer"></span>
-        <button class="btn-ghost" id="options">Back to welcome</button>
-        <button class="btn-ghost" id="finish">Finish / export</button>
+        <button class="btn-ghost" id="options">Back to start</button>
+        <button class="btn-ghost" id="finish">Stop for now</button>
       </div>
-      <div class="err" id="rate-err" style="margin-top:8px;"></div>
-      <p class="muted" style="margin-top:10px;">Keyboard: <kbd>Y</kbd> = Yes, <kbd>N</kbd> = No, <kbd>Enter</kbd> submits the pair.</p>
+      <div class="err" id="rate-err" role="alert" style="margin-top:8px;"></div>
     </div>
     </div>
     </div>`;
@@ -1607,7 +1801,8 @@ function renderRate() {
     document.getElementById("qa-reference").scrollIntoView({ block: "start", behavior: "smooth" });
   });
   document.getElementById("back-to-ratings").addEventListener("click", () => {
-    const target = app.querySelector(".metric.active") || document.getElementById("metrics");
+    const target = app.querySelector(".rating-form.stepper .metric:not(.step-off)") ||
+      app.querySelector(".metric.active") || document.getElementById("metrics");
     target.scrollIntoView({ block: "start", behavior: "smooth" });
   });
   const sourceCheck = document.getElementById("source-unverifiable");
@@ -1628,7 +1823,7 @@ function renderRate() {
       setBinaryDecision(b.dataset.key, b.dataset.choice);
       const metric = METRICS.find((m) => m.key === b.dataset.key);
       const state = metricState(S.uids[S.index], b.dataset.key);
-      if (completeMetric(state, metric)) {
+      if (completeOnScreen(state, metric)) {
         advanceMetric();
       }
     });
@@ -1654,6 +1849,9 @@ function renderRate() {
   attachMics(app);
 
   document.getElementById("next").addEventListener("click", submitPair);
+  bindHints(app);
+  document.getElementById("step-next").addEventListener("click", stepNext);
+  document.getElementById("step-back").addEventListener("click", stepBack);
   document.getElementById("prev").addEventListener("click", () => {
     storeTime();
     S.index = Math.max(0, S.index - 1);
@@ -1678,14 +1876,19 @@ function renderRate() {
     renderDone();
   });
 
-  activeMetric = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
+  activeMetric = metrics.findIndex((m) => !completeOnScreen(sc[m.key], m));
+  // Phones open on the first question still to answer, or the last step.
+  phoneStep = activeMetric === -1 ? metrics.length : activeMetric;
   if (activeMetric === -1) activeMetric = metrics.length - 1;
+  applyStep(false);
   paintActive();
   setSync(syncState);
   window.scrollTo({ top: 0 });
 }
 
 function paintActive() {
+  // On a phone the highlighted question is the one on screen.
+  if (stepperOn() && phoneStep < displayMetrics().length) activeMetric = phoneStep;
   app.querySelectorAll(".metric").forEach((el) => {
     const on = Number(el.dataset.mi) === activeMetric;
     el.classList.toggle("active", on);
@@ -1699,12 +1902,12 @@ function setSourceUnverifiable(unavailable) {
   const block = app.querySelector('.metric[data-key="qa_alignment"]');
   if (block) {
     block.querySelector("[data-trust-controls]").hidden = state.sourceUnverifiable;
-    block.classList.toggle("rated", completeMetric(state, metric));
+    block.classList.toggle("rated", completeOnScreen(state, metric));
     if (state.sourceUnverifiable && dictation && block.contains(dictation.ta)) stopDictation();
   }
   const status = document.getElementById("source-not-assessed");
   if (status) status.hidden = !state.sourceUnverifiable;
-  document.getElementById("rate-err").textContent = "";
+  setRateErr("");
   save();
 }
 
@@ -1715,12 +1918,16 @@ function setMetricField(key, field, value) {
   const metric = METRICS.find((m) => m.key === key);
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state, metric));
+    block.classList.toggle("rated", completeOnScreen(state, metric));
     block.querySelectorAll('[data-field="' + field + '"]').forEach((b) => {
       b.classList.toggle("sel", b.dataset.value === String(value));
     });
+    if (field === "attribute" && metric && metric.optionalIssues) {
+      const errorPanel = block.querySelector(".error-panel");
+      if (errorPanel) errorPanel.hidden = false;
+    }
   }
-  document.getElementById("rate-err").textContent = "";
+  setRateErr("");
   save();
 }
 
@@ -1741,7 +1948,7 @@ function setBinaryDecision(key, value) {
 
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state, metric));
+    block.classList.toggle("rated", completeOnScreen(state, metric));
     block.querySelectorAll("[data-choice]").forEach((b) => {
       b.classList.toggle("sel", b.dataset.choice === value);
     });
@@ -1749,12 +1956,17 @@ function setBinaryDecision(key, value) {
     if (errorPanel) errorPanel.hidden = value !== errorTrigger(metric);
     block.querySelectorAll("[data-error]").forEach((b) => b.classList.toggle("sel", selectedErrors(state.errors || state.error).includes(b.dataset.error)));
   }
-  document.getElementById("rate-err").textContent = "";
+  setRateErr("");
+  // Question 1 is answered without the video; once it has an answer, show the video.
+  if (METRICS_BEFORE_VIDEO.includes(key)) {
+    const videoPanel = document.getElementById("source-video-panel");
+    if (videoPanel && !videoPanel.open) videoPanel.open = true;
+  }
   save();
-  if (value === errorTrigger(metric) && !completeMetric(state, metric)) {
-    document.getElementById("rate-err").textContent = metric && metric.errorTrigger === "Yes"
-      ? "If you choose Yes, select at least one risk type."
-      : "If you choose No, select at least one problem type.";
+  if (value === errorTrigger(metric) && !completeOnScreen(state, metric)) {
+    setRateErr(metric && metric.errorTrigger === "Yes"
+      ? "You chose Yes. Please pick at least one concern."
+      : "You chose No. Please pick at least one problem.");
   }
 }
 
@@ -1762,16 +1974,22 @@ function toggleMetricError(key, label) {
   const uid = S.uids[S.index];
   const state = metricState(uid, key);
   const errors = selectedErrors(state.errors || state.error);
+  const metricDef = METRICS.find((m) => m.key === key);
+  const none = metricDef && metricDef.optionalIssues ? metricDef.noIssueError : null;
   const idx = errors.indexOf(label);
-  if (idx === -1) errors.push(label);
-  else errors.splice(idx, 1);
+  if (idx === -1) {
+    if (none && label === none) errors.length = 0;          // "No issue" clears the problems
+    else if (none) { const n = errors.indexOf(none); if (n !== -1) errors.splice(n, 1); }
+    errors.push(label);
+  } else errors.splice(idx, 1);
+  if (none && label === none) delete state.otherText;
   state.errors = errors;
   delete state.error;
   const metric = METRICS.find((m) => m.key === key);
 
   const block = app.querySelector('.metric[data-key="' + key + '"]');
   if (block) {
-    block.classList.toggle("rated", completeMetric(state, metric));
+    block.classList.toggle("rated", completeOnScreen(state, metric));
     block.querySelectorAll("[data-error]").forEach((b) => {
       b.classList.toggle("sel", errors.includes(b.dataset.error));
     });
@@ -1783,8 +2001,7 @@ function toggleMetricError(key, label) {
       if (on && label === metric.otherOption) otherBox.querySelector("textarea").focus();
     }
   }
-  document.getElementById("rate-err").textContent =
-    otherIncomplete(state, metric) ? "Describe the problem in the Other box." : "";
+  setRateErr(otherIncomplete(state, metric) ? "Please describe the problem in the Other box." : "");
   save();
 }
 
@@ -1831,7 +2048,7 @@ function startDictation(ta, btn, status) {
   };
   rec.onerror = (ev) => {
     status.textContent = ev.error === "not-allowed" || ev.error === "service-not-allowed"
-      ? "Microphone access was blocked. Allow it in the browser's address bar, or type instead."
+      ? "The microphone is blocked. Allow it in the address bar, or type instead."
       : ev.error === "no-speech" ? "No speech heard. Click the mic and try again." : "Dictation stopped (" + ev.error + ").";
   };
   rec.onend = () => { if (dictation && dictation.rec === rec) stopDictation(); };
@@ -1877,8 +2094,8 @@ function setOtherText(key, text) {
   state.otherText = text;
   const metric = METRICS.find((m) => m.key === key);
   const block = app.querySelector('.metric[data-key="' + key + '"]');
-  if (block) block.classList.toggle("rated", completeMetric(state, metric));
-  if (text.trim()) document.getElementById("rate-err").textContent = "";
+  if (block) block.classList.toggle("rated", completeOnScreen(state, metric));
+  if (text.trim()) setRateErr("");
   save();
 }
 
@@ -1892,7 +2109,7 @@ function setRecommendation(value) {
       b.classList.toggle("sel", b.dataset.recommendV === value);
     });
   }
-  document.getElementById("rate-err").textContent = "";
+  setRateErr("");
   save();
 }
 
@@ -1908,7 +2125,7 @@ function advanceMetric() {
   const sc = S.scores[uid] || {};
   const metrics = displayMetrics();
   const current = metrics[activeMetric];
-  if (current && !completeMetric(sc[current.key], current)) {
+  if (current && !completeOnScreen(sc[current.key], current)) {
     paintActive();
     return;
   }
@@ -1916,11 +2133,11 @@ function advanceMetric() {
     paintActive();
     return;
   }
-  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && !completeMetric(sc[m.key], m));
+  const nextUnrated = metrics.findIndex((m, i) => i > activeMetric && !completeOnScreen(sc[m.key], m));
   if (nextUnrated !== -1) {
     activeMetric = nextUnrated;
   } else {
-    const anyUnrated = metrics.findIndex((m) => !completeMetric(sc[m.key], m));
+    const anyUnrated = metrics.findIndex((m) => !completeOnScreen(sc[m.key], m));
     if (anyUnrated !== -1) activeMetric = anyUnrated;
     else {
       paintActive();
@@ -1939,19 +2156,23 @@ function storeTime() {
 function submitPair() {
   const uid = S.uids[S.index];
   const sc = S.scores[uid] || {};
-  const missing = displayMetrics().filter((m) => !completeMetric(sc[m.key], m));
+  const missing = displayMetrics().filter((m) => !completeOnScreen(sc[m.key], m));
   if (missing.length) {
-    document.getElementById("rate-err").textContent = "Still to rate: " + missing.map((m) =>
-      otherIncomplete(sc[m.key] || {}, m) ? m.label + " (describe the problem in the Other box)" : m.label).join(", ");
+    setRateErr("Still to answer: " + missing.map((m) =>
+      otherIncomplete(sc[m.key] || {}, m) ? qNum(m.key) + " (describe the problem in the Other box)"
+      : issueMissing(sc[m.key], m) && completeMetric(sc[m.key], m) ? qNum(m.key) + " (is there an issue? Pick “No issue” if there is none)"
+      : qNum(m.key)).join(", ") + ".");
     const first = displayMetrics().findIndex((m) => m.key === missing[0].key);
     activeMetric = first;
+    if (stepperOn()) { phoneStep = first; applyStep(true); }
     paintActive();
     const el = app.querySelector('.metric[data-mi="' + first + '"]');
     if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
     return;
   }
   if (!completeRecommendation(S.recommendations && S.recommendations[uid])) {
-    document.getElementById("rate-err").textContent = "Still to rate: caregiver recommendation.";
+    setRateErr("Still to answer: question " + (displayMetrics().length + 1) + ".");
+    if (stepperOn()) { phoneStep = displayMetrics().length; applyStep(false); }
     const recommendation = document.getElementById("recommendation");
     if (recommendation) recommendation.scrollIntoView({ block: "center", behavior: "smooth" });
     return;
@@ -1963,32 +2184,154 @@ function submitPair() {
   renderRate();
 }
 
-document.addEventListener("keydown", (e) => {
-  if (!S || S.index >= S.uids.length) return;
-  if (!document.getElementById("metrics")) return;
-  const tag = (e.target.tagName || "").toLowerCase();
-  if (["input", "textarea", "select", "button"].includes(tag) || e.target.isContentEditable) return;
-
-  const metrics = displayMetrics();
-  const m = metrics[activeMetric];
-  if (!m) return;
-  if (m.optionalIssues && ["y", "n"].includes(e.key.toLowerCase())) return;
-
-  if (e.key.toLowerCase() === "y") {
-    setBinaryDecision(m.key, "Yes");
-    const state = metricState(S.uids[S.index], m.key);
-    if (completeMetric(state, m)) advanceMetric();
-    e.preventDefault();
-  } else if (e.key.toLowerCase() === "n") {
-    setBinaryDecision(m.key, "No");
-    const state = metricState(S.uids[S.index], m.key);
-    if (completeMetric(state, m)) advanceMetric();
-    e.preventDefault();
-  } else if (e.key === "Enter") {
-    submitPair();
-    e.preventDefault();
+// Error text under Submit, mirrored under the phone Back/Next buttons.
+function setRateErr(text) {
+  for (const id of ["rate-err", "step-err"]) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
   }
+}
+
+/* ---------------------------------------------------------------------------
+   "?" help next to each question (display only). Opens on hover, focus or
+   tap; a click/tap keeps it open; Escape or a click elsewhere closes it.
+   --------------------------------------------------------------------------- */
+function hintHtml(id, hint, labelFor, number) {
+  if (!hint) return "";
+  return `<button type="button" class="hint-btn" aria-expanded="false" aria-controls="hint-${id}" aria-label="Help with question ${number}">?</button>
+            <div class="hint-pop" id="hint-${id}" role="region" aria-label="Help with question ${number}" hidden>
+              <p>${escapeAttr(hint.about)}</p>
+              <dl>${Object.entries(hint.levels).map(([value, text]) => `<dt>${escapeAttr(labelFor(value))}</dt><dd>${escapeAttr(text)}</dd>`).join("")}</dl>
+            </div>`;
+}
+
+function setHint(btn, open) {
+  const pop = document.getElementById(btn.getAttribute("aria-controls"));
+  if (!pop) return;
+  if (open) app.querySelectorAll('.hint-btn[aria-expanded="true"]').forEach((b) => { if (b !== btn) setHint(b, false); });
+  else delete btn.dataset.pinned;
+  btn.setAttribute("aria-expanded", open ? "true" : "false");
+  pop.hidden = !open;
+}
+
+function bindHints(root) {
+  root.querySelectorAll(".hint-btn").forEach((btn) => {
+    const pop = document.getElementById(btn.getAttribute("aria-controls"));
+    const head = btn.parentNode;
+    let leaveTimer = null;
+    const hover = (e) => e.pointerType === "mouse";
+    head.addEventListener("pointerover", (e) => {
+      if (!hover(e) || !(e.target === btn || pop.contains(e.target))) return;
+      clearTimeout(leaveTimer);
+      setHint(btn, true);
+    });
+    head.addEventListener("pointerout", (e) => {
+      if (!hover(e) || head.contains(e.relatedTarget)) return;
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(() => { if (!btn.dataset.pinned && document.activeElement !== btn) setHint(btn, false); }, 200);
+    });
+    btn.addEventListener("focus", () => setHint(btn, true));
+    btn.addEventListener("blur", (e) => { if (!head.contains(e.relatedTarget)) setHint(btn, false); });
+    // A tap focuses the button (opening it) and then clicks: the click pins it
+    // open. A second click closes it.
+    btn.addEventListener("click", () => {
+      if (btn.dataset.pinned) { setHint(btn, false); return; }
+      setHint(btn, true);
+      btn.dataset.pinned = "1";
+    });
+  });
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  const open = app.querySelector('.hint-btn[aria-expanded="true"]');
+  if (open) setHint(open, false);
 });
+document.addEventListener("click", (e) => {
+  app.querySelectorAll('.hint-btn[aria-expanded="true"]').forEach((btn) => {
+    if (!btn.parentNode.contains(e.target)) setHint(btn, false);
+  });
+});
+
+/* ---------------------------------------------------------------------------
+   Phones: one question at a time. Display only — the cards, answers and
+   Submit & next are the same as on a computer; CSS hides the other steps.
+   Steps 0..n-1 are the display metrics, step n is the recommendation.
+   --------------------------------------------------------------------------- */
+const PHONE = window.matchMedia ? window.matchMedia("(max-width: 620px)") : null;
+let phoneStep = 0;
+function stepperOn() {
+  return Boolean(PHONE && PHONE.matches && app.querySelector && app.querySelector(".rating-form"));
+}
+
+// Plain words for what a question still needs before Next.
+function whatIsMissing(value, metric) {
+  const v = value || {};
+  if (otherIncomplete(v, metric)) return "Please describe the problem in the Other box.";
+  if (hasAttributeScale(metric) && !isSourceUnverifiable(v, metric) && !v.attribute) return "Please choose an answer first.";
+  if (issueMissing(v, metric)) return "Please say if there is an issue. Pick “No issue” if there is none.";
+  if (!metric.optionalIssues && !completeBinary(binaryValue(v))) return "Please choose Yes or No first.";
+  if (!metric.optionalIssues && needsErrorSelection(v, metric)) {
+    return metric.errorTrigger === "Yes" ? "Please pick at least one concern." : "Please pick at least one problem.";
+  }
+  return "Please answer this question first.";
+}
+
+function applyStep(scroll) {
+  const form = app.querySelector && app.querySelector(".rating-form");
+  if (!form) return;
+  const on = Boolean(PHONE && PHONE.matches);
+  form.classList.toggle("stepper", on);
+  const last = displayMetrics().length;
+  phoneStep = Math.max(0, Math.min(last, phoneStep));
+  form.querySelectorAll("[data-step]").forEach((el) => {
+    el.classList.toggle("step-off", Number(el.dataset.step) !== phoneStep);
+  });
+  document.getElementById("step-count").textContent = "Question " + (phoneStep + 1) + " of " + (last + 1);
+  const back = document.getElementById("step-back");
+  back.textContent = phoneStep === 0 ? "← Previous Q&A" : "← Back";
+  back.disabled = phoneStep === 0 && S.index === 0;
+  document.getElementById("step-next").hidden = phoneStep === last;
+  if (on && scroll) {
+    const card = form.querySelector('[data-step="' + phoneStep + '"]');
+    if (card) card.scrollIntoView({ block: "start", behavior: "smooth" });
+  }
+}
+
+function goToStep(step) {
+  setRateErr("");
+  phoneStep = step;
+  activeMetric = Math.min(step, displayMetrics().length - 1);
+  applyStep(true);
+  paintActive();
+}
+
+function stepNext() {
+  const metrics = displayMetrics();
+  const m = metrics[phoneStep];
+  if (m) {
+    const value = (S.scores[S.uids[S.index]] || {})[m.key];
+    if (!completeOnScreen(value, m)) {
+      setRateErr(whatIsMissing(value, m));
+      return;
+    }
+  }
+  goToStep(Math.min(phoneStep + 1, metrics.length));
+}
+
+function stepBack() {
+  if (phoneStep > 0) return goToStep(phoneStep - 1);
+  const prev = document.getElementById("prev");
+  if (prev && !prev.disabled) prev.click();
+}
+
+if (PHONE) {
+  const onChange = () => { if (S && app.querySelector(".rating-form")) { applyStep(false); paintActive(); } };
+  if (PHONE.addEventListener) PHONE.addEventListener("change", onChange);
+  else if (PHONE.addListener) PHONE.addListener(onChange);
+}
+
+// Rating is by mouse or touch only: there are no keyboard shortcuts (Y, N, Enter).
 
 /* ===========================================================================
    Screen: done
@@ -2002,27 +2345,25 @@ function renderDone() {
   app.innerHTML = `
     <div class="banner ${complete ? "banner-ok" : "banner-info"}">
       ${complete
-        ? "<b>All done — thank you!</b> You rated every pair in your set."
-        : "<b>Progress saved.</b> You rated " + done + " of " + S.uids.length + " pairs. Return to this link with the same name to carry on."}
+        ? "<b>All done. Thank you!</b> You rated all your Q&As."
+        : "<b>Your work is saved.</b> You rated " + done + " of " + S.uids.length + " Q&As. To finish, come back to this link and type the same name."}
     </div>
 
     <div class="card">
-      <h2>Your session</h2>
+      <h2>Your progress</h2>
       <table>
-        <tr><td>Annotator</td><td><b>${S.annotator}</b></td></tr>
-        <tr><td>Session ID</td><td><code>${S.sessionId}</code></td></tr>
-        <tr><td>Assignment</td><td>Version ${S.evalVersion}</td></tr>
-        <tr><td>Pairs fully rated</td><td class="num"><b>${done}</b> / ${S.uids.length}</td></tr>
+        <tr><td>Name</td><td><b>${escapeAttr(S.annotator)}</b></td></tr>
+        <tr><td>Q&As done</td><td class="num"><b>${done}</b> of ${S.uids.length}</td></tr>
       </table>
       <div class="sync" id="sync" style="margin-top:12px;"></div>
-      ${backendOn ? "" : '<p class="muted" style="margin-top:8px;">No results server is configured, so <b>you must download your ratings and send them to the research team</b>, otherwise they are only in this browser.</p>'}
+      ${backendOn ? '<p class="muted" style="margin-top:8px;">Your ratings go to the research team on their own. You do not need to download anything.</p>' : '<p class="muted" style="margin-top:8px;">Your ratings are only in this browser. <b>Please download them and send the file to the research team.</b></p>'}
 
       <div class="navbtns">
-        <button class="btn-primary" id="dl-csv">Download CSV</button>
-        <button class="btn-ghost" id="dl-json">Download JSON</button>
+        <button class="${backendOn ? "btn-ghost" : "btn-primary"}" id="dl-csv">Download a copy (spreadsheet)</button>
+        <button class="btn-ghost" id="dl-json">Download a copy (data file)</button>
         ${done < S.uids.length ? '<button class="btn-ghost" id="resume">Continue rating</button>' : ""}
         <span class="spacer"></span>
-        <button class="btn-ghost" id="restart">Start a different session</button>
+        <button class="btn-ghost" id="restart">Start over with a different name</button>
       </div>
     </div>`;
 
@@ -2035,7 +2376,7 @@ function renderDone() {
     renderRate();
   });
   document.getElementById("restart").addEventListener("click", () => {
-    if (S.queue.length && !confirm("Some ratings have not reached the server yet. Download them first? Click Cancel to go back and download.")) return;
+    if (S.queue.length && !confirm("Some ratings have not been sent yet. Press OK to leave anyway, or Cancel to stay and download them first.")) return;
     S = null;
     renderWelcome();
   });
@@ -2074,17 +2415,21 @@ Promise.all([loadJson("qa_data.json"), loadJson("versions.json"), loadJson("tran
       groups.every((uids) => Array.isArray(uids) && uids.length === perGroup) &&
       new Set(allUids).size === allUids.length;
     if (!wholeBatches || !completeGroups || missing.length) {
-      app.innerHTML = '<div class="card"><h2>The Q&A versions are incomplete</h2>' +
-        '<p class="muted">Rebuild them with <code>python eval-v5-netlify/build_versions.py</code>.</p></div>';
+      app.innerHTML = '<div class="card"><h2>Sorry, this page is not ready yet</h2>' +
+        '<p>Please contact the research team.</p>' +
+        '<details class="more-details"><summary>Details for the research team</summary>' +
+        '<p class="muted">The Q&amp;A versions are incomplete. Rebuild them with <code>python eval-v5-netlify/build_versions.py</code>.</p></details></div>';
       return;
     }
     renderWelcome();
   })
   .catch((e) => {
-    app.innerHTML = '<div class="card"><h2>Could not load the Q&As</h2>' +
-      '<p class="muted">' + String(e) + '</p>' +
+    app.innerHTML = '<div class="card"><h2>Sorry, the Q&As did not load</h2>' +
+      '<p>Please check your internet and reload the page. If it still does not work, contact the research team.</p>' +
+      '<details class="more-details"><summary>Details for the research team</summary>' +
+      '<p class="muted">' + escapeAttr(String(e)) + '</p>' +
       '<p class="muted">Rebuild the data files with <code>python eval-v5-netlify/build_versions.py</code>, and serve this folder over HTTP ' +
-      '(<code>python -m http.server</code>) rather than opening the file directly — <code>file://</code> blocks the fetch.</p></div>';
+      '(<code>python -m http.server</code>) rather than opening the file directly — <code>file://</code> blocks the fetch.</p></details></div>';
   });
 </script>
 </body>

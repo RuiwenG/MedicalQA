@@ -93,9 +93,9 @@ assert.doesNotMatch(bounded, /<a\b|transcript-time|transcript-line|Open video at
 assert.match(bounded, /&lt;img src=x onerror=alert\(1\)&gt; INSIDE_RANGE<\/div>/, 'captions form continuous plain text');
 assert.match(run('sourceTranscript({dataset: "Test", video: 1, t: 80, te: 90})'), /No transcript text is available in this time range/);
 const untimed = run('sourceTranscript({dataset: "Test", video: 1})');
-assert.match(untimed, /no bounded start and end timestamps/);
+assert.match(untimed, /do not know where the clip starts and ends/);
 assert.doesNotMatch(untimed, /BEFORE_RANGE|INSIDE_RANGE|AFTER_RANGE|[Ff]ull video transcript/);
-assert.match(run('sourceTranscript({dataset: "Missing", video: 1, t: 10, te: 20})'), /transcript is currently unavailable/);
+assert.match(run('sourceTranscript({dataset: "Missing", video: 1, t: 10, te: 20})'), /transcript is not available right now/);
 assert.match(run(`insertVideoPanel([], [], null, {dataset: 'Test', video: 1})`), /Read the clip transcript/,
   'transcript still renders without a video link');
 for (const pair of ctx.input.pairs) {
@@ -169,14 +169,14 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
 
   run('renderWelcome()');
   assert.doesNotMatch(welcomeHtml, /Provisional Q&amp;A selection|Provisional Q&A selection/, 'the selected pilot has no placeholder banner');
-  assert.match(welcomeHtml, /You will receive <b>5 Q&As<\/b>/);
+  assert.match(welcomeHtml, /You will read <b>5 short Q&As<\/b>/);
   assert.match(welcomeHtml, />Continue</);
   assert.equal(elements.get('name').value, '', 'the v4 name is not prefilled');
   assert.ok(welcomeHtml.indexOf('id="name"') < welcomeHtml.indexOf('id="role-healthcare"'));
   assert.equal((welcomeHtml.match(/type="checkbox" id="role-/g) || []).length, 4, 'one checkbox per role');
   assert.equal((welcomeHtml.match(/id="role-detail-[a-z]+"/g) || []).length, 4, 'one optional description box per role');
   for (const label of ['Healthcare professional', 'Medical student', 'Family/friend dementia caregiver', 'Others']) assert.match(welcomeHtml, new RegExp(label));
-  assert.match(welcomeHtml, /Select all that apply/);
+  assert.match(welcomeHtml, /Check all that apply/);
   elements.get('start').click();
   assert.match(elements.get('start-err').textContent, /enter your name/);
   elements.get('name').value = 'Jane Doe'; elements.get('name').handlers.input();
@@ -240,7 +240,7 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   // Reload: the same name resumes the same assignment without a new claim.
   run('S = null; renderWelcome()');
   assert.equal(elements.get('name').value, 'Jane Doe');
-  assert.match(elements.get('resume-note').innerHTML, /Welcome back — 1 of 5/);
+  assert.match(elements.get('resume-note').innerHTML, /Welcome back! You have rated 1 of 5/);
   assert.equal(elements.get('role-healthcare').checked, true, 'the saved roles are ticked again');
   assert.equal(elements.get('role-family').checked, true);
   assert.equal(elements.get('role-student').checked, false);
@@ -255,7 +255,7 @@ storage.set('dqa:lastopts:v4', '{"name":"Old v4 name"}');
   // A different person in the same browser gets their own claim and order.
   run('S = null; renderWelcome()');
   elements.get('name').value = 'Sam Lee'; elements.get('name').handlers.input();
-  assert.match(elements.get('resume-note').innerHTML, /New session: 5 pairs/);
+  assert.match(elements.get('resume-note').innerHTML, /New session: 5 Q&As/);
   elements.get('role-other').checked = true; elements.get('role-other').handlers.change();
   assert.equal(elements.get('role-detail-field-other').hidden, false, 'ticking Others shows its box');
   elements.get('dementia-experience').value = 'none';
