@@ -231,11 +231,6 @@
   .rating-form .field, .rating-form textarea { font-size: 1rem; }
   .source-materials .muted, .other-box .muted { font-size: .91rem; }
   .source-materials { margin-bottom: 12px; }
-  .source-instruction {
-    background: #edf4fc; color: var(--navy); border-left: 4px solid #2c5aa0;
-    border-radius: 6px; padding: 12px 14px; margin-bottom: 12px;
-    font-size: .91rem; line-height: 1.6;
-  }
   .source-video summary, .source-transcript summary {
     cursor: pointer; color: var(--navy); font-weight: 700; margin-bottom: 10px;
     padding: 12px 14px; background: #f7f8fb; border: 1px solid #cfd6e2; border-radius: 8px;
@@ -318,12 +313,12 @@
     .card { padding: 16px 14px; }
   }
 
-  /* --- phones: side-by-side Q&A and one rating at a time ----------------- */
+  /* --- phones: Q&A above one rating at a time ---------------------------- */
   .step-bar { display: none; }
   .rating-form button { font-size: revert; }
   .rating-actions .navbtns button { font-size: 1rem; }
   @media (max-width: 620px) {
-    .rating-layout { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 12px; }
+    .rating-layout { gap: 16px; }
     .qa-reference { padding: 12px 10px; }
     .qa-reference:has(.qa-answer-toggle[aria-expanded="false"]) #atext {
       display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
@@ -1391,7 +1386,6 @@ function sourceMaterials(source, pair, scores) {
   return `
     <div class="source-materials">
       ${source ? `
-      <p class="source-instruction">After you answer <strong>${qNum("qa_standalone")}</strong>, <strong>watch the ${source.hasClip ? "video clip" : "video"} below</strong>. You need it for <strong>${qNum("qa_alignment")}</strong>.</p>
       <details class="source-video" id="source-video-panel" ${openVideo ? "open" : ""}>
         <summary><span class="video-action-show">Show the ${source.hasClip ? "video clip" : "video"}</span><span class="video-action-hide">Hide the ${source.hasClip ? "video clip" : "video"}</span>${source.timeLabel ? ` — ${source.approx ? "about " : ""}${source.timeLabel}` : ""}</summary>
         <p><a class="vidlink-inline" href="${escapeAttr(source.url)}" target="_blank" rel="noopener noreferrer">Video not loading? Open YouTube app</a></p>
@@ -1399,8 +1393,7 @@ function sourceMaterials(source, pair, scores) {
         ${clipNote ? `<p class="muted" style="margin:8px 0 0 0;">${clipNote}</p>` : ""}
         ${sourceCheck}
       </details>
-      ` : `<p class="source-instruction">After you answer <strong>${qNum("qa_standalone")}</strong>, read the transcript below.</p>
-      ${sourceCheck}`}
+      ` : sourceCheck}
       ${sourceTranscript(pair)}
     </div>`;
 }
@@ -1780,10 +1773,7 @@ function applyStep(scroll) {
   back.disabled = phoneStep === 0 && S.index === 0;
   const next = document.getElementById("step-next");
   next.textContent = phoneStep === last ? document.getElementById("next").textContent : "Next →";
-  if (on && scroll) {
-    const card = form.querySelector('[data-step="' + phoneStep + '"]');
-    if (card) card.scrollIntoView({ block: "start", behavior: "smooth" });
-  }
+  if (on && scroll) window.scrollTo({ top: 0 });
 }
 
 function goToStep(step) {
