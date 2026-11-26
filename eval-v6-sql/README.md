@@ -36,7 +36,8 @@ read-only summaries of the collected v6 responses.
 
 The browser calls `claim_version_v6` and sends ratings to `ratings_v6`.
 `qna_care_safety_issue` stores the optional safety note and `evaluator_comment`
-stores the optional explanation for a **No** recommendation. A video skip sets
+stores the optional explanation for a **With reservations** or **No**
+recommendation. A video skip sets
 `source_unverifiable` and leaves the alignment response empty. **Cannot
 determine** is a separate response. `ratings_v6_final` shows the latest rating
 for each Q&A and assignment.

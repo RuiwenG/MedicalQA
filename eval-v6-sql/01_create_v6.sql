@@ -257,7 +257,7 @@ create table public.ratings_v6 (
         constraint ratings_v6_recommendation_ck check (
             caregiver_recommendation in ('Yes', 'With reservations', 'No')
         ),
-    -- Optional explanation shown for a No recommendation.
+    -- Optional explanation for a With reservations or No recommendation.
     evaluator_comment             text,
 
     seconds_spent integer

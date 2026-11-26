@@ -454,6 +454,16 @@ function displayMetrics() {
 }
 
 const RECOMMENDATION = ["Yes", "With reservations", "No"];
+const RECOMMENDATION_FOLLOWUPS = {
+  "With reservations": {
+    label: "What are your reservations? (Optional)",
+    hint: "Briefly explain any concerns you have about recommending this Q&A as written.",
+  },
+  No: {
+    label: "Why wouldn’t you recommend it? (Optional)",
+    hint: "Briefly explain what makes the Q&A hard to recommend as written.",
+  },
+};
 const qNum = (key) => {
   const order = [...METRICS.filter((m) => METRICS_BEFORE_VIDEO.includes(m.key)), ...METRICS.filter((m) => !METRICS_BEFORE_VIDEO.includes(m.key))];
   return "question " + (order.findIndex((m) => m.key === key) + 1);
@@ -651,7 +661,7 @@ function makeSession(name, claim) {
     index: 0,
     scores: {},        // uid -> { metricKey: { optional attribute, errors, binary } }
     recommendations: {}, // uid -> caregiver recommendation label
-    recommendationNotes: {}, // uid -> optional explanation for a No answer
+    recommendationNotes: {}, // uid -> optional recommendation follow-up
     comments: {},      // uid -> general note from earlier previews
     seconds: {},       // uid -> seconds spent
     queue: [],         // rows waiting to reach Supabase
@@ -936,7 +946,9 @@ function concernText(value, metric) {
 }
 
 function recommendationNote(uid) {
-  return S.recommendations[uid] === "No" ? (S.recommendationNotes[uid] || "").trim() : "";
+  return Object.hasOwn(RECOMMENDATION_FOLLOWUPS, S.recommendations[uid])
+    ? (S.recommendationNotes[uid] || "").trim()
+    : "";
 }
 
 function evaluatorComment(uid) {
@@ -1472,9 +1484,9 @@ function renderRate() {
     <div class="metric" id="recommendation" data-step="${metrics.length}">
       <span class="metric-name" id="qname-recommendation">${metrics.length + 1}. Would you recommend this Q&A to a dementia caregiver as it is currently written?</span>
       ${ratingOptions("recommendation", RECOMMENDATION, recommendation)}
-      <div class="other-box" id="recommendation-note-box" ${recommendation === "No" ? "" : "hidden"}>
-        <label class="field" for="recommendation-note">Why wouldn’t you recommend it? (Optional)</label>
-        <p class="muted" id="recommendation-note-hint">Briefly explain what makes the Q&amp;A hard to recommend as written.</p>
+      <div class="other-box" id="recommendation-note-box" hidden>
+        <label class="field" id="recommendation-note-label" for="recommendation-note"></label>
+        <p class="muted" id="recommendation-note-hint"></p>
         <textarea id="recommendation-note" aria-describedby="recommendation-note-hint" placeholder="Briefly explain why...">${escapeAttr(S.recommendationNotes[uid] || "")}</textarea>
       </div>
     </div>
@@ -1532,6 +1544,7 @@ function renderRate() {
     metricState(uid, "qa_mental_health").concern = event.target.value;
     save();
   });
+  updateRecommendationFollowup(recommendation);
   document.getElementById("recommendation-note").addEventListener("input", (event) => {
     S.recommendationNotes[uid] = event.target.value;
     save();
@@ -1683,14 +1696,22 @@ function attachMics(root) {
   });
 }
 
+function updateRecommendationFollowup(value) {
+  const noteBox = document.getElementById("recommendation-note-box");
+  noteBox.hidden = !Object.hasOwn(RECOMMENDATION_FOLLOWUPS, value);
+  if (noteBox.hidden) {
+    if (dictation && noteBox.contains(dictation.ta)) stopDictation();
+    return;
+  }
+  const { label, hint } = RECOMMENDATION_FOLLOWUPS[value];
+  document.getElementById("recommendation-note-label").textContent = label;
+  document.getElementById("recommendation-note-hint").textContent = hint;
+}
+
 function setRecommendation(value) {
   const uid = S.uids[S.index];
   S.recommendations[uid] = value;
-  const noteBox = document.getElementById("recommendation-note-box");
-  if (noteBox) {
-    noteBox.hidden = value !== "No";
-    if (noteBox.hidden && dictation && noteBox.contains(dictation.ta)) stopDictation();
-  }
+  updateRecommendationFollowup(value);
   setRateErr("");
   save();
   updateRatingProgress();
