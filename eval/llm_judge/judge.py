@@ -139,6 +139,17 @@ MODELS = {
     # GLM 5.3 Flash on the lab Mac Studio (free). Thinks by default.
     "glm-5.3-flash": {"backend": "macstudio",
                       "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0}},
+    # Local MLX copies of the two OpenRouter judges, on the same Mac Studio. Not
+    # bit-identical to the OpenRouter runs (gpt-oss: mxfp4 weights instead of bf16;
+    # Gemma 4: 8-bit instead of DeepInfra fp8).
+    "gpt-oss-120b-mxfp4-bf16": {"backend": "macstudio",
+                                "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0}},
+    "gemma-4-31b-it-8bit": {"backend": "macstudio",
+                            "prices": {"hit": 0.0, "miss": 0.0, "out": 0.0},
+                            # Thinking is off unless the chat template is told to turn it
+                            # on (reasoning_effort is ignored), matching the OpenRouter
+                            # run's reasoning.enabled.
+                            "extra": {"chat_template_kwargs": {"enable_thinking": True}}},
 }
 
 # Kept as a name so judge_no_transcript.py and older callers keep working.
@@ -582,7 +593,7 @@ def main():
     ap.add_argument("--spans", nargs="+", metavar="JSON",
                     help="clip mode: eval/widened_timestamps/<approach>.json files; each pair "
                          "uses its widened span (t, te). Pairs with no span are skipped and listed")
-    ap.add_argument("--reasoning-effort", choices=["low", "high", "max"], default=None,
+    ap.add_argument("--reasoning-effort", choices=["low", "medium", "high", "max"], default=None,
                     help="DeepSeek and Mac Studio only: thinking effort (DeepSeek's default is "
                          "high; GLM on oMLX thinks 3-5k tokens by default, ~250 at low). "
                          "Put it in --tag too, so runs at different levels stay apart")

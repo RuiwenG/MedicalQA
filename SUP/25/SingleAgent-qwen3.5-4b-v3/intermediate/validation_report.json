@@ -1,0 +1,347 @@
+{
+  "expected_pairs": 42,
+  "parsed_pairs": 42,
+  "transcript_end_sec": 3564.28,
+  "timestamp_lines": [
+    "Timestamp 1: 1:06-1:20",
+    "Timestamp 2: 2:13-2:35",
+    "Timestamp 3: 3:07-3:56",
+    "Timestamp 4: 26:08-26:56",
+    "Timestamp 5: 32:29-33:29",
+    "Timestamp 6: 34:22-36:14",
+    "Timestamp 7: 39:33-40:12",
+    "Timestamp 8: 40:44-41:24",
+    "Timestamp 9: 45:09-45:40",
+    "Timestamp 10: 45:49-46:03",
+    "Timestamp 11: 53:11-54:04",
+    "Timestamp 12: 56:05-56:37",
+    "Timestamp 13: 50:55-51:41",
+    "Timestamp 14: 44:58-45:04",
+    "Timestamp 15: 39:44-40:23",
+    "Timestamp 16: 27:17-27:42",
+    "Timestamp 17: 54:41-54:50",
+    "Timestamp 18: 40:01-40:07",
+    "Timestamp 19: 52:12-52:24",
+    "Timestamp 20: 56:25-56:37",
+    "Timestamp 21: 35:21-35:47",
+    "Timestamp 22: 40:44-41:01",
+    "Timestamp 23: 41:13-41:24",
+    "Timestamp 24: 41:40-41:46",
+    "Timestamp 25: 45:49-46:03",
+    "Timestamp 26: 39:33-39:54",
+    "Timestamp 27: 56:05-56:26",
+    "Timestamp 28: 55:23-55:31",
+    "Timestamp 29: 52:24-52:35",
+    "Timestamp 30: 32:48-33:29",
+    "Timestamp 31: 42:06-42:26",
+    "Timestamp 32: 45:09-45:40",
+    "Timestamp 33: 26:51-26:56",
+    "Timestamp 34: 44:26-44:34",
+    "Timestamp 35: 46:53-47:06",
+    "Timestamp 36: 54:41-54:50",
+    "Timestamp 37: 55:52-55:56",
+    "Timestamp 38: 40:01-40:07",
+    "Timestamp 39: 53:11-53:50",
+    "Timestamp 40: 40:44-41:01",
+    "Timestamp 41: 53:11-54:04",
+    "Timestamp 42: 46:38-46:45"
+  ],
+  "pairs": [
+    {
+      "question": "What is the name of the upcoming event the hosts are preparing for in two weeks?",
+      "answer": "The event is called the PAC conference. It is a major gathering that will include many speakers, self-care breaks, and a final live show from the GEM show.",
+      "timestamp": "1:06-1:20",
+      "time_start_sec": 66,
+      "time_end_sec": 80
+    },
+    {
+      "question": "How can viewers purchase tickets for the PAC conference?",
+      "answer": "Ticket sales are still happening daily. Viewers should go to the website tipasnow.com. They will be redirected to the HUVA website to complete the purchase.",
+      "timestamp": "2:13-2:35",
+      "time_start_sec": 133,
+      "time_end_sec": 155
+    },
+    {
+      "question": "What resources are available to help people who are new to using the HUVA platform?",
+      "answer": "A video tutorial is available on the help page and can be watched in the chat. Additionally, there is a free Twitch channel where experienced users can share tips and help beginners learn how to use the platform.",
+      "timestamp": "3:07-3:56",
+      "time_start_sec": 187,
+      "time_end_sec": 236
+    },
+    {
+      "question": "Why is it important for caregivers to recognize that the person with dementia is grieving?",
+      "answer": "People with dementia are grieving the loss of their former selves and the memories of who they used to be. This daily loss causes deep sadness, and caregivers should understand that the person is not just \"forgetting\" but is actively mourning a relationship that no longer exists in the same way.",
+      "timestamp": "26:08-26:56",
+      "time_start_sec": 1568,
+      "time_end_sec": 1616
+    },
+    {
+      "question": "What is a harmful thing caregivers might accidentally do when a resident asks about a deceased loved one?",
+      "answer": "Caregivers should avoid bluntly stating that the loved one has been dead for years. Doing this can cause the resident to feel betrayed and traumatized, as they may still be emotionally present with that person. Instead, caregivers should allow the resident to talk about the person freely without correcting their reality.",
+      "timestamp": "32:29-33:29",
+      "time_start_sec": 1949,
+      "time_end_sec": 2009
+    },
+    {
+      "question": "How can caregivers manage sensory overload caused by loud noises in a facility?",
+      "answer": "Caregivers can use noise-canceling headphones or provide quiet spaces. It is also helpful to identify specific high-pitched sounds, like cell phones or walkie-talkies, that might trigger agitation, and to minimize unnecessary noise in common areas.",
+      "timestamp": "34:22-36:14",
+      "time_start_sec": 2062,
+      "time_end_sec": 2174
+    },
+    {
+      "question": "What was the main reason Effie decided to organize a river tubing trip for her residents?",
+      "answer": "A resident named Berlin expressed that she felt completely free and happy only when she was in the water. Effie realized that despite her physical limitations, Berlin's desire for freedom was valid and decided to arrange the trip to meet that need.",
+      "timestamp": "39:33-40:12",
+      "time_start_sec": 2373,
+      "time_end_sec": 2412
+    },
+    {
+      "question": "How did Effie and her team ensure the safety of the residents during the river tubing excursion?",
+      "answer": "They partnered with the local Ground Search and Rescue team, who accompanied the group down the river. Effie also secured proper insurance, obtained permission from families, and created a detailed safety plan before launching the activity.",
+      "timestamp": "40:44-41:24",
+      "time_start_sec": 2444,
+      "time_end_sec": 2484
+    },
+    {
+      "question": "What specific actions did Effie take when a resident became upset about missing out on fun activities?",
+      "answer": "Instead of dismissing the resident's feelings or forcing a quick fix, Effie sat down, listened to the resident's specific complaints, and asked questions to understand exactly what was bothering them. She matched the resident's emotional state and curiosity to find the root cause of the distress.",
+      "timestamp": "45:09-45:40",
+      "time_start_sec": 2709,
+      "time_end_sec": 2740
+    },
+    {
+      "question": "What is the purpose of the \"bucket list\" Effie started for her residents?",
+      "answer": "The bucket list is a collection of activities that residents want to do. By writing them down, the team can identify specific desires, like an air show or a trip to Abbotsford, and connect them with volunteers to make those experiences possible.",
+      "timestamp": "45:49-46:03",
+      "time_start_sec": 2749,
+      "time_end_sec": 2763
+    },
+    {
+      "question": "How does Effie's facility handle the Christmas holiday to reduce stress for residents?",
+      "answer": "They avoid loud decorations and flashing lights. For residents who need lower stimulation, they do not bring them to the noisy tree-lighting ceremony. Instead, they decorate the tree quietly in their own units and invite only those who are comfortable with the activity.",
+      "timestamp": "53:11-54:04",
+      "time_start_sec": 3191,
+      "time_end_sec": 3244
+    },
+    {
+      "question": "What strategy does Effie's facility use to manage family visits during the holidays?",
+      "answer": "They run a family council to discuss visitation plans months in advance. Families are encouraged to limit the number of visitors to avoid overwhelming the resident, or they can send a video recording of a large gathering so the resident can enjoy the celebration in their own time and space.",
+      "timestamp": "56:05-56:37",
+      "time_start_sec": 3365,
+      "time_end_sec": 3397
+    },
+    {
+      "question": "Why is it difficult for caregivers to attend large holiday gatherings with their loved ones who have dementia?",
+      "answer": "Large gatherings with flashing lights, crowds, and loud noises can be terrifying and overwhelming for a person with dementia. It feels like asking someone who cannot walk to dance at a party, ignoring their physical limitations and need for a calm environment.",
+      "timestamp": "50:55-51:41",
+      "time_start_sec": 3055,
+      "time_end_sec": 3101
+    },
+    {
+      "question": "What is a key lesson caregivers can learn from Effie's story about organizing events?",
+      "answer": "The lesson is that even small, seemingly impossible events can happen if you are willing to listen to the resident's desires and take action. Effie learned that the crazier the idea, the more she wanted to try it to bring joy to her residents.",
+      "timestamp": "44:58-45:04",
+      "time_start_sec": 2698,
+      "time_end_sec": 2704
+    },
+    {
+      "question": "How can caregivers support a resident who is experiencing sensory overload without trying to \"fix\" them?",
+      "answer": "Caregivers should validate the resident's feelings by asking what is wrong rather than saying everything will be okay. By listening and understanding the specific source of their distress, caregivers can help the person feel heard and supported rather than dismissed.",
+      "timestamp": "39:44-40:23",
+      "time_start_sec": 2384,
+      "time_end_sec": 2423
+    },
+    {
+      "question": "What role does the person with dementia play in the grieving process described by Effie?",
+      "answer": "The person with dementia is grieving the loss of their identity and the relationships they had. They are mourning the person they used to be and the memories associated with them, which is a devastating part of the disease that is often overlooked.",
+      "timestamp": "27:17-27:42",
+      "time_start_sec": 1637,
+      "time_end_sec": 1662
+    },
+    {
+      "question": "How did Effie's facility adapt their Christmas tree decoration to accommodate residents with dementia?",
+      "answer": "They attached the Christmas tree to the wall so that residents could touch and decorate it themselves. This allowed them to feel involved and decorated without the stress of managing complex decorations or navigating crowded spaces.",
+      "timestamp": "54:41-54:50",
+      "time_start_sec": 3281,
+      "time_end_sec": 3290
+    },
+    {
+      "question": "What is the significance of the resident saying she feels free in the water?",
+      "answer": "It highlights that for some residents, water provides a unique sense of freedom and relief from the physical constraints of their bodies and minds. Recognizing this specific need allows caregivers to find creative ways to fulfill it, even if it seems unusual.",
+      "timestamp": "40:01-40:07",
+      "time_start_sec": 2401,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "Why is it important for caregivers to set boundaries regarding holiday participation?",
+      "answer": "Setting boundaries protects the caregiver's mental health and prevents burnout. It is okay to choose a quiet, peaceful holiday with just a few people or pets, rather than forcing oneself into a chaotic environment that does not suit the resident's needs.",
+      "timestamp": "52:12-52:24",
+      "time_start_sec": 3132,
+      "time_end_sec": 3144
+    },
+    {
+      "question": "How can families help residents with dementia experience the holidays without feeling overwhelmed?",
+      "answer": "Families can record videos of their large gatherings and share them with the resident. This allows the resident to enjoy the festive atmosphere and see their loved ones without the pressure of being in a loud, crowded room.",
+      "timestamp": "56:25-56:37",
+      "time_start_sec": 3385,
+      "time_end_sec": 3397
+    },
+    {
+      "question": "What is the impact of noise-canceling headphones on a non-dementia person in a noisy facility?",
+      "answer": "Even without dementia, the constant noise of TVs, oxygen equipment, and hallways can cause significant stress and exhaustion. Wearing noise-canceling headphones is necessary for the brain to settle down and function properly in such an environment.",
+      "timestamp": "35:21-35:47",
+      "time_start_sec": 2121,
+      "time_end_sec": 2147
+    },
+    {
+      "question": "How did Effie's team involve the search and rescue team in the tubing trip?",
+      "answer": "Effie contacted the Comox Valley Ground Search and Rescue team and offered them the opportunity to accompany the residents. This provided them with a chance to train in swift water rescue while supporting the residents' recreational activity.",
+      "timestamp": "40:44-41:01",
+      "time_start_sec": 2444,
+      "time_end_sec": 2461
+    },
+    {
+      "question": "What was the outcome of Effie's initial attempt to organize the tubing trip?",
+      "answer": "Initially, the executive director refused the idea due to insurance concerns. However, Effie persisted by jumping through various administrative hoops, securing insurance, and creating safety plans, eventually making the trip a reality.",
+      "timestamp": "41:13-41:24",
+      "time_start_sec": 2473,
+      "time_end_sec": 2484
+    },
+    {
+      "question": "How did Effie's facility handle the issue of residents wanting to participate in activities they physically cannot do?",
+      "answer": "They modified the activity to match the residents' abilities. For example, they started at a calm spot near the riverbed and launched tubes gently, ensuring that even residents who could not walk safely could still participate.",
+      "timestamp": "41:40-41:46",
+      "time_start_sec": 2500,
+      "time_end_sec": 2506
+    },
+    {
+      "question": "What is the benefit of having a resident-led bucket list?",
+      "answer": "It empowers the resident by giving them a voice and a clear goal. It transforms the care team's role from just providing basic needs to actively pursuing the resident's personal dreams and desires.",
+      "timestamp": "45:49-46:03",
+      "time_start_sec": 2749,
+      "time_end_sec": 2763
+    },
+    {
+      "question": "How does Effie's facility manage the emotional distress of residents who feel excluded from fun activities?",
+      "answer": "Effie creates a safe space for the resident to express their frustration. By listening and validating their feelings, she helps the resident feel understood and valued, which reduces the intensity of their negative emotions.",
+      "timestamp": "39:33-39:54",
+      "time_start_sec": 2373,
+      "time_end_sec": 2394
+    },
+    {
+      "question": "What is the role of the family council in managing holiday expectations?",
+      "answer": "The family council meets months in advance to discuss visitation limits. They educate families that a resident may not need a large crowd and suggest alternatives like sending video recordings of big parties to ensure everyone feels included.",
+      "timestamp": "56:05-56:26",
+      "time_start_sec": 3365,
+      "time_end_sec": 3386
+    },
+    {
+      "question": "Why is it important to avoid flashing lights and loud decorations for residents with dementia?",
+      "answer": "Flashing lights and loud noises can trigger confusion, anxiety, and agitation. These stimuli can overwhelm the resident's senses, making it difficult for them to process information and remain calm during the holiday season.",
+      "timestamp": "55:23-55:31",
+      "time_start_sec": 3323,
+      "time_end_sec": 3331
+    },
+    {
+      "question": "How can caregivers balance the desire to celebrate with the need to protect the resident's well-being?",
+      "answer": "Caregivers can choose to celebrate in a way that suits the resident's needs, such as having a small, quiet gathering or limiting visitors to two or four people. Joy is possible without overcrowding or excessive stimulation.",
+      "timestamp": "52:24-52:35",
+      "time_start_sec": 3144,
+      "time_end_sec": 3155
+    },
+    {
+      "question": "What is the significance of the resident's reaction to being told her husband was dead years ago?",
+      "answer": "The resident's scream showed that she was not ready to accept the reality of the loss. Being forced to confront the truth abruptly caused severe emotional trauma, highlighting the need for caregivers to respect the resident's current emotional state.",
+      "timestamp": "32:48-33:29",
+      "time_start_sec": 1968,
+      "time_end_sec": 2009
+    },
+    {
+      "question": "How did Effie's facility ensure that the tubing trip was inclusive for all residents?",
+      "answer": "They included residents who did not want to tube by having them wear lodge colors and pom-poms. This allowed everyone to participate in the celebration and feel part of the group, regardless of whether they were in a tube or not.",
+      "timestamp": "42:06-42:26",
+      "time_start_sec": 2526,
+      "time_end_sec": 2546
+    },
+    {
+      "question": "What is the importance of matching a resident's emotional state during a crisis?",
+      "answer": "Matching the resident's emotional state builds trust and opens communication. By reflecting their feelings and curiosity, the caregiver helps the resident feel safe and understood, which is essential for resolving the underlying issue.",
+      "timestamp": "45:09-45:40",
+      "time_start_sec": 2709,
+      "time_end_sec": 2740
+    },
+    {
+      "question": "How does the concept of \"grief\" apply to the daily lives of people with dementia?",
+      "answer": "People with dementia are grieving the loss of their past selves and the relationships they shared. This daily mourning process is a natural part of the disease and requires empathy from caregivers who understand the depth of this loss.",
+      "timestamp": "26:51-26:56",
+      "time_start_sec": 1611,
+      "time_end_sec": 1616
+    },
+    {
+      "question": "What is the role of volunteers in facilitating special activities for residents?",
+      "answer": "Volunteers provide crucial support by taking time off work to assist with tasks like lifting residents into tubes. Their willingness to contribute ensures that activities can be safely and successfully organized.",
+      "timestamp": "44:26-44:34",
+      "time_start_sec": 2666,
+      "time_end_sec": 2674
+    },
+    {
+      "question": "How can caregivers help a resident who feels defeated by their condition?",
+      "answer": "Caregivers can help by finding activities that allow the resident to feel free and capable, even if briefly. Creating moments of joy and success can shift the resident's perspective from feeling defeated to feeling hopeful.",
+      "timestamp": "46:53-47:06",
+      "time_start_sec": 2813,
+      "time_end_sec": 2826
+    },
+    {
+      "question": "What is the benefit of attaching the Christmas tree to the wall?",
+      "answer": "Attaching the tree to the wall prevents it from falling over if a resident tries to climb it or move around. It also allows the resident to decorate it at their own pace without the risk of injury or disruption.",
+      "timestamp": "54:41-54:50",
+      "time_start_sec": 3281,
+      "time_end_sec": 3290
+    },
+    {
+      "question": "How does Effie's facility handle the issue of families asking for gifts for their loved ones?",
+      "answer": "They explain to families that residents often do not need material gifts. The focus is shifted towards creating a pleasant ambiance and ensuring the resident feels loved and included rather than receiving objects.",
+      "timestamp": "55:52-55:56",
+      "time_start_sec": 3352,
+      "time_end_sec": 3356
+    },
+    {
+      "question": "What is the significance of the resident's statement about feeling free in the water?",
+      "answer": "It reveals a specific sensory and emotional need that is central to the resident's happiness. Recognizing this need allows caregivers to design activities that provide genuine relief and joy, rather than just generic entertainment.",
+      "timestamp": "40:01-40:07",
+      "time_start_sec": 2401,
+      "time_end_sec": 2407
+    },
+    {
+      "question": "How can caregivers prevent sensory overload during the holidays?",
+      "answer": "Caregivers can create quiet zones and avoid bringing residents to loud events like tree-lighting ceremonies. By keeping the environment calm and reducing stimulation, they help the resident maintain their emotional stability.",
+      "timestamp": "53:11-53:50",
+      "time_start_sec": 3191,
+      "time_end_sec": 3230
+    },
+    {
+      "question": "What is the role of the search and rescue team in the tubing trip?",
+      "answer": "The search and rescue team provided professional support and safety monitoring while accompanying the residents. Their presence ensured that the activity remained safe and allowed the residents to enjoy the water without worry.",
+      "timestamp": "40:44-41:01",
+      "time_start_sec": 2444,
+      "time_end_sec": 2461
+    },
+    {
+      "question": "How does Effie's facility manage the emotional needs of residents during the holidays?",
+      "answer": "They prioritize the resident's comfort over traditional holiday norms. This includes avoiding loud noises, limiting visitors, and creating a peaceful atmosphere that respects the resident's cognitive and emotional limits.",
+      "timestamp": "53:11-54:04",
+      "time_start_sec": 3191,
+      "time_end_sec": 3244
+    },
+    {
+      "question": "What is the ultimate goal of Effie's approach to care and activities?",
+      "answer": "The goal is to bring joy and meaning to the residents' lives, even if it means doing something unconventional. Effie believes that the crazier the activity, the more likely it is to bring happiness and fulfillment to the person with dementia.",
+      "timestamp": "46:38-46:45",
+      "time_start_sec": 2798,
+      "time_end_sec": 2805
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/25/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

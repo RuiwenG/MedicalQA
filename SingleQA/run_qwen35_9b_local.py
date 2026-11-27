@@ -1,7 +1,7 @@
-"""Run SingleAgent QA generation over all six playlists with local Qwen3.5-9B.
+"""Run SingleAgent QA generation over all six playlists with a local Qwen3.5 checkpoint.
 
 Preview without a GPU: python SingleQA/run_qwen35_9b_local.py --dry-run
-On the HPC: sbatch slurm/run_qwen35_9b_local.sh
+On the HPC: sbatch slurm/run_qwen35_9b_local.sh (9B) or slurm/run_qwen35_4b_local.sh (4B)
 """
 
 import argparse
@@ -27,8 +27,12 @@ from SingleQA.processors.qaparser import QAParser
 from SingleQA.run_bad_qa_local import INTENDED_FAILURE, BadQASettings
 
 BASES = ("Master", "Teepa", "ODJ", "SUP", "GEMS", "FTD")
-MODEL_ID = "Qwen/Qwen3.5-9B"
-MODEL_PATH = "/WAVE/datasets/oignat_lab/QWEN3.5_9B"
+# --model choice -> (model id, default WAVE path, checkpoint (hidden_size, num_hidden_layers))
+MODELS = {
+    "9b": ("Qwen/Qwen3.5-9B", "/WAVE/datasets/oignat_lab/QWEN3.5_9B", (4096, 32)),
+    "4b": ("Qwen/Qwen3.5-4B", "/WAVE/datasets/oignat_lab/QWEN3.5_4B", (2560, 32)),
+}
+MODEL_ID, MODEL_PATH = MODELS["9b"][:2]
 LANG_SUFFIX = re.compile(r"-(cn|zh|en|hi|ro)(?:-|\.|$)", re.IGNORECASE)
 
 
@@ -39,8 +43,8 @@ def write_json(path, value):
     temporary.replace(path)
 
 
-def folder_name(version, bad=False):
-    return f"SingleAgent-qwen3.5-9b{'-bad' if bad else ''}-{version}"
+def folder_name(version, bad=False, model_id=MODEL_ID):
+    return f"SingleAgent-{model_id.split('/')[-1].lower()}{'-bad' if bad else ''}-{version}"
 
 
 def discover_videos(args):
@@ -125,7 +129,7 @@ class LocalQwen35:
             ).eval()
         except Exception as error:
             raise ModelLoadError(
-                f"Cannot load local Qwen3.5-9B: {error}. The HPC environment needs a "
+                f"Cannot load local checkpoint {self.model_path}: {error}. The HPC environment needs a "
                 "CUDA-compatible PyTorch, Accelerate, and Transformers with Qwen3.5 support."
             ) from error
 
@@ -254,12 +258,12 @@ def run_one(base, index, version, args, settings, client):
     settings.prompt_version, settings.prompt_format = version, args.format
     system, prompt, expected = settings.get_prompt_template(transcript)
     messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
-    dest = args.output_root / base / index / folder_name(version, args.bad)
+    dest = args.output_root / base / index / folder_name(version, args.bad, args.model_id)
     final = dest / "QA results" / "finalQA.json"
     intermediate = dest / "intermediate" / "Intermediate.json"
     result = {"base": base, "id": index, "version": version, "expected": expected}
     controls = {
-        "model": MODEL_ID, "model_path": str(args.model_path), "backend": "local",
+        "model": args.model_id, "model_path": str(args.model_path), "backend": "local",
         "dtype": "bfloat16", "thinking": False, "seed": args.seed,
         "prompt_version": version, "prompt_format": args.format,
         "generation_config": settings.generation_config, "max_new_tokens": settings.max_new_tokens,
@@ -330,7 +334,7 @@ def run_one(base, index, version, args, settings, client):
 
 
 def save_status(args, result):
-    path = args.output_root / result["base"] / f"{folder_name(result['version'], args.bad)}_generation_meta.json"
+    path = args.output_root / result["base"] / f"{folder_name(result['version'], args.bad, args.model_id)}_generation_meta.json"
     meta = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
     videos = {r["id"]: r for r in meta.get("videos", [])}
     old = videos.get(result["id"], {})
@@ -339,14 +343,15 @@ def save_status(args, result):
     else:
         videos[result["id"]] = result
     approach = "SingleAgent (SingleQA)" + (", deliberately bad QA for discrimination" if args.bad else "")
-    write_json(path, {"approach": approach, "model": MODEL_ID,
+    write_json(path, {"approach": approach, "model": args.model_id,
                       "model_path": str(args.model_path), "backend": "local",
                       "videos": list(videos.values())})
 
 
 def get_args(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--model-path", type=Path, default=MODEL_PATH)
+    parser.add_argument("--model", choices=sorted(MODELS), default="9b", help="Qwen3.5 size to run")
+    parser.add_argument("--model-path", type=Path, default=None, help="Default: the WAVE path of --model")
     parser.add_argument("--data-root", type=Path, default=REPO)
     parser.add_argument("--output-root", type=Path, default=None, help="Default: same as --data-root")
     parser.add_argument("--bases", nargs="+", choices=BASES, default=list(BASES))
@@ -359,12 +364,13 @@ def get_args(argv=None):
     parser.add_argument("--max-new-tokens", type=int, default=8192)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--bad", action="store_true",
-                        help="Generate deliberately bad QA with run_bad_qa_local.py's prompt, into SingleAgent-qwen3.5-9b-bad-<version>")
+                        help="Generate deliberately bad QA with run_bad_qa_local.py's prompt, into SingleAgent-<model>-bad-<version>")
     parser.add_argument("--reparse-only", action="store_true",
                         help="Recover missing finals from saved raw responses; never load the model or regenerate")
     parser.add_argument("--dry-run", action="store_true", help="Validate inputs without GPU/model loading or writes")
     args = parser.parse_args(argv)
-    args.model_path = args.model_path.expanduser().resolve()
+    args.model_id, default_path, shape = MODELS[args.model]
+    args.model_path = (args.model_path or Path(default_path)).expanduser().resolve()
     args.data_root = args.data_root.expanduser().resolve()
     args.output_root = (args.output_root or args.data_root).expanduser().resolve()
     if args.max_new_tokens < 1:
@@ -380,8 +386,8 @@ def get_args(argv=None):
         checkpoint = json.loads(config_path.read_text(encoding="utf-8"))
         text_config = checkpoint.get("text_config", {})
         if (checkpoint.get("model_type"), text_config.get("hidden_size"),
-                text_config.get("num_hidden_layers")) != ("qwen3_5", 4096, 32):
-            parser.error("Expected the full Qwen3.5-9B Transformers checkpoint")
+                text_config.get("num_hidden_layers")) != ("qwen3_5", *shape):
+            parser.error(f"Expected the full {args.model_id} Transformers checkpoint")
     return args
 
 
@@ -393,7 +399,7 @@ def main(argv=None):
         print(f"Error: {error}", file=sys.stderr)
         return 1
     jobs = [(b, i, v) for v in dict.fromkeys(args.versions) for b, i in videos]
-    print(f"{len(videos)} videos, {len(jobs)} jobs: {MODEL_ID}, local, versions={args.versions}", flush=True)
+    print(f"{len(videos)} videos, {len(jobs)} jobs: {args.model_id}, local, versions={args.versions}", flush=True)
     settings = BadQASettings() if args.bad else Settings()
     settings.max_new_tokens = args.max_new_tokens
     client = LocalQwen35(str(args.model_path))

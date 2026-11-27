@@ -1,0 +1,371 @@
+{
+  "expected_pairs": 45,
+  "parsed_pairs": 45,
+  "transcript_end_sec": 3984.9,
+  "timestamp_lines": [
+    "Timestamp 1: 1:45-1:56",
+    "Timestamp 2: 29:39-30:25",
+    "Timestamp 3: 41:11-42:03",
+    "Timestamp 4: 30:52-31:00",
+    "Timestamp 5: 10:01-10:57",
+    "Timestamp 6: 11:44-12:00",
+    "Timestamp 7: 15:50-15:58",
+    "Timestamp 8: 28:48-30:25",
+    "Timestamp 9: 35:26-36:03",
+    "Timestamp 10: 47:22-48:14",
+    "Timestamp 11: 53:31-56:12",
+    "Timestamp 12: 56:41-57:12",
+    "Timestamp 13: 40:41-42:41",
+    "Timestamp 14: 41:11-42:03",
+    "Timestamp 15: 49:25-49:39",
+    "Timestamp 16: 61:09-61:47",
+    "Timestamp 17: 7:26-8:11",
+    "Timestamp 18: 5:46-6:11",
+    "Timestamp 19: 14:12-14:35",
+    "Timestamp 20: 16:04-16:17",
+    "Timestamp 21: 56:35-56:41",
+    "Timestamp 22: 31:43-31:58",
+    "Timestamp 23: 47:33-48:14",
+    "Timestamp 24: 53:31-56:12",
+    "Timestamp 25: 10:01-10:10",
+    "Timestamp 26: 20:12-23:47",
+    "Timestamp 27: 30:09-30:25",
+    "Timestamp 28: 39:13-39:43",
+    "Timestamp 29: 30:16-30:25",
+    "Timestamp 30: 49:09-49:25",
+    "Timestamp 31: 41:00-42:03",
+    "Timestamp 32: 63:31-63:55",
+    "Timestamp 33: 48:48-49:09",
+    "Timestamp 34: 46:32-46:51",
+    "Timestamp 35: 57:16-57:40",
+    "Timestamp 36: 47:33-48:14",
+    "Timestamp 37: 54:52-56:12",
+    "Timestamp 38: 9:13-9:22",
+    "Timestamp 39: 15:50-15:58",
+    "Timestamp 40: 53:51-56:12",
+    "Timestamp 41: 12:27-12:39",
+    "Timestamp 42: 65:35-65:40",
+    "Timestamp 43: 35:34-36:03",
+    "Timestamp 44: 56:41-56:54",
+    "Timestamp 45: 51:43-52:03"
+  ],
+  "pairs": [
+    {
+      "question": "What is the specific breathing exercise described on the encouragement card, and how should it be performed?",
+      "answer": "The card instructs you to stretch your arms overhead, take a deep breath, and then let it out slowly. This simple action is designed to help you relax and center yourself before engaging in other activities.",
+      "timestamp": "1:45-1:56",
+      "time_start_sec": 105,
+      "time_end_sec": 116
+    },
+    {
+      "question": "Why is it important for caregivers to understand that the person with dementia might not understand what is happening during care tasks?",
+      "answer": "When a resident feels threatened or confused, they may react aggressively, such as kicking or hitting, because they do not understand the procedure. By explaining who you are, what you are doing, asking for permission, and going slowly, you allow them to participate in the way they can, which stops the aggressive behavior and builds trust.",
+      "timestamp": "29:39-30:25",
+      "time_start_sec": 1779,
+      "time_end_sec": 1825
+    },
+    {
+      "question": "What is the \"hand-under-hand\" technique, and how does it help with feeding a person with dementia?",
+      "answer": "Instead of forcing a spoon into a person's mouth, which can feel like an assault, the caregiver supports the person's own hand and guides it naturally to their mouth. This creates a familiar movement pattern, allowing the person to feel in control and making eating a more positive experience.",
+      "timestamp": "41:11-42:03",
+      "time_start_sec": 2471,
+      "time_end_sec": 2523
+    },
+    {
+      "question": "How can a caregiver recognize when they are struggling with a person's behavior, and what is the first step to take?",
+      "answer": "If you assume a person is being difficult or uncooperative without understanding their perspective, you might miss the real issue. The first step is to pause and consider that their brain may not be able to communicate their awareness or feelings clearly, even if they seem unaware of what is happening.",
+      "timestamp": "30:52-31:00",
+      "time_start_sec": 1852,
+      "time_end_sec": 1860
+    },
+    {
+      "question": "What is the purpose of the \"self-care breaks\" included in the conference sessions?",
+      "answer": "These breaks are designed to help both the professionals and the participants recharge. After intense learning, people often feel overwhelmed, like they are \"drinking water out of a fire hose.\" These breaks allow attendees to move their bodies, relax, and return to the next session with renewed energy.",
+      "timestamp": "10:01-10:57",
+      "time_start_sec": 601,
+      "time_end_sec": 657
+    },
+    {
+      "question": "What is \"Ageless Grace,\" and what are the basic rules for doing it?",
+      "answer": "Ageless Grace is a fitness program based on neuroplasticity that focuses on mind and body wellness. It is specifically designed to be done in a chair with bare feet, ensuring that no one feels pressured to stand or move in a way that causes injury.",
+      "timestamp": "11:44-12:00",
+      "time_start_sec": 704,
+      "time_end_sec": 720
+    },
+    {
+      "question": "Why is it beneficial to make mistakes while trying new movements or exercises?",
+      "answer": "Making mistakes is actually how the brain builds new neural pathways. You do not need to get it right immediately; the goal is to try something new and express yourself, which activates different parts of the brain and improves overall function.",
+      "timestamp": "15:50-15:58",
+      "time_start_sec": 950,
+      "time_end_sec": 958
+    },
+    {
+      "question": "How did Jen Walker's approach to her first patient with dementia change her perspective on care?",
+      "answer": "Her first patient was combative and aggressive. Instead of reacting with fear or force, she decided to watch a colleague perform care first, then try herself. She ensured she explained every step, asked for permission, and moved slowly. This respectful approach stopped the aggression completely and taught her the importance of understanding the person behind the behavior.",
+      "timestamp": "28:48-30:25",
+      "time_start_sec": 1728,
+      "time_end_sec": 1825
+    },
+    {
+      "question": "What is the \"Casey Memory Cafe,\" and what was its main goal?",
+      "answer": "The Casey Memory Cafe was a community group created to bring people living with dementia and their care partners together in a safe environment. Its main goal was to focus on shared memories, local culture, and socialization, allowing participants to share stories from their past, such as discussing old weather forecasting methods.",
+      "timestamp": "35:26-36:03",
+      "time_start_sec": 2126,
+      "time_end_sec": 2163
+    },
+    {
+      "question": "Why did Jen Walker decide to dress up as a leprechaun for St. Patrick's Day, and what was the outcome?",
+      "answer": "She dressed as a leprechaun to bring joy and fun to the residents. However, she noticed that some residents with cognitive impairments approached her with fear rather than excitement. This taught her that costumes can be scary if they hide the face or imply impish curiosity, and she realized she needed to adjust her approach for future events.",
+      "timestamp": "47:22-48:14",
+      "time_start_sec": 2842,
+      "time_end_sec": 2894
+    },
+    {
+      "question": "What is the significance of the story about Frank, the resident who visited his deceased wife in Chicago?",
+      "answer": "Frank was near the end of his life and seemed unresponsive, but he unexpectedly went to the dining room to visit his late wife. He asked for a drink, chatted with friends, and thanked Jen for taking care of him before passing away. This story highlights that even with severe brain changes, people retain deep emotional connections and desires for meaningful interaction.",
+      "timestamp": "53:31-56:12",
+      "time_start_sec": 3211,
+      "time_end_sec": 3372
+    },
+    {
+      "question": "Why is it crucial for caregivers to learn about the disease process before trying to manage challenging behaviors?",
+      "answer": "Without understanding what is happening in the person's brain, caregivers may misinterpret behaviors or miss critical cues. Learning the disease process provides the foundation needed to understand the root cause of actions, remember how to respond effectively, and connect with the person on a deeper level.",
+      "timestamp": "56:41-57:12",
+      "time_start_sec": 3401,
+      "time_end_sec": 3432
+    },
+    {
+      "question": "What is the \"supportive stance,\" and why is it helpful during interactions?",
+      "answer": "The supportive stance involves positioning yourself in a way that is non-threatening and inviting, similar to how a parent holds a child. It helps reduce intimidation and anxiety for the person with dementia, making them feel safer and more willing to engage in activities like eating or talking.",
+      "timestamp": "40:41-42:41",
+      "time_start_sec": 2441,
+      "time_end_sec": 2561
+    },
+    {
+      "question": "How can a caregiver encourage a person with dementia to participate in a mealtime activity?",
+      "answer": "Instead of feeding the person directly, the caregiver can use the hand-under-hand technique to gently guide their own hand to the food. This respects the person's autonomy and allows them to complete the action themselves, which feels more natural and less intrusive.",
+      "timestamp": "41:11-42:03",
+      "time_start_sec": 2471,
+      "time_end_sec": 2523
+    },
+    {
+      "question": "What is the benefit of incorporating humor and laughter into dementia care?",
+      "answer": "Laughter is a powerful tool for brain health. It helps create positive neural connections and can lift the mood of both the person with dementia and the caregiver. Simple activities, like wearing funny costumes or telling jokes, can elicit smiles and laughter even when communication is difficult.",
+      "timestamp": "49:25-49:39",
+      "time_start_sec": 2965,
+      "time_end_sec": 2979
+    },
+    {
+      "question": "Why is it important for caregivers to remain curious and avoid assuming they know everything?",
+      "answer": "Caregivers often feel confident quickly, but there is always more to learn about dementia. Remaining curious encourages continuous learning and prevents complacency. Sharing what you know with others ensures that knowledge spreads, benefiting the wider community of care partners and professionals.",
+      "timestamp": "61:09-61:47",
+      "time_start_sec": 3669,
+      "time_end_sec": 3707
+    },
+    {
+      "question": "What is the \"early bird incentive\" for the conference, and when does it expire?",
+      "answer": "Early bird registrants receive a 50% discount on the Relationship Guidebook or Seeing the Gems Workbook, along with free decals and a welcome gift. This offer is valid until July 5th, so signing up before then secures the best price and additional perks.",
+      "timestamp": "7:26-8:11",
+      "time_start_sec": 446,
+      "time_end_sec": 491
+    },
+    {
+      "question": "What is the \"Certified Community,\" and what kind of event is being held for new members?",
+      "answer": "The Certified Community is a group of professionals trained in Positive Approach to Care. A welcome webinar is scheduled for Wednesday at 3:00 PM Eastern, where experts will discuss the benefits and expectations of being part of this network.",
+      "timestamp": "5:46-6:11",
+      "time_start_sec": 346,
+      "time_end_sec": 371
+    },
+    {
+      "question": "How can a caregiver adapt physical activities for someone who has limited mobility?",
+      "answer": "Activities can be modified to suit any ability level. For example, if someone cannot lift their foot to draw a square, they can simply draw the square on the floor with their toes. The goal is movement and expression, not perfection.",
+      "timestamp": "14:12-14:35",
+      "time_start_sec": 852,
+      "time_end_sec": 875
+    },
+    {
+      "question": "What is the \"Team Fit\" exercise, and what physical benefits does it aim to provide?",
+      "answer": "Team Fit is an exercise tool that uses sports themes like hockey and baseball to build muscle mass and coordination. It helps improve overall physical strength and keeps the body active in a fun, engaging way.",
+      "timestamp": "16:04-16:17",
+      "time_start_sec": 964,
+      "time_end_sec": 977
+    },
+    {
+      "question": "Why is it important to listen to the person with dementia even when they cannot speak clearly?",
+      "answer": "A person's brain may not allow them to share their thoughts verbally, but they still have awareness and feelings. Listening attentively shows respect and allows the caregiver to pick up on subtle cues or non-verbal signals that indicate what the person needs or wants.",
+      "timestamp": "56:35-56:41",
+      "time_start_sec": 3395,
+      "time_end_sec": 3401
+    },
+    {
+      "question": "What is the \"Virtual Dementia Tour,\" and how was it used in Jen Walker's training?",
+      "answer": "The Virtual Dementia Tour is a tool that provides an in-depth look at the experiences of living with dementia. Jen Walker used it during her nursing school rotations to gain a better understanding of the condition, which helped prepare her for future caregiving roles.",
+      "timestamp": "31:43-31:58",
+      "time_start_sec": 1903,
+      "time_end_sec": 1918
+    },
+    {
+      "question": "How can a caregiver support a person with dementia who is afraid of a costume or character?",
+      "answer": "If a person shows fear or trepidation toward a costume, like a leprechaun, the caregiver should recognize that the disguise might be perceived as scary. Adjusting the approach, perhaps by removing the mask or changing the character, can prevent distress and ensure the person feels safe.",
+      "timestamp": "47:33-48:14",
+      "time_start_sec": 2853,
+      "time_end_sec": 2894
+    },
+    {
+      "question": "What is the value of storytelling in dementia care training?",
+      "answer": "Sharing personal stories, like the one about Frank, helps trainees understand the human side of dementia. It moves beyond technical skills to foster empathy, reminding caregivers that every person retains dignity, emotions, and the desire for connection.",
+      "timestamp": "53:31-56:12",
+      "time_start_sec": 3211,
+      "time_end_sec": 3372
+    },
+    {
+      "question": "Why is it important for caregivers to take time to reflect and rest?",
+      "answer": "Continuous learning and caregiving can be exhausting, leading to burnout. Taking regular breaks allows caregivers to restore their energy, reset their minds, and return to their duties with patience and clarity, which ultimately benefits the person they are caring for.",
+      "timestamp": "10:01-10:10",
+      "time_start_sec": 601,
+      "time_end_sec": 610
+    },
+    {
+      "question": "What is the \"Juicy Joints\" exercise, and what body parts does it target?",
+      "answer": "Juicy Joints is a mobility exercise designed to loosen up stiff joints. It targets the neck, shoulders, elbows, wrists, hips, and legs, helping to maintain flexibility and ease discomfort in the body through gentle stretching and movement.",
+      "timestamp": "20:12-23:47",
+      "time_start_sec": 1212,
+      "time_end_sec": 1427
+    },
+    {
+      "question": "How can a caregiver create a safe and welcoming environment for a person with dementia?",
+      "answer": "By going slowly, providing clear details about actions, and asking for permission, a caregiver creates a predictable and safe environment. This reduces confusion and anxiety, allowing the person to feel secure and willing to cooperate.",
+      "timestamp": "30:09-30:25",
+      "time_start_sec": 1809,
+      "time_end_sec": 1825
+    },
+    {
+      "question": "What is the \"adult learning cycle,\" and how did it help Jen Walker in her support groups?",
+      "answer": "The adult learning cycle is a method that emphasizes connecting fundamental ideas about a disease before teaching practical skills. Jen applied this by first educating her support group members about dementia, which led to better engagement and more effective application of care techniques.",
+      "timestamp": "39:13-39:43",
+      "time_start_sec": 2353,
+      "time_end_sec": 2383
+    },
+    {
+      "question": "Why is it beneficial to involve the person with dementia in their own care routine?",
+      "answer": "Allowing the person to participate in care, even in small ways, gives them a sense of control and agency. It transforms a potentially stressful task into a collaborative effort, reducing resistance and promoting independence.",
+      "timestamp": "30:16-30:25",
+      "time_start_sec": 1816,
+      "time_end_sec": 1825
+    },
+    {
+      "question": "What is the significance of the \"Lumicorn\" and the inflatable unicorn in Jen's work?",
+      "answer": "The Lumicorn is a fun prop Jen uses to bring smiles and laughter to care communities. Using bright, playful items like inflatables helps create a joyful atmosphere, which is essential for supporting brain health and reducing stress for everyone involved.",
+      "timestamp": "49:09-49:25",
+      "time_start_sec": 2949,
+      "time_end_sec": 2965
+    },
+    {
+      "question": "How can a caregiver respond when a person with dementia seems uninterested in eating?",
+      "answer": "Uninterest may stem from confusion about how to use utensils or a lack of familiarity with the task. Offering the hand-under-hand technique to help them feed themselves can resolve the issue and encourage them to eat willingly.",
+      "timestamp": "41:00-42:03",
+      "time_start_sec": 2460,
+      "time_end_sec": 2523
+    },
+    {
+      "question": "What is the role of a mentor in the Positive Approach to Care community?",
+      "answer": "Mentors guide and support others in their learning journey, sharing knowledge and experiences. They help newcomers navigate the complexities of dementia care and encourage them to grow their skills and confidence.",
+      "timestamp": "63:31-63:55",
+      "time_start_sec": 3811,
+      "time_end_sec": 3835
+    },
+    {
+      "question": "Why is it important to celebrate frontline caregivers like CNAs?",
+      "answer": "Celebrating CNAs acknowledges their vital role in providing daily care and support to residents. Recognizing their hard work fosters a sense of appreciation and community, motivating them to continue providing high-quality care.",
+      "timestamp": "48:48-49:09",
+      "time_start_sec": 2928,
+      "time_end_sec": 2949
+    },
+    {
+      "question": "How can a caregiver use sensory stimulation to engage a person with dementia?",
+      "answer": "Sensory stimulation, such as the soft texture of an Easter bunny costume, can evoke positive memories and emotions. Touching familiar objects or wearing comforting fabrics can help a person feel connected to their past and more relaxed in the present.",
+      "timestamp": "46:32-46:51",
+      "time_start_sec": 2792,
+      "time_end_sec": 2811
+    },
+    {
+      "question": "What is the impact of sharing knowledge freely within the dementia care community?",
+      "answer": "Sharing knowledge empowers others to provide better care and understand the disease more deeply. When caregivers share their insights, it creates a stronger support network and ensures that everyone has access to the tools needed to help people with dementia thrive.",
+      "timestamp": "57:16-57:40",
+      "time_start_sec": 3436,
+      "time_end_sec": 3460
+    },
+    {
+      "question": "Why is it important to adjust activities based on individual responses?",
+      "answer": "Different people with dementia respond differently to various stimuli. Observing reactions, such as fear from a costume, allows caregivers to tailor their approach to what works best for each individual, ensuring safety and comfort.",
+      "timestamp": "47:33-48:14",
+      "time_start_sec": 2853,
+      "time_end_sec": 2894
+    },
+    {
+      "question": "How can a caregiver build a strong connection with a person who has limited verbal communication?",
+      "answer": "By focusing on emotional connection and presence, a caregiver can build trust even without words. Actions like sitting nearby, offering a drink, and respecting the person's choices demonstrate care and validate their existence.",
+      "timestamp": "54:52-56:12",
+      "time_start_sec": 3292,
+      "time_end_sec": 3372
+    },
+    {
+      "question": "What is the purpose of the \"Gem Time\" tour mentioned in the transcript?",
+      "answer": "The Gem Time tour is a series of events designed to highlight the positive aspects of dementia care and community involvement. It aims to inspire and educate participants about the potential for growth and connection despite cognitive challenges.",
+      "timestamp": "9:13-9:22",
+      "time_start_sec": 553,
+      "time_end_sec": 562
+    },
+    {
+      "question": "Why is it important for caregivers to be willing to try new approaches even if they fail initially?",
+      "answer": "Trying new things, even if mistakes are made, is essential for building new neural pathways and adapting to the unique needs of each person. Failure is part of the learning process and leads to better outcomes over time.",
+      "timestamp": "15:50-15:58",
+      "time_start_sec": 950,
+      "time_end_sec": 958
+    },
+    {
+      "question": "How can a caregiver support a person with dementia who is experiencing terminal decline?",
+      "answer": "During terminal decline, the focus should shift to comfort, connection, and honoring the person's wishes. As seen with Frank, simply being present, listening, and fulfilling simple requests can provide immense comfort and dignity.",
+      "timestamp": "53:51-56:12",
+      "time_start_sec": 3231,
+      "time_end_sec": 3372
+    },
+    {
+      "question": "What is the benefit of using music in exercises like Ageless Grace?",
+      "answer": "Music helps regulate mood, improves coordination, and makes movement more enjoyable. Selecting appropriate songs can enhance the effectiveness of exercises and encourage participation by making the activity feel like play.",
+      "timestamp": "12:27-12:39",
+      "time_start_sec": 747,
+      "time_end_sec": 759
+    },
+    {
+      "question": "Why is it important to normalize the experience of dementia in the community?",
+      "answer": "Normalizing dementia reduces stigma and helps families and professionals accept it as a natural part of aging. When society understands and embraces the condition, it creates a more supportive environment for those affected.",
+      "timestamp": "65:35-65:40",
+      "time_start_sec": 3935,
+      "time_end_sec": 3940
+    },
+    {
+      "question": "How can a caregiver help a person with dementia maintain their sense of identity?",
+      "answer": "By engaging in activities that connect them to their past, such as reminiscing about local history or discussing old hobbies, a caregiver helps preserve their identity. These conversations remind them of who they are and their unique life experiences.",
+      "timestamp": "35:34-36:03",
+      "time_start_sec": 2134,
+      "time_end_sec": 2163
+    },
+    {
+      "question": "What is the role of empathy in dementia care, and how can it be demonstrated?",
+      "answer": "Empathy involves understanding and sharing the feelings of the person with dementia. It can be demonstrated by listening attentively, validating their emotions, and responding with kindness and patience, regardless of their ability to communicate.",
+      "timestamp": "56:41-56:54",
+      "time_start_sec": 3401,
+      "time_end_sec": 3414
+    },
+    {
+      "question": "Why is it important for caregivers to continue learning and updating their skills?",
+      "answer": "The field of dementia care is constantly evolving, and new research offers better ways to support people. Continuing education ensures that caregivers have the latest tools and knowledge to provide the highest quality of care possible.",
+      "timestamp": "51:43-52:03",
+      "time_start_sec": 3103,
+      "time_end_sec": 3123
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/29/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 1020.3199999999999,
+  "timestamp_lines": [
+    "Timestamp 1: 0:51-1:27",
+    "Timestamp 2: 3:13-3:53",
+    "Timestamp 3: 6:31-7:16",
+    "Timestamp 4: 7:23-7:43",
+    "Timestamp 5: 7:56-8:18",
+    "Timestamp 6: 5:10-5:22",
+    "Timestamp 7: 10:26-10:44",
+    "Timestamp 8: 11:16-11:46",
+    "Timestamp 9: 12:36-13:13",
+    "Timestamp 10: 16:17-16:28"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main difference between a hallucination and a delusion?",
+      "answer": "A hallucination is when a person experiences something physically, like hearing voices or seeing things that aren't there, which involves misinterpreting their senses. A delusion is different because it is a story or belief the person thinks is true, even though it isn't based on reality. It happens when the brain takes some real memories or pieces of information and mixes them together to make up a new story to try and make sense of confusing situations.",
+      "timestamp": "0:51-1:27",
+      "time_start_sec": 51,
+      "time_end_sec": 87
+    },
+    {
+      "question": "Why might a person with dementia suddenly accuse a caregiver of stealing their car keys?",
+      "answer": "This often happens because the person has a real memory of seeing the caregiver near the keys or holding them, but they cannot remember exactly where the keys were moved or if the caregiver actually took them. Their brain tries to connect these two pieces of information to create a story that explains why the keys are missing. To the person, the story feels completely real, even if the caregiver didn't actually steal them.",
+      "timestamp": "3:13-3:53",
+      "time_start_sec": 193,
+      "time_end_sec": 233
+    },
+    {
+      "question": "How can a caregiver respond to an accusation without making the situation worse?",
+      "answer": "Instead of arguing or saying \"No, I didn't do that,\" which can cause a fight, try to validate the person's feelings and observations. You can say something like, \"I know you saw me move the keys, and I understand why you are worried.\" Then, gently explain your own memory, such as, \"My memory is not good, and I am not sure where I put them either.\" This acknowledges their experience without confirming the lie.",
+      "timestamp": "6:31-7:16",
+      "time_start_sec": 391,
+      "time_end_sec": 436
+    },
+    {
+      "question": "What is \"supportive stance\" and why is it important when dealing with delusions?",
+      "answer": "Supportive stance means stepping back physically and lowering your voice so you are not looming over the person. It creates a calm space where they feel safe. When you stand back and speak softly, it helps reduce the intensity of the argument and prevents the person from becoming more agitated or defensive.",
+      "timestamp": "7:23-7:43",
+      "time_start_sec": 443,
+      "time_end_sec": 463
+    },
+    {
+      "question": "What is \"validation,\" and how does it help during a difficult conversation?",
+      "answer": "Validation means agreeing with the person's feelings and acknowledging what they see or hear, even if you know the facts are different. For example, if they say you stole their keys, you validate by saying, \"It looks like you saw me take the keys.\" This shows you respect their experience and stops them from feeling ignored or attacked, which often lowers their emotional stress.",
+      "timestamp": "7:56-8:18",
+      "time_start_sec": 476,
+      "time_end_sec": 498
+    },
+    {
+      "question": "Can a delusion ever contain a small amount of truth?",
+      "answer": "Yes, there is often a \"kernel of truth\" hidden inside a delusion. Even though the whole story might be made up, the person usually has a real memory or a real event that started the confusion. In the example given, the person had a real conversation about driving safety, and the delusion grew from mixing that real worry with a false memory of the caregiver taking the keys.",
+      "timestamp": "5:10-5:22",
+      "time_start_sec": 310,
+      "time_end_sec": 322
+    },
+    {
+      "question": "What should a caregiver do after having a very intense or scary interaction with a person with dementia?",
+      "answer": "After a stressful moment, it is very important to take time to calm down yourself. You can step away from the room, lie down, or take deep breaths. Taking care of your own emotions helps you stay calm and ready to support the person again later, because you cannot pour from an empty cup.",
+      "timestamp": "10:26-10:44",
+      "time_start_sec": 626,
+      "time_end_sec": 644
+    },
+    {
+      "question": "What happened to Lauren when she believed her friend Lynn had died due to a delusion?",
+      "answer": "Lauren saw a newspaper list of names after a tragedy and mistakenly thought her friend Lynn was on it, leading her to believe Lynn had died. She felt extremely sad and angry because she felt the community was not grieving her friend the way she was. Her delusion caused her deep pain and made her feel isolated and misunderstood by others.",
+      "timestamp": "11:16-11:46",
+      "time_start_sec": 676,
+      "time_end_sec": 706
+    },
+    {
+      "question": "How did the team help Lauren resolve her belief that her friend had died?",
+      "answer": "The team helped by encouraging Lauren to meet the \"imposter\" friend who was pretending to be the real Lynn. They used gentle skills to help her realize that the person she was talking to was not her actual friend. Eventually, the real Lynn returned, and after a month of working together, Lauren was able to accept the truth and feel relieved.",
+      "timestamp": "12:36-13:13",
+      "time_start_sec": 756,
+      "time_end_sec": 793
+    },
+    {
+      "question": "Why is it important for the person closest to the patient to be involved in resolving delusions?",
+      "answer": "While everyone can use the same calming skills, the person who has a special, private relationship with the patient often understands them better. That unique bond can make the person feel more heard and understood, which can be the key to helping them accept the truth and feel less alone in their confusion.",
+      "timestamp": "16:17-16:28",
+      "time_start_sec": 977,
+      "time_end_sec": 988
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Master/4/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-44.json",
+  "valid": true
+}

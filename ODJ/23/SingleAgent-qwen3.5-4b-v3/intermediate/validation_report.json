@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 332.02,
+  "timestamp_lines": [
+    "Timestamp 1: 1:55-2:37",
+    "Timestamp 2: 4:18-4:42",
+    "Timestamp 3: 3:25-3:53",
+    "Timestamp 4: 0:48-0:59"
+  ],
+  "pairs": [
+    {
+      "question": "When a person with dementia looks at a famous painting like the Mona Lisa, what specific detail can help them feel connected to the story behind the art?",
+      "answer": "Even though the person might not recognize the famous artist or the exact date, looking closely at the details can spark their memory. For example, experts suggest the woman in the Mona Lisa is wearing a veil that was traditionally worn by pregnant women. Pointing out this detail can make the person wonder if the painting shows a real person with a family, turning a static image into a story about life, babies, and history that feels personal and familiar.",
+      "timestamp": "1:55-2:37",
+      "time_start_sec": 115,
+      "time_end_sec": 157
+    },
+    {
+      "question": "How can a caregiver use the \"Explore\" feature on the website to find art that matches their loved one's specific tastes?",
+      "answer": "Instead of browsing randomly, the caregiver can use the \"Explore\" section to filter the art by style, such as Impressionism, Renaissance, or Art Nouveau. By choosing a category that the person with dementia already likes or enjoyed in the past, the website will show only relevant images. This makes the experience less overwhelming and increases the chances that the person will recognize the style and enjoy the pictures more.",
+      "timestamp": "4:18-4:42",
+      "time_start_sec": 258,
+      "time_end_sec": 282
+    },
+    {
+      "question": "What simple conversation starters can a caregiver use when showing pictures of people to a person with dementia?",
+      "answer": "Caregivers can ask open-ended questions that encourage the person to talk about relationships and feelings rather than just identifying the people. Good questions include asking who the people in the picture are, what their relationship might be, where they seem to be coming from, or what they think will happen next. These questions validate the person's observations and allow them to share their own thoughts and memories about the scene.",
+      "timestamp": "3:25-3:53",
+      "time_start_sec": 205,
+      "time_end_sec": 233
+    },
+    {
+      "question": "Why is it helpful to change the art displayed on the website every day for a person with dementia?",
+      "answer": "The website updates its daily features, so the person with dementia gets fresh content to look at instead of seeing the same pictures repeatedly. This variety helps keep the activity interesting and engaging, giving the person new things to notice and discuss without causing boredom or frustration from repetition.",
+      "timestamp": "0:48-0:59",
+      "time_start_sec": 48,
+      "time_end_sec": 59
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/23/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-45.json",
+  "valid": true
+}

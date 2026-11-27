@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is the main difference between normal forgetfulness and dementia regarding how a person remembers their plans?",
+    "answer": "In normal forgetfulness, a person knows they have a plan, like making coffee, but gets distracted by a phone call and loses track of it. They can remember what they intended to do once they return to the original spot. In dementia, the person forgets the plan entirely and starts believing strange things, like that people are stealing their food, instead of remembering they needed to make coffee.",
+    "timestamp": "0:00-2:30",
+    "time_start_sec": 0,
+    "time_end_sec": 150
+  },
+  {
+    "question": "Why does it become harder for someone with dementia to find things in the kitchen compared to when they were younger?",
+    "answer": "When a person is younger, they have done fewer things in a room, so one specific object, like a coffee pot, stands out easily. As people age and do more activities in the same space, there are too many items, so the coffee pot no longer jumps out at them, making it hard to find without a strong memory of where it should be.",
+    "timestamp": "4:12-4:30",
+    "time_start_sec": 252,
+    "time_end_sec": 270
+  },
+  {
+    "question": "What practical steps can a caregiver suggest to help someone who has forgotten what they were going to do?",
+    "answer": "A caregiver can suggest placing a notepad right next to the telephone and tying a pencil to it. This helps the person write down their thoughts immediately so they do not lose the idea of what they planned to do later.",
+    "timestamp": "3:36-3:50",
+    "time_start_sec": 216,
+    "time_end_sec": 230
+  },
+  {
+    "question": "How does the brain handle a new thought like making coffee, and why does this cause confusion?",
+    "answer": "The brain puts the thought of making coffee into \"working memory,\" which is a small part of the brain that holds only about five to eight pieces of information at once. If something else happens, like a phone ringing with many details, the original thought of making coffee gets pushed out or lost because the working memory is full.",
+    "timestamp": "2:40-3:05",
+    "time_start_sec": 160,
+    "time_end_sec": 185
+  },
+  {
+    "question": "What is a key thing caregivers should avoid saying to someone who has dementia, according to the video?",
+    "answer": "Caregivers should avoid telling the person to \"remember.\" Since the person with dementia cannot access their past memories to recall what they forgot, asking them to remember will not help and can make them feel frustrated or confused.",
+    "timestamp": "7:23-7:41",
+    "time_start_sec": 443,
+    "time_end_sec": 461
+  }
+]

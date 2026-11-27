@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 1273.42,
+  "timestamp_lines": [
+    "Timestamp 1: 14:37-15:08",
+    "Timestamp 2: 2:30-3:35",
+    "Timestamp 3: 10:20-11:35",
+    "Timestamp 4: 15:33-16:10",
+    "Timestamp 5: 16:18-17:04",
+    "Timestamp 6: 19:39-20:13",
+    "Timestamp 7: 17:29-17:53",
+    "Timestamp 8: 11:20-12:27",
+    "Timestamp 9: 1:29-1:33"
+  ],
+  "pairs": [
+    {
+      "question": "What is the best way to greet someone with dementia in the morning to avoid causing stress?",
+      "answer": "Instead of rushing to wash their face immediately, start by gently touching their cheeks and forehead with a warm washcloth. This provides a calm, physical connection that signals \"good morning\" without demanding immediate action or causing confusion about what is happening next.",
+      "timestamp": "14:37-15:08",
+      "time_start_sec": 877,
+      "time_end_sec": 908
+    },
+    {
+      "question": "Why does the caregiver in the video struggle to get the person to eat, and what specific behavior is causing the problem?",
+      "answer": "The caregiver is struggling because they are speaking too fast and constantly telling the person to eat, which overwhelms their brain. The person is spitting out the food because they cannot process the rapid instructions and the sensory input of eating quickly enough.",
+      "timestamp": "2:30-3:35",
+      "time_start_sec": 150,
+      "time_end_sec": 215
+    },
+    {
+      "question": "How can a caregiver change their approach when they realize the person with dementia is not cooperating or responding?",
+      "answer": "The caregiver should stop talking completely and wait silently. This \"responsive silence\" gives the person time to process their senses and figure out what to do next, rather than feeling pressured to react immediately to constant demands.",
+      "timestamp": "10:20-11:35",
+      "time_start_sec": 620,
+      "time_end_sec": 695
+    },
+    {
+      "question": "What is the recommended method for preparing a person with dementia for eating to prevent spills and messes?",
+      "answer": "Move slowly and gently. First, help them sit up by leaning them forward onto their shoulder rather than lifting them abruptly. Then, position their feet flat on the floor and ensure they are comfortable before bringing the food tray close to them.",
+      "timestamp": "15:33-16:10",
+      "time_start_sec": 933,
+      "time_end_sec": 970
+    },
+    {
+      "question": "What is a better strategy for putting a napkin on a person with dementia compared to forcing it on their neck?",
+      "answer": "Instead of trying to tuck a napkin tightly around the neck, wrap the fabric loosely around the shoulders. This allows the person to move more freely and reduces the feeling of being restricted or uncomfortable, which often leads to agitation.",
+      "timestamp": "16:18-17:04",
+      "time_start_sec": 978,
+      "time_end_sec": 1024
+    },
+    {
+      "question": "Why is it important to ask the person with dementia what they think about the food before serving more?",
+      "answer": "Asking \"What do you think about that?\" helps the person connect the taste to their feelings and confirms if they like it. It respects their ability to express preferences and prevents them from feeling forced to eat something they might not enjoy.",
+      "timestamp": "19:39-20:13",
+      "time_start_sec": 1179,
+      "time_end_sec": 1213
+    },
+    {
+      "question": "How does the concept of \"hand-under-hand\" support help someone with dementia who has trouble holding a cup?",
+      "answer": "The caregiver places their hand underneath the person's hand and gently squeezes it together. This provides the necessary pressure and stability to help the person hold the cup securely, preventing spills while still allowing them to participate in drinking.",
+      "timestamp": "17:29-17:53",
+      "time_start_sec": 1049,
+      "time_end_sec": 1073
+    },
+    {
+      "question": "What role does rocking play in helping a person with dementia understand their surroundings?",
+      "answer": "Rocking creates a rhythmic back-and-forth motion that helps the person process different sensations one at a time. Because their brain is overwhelmed, this rhythm helps them figure out what they are tasting, smelling, or feeling before they try to act on it.",
+      "timestamp": "11:20-12:27",
+      "time_start_sec": 680,
+      "time_end_sec": 747
+    },
+    {
+      "question": "What should a caregiver do if they notice the person with dementia is becoming agitated or hitting during care tasks?",
+      "answer": "The caregiver should immediately stop the task, apologize calmly, and reassure the person that they are safe. Continuing to push through the agitation often makes the situation worse, so pausing to de-escalate is the priority.",
+      "timestamp": "1:29-1:33",
+      "time_start_sec": 89,
+      "time_end_sec": 93
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/28/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

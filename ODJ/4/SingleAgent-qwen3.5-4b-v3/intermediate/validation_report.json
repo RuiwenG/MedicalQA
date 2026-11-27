@@ -1,0 +1,67 @@
+{
+  "expected_pairs": 7,
+  "parsed_pairs": 7,
+  "transcript_end_sec": 661.0,
+  "timestamp_lines": [
+    "Timestamp 1: 1:47-1:58",
+    "Timestamp 2: 2:26-2:31",
+    "Timestamp 3: 2:26-2:57",
+    "Timestamp 4: 3:00-3:43",
+    "Timestamp 5: 4:34-5:22",
+    "Timestamp 6: 6:04-6:28",
+    "Timestamp 7: 6:28-6:56"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main reason Nia suggests breaking big goals into smaller weekly tasks for someone living with dementia?",
+      "answer": "Breaking goals into small weekly tasks helps people living with dementia feel successful and live better lives. It makes the work manageable and allows them to focus on what they can still do, rather than getting overwhelmed by things they cannot do anymore.",
+      "timestamp": "1:47-1:58",
+      "time_start_sec": 107,
+      "time_end_sec": 118
+    },
+    {
+      "question": "Why does Nia recommend engaging in activities like crosswords or sketching for people living with dementia?",
+      "answer": "People living with dementia really need to actively engage their minds to stay sharp. Doing things like completing a crossword puzzle or sketching helps keep the brain active and prevents it from becoming idle, such as when someone spends too much time watching TV.",
+      "timestamp": "2:26-2:31",
+      "time_start_sec": 146,
+      "time_end_sec": 151
+    },
+    {
+      "question": "How can journaling help a person living with dementia who feels unable to express their true feelings?",
+      "answer": "Journaling provides a safe place to write down thoughts and feelings that a person might not be able to tell friends or family directly. It helps them process emotions positively and leaves a record of their thoughts for their loved ones while their mind is still clear.",
+      "timestamp": "2:26-2:57",
+      "time_start_sec": 146,
+      "time_end_sec": 177
+    },
+    {
+      "question": "What are the benefits of practicing gratitude and thinking positive thoughts according to Nia?",
+      "answer": "Practicing gratitude and thinking positive thoughts helps the mind produce chemicals like endorphins and dopamine. This improves mood, engages other parts of the brain, and helps a person feel better physically and mentally.",
+      "timestamp": "3:00-3:43",
+      "time_start_sec": 180,
+      "time_end_sec": 223
+    },
+    {
+      "question": "What specific advice does Nia give for maintaining physical health to support mental health?",
+      "answer": "Nia advises that exercising three to four times a week and walking are good for both the heart and the mind. She also recommends drinking eight ounces of water daily and eating a Mediterranean diet, which includes two vegetables, two fruits, one fish, and olive oil every day.",
+      "timestamp": "4:34-5:22",
+      "time_start_sec": 274,
+      "time_end_sec": 322
+    },
+    {
+      "question": "Why is listening to music specifically helpful for someone living with dementia who feels anxious?",
+      "answer": "Listening to music for at least one hour a day can spark activity in the brain and help calm down feelings of anxiety. It serves as a tool for emotional regulation and mental engagement during difficult moments.",
+      "timestamp": "6:04-6:28",
+      "time_start_sec": 364,
+      "time_end_sec": 388
+    },
+    {
+      "question": "Why is volunteering considered important for the spirit of a person living with dementia?",
+      "answer": "Volunteering helps the spirit by keeping a person connected to the community and allowing them to remain an active member of society. It shows that even with dementia, a person can still make a difference and contribute to places like food banks or libraries.",
+      "timestamp": "6:28-6:56",
+      "time_start_sec": 388,
+      "time_end_sec": 416
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/4/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

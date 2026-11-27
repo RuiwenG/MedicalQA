@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 535.26,
+  "timestamp_lines": [
+    "Timestamp 1: 0:27-3:45",
+    "Timestamp 2: 4:05-4:28",
+    "Timestamp 3: 5:42-6:14",
+    "Timestamp 4: 6:30-8:06",
+    "Timestamp 5: 0:30-3:16"
+  ],
+  "pairs": [
+    {
+      "question": "Mary describes a specific moment when she felt overwhelmed while moving her father into a new apartment. What happened during that time, and how did she eventually manage to calm herself down?",
+      "answer": "During a very hot and exhausting day of moving her father, Mary felt so tired and stressed that she suddenly exploded in anger when her father asked a simple question. She realized she was acting in a \"diamond\" state, which means being sharp, rigid, and lashing out unfairly. Although she initially lost control, she remembered advice from Teepa Sereno. She took deep breaths, paused for a minute to calm her nervous system, and then shifted into a \"sapphire\" state of mind. In this clearer state, she apologized to her father, acknowledged his feelings, and agreed to finish the task together.",
+      "timestamp": "0:27-3:45",
+      "time_start_sec": 27,
+      "time_end_sec": 225
+    },
+    {
+      "question": "Mary explains that sometimes a caregiver cannot immediately return to a calm state after getting angry. What practical action did she take in that situation to help herself recover?",
+      "answer": "In one difficult instance, Mary found that she could not mentally switch back to a calm \"sapphire\" state right away. Instead of forcing herself to keep working while frustrated, she sat in the car and took a nap. This physical rest helped her body recover energy, allowing her brain to think more clearly later. The lesson is that taking a break to rest your body is often necessary before you can return to caring effectively.",
+      "timestamp": "4:05-4:28",
+      "time_start_sec": 245,
+      "time_end_sec": 268
+    },
+    {
+      "question": "How has Mary's understanding of the Gem State Model changed her daily routine as a caregiver for her father?",
+      "answer": "Before understanding the model, Mary assumed the Gem States only applied to people with dementia. Now, she applies it to herself too. When she feels very tired, upset, or highly stressed, she recognizes that she is entering a \"diamond\" state and is not in the best condition to connect with her father. She learns to identify these moments early and chooses not to try to interact or care during those times until she has rested and returned to a calmer state.",
+      "timestamp": "5:42-6:14",
+      "time_start_sec": 342,
+      "time_end_sec": 374
+    },
+    {
+      "question": "What is the main purpose of the upcoming virtual conference mentioned in the video, and who is it intended for?",
+      "answer": "The upcoming virtual conference, titled \"All Gems Can Shine,\" is designed to teach people about the Gem State Model. It is intended for two groups: new caregivers who may not know what the model is at all, and experienced caregivers who want to improve their communication and caregiving skills. The goal is to help everyone learn practical techniques so they can provide better care and support.",
+      "timestamp": "6:30-8:06",
+      "time_start_sec": 390,
+      "time_end_sec": 486
+    },
+    {
+      "question": "Why is it important for caregivers to recognize their own emotional state before trying to care for someone with dementia?",
+      "answer": "It is important because a caregiver's own emotions directly affect their ability to communicate and care. When a caregiver is in a \"diamond\" state due to stress or fatigue, their natural skills stop working well, and they may react harshly or lose patience. By recognizing their own state, a caregiver can pause, rest, or change the timing of their interaction. This ensures that care is given when the caregiver is clear-headed and kind, rather than when they are overwhelmed.",
+      "timestamp": "0:30-3:16",
+      "time_start_sec": 30,
+      "time_end_sec": 196
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/12/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

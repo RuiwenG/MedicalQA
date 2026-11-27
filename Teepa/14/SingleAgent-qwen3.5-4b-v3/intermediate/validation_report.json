@@ -1,0 +1,107 @@
+{
+  "expected_pairs": 12,
+  "parsed_pairs": 12,
+  "transcript_end_sec": 1257.409,
+  "timestamp_lines": [
+    "Timestamp 1: 0:58-6:20",
+    "Timestamp 2: 7:45-8:56",
+    "Timestamp 3: 9:37-12:10",
+    "Timestamp 4: 10:50-12:59",
+    "Timestamp 5: 16:36-18:24",
+    "Timestamp 6: 14:35-15:43",
+    "Timestamp 7: 18:26-20:21",
+    "Timestamp 8: 2:27-6:20",
+    "Timestamp 9: 6:58-7:33",
+    "Timestamp 10: 5:09-5:36",
+    "Timestamp 11: 11:50-12:10",
+    "Timestamp 12: 17:39-20:02"
+  ],
+  "pairs": [
+    {
+      "question": "What specific part of the brain is damaged in dementia, and what are its main jobs?",
+      "answer": "The part of the brain affected is the prefrontal cortex, which sits at the front of the brain. It is the last part to develop and the first to show damage in dementia. Its main jobs include controlling impulses (stopping yourself from doing things you shouldn't), handling logic and reason, managing sequences (starting, stopping, and moving between tasks), making choices, maintaining self-awareness, and understanding other people's perspectives. When this area fails, complex actions seem impossible even if simple ones were easy before.",
+      "timestamp": "0:58-6:20",
+      "time_start_sec": 58,
+      "time_end_sec": 380
+    },
+    {
+      "question": "Why does it often feel like a person with dementia suddenly loses the ability to do something they used to master?",
+      "answer": "This happens because the brain's wiring is damaged, causing skills to turn on and off based on the type of dementia, how long the person has had it, and what other brain areas are still working. A person might be able to drive or cook one day, but the next moment, the specific connections needed for that task fail. They still have memories and motor skills, but the brain cannot organize all that data logically to make sense of the action or stop it.",
+      "timestamp": "7:45-8:56",
+      "time_start_sec": 465,
+      "time_end_sec": 536
+    },
+    {
+      "question": "How does the loss of impulse control explain behaviors like hitting a chair repeatedly for hours?",
+      "answer": "In a healthy brain, the prefrontal cortex tells you \"whoa,\" \"stop,\" or \"that's enough.\" In dementia, that signal is lost. The person continues an action because their brain cannot override the urge to keep doing it, even if others find it annoying or harmful. They are stuck in a loop because they lack the ability to terminate the sequence and move on to the next activity.",
+      "timestamp": "9:37-12:10",
+      "time_start_sec": 577,
+      "time_end_sec": 730
+    },
+    {
+      "question": "Why might a caregiver feel frustrated when their loved one refuses to listen to redirection?",
+      "answer": "The frustration comes from a clash of perspectives. The caregiver sees the behavior as illogical or wrong, while the person with dementia is operating from a different brain state where the behavior makes sense to them. Since the person cannot access the caregiver's logic or reasoning, arguing or trying to prove them wrong often leads to conflict rather than resolution.",
+      "timestamp": "10:50-12:59",
+      "time_start_sec": 650,
+      "time_end_sec": 779
+    },
+    {
+      "question": "What is a better way to handle a situation where a person with dementia is acting out than arguing with them?",
+      "answer": "Instead of trying to change their mind or make their behavior make sense, try to \"go where they are.\" Acknowledge their feelings and reality without judgment. For example, if they are scared, say, \"I see this is really scary for you, and I am here with you to help us figure it out together.\" This validates their experience and reduces conflict.",
+      "timestamp": "16:36-18:24",
+      "time_start_sec": 996,
+      "time_end_sec": 1104
+    },
+    {
+      "question": "How can a caregiver use a \"substitution\" technique to redirect a repetitive behavior?",
+      "answer": "You can offer a different activity that uses the same muscle memory or purpose. If a person is hitting a chair, you might offer a brush or a cloth to clean a surface instead. This respects their desire to work or move their hands while changing the outcome to something helpful, like cleaning, which reduces annoyance and gives them a sense of accomplishment.",
+      "timestamp": "14:35-15:43",
+      "time_start_sec": 875,
+      "time_end_sec": 943
+    },
+    {
+      "question": "Why is it important for a caregiver to reflect the person's distress back to them during a panic attack?",
+      "answer": "People with dementia often struggle with self-awareness and may not realize how distressed they are. By saying things like, \"You look very worried, and I can see this is terrifying for you,\" the caregiver helps the person feel understood. This reflection allows the person to process their emotions and often lowers their anxiety, even if the caregiver is not solving the problem immediately.",
+      "timestamp": "18:26-20:21",
+      "time_start_sec": 1106,
+      "time_end_sec": 1221
+    },
+    {
+      "question": "What are the six main skills located in the prefrontal cortex that can be affected by dementia?",
+      "answer": "The six skills are: 1) Impulse control (stopping unwanted actions), 2) Logic and reason (understanding why things happen), 3) Sequence management (starting, stopping, and transitioning between tasks), 4) Choice-making (selecting between options), 5) Self-awareness (knowing oneself accurately), and 6) Perspective-taking (understanding how others see the world). Damage to any of these causes confusion in daily life.",
+      "timestamp": "2:27-6:20",
+      "time_start_sec": 147,
+      "time_end_sec": 380
+    },
+    {
+      "question": "How does the combination of multiple failing skills create a confusing picture for observers?",
+      "answer": "Dementia rarely affects just one skill. It often hits several at once, such as losing the ability to initiate a task while also losing the logic to understand why it matters. This combination makes simple actions look like complex failures. One small missing piece, like the ability to stop or start correctly, can cause the entire chain of daily activities to fall apart.",
+      "timestamp": "6:58-7:33",
+      "time_start_sec": 418,
+      "time_end_sec": 453
+    },
+    {
+      "question": "What is the difference between a healthy brain's ability to choose and a brain affected by dementia?",
+      "answer": "A healthy brain can easily choose from five to eight different options. As dementia progresses, the brain struggles to evaluate many choices and may only see two or even just one option. The person might insist on a specific choice because it is the only one their damaged brain can process, even if it is not the best or safest option.",
+      "timestamp": "5:09-5:36",
+      "time_start_sec": 309,
+      "time_end_sec": 336
+    },
+    {
+      "question": "Why might a person with dementia repeat the same action for a long time despite negative consequences?",
+      "answer": "This happens because the person lacks the \"termination\" skill. They cannot recognize that the action is finished or that it is causing harm. Their brain is stuck in a loop of initiation (starting the action) but cannot execute the sequence required to stop it, leading to repetitive behaviors that continue until physically interrupted.",
+      "timestamp": "11:50-12:10",
+      "time_start_sec": 710,
+      "time_end_sec": 730
+    },
+    {
+      "question": "How can a caregiver support a person who is expressing fear or confusion about the outside world?",
+      "answer": "The caregiver should validate the fear rather than dismissing it with false reassurance. Instead of saying \"it's fine,\" they should say, \"This is scary, and I understand why you are worried. We are going to face this together.\" This approach acknowledges the reality of their distress without lying, helping them feel safe and supported while they navigate their confusion.",
+      "timestamp": "17:39-20:02",
+      "time_start_sec": 1059,
+      "time_end_sec": 1202
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/14/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-45.json",
+  "valid": true
+}

@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 498.36,
+  "timestamp_lines": [
+    "Timestamp 1: 0:36-1:15",
+    "Timestamp 2: 1:35-2:27",
+    "Timestamp 3: 4:50-6:48",
+    "Timestamp 4: 6:48-7:22"
+  ],
+  "pairs": [
+    {
+      "question": "How does a person with dementia often show their feelings through their voice even when they say the same words as someone else?",
+      "answer": "A person with dementia uses their brain area called the prefrontal cortex to read social clues. They look at your face and listen to your tone, volume, and speed to guess if you are happy, sad, or scared. Sometimes two people say exactly the same sentence, like \"I'm fine,\" but one says it happily while the other says it sadly. The person with dementia relies on these hidden feelings in the voice to understand the real meaning behind the words, not just the letters.",
+      "timestamp": "0:36-1:15",
+      "time_start_sec": 36,
+      "time_end_sec": 75
+    },
+    {
+      "question": "Why might a caregiver feel confused and angry when their partner makes a mistake, even though they meant to help?",
+      "answer": "Early signs of this condition often involve trouble relating to others rather than forgetting things. When a partner makes a mistake, like spilling coffee, they might not realize they caused the mess. Instead, they might feel frustrated because they tried to help and got it wrong. The caregiver might get upset, and the partner might feel confused because they cannot see what is driving the caregiver's reaction, leading to a cycle of misunderstanding.",
+      "timestamp": "1:35-2:27",
+      "time_start_sec": 95,
+      "time_end_sec": 147
+    },
+    {
+      "question": "What happens when a person with dementia tries to express deep love but their words do not match their true feelings?",
+      "answer": "As the disease affects the prefrontal cortex, a person may struggle to match their spoken words with their actual emotions. For example, they might say \"I really love you\" with a very flat, quiet voice instead of warmth. Later, they might suddenly say something completely different, like asking for sex, because their brain is trying to connect their feelings with the next logical step but misses the emotional context. This mismatch can make the person seem cold or strange, even though they are trying to communicate honestly.",
+      "timestamp": "4:50-6:48",
+      "time_start_sec": 290,
+      "time_end_sec": 408
+    },
+    {
+      "question": "How does a partner with dementia feel when their spouse reacts negatively to their strange behavior?",
+      "answer": "When a partner acts strangely or forgets how to show emotion properly, they often feel like they have lost their relationship with their spouse. Even if the spouse is still there physically, the partner feels like the connection is broken because the spouse seems to be reacting to the behavior rather than the person. This can make the partner feel alone and hurt, thinking that the spouse has stopped caring about them before the memory loss gets worse.",
+      "timestamp": "6:48-7:22",
+      "time_start_sec": 408,
+      "time_end_sec": 442
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/29/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

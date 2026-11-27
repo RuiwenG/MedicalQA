@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 1052.3,
+  "timestamp_lines": [
+    "Timestamp 1: 2:23-5:19",
+    "Timestamp 2: 5:57-6:44",
+    "Timestamp 3: 8:31-9:00",
+    "Timestamp 4: 10:16-11:52",
+    "Timestamp 5: 14:28-15:42",
+    "Timestamp 6: 12:36-13:33",
+    "Timestamp 7: 9:08-9:25",
+    "Timestamp 8: 13:00-13:25",
+    "Timestamp 9: 15:57-16:13",
+    "Timestamp 10: 11:59-12:16",
+    "Timestamp 11: 16:26-16:38"
+  ],
+  "pairs": [
+    {
+      "question": "How can a family with a person living with dementia modify their home layout to ensure safety and maintain family connections during busy holiday seasons?",
+      "answer": "Families can build a dedicated, dementia-friendly space on the first floor for the person with dementia, keeping the main living and dining areas nearby or connected via large opening doors. This allows family members to supervise easily when needed while still hosting guests in the same general area. For example, opening double doors between apartments creates one large living room, ensuring the person with dementia is never isolated from the family but can retreat to a quieter spot when the noise becomes overwhelming.",
+      "timestamp": "2:23-5:19",
+      "time_start_sec": 143,
+      "time_end_sec": 319
+    },
+    {
+      "question": "What is a simple strategy to help a person with dementia cope with loud noises and crowds during the holidays?",
+      "answer": "When the environment gets too loud, the person with dementia can retreat to a specific, quiet room or space. They can engage in a calming activity there, such as watching a game on television alone, while family members continue their noisy celebrations elsewhere. This separation allows everyone to enjoy the festivities without forcing the person with dementia to endure excessive noise, preserving their peace of mind.",
+      "timestamp": "5:57-6:44",
+      "time_start_sec": 357,
+      "time_end_sec": 404
+    },
+    {
+      "question": "How can families involve a loved one with dementia in holiday traditions like building gingerbread houses to make them feel included?",
+      "answer": "Families can frame the activity as a tribute to the loved one's memory. Children can build their gingerbread houses with specific themes or items that represent what the loved one liked, such as fishing rods or deer. By telling the children that the loved one is \"choosing\" the best house based on these personal touches, the family helps the person with dementia feel present and valued even if they cannot physically participate in the construction.",
+      "timestamp": "8:31-9:00",
+      "time_start_sec": 511,
+      "time_end_sec": 540
+    },
+    {
+      "question": "Why is it beneficial to use a family trivia game to connect with grandchildren, and how should the questions be selected?",
+      "answer": "A family trivia game is excellent for storytelling and strengthening relationships because it encourages guessing and sharing personal memories. To make it accessible for all ages, families should avoid generic questions and instead create custom cards with questions about specific family members, childhood stories, or local history. This forces the group to listen closely and learn details about relatives they might not know well, turning the game into a fun educational experience.",
+      "timestamp": "10:16-11:52",
+      "time_start_sec": 616,
+      "time_end_sec": 712
+    },
+    {
+      "question": "What practical advice should caregivers give to family members who are nervous about visiting a relative with dementia during the holidays?",
+      "answer": "Caregivers should encourage family members to communicate openly with the person with dementia before meeting. They should explain honestly what to expect regarding the person's behavior, such as needing breaks, wandering off, or having trouble processing questions. By setting clear expectations and giving the person with dementia permission to leave the room or go outside if they feel overwhelmed, families reduce anxiety for everyone involved and prevent feelings of guilt.",
+      "timestamp": "14:28-15:42",
+      "time_start_sec": 868,
+      "time_end_sec": 942
+    },
+    {
+      "question": "How can a family schedule outings to the grocery store or post office to minimize stress for a person with dementia?",
+      "answer": "Families should plan trips to busy public places like the grocery store or post office during off-peak hours, such as early in the morning or late in the evening. This avoids the crowded streets and high-sensory environments typical of the holiday season. By choosing a calm time, the person with dementia is less likely to become frustrated or agitated by the noise and crowds, making the outing safer and more manageable.",
+      "timestamp": "12:36-13:33",
+      "time_start_sec": 756,
+      "time_end_sec": 813
+    },
+    {
+      "question": "What is an effective way for a family to celebrate a holiday tradition like judging gingerbread houses when the person with dementia cannot judge themselves?",
+      "answer": "The family can assign the role of judging to the person with dementia by giving them four or five pieces of paper to rank the houses. However, to protect their dignity and prevent embarrassment, the papers should be placed upside down so the person with dementia cannot see the results. The family then reveals the winner privately afterward, allowing the person to feel like an active participant in the celebration without the pressure of public scrutiny.",
+      "timestamp": "9:08-9:25",
+      "time_start_sec": 548,
+      "time_end_sec": 565
+    },
+    {
+      "question": "Why is it helpful to teach a person with dementia how to recognize and avoid crowds during the holidays?",
+      "answer": "Teaching a person with dementia to identify crowded areas helps them stay safe and prevents frustration. When a person realizes that certain locations are too busy and overwhelming, they can consciously decide to avoid them or wait until the crowd thins out. This self-awareness reduces the likelihood of getting lost or becoming upset in stores and streets filled with holiday shoppers.",
+      "timestamp": "13:00-13:25",
+      "time_start_sec": 780,
+      "time_end_sec": 805
+    },
+    {
+      "question": "How can a caregiver help a family member who feels guilty about not spending enough time with a relative with dementia?",
+      "answer": "Caregivers can reassure family members that it is okay to set realistic expectations and prioritize quality time over quantity. By agreeing on a \"ground level\" of expectations beforehand, everyone understands that the person with dementia may need breaks or may not respond as expected. This shared understanding removes the burden of guilt, allowing family members to focus on being present and supportive rather than feeling they are failing to meet traditional holiday standards.",
+      "timestamp": "15:57-16:13",
+      "time_start_sec": 957,
+      "time_end_sec": 973
+    },
+    {
+      "question": "What is a key benefit of sharing family stories through games or activities for both the person with dementia and the younger generation?",
+      "answer": "Sharing family stories through games helps preserve family history and strengthens bonds across generations. When grandchildren hear the same stories repeatedly, they gain a deeper understanding of their relatives' lives and personalities. This process ensures that the person with dementia remains a central figure in the family narrative, fostering a sense of continuity and connection that benefits everyone involved.",
+      "timestamp": "11:59-12:16",
+      "time_start_sec": 719,
+      "time_end_sec": 736
+    },
+    {
+      "question": "How can a family adapt a holiday tradition to include deceased relatives in the celebration?",
+      "answer": "Families can incorporate deceased relatives into holiday activities by treating their stories as legends or legends to be told. For example, during a trivia game or storytelling session, family members can share tales about ancestors or loved ones who have passed away. This approach honors their memory and integrates them into the current celebration, helping the living feel a continued connection to their heritage.",
+      "timestamp": "16:26-16:38",
+      "time_start_sec": 986,
+      "time_end_sec": 998
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/5/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

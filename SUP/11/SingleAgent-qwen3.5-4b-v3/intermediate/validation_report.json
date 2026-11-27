@@ -1,0 +1,339 @@
+{
+  "expected_pairs": 41,
+  "parsed_pairs": 41,
+  "transcript_end_sec": 3644.86,
+  "timestamp_lines": [
+    "Timestamp 1: 11:45-12:15",
+    "Timestamp 2: 18:10-19:15",
+    "Timestamp 3: 47:30-48:10",
+    "Timestamp 4: 36:15-37:25",
+    "Timestamp 5: 26:20-27:03",
+    "Timestamp 6: 10:19-11:15",
+    "Timestamp 7: 20:10-21:30",
+    "Timestamp 8: 29:42-30:46",
+    "Timestamp 9: 35:13-36:15",
+    "Timestamp 10: 24:48-25:13",
+    "Timestamp 11: 49:08-50:14",
+    "Timestamp 12: 15:30-16:04",
+    "Timestamp 13: 49:34-49:58",
+    "Timestamp 14: 55:24-56:47",
+    "Timestamp 15: 37:12-38:15",
+    "Timestamp 16: 53:13-54:48",
+    "Timestamp 17: 40:54-41:43",
+    "Timestamp 18: 58:43-59:11",
+    "Timestamp 19: 14:26-15:07",
+    "Timestamp 20: 46:44-47:27",
+    "Timestamp 21: 16:04-16:34",
+    "Timestamp 22: 36:27-36:56",
+    "Timestamp 23: 37:31-38:15",
+    "Timestamp 24: 22:21-23:03",
+    "Timestamp 25: 23:51-24:24",
+    "Timestamp 26: 16:26-16:56",
+    "Timestamp 27: 18:10-18:42",
+    "Timestamp 28: 24:50-25:13",
+    "Timestamp 29: 55:24-56:47",
+    "Timestamp 30: 43:18-43:54",
+    "Timestamp 31: 32:25-32:52",
+    "Timestamp 32: 0:50-1:25",
+    "Timestamp 33: 53:13-54:48",
+    "Timestamp 34: 36:41-37:25",
+    "Timestamp 35: 47:55-48:10",
+    "Timestamp 36: 25:20-26:07",
+    "Timestamp 37: 32:25-32:52",
+    "Timestamp 38: 7:52-8:05",
+    "Timestamp 39: 18:10-19:15",
+    "Timestamp 40: 43:18-43:54",
+    "Timestamp 41: 53:40-54:48"
+  ],
+  "pairs": [
+    {
+      "question": "What is the \"Positive Approach to Care\" (PAC) and why is it important for families dealing with dementia?",
+      "answer": "The Positive Approach to Care (PAC) is a method that focuses on strengths and positive outcomes rather than just deficits or problems. It is important because it helps families stop viewing people with dementia as unable to change or learn. By focusing on what is working well, families can build confidence, reduce conflict, and create a more supportive environment where everyone feels valued.",
+      "timestamp": "11:45-12:15",
+      "time_start_sec": 705,
+      "time_end_sec": 735
+    },
+    {
+      "question": "How can a family member identify the real reason behind a person with dementia's anger?",
+      "answer": "Anger is often a symptom of an unmet need or a frustration that cannot be expressed directly. Instead of getting upset about the anger itself, the family should act like detectives to find the underlying cause. For example, a person might be angry about a broken tool, but the real issue might be loneliness or a fear of losing independence. Asking gentle questions and observing their reactions can help uncover the true reason.",
+      "timestamp": "18:10-19:15",
+      "time_start_sec": 1090,
+      "time_end_sec": 1155
+    },
+    {
+      "question": "What specific strategies did Tracy and her family use to manage their father's anger during a soccer game?",
+      "answer": "When their father became angry with the referee, they stopped trying to reason with him directly. Instead, they used a distraction technique where another parent talked to him about something completely different. This shifted his focus away from the annoyance and allowed him to calm down and return to enjoying the game.",
+      "timestamp": "47:30-48:10",
+      "time_start_sec": 2850,
+      "time_end_sec": 2890
+    },
+    {
+      "question": "Why is it helpful to involve the person with dementia in decision-making regarding their daily routine?",
+      "answer": "Involving the person gives them a sense of control and reduces the pressure of having to do things they might not feel like doing. For instance, instead of forcing them to move snow before the kids leave, the family waited until the person felt ready to do it. This respects their current energy levels and prevents unnecessary stress.",
+      "timestamp": "36:15-37:25",
+      "time_start_sec": 2175,
+      "time_end_sec": 2245
+    },
+    {
+      "question": "How can a caregiver effectively handle a situation where they feel overwhelmed by the demands of caregiving?",
+      "answer": "Caregivers should build a support team consisting of friends, family, or volunteers who can step in to help with specific tasks. It is also crucial to set aside dedicated time for oneself to rest, educate, or simply relax. Relying on a team prevents burnout and ensures that the caregiver has the energy to provide the best care.",
+      "timestamp": "26:20-27:03",
+      "time_start_sec": 1580,
+      "time_end_sec": 1623
+    },
+    {
+      "question": "What role does counseling play in helping a family adjust to a dementia diagnosis?",
+      "answer": "Counseling provides a safe space for the entire family to process emotions, understand the disease, and develop new coping strategies. It helps family members move past blaming each other or holding onto past grievances. By working with a professional, the family learns how to communicate better and adapt their lives to the new reality.",
+      "timestamp": "10:19-11:15",
+      "time_start_sec": 619,
+      "time_end_sec": 675
+    },
+    {
+      "question": "How can a family create a supportive environment for a person with dementia who is struggling with sensory overload?",
+      "answer": "Families can modify the environment to reduce loud noises, bright flashing lights, and complex visual stimuli. For example, if a trip to a noisy casino caused distress, the family could visit a quieter location instead. Using simple verbal cues and gentle physical touch can also help guide the person through overwhelming situations.",
+      "timestamp": "20:10-21:30",
+      "time_start_sec": 1210,
+      "time_end_sec": 1290
+    },
+    {
+      "question": "What is the significance of early diagnosis in preventing relationship damage within a family?",
+      "answer": "Early diagnosis allows families to understand the changes happening to their loved one before they misinterpret them as personality flaws or stubbornness. This understanding helps prevent misunderstandings, reduces conflict, and gives the family time to plan ahead and repair relationships before significant emotional harm occurs.",
+      "timestamp": "29:42-30:46",
+      "time_start_sec": 1782,
+      "time_end_sec": 1846
+    },
+    {
+      "question": "How can a caregiver encourage a person with dementia to engage in activities they enjoy?",
+      "answer": "Caregivers can use distractions to redirect negative thoughts or frustrations. For example, playing music the person loves, listening to historical stories, or engaging in a hobby can pull their attention away from bad thoughts. It is important to respect their schedule and let them participate in activities at their own pace.",
+      "timestamp": "35:13-36:15",
+      "time_start_sec": 2113,
+      "time_end_sec": 2175
+    },
+    {
+      "question": "What is the importance of building a team of supporters for a caregiver?",
+      "answer": "Building a team frees up the primary caregiver to focus on education and self-care. Having friends or family members who can assist with specific tasks, like driving the person with dementia or chatting with them, creates a safety net. This support system ensures that no single person carries the entire burden alone.",
+      "timestamp": "24:48-25:13",
+      "time_start_sec": 1488,
+      "time_end_sec": 1513
+    },
+    {
+      "question": "How can a family teach children about dementia in a way that reduces stigma?",
+      "answer": "Families can educate children about dementia through age-appropriate lessons, such as during school career days or family meetings. By sharing stories and showing that people with dementia can still contribute positively to the community, children learn to view them with respect and compassion rather than fear or misunderstanding.",
+      "timestamp": "49:08-50:14",
+      "time_start_sec": 2948,
+      "time_end_sec": 3014
+    },
+    {
+      "question": "What practical steps can a family take to prepare for future changes in their loved one's care needs?",
+      "answer": "Families should start planning early to ensure they are prepared for future challenges. This includes researching options, setting up necessary equipment, and discussing potential scenarios with the person with dementia. Early preparation helps reduce anxiety and ensures the family is ready to handle difficult moments with confidence.",
+      "timestamp": "15:30-16:04",
+      "time_start_sec": 930,
+      "time_end_sec": 964
+    },
+    {
+      "question": "How can a caregiver help a person with dementia maintain a sense of purpose?",
+      "answer": "Caregivers can involve the person with dementia in meaningful activities, such as volunteering, mentoring, or participating in community events. Giving them a role to play helps them feel valued and connected. For example, Tracy organized a career day where her students brought in people from her mother's support group to share their experiences.",
+      "timestamp": "49:34-49:58",
+      "time_start_sec": 2974,
+      "time_end_sec": 2998
+    },
+    {
+      "question": "What is the benefit of using \"grace\" when interacting with a person with dementia?",
+      "answer": "Offering grace means choosing to respond with kindness and understanding rather than judgment when things go wrong. It involves assuming there is a reason for the behavior, such as confusion or unmet needs, rather than assuming malice. This approach de-escalates tension and fosters a more peaceful home environment.",
+      "timestamp": "55:24-56:47",
+      "time_start_sec": 3324,
+      "time_end_sec": 3407
+    },
+    {
+      "question": "How can a family balance the need for structure with the flexibility required for a person with dementia?",
+      "answer": "While routines provide security, families should remain flexible and follow the person's lead when possible. If a person feels like doing something, they should be encouraged to do it on their own schedule. However, if a task is essential, the family can prepare materials in advance so the person can complete it without feeling rushed or pressured.",
+      "timestamp": "37:12-38:15",
+      "time_start_sec": 2232,
+      "time_end_sec": 2295
+    },
+    {
+      "question": "What role does faith play in helping a family cope with a dementia diagnosis?",
+      "answer": "Faith can provide a source of strength, comfort, and a framework for finding meaning in difficult times. For many families, believing in a higher power helps them navigate the emotional turmoil of diagnosis and encourages them to continue striving for a positive outcome despite the challenges.",
+      "timestamp": "53:13-54:48",
+      "time_start_sec": 3193,
+      "time_end_sec": 3288
+    },
+    {
+      "question": "How can a family identify a counselor who is knowledgeable about dementia?",
+      "answer": "Families should be cautious and persistent when seeking a counselor. If the first counselor does not seem to understand dementia or the family's specific situation, it is important not to give up and keep looking. Finding a professional who has studied dementia specifically ensures that the advice and strategies provided are accurate and effective.",
+      "timestamp": "40:54-41:43",
+      "time_start_sec": 2454,
+      "time_end_sec": 2503
+    },
+    {
+      "question": "What is the impact of a person with dementia's \"servant heart\" on their family?",
+      "answer": "Recognizing that a person with dementia retains their core values, like wanting to serve others, can be incredibly uplifting for the family. It reminds caregivers that the person is still capable of giving love and support, even if their abilities have changed. This perspective helps the family cherish the person's contributions rather than focusing solely on their limitations.",
+      "timestamp": "58:43-59:11",
+      "time_start_sec": 3523,
+      "time_end_sec": 3551
+    },
+    {
+      "question": "How can a family manage the emotional impact of a diagnosis on themselves?",
+      "answer": "Families should acknowledge their feelings, such as sadness or fear, but avoid letting them paralyze them. It is helpful to push back on the urge to dwell on negative emotions and instead focus on actionable steps. Learning from resources and training can provide clarity and a sense of control, helping the family move forward constructively.",
+      "timestamp": "14:26-15:07",
+      "time_start_sec": 866,
+      "time_end_sec": 907
+    },
+    {
+      "question": "What is the value of sharing personal stories about dementia with the broader community?",
+      "answer": "Sharing stories helps educate the public and reduces stigma surrounding dementia. By openly discussing their journey, families can inspire others to seek help, understand the condition, and offer support. It also creates a sense of connection and solidarity among those affected by dementia.",
+      "timestamp": "46:44-47:27",
+      "time_start_sec": 2804,
+      "time_end_sec": 2847
+    },
+    {
+      "question": "How can a family encourage a person with dementia to express their needs verbally?",
+      "answer": "Families can encourage verbal expression by offering simple choices, such as asking, \"Do you want this or that?\" This empowers the person to make decisions and feel involved. It also helps the family understand the person's preferences and needs without having to guess or assume.",
+      "timestamp": "16:04-16:34",
+      "time_start_sec": 964,
+      "time_end_sec": 994
+    },
+    {
+      "question": "What is the importance of reducing stress for both the caregiver and the person with dementia?",
+      "answer": "High stress levels can worsen symptoms for both the person with dementia and the caregiver. Reducing stress involves simplifying tasks, removing unnecessary pressures, and creating a calm environment. For example, avoiding rigid schedules and allowing for rest periods can significantly lower tension and improve overall well-being.",
+      "timestamp": "36:27-36:56",
+      "time_start_sec": 2187,
+      "time_end_sec": 2216
+    },
+    {
+      "question": "How can a family support a person with dementia who is experiencing memory lapses?",
+      "answer": "Families can support memory lapses by organizing the home environment so that items are in their usual places. Having supplies like cleaning products or tools readily available removes the frustration of searching for things. This approach minimizes the need for the person to rely on memory and reduces anxiety.",
+      "timestamp": "37:31-38:15",
+      "time_start_sec": 2251,
+      "time_end_sec": 2295
+    },
+    {
+      "question": "What is the role of patience in the caregiving process?",
+      "answer": "Patience is essential because learning to care for someone with dementia takes time and practice. Mistakes are inevitable, and families should not be discouraged by them. Instead, they should view errors as learning opportunities and continue to try new strategies with a positive attitude.",
+      "timestamp": "22:21-23:03",
+      "time_start_sec": 1341,
+      "time_end_sec": 1383
+    },
+    {
+      "question": "How can a family celebrate small successes with a person with dementia?",
+      "answer": "Families should regularly identify and acknowledge what went well, even in small ways. For example, praising a person for successfully completing a task or using a specific strategy to manage an emotion reinforces positive behaviors. Celebrating these moments boosts confidence and encourages continued effort.",
+      "timestamp": "23:51-24:24",
+      "time_start_sec": 1431,
+      "time_end_sec": 1464
+    },
+    {
+      "question": "What is the significance of involving the person with dementia in planning their future?",
+      "answer": "Involving the person in planning gives them a sense of agency and dignity. It allows them to express their wishes and preferences, which can guide decisions about their care. This collaborative approach ensures that the care plan aligns with the person's values and desires.",
+      "timestamp": "16:26-16:56",
+      "time_start_sec": 986,
+      "time_end_sec": 1016
+    },
+    {
+      "question": "How can a family handle situations where they feel they are \"circling\" a problem without solving it?",
+      "answer": "When stuck in a loop of confusion, the family should take a step back and try to find the root cause again. It is important not to give up if the first attempt fails. Keeping an open mind and asking for help from experts or support groups can provide new perspectives and solutions.",
+      "timestamp": "18:10-18:42",
+      "time_start_sec": 1090,
+      "time_end_sec": 1122
+    },
+    {
+      "question": "What is the benefit of creating a \"team\" of supporters for a caregiver?",
+      "answer": "A team of supporters provides a network of reliability and flexibility. Members of the team can cover different needs, such as transportation, companionship, or educational tasks. This division of labor ensures that the primary caregiver has the time and energy to focus on the most critical aspects of care.",
+      "timestamp": "24:50-25:13",
+      "time_start_sec": 1490,
+      "time_end_sec": 1513
+    },
+    {
+      "question": "How can a family foster a positive atmosphere during challenging moments?",
+      "answer": "Fostering a positive atmosphere involves practicing grace and empathy. Instead of reacting with frustration, family members can choose to understand the person's perspective and offer support. This creates a safe space where the person feels accepted and valued, even during difficult times.",
+      "timestamp": "55:24-56:47",
+      "time_start_sec": 3324,
+      "time_end_sec": 3407
+    },
+    {
+      "question": "What is the importance of continuous learning for caregivers?",
+      "answer": "Continuous learning equips caregivers with the latest strategies and insights to better support their loved ones. Staying informed helps families adapt to the evolving nature of dementia and discover new ways to improve care. Education also empowers caregivers to advocate for their needs and make informed decisions.",
+      "timestamp": "43:18-43:54",
+      "time_start_sec": 2598,
+      "time_end_sec": 2634
+    },
+    {
+      "question": "How can a family manage the emotional toll of a diagnosis on the entire household?",
+      "answer": "Managing the emotional toll requires open communication and mutual support. Family members should share their feelings and validate each other's experiences. Creating a supportive environment where everyone feels heard can help mitigate the stress and prevent isolation.",
+      "timestamp": "32:25-32:52",
+      "time_start_sec": 1945,
+      "time_end_sec": 1972
+    },
+    {
+      "question": "What is the role of humor in caregiving?",
+      "answer": "Humor can be a powerful tool for reducing tension and bringing joy to the caregiving experience. It helps lighten the mood and reminds the family to find the good in difficult situations. Sharing lighthearted moments can strengthen bonds and provide a much-needed respite from the stresses of daily life.",
+      "timestamp": "0:50-1:25",
+      "time_start_sec": 50,
+      "time_end_sec": 85
+    },
+    {
+      "question": "How can a family support a person with dementia who is struggling with identity?",
+      "answer": "Supporting identity involves helping the person connect with their past, values, and interests. Engaging them in activities they used to enjoy or discussing their life history can reinforce their sense of self. This helps the person feel recognized and appreciated beyond their current limitations.",
+      "timestamp": "53:13-54:48",
+      "time_start_sec": 3193,
+      "time_end_sec": 3288
+    },
+    {
+      "question": "What is the importance of setting realistic expectations for a person with dementia?",
+      "answer": "Setting realistic expectations prevents disappointment and frustration. Families should recognize that abilities may fluctuate and adjust their expectations accordingly. By focusing on what is possible rather than what was once expected, families can maintain a positive outlook and reduce stress.",
+      "timestamp": "36:41-37:25",
+      "time_start_sec": 2201,
+      "time_end_sec": 2245
+    },
+    {
+      "question": "How can a family encourage a person with dementia to engage in social interactions?",
+      "answer": "Encouraging social interaction involves creating opportunities for the person to connect with others. This can include joining community groups, attending events, or simply spending time with friends and family. Social engagement provides stimulation, reduces isolation, and enhances overall well-being.",
+      "timestamp": "47:55-48:10",
+      "time_start_sec": 2875,
+      "time_end_sec": 2890
+    },
+    {
+      "question": "What is the role of technology in supporting a person with dementia?",
+      "answer": "Technology can facilitate communication and provide entertainment for people with dementia. Tools like video calls allow them to stay connected with distant loved ones, while apps and games can offer cognitive stimulation. Technology can also help caregivers monitor health and manage daily tasks more efficiently.",
+      "timestamp": "25:20-26:07",
+      "time_start_sec": 1520,
+      "time_end_sec": 1567
+    },
+    {
+      "question": "How can a family handle the grief associated with a dementia diagnosis?",
+      "answer": "Handling grief involves acknowledging the loss of the person's former abilities while celebrating their enduring spirit. It is normal to feel sadness, but focusing on the present and future can help process these emotions. Seeking support from counselors or support groups can provide guidance and comfort during this difficult time.",
+      "timestamp": "32:25-32:52",
+      "time_start_sec": 1945,
+      "time_end_sec": 1972
+    },
+    {
+      "question": "What is the importance of maintaining a positive mindset for the entire family?",
+      "answer": "Maintaining a positive mindset fosters resilience and hope within the family. It encourages problem-solving and creativity in finding solutions to challenges. A positive attitude can also be contagious, inspiring the person with dementia to remain engaged and optimistic.",
+      "timestamp": "7:52-8:05",
+      "time_start_sec": 472,
+      "time_end_sec": 485
+    },
+    {
+      "question": "How can a family support a person with dementia who is experiencing behavioral changes?",
+      "answer": "Supporting behavioral changes involves identifying triggers and addressing the underlying needs. Families should remain calm, use clear communication, and offer alternatives to problematic behaviors. Understanding the \"why\" behind the behavior is key to finding effective solutions.",
+      "timestamp": "18:10-19:15",
+      "time_start_sec": 1090,
+      "time_end_sec": 1155
+    },
+    {
+      "question": "What is the role of education in empowering families to care for someone with dementia?",
+      "answer": "Education empowers families by providing knowledge and skills to navigate the complexities of dementia. It helps caregivers understand the disease, recognize symptoms, and implement effective strategies. Educated families are better equipped to advocate for their loved ones and make informed decisions about their care.",
+      "timestamp": "43:18-43:54",
+      "time_start_sec": 2598,
+      "time_end_sec": 2634
+    },
+    {
+      "question": "How can a family find meaning and purpose in their caregiving journey?",
+      "answer": "Finding meaning involves connecting caregiving to personal values and a sense of service. Many caregivers find purpose in helping others, spreading awareness, or contributing to their community. By focusing on the positive impact they can have, families can transform their journey into a fulfilling and meaningful experience.",
+      "timestamp": "53:40-54:48",
+      "time_start_sec": 3220,
+      "time_end_sec": 3288
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/11/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-45.json",
+  "valid": true
+}

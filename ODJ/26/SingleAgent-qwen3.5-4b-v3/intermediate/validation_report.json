@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 441.64,
+  "timestamp_lines": [
+    "Timestamp 1: 1:48-2:34",
+    "Timestamp 2: 2:40-3:39",
+    "Timestamp 3: 3:43-3:51",
+    "Timestamp 4: 4:21-4:51",
+    "Timestamp 5: 5:53-6:16"
+  ],
+  "pairs": [
+    {
+      "question": "How can a person who moves around a lot use simple items to remember daily tasks?",
+      "answer": "People who move around a lot, known as kinesthetic learners, benefit greatly from placing visual and verbal reminders in different spots around their home. For example, a person can keep a grocery list on the counter next to the refrigerator to easily add items when needed. They can also use a whiteboard in the office to track weekly appointments and tasks, ensuring they know exactly what needs to be done without having to search for information.",
+      "timestamp": "1:48-2:34",
+      "time_start_sec": 108,
+      "time_end_sec": 154
+    },
+    {
+      "question": "What is a good strategy for keeping track of upcoming events over a longer period of time?",
+      "answer": "A helpful strategy is to use a whiteboard calendar with an adhesive backing that sticks to walls safely. By hanging this calendar in a high-traffic area like a stairwell, a person gets a daily visual reminder of future appointments simply by walking up or down the stairs. To keep it fresh, the person should set aside time once a month to wipe the board clean and write out the schedule for the next month, which helps them see the big picture of their commitments.",
+      "timestamp": "2:40-3:39",
+      "time_start_sec": 160,
+      "time_end_sec": 219
+    },
+    {
+      "question": "Why might a person choose to put a sticky note directly on their front door?",
+      "answer": "Placing a post-it note right on the front door serves as a quick, immediate reminder before a person leaves the house. This method ensures that an important task or item is not forgotten because the note is visible the moment the person steps out, acting as a final check before departing.",
+      "timestamp": "3:43-3:51",
+      "time_start_sec": 223,
+      "time_end_sec": 231
+    },
+    {
+      "question": "How can a person create a permanent reminder system for specific locations in their home?",
+      "answer": "For a long-term solution, a person can buy a label maker to create permanent messages in exact locations they want. This is useful for marking specific areas or objects consistently. Unlike temporary notes, these labels stay in place, providing a reliable signal whenever the person visits that spot in their home.",
+      "timestamp": "4:21-4:51",
+      "time_start_sec": 261,
+      "time_end_sec": 291
+    },
+    {
+      "question": "What are two ways to make reminders easier for someone who has trouble reading?",
+      "answer": "If a person finds it difficult to read words, they can switch to using pictures instead of text to show where things are or what needs to be done. Additionally, they can look online for kits that include stickers and signs designed specifically for visual cues, which can be hung around the house to guide them throughout their day without needing to read.",
+      "timestamp": "5:53-6:16",
+      "time_start_sec": 353,
+      "time_end_sec": 376
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/26/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

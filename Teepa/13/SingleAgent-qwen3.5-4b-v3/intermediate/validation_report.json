@@ -1,0 +1,66 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 1046.48,
+  "timestamp_lines": [],
+  "pairs": [
+    {
+      "question": "What specific memory lapses involving names and objects are common examples of normal aging?",
+      "answer": "Common examples include forgetting a neighbor's name even though you see them often, leaving your keys in unusual places like a freezer, and repeating the same stories over and over again. These happen because the brain needs extra effort to retrieve information it knows well.",
+      "timestamp": null
+    },
+    {
+      "question": "Why might a person feel shame or panic when they forget things, and how does this feeling change over time?",
+      "answer": "Initially, these moments cause a brief panic, but if they happen frequently, the person may feel shame or frustration. This can lead to a \"shame spiral\" where they avoid social situations or feel stuck because their brain isn't connecting the dots between what happened and why they forgot.",
+      "timestamp": null
+    },
+    {
+      "question": "How does the concept of \"working memory\" explain why forgetting a neighbor's name might be normal?",
+      "answer": "A healthy adult brain can only hold about five to eight pieces of information at once. When walking outside, you are likely already juggling many tasks (like remembering trash days or new bin colors). If you then try to remember a neighbor's name on top of that, you may simply run out of mental space, which is normal.",
+      "timestamp": null
+    },
+    {
+      "question": "Under what circumstances should a caregiver become curious instead of just worried about memory changes?",
+      "answer": "You should become curious if the changes are happening frequently throughout the day, seem to be a new pattern rather than occasional slips, and if the person cannot find a logical way to cope with them (like using a calendar or mnemonic) even though they used to rely on those tools successfully.",
+      "timestamp": null
+    },
+    {
+      "question": "What are some practical signs that indicate a change is not just normal aging?",
+      "answer": "Signs include losing your car in a parking lot full of similar cars, getting lost on familiar roads due to missing signs, needing to double-check appointments multiple times despite reminders, and struggling to use new technology or software updates that previously worked fine.",
+      "timestamp": null
+    },
+    {
+      "question": "Why is it important to check for new medications or routines when noticing sudden memory changes?",
+      "answer": "Sometimes a rapid change in memory is caused by a new medication, a new routine, or a change in the environment (like a new calendar system) rather than aging. It is crucial to rule out these external factors first because older brains can still learn new things, just sometimes slower.",
+      "timestamp": null
+    },
+    {
+      "question": "How can a caregiver support a loved one who feels embarrassed about forgetting names at social events?",
+      "answer": "The caregiver can act as a \"wingman\" by gently introducing people by name before the conversation starts. For example, saying, \"This is Amanda,\" helps the person feel less isolated and reduces the pressure of having to remember the name in the moment.",
+      "timestamp": null
+    },
+    {
+      "question": "What is the difference between a person who notices their own changes versus one who notices changes in others?",
+      "answer": "About 50% of people with early dementia are aware of their changes and notice the pattern themselves, while the other 50% are unaware. A caregiver might be the first to spot the issue if the person is in the unaware group, or they might be the one noticing the pattern if the person is in the aware group.",
+      "timestamp": null
+    },
+    {
+      "question": "Why might a person get frustrated when a family member repeats the same request three or four times?",
+      "answer": "The person may feel frustrated because they realize they have made a mistake after hearing the request the fourth time. They can see the change in the listener's facial expression (like raised eyebrows) which signals they have repeated themselves, making the person feel embarrassed or defensive.",
+      "timestamp": null
+    },
+    {
+      "question": "What role do compensatory strategies play in distinguishing normal aging from potential dementia?",
+      "answer": "Compensatory strategies are tools people use to manage forgetfulness, such as calendars or mnemonics. If a person suddenly loses the ability to use these strategies effectively, or if they try to use them but they no longer work, it suggests a deeper issue than simple aging and warrants further curiosity and investigation.",
+      "timestamp": null
+    },
+    {
+      "question": "Is it true that older adults cannot learn new things, and what does the transcript say about this belief?",
+      "answer": "No, it is false that older adults cannot learn new things. While learning may take slightly longer as we age, older brains can still adapt. Struggles with new technology or programs are often due to the difficulty of learning something new combined with existing cognitive load, not an inability to learn at all.",
+      "timestamp": null
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/13/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-47.json",
+  "valid": false,
+  "error": "Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1046.480s (allowed end <= 1047s)"
+}

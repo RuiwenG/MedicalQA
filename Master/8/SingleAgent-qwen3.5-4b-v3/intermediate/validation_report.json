@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 1054.72,
+  "timestamp_lines": [
+    "Timestamp 1: 1:01-1:36",
+    "Timestamp 2: 2:24-2:31",
+    "Timestamp 3: 1:01-1:36",
+    "Timestamp 4: 7:56-8:54",
+    "Timestamp 5: 13:25-14:22",
+    "Timestamp 6: 12:43-13:25",
+    "Timestamp 7: 10:15-10:49",
+    "Timestamp 8: 13:34-13:56",
+    "Timestamp 9: 16:52-17:08",
+    "Timestamp 10: 10:53-11:11",
+    "Timestamp 11: 14:48-14:55"
+  ],
+  "pairs": [
+    {
+      "question": "What simple one-minute activity can caregivers use to help themselves or their loved ones track changes in their ability to name animals?",
+      "answer": "You can use the Animal Fluency Test. One person acts as a timer and keeps a simple tally of tick marks while the other tries to list as many different animals as possible in one minute. By comparing the total number of animals named over several years, you can spot if the score drops suddenly, which signals a change that needs attention.",
+      "timestamp": "1:01-1:36",
+      "time_start_sec": 61,
+      "time_end_sec": 96
+    },
+    {
+      "question": "How should a caregiver handle the situation if the person taking the test repeats the same animal name?",
+      "answer": "The person keeping the tally should simply acknowledge the repetition without counting it again. For example, if someone says \"cat\" and then says \"cat\" again, the timer should say \"okay\" and move on, ensuring only unique animals are counted toward the final score.",
+      "timestamp": "2:24-2:31",
+      "time_start_sec": 144,
+      "time_end_sec": 151
+    },
+    {
+      "question": "Why is it important for a caregiver to establish their own personal baseline before testing someone else?",
+      "answer": "Establishing a baseline helps you know what is normal for you or your loved one. If you know your usual score is around twenty-four, a sudden drop to eighteen becomes an early warning sign that something might be wrong, whereas without a baseline, you wouldn't realize the change has happened.",
+      "timestamp": "1:01-1:36",
+      "time_start_sec": 61,
+      "time_end_sec": 96
+    },
+    {
+      "question": "What specific strategies did the speakers use to organize their animal lists during the test?",
+      "answer": "Some people grouped animals by location, such as listing all zoo animals together or all farm animals together. Others organized their lists alphabetically, moving from animals starting with one letter to the next. The speakers noted that everyone tends to find a pattern that feels comfortable for them.",
+      "timestamp": "7:56-8:54",
+      "time_start_sec": 476,
+      "time_end_sec": 534
+    },
+    {
+      "question": "How can a caregiver make the Animal Fluency Test feel less like a medical exam and more like a fun game?",
+      "answer": "To make it fun, frame it as a challenge or a game rather than a test. You can play it as a family activity where everyone tries to beat their own previous score, or ask a doctor to do it casually during a visit. The key is to ensure the person knows it is not a judgment of their intelligence.",
+      "timestamp": "13:25-14:22",
+      "time_start_sec": 805,
+      "time_end_sec": 862
+    },
+    {
+      "question": "What factors besides memory might affect a person's score on the Animal Fluency Test?",
+      "answer": "A person's score can be influenced by how well-rested they are, whether they are feeling sick, or if they are tired at the end of the day. Because the test is short and engaging, it is often easier to do in the morning when energy levels are higher, rather than late at night.",
+      "timestamp": "12:43-13:25",
+      "time_start_sec": 763,
+      "time_end_sec": 805
+    },
+    {
+      "question": "What is the recommended way to track progress over time using the Animal Fluency Test?",
+      "answer": "To track progress accurately, you must repeat the test using the exact same category every time. For instance, if you test on \"animals\" one year, you must test on \"animals\" the next year to compare the results fairly. Changing the category, like switching to \"fruits,\" would make the comparison invalid.",
+      "timestamp": "10:15-10:49",
+      "time_start_sec": 615,
+      "time_end_sec": 649
+    },
+    {
+      "question": "How can a caregiver involve a doctor or GP in monitoring their loved one's cognitive health using this test?",
+      "answer": "A caregiver can suggest to their doctor that they perform the Animal Fluency Test with their loved one during a routine visit. This allows the doctor to observe the person's ability to name animals in a low-pressure setting, providing useful data without the person feeling like they are undergoing a formal diagnosis.",
+      "timestamp": "13:34-13:56",
+      "time_start_sec": 814,
+      "time_end_sec": 836
+    },
+    {
+      "question": "What should a caregiver do if their loved one gets a low score, such as eighteen, during the test?",
+      "answer": "If the score is low, the caregiver should not panic or treat it as a failure. Instead, they should view it as a helpful piece of information that indicates a change worth discussing with a healthcare professional. The goal is to gather this data calmly so they can seek support if needed.",
+      "timestamp": "16:52-17:08",
+      "time_start_sec": 1012,
+      "time_end_sec": 1028
+    },
+    {
+      "question": "How does the Animal Fluency Test help a caregiver understand their own relationship with their loved one?",
+      "answer": "The test provides a concrete way to check in on a loved one's well-being without causing alarm. It gives the caregiver a specific activity to do together, like asking, \"Will you do this with me again?\" which fosters connection and shows care through shared, meaningful interaction.",
+      "timestamp": "10:53-11:11",
+      "time_start_sec": 653,
+      "time_end_sec": 671
+    },
+    {
+      "question": "Why is it important for a caregiver to recognize that performance on the test can vary based on stress?",
+      "answer": "People often perform worse on tasks when they are stressed or anxious. Knowing this helps the caregiver interpret the results correctly; a lower score might just mean the person was worried or tired, rather than a definitive sign of worsening dementia, allowing for a more compassionate response.",
+      "timestamp": "14:48-14:55",
+      "time_start_sec": 888,
+      "time_end_sec": 895
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Master/8/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

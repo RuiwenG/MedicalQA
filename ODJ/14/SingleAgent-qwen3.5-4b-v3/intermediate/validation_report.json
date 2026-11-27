@@ -1,0 +1,51 @@
+{
+  "expected_pairs": 5,
+  "parsed_pairs": 5,
+  "transcript_end_sec": 496.91999999999996,
+  "timestamp_lines": [
+    "Timestamp 1: 2:39-3:18",
+    "Timestamp 2: 3:22-4:28",
+    "Timestamp 3: 4:50-5:43",
+    "Timestamp 4: 6:39-7:25",
+    "Timestamp 5: 1:32-2:32"
+  ],
+  "pairs": [
+    {
+      "question": "Frankie says his amygdala gets triggered when Lucy acts differently. What does this mean for how he feels, and what is a better way to handle these moments?",
+      "answer": "When Frankie sees something unexpected, his brain's alarm system (amygdala) goes off, making him feel annoyed or frustrated because he expects things to stay the same. Instead of reacting with anger, a better approach is to pause and realize that the situation will repeat if nothing changes. By shifting from reacting to responding, you accept that the pet cannot change back to who they were, but you can change how you deal with the new reality. This helps you see the pet as still being their affectionate self, even if their habits are different.",
+      "timestamp": "2:39-3:18",
+      "time_start_sec": 159,
+      "time_end_sec": 198
+    },
+    {
+      "question": "Lucy used to be very picky about her food and water, and her litter habits changed too. What specific changes in behavior are typical for a cat with dementia, and what should a caregiver expect regarding routines?",
+      "answer": "Cats with dementia often develop new preferences, such as suddenly wanting only running water from a bathtub instead of a bowl, or becoming very picky about what they eat. Their daily routines also shift; for example, a cat might stop using the litter box and choose to go on the floor, in the garden, or even on the bed. Caregivers should expect that old habits and routines that worked when the pet was young may no longer work, and they need to be ready to adapt their expectations and methods to fit the pet's current abilities.",
+      "timestamp": "3:22-4:28",
+      "time_start_sec": 202,
+      "time_end_sec": 268
+    },
+    {
+      "question": "Frankie mentions that methods that worked with his kids or a healthy Lucy no longer work. Why do old strategies fail, and what is the key lesson for caregivers trying to solve behavioral problems?",
+      "answer": "Strategies like using water to stop scratching or changing your tone of voice might have worked when the pet was younger and healthy, but they often stop working now because the pet's brain processes things differently. The key lesson is that you cannot force the pet to react the way they used to. You must recognize that the old methods aren't fitting anymore and instead focus on figuring out new ways to meet the pet's current needs, rather than trying to fix the pet to match your old expectations.",
+      "timestamp": "4:50-5:43",
+      "time_start_sec": 290,
+      "time_end_sec": 343
+    },
+    {
+      "question": "Even though things are harder, Frankie says there is still joy in the relationship. How can caregivers maintain a positive connection with a pet who has dementia, and what mindset shift helps reduce frustration?",
+      "answer": "To keep the relationship joyful, caregivers should try to work *with* the pet on the new challenges instead of fighting against them. For instance, cleaning up accidents becomes a shared task rather than a source of blame. The mindset shift is realizing that while the pet is not who they were, they are still a source of love and connection. By focusing on the joy present in the moment and accepting the changes, you can avoid feeling frustrated and continue to enjoy your pet's presence.",
+      "timestamp": "6:39-7:25",
+      "time_start_sec": 399,
+      "time_end_sec": 445
+    },
+    {
+      "question": "The speakers compare caring for a human with dementia to caring for a cat with dementia. What is the main similarity between these two experiences, and how does understanding this help a caregiver cope?",
+      "answer": "The main similarity is that both the caregiver and the person with dementia (or the cat) face significant changes in behavior, communication, and daily routines that can cause frustration. Understanding this helps a caregiver cope by realizing they are not alone in feeling upset. It reminds them that they are the ones who need to adapt their approach and change their own reactions, rather than expecting the person with dementia or the pet to change back to their old selves.",
+      "timestamp": "1:32-2:32",
+      "time_start_sec": 92,
+      "time_end_sec": 152
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/14/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

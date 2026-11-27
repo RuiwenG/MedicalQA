@@ -1,0 +1,60 @@
+{
+  "approach": "SingleAgent (SingleQA)",
+  "model": "Qwen/Qwen3.5-4B",
+  "model_path": "/mnt/datasets/oignat_lab/QWEN3.5_4B",
+  "backend": "local",
+  "videos": [
+    {
+      "base": "FTD",
+      "id": "1",
+      "version": "v3",
+      "expected": 11,
+      "status": "ok",
+      "pairs": 11,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-11-26T02:53:49.054731+00:00",
+      "input_tokens": 5646,
+      "output_tokens": 1386,
+      "agent_seconds": 35.649,
+      "output_budget_reached": false
+    },
+    {
+      "base": "FTD",
+      "id": "2",
+      "version": "v3",
+      "status": "failed",
+      "error": "All 6 attempt(s) failed: seed 42: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json | seed 43: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json | seed 44: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json | seed 45: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json | seed 46: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json | seed 47: Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s); details: /WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/validation_report.json"
+    },
+    {
+      "base": "FTD",
+      "id": "3",
+      "version": "v3",
+      "expected": 14,
+      "status": "ok",
+      "pairs": 14,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-11-26T02:57:03.540954+00:00",
+      "input_tokens": 6476,
+      "output_tokens": 1637,
+      "agent_seconds": 41.904,
+      "output_budget_reached": false
+    },
+    {
+      "base": "FTD",
+      "id": "4",
+      "version": "v3",
+      "expected": 12,
+      "status": "ok",
+      "pairs": 12,
+      "sampling_seed": 42,
+      "attempts": 1,
+      "generated_utc": "2026-11-26T02:57:38.938643+00:00",
+      "input_tokens": 6434,
+      "output_tokens": 1374,
+      "agent_seconds": 35.358,
+      "output_budget_reached": false
+    }
+  ]
+}

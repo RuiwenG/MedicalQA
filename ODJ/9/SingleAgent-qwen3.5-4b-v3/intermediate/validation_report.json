@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 781.86,
+  "timestamp_lines": [
+    "Timestamp 1: 0:45-2:14",
+    "Timestamp 2: 2:27-3:22",
+    "Timestamp 3: 23-5:04",
+    "Timestamp 4: 5:09-6:14",
+    "Timestamp 5: 7:28-8:26",
+    "Timestamp 6: 8:52-9:07",
+    "Timestamp 7: 10:23-11:03",
+    "Timestamp 8: 10:54-11:37"
+  ],
+  "pairs": [
+    {
+      "question": "Why does a person with dementia often react negatively when someone touches them unexpectedly, and what specific steps should a caregiver take before making contact?",
+      "answer": "A person with dementia often has a much lower tolerance for unexpected touch because their senses, such as vision and hearing, may be changing, and they might also have pain or movement issues. To avoid upsetting them, a caregiver should always give a visual signal showing they are coming, followed by a verbal cue that explains who they are and asks for permission. The caregiver should also clearly state what they intend to do before touching. This respectful approach helps the person feel safe and gives them control over the interaction.",
+      "timestamp": "0:45-2:14",
+      "time_start_sec": 45,
+      "time_end_sec": 134
+    },
+    {
+      "question": "How can a caregiver tell if a person with dementia likes deep pressure, and what is a safe way to respond if they do?",
+      "answer": "If a person hesitates at first but then immediately takes your hand and squeezes it tightly, it is a sign they enjoy deep pressure. Instead of pulling away, the caregiver should gently pump their own hand within the person's grip. This provides satisfying sensory feedback that often makes the person relax their squeeze and feel more comfortable.",
+      "timestamp": "2:27-3:22",
+      "time_start_sec": 147,
+      "time_end_sec": 202
+    },
+    {
+      "question": "What practical solution can a caregiver use to prevent a person with dementia from hurting themselves or the caregiver during a handshake?",
+      "answer": "When a person with dementia grabs a caregiver's hand tightly, their fingernails can scratch the skin, and their own grip can cause pain. A simple fix is to place a folded washcloth under the web space of the back of the caregiver's hand. This allows the person to continue gripping and feeling the texture, which satisfies their need for touch, while protecting the caregiver's skin from scratches and discomfort.",
+      "timestamp": "3: 23-5:04",
+      "time_start_sec": 203,
+      "time_end_sec": 304
+    },
+    {
+      "question": "Why might a person with dementia suddenly dislike having their hands, face, or feet touched, even if they used to enjoy it?",
+      "answer": "Touch preferences can change rapidly due to physical changes like swelling, dead skin, or nail buildup, which make routine care like washing painful or uncomfortable. Additionally, sensory processing shifts can make areas that were once neutral, such as fingertips, toes, or the face, feel irritating or intrusive. Caregivers must observe these changes closely to understand why the person is resisting touch in those specific areas.",
+      "timestamp": "5:09-6:14",
+      "time_start_sec": 309,
+      "time_end_sec": 374
+    },
+    {
+      "question": "How can a caregiver help a person with dementia who finds it difficult to manage crunchy or sticky foods safely?",
+      "answer": "As skills decline, a person might struggle to manage crunchy food bits or remove sticky substances like caramel from their teeth using their tongue alone. To help, the caregiver can adjust the food texture or use tools to assist with eating. It is important to monitor whether the person still enjoys the crunch or if the difficulty in handling the food has changed their preference, ensuring the meal remains enjoyable and safe.",
+      "timestamp": "7:28-8:26",
+      "time_start_sec": 448,
+      "time_end_sec": 506
+    },
+    {
+      "question": "What is a recommended strategy for caring for a person with dementia who has genital sensitivity or discomfort?",
+      "answer": "Genitals are a highly sensitive area, and care in this region requires special attention. The best approach is to involve the person in the process whenever possible, asking for their cooperation and guidance. Trying to force care without their input can be distressing, so seeking their collaboration ensures the care is gentle and respectful of their current comfort levels.",
+      "timestamp": "8:52-9:07",
+      "time_start_sec": 532,
+      "time_end_sec": 547
+    },
+    {
+      "question": "How can a caregiver determine if a change in clothing or washcloth material is helping or hurting a person with dementia?",
+      "answer": "Different fabrics feel differently to the skin, and a person's tolerance for textures can shift. A caregiver can test various materials, such as switching from rough terrycloth to softer flannel or using different types of washcloths, to see what the person prefers. By observing which fabrics the person seems drawn to visually and which ones feel pleasant to touch, the caregiver can select materials that promote comfort and reduce irritation.",
+      "timestamp": "10:23-11:03",
+      "time_start_sec": 623,
+      "time_end_sec": 663
+    },
+    {
+      "question": "What is the main takeaway for caregivers regarding how they should adapt their touch as dementia progresses?",
+      "answer": "Touch is essential for human connection, but as dementia advances, what feels good today might not feel good tomorrow. Caregivers should remain curious and watchful, noting exactly what is working and what is causing discomfort. If a person's reaction to touch changes, the caregiver should investigate the reason and adjust their approach immediately to ensure both the person and the caregiver have a positive and peaceful experience.",
+      "timestamp": "10:54-11:37",
+      "time_start_sec": 654,
+      "time_end_sec": 697
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/9/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

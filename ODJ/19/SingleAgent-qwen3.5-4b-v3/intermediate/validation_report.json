@@ -1,0 +1,99 @@
+{
+  "expected_pairs": 11,
+  "parsed_pairs": 11,
+  "transcript_end_sec": 981.9,
+  "timestamp_lines": [
+    "Timestamp 1: 0:52-3:01",
+    "Timestamp 2: 3:15-4:21",
+    "Timestamp 3: 6:23-7:10",
+    "Timestamp 4: 8:06-9:29",
+    "Timestamp 5: 10:10-11:51",
+    "Timestamp 6: 12:44-13:40",
+    "Timestamp 7: 13:40-14:45",
+    "Timestamp 8: 5:09-5:53",
+    "Timestamp 9: 7:10-7:53",
+    "Timestamp 10: 11:51-12:38",
+    "Timestamp 11: 14:45-15:56"
+  ],
+  "pairs": [
+    {
+      "question": "My loved one seems to ignore things that look dangerous or miss things they actually need. What is happening with their vision?",
+      "answer": "People with dementia often struggle with \"protective vision,\" which is the ability to quickly spot if something is safe, risky, or dangerous. Because their brain processes visual data differently, they might fail to see a hazard as a threat or fail to recognize a helpful object as something they need. This doesn't mean they are ignoring reality; it means their brain is not filtering what is important in the moment the same way it used to.",
+      "timestamp": "0:52-3:01",
+      "time_start_sec": 52,
+      "time_end_sec": 181
+    },
+    {
+      "question": "Why does my loved one suddenly close their eyes or flinch when something moves quickly toward them?",
+      "answer": "This is a natural protective reflex called \"flinching.\" Their brain sees a fast-moving object and instantly triggers a safety response to protect their eyes and body from being hit. They might blink quickly, pull their body back, or raise their hands to block the object. This reaction happens automatically to prevent injury, similar to how you jump when you hear a loud noise.",
+      "timestamp": "3:15-4:21",
+      "time_start_sec": 195,
+      "time_end_sec": 261
+    },
+    {
+      "question": "If my loved one stops blinking when I tap their forehead, what does that tell me about their condition?",
+      "answer": "Blinking is a protective mechanism that helps keep the eye moist and clean. When someone with dementia taps their forehead, they usually blink a few times to process the touch. If they stop blinking entirely, it suggests their brain is having trouble adapting to new sensory input. Over time, not blinking can lead to dry, irritated eyes because tears are not being produced to lubricate the surface.",
+      "timestamp": "6:23-7:10",
+      "time_start_sec": 383,
+      "time_end_sec": 430
+    },
+    {
+      "question": "My loved one keeps falling or looks unsteady when walking on uneven ground. Could their vision be the cause?",
+      "answer": "Yes, this is likely due to the \"visual vestibular system.\" This system connects what the eyes see with the inner ear's balance system to help us stand upright and walk safely. It helps them tilt their bodies correctly on slopes or grab rails when stepping down. If this connection is weak, they may feel off-balance, lean too far, or trip because their eyes are not helping their body navigate space correctly.",
+      "timestamp": "8:06-9:29",
+      "time_start_sec": 486,
+      "time_end_sec": 569
+    },
+    {
+      "question": "My loved one gets distracted easily when I call their name while they are doing a task. How does vision play a role here?",
+      "answer": "Switching attention requires both vision and hearing to work together. When someone calls their name, their eyes must shift focus from their current task to the voice, and then back again. If their vision is struggling to switch focus, they might get \"stuck\" looking at their task and forget the request. They need to be able to release their focus on one thing and quickly redirect it to another to respond properly.",
+      "timestamp": "10:10-11:51",
+      "time_start_sec": 610,
+      "time_end_sec": 711
+    },
+    {
+      "question": "My loved one seems scared of the dark or sees things in the shadows that aren't there. What is going on?",
+      "answer": "In dim light, the brain tries to fill in the gaps it cannot see, which can create confusing images. For some types of dementia, like Lewy body, the brain might invent shapes or figures in the shadows. They might mistake a reflection in a mirror for a real person or animal. This creates a sense of danger because their protective vision interprets these confusing shadows as real threats.",
+      "timestamp": "12:44-13:40",
+      "time_start_sec": 764,
+      "time_end_sec": 820
+    },
+    {
+      "question": "My loved one acts aggressive or scared when people approach them. Is it possible they misread the situation?",
+      "answer": "Yes, their ability to \"discriminate\" faces and intentions may be affected. They might see a friendly, concerned face and misinterpret the expression as angry or threatening. Conversely, they might see a stranger and think they are a friend. These visual misunderstandings can trigger fear or aggression because their brain is reacting to incorrect data about who is approaching them.",
+      "timestamp": "13:40-14:45",
+      "time_start_sec": 820,
+      "time_end_sec": 885
+    },
+    {
+      "question": "How can I approach my loved one without causing them to startle or become overwhelmed?",
+      "answer": "You should use a \"positive physical approach.\" Instead of grabbing them or moving suddenly, gently touch their shoulder or arm to give them a chance to prepare and react naturally. This gives their protective system time to process the movement rather than triggering a sudden shock response. Moving slowly and clearly signals that you are there to connect, not to harm them.",
+      "timestamp": "5:09-5:53",
+      "time_start_sec": 309,
+      "time_end_sec": 353
+    },
+    {
+      "question": "My loved one rubs their eyes constantly or complains of pain. What might be wrong?",
+      "answer": "They might be suffering from dry eyes caused by reduced blinking. Blinking cleans and moistens the eye surface. If their brain is not sending the signal to blink properly, the eye surface dries out, causing irritation. This discomfort can make them rub their eyes, which might then cause more pain or infection if they are not careful.",
+      "timestamp": "7:10-7:53",
+      "time_start_sec": 430,
+      "time_end_sec": 473
+    },
+    {
+      "question": "What should I do if my loved one seems confused about whether they are awake or asleep?",
+      "answer": "While the transcript focuses on vision, it notes that vision is linked to knowing where we are in space and time. If their visual system is struggling to distinguish between different environments or states, they might feel disoriented. You can help by ensuring the room is well-lit and consistent, and by using clear, simple cues to help them orient themselves safely.",
+      "timestamp": "11:51-12:38",
+      "time_start_sec": 711,
+      "time_end_sec": 758
+    },
+    {
+      "question": "How can I support my loved one when their vision changes affect their daily life?",
+      "answer": "You can support them by observing whether their vision is becoming more sensitive (hyper-protective) or less sensitive (hypo-protective). By understanding these specific changes, you can adjust your environment—like keeping lights bright or reducing shadows—and communicate clearly to help them navigate the world safely. Recognizing these signs allows you to compensate for their difficulties and provide better care.",
+      "timestamp": "14:45-15:56",
+      "time_start_sec": 885,
+      "time_end_sec": 956
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/19/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

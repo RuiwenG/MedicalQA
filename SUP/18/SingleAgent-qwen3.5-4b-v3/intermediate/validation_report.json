@@ -1,0 +1,363 @@
+{
+  "expected_pairs": 44,
+  "parsed_pairs": 44,
+  "transcript_end_sec": 3913.3399999999997,
+  "timestamp_lines": [
+    "Timestamp 1: 2:07-2:37",
+    "Timestamp 2: 2:44-3:14",
+    "Timestamp 3: 7:35-8:54",
+    "Timestamp 4: 9:38-10:34",
+    "Timestamp 5: 11:38-12:58",
+    "Timestamp 6: 14:41-15:24",
+    "Timestamp 7: 18:54-19:59",
+    "Timestamp 8: 16:10-16:58",
+    "Timestamp 9: 22:13-22:21",
+    "Timestamp 10: 21:01-21:38",
+    "Timestamp 11: 22:21-23:02",
+    "Timestamp 12: 23:55-24:18",
+    "Timestamp 13: 24:42-24:58",
+    "Timestamp 14: 27:17-27:33",
+    "Timestamp 15: 28:21-29:16",
+    "Timestamp 16: 29:33-29:56",
+    "Timestamp 17: 31:40-33:02",
+    "Timestamp 18: 37:53-38:14",
+    "Timestamp 19: 40:39-41:05",
+    "Timestamp 20: 48:37-49:35",
+    "Timestamp 21: 49:47-49:58",
+    "Timestamp 22: 50:28-50:45",
+    "Timestamp 23: 59:24-59:36",
+    "Timestamp 24: 57:31-57:49",
+    "Timestamp 25: 59:37-60:23",
+    "Timestamp 26: 62:12-63:06",
+    "Timestamp 27: 57:06-57:24",
+    "Timestamp 28: 46:25-47:18",
+    "Timestamp 29: 51:51-52:17",
+    "Timestamp 30: 51:51-52:07",
+    "Timestamp 31: 44:46-45:26",
+    "Timestamp 32: 45:17-45:36",
+    "Timestamp 33: 40:51-41:05",
+    "Timestamp 34: 41:05-41:26",
+    "Timestamp 35: 50:28-50:45",
+    "Timestamp 36: 55:40-56:39",
+    "Timestamp 37: 60:23-60:37",
+    "Timestamp 38: 58:32-58:49",
+    "Timestamp 39: 7:53-8:02",
+    "Timestamp 40: 24:19-24:30",
+    "Timestamp 41: 22:13-22:21",
+    "Timestamp 42: 28:56-29:16",
+    "Timestamp 43: 44:46-45:26",
+    "Timestamp 44: 50:58-51:13"
+  ],
+  "pairs": [
+    {
+      "question": "What is the primary impact of wearing heavy protective gear (PPE) on caregivers working with people who have dementia?",
+      "answer": "Wearing heavy protective gear covers up important visual cues that people with dementia rely on to recognize and connect with caregivers. Caregivers must work hard to explain why they are dressed this way and find creative ways to maintain connection despite hiding their faces and bodies.",
+      "timestamp": "2:07-2:37",
+      "time_start_sec": 127,
+      "time_end_sec": 157
+    },
+    {
+      "question": "Why is it difficult for caregivers to remain flexible and effective during a pandemic?",
+      "answer": "Caregivers face immense stress from testing, isolation, and constant changes. To help people with dementia effectively, caregivers must stay in a \"flexible state,\" meaning they need to manage their own mental and physical well-being so they can adapt to the unpredictable challenges of the situation.",
+      "timestamp": "2:44-3:14",
+      "time_start_sec": 164,
+      "time_end_sec": 194
+    },
+    {
+      "question": "How did the layout of a specific memory care facility help prevent the spread of COVID-19?",
+      "answer": "The facility used a design called \"delayed egress\" rather than locking doors. Residents lived in apartments with outdoor windows facing a fully enclosed patio. This allowed residents to move freely outdoors for fresh air and social interaction while preventing them from leaving the secure building.",
+      "timestamp": "7:35-8:54",
+      "time_start_sec": 455,
+      "time_end_sec": 534
+    },
+    {
+      "question": "What was the initial reaction of some staff members when a facility converted to a COVID unit?",
+      "answer": "Many staff members, including nurses and CNAs with families at home, refused to work in the new COVID unit due to fear. The leadership team had to swap staff between different buildings (healthcare center, memory care, and assisted living) to ensure enough trained personnel were available for the new unit.",
+      "timestamp": "9:38-10:34",
+      "time_start_sec": 578,
+      "time_end_sec": 634
+    },
+    {
+      "question": "Why was it necessary for the memory care director to personally work in the unit during the early days of the outbreak?",
+      "answer": "New staff members lacked the specific skills and understanding of how to work with people who have brain changes. The director insisted on being present to guide them, ensuring residents received proper care and that the team understood the unique needs of the population.",
+      "timestamp": "11:38-12:58",
+      "time_start_sec": 698,
+      "time_end_sec": 778
+    },
+    {
+      "question": "How did the director de-escalate an angry resident who was upset about a COVID test?",
+      "answer": "The director approached the resident at eye level, acknowledged his frustration by saying, \"I'm sorry,\" and shared that she had experienced the same invasive procedure herself. By validating his feelings and offering to sing with him, she redirected his anger and helped him calm down.",
+      "timestamp": "14:41-15:24",
+      "time_start_sec": 881,
+      "time_end_sec": 924
+    },
+    {
+      "question": "What is the difference between telling a resident they \"can't\" go somewhere versus explaining why they \"might not want to\"?",
+      "answer": "Saying \"you can't\" creates resistance and conflict. Explaining \"you might not want to\" focuses on the resident's desire to stay healthy. This approach gives the resident a choice and helps them understand the reason without feeling forced or controlled.",
+      "timestamp": "18:54-19:59",
+      "time_start_sec": 1134,
+      "time_end_sec": 1199
+    },
+    {
+      "question": "How can caregivers use their own personal experience to build trust with resistant residents?",
+      "answer": "Caregivers can share their own recent experiences with similar procedures or situations. By saying, \"I was there yesterday,\" they show empathy and prove they understand the resident's feelings, which lowers defenses and opens the door for cooperation.",
+      "timestamp": "16:10-16:58",
+      "time_start_sec": 970,
+      "time_end_sec": 1018
+    },
+    {
+      "question": "What happened to the staff's attitude toward the memory care director after she demonstrated her skills?",
+      "answer": "Initially skeptical, the staff watched the director interact successfully with residents. Seeing her skills in action convinced them that she was beneficial to the team, leading them to ask to observe her methods and adopt similar approaches.",
+      "timestamp": "22:13-22:21",
+      "time_start_sec": 1333,
+      "time_end_sec": 1341
+    },
+    {
+      "question": "Why is maintaining social interaction important for residents even when they are separated by distance?",
+      "answer": "Social interaction is a core part of a resident's normal routine. Even if residents cannot be physically close due to safety rules, caregivers can facilitate connection by arranging seating so they can see each other and engage in shared activities like singing.",
+      "timestamp": "21:01-21:38",
+      "time_start_sec": 1261,
+      "time_end_sec": 1298
+    },
+    {
+      "question": "How did the director support a resident who was on her deathbed and refusing food?",
+      "answer": "The director spent time with the resident, holding her and helping her sit up to encourage eating. Her presence and gentle encouragement helped the resident eventually begin to eat and drink again, showing the value of human connection during illness.",
+      "timestamp": "22:21-23:02",
+      "time_start_sec": 1341,
+      "time_end_sec": 1382
+    },
+    {
+      "question": "What is the significance of the date \"Thursday\" regarding the return of residents to their original units?",
+      "answer": "According to CDC and CMS guidelines, residents who were positive for COVID could return to their original units on Thursday if they had no symptoms by the weekend. This marked the beginning of the end of the temporary isolation period.",
+      "timestamp": "23:55-24:18",
+      "time_start_sec": 1435,
+      "time_end_sec": 1458
+    },
+    {
+      "question": "What specific challenge arose when trying to separate residents in a dining room setting?",
+      "answer": "It was difficult to tell residents they could not eat in the dining room because the people currently eating there were sick. Caregivers had to explain that the sick residents were in a different area to prevent the healthy residents from crossing into the contaminated zone.",
+      "timestamp": "24:42-24:58",
+      "time_start_sec": 1482,
+      "time_end_sec": 1498
+    },
+    {
+      "question": "How did the organization PAC adapt its training delivery method during the pandemic?",
+      "answer": "PAC shifted from a 95% face-to-face model to 100% virtual training. This required rapid changes in logistics, such as managing flight cancellations and finding new ways to deliver content online.",
+      "timestamp": "27:17-27:33",
+      "time_start_sec": 1637,
+      "time_end_sec": 1653
+    },
+    {
+      "question": "What unexpected benefit did the shift to virtual training provide for participants?",
+      "answer": "The shift allowed the organization to record and edit training videos. Participants could now review the recordings at their own pace, gaining insights into different breakout sessions and learning styles that were visible during the live event.",
+      "timestamp": "28:21-29:16",
+      "time_start_sec": 1701,
+      "time_end_sec": 1756
+    },
+    {
+      "question": "What was the primary shift in the conference format for the organization?",
+      "answer": "The conference moved from a hybrid model (live and virtual) to an entirely virtual conference. This was a significant team effort to ensure accessibility and engagement for all attendees without physical travel.",
+      "timestamp": "29:33-29:56",
+      "time_start_sec": 1773,
+      "time_end_sec": 1796
+    },
+    {
+      "question": "What tool did the organization create to help caregivers discuss COVID-related challenges?",
+      "answer": "The organization created a video guide and a 63-page workbook. This resource helps caregivers start conversations about difficult situations, build support teams, and apply specific skills to address challenges with people living with brain change.",
+      "timestamp": "31:40-33:02",
+      "time_start_sec": 1900,
+      "time_end_sec": 1982
+    },
+    {
+      "question": "How did the speaker's role change from a full-time employee to an independent business owner?",
+      "answer": "Due to the pandemic, the speaker lost her full-time job and had to transition to being an independent contractor. She utilized her existing business license to continue providing services independently while still serving the original company.",
+      "timestamp": "37:53-38:14",
+      "time_start_sec": 2273,
+      "time_end_sec": 2294
+    },
+    {
+      "question": "How did the speaker integrate PAC skills into her work as a speech therapist?",
+      "answer": "The speaker introduced the GEMS State Model into her clinical evaluations. She plans to conduct caregiver training sessions with her neurologist's office staff, applying the same communication strategies she uses with residents.",
+      "timestamp": "40:39-41:05",
+      "time_start_sec": 2439,
+      "time_end_sec": 2465
+    },
+    {
+      "question": "What specific incident highlighted the emotional power of PAC skills in a home setting?",
+      "answer": "A resident named Mr. Al, who had been dancing in the living room with a caregiver, returned home and asked to dance with his wife again. The shared memory and emotional connection created by the earlier interaction led to a joyful reunion despite the separation.",
+      "timestamp": "48:37-49:35",
+      "time_start_sec": 2917,
+      "time_end_sec": 2975
+    },
+    {
+      "question": "What was the consequence of the caregiver's program closing for three months?",
+      "answer": "The closure resulted in the loss of a volunteer who contracted COVID-19. This tragic outcome underscored the risks involved when staff and volunteers are exposed to the virus while caring for others.",
+      "timestamp": "49:47-49:58",
+      "time_start_sec": 2987,
+      "time_end_sec": 2998
+    },
+    {
+      "question": "How did the speaker advocate for families who lost their loved ones to COVID?",
+      "answer": "The speaker plans to attend meetings with the state legislature to serve as a voice for people with dementia. She aims to ensure that policies protect families and provide adequate support systems during crises.",
+      "timestamp": "50:28-50:45",
+      "time_start_sec": 3028,
+      "time_end_sec": 3045
+    },
+    {
+      "question": "What creative solution was used to allow family members to interact with residents during isolation?",
+      "answer": "The facility installed karaoke microphones that connect to headphones. This allowed family members visiting in the courtyard to hear and sing with residents, maintaining a sense of connection while keeping physical distance.",
+      "timestamp": "59:24-59:36",
+      "time_start_sec": 3564,
+      "time_end_sec": 3576
+    },
+    {
+      "question": "Why did the removal of dominoes cause a significant decline in residents' well-being?",
+      "answer": "Dominoes were a favorite game for a specific group of residents known as \"diamonds.\" Removing the game disrupted their routine and social structure, leading to a noticeable drop in their engagement and mood.",
+      "timestamp": "57:31-57:49",
+      "time_start_sec": 3451,
+      "time_end_sec": 3469
+    },
+    {
+      "question": "How did the organization adjust its activities when standard games were removed?",
+      "answer": "The organization substituted traditional games with alternatives like watercolor painting and dancing. They played various music genres to encourage movement and creativity, ensuring residents remained active and engaged.",
+      "timestamp": "59:37-60:23",
+      "time_start_sec": 3577,
+      "time_end_sec": 3623
+    },
+    {
+      "question": "What was the impact of daily dancing on the number of falls in the facility?",
+      "answer": "Daily dancing provided the necessary physical movement that residents needed. As a result, the number of falls dropped dramatically from 22 in one month to just six in the next month.",
+      "timestamp": "62:12-63:06",
+      "time_start_sec": 3732,
+      "time_end_sec": 3786
+    },
+    {
+      "question": "Why is it important for caregivers to find a balance between safety protocols and resident needs?",
+      "answer": "Strict isolation can cause residents to decline physically and mentally, leading to weight loss and increased fall risks. Finding a balance ensures safety without compromising the resident's overall health and happiness.",
+      "timestamp": "57:06-57:24",
+      "time_start_sec": 3426,
+      "time_end_sec": 3444
+    },
+    {
+      "question": "How did the speaker describe the feeling of returning to a facility after a long closure?",
+      "answer": "The speaker described the return as a test of trust. One resident drove by to check if the facility was open, only to find people sitting on the veranda, which made him feel lied to. The team even changed a room's color to see if residents would notice the difference.",
+      "timestamp": "46:25-47:18",
+      "time_start_sec": 2785,
+      "time_end_sec": 2838
+    },
+    {
+      "question": "What lesson did the speaker learn about the importance of staff passion?",
+      "answer": "The speaker learned that if staff do not love what they do, they will fail. The resilience and dedication of the staff, who loved their work despite the hardships, were crucial to overcoming the challenges of the pandemic.",
+      "timestamp": "51:51-52:17",
+      "time_start_sec": 3111,
+      "time_end_sec": 3137
+    },
+    {
+      "question": "How did the speaker feel about the loss of a loved one during the pandemic?",
+      "answer": "The speaker felt immense grief but was comforted by the attitude of the deceased's family, who told her not to feel guilty. They emphasized that the person was helping others, which gave the speaker pride in the staff's selfless service.",
+      "timestamp": "51:51-52:07",
+      "time_start_sec": 3111,
+      "time_end_sec": 3127
+    },
+    {
+      "question": "What was the primary goal of the organization's Easter Parade initiative?",
+      "answer": "The goal was to maintain connection with residents who were unable to visit the facility. The team delivered personalized Easter baskets containing activities and supplies to every client's home, ensuring they felt included and cared for.",
+      "timestamp": "44:46-45:26",
+      "time_start_sec": 2686,
+      "time_end_sec": 2726
+    },
+    {
+      "question": "How did the organization handle the delivery of essential supplies during the pandemic?",
+      "answer": "The organization delivered items like toilet paper, wipes, and paper towels directly to residents' homes. Families also donated non-perishable goods like peanut butter, showing a strong community spirit of mutual support.",
+      "timestamp": "45:17-45:36",
+      "time_start_sec": 2717,
+      "time_end_sec": 2736
+    },
+    {
+      "question": "What was the significance of the \"GEMS State Model\" in the speaker's new role?",
+      "answer": "The speaker began using the GEMS State Model in her clinical evaluations with neurologists. This model helps assess the functional status of residents, allowing for better planning of care and interventions.",
+      "timestamp": "40:51-41:05",
+      "time_start_sec": 2451,
+      "time_end_sec": 2465
+    },
+    {
+      "question": "How did the speaker plan to expand her services after the pandemic?",
+      "answer": "The speaker plans to provide social skills training for memory care patients in their homes. She aims to fill gaps where facilities cannot allow families in, offering direct support to families who need assistance caring for their loved ones.",
+      "timestamp": "41:05-41:26",
+      "time_start_sec": 2465,
+      "time_end_sec": 2486
+    },
+    {
+      "question": "What role does advocacy play in the future of the organization?",
+      "answer": "Advocacy is identified as the next major goal. The speaker intends to represent the voices of people with dementia and their families to policymakers, ensuring their needs are met in future regulations.",
+      "timestamp": "50:28-50:45",
+      "time_start_sec": 3028,
+      "time_end_sec": 3045
+    },
+    {
+      "question": "How did the organization respond to the emotional distress of families during the lockdown?",
+      "answer": "The organization faced the heartbreaking reality of having to tell families they could not visit. Despite this, they committed to doing their best to care for residents, acknowledging the deep pain of separation.",
+      "timestamp": "55:40-56:39",
+      "time_start_sec": 3340,
+      "time_end_sec": 3399
+    },
+    {
+      "question": "What was the outcome of the \"substitution\" strategy for activities?",
+      "answer": "The strategy of substituting activities rather than removing them proved successful. By replacing removed games with new options like dancing and art, the organization maintained resident engagement and reduced behavioral issues.",
+      "timestamp": "60:23-60:37",
+      "time_start_sec": 3623,
+      "time_end_sec": 3637
+    },
+    {
+      "question": "How did the speaker describe the relationship between staff and residents during the crisis?",
+      "answer": "The speaker described the experience as a profound opportunity for service. She felt privileged to hear residents share their life stories and to be of service to them, creating meaningful connections even under difficult circumstances.",
+      "timestamp": "58:32-58:49",
+      "time_start_sec": 3512,
+      "time_end_sec": 3529
+    },
+    {
+      "question": "What was the impact of the \"delayed egress\" policy on resident morale?",
+      "answer": "The policy allowed residents to feel safe while still enjoying the outdoors. The enclosed patio provided a secure space for socialization and fresh air, which likely helped maintain a positive atmosphere compared to strict confinement.",
+      "timestamp": "7:53-8:02",
+      "time_start_sec": 473,
+      "time_end_sec": 482
+    },
+    {
+      "question": "How did the organization ensure continuity of care for residents who were not cleared for return?",
+      "answer": "The organization kept residents in their temporary units until they were officially cleared by health authorities. They communicated clearly with families about the timeline, noting that some residents might remain isolated for additional days.",
+      "timestamp": "24:19-24:30",
+      "time_start_sec": 1459,
+      "time_end_sec": 1470
+    },
+    {
+      "question": "What was the main challenge in reintegrating staff after the pandemic?",
+      "answer": "The main challenge was overcoming the initial skepticism of new staff who lacked training. Once they witnessed the director's effectiveness, they became eager to learn and implement the skills they had observed.",
+      "timestamp": "22:13-22:21",
+      "time_start_sec": 1333,
+      "time_end_sec": 1341
+    },
+    {
+      "question": "How did the speaker view the transition to virtual training as a positive change?",
+      "answer": "The speaker viewed it positively because it created permanent educational resources. The ability to record and edit videos meant that learners could review content multiple times, enhancing the depth and flexibility of the training.",
+      "timestamp": "28:56-29:16",
+      "time_start_sec": 1736,
+      "time_end_sec": 1756
+    },
+    {
+      "question": "What was the significance of the \"Easter Parade\" in terms of community involvement?",
+      "answer": "The parade demonstrated the organization's commitment to community involvement. By delivering supplies and gifts to homes, they fostered a sense of belonging and showed that they cared about residents even when physical access was restricted.",
+      "timestamp": "44:46-45:26",
+      "time_start_sec": 2686,
+      "time_end_sec": 2726
+    },
+    {
+      "question": "How did the speaker plan to support families who were struggling to care for their loved ones?",
+      "answer": "The speaker expressed a desire to provide ongoing support to families who had to place their loved ones in facilities. She aimed to leave a lasting impression on them, ensuring they felt supported and understood in their difficult journey.",
+      "timestamp": "50:58-51:13",
+      "time_start_sec": 3058,
+      "time_end_sec": 3073
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/18/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-44.json",
+  "valid": true
+}

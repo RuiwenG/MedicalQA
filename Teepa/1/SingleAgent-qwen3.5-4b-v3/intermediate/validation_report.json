@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 806.2379999999999,
+  "timestamp_lines": [
+    "Timestamp 1: 3:08-3:32",
+    "Timestamp 2: 6:37-6:48",
+    "Timestamp 3: 7:23-7:34",
+    "Timestamp 4: 9:32-9:56",
+    "Timestamp 5: 10:00-10:13",
+    "Timestamp 6: 11:37-11:59",
+    "Timestamp 7: 12:52-12:57",
+    "Timestamp 8: 5:57-6:17",
+    "Timestamp 9: 7:37-8:13",
+    "Timestamp 10: 13:01-13:20"
+  ],
+  "pairs": [
+    {
+      "question": "Why does a person with dementia often act impulsively or say things they usually wouldn't say?",
+      "answer": "This happens because the part of the brain responsible for controlling impulses and making careful choices is damaged early in the disease. The older part of the brain, which handles basic survival needs like hunger and fear, stays intact longer. When the control system fails, the person acts on immediate feelings or desires without thinking about consequences, which can lead to rude behavior or saying hurtful words they never used to say.",
+      "timestamp": "3:08-3:32",
+      "time_start_sec": 188,
+      "time_end_sec": 212
+    },
+    {
+      "question": "Why might a person with dementia suddenly get scared or angry when someone touches their shoulder or leans close?",
+      "answer": "Their ability to see the edges of their surroundings is fading, making their visible world feel much smaller. If they cannot see what is approaching them from the side, they interpret that movement as a threat. Because their brain's safety system is reacting to what it sees, they may feel attacked and respond with strong fear or anger, even though the person touching them has no bad intentions.",
+      "timestamp": "6:37-6:48",
+      "time_start_sec": 397,
+      "time_end_sec": 408
+    },
+    {
+      "question": "How can a person with dementia lose items easily, and why does this cause them distress?",
+      "answer": "They struggle to scan their environment in an organized way and often forget exactly where they last looked at something. Without the ability to track their gaze systematically, they miss small details and lose things. When they realize an item is gone, they become very upset because they cannot logically figure out where it went, leading to confusion and anxiety.",
+      "timestamp": "7:23-7:34",
+      "time_start_sec": 443,
+      "time_end_sec": 454
+    },
+    {
+      "question": "Why is it common for a person with dementia to sing songs or dance even when they cannot speak clearly?",
+      "answer": "While the part of the brain that handles formal language and vocabulary is damaged, the areas that process rhythm, music, and automatic movement remain intact. This allows them to sing familiar songs or move to a beat without needing to plan complex movements or use specific words. These preserved skills provide a way for them to express themselves and enjoy activities even when speaking is difficult.",
+      "timestamp": "9:32-9:56",
+      "time_start_sec": 572,
+      "time_end_sec": 596
+    },
+    {
+      "question": "Why might a person with dementia repeat old swear words or inappropriate phrases?",
+      "answer": "Certain words learned very early in life, such as swear words or sensitive topics, are stored in the part of the brain that is affected last. Even though the person no longer understands the context or knows they should not say them, this specific memory remains active. It is important to understand that this is not a choice or a lack of respect, but a result of how the disease affects different parts of the brain.",
+      "timestamp": "10:00-10:13",
+      "time_start_sec": 600,
+      "time_end_sec": 613
+    },
+    {
+      "question": "Why does a person with dementia sometimes seem to know things they didn't know yesterday, or forget things they knew moments ago?",
+      "answer": "The brain undergoes rapid chemical changes every second, affecting how information is processed right now versus what was processed five minutes ago. A task that seemed easy earlier might become impossible immediately after because the necessary chemicals to perform that action are not available at that moment. This fluctuation is due to the changing chemistry of the brain, not just a loss of structural memory.",
+      "timestamp": "11:37-11:59",
+      "time_start_sec": 697,
+      "time_end_sec": 719
+    },
+    {
+      "question": "Why might a person with dementia remember a past argument but not know why they were angry?",
+      "answer": "Emotional memories are often preserved even when the ability to form new facts or recall specific details fades. The person retains the feeling of being upset or the emotional intensity of a past event, but the specific facts or reasons behind that emotion are lost. They feel the anger without understanding the cause, which can lead to confusion and frustration.",
+      "timestamp": "12:52-12:57",
+      "time_start_sec": 772,
+      "time_end_sec": 777
+    },
+    {
+      "question": "What is the difference between the center vision and edge vision in a person with dementia?",
+      "answer": "Center vision allows a person to focus on what they are directly looking at, like reading or finding an object, and this ability is usually preserved well. Edge vision allows a person to see the periphery of their surroundings to detect movement or danger, but this ability declines early in the disease. As edge vision fades, the person's awareness of their surroundings shrinks, making them vulnerable to unseen dangers.",
+      "timestamp": "5:57-6:17",
+      "time_start_sec": 357,
+      "time_end_sec": 377
+    },
+    {
+      "question": "Why might a person with dementia have trouble telling if an object is real or a picture, or judging distances correctly?",
+      "answer": "As the disease progresses, the brain loses the ability to combine images from both eyes to create a sense of depth and three-dimensional space. Without this depth perception, simple tasks like setting a cup down on a table or distinguishing a real apple from a picture become very difficult. They may accidentally drop things or run their hands along surfaces because they cannot accurately judge how far away objects are.",
+      "timestamp": "7:37-8:13",
+      "time_start_sec": 457,
+      "time_end_sec": 493
+    },
+    {
+      "question": "Why is it important for a caregiver to understand that the person with dementia is not choosing to make mistakes?",
+      "answer": "Understanding the biological reality of the disease helps caregivers stop blaming the person. The changes in the brain happen automatically and beyond the person's control; they are not making choices to forget or act out. Recognizing that the person is struggling with broken brain systems allows the caregiver to approach the situation with patience and support, focusing on helping rather than correcting.",
+      "timestamp": "13:01-13:20",
+      "time_start_sec": 781,
+      "time_end_sec": 800
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/1/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

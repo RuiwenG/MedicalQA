@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 865.58,
+  "timestamp_lines": [
+    "Timestamp 1: 2:13-3:27",
+    "Timestamp 2: 4:42-5:03",
+    "Timestamp 3: 4:00-4:26",
+    "Timestamp 4: 5:18-5:43",
+    "Timestamp 5: 6:19-7:35",
+    "Timestamp 6: 8:03-9:28",
+    "Timestamp 7: 10:29-11:15",
+    "Timestamp 8: 11:30-11:54",
+    "Timestamp 9: 11:54-12:15",
+    "Timestamp 10: 13:05-13:27"
+  ],
+  "pairs": [
+    {
+      "question": "Person with Dementia",
+      "answer": "A caregiver should watch for signs of stress and distress, which act as signals that the person's environment or internal state is not working for them. These feelings can start as simple discomfort or unmet wants, but if ignored, they can escalate into pain. By paying close attention to these cues, the caregiver can figure out what the person actually needs rather than assuming they are just unhappy.",
+      "timestamp": "2:13-3:27",
+      "time_start_sec": 133,
+      "time_end_sec": 207
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "Instead of knowing that it is a specific time for eating or sleeping, a person with dementia lives in the moment. They do not know if it has been too long since they ate or slept. To communicate their needs, they rely on showing signs of discomfort or distress, which tells the caregiver that something is wrong or that an unmet need is causing them pain.",
+      "timestamp": "4:42-5:03",
+      "time_start_sec": 282,
+      "time_end_sec": 303
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "An unmet want is something the person desires but does not necessarily require for survival. However, if that want is consistently ignored or unfulfilled, it transforms into an unmet need. This shift causes the person to feel uncomfortable, and eventually, it becomes painful, signaling that their basic requirements for comfort or safety are not being met.",
+      "timestamp": "4:00-4:26",
+      "time_start_sec": 240,
+      "time_end_sec": 266
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "While new parents quickly learn to balance their own needs with a baby's, caregivers of people with dementia often forget this lesson because the person's brain is changing differently. The person's patterns, habits, and sense of time come from a deep part of the brain that may no longer function the same way, making it hard to predict when they will need rest, food, or stimulation.",
+      "timestamp": "5:18-5:43",
+      "time_start_sec": 318,
+      "time_end_sec": 343
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "Caregivers can help by breaking down complex tasks into small, clear sequences. For example, during mealtime, they can guide the person through distinct steps: finishing swallowing, taking a breath, reaching for the cup, picking it up, and bringing it to the mouth. Similarly, when dressing, they can help the person recognize items like socks for both feet and match shirts to pants, building a pattern of familiarity.",
+      "timestamp": "6:19-7:35",
+      "time_start_sec": 379,
+      "time_end_sec": 455
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "A caregiver can look for signs that the person is not feeling satisfied, productive, healthy, or rested throughout the day. They should also track how long it has been since the person performed self-care activities, had fun, saw someone, or slept. Noticing gaps in these activities helps identify when the person's sense of time and routine is falling apart.",
+      "timestamp": "8:03-9:28",
+      "time_start_sec": 483,
+      "time_end_sec": 568
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "The goal is to create a plan that works for both individuals, even though their senses of time may differ. The caregiver must anticipate the person's needs, prepare for transitions, and ask for their participation. This involves balancing the caregiver's own responsibilities with the person's unique rhythm to ensure everyone feels supported and understood.",
+      "timestamp": "10:29-11:15",
+      "time_start_sec": 629,
+      "time_end_sec": 675
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "A person with dementia often lives only in the immediate moment and cannot always see the bigger picture or the entire experience. Therefore, the caregiver should focus on giving value to each specific moment—like a pleasant conversation or a quiet break—rather than worrying about fitting everything into a grand narrative. This approach creates a sense of flow and familiarity in the person's day.",
+      "timestamp": "11:30-11:54",
+      "time_start_sec": 690,
+      "time_end_sec": 714
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "The caregiver should pause and investigate the cause. They can look backward to see how the situation happened or look forward to identify what is currently triggering the problem. By asking what the person is missing or what they are struggling with right now, the caregiver can address the unmet want, need, or desire causing the difficulty.",
+      "timestamp": "11:54-12:15",
+      "time_start_sec": 714,
+      "time_end_sec": 735
+    },
+    {
+      "question": "Person with Dementia",
+      "answer": "The caregiver should think ahead and plan now so they are not caught off guard later. This means anticipating potential changes in the person's behavior or abilities and preparing support strategies in advance. By staying prepared, the caregiver can remain supportive for both themselves and the person with dementia, ensuring they do not get stuck in the moment and can adapt as needed.",
+      "timestamp": "13:05-13:27",
+      "time_start_sec": 785,
+      "time_end_sec": 807
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/6/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

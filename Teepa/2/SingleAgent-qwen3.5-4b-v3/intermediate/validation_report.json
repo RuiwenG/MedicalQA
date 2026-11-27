@@ -1,0 +1,75 @@
+{
+  "expected_pairs": 8,
+  "parsed_pairs": 8,
+  "transcript_end_sec": 890.059,
+  "timestamp_lines": [
+    "Timestamp 1: 1:04-1:16",
+    "Timestamp 2: 3:34-4:31",
+    "Timestamp 3: 4:44-6:40",
+    "Timestamp 4: 7:13-7:27",
+    "Timestamp 5: 9:07-9:21",
+    "Timestamp 6: 9:30-10:09",
+    "Timestamp 7: 10:16-10:57",
+    "Timestamp 8: 13:16-14:22"
+  ],
+  "pairs": [
+    {
+      "question": "How can using music during a crossword puzzle help a person with dementia feel more valuable?",
+      "answer": "You can change a regular crossword puzzle into a musical-themed game. When the person solves clues related to songs or artists, they start to feel like they have a specific job and purpose. This helps them feel like they are contributing something meaningful, even if their memory is fading.",
+      "timestamp": "1:04-1:16",
+      "time_start_sec": 64,
+      "time_end_sec": 76
+    },
+    {
+      "question": "Why is listening to music considered a helpful activity for people in the later stages of dementia?",
+      "answer": "Listening to music allows the brain to relax, enjoy itself, and become calmer. In later stages, caregivers can use music to gently guide the person's brain toward a state of rest or alertness, depending on what they need at that moment. It is a safe way to manage their energy levels.",
+      "timestamp": "3:34-4:31",
+      "time_start_sec": 214,
+      "time_end_sec": 271
+    },
+    {
+      "question": "What are the specific steps for leading a group in a gentle movement session using music?",
+      "answer": "First, make sure everyone can hear the music clearly by adjusting the volume. Start with small movements like rolling shoulders while calling each person's name to get their attention. Then, guide them through simple actions like stepping forward and back while shifting their weight. Finally, encourage partners to move side-to-side together to help maintain balance and mobility.",
+      "timestamp": "4:44-6:40",
+      "time_start_sec": 284,
+      "time_end_sec": 400
+    },
+    {
+      "question": "How should a caregiver handle a situation where a person with dementia seems hesitant or avoids joining a group activity?",
+      "answer": "It is okay if some people are hesitant at first. The key is to respond to individual needs rather than forcing participation. You can gently invite them to join, remind them of their past skills, or simply acknowledge their presence. Everyone moves at their own pace, and that is perfectly fine.",
+      "timestamp": "7:13-7:27",
+      "time_start_sec": 433,
+      "time_end_sec": 447
+    },
+    {
+      "question": "What is the best way to help a person who cannot move their legs but still wants to participate in a dance activity?",
+      "answer": "Focus on the parts of the body that are still able to move, such as the arms, torso, or facial expressions. Even if someone cannot walk or tap their feet, they can still smile, sway their upper body, and enjoy the rhythm. Their emotional connection to the music is just as important as their physical movement.",
+      "timestamp": "9:07-9:21",
+      "time_start_sec": 547,
+      "time_end_sec": 561
+    },
+    {
+      "question": "Why is it important for a caregiver to teach themselves how to breathe after a high-energy music activity?",
+      "answer": "During active movement, people often hold their breath to focus on the steps. Teaching them to breathe deeply and slowly helps release that tension and brings fresh oxygen into the body. This breathing exercise acts as a natural way to calm the nervous system and settle the person down after the excitement of the music.",
+      "timestamp": "9:30-10:09",
+      "time_start_sec": 570,
+      "time_end_sec": 609
+    },
+    {
+      "question": "What kind of music should be chosen to help a person with dementia feel joy and happiness?",
+      "answer": "Choose music that the person knows well, such as songs from their youth or songs that feature a favorite artist. Because the right side of the brain often stays active longer, a strong, steady beat can help them hum, sing, or move rhythmically. Familiarity creates a sense of safety and joy.",
+      "timestamp": "10:16-10:57",
+      "time_start_sec": 616,
+      "time_end_sec": 657
+    },
+    {
+      "question": "How can a caregiver use their own voice and rhythm to support a person with dementia during daily interactions?",
+      "answer": "Your voice itself is a form of music. By speaking with a calm, rhythmic tone, you can send messages of love and encouragement. Conversely, if you accidentally raise your voice or speak quickly, it might cause agitation. Remembering to use a soothing rhythm helps you guide the person from a state of excitement back to a peaceful state.",
+      "timestamp": "13:16-14:22",
+      "time_start_sec": 796,
+      "time_end_sec": 862
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/2/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}

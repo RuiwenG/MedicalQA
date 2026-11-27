@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 389.96,
+  "timestamp_lines": [
+    "Timestamp 1: 0:25-1:30",
+    "Timestamp 2: 3:12-3:32",
+    "Timestamp 3: 4:35-5:24",
+    "Timestamp 4: 2:54-3:07"
+  ],
+  "pairs": [
+    {
+      "question": "When a person with dementia acts out or seems to be misbehaving, what is the first thing a caregiver should do to change their perspective?",
+      "answer": "The caregiver should immediately take a step back and pause. Instead of judging the behavior or assuming the person is just being difficult, they should realize the person is trying their very best to communicate an unmet need. By stopping the rush to fix the situation, the caregiver can shift from being a judge to becoming a detective who looks for the reason behind the action.",
+      "timestamp": "0:25-1:30",
+      "time_start_sec": 25,
+      "time_end_sec": 90
+    },
+    {
+      "question": "What are the five main categories of needs that might be causing a challenging behavior in a person with dementia?",
+      "answer": "Caregivers should look for signs of five specific types of unmet needs: physical needs (like hunger, pain, or needing the bathroom), environmental needs (such as discomfort with temperature or noise), emotional needs (like loneliness or fear), sensory needs (issues with sight, smell, or taste), and social needs (wanting connection or interaction). Identifying which one is missing helps solve the problem.",
+      "timestamp": "3:12-3:32",
+      "time_start_sec": 192,
+      "time_end_sec": 212
+    },
+    {
+      "question": "In the story about the woman named Leona who was making noise, how did the caregiver successfully turn a challenging behavior into a successful task?",
+      "answer": "The caregiver used a technique called substitution. Instead of trying to stop Leona from making noise or cleaning, the caregiver offered her a different, acceptable activity that looked similar. They traded the unwanted task for a positive one, like having her rub lotion on hands instead of hitting chairs. This allowed Leona to feel productive and happy while meeting her need to work, turning a conflict into a moment of success.",
+      "timestamp": "4:35-5:24",
+      "time_start_sec": 275,
+      "time_end_sec": 324
+    },
+    {
+      "question": "Why is it important for a caregiver to ask themselves \"what am I missing?\" when they cannot understand a person's behavior?",
+      "answer": "It is important because the caregiver's own life experiences and biases can sometimes blind them to the reality of the person with dementia. Asking this question encourages the caregiver to broaden their view and consider factors they might have overlooked, such as a change in the environment or a past event. This self-reflection helps stop judgment and allows the caregiver to see the situation from the person's unique perspective.",
+      "timestamp": "2:54-3:07",
+      "time_start_sec": 174,
+      "time_end_sec": 187
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/5/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

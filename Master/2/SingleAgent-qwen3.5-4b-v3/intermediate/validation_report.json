@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 910.48,
+  "timestamp_lines": [
+    "Timestamp 1: 2:50-3:10",
+    "Timestamp 2: 6:03-6:41",
+    "Timestamp 3: 12:10-12:56",
+    "Timestamp 4: 1:34-1:50",
+    "Timestamp 5: 7:18-7:44",
+    "Timestamp 6: 9:15-10:17",
+    "Timestamp 7: 8:15-8:32",
+    "Timestamp 8: 32-8:56",
+    "Timestamp 9: 55-10:31"
+  ],
+  "pairs": [
+    {
+      "question": "What is \"confabulation,\" and how does it explain why a person with dementia might invent a story about being late?",
+      "answer": "Confabulation is when the brain fills in missing information with invented stories instead of admitting what it doesn't know. When a person with dementia sees a gap—like a loved one being two minutes late—they quickly cycle through many possible reasons (accidents, running errands) to create a complete story. This happens because their brain is trying to make sense of the missing details, but the resulting story often has no real basis in truth.",
+      "timestamp": "2:50-3:10",
+      "time_start_sec": 170,
+      "time_end_sec": 190
+    },
+    {
+      "question": "Why might a person with dementia insist they are still married to someone they haven't seen in years?",
+      "answer": "Because they cannot remember the current reality of their relationships, their brain creates new connections to feel safe and connected. In the video example, a woman convinced herself she was dating a sound mixer on a film set because she needed a friend. She treated this new story as real, saying she loved him and even told her wife, because her mind was trying to fill the void of loneliness with something positive.",
+      "timestamp": "6:03-6:41",
+      "time_start_sec": 363,
+      "time_end_sec": 401
+    },
+    {
+      "question": "How can a caregiver respond when a person with dementia suddenly claims they have lost money or are being cheated on?",
+      "answer": "Instead of arguing about the facts, the caregiver should realize the story is often a symptom of deep loneliness or fear. The person might believe they are being cheated on not because they are lying, but because they feel abandoned and their brain is inventing a narrative to explain that pain. The goal is to comfort the feeling behind the story, not to correct the false details.",
+      "timestamp": "12:10-12:56",
+      "time_start_sec": 730,
+      "time_end_sec": 776
+    },
+    {
+      "question": "What is the difference between waiting a few minutes for someone to return versus waiting several hours?",
+      "answer": "Waiting two to four minutes usually means the person is stuck in traffic or having a minor issue, so calling them immediately is helpful. However, waiting longer than four or five minutes suggests they may be in danger, like being in a car accident, and requires urgent support. The key is knowing when to call versus when to give them a little more time.",
+      "timestamp": "1:34-1:50",
+      "time_start_sec": 94,
+      "time_end_sec": 110
+    },
+    {
+      "question": "Why does a person with dementia often insist they have their walker right in front of them when it is hidden elsewhere?",
+      "answer": "This is another form of confabulation where the brain invents a location for an object to prevent anxiety. Even though the person cannot see the walker, they confidently state it is right there. They may even guide others to the spot they imagined, believing the story is true. It is a way for their brain to create a sense of control and safety in an uncertain environment.",
+      "timestamp": "7:18-7:44",
+      "time_start_sec": 438,
+      "time_end_sec": 464
+    },
+    {
+      "question": "What is the best way to handle a situation where a person with dementia gets angry because you asked them where they have been?",
+      "answer": "The best approach is to stop asking \"where\" and instead validate their feelings and apologize for making them feel left out. For example, instead of asking where they went, say, \"I'm sorry I made you feel alone; I was just curious.\" Then, pivot the conversation to something positive, like planning a meal together, to reduce the distress and move toward a shared activity.",
+      "timestamp": "9:15-10:17",
+      "time_start_sec": 555,
+      "time_end_sec": 617
+    },
+    {
+      "question": "Why might a person with dementia claim they are going to work or meet people when they are actually just trying to leave the house?",
+      "answer": "This is often a way the brain tries to justify leaving a place that feels overwhelming or lonely. By creating a story about a job or meeting friends, the person gives themselves a purpose and a reason to move. It helps them feel active and connected, even if the story is not the actual reason they are walking away.",
+      "timestamp": "8:15-8:32",
+      "time_start_sec": 495,
+      "time_end_sec": 512
+    },
+    {
+      "question": "How can a caregiver use \"reflection\" to calm a person with dementia who is upset about a misunderstanding?",
+      "answer": "Reflection means listening to the person's story without arguing and then gently mirroring back what you hear to show understanding. For instance, if they say they feel lonely, you might say, \"It sounds like you are feeling very lonely right now.\" This validates their emotion, lowers the distress, and opens the door for connection rather than continuing a battle over facts.",
+      "timestamp": "8: 32-8:56",
+      "time_start_sec": 512,
+      "time_end_sec": 536
+    },
+    {
+      "question": "Why is it difficult for caregivers to accept that their loved one's stories are not true?",
+      "answer": "It is difficult because caregivers naturally want to find the truth and fix the problem, but accepting that the story is false can feel like giving up. The video explains that the person is not lying out of malice; they are struggling with memory gaps and emotional pain. Accepting the story as a symptom of their struggle, rather than a lie, allows the caregiver to focus on comforting the person instead of debating the facts.",
+      "timestamp": "9: 55-10:31",
+      "time_start_sec": 595,
+      "time_end_sec": 631
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Master/2/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

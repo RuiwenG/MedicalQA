@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 347.58,
+  "timestamp_lines": [
+    "Timestamp 1: 1:20-2:27",
+    "Timestamp 2: 4:10-4:36",
+    "Timestamp 3: 2:33-3:25",
+    "Timestamp 4: 3:35-3:57"
+  ],
+  "pairs": [
+    {
+      "question": "What does it mean when a caregiver realizes they are not the right fit for a specific person with dementia, and is this considered a failure?",
+      "answer": "When a caregiver realizes they are not the right fit, it means the current relationship or dynamic isn't working well for either the caregiver or the person with dementia. This is not a failure; instead, it is a success because recognizing this allows the caregiver to step back and find someone else who might be a better match. The transcript explains that forcing a relationship that doesn't fit can cause stress, whereas acknowledging the mismatch is a kind act that helps both parties.",
+      "timestamp": "1:20-2:27",
+      "time_start_sec": 80,
+      "time_end_sec": 147
+    },
+    {
+      "question": "Why is it important for caregivers to avoid letting feelings of guilt affect their daily interactions with a person with dementia?",
+      "answer": "Guilt should not be part of a caregiving partnership because it often stems from past events or worries about the future rather than the present moment. Holding onto guilt can make it hard to enjoy the day or connect with the person with dementia. By letting go of guilt, caregivers can focus on being present and providing support without the heavy weight of past mistakes or fears about what might happen later.",
+      "timestamp": "4:10-4:36",
+      "time_start_sec": 250,
+      "time_end_sec": 276
+    },
+    {
+      "question": "How can a caregiver handle a situation where they feel overwhelmed by the expectation of doing everything for a loved one with dementia?",
+      "answer": "Caregivers often feel pressured to be the cook, maid, and helper for everything, which can lead to exhaustion. It is helpful to remember that this role is a challenge and not always possible for everyone. Instead of trying to do everything alone, caregivers can ask themselves if there are other family members or support systems available to help share the load. Recognizing that they cannot be everything to everyone is a healthy way to manage expectations and reduce stress.",
+      "timestamp": "2:33-3:25",
+      "time_start_sec": 153,
+      "time_end_sec": 205
+    },
+    {
+      "question": "What practical steps can a caregiver take if they feel they are not connecting well with a person with dementia?",
+      "answer": "If a caregiver feels they are not connecting well, they can try adding a simple question or response to start a conversation. They might also consider offering choices, such as letting the person pick a color or trying a different voice or activity style. The goal is to keep things light and playful, perhaps by pretending to fall in love with the activity or just playing together, which can help rebuild a positive connection without pressure.",
+      "timestamp": "3:35-3:57",
+      "time_start_sec": 215,
+      "time_end_sec": 237
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/2/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

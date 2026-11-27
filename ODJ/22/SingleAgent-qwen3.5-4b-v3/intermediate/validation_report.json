@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 838.02,
+  "timestamp_lines": [
+    "Timestamp 1: 2:09-2:33",
+    "Timestamp 2: 5:17-5:30",
+    "Timestamp 3: 5:30-5:51",
+    "Timestamp 4: 4:44-6:17",
+    "Timestamp 5: 6:22-7:32",
+    "Timestamp 6: 8:43-9:35",
+    "Timestamp 7: 11:54-12:19",
+    "Timestamp 8: 12:23-12:37",
+    "Timestamp 9: 10:52-11:25"
+  ],
+  "pairs": [
+    {
+      "question": "What part of the brain helps a person judge if their feelings about their abilities match reality?",
+      "answer": "The prefrontal cortex is the specific part of the brain that allows us to be self-aware. Its main job is to help us figure out how accurate our self-awareness is. It compares what we think we can do, pay attention to, endure, tolerate, remember, and be, against what we actually do and can handle.",
+      "timestamp": "2:09-2:33",
+      "time_start_sec": 129,
+      "time_end_sec": 153
+    },
+    {
+      "question": "Why does feeling anxious about a task often make it harder to finish the task?",
+      "answer": "When a person feels anxious about doing something, that anxiety actually reduces their ability to perform the task. Even if the person has dementia, the anxiety itself makes them less capable than they would be without that worry.",
+      "timestamp": "5:17-5:30",
+      "time_start_sec": 317,
+      "time_end_sec": 330
+    },
+    {
+      "question": "What negative cycle happens when a person believes they cannot do something because they have failed a few times?",
+      "answer": "If a person struggles with something a few times, they might start to feel depressed and believe they simply cannot do it. Because they believe they will fail anyway, they stop trying. This lack of effort creates a cycle where they don't try, reinforcing the belief that they are unable.",
+      "timestamp": "5:30-5:51",
+      "time_start_sec": 330,
+      "time_end_sec": 351
+    },
+    {
+      "question": "What is the difference between a person who accurately knows their limits and one who overestimates their abilities?",
+      "answer": "Some people with dementia accurately know what they are good at and what is hard. However, others might think they are more able than they are, even though evidence shows they are making mistakes, skipping steps, or causing conflict. These people often cannot understand that they are the cause of these problems.",
+      "timestamp": "4:44-6:17",
+      "time_start_sec": 284,
+      "time_end_sec": 377
+    },
+    {
+      "question": "Why is it difficult for a person to know if they are struggling when a family member tells them they are doing fine?",
+      "answer": "A person relies on feedback from others to check their self-assessment. If a family member covers up and says the person is doing fine, even when they are not, it adds to the person's confusion. The person might then wonder if they are just weird or if they are making a big deal out of nothing, leading to disagreements.",
+      "timestamp": "6:22-7:32",
+      "time_start_sec": 382,
+      "time_end_sec": 452
+    },
+    {
+      "question": "How can a caregiver help a person with dementia improve their self-assessment without forcing them to return to their old skills?",
+      "answer": "Instead of trying to retrain the person to go back to how they used to be, a caregiver can modify the environment, tasks, or provide support to increase the person's success rate. This helps the person feel better and participate more, even if the person does not realize the support is helping them.",
+      "timestamp": "8:43-9:35",
+      "time_start_sec": 523,
+      "time_end_sec": 575
+    },
+    {
+      "question": "What are three practical steps a caregiver can take to help themselves or a loved one become more self-aware?",
+      "answer": "First, take a moment to pause and look at the evidence to see where you are at. Second, ask a trusted person to check in and give you their perspective on how you are doing. Third, be willing to accept that feedback is different from what you expected and ask them to tell you more about it.",
+      "timestamp": "11:54-12:19",
+      "time_start_sec": 714,
+      "time_end_sec": 739
+    },
+    {
+      "question": "How does the brain damage associated with dementia differ from temporary issues like a short circuit?",
+      "answer": "While the brain area responsible for self-awareness does not disappear completely, it can suffer from short circuits or die over time. For many people, this leads to permanent changes in self-awareness, whereas temporary issues might just be glitches that eventually stop working.",
+      "timestamp": "12:23-12:37",
+      "time_start_sec": 743,
+      "time_end_sec": 757
+    },
+    {
+      "question": "In what ways does changing self-awareness affect a person's daily life and interactions?",
+      "answer": "Changing self-awareness impacts almost everything about a person. It affects how they feel about themselves, how they interact with others, their sleep habits, their behavior, how they process what they hear and see, what they eat and drink, and how they care for one another and the world around them.",
+      "timestamp": "10:52-11:25",
+      "time_start_sec": 652,
+      "time_end_sec": 685
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/22/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

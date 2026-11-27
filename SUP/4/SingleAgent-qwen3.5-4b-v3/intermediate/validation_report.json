@@ -1,0 +1,339 @@
+{
+  "expected_pairs": 41,
+  "parsed_pairs": 41,
+  "transcript_end_sec": 3605.04,
+  "timestamp_lines": [
+    "Timestamp 1: 0:00-1:00",
+    "Timestamp 2: 1:17-1:27",
+    "Timestamp 3: 4:04-4:15",
+    "Timestamp 4: 4:29-4:42",
+    "Timestamp 5: 4:47-5:00",
+    "Timestamp 6: 5:17-5:25",
+    "Timestamp 7: 5:31-5:41",
+    "Timestamp 8: 5:47-6:04",
+    "Timestamp 9: 8:46-9:12",
+    "Timestamp 10: 9:18-9:44",
+    "Timestamp 11: 12:35-12:51",
+    "Timestamp 12: 58-13:11",
+    "Timestamp 13: 18:26-18:36",
+    "Timestamp 14: 15:25-15:43",
+    "Timestamp 15: 59-16:07",
+    "Timestamp 16: 17:33-17:48",
+    "Timestamp 17: 21:14-21:44",
+    "Timestamp 18: 22:57-23:21",
+    "Timestamp 19: 27:35-28:03",
+    "Timestamp 20: 31:44-32:05",
+    "Timestamp 21: 42:17-42:27",
+    "Timestamp 22: 51:07-51:35",
+    "Timestamp 23: 52:56-53:06",
+    "Timestamp 24: 57:33-57:48",
+    "Timestamp 25: 56:15-57:29",
+    "Timestamp 26: 48:32-48:52",
+    "Timestamp 27: 49:09-49:24",
+    "Timestamp 28: 35:30-35:52",
+    "Timestamp 29: 34:45-35:12",
+    "Timestamp 30: 41:24-41:55",
+    "Timestamp 31: 43:40-43:52",
+    "Timestamp 32: 52:13-52:54",
+    "Timestamp 33: 56:15-57:00",
+    "Timestamp 34: 39:17-39:38",
+    "Timestamp 35: 36:16-36:26",
+    "Timestamp 36: 20:46-21:08",
+    "Timestamp 37: 57:06-57:12",
+    "Timestamp 38: 42:45-43:10",
+    "Timestamp 39: 57:18-57:23",
+    "Timestamp 40: 55:20-55:38",
+    "Timestamp 41: 58:20-59:02"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main theme for the year 2021 discussed by the speakers?",
+      "answer": "The main theme for 2021 is \"transition.\" The speakers agree that returning to a normal life will not be smooth or quick. Instead, it will be a rough road involving a \"rebirth\" of care and connection, requiring patience and flexibility from everyone involved.",
+      "timestamp": "0:00-1:00",
+      "time_start_sec": 0,
+      "time_end_sec": 60
+    },
+    {
+      "question": "Why do the speakers suggest that time felt slower during 2020 compared to usual years?",
+      "answer": "Time felt slower because the group did not have fun. The common saying is that \"time flies when you're having fun,\" but since 2020 was filled with hardship and challenges, the year dragged on much longer than expected.",
+      "timestamp": "1:17-1:27",
+      "time_start_sec": 77,
+      "time_end_sec": 87
+    },
+    {
+      "question": "What is the first step in the five-step plan for making a transition back to a new normal?",
+      "answer": "The first step is to \"initiate.\" This means getting started immediately, even if it feels small, like putting on pants or getting up from a chair. Without starting, nothing else happens.",
+      "timestamp": "4:04-4:15",
+      "time_start_sec": 244,
+      "time_end_sec": 255
+    },
+    {
+      "question": "After initiating a change, what is the second step in the transition plan?",
+      "answer": "The second step is to \"participate.\" Once you have started something, you must keep it going. You need to figure out the next steps in the sequence and ensure the activity continues rather than stopping halfway.",
+      "timestamp": "4:29-4:42",
+      "time_start_sec": 269,
+      "time_end_sec": 282
+    },
+    {
+      "question": "What does it mean to \"connect the dots\" in the context of a transition plan?",
+      "answer": "Connecting the dots means understanding who else is involved and how different parts of the new plan fit together. This ensures that the new activity moves forward effectively instead of just spinning your wheels in circles.",
+      "timestamp": "4:47-5:00",
+      "time_start_sec": 287,
+      "time_end_sec": 300
+    },
+    {
+      "question": "What is the third step in the five-step plan for transitioning back to a new normal?",
+      "answer": "The third step is to look at what you need to \"disconnect from.\" As you build a new connection, you must identify old habits, routines, or expectations that no longer match your current situation and stop doing them.",
+      "timestamp": "5:17-5:25",
+      "time_start_sec": 317,
+      "time_end_sec": 325
+    },
+    {
+      "question": "What is the fourth step in the five-step plan for transitioning back to a new normal?",
+      "answer": "The fourth step is to decide if you are \"ready to let it go.\" After realizing what you need to disconnect from, you must be willing to release those old things because they are no longer helpful for your new life.",
+      "timestamp": "5:31-5:41",
+      "time_start_sec": 331,
+      "time_end_sec": 341
+    },
+    {
+      "question": "What is the fifth and final step in the five-step plan for transitioning back to a new normal?",
+      "answer": "The fifth step is to help the old things \"go somewhere different.\" You cannot simply delete them; you must find a way to transition them to a new place or purpose so they do not tempt you to go back to the old ways.",
+      "timestamp": "5:47-6:04",
+      "time_start_sec": 347,
+      "time_end_sec": 364
+    },
+    {
+      "question": "What specific emotional challenge might a caregiver face when reconnecting with their parent after the pandemic?",
+      "answer": "A caregiver might struggle with the expectation that their parent will instantly love them and want to be \"all about them\" again. This expectation may need to be disconnected because the parent's feelings and recognition might be different now.",
+      "timestamp": "8:46-9:12",
+      "time_start_sec": 526,
+      "time_end_sec": 552
+    },
+    {
+      "question": "What is a second type of disconnect a caregiver might need to handle regarding their helper?",
+      "answer": "A caregiver might feel abandoned by their helper, thinking, \"I don't want him anymore now that I am finally out.\" Alternatively, they might feel they don't recognize their own daughter, which makes it hard to accept the helper who has supported them through the crisis.",
+      "timestamp": "9:18-9:44",
+      "time_start_sec": 558,
+      "time_end_sec": 584
+    },
+    {
+      "question": "Why is it difficult for a family member to return a loved one to a day center after long-term isolation?",
+      "answer": "It is difficult because the person living with dementia may not recognize many of the staff or other people at the center. Additionally, the family member might be wearing a mask, which adds to the confusion and makes the person reluctant to go.",
+      "timestamp": "12:35-12:51",
+      "time_start_sec": 755,
+      "time_end_sec": 771
+    },
+    {
+      "question": "What is the recommended approach for families trying to rebuild connections after a long period of enforced intimacy?",
+      "answer": "Families should take \"baby steps\" and go in \"slow motion.\" One person might visit alone first, or they might need a break from the constant closeness so the person living with dementia can breathe and feel less overwhelmed.",
+      "timestamp": "12: 58-13:11",
+      "time_start_sec": 778,
+      "time_end_sec": 791
+    },
+    {
+      "question": "What is the significance of the \"fright-flight-fight-hide-and-seek\" reaction mentioned in the transcript?",
+      "answer": "This reaction describes how a human brain responds when it feels overwhelmed or distressed. When caregivers push too hard or move too fast, the person living with dementia may panic and retreat, making connection impossible.",
+      "timestamp": "18:26-18:36",
+      "time_start_sec": 1106,
+      "time_end_sec": 1116
+    },
+    {
+      "question": "What is the importance of \"awareness\" for caregivers during this transition period?",
+      "answer": "Awareness is crucial because it helps caregivers understand that anxiety and depression are common reactions to change. It allows them to recognize when they need to pause, be flexible, and accept that things will not go exactly as planned.",
+      "timestamp": "15:25-15:43",
+      "time_start_sec": 925,
+      "time_end_sec": 943
+    },
+    {
+      "question": "How can caregivers help themselves and others manage the stress of unpredictable changes?",
+      "answer": "Caregivers can help by preparing themselves to be flexible and accepting of many different outcomes. They need to realize that the situation might change daily and that having a backup plan is necessary for success.",
+      "timestamp": "15: 59-16:07",
+      "time_start_sec": 959,
+      "time_end_sec": 967
+    },
+    {
+      "question": "What does the term \"baby steps\" mean in the context of returning to in-person activities?",
+      "answer": "\"Baby steps\" means making small, manageable changes rather than trying to do everything at once. It involves short windows of time, small numbers of people, and short interactions to avoid overwhelming anyone.",
+      "timestamp": "17:33-17:48",
+      "time_start_sec": 1053,
+      "time_end_sec": 1068
+    },
+    {
+      "question": "What is the role of \"grace\" in the transition back to a new normal?",
+      "answer": "Grace means giving yourself and others permission not to be perfect. It involves letting go of the expectation that things must be exactly the same as before, understanding that \"not the same\" does not mean \"bad.\"",
+      "timestamp": "21:14-21:44",
+      "time_start_sec": 1274,
+      "time_end_sec": 1304
+    },
+    {
+      "question": "What is the key word chosen by Matthew for his approach to the new year?",
+      "answer": "Matthew chose the word \"patience.\" He believes patience is needed not only for the global situation but also for the specific needs of people living with dementia, who are facing many changes and uncertainties.",
+      "timestamp": "22:57-23:21",
+      "time_start_sec": 1377,
+      "time_end_sec": 1401
+    },
+    {
+      "question": "What is the key word chosen by Catherine for her approach to the new year?",
+      "answer": "Catherine chose the word \"curiosity.\" She plans to be curious about boundaries and how to adjust her methods to provide the best support, even if the rules or settings change frequently.",
+      "timestamp": "27:35-28:03",
+      "time_start_sec": 1655,
+      "time_end_sec": 1683
+    },
+    {
+      "question": "What is the key word chosen by Don for his approach to the new year?",
+      "answer": "Don chose the word \"joyful.\" He wants to focus on finding joy in the opportunities created by the pandemic, such as virtual connections, and to support others in feeling comfortable trying new things.",
+      "timestamp": "31:44-32:05",
+      "time_start_sec": 1904,
+      "time_end_sec": 1925
+    },
+    {
+      "question": "What is the key word chosen by Beth for her approach to the new year?",
+      "answer": "Beth chose the word \"momentum.\" She believes that despite the disruption, the group did not lose its drive or energy; they simply had to redirect and rechannel that existing momentum.",
+      "timestamp": "42:17-42:27",
+      "time_start_sec": 2537,
+      "time_end_sec": 2547
+    },
+    {
+      "question": "What is the key word chosen by Mary D for her approach to the new year?",
+      "answer": "Mary D chose the word \"momentum.\" She emphasizes that the group found its rhythm again after being knocked off course in March and is now leading the way forward with renewed energy.",
+      "timestamp": "51:07-51:35",
+      "time_start_sec": 3067,
+      "time_end_sec": 3095
+    },
+    {
+      "question": "What is the key word chosen by Jess for her approach to the new year?",
+      "answer": "Jess chose the word \"re-solutions.\" She suggests changing the idea of rigid New Year's resolutions into \"re-solutions,\" which are new ways of doing things based on the current parameters and limitations.",
+      "timestamp": "52:56-53:06",
+      "time_start_sec": 3176,
+      "time_end_sec": 3186
+    },
+    {
+      "question": "What is the key word chosen by Matthew for his approach to the new year?",
+      "answer": "Matthew chose the word \"perseverance.\" He defines this as the willingness to keep giving care and helping others, even when things knock us down, by finding a way through cracks or around boundaries.",
+      "timestamp": "57:33-57:48",
+      "time_start_sec": 3453,
+      "time_end_sec": 3468
+    },
+    {
+      "question": "What is the metaphor used to describe the transformation of the industry during the pandemic?",
+      "answer": "The metaphor is a caterpillar turning into a butterfly. The caterpillar fights to survive, eats, protects itself, and eventually forms a cocoon to transform into a beautiful butterfly capable of doing amazing things.",
+      "timestamp": "56:15-57:29",
+      "time_start_sec": 3375,
+      "time_end_sec": 3449
+    },
+    {
+      "question": "What is the \"four F's\" concept mentioned by Jess for staying flexible?",
+      "answer": "The four F's are Friendly, Familiar, Functional, and Forgiving. These concepts help individuals and teams move forward flexibly by being kind, sticking to known routines where possible, adapting tasks to abilities, and understanding mistakes.",
+      "timestamp": "48:32-48:52",
+      "time_start_sec": 2912,
+      "time_end_sec": 2932
+    },
+    {
+      "question": "What is the \"four S's\" concept mentioned by Jess for the environment?",
+      "answer": "The four S's are Sensory, Space, Social, and Surfaces. These environmental factors were often overlooked during the pandemic due to a focus on masks and distancing, but they remain important for creating a supportive setting.",
+      "timestamp": "49:09-49:24",
+      "time_start_sec": 2949,
+      "time_end_sec": 2964
+    },
+    {
+      "question": "What is the main reason some professionals feel afraid to return to in-person training?",
+      "answer": "Professionals feel afraid because they are used to a specific way of working and the sudden change is fast. They worry about the unknown rules, the risk of illness, and the difference in dynamics compared to virtual meetings.",
+      "timestamp": "35:30-35:52",
+      "time_start_sec": 2130,
+      "time_end_sec": 2152
+    },
+    {
+      "question": "How can virtual training help professionals who feel defeated by the loss of in-person interaction?",
+      "answer": "Virtual training provides a safe environment to practice skills without the pressure of physical presence. It allows people to build confidence and skills gradually, knowing that the in-person world will eventually return.",
+      "timestamp": "34:45-35:12",
+      "time_start_sec": 2085,
+      "time_end_sec": 2112
+    },
+    {
+      "question": "What is the role of \"reinforcers\" in sustaining motivation during difficult times?",
+      "answer": "Reinforcers are the specific things that make a person want to get up and do something. During hard times, people must deliberately identify these small moments of contentment or joy to keep going and prevent burnout.",
+      "timestamp": "41:24-41:55",
+      "time_start_sec": 2484,
+      "time_end_sec": 2515
+    },
+    {
+      "question": "Why is it important to identify unmet needs in the community during this transition?",
+      "answer": "Identifying unmet needs helps caregivers find specific moments of joy and pleasure for the people they serve. Without these moments of pleasure, people may feel shriveled up or even die from the lack of positive reinforcement.",
+      "timestamp": "43:40-43:52",
+      "time_start_sec": 2620,
+      "time_end_sec": 2632
+    },
+    {
+      "question": "What is the difference between \"letting go\" and \"setting it aside\"?",
+      "answer": "\"Letting go\" implies abandoning something completely. \"Setting it aside\" means pausing a traditional job or method temporarily so it can be retrieved later in a new form, rather than discarding it forever.",
+      "timestamp": "52:13-52:54",
+      "time_start_sec": 3133,
+      "time_end_sec": 3174
+    },
+    {
+      "question": "What is the significance of the \"caterpillar eating away\" metaphor in the context of transformation?",
+      "answer": "The metaphor shows that transformation requires effort and struggle. Just as a caterpillar must fight to survive, eat, and protect itself before it can become a butterfly, caregivers must work hard to adapt and grow.",
+      "timestamp": "56:15-57:00",
+      "time_start_sec": 3375,
+      "time_end_sec": 3420
+    },
+    {
+      "question": "What is the role of \"partnership\" in overcoming the fear of failure during transitions?",
+      "answer": "Partnership helps because when one person feels anxious or is about to fail, their partners are aware of this heightened state. Knowing that others are there to support them reduces the risk and makes the experience safer.",
+      "timestamp": "39:17-39:38",
+      "time_start_sec": 2357,
+      "time_end_sec": 2378
+    },
+    {
+      "question": "What is the benefit of viewing negative situations as opportunities for growth?",
+      "answer": "Viewing negatives as positives helps build confidence and skills. For example, virtual speaking might feel scary, but it can actually relax the speaker and allow them to practice without the pressure of seeing a full audience.",
+      "timestamp": "36:16-36:26",
+      "time_start_sec": 2176,
+      "time_end_sec": 2186
+    },
+    {
+      "question": "What is the definition of \"flexibility\" provided by the speakers?",
+      "answer": "Flexibility is the ability to adapt and be creative. However, it is only possible when a person feels safe and rested. Without safety and rest, it is very hard to feel creative or flexible.",
+      "timestamp": "20:46-21:08",
+      "time_start_sec": 1246,
+      "time_end_sec": 1268
+    },
+    {
+      "question": "What is the impact of the \"bird\" in the caterpillar metaphor?",
+      "answer": "The bird represents the threat of the pandemic (COVID). The bird wanted to eat the caterpillar, but the caterpillar found a way to survive, grow, and eventually escape the danger by transforming.",
+      "timestamp": "57:06-57:12",
+      "time_start_sec": 3426,
+      "time_end_sec": 3432
+    },
+    {
+      "question": "What is the role of \"policy change\" in the transition back to a new normal?",
+      "answer": "Policy change involves making decisions at the county, state, provincial, or national level. It is a big-picture task that affects how care is delivered and requires bridging the gap between decision-makers and the actual needs of families and patients.",
+      "timestamp": "42:45-43:10",
+      "time_start_sec": 2565,
+      "time_end_sec": 2590
+    },
+    {
+      "question": "What is the significance of the \"cocoon\" stage in the transformation metaphor?",
+      "answer": "The cocoon stage represents the period of transformation where the caterpillar is changing its form. It is a time of rest and preparation before emerging as a new, stronger version of itself.",
+      "timestamp": "57:18-57:23",
+      "time_start_sec": 3438,
+      "time_end_sec": 3443
+    },
+    {
+      "question": "What is the ultimate goal of the \"rebirth\" mentioned in the transcript?",
+      "answer": "The ultimate goal of the rebirth is a \"rebirth of care\" and a \"rebirth of connection.\" It signifies a new beginning where relationships and care practices are renewed and strengthened, even if the process takes a long time.",
+      "timestamp": "55:20-55:38",
+      "time_start_sec": 3320,
+      "time_end_sec": 3338
+    },
+    {
+      "question": "What is the final message the speakers want to convey to the caregivers?",
+      "answer": "The final message is one of gratitude and encouragement. The speakers express that the community is amazing, resilient, and capable of overcoming any challenge together, ending with a wish for a happy new year.",
+      "timestamp": "58:20-59:02",
+      "time_start_sec": 3500,
+      "time_end_sec": 3542
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/4/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -18,6 +18,9 @@ env/
 slurm/*.out
 slurm/*.err
 
+# Background judge-run logs (eval/llm_judge/run_mac_clip.sh)
+eval/llm_judge/logs/
+
 # Local model weights (loaded by absolute path on HPC)
 BGE-M3/
 *.safetensors

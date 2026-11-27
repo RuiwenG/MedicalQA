@@ -1,0 +1,123 @@
+{
+  "expected_pairs": 14,
+  "parsed_pairs": 14,
+  "transcript_end_sec": 1409.12,
+  "timestamp_lines": [
+    "Timestamp 1: 2:11-3:01",
+    "Timestamp 2: 3:33-3:56",
+    "Timestamp 3: 5:59-7:11",
+    "Timestamp 4: 7:23-7:58",
+    "Timestamp 5: 9:06-9:55",
+    "Timestamp 6: 10:00-10:44",
+    "Timestamp 7: 14:31-14:55",
+    "Timestamp 8: 15:11-15:38",
+    "Timestamp 9: 10:44-11:26",
+    "Timestamp 10: 13:18-13:40",
+    "Timestamp 11: 11:48-12:04",
+    "Timestamp 12: 19:14-19:50",
+    "Timestamp 13: 12:44-13:06",
+    "Timestamp 14: 18:14-19:06"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main advantage of reading a book created by a team of experts instead of just one author?",
+      "answer": "A team approach provides multiple points of view, which is important because everyone has a unique history and different experiences with dementia. This helps readers understand that dementia is complex and affects various parts of the brain, not just memory, while acknowledging that people may have mixed up information or misconceptions about the disease.",
+      "timestamp": "2:11-3:01",
+      "time_start_sec": 131,
+      "time_end_sec": 181
+    },
+    {
+      "question": "Why is it helpful for a caregiver to know that dementia affects more than just memory?",
+      "answer": "Dementia impacts vision, language, movement, and the ability to sequence tasks. It is not just one symptom building on another; it is a combination of changes across many areas of the brain. Knowing this helps caregivers understand that a person might struggle with tasks like cooking or organizing because of these broader neurological effects, not just because they forgot the steps.",
+      "timestamp": "3:33-3:56",
+      "time_start_sec": 213,
+      "time_end_sec": 236
+    },
+    {
+      "question": "In the example conversation, why did the caregiver feel frustrated when asking Dan about dinner repeatedly?",
+      "answer": "The caregiver felt frustrated because Dan's brain was changing, causing him to lose track of the conversation and forget what was discussed. He became confused and angry because he did not realize the caregiver was repeating herself, leading to a situation where neither person understood the other's perspective or comfort level.",
+      "timestamp": "5:59-7:11",
+      "time_start_sec": 359,
+      "time_end_sec": 431
+    },
+    {
+      "question": "How can a caregiver prevent conflict when their partner does not understand what is being said?",
+      "answer": "Conflict often happens when people do not understand what is going on and feel uncomfortable or unheard. To avoid this, caregivers should recognize that the person with dementia is not aware that the situation is strange or repetitive. Instead of forcing the conversation, the caregiver can adjust their approach to make the interaction more comfortable for the person with dementia.",
+      "timestamp": "7:23-7:58",
+      "time_start_sec": 443,
+      "time_end_sec": 478
+    },
+    {
+      "question": "What specific changes should a caregiver make to the location and timing of their conversation with a person with dementia?",
+      "answer": "Caregivers should try to start the conversation in the same room where the person is currently located so they are in the same visual field. They should also ensure they are close enough to be heard clearly but not too close to invade personal space. Taking a moment to greet the person and check if they have a moment to talk helps establish connection before discussing specific needs.",
+      "timestamp": "9:06-9:55",
+      "time_start_sec": 546,
+      "time_end_sec": 595
+    },
+    {
+      "question": "What is the benefit of giving a person with dementia limited choices during a conversation?",
+      "answer": "Giving choices, such as asking \"soup or something else,\" allows the person to feel a sense of control and involvement. When the person rejects one option, offering another choice keeps them engaged and in charge of the decision. This method reduces confusion and makes the interaction less stressful for both parties.",
+      "timestamp": "10:00-10:44",
+      "time_start_sec": 600,
+      "time_end_sec": 644
+    },
+    {
+      "question": "Why is it important for a caregiver to wait silently after asking a question?",
+      "answer": "Waiting provides the person with dementia time to process the information and formulate a response. The caregiver also uses this pause to think about how to respond. This shared time ensures that neither person feels rushed and allows for a calmer, more thoughtful exchange.",
+      "timestamp": "14:31-14:55",
+      "time_start_sec": 871,
+      "time_end_sec": 895
+    },
+    {
+      "question": "How does a caregiver's tone of voice affect a conversation with a person who has dementia?",
+      "answer": "Raising one's voice often adds an edge or intensity that can be perceived as aggressive or demanding. Using a lower, slower, and lighter tone creates a neutral atmosphere that feels like a normal conversation. This gentle approach helps the person with dementia feel safe and understood without feeling pressured.",
+      "timestamp": "15:11-15:38",
+      "time_start_sec": 911,
+      "time_end_sec": 938
+    },
+    {
+      "question": "What practical steps can a caregiver take to ensure the person with dementia understands what is being asked?",
+      "answer": "Caregivers should present items visually, such as showing the ingredients for an omelet, and ask the person to identify what they like or dislike. By letting the person see and touch the objects, they can make decisions based on sensory input rather than relying solely on memory or verbal instructions.",
+      "timestamp": "10:44-11:26",
+      "time_start_sec": 644,
+      "time_end_sec": 686
+    },
+    {
+      "question": "Why might a caregiver feel they are losing control during a difficult conversation?",
+      "answer": "A caregiver might feel they are losing control because the person with dementia is unable to follow the original plan or remember previous details. However, by keeping sentences short and using simple language, the caregiver can regain control of the interaction by guiding the conversation in manageable steps.",
+      "timestamp": "13:18-13:40",
+      "time_start_sec": 798,
+      "time_end_sec": 820
+    },
+    {
+      "question": "What is the purpose of saying \"I am sorry to interrupt\" when approaching a person with dementia?",
+      "answer": "Saying \"I am sorry to interrupt\" acknowledges that the person might be busy or focused on something else. It respects their current activity and signals that the caregiver wants to connect before shifting the focus to a new topic, which helps reduce anxiety and defensiveness.",
+      "timestamp": "11:48-12:04",
+      "time_start_sec": 708,
+      "time_end_sec": 724
+    },
+    {
+      "question": "How does the structure of the book *Understanding Dementia* help different types of learners?",
+      "answer": "The book includes pictures of the brain for visual learners, clear explanations for those who prefer reading, and practical exercises for kinesthetic learners who need to try things out. The chapters are short and do not rely heavily on previous ones, allowing readers to find specific topics that interest them.",
+      "timestamp": "19:14-19:50",
+      "time_start_sec": 1154,
+      "time_end_sec": 1190
+    },
+    {
+      "question": "What is the recommended way to handle a situation where a person with dementia cannot answer a question correctly?",
+      "answer": "Instead of reacting with frustration or confusion, the caregiver should remain calm and offer another choice or clarify the request simply. For example, if the person says something unclear, the caregiver can gently explain the item in question or offer a different option rather than pressing for a correct answer immediately.",
+      "timestamp": "12:44-13:06",
+      "time_start_sec": 764,
+      "time_end_sec": 786
+    },
+    {
+      "question": "Why is it beneficial to use scripts or specific phrases when communicating with a person with dementia?",
+      "answer": "Scripts provide the exact words needed to communicate effectively during high-stress moments when emotions run high. Having prepared phrases helps caregivers act quickly and consistently, ensuring they give choices, reflect back what was heard, and maintain a supportive tone without forgetting key techniques.",
+      "timestamp": "18:14-19:06",
+      "time_start_sec": 1094,
+      "time_end_sec": 1146
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/15/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

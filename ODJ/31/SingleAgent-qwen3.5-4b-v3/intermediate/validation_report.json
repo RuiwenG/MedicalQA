@@ -1,0 +1,59 @@
+{
+  "expected_pairs": 6,
+  "parsed_pairs": 6,
+  "transcript_end_sec": 495.82,
+  "timestamp_lines": [
+    "Timestamp 1: 0:51-1:37",
+    "Timestamp 2: 2:26-3:18",
+    "Timestamp 3: 4:33-4:46",
+    "Timestamp 4: 6:25-6:51",
+    "Timestamp 5: 7:33-7:54",
+    "Timestamp 6: 7:54-8:09"
+  ],
+  "pairs": [
+    {
+      "question": "What are the three main questions a caregiver should ask themselves to determine if a person with dementia can safely perform a task?",
+      "answer": "The three questions are: First, \"Can I get there?\" meaning can the person physically reach the task or the pieces they need? Second, \"Am I safe?\" asking if the situation makes sense and if the person has the necessary skills to avoid risk. Third, \"Can I act?\" which asks if the person actually has the internal skills to complete the task they want to do. If the person wants to do something and has the desire and skills, they should be allowed to do it.",
+      "timestamp": "0:51-1:37",
+      "time_start_sec": 51,
+      "time_end_sec": 97
+    },
+    {
+      "question": "How does the speaker explain that a person's awareness changes depending on their specific type of dementia, such as sapphires or emeralds?",
+      "answer": "Awareness is described as situational and depends on the specific type of dementia. For example, people with sapphires tend to keep their awareness skills even though they might struggle to think things through. People with emeralds experience \"time travel,\" meaning they might think they are in a situation they are not actually in, which creates a higher risk. The level of awareness determines how likely the person is to be safe and how well they can use things.",
+      "timestamp": "2:26-3:18",
+      "time_start_sec": 146,
+      "time_end_sec": 198
+    },
+    {
+      "question": "What specific safety strategies does the speaker recommend for a person with emerald dementia who might forget they are in danger?",
+      "answer": "For people with emerald dementia, the recommendation is to have a friendly person nearby who provides prompts to reduce risk and checks for mistakes. This person should be present but not interfering, simply modifying actions in the moment to ensure safety.",
+      "timestamp": "4:33-4:46",
+      "time_start_sec": 273,
+      "time_end_sec": 286
+    },
+    {
+      "question": "Why does the speaker suggest that for a person with pearl dementia, the caregiver must provide access to things like the outdoors or food?",
+      "answer": "The speaker explains that people with pearl dementia are often more aware of their internal feelings (like hunger) but lack outside awareness, meaning they do not realize they are hungry or thirsty. Therefore, the caregiver must actively provide access to things like steps, the outdoors, food, and drink, because if the caregiver does not give the opportunity, the person will not be able to experience it themselves.",
+      "timestamp": "6:25-6:51",
+      "time_start_sec": 385,
+      "time_end_sec": 411
+    },
+    {
+      "question": "What is the difference between the support needed for a person with ruby dementia versus a person with pearl dementia when performing tasks?",
+      "answer": "A person with ruby dementia needs supported use with items to carry or hold, requiring hands-on help like \"hand under hand\" because their ability varies constantly. In contrast, a person with pearl dementia needs the caregiver to go slowly, respect their feedback, and be careful because they are frequently trying to communicate their needs or feelings through their actions.",
+      "timestamp": "7:33-7:54",
+      "time_start_sec": 453,
+      "time_end_sec": 474
+    },
+    {
+      "question": "According to the speaker, what is the ultimate goal for a person with dementia as their condition progresses?",
+      "answer": "As dementia increases, the person's world must change to match their new reality. However, the goal is to provide reasonable opportunities and options so that the person can continue to live a meaningful life.",
+      "timestamp": "7:54-8:09",
+      "time_start_sec": 474,
+      "time_end_sec": 489
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/31/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

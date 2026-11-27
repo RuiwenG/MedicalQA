@@ -1,0 +1,139 @@
+{
+  "expected_pairs": 16,
+  "parsed_pairs": 16,
+  "transcript_end_sec": 1424.78,
+  "timestamp_lines": [
+    "Timestamp 1: 16:24-16:35",
+    "Timestamp 2: 17:30-17:44",
+    "Timestamp 3: 17:45-18:13",
+    "Timestamp 4: 19:23-19:55",
+    "Timestamp 5: 20:22-20:39",
+    "Timestamp 6: 20:42-21:16",
+    "Timestamp 7: 21:23-21:38",
+    "Timestamp 8: 22:21-22:24",
+    "Timestamp 9: 1:33-1:41",
+    "Timestamp 10: 1:58-2:13",
+    "Timestamp 11: 6:01-6:18",
+    "Timestamp 12: 15:00-15:13",
+    "Timestamp 13: 20:22-20:27",
+    "Timestamp 14: 17:12-17:26",
+    "Timestamp 15: 18:44-19:01",
+    "Timestamp 16: 20:32-20:39"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main difference between how a healthy brain develops and how a brain affected by dementia fails?",
+      "answer": "A healthy brain grows from the bottom up, starting with basic survival functions and building toward the thinking brain. In contrast, a brain affected by dementia tends to fail in the opposite order, meaning the thinking brain stops working while the older, more primitive parts of the brain remain active.",
+      "timestamp": "16:24-16:35",
+      "time_start_sec": 984,
+      "time_end_sec": 995
+    },
+    {
+      "question": "Why might a person with dementia react negatively when a caregiver tries to help them?",
+      "answer": "Because the thinking part of the brain is damaged, the older emotional part of the brain may interpret helpful actions as threats or dangers. Instead of seeing help, the person might feel unsafe or threatened, causing them to resist or become upset.",
+      "timestamp": "17:30-17:44",
+      "time_start_sec": 1050,
+      "time_end_sec": 1064
+    },
+    {
+      "question": "How can a caregiver avoid using old discipline methods that might hurt a person with dementia?",
+      "answer": "Caregivers should pause and realize that old discipline or parenting styles worked when the person had a fully functioning thinking brain. Since the brain connections are now different, trying to force old patterns often causes confusion and distress instead of helping.",
+      "timestamp": "17:45-18:13",
+      "time_start_sec": 1065,
+      "time_end_sec": 1093
+    },
+    {
+      "question": "What is the \"Reticular Activating System,\" and what does it do?",
+      "answer": "The Reticular Activating System is a small filtering system in the brain that helps us ignore unnecessary details and focus on what is important. It acts like a sieve, letting only key information pass through to our awareness.",
+      "timestamp": "19:23-19:55",
+      "time_start_sec": 1163,
+      "time_end_sec": 1195
+    },
+    {
+      "question": "What are the two things that almost always get through the brain's filter, regardless of what else is happening?",
+      "answer": "The two things that always get through the filter are the person's preferred name and the feeling that someone they care about is in danger. These alerts immediately grab full attention and push aside everything else.",
+      "timestamp": "20:22-20:39",
+      "time_start_sec": 1222,
+      "time_end_sec": 1239
+    },
+    {
+      "question": "Can a person with dementia be taught to focus on specific things they enjoy?",
+      "answer": "Yes. By gently telling the person what they are interested in, the brain's filtering system can be directed to look for those specific things. This helps the person find and enjoy the activities they want to do.",
+      "timestamp": "20:42-21:16",
+      "time_start_sec": 1242,
+      "time_end_sec": 1276
+    },
+    {
+      "question": "What happens if a person with dementia focuses too much on negative thoughts or bad memories?",
+      "answer": "If a person focuses on negative experiences, their brain will start to see the world as full of awful things. This creates a cycle where everything seems terrible, which is not helpful for living a good life.",
+      "timestamp": "21:23-21:38",
+      "time_start_sec": 1283,
+      "time_end_sec": 1298
+    },
+    {
+      "question": "Why is it important for caregivers to understand their own brain systems before helping someone with dementia?",
+      "answer": "It is important because caregivers must learn to manage their own emotions and stress first. Only when the caregiver is calm and understands their own brain can they effectively support the person they care about.",
+      "timestamp": "22:21-22:24",
+      "time_start_sec": 1341,
+      "time_end_sec": 1344
+    },
+    {
+      "question": "How does the \"limbic system\" relate to feelings of pleasure and pain?",
+      "answer": "The limbic system is the older part of the brain responsible for the basic rhythm of life, including feelings of pain and pleasure. It reacts quickly to immediate situations rather than thinking through long-term plans.",
+      "timestamp": "1:33-1:41",
+      "time_start_sec": 93,
+      "time_end_sec": 101
+    },
+    {
+      "question": "What role does the \"neocortex\" play in the brain?",
+      "answer": "The neocortex is the newer, top part of the brain responsible for thinking, awareness, and active problem-solving. It is the part of the brain that helps us plan for the long term and negotiate complex situations.",
+      "timestamp": "1:58-2:13",
+      "time_start_sec": 118,
+      "time_end_sec": 133
+    },
+    {
+      "question": "Why is it difficult for a person with dementia to follow a schedule or routine?",
+      "answer": "The older parts of the brain, which handle basic needs like hunger, sleep, and temperature, are very active. Without the thinking brain to organize these needs into a plan, the person may feel overwhelmed or confused about what to do next.",
+      "timestamp": "6:01-6:18",
+      "time_start_sec": 361,
+      "time_end_sec": 378
+    },
+    {
+      "question": "How can recognizing unmet physical needs help reduce distress in a person with dementia?",
+      "answer": "Many sudden outbursts or distress are actually caused by physical needs like needing a nap, eating, or using the bathroom. Recognizing these needs and meeting them early can prevent larger meltdowns later.",
+      "timestamp": "15:00-15:13",
+      "time_start_sec": 900,
+      "time_end_sec": 913
+    },
+    {
+      "question": "What is the connection between the brain's filtering system and the person's name?",
+      "answer": "The brain's filtering system is programmed to always pay close attention to the person's preferred name. Hearing their name is one of the strongest ways to bring their attention back to the present moment.",
+      "timestamp": "20:22-20:27",
+      "time_start_sec": 1222,
+      "time_end_sec": 1227
+    },
+    {
+      "question": "Why might a joke or a compliment feel like criticism to a person with dementia?",
+      "answer": "Because the thinking brain cannot interpret the context correctly, the person might hear a joke as a judgment or a criticism. The older emotional brain reacts to the tone as a threat rather than understanding the intent was friendly.",
+      "timestamp": "17:12-17:26",
+      "time_start_sec": 1032,
+      "time_end_sec": 1046
+    },
+    {
+      "question": "What is the benefit of using humor and lightness in caregiving?",
+      "answer": "Using humor, play, and empathy can lighten the mood and reduce stress for everyone involved. This approach is often more effective than trying to fix broken brain wiring, as it engages the person's emotional brain positively.",
+      "timestamp": "18:44-19:01",
+      "time_start_sec": 1124,
+      "time_end_sec": 1141
+    },
+    {
+      "question": "How does the brain's reaction to danger differ from its reaction to a name?",
+      "answer": "Both a name and the feeling of danger trigger the same immediate alert in the brain. They both cause the person to stop everything else and focus entirely on the stimulus, whether it is a call for help or a call to safety.",
+      "timestamp": "20:32-20:39",
+      "time_start_sec": 1232,
+      "time_end_sec": 1239
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/25/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

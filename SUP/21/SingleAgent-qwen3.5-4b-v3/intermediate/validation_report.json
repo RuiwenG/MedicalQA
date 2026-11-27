@@ -1,0 +1,363 @@
+{
+  "expected_pairs": 44,
+  "parsed_pairs": 44,
+  "transcript_end_sec": 3631.56,
+  "timestamp_lines": [
+    "Timestamp 1: 3:22-4:12",
+    "Timestamp 2: 5:11-6:32",
+    "Timestamp 3: 7:12-8:15",
+    "Timestamp 4: 7:56-8:54",
+    "Timestamp 5: 10:46-11:48",
+    "Timestamp 6: 12:15-12:40",
+    "Timestamp 7: 13:34-14:56",
+    "Timestamp 8: 16:43-17:56",
+    "Timestamp 9: 30:10-32:04",
+    "Timestamp 10: 29:26-30:03",
+    "Timestamp 11: 32:20-33:01",
+    "Timestamp 12: 33:46-34:21",
+    "Timestamp 13: 35:27-36:54",
+    "Timestamp 14: 40:14-41:32",
+    "Timestamp 15: 42:31-44:40",
+    "Timestamp 16: 44:51-46:22",
+    "Timestamp 17: 47:42-48:30",
+    "Timestamp 18: 49:05-50:00",
+    "Timestamp 19: 22:41-24:38",
+    "Timestamp 20: 24:43-25:33",
+    "Timestamp 21: 45:14-46:22",
+    "Timestamp 22: 31:03-32:04",
+    "Timestamp 23: 32:20-33:01",
+    "Timestamp 24: 42:31-44:40",
+    "Timestamp 25: 44:51-46:22",
+    "Timestamp 26: 38:07-39:19",
+    "Timestamp 27: 56:20-57:15",
+    "Timestamp 28: 57:17-58:26",
+    "Timestamp 29: 5:24-6:32",
+    "Timestamp 30: 22:41-24:38",
+    "Timestamp 31: 42:31-44:40",
+    "Timestamp 32: 20:29-33:01",
+    "Timestamp 33: 45:14-46:22",
+    "Timestamp 34: 39:29-40:14",
+    "Timestamp 35: 31:03-32:04",
+    "Timestamp 36: 24:43-25:33",
+    "Timestamp 37: 44:51-46:22",
+    "Timestamp 38: 44:06-44:40",
+    "Timestamp 39: 47:42-48:30",
+    "Timestamp 40: 5:24-6:32",
+    "Timestamp 41: 31:03-32:04",
+    "Timestamp 42: 24:43-25:33",
+    "Timestamp 43: 56:20-57:15",
+    "Timestamp 44: 44:51-46:22"
+  ],
+  "pairs": [
+    {
+      "question": "What is the new broadcast schedule for the \"Straight Up Positive\" show starting next month?",
+      "answer": "Starting next month, the show will air every other week, specifically on the first and third weeks of the month. It will continue to be on Tuesdays at the same time and night, but there will be fewer live broadcast days overall compared to the previous schedule.",
+      "timestamp": "3:22-4:12",
+      "time_start_sec": 202,
+      "time_end_sec": 252
+    },
+    {
+      "question": "What is the \"Enhanced Trainer,\" and why was it created?",
+      "answer": "The Enhanced Trainer is a new training resource created because many certified trainers feel they have mastered the standard scripts and feel they can perform the workshops \"in their sleep.\" It provides additional video content and new scripts to help trainers make necessary changes and shifts in their delivery, preventing them from becoming too rigid in their approach.",
+      "timestamp": "5:11-6:32",
+      "time_start_sec": 311,
+      "time_end_sec": 392
+    },
+    {
+      "question": "What are the key differences between normal aging and dementia-related changes according to the Enhanced Trainer?",
+      "answer": "Normal aging involves thinking slightly slower, hesitating more before acting, and needing more time to sort through information to find what you need. However, these changes do not involve a loss of ability or skill. The Enhanced Trainer emphasizes that slowing down is natural, whereas dementia involves a significant decline in function.",
+      "timestamp": "7:12-8:15",
+      "time_start_sec": 432,
+      "time_end_sec": 495
+    },
+    {
+      "question": "Why is it important to practice skills on the non-dominant side of the body?",
+      "answer": "Motor memories are built on the side of the body you use most often. By practicing new skills or exercises on the non-dominant side, you force the brain to develop new neural pathways. This builds fresh skills rather than relying on old, potentially ineffective habits, which is crucial for maintaining cognitive flexibility.",
+      "timestamp": "7:56-8:54",
+      "time_start_sec": 476,
+      "time_end_sec": 534
+    },
+    {
+      "question": "Who is Maggie Scanlon, and what is her role with the Alzheimer Society?",
+      "answer": "Maggie Scanlon is the Public Education Coordinator for the Alzheimer Society of Ontario. Based in Elgin County, she has worked with the society for five years. Her role involves educating the public, working with businesses to create dementia-friendly communities, and leading programs for children, libraries, and first responders.",
+      "timestamp": "10:46-11:48",
+      "time_start_sec": 646,
+      "time_end_sec": 708
+    },
+    {
+      "question": "How did Maggie Scanlon discover the TIPA Snow approach to dementia care?",
+      "answer": "When Maggie started at the Alzheimer Society, she did not know much about dementia initially. A staff member recommended DVDs from the society's lending library, which led her to watch videos online. She found TIPA Snow's materials particularly helpful because of the engaging way she connected with people.",
+      "timestamp": "12:15-12:40",
+      "time_start_sec": 735,
+      "time_end_sec": 760
+    },
+    {
+      "question": "What was Maggie's experience like attending the TIPA certification course as an introvert?",
+      "answer": "Maggie is a self-described introvert who prefers listening and writing notes rather than speaking up in large groups. During the course, TIPA Snow noticed her hesitation and walked over to engage her directly. This supportive approach helped Maggie feel safe to participate, proving that trainers can adapt their style to support different personality types effectively.",
+      "timestamp": "13:34-14:56",
+      "time_start_sec": 814,
+      "time_end_sec": 896
+    },
+    {
+      "question": "What strategies does Maggie use to support introverted participants in her training sessions?",
+      "answer": "Maggie avoids calling out participants publicly, which can be intimidating for introverts. Instead, she encourages people to raise their hands, yell out answers, or send private messages if they are uncomfortable speaking in a large group. She also stays behind the session to offer one-on-one conversations, creating a safe space for personal sharing.",
+      "timestamp": "16:43-17:56",
+      "time_start_sec": 1003,
+      "time_end_sec": 1076
+    },
+    {
+      "question": "How does Maggie explain the difference between \"wandering\" and \"going missing\"?",
+      "answer": "The term \"wandering\" can create stigma by labeling a person as aimless or lost. In reality, a person living with dementia is often purposefully moving toward a goal they believe is correct, even if they are lost. Therefore, the term \"going missing\" is preferred because it acknowledges that the person is simply not where they are supposed to be, rather than implying they are aimlessly roaming.",
+      "timestamp": "30:10-32:04",
+      "time_start_sec": 1810,
+      "time_end_sec": 1924
+    },
+    {
+      "question": "What is the \"Finding Your Way\" program, and who is it designed for?",
+      "answer": "\"Finding Your Way\" is a program in Ontario designed specifically to educate people about Alzheimer's and dementia, focusing on the risks associated with a person going missing. It provides resources for care partners, identification kits, and online learning modules on how to identify confusion and interact safely with someone who may be lost.",
+      "timestamp": "29:26-30:03",
+      "time_start_sec": 1766,
+      "time_end_sec": 1803
+    },
+    {
+      "question": "What is the purpose of the Rapid Response Working Group?",
+      "answer": "The Rapid Response Working Group brings together first responders, researchers, persons living with dementia, care partners, and Alzheimer Society staff. Their goal is to create specific resources and best practices for first responders to handle situations where a person living with dementia goes missing, ensuring they are equipped to act appropriately.",
+      "timestamp": "32:20-33:01",
+      "time_start_sec": 1940,
+      "time_end_sec": 1981
+    },
+    {
+      "question": "Why is it important not to lump all first responders together when designing training programs?",
+      "answer": "Different first responder agencies have vastly different needs, policies, and operational capacities. For example, a police department's needs differ significantly from a fire department or an EMS service. Training must be tailored to the specific context of each group to be effective, rather than using a \"one size fits all\" approach.",
+      "timestamp": "33:46-34:21",
+      "time_start_sec": 2026,
+      "time_end_sec": 2061
+    },
+    {
+      "question": "How did Maggie build trust with police officers to deliver her training?",
+      "answer": "Maggie did not start by pushing an agenda. Instead, she built relationships by listening to the actual experiences of officers, such as an incident where an officer arrested a person living with dementia who was attacking their spouse. By understanding their struggles and validating their feelings of helplessness, she established a foundation of trust and partnership.",
+      "timestamp": "35:27-36:54",
+      "time_start_sec": 2127,
+      "time_end_sec": 2214
+    },
+    {
+      "question": "What is the goal of Maggie's education regarding police officers and persons living with dementia?",
+      "answer": "Maggie does not want officers to diagnose dementia on the street. Her goal is to help officers recognize subtle signs that something might be wrong with their engagement. She hopes officers will pause, reflect on what they learned, and adjust their approach to interact more effectively and compassionately with the person in front of them.",
+      "timestamp": "40:14-41:32",
+      "time_start_sec": 2414,
+      "time_end_sec": 2492
+    },
+    {
+      "question": "How does TIPA Snow's concept of \"Vision Changes\" help first responders understand dementia?",
+      "answer": "Dementia affects vision nine times out of ten, causing tunnel vision and difficulty seeing peripheral objects. This explains why a person might walk in a straight line or refuse to turn around; they literally cannot see the path they need to take. Understanding this helps officers realize the behavior is a symptom of vision loss, not defiance.",
+      "timestamp": "42:31-44:40",
+      "time_start_sec": 2551,
+      "time_end_sec": 2680
+    },
+    {
+      "question": "What is the significance of the \"Five Ways We Take In Data\" in TIPA Snow's training?",
+      "answer": "Humans process information through sight, sound, touch, smell, and taste. For a person with dementia, visual and verbal cues are essential before physical contact. The training teaches that you must establish visual and verbal connection first. Touching someone without these cues can be frightening or misinterpreted, so waiting for the right signal is critical for safety.",
+      "timestamp": "44:51-46:22",
+      "time_start_sec": 2691,
+      "time_end_sec": 2782
+    },
+    {
+      "question": "Why is it important to share personal stories when educating about dementia?",
+      "answer": "People relate much more deeply to personal stories than abstract facts. Sharing a specific experience, such as a moment of terror or confusion with a loved one, humanizes the condition. It shows that professionals make mistakes and that learning from those mistakes is the most important part of growth.",
+      "timestamp": "47:42-48:30",
+      "time_start_sec": 2862,
+      "time_end_sec": 2910
+    },
+    {
+      "question": "How does Maggie's personal experience as a care partner influence her advocacy work?",
+      "answer": "Having cared for two grandmothers with dementia gives Maggie a unique perspective on how the disease affects individuals differently. This experience allows her to advocate more effectively for her own grandmother, ensuring she receives the best support and less stigma when interacting with the community, businesses, and first responders.",
+      "timestamp": "49:05-50:00",
+      "time_start_sec": 2945,
+      "time_end_sec": 3000
+    },
+    {
+      "question": "What is the \"Minds in Motion\" program?",
+      "answer": "\"Minds in Motion\" is an eight-week program that combines physical fitness with social recreation. It runs for two hours: the first hour is dedicated to exercise led by a certified instructor, and the second hour focuses on social activities like arts and crafts, games, or discussions, ensuring participants have fun while staying active.",
+      "timestamp": "22:41-24:38",
+      "time_start_sec": 1361,
+      "time_end_sec": 1478
+    },
+    {
+      "question": "How did the \"Winter Olympics\" event within \"Minds in Motion\" work?",
+      "answer": "During the Winter Olympics event, participants competed in activities like snowball tossing, curling, and hockey shootouts. Local Members of Parliament joined the group to compete alongside the clients and then handed out medals to the winners, creating a celebratory and engaging atmosphere for everyone involved.",
+      "timestamp": "24:43-25:33",
+      "time_start_sec": 1483,
+      "time_end_sec": 1533
+    },
+    {
+      "question": "What is the \"Touch\" strategy in TIPA Snow's approach?",
+      "answer": "The \"Touch\" strategy emphasizes that physical contact should only happen after establishing visual and verbal connection. TIPA Snow often demonstrates this by giving a \"finger\" gesture to signal readiness for touch. This ensures the person feels safe and respected, preventing accidental startle responses or misunderstandings.",
+      "timestamp": "45:14-46:22",
+      "time_start_sec": 2714,
+      "time_end_sec": 2782
+    },
+    {
+      "question": "Why is it important for first responders to recognize that persons living with dementia are not \"lost\" but \"gone missing\"?",
+      "answer": "Labeling someone as \"lost\" or \"wandering\" implies they are aimless and have no purpose. In reality, they are actively trying to achieve a goal they believe is correct. Recognizing this distinction reduces stigma and helps responders understand that the person is purposefully moving, even if their destination is incorrect.",
+      "timestamp": "31:03-32:04",
+      "time_start_sec": 1863,
+      "time_end_sec": 1924
+    },
+    {
+      "question": "What is the role of the \"Rapid Response Working Group\" in developing resources for first responders?",
+      "answer": "The group collaborates to create specific resources, such as guides and tip cards, that address the unique challenges faced by different types of first responders. They ensure the information is practical and relevant to the daily realities of police, fire, and EMS services when dealing with missing persons cases involving dementia.",
+      "timestamp": "32:20-33:01",
+      "time_start_sec": 1940,
+      "time_end_sec": 1981
+    },
+    {
+      "question": "How can caregivers use the \"Vision Changes\" concept to help their loved ones?",
+      "answer": "Caregivers can remind their loved ones to slow down and look directly at them before speaking. Since vision is often impaired, the person might not see the caregiver's face or gestures. Approaching from the front and ensuring eye contact helps bridge the communication gap caused by visual changes.",
+      "timestamp": "42:31-44:40",
+      "time_start_sec": 2551,
+      "time_end_sec": 2680
+    },
+    {
+      "question": "What is the \"Five Ways We Take In Data\" and how does it apply to communication?",
+      "answer": "This concept reminds us that people learn through sight, sound, touch, smell, and taste. In communication, it means using multiple senses to convey information. For example, combining a visual cue (pointing) with a verbal cue (speaking) makes the message clearer and easier for a person with dementia to process.",
+      "timestamp": "44:51-46:22",
+      "time_start_sec": 2691,
+      "time_end_sec": 2782
+    },
+    {
+      "question": "Why is it important for trainers to listen to the needs of the group they are training?",
+      "answer": "Experts in their field, such as police officers or firefighters, know their own procedures and constraints best. Trainers who push their own agenda without listening often fail. Successful training happens when the educator listens, learns about the group's specific needs, and collaborates to find solutions that fit within their existing framework.",
+      "timestamp": "38:07-39:19",
+      "time_start_sec": 2287,
+      "time_end_sec": 2359
+    },
+    {
+      "question": "What is the first step Maggie recommends for someone wanting to train first responders?",
+      "answer": "The first step is to simply reach out and have a conversation. It is important to be persistent and ask open-ended questions to understand what the organization is currently experiencing. Building a relationship based on genuine interest and listening is more effective than immediately presenting a solution.",
+      "timestamp": "56:20-57:15",
+      "time_start_sec": 3380,
+      "time_end_sec": 3435
+    },
+    {
+      "question": "How does Maggie use real-life examples from her community in her training?",
+      "answer": "Maggie shares specific stories of how persons living with dementia and care partners have interacted with local businesses or first responders. By presenting these real scenarios, she makes the training relevant and tangible, showing participants exactly how education can improve specific situations they might encounter.",
+      "timestamp": "57:17-58:26",
+      "time_start_sec": 3437,
+      "time_end_sec": 3506
+    },
+    {
+      "question": "What is the significance of the \"Enhanced Trainer\" video content?",
+      "answer": "The Enhanced Trainer video provides new scripts and content specifically designed for trainers who feel they have mastered the basics. It offers fresh ideas and variations to keep the training engaging and prevents trainers from falling into repetitive patterns that might not resonate with all learners.",
+      "timestamp": "5:24-6:32",
+      "time_start_sec": 324,
+      "time_end_sec": 392
+    },
+    {
+      "question": "How does the \"Minds in Motion\" program support physical and social well-being?",
+      "answer": "The program supports well-being by combining physical exercise with meaningful social interaction. The fitness component improves physical health, while the social recreation portion fosters connection, reduces isolation, and provides opportunities for creative expression and laughter among participants.",
+      "timestamp": "22:41-24:38",
+      "time_start_sec": 1361,
+      "time_end_sec": 1478
+    },
+    {
+      "question": "Why is it important for first responders to understand that dementia affects vision?",
+      "answer": "Understanding that dementia affects vision helps first responders interpret behaviors correctly. For instance, if a person walks in a straight line or refuses to turn, it is often due to tunnel vision, not stubbornness. This knowledge allows officers to respond with patience and appropriate strategies rather than frustration.",
+      "timestamp": "42:31-44:40",
+      "time_start_sec": 2551,
+      "time_end_sec": 2680
+    },
+    {
+      "question": "What is the role of the \"Rapid Response Working Group\" in creating best practices?",
+      "answer": "The group brings together diverse stakeholders, including first responders, researchers, and persons living with dementia, to develop best practices. This collaborative approach ensures that the resulting guidelines are comprehensive, practical, and tailored to the specific needs of different emergency services.",
+      "timestamp": "20:29-33:01",
+      "time_start_sec": 1229,
+      "time_end_sec": 1981
+    },
+    {
+      "question": "How can caregivers apply the \"Touch\" strategy in daily life?",
+      "answer": "Caregivers should wait to initiate physical contact until they have established clear visual and verbal connection. Before hugging or touching a loved one, they should ensure the person is looking at them and has acknowledged them verbally, respecting their need for safety and predictability.",
+      "timestamp": "45:14-46:22",
+      "time_start_sec": 2714,
+      "time_end_sec": 2782
+    },
+    {
+      "question": "What is the impact of building a relationship with first responders on Maggie's work?",
+      "answer": "Building strong relationships allowed Maggie to speak at the Ontario Police College and train over 3,000 officers. These connections enabled her to reach new recruits before they entered the field, planting seeds of awareness and empathy that could change how they interact with the community in the future.",
+      "timestamp": "39:29-40:14",
+      "time_start_sec": 2369,
+      "time_end_sec": 2414
+    },
+    {
+      "question": "Why is it important to avoid labeling a person with dementia as a \"wanderer\"?",
+      "answer": "Labeling someone a \"wanderer\" creates stigma and implies they are aimless. In reality, they are often purposefully moving toward a goal they believe is correct. Using the term \"gone missing\" is more accurate and respectful, acknowledging that they are simply not where they are supposed to be.",
+      "timestamp": "31:03-32:04",
+      "time_start_sec": 1863,
+      "time_end_sec": 1924
+    },
+    {
+      "question": "How does the \"Minds in Motion\" program adapt for different seasons?",
+      "answer": "The program adapts by hosting themed events like the \"Winter Olympics\" with snowball tossing and ice sculpting, as well as summer activities. This seasonal variation keeps the program fresh and engaging, allowing participants to enjoy different types of recreation throughout the year.",
+      "timestamp": "24:43-25:33",
+      "time_start_sec": 1483,
+      "time_end_sec": 1533
+    },
+    {
+      "question": "What is the significance of the \"Five Ways We Take In Data\" in communication?",
+      "answer": "This concept highlights that humans process information through multiple senses. For a person with dementia, relying solely on one sense (like hearing) may not be enough. Using a combination of visual, auditory, and tactile cues ensures the message is received and understood more effectively.",
+      "timestamp": "44:51-46:22",
+      "time_start_sec": 2691,
+      "time_end_sec": 2782
+    },
+    {
+      "question": "How can first responders use the \"Vision Changes\" concept to improve search efforts?",
+      "answer": "Knowing that persons with dementia often travel in straight lines due to vision loss can help first responders adjust their search patterns. Instead of assuming they will turn corners naturally, officers can be prepared to search along straight paths and look for signs of where the person might have stopped or turned unexpectedly.",
+      "timestamp": "44:06-44:40",
+      "time_start_sec": 2646,
+      "time_end_sec": 2680
+    },
+    {
+      "question": "What is the value of Maggie's personal story in her education?",
+      "answer": "Maggie's personal story of caring for her grandmothers makes the abstract concept of dementia concrete and relatable. By sharing her own experiences of confusion and fear, she validates the feelings of her audience and demonstrates that making mistakes is part of the learning process.",
+      "timestamp": "47:42-48:30",
+      "time_start_sec": 2862,
+      "time_end_sec": 2910
+    },
+    {
+      "question": "How does the \"Enhanced Trainer\" help trainers avoid burnout?",
+      "answer": "The Enhanced Trainer provides new content and scripts for trainers who feel they have exhausted the standard material. By offering fresh ideas and variations, it keeps the training dynamic and engaging, preventing trainers from feeling stagnant or bored with their routine.",
+      "timestamp": "5:24-6:32",
+      "time_start_sec": 324,
+      "time_end_sec": 392
+    },
+    {
+      "question": "Why is it important for first responders to recognize that persons living with dementia are not \"lost\" but \"gone missing\"?",
+      "answer": "Recognizing the distinction helps reduce stigma and shifts the perspective from \"aimless wandering\" to \"purposeful movement.\" This understanding empowers first responders to approach the situation with empathy and a focus on finding the person's intended destination rather than just locating a body.",
+      "timestamp": "31:03-32:04",
+      "time_start_sec": 1863,
+      "time_end_sec": 1924
+    },
+    {
+      "question": "How does the \"Minds in Motion\" program foster community engagement?",
+      "answer": "The program fosters engagement by involving local leaders, such as Members of Parliament, who participate in activities and award medals. This involvement validates the participants' efforts, creates a sense of pride, and integrates the program into the broader community fabric.",
+      "timestamp": "24:43-25:33",
+      "time_start_sec": 1483,
+      "time_end_sec": 1533
+    },
+    {
+      "question": "What is the key takeaway from Maggie's advice on building relationships with first responders?",
+      "answer": "The key takeaway is to start with a simple conversation and be persistent. Success comes from genuinely listening to the organization's experiences and needs, rather than imposing a pre-planned agenda. Building trust through dialogue is the foundation for effective collaboration.",
+      "timestamp": "56:20-57:15",
+      "time_start_sec": 3380,
+      "time_end_sec": 3435
+    },
+    {
+      "question": "How can the \"Five Ways We Take In Data\" help in de-escalating a difficult situation?",
+      "answer": "By consciously using multiple sensory cues—such as speaking calmly, making eye contact, and using gentle gestures—a communicator can ensure their message is fully received. This multi-sensory approach reduces confusion and anxiety, making it easier to de-escalate tense situations with persons living with dementia.",
+      "timestamp": "44:51-46:22",
+      "time_start_sec": 2691,
+      "time_end_sec": 2782
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/21/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-46.json",
+  "valid": true
+}

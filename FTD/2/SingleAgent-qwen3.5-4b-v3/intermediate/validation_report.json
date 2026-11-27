@@ -1,0 +1,86 @@
+{
+  "expected_pairs": 15,
+  "parsed_pairs": 15,
+  "transcript_end_sec": 1286.24,
+  "timestamp_lines": [],
+  "pairs": [
+    {
+      "question": "What is Frontotemporal Dementia with Motor Symptoms (FTD-ALS), and how does it differ from standard ALS?",
+      "answer": "FTD-ALS is a specific type of disease where a person loses control of their body muscles (like in ALS) but also suffers damage to the frontal and temporal parts of the brain. Unlike standard ALS, where the brain usually stays clear, FTD-ALS causes confusion, changes in personality, and trouble with thinking alongside the muscle weakness.",
+      "timestamp": null
+    },
+    {
+      "question": "What are the early warning signs that a person with FTD-ALS might be developing muscle weakness?",
+      "answer": "Early signs include leg weakness, clumsiness when holding objects like a pen or cup, dropping things, inability to lift arms overhead, difficulty breathing while doing tasks, visible loss of muscle tissue, muscle twitching, and stiffness (spasticity). Speech may become slurred, facial muscles might weaken causing drooling, and swallowing can become difficult.",
+      "timestamp": null
+    },
+    {
+      "question": "Why might a person with FTD-ALS be mistakenly diagnosed with Parkinson's disease or Alzheimer's?",
+      "answer": "People with FTD-ALS often show symptoms like slow movement, stiffness, and tremors that look exactly like Parkinson's. Additionally, if they have behavioral issues, doctors might mistake them for having Alzheimer's mixed with Parkinson's. This is dangerous because the medicines used to treat Parkinson's or Alzheimer's can be harmful to someone with FTD-ALS.",
+      "timestamp": null
+    },
+    {
+      "question": "What is Riluzole, and what is its goal for people with FTD-ALS?",
+      "answer": "Riluzole is a medication specifically studied for ALS. Its main goal is to slow down the progression of the motor neuron damage. However, doctors are not sure if it will help with the other symptoms caused by the brain damage (like memory or personality changes) or if it will improve the overall quality of life.",
+      "timestamp": null
+    },
+    {
+      "question": "How long does FTD-ALS typically last, and what factors influence this timeline?",
+      "answer": "The duration varies greatly. Some people live for only two to three years, while others can live for five to ten years or longer. The speed depends on how quickly the motor symptoms worsen and how the person manages the complex needs of both the brain and body, such as needing oxygen or a ventilator.",
+      "timestamp": null
+    },
+    {
+      "question": "What is Corticobasal Syndrome (CBS), and how does it affect a person's ability to move?",
+      "answer": "CBS is a movement disorder caused by damage deep in the brain's frontal and temporal areas. A person knows exactly what they want to do, like open a door or cook, but their hands and limbs cannot perform the action even though they have the strength. They may also trip, fall, or have muscles lock into strange positions (dystonia).",
+      "timestamp": null
+    },
+    {
+      "question": "Why is it difficult to treat the stiffness and slowness seen in Corticobasal Syndrome?",
+      "answer": "Medications that are commonly used to fix stiffness and slowness in other conditions often do not work well for CBS. Doctors sometimes try benzodiazepines (meds for anxiety or sleep) or botulinum toxin (Botox) to help with saliva or tight muscles, but results vary, and many treatments simply do not provide relief.",
+      "timestamp": null
+    },
+    {
+      "question": "What are the common causes of death for people with Corticobasal Syndrome?",
+      "answer": "Because mobility is severely affected, people with CBS are at high risk for pneumonia, sepsis (blood infection), or pulmonary embolism (a blood clot in the lung). These complications often lead to death, which can be a very difficult and uncomfortable experience for the person and family.",
+      "timestamp": null
+    },
+    {
+      "question": "How does Progressive Supranuclear Palsy (PSP) affect a person's vision and balance?",
+      "answer": "PSP primarily affects eye movements. People may blink uncontrollably, have blurry vision, struggle with eye contact, or have trouble looking down or scanning side-to-side. This leads to an unsteady walk, frequent falls, and difficulty driving. Swallowing can also become hard, leading to choking or aspiration pneumonia.",
+      "timestamp": null
+    },
+    {
+      "question": "What behavioral changes might occur in a person with Progressive Supranuclear Palsy?",
+      "answer": "Along with physical symptoms, people with PSP often experience depression, apathy (lack of motivation), and confusion. Their brains may create false memories or beliefs, leading to risky behaviors like gambling or spending money they cannot afford. They may also become very rigid or inflexible in their thinking.",
+      "timestamp": null
+    },
+    {
+      "question": "Why is it important to remove stairs from a home early if a caregiver suspects one of these conditions?",
+      "answer": "As these diseases progress, balance and coordination decline, making stairs extremely dangerous and potentially fatal due to falls. Removing steps early allows the person to stay safe and independent for as long as possible. Waiting until the person is already struggling to walk increases the risk of serious injury or death.",
+      "timestamp": null
+    },
+    {
+      "question": "What should a caregiver do if they suspect their loved one has one of these rare conditions?",
+      "answer": "Caregivers should gently advocate for a thorough check-up with a doctor who understands these specific conditions. It is helpful to prepare beforehand by noting specific behaviors and movements, explaining that you have researched the symptoms, and asking the doctor directly about these possibilities rather than assuming it is a common condition like standard Alzheimer's or Parkinson's.",
+      "timestamp": null
+    },
+    {
+      "question": "How can a caregiver support a person with these conditions who is feeling frustrated or depressed?",
+      "answer": "Caregivers should adapt the environment and interactions to match the person's changing abilities. This includes simplifying tasks, allowing extra time, and adjusting the home layout to prevent accidents. Recognizing that the person cannot stop the disease and offering patience and understanding can help reduce feelings of hopelessness and depression.",
+      "timestamp": null
+    },
+    {
+      "question": "What is the role of saliva management in these conditions, and what should be avoided?",
+      "answer": "Many people with these conditions produce excessive saliva, which can be embarrassing and dangerous if swallowed. While some medications or devices can dry up saliva, caregivers must be very careful not to overuse them. Too many medications can confuse the brain further and cause side effects, so the best approach is often skilled manual suctioning or using minimal, targeted aids.",
+      "timestamp": null
+    },
+    {
+      "question": "Why is it crucial for families to plan for end-of-life care with these diagnoses?",
+      "answer": "Because these conditions often lead to a slow decline in mobility followed by life-threatening events like pneumonia or blood clots, families need to discuss wishes and arrange support early. Planning ahead ensures that the person receives comfort care they want and that the family is prepared emotionally and logistically for the final stages of the illness.",
+      "timestamp": null
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/FTD/2/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-47.json",
+  "valid": false,
+  "error": "Pair 1 has an invalid or out-of-bounds timestamp: text=None, start=None, end=None, transcript_end=1286.240s (allowed end <= 1287s)"
+}

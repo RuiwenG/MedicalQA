@@ -1,0 +1,86 @@
+[
+  {
+    "question": "What is the main area of the brain affected in Primary Progressive Aphasia (PPA), and what does that mean for communication?",
+    "answer": "The primary area of the brain affected is the left temporal lobe, sometimes involving the right side. This causes significant changes in how a person understands and produces language. While they might still recognize objects and use them correctly, the words themselves lose their meaning for them, making it hard to understand conversations or express ideas clearly.",
+    "timestamp": "1:19-1:43",
+    "time_start_sec": 79,
+    "time_end_sec": 103
+  },
+  {
+    "question": "What is the \"semantic variant\" of PPA, and how does it affect a person's ability to understand words?",
+    "answer": "The semantic variant involves trouble understanding the meaning of individual words. A person might recognize an object or picture perfectly well but cannot recall or understand the specific word for it. For example, they might know what a sandwich is but fail to understand the word \"sandwich\" when heard or read, causing confusion during simple tasks like choosing food.",
+    "timestamp": "3:15-3:55",
+    "time_start_sec": 195,
+    "time_end_sec": 235
+  },
+  {
+    "question": "How can a caregiver help someone with the semantic variant of PPA when they cannot understand a word?",
+    "answer": "Instead of relying only on spoken words, caregivers should use visual cues. Show the object, point to pictures on a menu, or use photos of items like sandwiches. If a person struggles with reading text, provide images instead. You can also save favorite pictures on a phone to show them what they want, which helps them communicate needs without needing to name things verbally.",
+    "timestamp": "3:37-6:20",
+    "time_start_sec": 217,
+    "time_end_sec": 380
+  },
+  {
+    "question": "What is the \"logopenic variant\" of PPA, and what specific difficulty does it cause in conversation?",
+    "answer": "The logopenic variant makes it difficult to hold onto the meaning of a sentence, especially long or complex ones. A person might struggle to repeat words or phrases exactly as they are heard and may lose track of the main point while speaking. They often try to finish their thoughts at the very end of a sentence, leaving the beginning unclear or incomplete.",
+    "timestamp": "7:19-8:35",
+    "time_start_sec": 439,
+    "time_end_sec": 515
+  },
+  {
+    "question": "What practical strategy should a caregiver use when talking to someone with the logopenic variant of PPA?",
+    "answer": "Keep sentences short and simple. Avoid long explanations or complex instructions. Instead of asking a question that requires a long answer, use direct actions or visual choices. For example, rather than asking \"What would you like for lunch?\", simply show two pictures of food options and ask them to point to the one they prefer.",
+    "timestamp": "8:53-9:53",
+    "time_start_sec": 533,
+    "time_end_sec": 593
+  },
+  {
+    "question": "What is the \"non-fluent variant\" of PPA, and how does it impact speech production?",
+    "answer": "The non-fluent variant affects grammar and sentence structure. A person may speak very slowly, omit small words like articles or prepositions, and struggle with verb tenses. They might say fragments like \"The dog in the table\" instead of full sentences like \"The dog was in the table.\" This makes it hard for others to understand the complete meaning of what they are trying to say.",
+    "timestamp": "10:07-11:23",
+    "time_start_sec": 607,
+    "time_end_sec": 683
+  },
+  {
+    "question": "Why might a person with the non-fluent variant of PPA struggle to find the right word even if they know what they want?",
+    "answer": "They may have trouble retrieving the specific label or name for an object or concept. Even if they understand the situation perfectly, they cannot access the word to describe it. This creates a gap between knowing what they need and being able to say it, leading to frustration and a feeling that they cannot communicate their wants effectively.",
+    "timestamp": "11:23-11:42",
+    "time_start_sec": 683,
+    "time_end_sec": 702
+  },
+  {
+    "question": "What tools can help a person with PPA communicate their needs without relying on verbal labels?",
+    "answer": "Visual aids and technology are very helpful. Picture cards, visual schedules, and apps with images can be used. Some apps allow a user to tap a picture of a coffee cup, and the app speaks the phrase \"I would like a cup of coffee.\" This gives the person a clear way to express their needs without having to struggle to find the correct words.",
+    "timestamp": "12:07-13:06",
+    "time_start_sec": 727,
+    "time_end_sec": 786
+  },
+  {
+    "question": "Is it true that people with PPA will eventually stop talking entirely?",
+    "answer": "No, they do not necessarily stop talking. While they may struggle to put sentences together or find the right words, they often continue to communicate. The challenge is usually organizing thoughts and finding vocabulary, not a total loss of the desire or ability to speak. Many people adapt by using gestures, pointing, or visual tools to keep interacting.",
+    "timestamp": "6:56-7:14",
+    "time_start_sec": 416,
+    "time_end_sec": 434
+  },
+  {
+    "question": "How does PPA differ from aphasia caused by a stroke?",
+    "answer": "Stroke-related aphasia often involves a sudden loss of language that can sometimes improve with therapy and time. PPA is a slow, gradual decline where language difficulties are the main symptom from the start. Unlike stroke recovery, people with PPA may not regain the lost language skills, so the focus shifts to finding new ways to communicate rather than trying to reverse the damage.",
+    "timestamp": "14:39-15:23",
+    "time_start_sec": 879,
+    "time_end_sec": 923
+  },
+  {
+    "question": "What emotional challenges might a person with PPA face, and how can caregivers respond?",
+    "answer": "People with PPA often experience high levels of anxiety and depression because the world feels complicated and confusing when they cannot express themselves easily. Caregivers can help by staying calm, using a gentle tone, and validating their feelings. It is important to reassure them that their feelings are normal given the difficulty they are facing.",
+    "timestamp": "16:22-16:34",
+    "time_start_sec": 982,
+    "time_end_sec": 994
+  },
+  {
+    "question": "What resources are available for families living with Primary Progressive Aphasia?",
+    "answer": "Families can find support through websites like the Aid FTD website and the Mayo Clinic, which offer information and blogs written by people living with the condition. There are also community groups and recording pages where individuals share their personal stories and experiences. Connecting with others who understand the journey can provide comfort and practical advice.",
+    "timestamp": "14:39-17:50",
+    "time_start_sec": 879,
+    "time_end_sec": 1070
+  }
+]

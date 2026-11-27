@@ -1,0 +1,331 @@
+{
+  "expected_pairs": 40,
+  "parsed_pairs": 40,
+  "transcript_end_sec": 3891.42,
+  "timestamp_lines": [
+    "Timestamp 1: 3:37-4:13",
+    "Timestamp 2: 3:37-4:13",
+    "Timestamp 3: 17:09-18:02",
+    "Timestamp 4: 19:28-20:04",
+    "Timestamp 5: 30:18-32:47",
+    "Timestamp 6: 33:14-34:48",
+    "Timestamp 7: 35:45-37:05",
+    "Timestamp 8: 38:12-38:31",
+    "Timestamp 9: 38:47-39:13",
+    "Timestamp 10: 40:10-40:55",
+    "Timestamp 11: 44:32-44:53",
+    "Timestamp 12: 46:13-46:41",
+    "Timestamp 13: 47:27-48:08",
+    "Timestamp 14: 48:48-49:24",
+    "Timestamp 15: 48:08-50:03",
+    "Timestamp 16: 49:56-50:09",
+    "Timestamp 17: 50:33-50:56",
+    "Timestamp 18: 51:02-51:15",
+    "Timestamp 19: 51:15-51:21",
+    "Timestamp 20: 57:40-59:48",
+    "Timestamp 21: 61:00-61:07",
+    "Timestamp 22: 61:15-61:25",
+    "Timestamp 23: 43:46-43:51",
+    "Timestamp 24: 63:45-64:13",
+    "Timestamp 25: 64:16-64:28",
+    "Timestamp 26: 22:14-22:38",
+    "Timestamp 27: 24:20-24:44",
+    "Timestamp 28: 18:44-19:21",
+    "Timestamp 29: 19:35-20:37",
+    "Timestamp 30: 18:02-18:10",
+    "Timestamp 31: 48:08-48:22",
+    "Timestamp 32: 54:13-55:13",
+    "Timestamp 33: 48:38-49:03",
+    "Timestamp 34: 50:03-50:09",
+    "Timestamp 35: 50:33-50:45",
+    "Timestamp 36: 50:56-51:02",
+    "Timestamp 37: 57:07-57:32",
+    "Timestamp 38: 61:37-62:06",
+    "Timestamp 39: 38:47-39:13",
+    "Timestamp 40: 64:35-64:49"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main theme of the upcoming conference in November?",
+      "answer": "The theme is \"All Gems Can Shine.\" It focuses on how everyone, including individuals living with dementia and their caregivers, are unique gemstones. The goal is to help caregivers return to an \"optimal gem state\"—a calm and clear mental condition—between content sessions to handle the heavy information load effectively.",
+      "timestamp": "3:37-4:13",
+      "time_start_sec": 217,
+      "time_end_sec": 253
+    },
+    {
+      "question": "How can caregivers prepare themselves for the intense information sessions at the conference?",
+      "answer": "Caregivers should treat the time between sessions as a chance to \"restore\" themselves. The conference offers specific self-care breaks, such as salsa dancing, yoga, deep breathing exercises, and healing sound sessions, designed to help caregivers recharge before the next part of the program.",
+      "timestamp": "3:37-4:13",
+      "time_start_sec": 217,
+      "time_end_sec": 253
+    },
+    {
+      "question": "What is the primary purpose of the \"Best Practices and Dementia Care\" group led by Cheryl and Paula?",
+      "answer": "Unlike standard networking groups, this is a working group where professionals gather monthly to share best practices, discuss specific problems, and problem-solve together. The goal is to support each other without sharing company secrets, creating a safe space to tackle challenges collectively.",
+      "timestamp": "17:09-18:02",
+      "time_start_sec": 1029,
+      "time_end_sec": 1082
+    },
+    {
+      "question": "Who is eligible to attend Cheryl and Paula's Best Practices group?",
+      "answer": "The group is open to professionals from all disciplines, not just nurses or activity therapists. Attendees include chaplains, real estate agents who work with seniors, and anyone interested in dementia care who has stories or challenges to share with the community.",
+      "timestamp": "19:28-20:04",
+      "time_start_sec": 1168,
+      "time_end_sec": 1204
+    },
+    {
+      "question": "How has the group adapted its meetings during the pandemic?",
+      "answer": "While the group meets in person, they also share Zoom links with families and professionals who cannot attend physically. This allows isolated individuals to participate in breakout sessions, such as music presentations, ensuring everyone stays connected and supported despite distance or health restrictions.",
+      "timestamp": "30:18-32:47",
+      "time_start_sec": 1818,
+      "time_end_sec": 1967
+    },
+    {
+      "question": "What is \"Caregiver Pampering Day,\" and when is it held?",
+      "answer": "It is an annual event held on the last Saturday of February (though canceled this year due to COVID) specifically for families caring for loved ones at home. It features free breakfast, lunch, snacks, massages, and aromatherapy classes, organized entirely by professionals from the Best Practices group.",
+      "timestamp": "33:14-34:48",
+      "time_start_sec": 1994,
+      "time_end_sec": 2088
+    },
+    {
+      "question": "What advice do Cheryl and Paula give to someone wanting to start a similar support group?",
+      "answer": "The most difficult part is finding a consistent time and space where everyone can meet. Using tools like Zoom helps greatly by removing travel time. They suggest getting press releases or flyers out to local professional networks and relying on a dedicated leader to maintain the group's momentum.",
+      "timestamp": "35:45-37:05",
+      "time_start_sec": 2145,
+      "time_end_sec": 2225
+    },
+    {
+      "question": "What is the website for the Daybreak Adult Day Program?",
+      "answer": "The website is daybreakadpadultdayprogram.com. Visitors can view the team, board, and services, check the calendar for events, and apply to volunteer or donate.",
+      "timestamp": "38:12-38:31",
+      "time_start_sec": 2292,
+      "time_end_sec": 2311
+    },
+    {
+      "question": "What is the name and phone number for Carolyn Lukert's consulting service?",
+      "answer": "The consulting service is called \"Never Alone Consulting.\" The toll-free number is 1-844-933-1456.",
+      "timestamp": "38:47-39:13",
+      "time_start_sec": 2327,
+      "time_end_sec": 2353
+    },
+    {
+      "question": "What is the website for Gentle Shepherd Dementia Training and Consulting?",
+      "answer": "The website is gsfordementia.com. They recently secured a contract with a nursing home to provide required dementia training, and they offer flyers to professionals upon request.",
+      "timestamp": "40:10-40:55",
+      "time_start_sec": 2410,
+      "time_end_sec": 2455
+    },
+    {
+      "question": "What is the \"Care Partner Support Series\"?",
+      "answer": "It is an online series held monthly (except in December) for family care partners. It uses video clips and guided discussions to help families navigate the emotional and practical challenges of caring for a loved one with dementia.",
+      "timestamp": "44:32-44:53",
+      "time_start_sec": 2672,
+      "time_end_sec": 2693
+    },
+    {
+      "question": "What is the purpose of the \"Advanced Consultant\" certification?",
+      "answer": "This certification is for trainers who already hold both a Trainer and Consultant certification. It allows them to run their own \"Care Partner Support Series\" for their own audiences or clients, enabling them to lead support groups independently.",
+      "timestamp": "46:13-46:41",
+      "time_start_sec": 2773,
+      "time_end_sec": 2801
+    },
+    {
+      "question": "What is the \"AELC\" method demonstrated in the video?",
+      "answer": "AELC stands for Ask, Evaluate, Listen, and Clarify. It is a communication technique used to gently interrupt difficult moments, validate feelings, and ask specific questions to help the person with dementia find positive aspects of their life rather than focusing solely on losses.",
+      "timestamp": "47:27-48:08",
+      "time_start_sec": 2847,
+      "time_end_sec": 2888
+    },
+    {
+      "question": "Why is asking \"What do you still like about them?\" considered a powerful intervention?",
+      "answer": "When a caregiver asks this, they force a pause in negative thinking. It shifts the focus from what is lost (like a laugh or memory) to what remains, helping the caregiver find hope and recognize that the loved one still possesses value and connection.",
+      "timestamp": "48:48-49:24",
+      "time_start_sec": 2928,
+      "time_end_sec": 2964
+    },
+    {
+      "question": "What are the \"Yellow Flag\" signs that indicate a situation needs immediate attention?",
+      "answer": "Yellow flags include long pauses where the person looks down or away, saying \"What is there to like?\" or admitting they have lost their entire support system. These signals indicate the person is struggling deeply and needs a \"time out\" to prevent further distress.",
+      "timestamp": "48:08-50:03",
+      "time_start_sec": 2888,
+      "time_end_sec": 3003
+    },
+    {
+      "question": "When should a caregiver say \"When\" regarding the environment?",
+      "answer": "A caregiver should say \"When\" when the person's needs exceed the current environmental support. This acknowledges that the problem isn't the person's behavior but the lack of safety or appropriate conditions in their surroundings.",
+      "timestamp": "49:56-50:09",
+      "time_start_sec": 2996,
+      "time_end_sec": 3009
+    },
+    {
+      "question": "What happens when a person with dementia feels they are no longer in charge?",
+      "answer": "The person with dementia naturally wants to be the boss and leader. If a caregiver tries to control them constantly, the person may feel threatened and act out. They need a setting where they feel respected as the leader rather than being managed.",
+      "timestamp": "50:33-50:56",
+      "time_start_sec": 3033,
+      "time_end_sec": 3056
+    },
+    {
+      "question": "What are the signs that a caregiver is burning out?",
+      "answer": "Burnout occurs when a caregiver tries to do too much for too long with too little support. Signs include deteriorating emotional and physical health, feeling exhausted, and realizing there are no other people available to help.",
+      "timestamp": "51:02-51:15",
+      "time_start_sec": 3062,
+      "time_end_sec": 3075
+    },
+    {
+      "question": "What is the recommended action when a caregiver feels overwhelmed?",
+      "answer": "Caregivers should take a respite, pause, or have a \"time out\" to recharge. Continuing without a break leads to exhaustion, so stepping away temporarily is necessary to regain the strength to help.",
+      "timestamp": "51:15-51:21",
+      "time_start_sec": 3075,
+      "time_end_sec": 3081
+    },
+    {
+      "question": "How did Carrie's family use the Care Partner Support Series?",
+      "answer": "Carrie's family attended the series together. It helped them realize that their own agendas were interfering with their loved one's engagement. They learned to let go of controlling details and allowed their aunt to be herself, which reduced stress and improved interactions.",
+      "timestamp": "57:40-59:48",
+      "time_start_sec": 3460,
+      "time_end_sec": 3588
+    },
+    {
+      "question": "What is the schedule for the upcoming Care Partner Support Series?",
+      "answer": "The next series starts on Monday, August 2nd. There are still openings available for families who want to join the monthly sessions.",
+      "timestamp": "61:00-61:07",
+      "time_start_sec": 3660,
+      "time_end_sec": 3667
+    },
+    {
+      "question": "When is the next Advanced Consultant course scheduled?",
+      "answer": "The next Advanced Consultant course is scheduled for October, specifically around October 12th. This is for those interested in running their own support series.",
+      "timestamp": "61:15-61:25",
+      "time_start_sec": 3675,
+      "time_end_sec": 3685
+    },
+    {
+      "question": "What is the \"Gem State\" concept mentioned by Carolyn?",
+      "answer": "A Gem State refers to a calm, centered, and clear mental condition. Carolyn mentions her pet Sapphire helps keep her in a \"Sapphire\" state (calm) when she is pushed to the edge, emphasizing the importance of self-regulation.",
+      "timestamp": "43:46-43:51",
+      "time_start_sec": 2626,
+      "time_end_sec": 2631
+    },
+    {
+      "question": "What is the significance of the \"First and Third\" schedule change?",
+      "answer": "Starting next week (August), the show will air on the first and third Tuesdays instead of weekly. This marks a new schedule for the program.",
+      "timestamp": "63:45-64:13",
+      "time_start_sec": 3825,
+      "time_end_sec": 3853
+    },
+    {
+      "question": "What is the celebration happening next week?",
+      "answer": "Next week marks the one-year anniversary of the \"Straight Up Positive\" show. They plan to do something special to celebrate this milestone with their audience.",
+      "timestamp": "64:16-64:28",
+      "time_start_sec": 3856,
+      "time_end_sec": 3868
+    },
+    {
+      "question": "What is the role of the \"Core Team\" members like Joanna and Lynn Moore?",
+      "answer": "Core Team members are individuals living with dementia who are invited onto shows and courses to share their unique perspectives. They provide vital insights on how they prefer to be cared for, ensuring the community hears directly from the people affected.",
+      "timestamp": "22:14-22:38",
+      "time_start_sec": 1334,
+      "time_end_sec": 1358
+    },
+    {
+      "question": "How does the Best Practices group help with Colorado Springs' designation?",
+      "answer": "The group played a key role in helping Colorado Springs become an official \"Dementia Friendly Community\" by working with Dementia Friendly America. They used their collective expertise to advocate for and implement necessary changes.",
+      "timestamp": "24:20-24:44",
+      "time_start_sec": 1460,
+      "time_end_sec": 1484
+    },
+    {
+      "question": "What is the difference between a networking group and the Best Practices group?",
+      "answer": "Networking groups focus on making connections and socializing. The Best Practices group focuses on substantive information sharing, problem-solving, and discussing how to best serve people with brain changes, prioritizing professional growth over socializing.",
+      "timestamp": "18:44-19:21",
+      "time_start_sec": 1124,
+      "time_end_sec": 1161
+    },
+    {
+      "question": "Why is it important to have a diverse group of professionals in the Best Practices group?",
+      "answer": "Diversity ensures that various perspectives are shared. By including chaplains, real estate agents, and different facility types, the group covers a broader range of challenges and solutions, allowing for more comprehensive support for the community.",
+      "timestamp": "19:35-20:37",
+      "time_start_sec": 1175,
+      "time_end_sec": 1237
+    },
+    {
+      "question": "How does the group handle the issue of confidentiality?",
+      "answer": "The group operates on a strict rule where nobody shares company secrets. This creates a safe environment where professionals can be honest about their struggles and failures without fear of damaging their employment or reputation.",
+      "timestamp": "18:02-18:10",
+      "time_start_sec": 1082,
+      "time_end_sec": 1090
+    },
+    {
+      "question": "What is the \"Yellow Flag\" response in the AELC technique?",
+      "answer": "The \"Yellow Flag\" response is a warning sign where the person with dementia stops engaging, looks away, and expresses that there is nothing left to like. It indicates deep sadness or loss and requires immediate compassionate intervention.",
+      "timestamp": "48:08-48:22",
+      "time_start_sec": 2888,
+      "time_end_sec": 2902
+    },
+    {
+      "question": "How does the AELC technique help shift a caregiver's perspective?",
+      "answer": "By asking specific questions like \"What do you still like?\", the technique helps the caregiver see \"through the trees\" to the \"forest.\" It moves them from a mindset of fighting against the disease to finding hope and connection in what remains.",
+      "timestamp": "54:13-55:13",
+      "time_start_sec": 3253,
+      "time_end_sec": 3313
+    },
+    {
+      "question": "What is the \"Time Out\" strategy in the AELC technique?",
+      "answer": "A \"Time Out\" is a deliberate pause taken by the caregiver when the person with dementia is struggling or the situation is too intense. It allows both parties to breathe, reset emotions, and approach the conversation more calmly.",
+      "timestamp": "48:38-49:03",
+      "time_start_sec": 2918,
+      "time_end_sec": 2943
+    },
+    {
+      "question": "What is the \"When\" strategy regarding environmental support?",
+      "answer": "Saying \"When\" acknowledges that the person's needs are currently higher than the environment can safely support. It validates the difficulty of the situation without blaming the person for their behavior.",
+      "timestamp": "50:03-50:09",
+      "time_start_sec": 3003,
+      "time_end_sec": 3009
+    },
+    {
+      "question": "Why is it important for the person with dementia to remain the \"boss\"?",
+      "answer": "The person with dementia has always been the leader in their life. Losing that sense of control causes significant distress. Respecting their autonomy and letting them lead reduces conflict and anxiety.",
+      "timestamp": "50:33-50:45",
+      "time_start_sec": 3033,
+      "time_end_sec": 3045
+    },
+    {
+      "question": "What is the impact of caregiver burnout on the person with dementia?",
+      "answer": "When a caregiver is exhausted and lacks support, they cannot provide the necessary safety and structure. This leaves the person with dementia vulnerable and unable to feel secure in their environment.",
+      "timestamp": "50:56-51:02",
+      "time_start_sec": 3056,
+      "time_end_sec": 3062
+    },
+    {
+      "question": "How does the Care Partner Support Series facilitate long-term change?",
+      "answer": "The series uses a round-robin format where participants commit to a small action for the next week and report back the following week. This creates accountability and helps families track their progress over time.",
+      "timestamp": "57:07-57:32",
+      "time_start_sec": 3427,
+      "time_end_sec": 3452
+    },
+    {
+      "question": "What is the bonus included with the Advanced Consultant certification?",
+      "answer": "Participants who complete the Advanced Consultant certification receive access to a second family series focused on \"gems.\" This provides additional resources for running family support programs.",
+      "timestamp": "61:37-62:06",
+      "time_start_sec": 3697,
+      "time_end_sec": 3726
+    },
+    {
+      "question": "What is the primary goal of the \"Never Alone Consulting\" service?",
+      "answer": "The service aims to provide consulting support to families and professionals, helping them navigate the complexities of dementia care with guidance and expertise.",
+      "timestamp": "38:47-39:13",
+      "time_start_sec": 2327,
+      "time_end_sec": 2353
+    },
+    {
+      "question": "What is the ultimate message of the video regarding the \"shine\" of the community?",
+      "answer": "The message is that every individual and caregiver has a unique \"shine\" or value. By supporting each other, sharing best practices, and caring for one another, the entire community can reflect light and help everyone thrive.",
+      "timestamp": "64:35-64:49",
+      "time_start_sec": 3875,
+      "time_end_sec": 3889
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/27/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,83 @@
+{
+  "expected_pairs": 9,
+  "parsed_pairs": 9,
+  "transcript_end_sec": 717.32,
+  "timestamp_lines": [
+    "Timestamp 1: 1:53-2:12",
+    "Timestamp 2: 2:33-2:50",
+    "Timestamp 3: 5:41-6:04",
+    "Timestamp 4: 5:41-6:04",
+    "Timestamp 5: 9:44-9:54",
+    "Timestamp 6: 11:04-11:14",
+    "Timestamp 7: 4:22-4:40",
+    "Timestamp 8: 0:51-0:59",
+    "Timestamp 9: 8:10-8:21"
+  ],
+  "pairs": [
+    {
+      "question": "What is the specific name of the false statement a person with dementia might make when they insist on leaving, and what is the recommended way to respond?",
+      "answer": "The specific term for this false statement is an \"AO\" (an assertion that is not true). Instead of arguing or correcting them directly, which can make them more upset, the recommended response is to gently agree with the false belief. For example, if they say, \"I want to go home,\" you should reply, \"Yes, I will take you home in a little bit.\" This validates their feelings without confirming that the situation is actually impossible right now.",
+      "timestamp": "1:53-2:12",
+      "time_start_sec": 113,
+      "time_end_sec": 132
+    },
+    {
+      "question": "Why is it helpful to ask a person with dementia to tell a \"big whopper lie\" during a role-playing exercise?",
+      "answer": "Asking someone to tell a big lie helps them realize that they are capable of creating reasons or stories to stay in the current place. It shifts the focus from the frustration of wanting to leave to finding a constructive reason to remain. By practicing making up a believable excuse, they learn that staying is a choice they can make, which reduces conflict and builds a sense of control.",
+      "timestamp": "2:33-2:50",
+      "time_start_sec": 153,
+      "time_end_sec": 170
+    },
+    {
+      "question": "How can a caregiver explain to a person with dementia why they are currently at a facility, using a comparison to everyday life?",
+      "answer": "You can compare the situation to your own feelings on a long day at work. Even though you might prefer to be home, you often stay at work because it provides a sense of value, purpose, and the satisfaction of making a difference. Similarly, being at the facility offers the person with dementia a chance to be helpful and feel needed, which is a valid reason to stay even if they miss home.",
+      "timestamp": "5:41-6:04",
+      "time_start_sec": 341,
+      "time_end_sec": 364
+    },
+    {
+      "question": "What is the \"lids off\" technique, and how does it help caregivers understand their own reactions?",
+      "answer": "The \"lids off\" technique means taking off the mental \"lid\" that keeps your true feelings hidden. When you are tired or stressed, you might tell yourself you are happy to be there, but the \"lids off\" approach encourages you to admit you would rather be home. Recognizing this hidden truth helps you feel less guilty and allows you to address your own needs while still respecting the person with dementia's desire to be home.",
+      "timestamp": "5:41-6:04",
+      "time_start_sec": 341,
+      "time_end_sec": 364
+    },
+    {
+      "question": "Why is it important for a caregiver to acknowledge that they might not know the exact right words to say?",
+      "answer": "It is important because communication breakdowns are a normal part of caring for someone with dementia, not a sign of failure. When a caregiver realizes that they simply do not know the perfect phrase to use, they can stop beating themselves up. Accepting that this is a common human experience reduces stress and allows the caregiver to focus on showing love and understanding rather than worrying about perfection.",
+      "timestamp": "9:44-9:54",
+      "time_start_sec": 584,
+      "time_end_sec": 594
+    },
+    {
+      "question": "What is the difference between being a \"caregiver\" and becoming a \"care partner\"?",
+      "answer": "A caregiver focuses on managing tasks or trying to get the person to do something specific, which can lead to arguments. A care partner, however, recognizes that the person's brain is changing and chooses to meet them where they are. Instead of demanding compliance, a care partner tries to connect on the person's level, offering support and companionship rather than instructions.",
+      "timestamp": "11:04-11:14",
+      "time_start_sec": 664,
+      "time_end_sec": 674
+    },
+    {
+      "question": "How can a caregiver effectively handle a situation where a person with dementia refuses to eat or drink?",
+      "answer": "Instead of forcing food or arguing about the refusal, the caregiver can offer a small, appealing treat like cookies or peanut butter crackers. This approach bypasses the resistance to a full meal and provides a positive interaction. Once the person accepts the small snack, it often opens the door for further conversation and cooperation, turning a difficult moment into a shared activity.",
+      "timestamp": "4:22-4:40",
+      "time_start_sec": 262,
+      "time_end_sec": 280
+    },
+    {
+      "question": "What is the primary goal of the training methods described by the speaker?",
+      "answer": "The primary goal is to help caregivers build new skills and gain greater awareness so they can make a positive difference in the lives of people with brain changes. The training moves beyond just knowing facts; it focuses on understanding the \"why\" behind behaviors and learning practical strategies to manage daily challenges with confidence and compassion.",
+      "timestamp": "0:51-0:59",
+      "time_start_sec": 51,
+      "time_end_sec": 59
+    },
+    {
+      "question": "Why does the speaker emphasize that training should be fun and entertaining?",
+      "answer": "The speaker emphasizes fun because many caregivers arrive at training sessions feeling overwhelmed, raw, or exhausted from trying to cope alone. Making the experience enjoyable helps them relax and engage fully with the material. This positive atmosphere ensures they leave feeling energized and hopeful, rather than depressed or believing there is nothing more they can do.",
+      "timestamp": "8:10-8:21",
+      "time_start_sec": 490,
+      "time_end_sec": 501
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/6/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

@@ -1,0 +1,115 @@
+{
+  "expected_pairs": 13,
+  "parsed_pairs": 13,
+  "transcript_end_sec": 1208.48,
+  "timestamp_lines": [
+    "Timestamp 1: 1:00-1:25",
+    "Timestamp 2: 2:27-2:52",
+    "Timestamp 3: 2:52-3:36",
+    "Timestamp 4: 3:36-4:09",
+    "Timestamp 5: 4:09-4:57",
+    "Timestamp 6: 6:28-7:32",
+    "Timestamp 7: 15:13-15:31",
+    "Timestamp 8: 16:39-16:51",
+    "Timestamp 9: 5:17-6:12",
+    "Timestamp 10: 14:01-14:41",
+    "Timestamp 11: 17:47-18:43",
+    "Timestamp 12: 9:47-10:33",
+    "Timestamp 13: 17:24-19:12"
+  ],
+  "pairs": [
+    {
+      "question": "What is the main rule of thumb for understanding how language changes in dementia, and what does it mean for communication?",
+      "answer": "The main rule is \"language on the left, rhythm on the right.\" In dementia, the ability to process formal language (like finding words and understanding meaning) is mostly affected because it lives in the left part of the brain. However, rhythm, automatic phrases, and the ability to take turns talking are often preserved because they live in the right part of the brain. This means a person might struggle to find the right word to say, but their speech will still have a natural beat and flow.",
+      "timestamp": "1:00-1:25",
+      "time_start_sec": 60,
+      "time_end_sec": 85
+    },
+    {
+      "question": "Why do people with dementia sometimes use swear words or hurtful phrases, and what should a caregiver notice?",
+      "answer": "Swear words and hurtful phrases are stored in a specific part of the right brain and are usually kept for emergencies or times of extreme distress. When a person uses them, it is often a signal that they are feeling overwhelmed, scared, or in pain. It is not necessarily a sign of anger or malice, but rather a reaction to a difficult situation.",
+      "timestamp": "2:27-2:52",
+      "time_start_sec": 147,
+      "time_end_sec": 172
+    },
+    {
+      "question": "What are \"automatic\" phrases, and why might a person with dementia still say them even if they do not understand them?",
+      "answer": "Automatic phrases are simple, common greetings or comments like \"How are you?\" or \"That's interesting.\" These are stored separately from deep vocabulary and meaning. A person might say these words without thinking about them or understanding the full context because they are automatic habits. Humans naturally want to connect, so these small phrases often stay intact to help them feel socially linked to others.",
+      "timestamp": "2:52-3:36",
+      "time_start_sec": 172,
+      "time_end_sec": 216
+    },
+    {
+      "question": "How does the \"back and forth\" nature of conversation change when a person with dementia gets upset?",
+      "answer": "Normally, conversation is a gentle game of passing the floor back and forth between two people. When a person with dementia is distressed, this smooth rhythm can turn into an argument where they push back against each other. Instead of connecting, they might drive each other apart by insisting they are right while the other person says they are wrong.",
+      "timestamp": "3:36-4:09",
+      "time_start_sec": 216,
+      "time_end_sec": 249
+    },
+    {
+      "question": "Even if a person cannot speak clearly, what other signs of rhythm can a caregiver look for?",
+      "answer": "Even if a person loses the ability to form clear sentences, they often keep a strong sense of rhythm. You might hear a steady beat in their speech, or you might notice changes in their voice pitch, loudness, and speed when they are happy versus when they are sad or angry. Their emotional state changes the rhythm of their voice just like it does for anyone else.",
+      "timestamp": "4:09-4:57",
+      "time_start_sec": 249,
+      "time_end_sec": 297
+    },
+    {
+      "question": "What are three specific activities that rely on rhythm and might still work well for a person with dementia?",
+      "answer": "Three activities that rely on rhythm and are often preserved include music, poetry, and prayer. Music provides a strong beat, poetry uses rhythm from the mouth, and prayer often follows a learned pattern and call-and-response structure. These activities can help a person express feelings and connect with others even when their formal language skills have faded.",
+      "timestamp": "6:28-7:32",
+      "time_start_sec": 388,
+      "time_end_sec": 452
+    },
+    {
+      "question": "How can a caregiver help a person with dementia who is stuck repeating the same words or sentences?",
+      "answer": "Repetition often happens because the person is having trouble with \"executive control,\" which is the brain's ability to start, stop, and move on from tasks. They might get stuck because they cannot let a thought go or finish a sentence. A helpful strategy is to gently acknowledge their feeling, validate it, and then suggest a break or a new activity to help them transition.",
+      "timestamp": "15:13-15:31",
+      "time_start_sec": 913,
+      "time_end_sec": 931
+    },
+    {
+      "question": "Why might a person with dementia ask the exact same question multiple times, and what does this indicate about their memory?",
+      "answer": "This behavior is often caused by problems in the hippocampus, a part of the brain involved in learning and remembering new information. The person might genuinely forget how many times they asked the question or how long ago they asked it. They are not being difficult; they simply cannot hold onto the earlier parts of the conversation to remember they already answered it.",
+      "timestamp": "16:39-16:51",
+      "time_start_sec": 999,
+      "time_end_sec": 1011
+    },
+    {
+      "question": "What is the difference between a person who cannot find a word and a person who speaks fluent but nonsensical sentences?",
+      "answer": "A person who cannot find a word often hesitates, pauses, and knows exactly what they want to say but cannot retrieve the specific word. On the other hand, a person speaking fluent but nonsensical sentences keeps a good rhythm and flow but puts words together in a way that makes no sense. They might say a string of words that sounds nice but do not match the reality of the situation.",
+      "timestamp": "5:17-6:12",
+      "time_start_sec": 317,
+      "time_end_sec": 372
+    },
+    {
+      "question": "What role does the prefrontal cortex play in language, and what happens when it is affected?",
+      "answer": "The prefrontal cortex acts as the brain's executive control center, helping people manage impulses, make logical choices, and understand the value of their words. When this area is affected, a person might say things they regret, struggle to choose between options, or lose the ability to be polite or reasonable. They may also have trouble knowing when to stop talking or switch topics.",
+      "timestamp": "14:01-14:41",
+      "time_start_sec": 841,
+      "time_end_sec": 881
+    },
+    {
+      "question": "How can a caregiver support a person with dementia who is struggling with language during a difficult moment?",
+      "answer": "When a person is struggling with language, it is a very hard and painful experience for them. Instead of pushing them to fix it immediately, a caregiver can offer support by suggesting a break or trying a different approach. Recognizing that the struggle is real and valid helps reduce frustration and creates a safer space for the person to recover.",
+      "timestamp": "17:47-18:43",
+      "time_start_sec": 1067,
+      "time_end_sec": 1123
+    },
+    {
+      "question": "What does the comparison of brain scans reveal about hearing ability in dementia?",
+      "answer": "Brain scans show that the ability to physically hear sounds is rarely damaged by dementia. The problem lies in the areas below the hearing center, which handle understanding and processing language. This means a person with dementia can still hear you clearly, but their brain has trouble making sense of what they hear.",
+      "timestamp": "9:47-10:33",
+      "time_start_sec": 587,
+      "time_end_sec": 633
+    },
+    {
+      "question": "What is the overall message for caregivers regarding the changes in a loved one's language abilities?",
+      "answer": "The message is to focus on awareness rather than just loss. While formal language skills may decline, many rhythm-based abilities like music, turn-taking, and automatic phrases remain. By noticing what is still available and adapting communication to use those strengths, caregivers can help unlock moments of connection and understanding that might otherwise be missed.",
+      "timestamp": "17:24-19:12",
+      "time_start_sec": 1044,
+      "time_end_sec": 1152
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/ODJ/20/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

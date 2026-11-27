@@ -1,0 +1,91 @@
+{
+  "expected_pairs": 10,
+  "parsed_pairs": 10,
+  "transcript_end_sec": 917.68,
+  "timestamp_lines": [
+    "Timestamp 1: 0:27-4:16",
+    "Timestamp 2: 5:30-9:09",
+    "Timestamp 3: 7:59-8:30",
+    "Timestamp 4: 10:46-14:35",
+    "Timestamp 5: 1:31-2:00",
+    "Timestamp 6: 2:00-4:16",
+    "Timestamp 7: 0:27-0:57",
+    "Timestamp 8: 10:52-11:44",
+    "Timestamp 9: 4:37-4:50",
+    "Timestamp 10: 9:20-9:40"
+  ],
+  "pairs": [
+    {
+      "question": "What are the four main types of activities that make a day meaningful for someone with dementia?",
+      "answer": "The four types are: 1) Feeling productive and valued by doing work, even if it's just helping others; 2) Leisure or fun play that brings joy, whether you are watching something or actively playing; 3) Self-care, which includes physical tasks like bathing and walking, mental stimulation like learning new things, and managing daily chores; and 4) Rest and restoration, which means recharging your energy through sleep, solitude, socializing, or spiritual peace. A meaningful day needs a balance of all four.",
+      "timestamp": "0:27-4:16",
+      "time_start_sec": 27,
+      "time_end_sec": 256
+    },
+    {
+      "question": "Why is it helpful to organize a group cooking activity for people with dementia?",
+      "answer": "Group cooking helps because seeing others do similar tasks gives people confidence and a sense of purpose. For example, if someone loves cooking more than eating, letting them prepare food for the group encourages them to participate and enjoy the meal afterward. It also allows everyone to use their hands and eyes to finish a shared task, which feels productive and valuable.",
+      "timestamp": "5:30-9:09",
+      "time_start_sec": 330,
+      "time_end_sec": 549
+    },
+    {
+      "question": "How can a caregiver encourage someone with dementia to eat if they seem uninterested in the food?",
+      "answer": "You can ask the person what their favorite part of the meal is—whether it is the cooking process or the eating itself. If they care more about making the food, involve them in the preparation. By letting them cook and praising their effort, they often become more willing to eat the food they helped create.",
+      "timestamp": "7:59-8:30",
+      "time_start_sec": 479,
+      "time_end_sec": 510
+    },
+    {
+      "question": "What is a good way to help someone with dementia solve a jigsaw puzzle when they get stuck?",
+      "answer": "Instead of taking the piece away, offer gentle hints. You can tap the table to suggest a location, hold the puzzle steady to reduce anxiety, or give a small clue like \"try turning it.\" Let the person try to fit the piece themselves. This keeps them feeling smart and capable while providing just enough support to succeed.",
+      "timestamp": "10:46-14:35",
+      "time_start_sec": 646,
+      "time_end_sec": 875
+    },
+    {
+      "question": "Why is it important to let the person with dementia choose between passive and active leisure activities?",
+      "answer": "Everyone enjoys a mix of both. Passive activities, like watching a movie or listening to music, happen to you and you absorb the joy. Active activities, like playing cards or dancing, require you to do something to feel good. Offering a choice ensures the person feels respected and allows them to find joy in whatever style matches their personality.",
+      "timestamp": "1:31-2:00",
+      "time_start_sec": 91,
+      "time_end_sec": 120
+    },
+    {
+      "question": "What does \"self-care\" include beyond just sleeping or resting?",
+      "answer": "Self-care covers many areas. Physically, it includes getting around, bathing, exercising, and grooming. Mentally, it involves thinking, learning interesting things, and stimulating the brain. Environmentally, it means keeping the home tidy, managing money, and organizing belongings. Finally, emotional self-care includes spiritual rest and finding ways to recharge your batteries, whether by being alone or with others.",
+      "timestamp": "2:00-4:16",
+      "time_start_sec": 120,
+      "time_end_sec": 256
+    },
+    {
+      "question": "How can a caregiver help a person with dementia feel productive during a daily routine?",
+      "answer": "Give them tasks where they can see their contribution. Whether they are paid for it or simply receive a \"thank you,\" knowing they make a difference boosts their sense of worth. It helps them feel like a human being who is needed and cared for, which is very important for their well-being.",
+      "timestamp": "0:27-0:57",
+      "time_start_sec": 27,
+      "time_end_sec": 57
+    },
+    {
+      "question": "What is a practical strategy for handling a situation where a person with dementia drops a puzzle piece?",
+      "answer": "Create a system where the person knows exactly where their pieces belong. For example, take photos of the completed puzzle, print them on cardstock, and cut them out. If a piece is lost, the person can compare the photo to their pieces to find the missing one. This gives them a clear reason to check for mistakes and feel in control.",
+      "timestamp": "10:52-11:44",
+      "time_start_sec": 652,
+      "time_end_sec": 704
+    },
+    {
+      "question": "Why is it important to match the level of self-care activities to the person's current abilities?",
+      "answer": "Trying to do things that are too difficult can cause frustration, while doing things that are too easy might not provide enough satisfaction. The goal is to support the person so they can do the best they can with their current skills. This ensures they feel capable and successful rather than overwhelmed or bored.",
+      "timestamp": "4:37-4:50",
+      "time_start_sec": 277,
+      "time_end_sec": 290
+    },
+    {
+      "question": "How does the way a caregiver feeds a person with dementia affect their willingness to eat?",
+      "answer": "Feeding the person gently by letting them bring their own hand to their mouth is much better than poking food into their mouth with a spoon. When they control the action, they feel more in charge and less confused. This approach reduces resistance and makes eating feel like a natural, enjoyable part of the day.",
+      "timestamp": "9:20-9:40",
+      "time_start_sec": 560,
+      "time_end_sec": 580
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/3/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

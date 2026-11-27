@@ -1,0 +1,315 @@
+{
+  "expected_pairs": 38,
+  "parsed_pairs": 38,
+  "transcript_end_sec": 3346.16,
+  "timestamp_lines": [
+    "Timestamp 1: 7:41-8:13",
+    "Timestamp 2: 12:46-13:22",
+    "Timestamp 3: 13:28-15:21",
+    "Timestamp 4: 18:37-19:22",
+    "Timestamp 5: 26:20-27:01",
+    "Timestamp 6: 24:20-25:38",
+    "Timestamp 7: 10:17-11:18",
+    "Timestamp 8: 11:30-12:45",
+    "Timestamp 9: 45:15-46:32",
+    "Timestamp 10: 48:06-51:15",
+    "Timestamp 11: 50:28-50:50",
+    "Timestamp 12: 48:38-49:12",
+    "Timestamp 13: 41:55-43:32",
+    "Timestamp 14: 38:35-39:08",
+    "Timestamp 15: 54:07-54:39",
+    "Timestamp 16: 8:14-8:34",
+    "Timestamp 17: 6:38-6:48",
+    "Timestamp 18: 10:17-10:36",
+    "Timestamp 19: 1:46-2:16",
+    "Timestamp 20: 19:27-19:58",
+    "Timestamp 21: 15:26-15:34",
+    "Timestamp 22: 52:08-52:22",
+    "Timestamp 23: 16:44-17:24",
+    "Timestamp 24: 30:50-30:56",
+    "Timestamp 25: 33:30-33:40",
+    "Timestamp 26: 42:06-42:36",
+    "Timestamp 27: 44:08-44:22",
+    "Timestamp 28: 21:05-21:24",
+    "Timestamp 29: 26:27-26:54",
+    "Timestamp 30: 12:50-13:11",
+    "Timestamp 31: 44:43-45:10",
+    "Timestamp 32: 37:34-37:46",
+    "Timestamp 33: 16:44-17:24",
+    "Timestamp 34: 48:12-48:25",
+    "Timestamp 35: 45:35-45:55",
+    "Timestamp 36: 19:27-20:27",
+    "Timestamp 37: 32:34-33:55",
+    "Timestamp 38: 30:48-31:05"
+  ],
+  "pairs": [
+    {
+      "question": "What was the biggest mistake the caregiver made when trying to connect with her mother before getting certified?",
+      "answer": "The caregiver realized she was constantly busy with chores like cleaning and laundry, which made her mother feel ignored. Instead of sitting down to talk, she would say she would engage later, but then she would go back to her tasks. This happened because it felt easier to do the cleaning than to sit and have a conversation.",
+      "timestamp": "7:41-8:13",
+      "time_start_sec": 461,
+      "time_end_sec": 493
+    },
+    {
+      "question": "How did the caregiver change her approach to engagement after learning about \"can you help me\"?",
+      "answer": "She stopped trying to do things alone and started asking her mother, \"Can you help me with this?\" For example, she asked her mother to help her fix a ruined cushion. This approach appealed to her mother's sense of dignity and purpose, making her feel needed and willing to participate.",
+      "timestamp": "12:46-13:22",
+      "time_start_sec": 766,
+      "time_end_sec": 802
+    },
+    {
+      "question": "Why did bringing physical objects like bracelets work better than just talking during a window visit?",
+      "answer": "Talking alone felt like too much pressure. By bringing bracelets from different countries, the caregiver created a shared history and a specific focus for attention. They could touch the items, discuss textures, and remember happy travel memories, which made the interaction fun and less stressful than a standard conversation.",
+      "timestamp": "13:28-15:21",
+      "time_start_sec": 808,
+      "time_end_sec": 921
+    },
+    {
+      "question": "What specific technique did the caregiver use to teach her mother how to use a glue stick?",
+      "answer": "The caregiver used the \"hand-under-hand\" technique. She held her mother's hand and guided it to press the glue stick onto the paper, demonstrating the motion. She also gave simple, clear instructions like \"press it down\" and \"rub back and forth,\" which helped the mother feel capable again.",
+      "timestamp": "18:37-19:22",
+      "time_start_sec": 1117,
+      "time_end_sec": 1162
+    },
+    {
+      "question": "Why is it important for a caregiver to position themselves on the person's dominant side?",
+      "answer": "People are naturally more comfortable performing tasks with their dominant hand. By standing on that side, the caregiver can easily guide the person's hand and assist them with activities like gluing or writing, making the task feel more natural and less confusing.",
+      "timestamp": "26:20-27:01",
+      "time_start_sec": 1580,
+      "time_end_sec": 1621
+    },
+    {
+      "question": "How did the caregiver adapt when she realized she was working on her mother's non-dominant side?",
+      "answer": "When she noticed she was on the wrong side, she had an \"aha moment.\" Instead of stopping, she quickly adjusted her position to stand on her mother's dominant side. This small change allowed her to continue the activity smoothly and showed flexibility in caring for her mother's needs.",
+      "timestamp": "24:20-25:38",
+      "time_start_sec": 1460,
+      "time_end_sec": 1538
+    },
+    {
+      "question": "What was the most emotional impact of the COVID-19 lockdown on the caregiver and her mother?",
+      "answer": "Their social life came to a sudden and painful halt. Because the facility was locked down with strict rules, the caregiver could not even bring a chair to the window for a visit. This isolation felt heartbreaking and made the mother feel lonely, as her usual support system was completely removed.",
+      "timestamp": "10:17-11:18",
+      "time_start_sec": 617,
+      "time_end_sec": 678
+    },
+    {
+      "question": "How did the caregiver successfully engage her mother during a restricted window visit?",
+      "answer": "Even though they were separated by a table and masks, the caregiver brought a cushion her mother had made. She asked her mother to help her fix it. This turned a difficult restriction into a meaningful moment where her mother felt useful and engaged in a familiar task.",
+      "timestamp": "11:30-12:45",
+      "time_start_sec": 690,
+      "time_end_sec": 765
+    },
+    {
+      "question": "What was the result of the \"traveling signs\" project started by the advocacy group?",
+      "answer": "They created 300 large yellow signs with names of people who lost loved ones to isolation. These signs were moved from city to city across Texas, allowing families to take photos and the media to report on the issue. This raised awareness and helped other states adopt similar campaigns.",
+      "timestamp": "45:15-46:32",
+      "time_start_sec": 2715,
+      "time_end_sec": 2792
+    },
+    {
+      "question": "What does the acronym \"FASTING\" stand for in the advocacy group's planning strategy?",
+      "answer": "FASTING stands for Focus, Audience, Strategy, Target, Identity, and Goal. Using this checklist helps the group ensure every new project is fresh, targets the right people, and stays true to their main mission of improving long-term care visitation rights.",
+      "timestamp": "48:06-51:15",
+      "time_start_sec": 2886,
+      "time_end_sec": 3075
+    },
+    {
+      "question": "Why did the group decide to focus only on long-term care visitation instead of fighting for hospital visitation rights too?",
+      "answer": "They believed that if they tried to fight every possible battle at once, they would lose all of them. By keeping a \"laser focus\" on just one issue, they could achieve success and build momentum without spreading their energy too thin.",
+      "timestamp": "50:28-50:50",
+      "time_start_sec": 3028,
+      "time_end_sec": 3050
+    },
+    {
+      "question": "How did the group handle the audience for their different projects?",
+      "answer": "They tailored their messages for each specific audience. For example, they used one language to recruit other caregivers to join their group, but used a different, more formal language when writing letters to state legislators. Knowing who they were talking to was key to their success.",
+      "timestamp": "48:38-49:12",
+      "time_start_sec": 2918,
+      "time_end_sec": 2952
+    },
+    {
+      "question": "What was the primary goal of the petition the group launched?",
+      "answer": "The main goal was to collect signatures to show lawmakers that there was a large demand for better visitation rights. They specifically targeted Texas residents to prove to local politicians that the people who voted for them cared deeply about this issue.",
+      "timestamp": "41:55-43:32",
+      "time_start_sec": 2515,
+      "time_end_sec": 2612
+    },
+    {
+      "question": "How did the caregiver describe the feeling of isolation for people with dementia compared to others?",
+      "answer": "The caregiver explained that for someone with dementia, two weeks feels like an eternity. Because their memory is short, they might not remember you the next day, meaning the time spent apart is lost forever and cannot be recovered.",
+      "timestamp": "38:35-39:08",
+      "time_start_sec": 2315,
+      "time_end_sec": 2348
+    },
+    {
+      "question": "What role did the mentor play in the caregiver's journey?",
+      "answer": "The mentor provided a \"can-do\" attitude, teaching the caregiver that nothing is impossible or hopeless. Watching the mentor's videos gave the caregiver the confidence and skills to believe that engaging with her mother was achievable and necessary.",
+      "timestamp": "54:07-54:39",
+      "time_start_sec": 3247,
+      "time_end_sec": 3279
+    },
+    {
+      "question": "How did the caregiver turn a mundane task like sorting socks into an engagement opportunity?",
+      "answer": "Instead of just sorting the socks herself, she dumped them on the couch and asked her mother to help her sort them. This turned a chore into a shared activity where both of them could interact and talk while doing something simple together.",
+      "timestamp": "8:14-8:34",
+      "time_start_sec": 494,
+      "time_end_sec": 514
+    },
+    {
+      "question": "What was the significance of the \"milkshake\" memory in the caregiver's early attempts?",
+      "answer": "The milkshake was her mother's favorite treat. The caregiver knew that bringing it would instantly grab her mother's attention and make her happy, serving as a reliable way to start an interaction before trying more complex methods.",
+      "timestamp": "6:38-6:48",
+      "time_start_sec": 398,
+      "time_end_sec": 408
+    },
+    {
+      "question": "How did the caregiver help her mother cope with the loss of her friends due to the pandemic?",
+      "answer": "The caregiver acknowledged that her mother's social circle had vanished suddenly. While she couldn't replace the friends entirely, she focused on providing consistent, one-on-one connection to fill the void and make her mother feel less lonely.",
+      "timestamp": "10:17-10:36",
+      "time_start_sec": 617,
+      "time_end_sec": 636
+    },
+    {
+      "question": "What lesson did the caregiver learn about her own grandmother from her experience with her mother?",
+      "answer": "She realized she didn't know how to connect with her grandmother initially. Her visits often lasted only 15 minutes because her grandmother seemed distracted or needed to be elsewhere. This taught her that she needed to learn specific strategies to truly engage with people with dementia.",
+      "timestamp": "1:46-2:16",
+      "time_start_sec": 106,
+      "time_end_sec": 136
+    },
+    {
+      "question": "How did the caregiver use visual cues to help her mother remember where to glue pictures?",
+      "answer": "The caregiver used visual aids and simple verbal prompts. She pointed to the glue stick and the paper, saying things like \"what sticks what to the table?\" This helped her mother recall her past experiences as a second-grade teacher and perform the task successfully.",
+      "timestamp": "19:27-19:58",
+      "time_start_sec": 1167,
+      "time_end_sec": 1198
+    },
+    {
+      "question": "Why is it important to celebrate small successes in caregiving?",
+      "answer": "The caregiver noted that even small moments, like a successful window visit with bracelets, were huge victories. Celebrating these wins helps maintain hope and reinforces the idea that progress is possible, even when things feel difficult.",
+      "timestamp": "15:26-15:34",
+      "time_start_sec": 926,
+      "time_end_sec": 934
+    },
+    {
+      "question": "How did the advocacy group ensure they didn't waste their loved ones' time?",
+      "answer": "They used their \"FASTING\" roadmap as a filter. Before launching a new project, they checked if it was something they had already done or if it was a waste of time. This ensured they only invested energy in activities that would make a real difference.",
+      "timestamp": "52:08-52:22",
+      "time_start_sec": 3128,
+      "time_end_sec": 3142
+    },
+    {
+      "question": "What was the emotional reaction of the mentor when watching the caregiver's video of her mother?",
+      "answer": "The mentor was blown away by the transformation. She noticed how her mother came alive and changed during the activity, showing that the relationship was beautiful and the engagement was perfectly suited to her mother's current abilities.",
+      "timestamp": "16:44-17:24",
+      "time_start_sec": 1004,
+      "time_end_sec": 1044
+    },
+    {
+      "question": "How did the caregiver handle the challenge of her mother forgetting the words to a song?",
+      "answer": "The caregiver treated it as a failure-free moment. Even when her mother forgot lyrics, the presence of the milkshake and the shared joy of singing kept the connection strong. The focus remained on the feeling of togetherness rather than perfection.",
+      "timestamp": "30:50-30:56",
+      "time_start_sec": 1850,
+      "time_end_sec": 1856
+    },
+    {
+      "question": "What was the purpose of the \"Isolation Kills Two\" sign campaign?",
+      "answer": "The signs bore the names of people who had died in long-term care or were currently living there. The goal was to publicly highlight the tragedy of isolation and advocate for policies that allow families to visit their loved ones.",
+      "timestamp": "33:30-33:40",
+      "time_start_sec": 2010,
+      "time_end_sec": 2020
+    },
+    {
+      "question": "How did the caregiver explain the concept of \"laser focus\" to the group?",
+      "answer": "She explained that while there are many worthy causes, they chose to focus only on one thing: long-term care visitation. By staying focused on this single goal, they could organize effectively and achieve results that would have been impossible if they tried to do everything at once.",
+      "timestamp": "42:06-42:36",
+      "time_start_sec": 2526,
+      "time_end_sec": 2556
+    },
+    {
+      "question": "What was the outcome of the rally held in Texas?",
+      "answer": "Initially, many people thought the rally meant they didn't need to fight anymore. However, when they saw the updated guidelines, they realized the rules still prevented them from visiting. This realization motivated them to continue their advocacy efforts.",
+      "timestamp": "44:08-44:22",
+      "time_start_sec": 2648,
+      "time_end_sec": 2662
+    },
+    {
+      "question": "How did the caregiver describe the experience of her mother watching children play?",
+      "answer": "Watching children was one of her mother's absolute favorite activities. She would sit in a park or a store and watch kids play, sometimes ignoring requests to move on. This preference was a key clue for the caregiver when planning activities.",
+      "timestamp": "21:05-21:24",
+      "time_start_sec": 1265,
+      "time_end_sec": 1284
+    },
+    {
+      "question": "What was the significance of the \"hand-under-hand\" approach mentioned by the speaker?",
+      "answer": "This approach involves physically guiding the person's hand to help them perform a task. It is particularly effective on the dominant side because it supports the person's natural movement patterns, making them feel more confident and competent.",
+      "timestamp": "26:27-26:54",
+      "time_start_sec": 1587,
+      "time_end_sec": 1614
+    },
+    {
+      "question": "How did the caregiver use the concept of \"purpose\" to engage her mother?",
+      "answer": "By asking \"Can you help me?\", the caregiver gave her mother a sense of purpose. Instead of being a passive recipient of care, her mother became an active participant, which made her feel needed and valued.",
+      "timestamp": "12:50-13:11",
+      "time_start_sec": 770,
+      "time_end_sec": 791
+    },
+    {
+      "question": "What was the impact of the advocacy book created by the group?",
+      "answer": "The book included personal stories of loved ones in long-term care. These stories were included in their petitions to state officials, ensuring the advocacy remained person-centered and highlighted the real human impact of the issue.",
+      "timestamp": "44:43-45:10",
+      "time_start_sec": 2683,
+      "time_end_sec": 2710
+    },
+    {
+      "question": "How did the caregiver manage to connect with her mother during the shower?",
+      "answer": "She stood in the shower singing to her mother. This was a critical moment to keep her calm and prevent her from becoming combative, allowing the aides to bathe her safely while maintaining a connection.",
+      "timestamp": "37:34-37:46",
+      "time_start_sec": 2254,
+      "time_end_sec": 2266
+    },
+    {
+      "question": "What was the main takeaway from the mentor's feedback on the caregiver's video?",
+      "answer": "The mentor highlighted the beauty of the relationship and how the activity was perfectly matched to her mother's journey. It showed that flexibility and patience can lead to profound moments of connection and joy.",
+      "timestamp": "16:44-17:24",
+      "time_start_sec": 1004,
+      "time_end_sec": 1044
+    },
+    {
+      "question": "How did the caregiver describe the feeling of \"contact starvation\"?",
+      "answer": "She described it as a deep hunger for human touch. Loved ones in long-term care are starving for connection, and the lack of visits creates a profound sense of emptiness and loneliness that is hard to explain.",
+      "timestamp": "48:12-48:25",
+      "time_start_sec": 2892,
+      "time_end_sec": 2905
+    },
+    {
+      "question": "What was the strategy behind the \"traveling signs\" project?",
+      "answer": "The signs were moved from city to city, with hosts meeting halfway to transport them. This allowed the media to cover the story in multiple locations and gave families time to take photos, maximizing the reach of their message.",
+      "timestamp": "45:35-45:55",
+      "time_start_sec": 2735,
+      "time_end_sec": 2755
+    },
+    {
+      "question": "How did the caregiver use her own background as a teacher to help her mother?",
+      "answer": "She recognized that her mother had spent years teaching second grade, including gluing and cutting pictures. By using these familiar skills and visual cues, she tapped into her mother's past strengths and made her feel proud again.",
+      "timestamp": "19:27-20:27",
+      "time_start_sec": 1167,
+      "time_end_sec": 1227
+    },
+    {
+      "question": "What was the role of the \"Caregivers for Compromise\" group for the caregiver?",
+      "answer": "The group provided essential support, encouragement, and a voice for advocacy. It helped the caregiver feel empowered during the crisis, gave her a platform to write to representatives, and connected her with others facing similar challenges.",
+      "timestamp": "32:34-33:55",
+      "time_start_sec": 1954,
+      "time_end_sec": 2035
+    },
+    {
+      "question": "How did the caregiver define success in her engagement efforts?",
+      "answer": "Success was defined as creating a \"failure-free\" environment where the focus was on connection, not perfection. Whether her mother sang the whole song or just laughed at a joke, the goal was to build a strong, loving bond regardless of the outcome.",
+      "timestamp": "30:48-31:05",
+      "time_start_sec": 1848,
+      "time_end_sec": 1865
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/SUP/22/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-42.json",
+  "valid": true
+}

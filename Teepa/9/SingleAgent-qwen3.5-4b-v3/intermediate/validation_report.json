@@ -1,0 +1,43 @@
+{
+  "expected_pairs": 4,
+  "parsed_pairs": 4,
+  "transcript_end_sec": 119.31,
+  "timestamp_lines": [
+    "Timestamp 1: 0:39-1:54",
+    "Timestamp 2: 0:00-0:56",
+    "Timestamp 3: 1:37-1:54",
+    "Timestamp 4: 0:51-1:54"
+  ],
+  "pairs": [
+    {
+      "question": "When a person with dementia gets upset during daily tasks like changing clothes or using the bathroom, what is the main reason they might react negatively, and how can you fix it?",
+      "answer": "The main reason they react negatively is that their eyes saw something different from what their ears heard. For example, if you say \"Let's go to the bathroom\" but they are already in the bathroom, or if you say \"Are you ready?\" while they are already standing there, they will feel confused and angry. To fix this, always make sure what you show them with your eyes matches exactly what you say with your voice before you start the action. This helps them feel safe and stops them from getting frustrated or hitting you.",
+      "timestamp": "0:39-1:54",
+      "time_start_sec": 39,
+      "time_end_sec": 114
+    },
+    {
+      "question": "Why is it better to show a person with dementia something before you talk about it, and what happens if you skip the showing step?",
+      "answer": "It is better to show them something first because seeing is usually the easiest way for their brain to connect with the world. If you only talk about something without showing it, like saying \"It is time for your shoes\" without pointing to the shoes, they might not understand what you mean. If you skip the showing step, they can get very confused, feel lost, and sometimes become aggressive because their brain cannot figure out what is happening.",
+      "timestamp": "0:00-0:56",
+      "time_start_sec": 0,
+      "time_end_sec": 56
+    },
+    {
+      "question": "What specific mistake did the speaker make when talking to Cindy, and what was the result of that mistake?",
+      "answer": "The speaker made a mistake by saying \"Are you ready to go take your show\" while Cindy was already standing there waiting. Because she had already seen the situation, her brain knew she did not need to wait, but her mouth said she should. This mismatch between what she saw and what was said caused her to feel angry and hit the speaker instead of being calm and ready.",
+      "timestamp": "1:37-1:54",
+      "time_start_sec": 97,
+      "time_end_sec": 114
+    },
+    {
+      "question": "How can matching a person's visual view with your words help reduce their anger and improve the interaction?",
+      "answer": "Matching what you see with what you say helps reduce anger by giving the person's brain a clear and consistent message. When the person sees you looking at them and hears you say their name or the next step, their brain feels safe and understands the plan. This consistency prevents them from feeling tricked or confused, which makes them much less likely to get angry or act out during daily routines.",
+      "timestamp": "0:51-1:54",
+      "time_start_sec": 51,
+      "time_end_sec": 114
+    }
+  ],
+  "raw_response_file": "/WAVE/users2/unix/cawad/MedicalQA/Teepa/9/SingleAgent-qwen3.5-4b-v3/intermediate/attempts/seed-43.json",
+  "valid": true
+}
